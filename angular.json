@@ -120,6 +120,10 @@
               "devServerTarget": "ratings:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }
