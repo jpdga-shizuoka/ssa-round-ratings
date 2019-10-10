@@ -42,7 +42,7 @@
     <!-- SSA Column -->
     <ng-container matColumnDef="ssa">
       <th mat-header-cell *matHeaderCellDef mat-sort-header
-          matTooltip="Scratch Score Average"
+          matTooltip="Scratch Scoring Average"
           matTooltipPosition="above">
         SSA
       </th>
@@ -77,14 +77,14 @@
             </li>
             <li>
               Info:
-              <a *ngIf="element.jpdga!==undefind" mat-button color="primary"
+              <a *ngIf="element.jpdga" mat-button color="primary"
                  href="http://www.jpdga.jp/event.php?tno={{element.jpdga}}">
                 JPDGA<mat-icon>launch</mat-icon>
               </a>
             </li>
             <li>
               Results:
-              <a *ngIf="element.jpdga!==undefind" mat-button color="primary"
+              <a *ngIf="element.jpdga" mat-button color="primary"
                  href="http://www.jpdga.jp/result.php?tno={{element.jpdga}}">
                 JPDGA<mat-icon>launch</mat-icon>
               </a>
