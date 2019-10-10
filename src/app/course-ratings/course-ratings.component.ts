@@ -1,8 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { animate, state, style, transition, trigger } from '@angular/animations';
+
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { animate, state, style, transition, trigger } from '@angular/animations';
 
 import { CourseRatingsItem } from '../course-rating';
 import CourseRatingsData from '../../assets/course-rating-data.json';
@@ -26,7 +27,7 @@ export class CourseRatingsComponent implements OnInit {
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   dataSource: MatTableDataSource<CourseRatingsItem>;
-  displayedColumns = ['event', 'hla', 'ssa', 'rssa'];
+  displayedColumns = ['event', 'hla', 'ssa'];
   expandedElement: CourseRatingsItem | null;
   rssa = 0;
 
@@ -51,17 +52,6 @@ export class CourseRatingsComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
-
-  // ngAfterViewInit() {
-  //   let o1:Observable<boolean> = this.id.valueChanges;
-  //   let o2:Observable<boolean> = this.description.valueChanges;
-  //
-  //   merge(o1, o2).subscribe( v => {
-  //     this.columnDefinitions[0].hide = this.id.value;
-  //     this.columnDefinitions[1].hide = this.description.value;
-  //     console.log(this.columnDefinitions);
-  //   });
-  // }
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
