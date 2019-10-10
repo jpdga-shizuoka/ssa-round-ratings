@@ -33,12 +33,12 @@ export class CourseRatingsComponent implements OnInit {
 
   constructor() {
     // Assign the data to the data source for the table to render
-    for (let round of CourseRatingsData) {
-        round["weight"] = calcWeight(round.ratings.player1, round.ratings.player2);
-        round["offset"] = calcOffset(round);
-        round["ssa"] = calcSsa(round);
-        round["rssa"] = this.calcRssa(round);
-        round["category"] = calcCategory(round["ssa"]);
+    for (const round of CourseRatingsData) {
+        round['weight'] = calcWeight(round.ratings.player1, round.ratings.player2);
+        round['offset'] = calcOffset(round);
+        round['ssa'] = calcSsa(round);
+        round['rssa'] = this.calcRssa(round);
+        round['category'] = calcCategory(round['ssa']);
     }
     CourseRatingsData.sort((a, b) => {
         const t1 = new Date(a.date);
@@ -66,42 +66,44 @@ export class CourseRatingsComponent implements OnInit {
     }
 
     private calcRssa(round: CourseRatingsItem) {
-        if (this.rssa === 1)
+        if (this.rssa === 1) {
             return calcRssa1(round);
-        else
+        } else {
             return calcRssa2(round);
+        }
     }
 }
 
-function calcWeight(player1: {score: number, rating: number}, player2: {score: number, rating: number}) {
-    return (player1.rating - player2.rating)/(player1.score - player2.score);
+function calcWeight(player1: { score: number, rating: number }, player2: { score: number, rating: number }) {
+    return (player1.rating - player2.rating) / (player1.score - player2.score);
 }
 
 function calcOffset(round: CourseRatingsItem) {
-    return round.ratings.player1.rating - round["weight"] * round.ratings.player1.score;
+    return round.ratings.player1.rating - round['weight'] * round.ratings.player1.score;
 }
 
 function calcSsa(round: CourseRatingsItem) {
-    return (1000 - round["offset"]) / round["weight"];
+    return (1000 - round['offset']) / round['weight'];
 }
 
 function calcCategory(ssa: number) {
-    if (ssa < 48)
-        return "A";
-    else if (ssa < 54)
-        return "2A";
-    else if (ssa < 60)
-        return "3A";
-    else if (ssa < 66)
-        return "4A";
-    else
-        return "5A";
+    if (ssa < 48) {
+        return 'A';
+    } else if (ssa < 54) {
+        return '2A';
+    } else if (ssa < 60) {
+        return '3A';
+    } else if (ssa < 66) {
+        return '4A';
+    } else {
+        return '5A';
+    }
 }
 
 function calcRssa1(round: CourseRatingsItem) {
-    return round.hla ? round["ssa"] / round.hla * 10 : 0;
+    return round.hla ? round['ssa'] / round.hla * 10 : 0;
 }
 
 function calcRssa2(round: CourseRatingsItem) {
-    return round.hla ? round["ssa"] / Math.log10(round.hla) * 2 : 0;
+    return round.hla ? round['ssa'] / Math.log10(round.hla) * 2 : 0;
 }
