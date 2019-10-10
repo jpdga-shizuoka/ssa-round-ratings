@@ -3,12 +3,7 @@
     <mat-form-field class="event-search">
       <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search...">
     </mat-form-field>
-    <div class='ratings-tools-spacer'></div>
-
-      <!-- <div class='ratings-tools-checkbox'>
-          <mat-checkbox color='warn' [(ngModel)]="rssa1">RSSA1</mat-checkbox>
-          <mat-checkbox color='warn' [(ngModel)]="rssa2">RSSA2</mat-checkbox>
-      </div> -->
+    <!-- <div class='ratings-tools-spacer'></div>
 
     <section class="rssa-section">
       <label class="rssa-margin">RSSA:</label>
@@ -16,7 +11,7 @@
         <mat-radio-button class="rssa-margin" color='warn' value=1>1</mat-radio-button>
         <mat-radio-button class="rssa-margin" color='warn' value=2>2</mat-radio-button>
       </mat-radio-group>
-    </section>
+    </section> -->
   </div>
   <table mat-table class="full-width-table" matSort [dataSource]="dataSource" multiTemplateDataRows>
 
@@ -47,7 +42,7 @@
     <!-- SSA Column -->
     <ng-container matColumnDef="ssa">
       <th mat-header-cell *matHeaderCellDef mat-sort-header
-          matTooltip="Scratch Score Average"
+          matTooltip="Scratch Scoring Average"
           matTooltipPosition="above">
         SSA
       </th>
@@ -82,14 +77,14 @@
             </li>
             <li>
               Info:
-              <a *ngIf="element.jpdga!==undefind" mat-button color="primary"
+              <a *ngIf="element.jpdga" mat-button color="primary"
                  href="http://www.jpdga.jp/event.php?tno={{element.jpdga}}">
                 JPDGA<mat-icon>launch</mat-icon>
               </a>
             </li>
             <li>
               Results:
-              <a *ngIf="element.jpdga!==undefind" mat-button color="primary"
+              <a *ngIf="element.jpdga" mat-button color="primary"
                  href="http://www.jpdga.jp/result.php?tno={{element.jpdga}}">
                 JPDGA<mat-icon>launch</mat-icon>
               </a>

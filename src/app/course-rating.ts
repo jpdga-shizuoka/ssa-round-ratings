@@ -10,12 +10,12 @@ export interface CourseRatingsItem {
   holes: number;        // number of holes
   ratings: {
       player1: {
-          score: number;// Round score
-          rating: number;// PDGA Player Rating
+          score: number;  // Round score
+          rating: number; // PDGA Player Rating
       };
       player2: {
-          score: number;// Round score
-          rating: number;// PDGA Player Rating
+          score: number;  // Round score
+          rating: number; // PDGA Player Rating
       };
   };
   ssa?: number;         // Scratch Scoring Average
