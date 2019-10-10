@@ -1,0 +1,6 @@
+#!/bin/bash
+
+rm -r docs/*
+cp -r dist/ratings/* docs/
+rm docs/index.html
+sed -e 's/script src=\"/script src=\"ssa-round-ratings\//g' dist/ratings/index.html > docs/index.html
