@@ -49,6 +49,33 @@ export class CourseRatingsComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.dataSource.filterPredicate = (data: CourseRatingsItem, filters: string) => {
+      const matchFilter = [];
+      const filterArray = filters.split('&');
+      const columns = [ data.continent,
+                        data.country,
+                        data.event,
+                        data.round,
+                        data.date,
+                        data.hla,
+                        data.holes,
+                        data.ssa,
+                        data.category,
+      ];
+
+      filterArray.forEach(filter => {
+        const customFilter = [];
+        columns.forEach(column => {
+          if (column != null) {
+            const scolumn = typeof column === 'number' ? column.toString() : column;
+            customFilter.push(scolumn.toLowerCase().includes(filter));
+          }
+        });
+        matchFilter.push(customFilter.some(Boolean)); // OR
+      });
+      return matchFilter.every(Boolean); // AND
+    };
+
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
