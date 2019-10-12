@@ -11,9 +11,4 @@ export class RoundDetailComponent {
 
   @Input() detail: CourseRatingsItem;
 
-  // constructor() { }
-  //
-  // ngOnInit() {
-  // }
-
 }
