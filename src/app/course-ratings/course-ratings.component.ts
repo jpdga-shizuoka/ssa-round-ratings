@@ -110,7 +110,9 @@ function calcOffset(round: CourseRatingsItem) {
 }
 
 function calcSsa(round: CourseRatingsItem) {
-  return (1000 - round['offset']) / round['weight'];
+  const holes = round.holes || 18;
+  const regulation = holes / 18;
+  return (1000 - round['offset']) / round['weight'] / regulation;
 }
 
 function calcCategory(ssa: number) {
