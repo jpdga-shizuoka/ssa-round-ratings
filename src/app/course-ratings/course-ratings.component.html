@@ -64,36 +64,7 @@
       <td mat-cell *matCellDef="let element" [attr.colspan]="getDisplayedColumns().length">
         <div class="round-element-detail"
              [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
-          <ul>
-            <li>{{element.date}}</li>
-            <li>{{element.country}}, {{element.continent}}</li>
-            <li>Round: {{element.holes}}holes @ {{element.round}}</li>
-            <li>
-              SSA Range Category:
-              <a mat-button color="primary"
-                 href="https://www.pdga.com/ratings/top-10-best-rounds-ever-5-ssa-ranges-men-women">
-                 {{element.category}}<mat-icon>launch</mat-icon>
-              </a>
-            </li>
-            <li>
-              Info:
-              <a *ngIf="element.jpdga" mat-button color="primary"
-                 href="http://www.jpdga.jp/event.php?tno={{element.jpdga}}">
-                JPDGA<mat-icon>launch</mat-icon>
-              </a>
-            </li>
-            <li>
-              Results:
-              <a *ngIf="element.jpdga" mat-button color="primary"
-                 href="http://www.jpdga.jp/result.php?tno={{element.jpdga}}">
-                JPDGA<mat-icon>launch</mat-icon>
-              </a>
-              <a mat-button color="primary"
-                 href="https://www.pdga.com/tour/event/{{element.id}}">
-                PDGA<mat-icon>launch</mat-icon>
-              </a>
-            </li>
-          </ul>
+          <app-round-detail [detail]="element"></app-round-detail>
         </div>
       </td>
     </ng-container>

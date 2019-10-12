@@ -17,11 +17,13 @@ import { MatRadioModule } from '@angular/material/radio';
 
 import { AppComponent } from './app.component';
 import { CourseRatingsComponent } from './course-ratings/course-ratings.component';
+import { RoundDetailComponent } from './round-detail/round-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CourseRatingsComponent
+    CourseRatingsComponent,
+    RoundDetailComponent,
   ],
   imports: [
     BrowserModule,
