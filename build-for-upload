@@ -1,9 +1,0 @@
-#!/bin/bash
-
-PROJECT=ssa-round-ratings
-rm -r docs/*
-cp -r dist/ratings/* docs/
-rm docs/index.html
-sed -e "s/script src=\"/script src=\"$PROJECT\//g" dist/ratings/index.html |\
-sed -e "s/href=\"styles/href=\"$PROJECT\/styles/g" |\
-sed -e "s/href=\"favicon.ico/href=\"$PROJECT\/favicon.ico/g" > docs/index.html
