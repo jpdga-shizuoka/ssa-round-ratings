@@ -660,8 +660,8 @@
       "rating": 1070
     },
     "player2": {
-      "score": 87,
-      "rating": 817
+      "score": 77,
+      "rating": 891
     }
   }
 },
@@ -704,7 +704,7 @@
   }
 },
 {
-  "id": 9552,
+  "id": 7272,
   "continent": "Oceania/Asia",
   "country": "Japan",
   "event": "The 2008 Japan Open",
@@ -723,7 +723,7 @@
   }
 },
 {
-  "id": 9552,
+  "id": 7272,
   "continent": "Oceania/Asia",
   "country": "Japan",
   "event": "The 2008 Japan Open",
