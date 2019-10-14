@@ -5,3 +5,7 @@
 .round-detail td:nth-child(2) {
   padding-left: 0.5em;
 }
+.equation-args {
+  margin-right: 2em;
+  max-width: 7em;
+}

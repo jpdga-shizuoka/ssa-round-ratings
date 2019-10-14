@@ -19,6 +19,21 @@
       </td>
     </tr>
     <tr>
+      <td></td>
+      <td>
+        <mat-form-field class="equation-args">
+          <input matInput type="number" placeholder="Rating"
+            [(ngModel)]="rating"
+            (input)="onRatingChanged()">
+        </mat-form-field>
+        <mat-form-field class="equation-args">
+          <input matInput type="number" placeholder="Score"
+            [(ngModel)]="score"
+            (input)="onScoreChanged()">
+        </mat-form-field>
+      </td>
+    </tr>
+    <tr>
       <td>SSA Range:</td>
       <td>
         <a mat-button color="primary"
