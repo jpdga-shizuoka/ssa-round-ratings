@@ -1,0 +1,7 @@
+.round-detail td:first-child {
+  text-align: right;
+  font-weight: bold;
+}
+.round-detail td:nth-child(2) {
+  padding-left: 0.5em;
+}

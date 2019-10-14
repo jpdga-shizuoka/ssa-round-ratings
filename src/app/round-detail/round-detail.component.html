@@ -1,30 +1,53 @@
-<ul>
-  <li>{{detail.date}}</li>
-  <li>{{detail.country}}, {{detail.continent}}</li>
-  <li>Round: {{detail.holes}}holes @ {{detail.round}}</li>
-  <li>
-    SSA Range Category:
-    <a mat-button color="primary"
-       href="https://www.pdga.com/ratings/top-10-best-rounds-ever-5-ssa-ranges-men-women">
-       Category {{detail.category}}<mat-icon>launch</mat-icon>
-    </a>
-  </li>
-  <li>
-    Info:
-    <a *ngIf="detail.jpdga" mat-button color="primary"
-       href="http://www.jpdga.jp/event.php?tno={{detail.jpdga}}">
-      JPDGA<mat-icon>launch</mat-icon>
-    </a>
-  </li>
-  <li>
-    Results:
-    <a *ngIf="detail.jpdga" mat-button color="primary"
-       href="http://www.jpdga.jp/result.php?tno={{detail.jpdga}}">
-      JPDGA<mat-icon>launch</mat-icon>
-    </a>
-    <a mat-button color="primary"
-       href="https://www.pdga.com/tour/event/{{detail.id}}">
-      PDGA<mat-icon>launch</mat-icon>
-    </a>
-  </li>
-</ul>
+<table class='round-detail'>
+  <tbody>
+    <tr>
+      <td>Date:</td>
+      <td>{{detail.date}}</td>
+    </tr>
+    <tr>
+      <td>Country:</td>
+      <td>{{detail.country}}, {{detail.continent}}</td>
+    </tr>
+    <tr>
+      <td>Round:</td>
+      <td>{{detail.holes}}holes @ {{detail.round}}</td>
+    </tr>
+    <tr>
+      <td>Equation:</td>
+      <td>
+        Rating = {{detail.weight.toFixed(1)}} * Score + {{detail.offset.toFixed(0)}}
+      </td>
+    </tr>
+    <tr>
+      <td>SSA Range:</td>
+      <td>
+        <a mat-button color="primary"
+          href="https://www.pdga.com/ratings/top-10-best-rounds-ever-5-ssa-ranges-men-women">
+          Category {{detail.category}}<mat-icon>launch</mat-icon>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>Info:</td>
+      <td>
+        <a *ngIf="detail.jpdga" mat-button color="primary"
+          href="http://www.jpdga.jp/event.php?tno={{detail.jpdga}}">
+          JPDGA<mat-icon>launch</mat-icon>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>Results:</td>
+      <td>
+        <a *ngIf="detail.jpdga" mat-button color="primary"
+          href="http://www.jpdga.jp/result.php?tno={{detail.jpdga}}">
+          JPDGA<mat-icon>launch</mat-icon>
+        </a>
+        <a mat-button color="primary"
+          href="https://www.pdga.com/tour/event/{{detail.id}}">
+          PDGA<mat-icon>launch</mat-icon>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
