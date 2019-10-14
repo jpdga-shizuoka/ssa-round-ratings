@@ -1,8 +1,19 @@
 .course-ratings {
-    padding: 10px;
+  padding: 0 10px 10px 10px;
+  max-width: 600px;
+  margin: auto;
+}
+@media (max-width: 599px) {
+  .course-ratings {
+    padding: 0;
+  }
 }
 .github-icon {
     padding: 0 14px;
+}
+.titlebar {
+  margin: 0;
+  border: 0;
 }
 .title-spacer {
     flex: 1 1 auto;
