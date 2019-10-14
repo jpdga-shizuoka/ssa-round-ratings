@@ -1,42 +1,4 @@
 [{
-    "id": 38592,
-    "continent": "Oceania/Asia",
-    "country": "Thailand",
-    "event": "Samui Swine Classic VI",
-    "round": "Rd1,Rd2,Rd3",
-    "date": "2019-02-08",
-    "holes": 18,
-    "ratings": {
-        "player1": {
-            "score": 58,
-            "rating": 1016
-        },
-        "player2": {
-            "score": 76,
-            "rating": 858
-        }
-    }
-},
-{
-    "id": 40977,
-    "continent": "Oceania/Asia",
-    "country": "South Korea",
-    "event": "Korea Open Championship",
-    "round": "Rd1,Rd2,Rd3",
-    "date": "2019-09-28",
-    "holes": 18,
-    "ratings": {
-        "player1": {
-            "score": 48,
-            "rating": 1022
-        },
-        "player2": {
-            "score": 67,
-            "rating": 831
-        }
-    }
-},
-{
     "id": 38541,
     "jpdga": 477,
     "continent": "Oceania/Asia",
