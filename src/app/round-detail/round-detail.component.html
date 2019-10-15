@@ -22,12 +22,12 @@
       <td></td>
       <td>
         <mat-form-field class="equation-args">
-          <input matInput type="number" placeholder="Rating"
+          <input matInput type="number" placeholder="Rating" inputmode="numeric"
             [(ngModel)]="rating"
             (input)="onRatingChanged()">
         </mat-form-field>
         <mat-form-field class="equation-args">
-          <input matInput type="number" placeholder="Score"
+          <input matInput type="number" placeholder="Score" inputmode="numeric"
             [(ngModel)]="score"
             (input)="onScoreChanged()">
         </mat-form-field>
