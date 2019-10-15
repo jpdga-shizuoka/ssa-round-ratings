@@ -340,8 +340,9 @@
     "continent": "Oceania/Asia",
     "country": "Japan",
     "event": "The 32nd Kyushu Open",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1 (B,C)",
     "date": "2018-12-01",
+    "hla": 97,
     "holes": 18,
     "ratings": {
         "player1": {
@@ -349,8 +350,50 @@
             "rating": 984
         },
         "player2": {
-            "score": 63,
-            "rating": 886
+            "score": 71,
+            "rating": 808
+        }
+    }
+},
+{
+    "id": 38543,
+    "jpdga": 481,
+    "continent": "Oceania/Asia",
+    "country": "Japan",
+    "event": "The 32nd Kyushu Open",
+    "round": "Rd2 (A,B)",
+    "date": "2018-12-01",
+    "hla": 82,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 52,
+            "rating": 1003
+        },
+        "player2": {
+            "score": 66,
+            "rating": 869
+        }
+    }
+},
+{
+    "id": 38543,
+    "jpdga": 481,
+    "continent": "Oceania/Asia",
+    "country": "Japan",
+    "event": "The 32nd Kyushu Open",
+    "round": "Rd3 (A,C)",
+    "date": "2018-12-02",
+    "hla": 83,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 52,
+            "rating": 973
+        },
+        "player2": {
+            "score": 64,
+            "rating": 848
         }
     }
 },
