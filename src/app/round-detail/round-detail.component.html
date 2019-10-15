@@ -40,22 +40,22 @@
     <tr>
       <td>Info:</td>
       <td>
-        <a *ngIf="detail.jpdga" mat-button color="primary"
+        <a *ngIf="detail.jpdga" class="detail-link"
           href="http://www.jpdga.jp/event.php?tno={{detail.jpdga}}">
-          JPDGA<mat-icon>launch</mat-icon>
+          JPDGA
         </a>
       </td>
     </tr>
     <tr>
       <td>Results:</td>
       <td>
-        <a *ngIf="detail.jpdga" mat-button color="primary"
+        <a *ngIf="detail.jpdga" class="detail-link"
           href="http://www.jpdga.jp/result.php?tno={{detail.jpdga}}">
-          JPDGA<mat-icon>launch</mat-icon>
+          JPDGA
         </a>
-        <a mat-button color="primary"
+        <a *ngIf="detail.id" class="detail-link"
           href="https://www.pdga.com/tour/event/{{detail.id}}">
-          PDGA<mat-icon>launch</mat-icon>
+          PDGA
         </a>
       </td>
     </tr>
