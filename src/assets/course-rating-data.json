@@ -632,8 +632,9 @@
   "continent": "Oceania/Asia",
   "country": "Japan",
   "event": "The 2014 Japan Open",
-  "round": "Rd1,Rd4,Rd5",
+  "round": "Rd1,Rd4,Rd5(Fujin)",
   "date": "2014-06-05",
+  "hla": 146,
   "holes": 18,
   "ratings": {
     "player1": {
@@ -651,8 +652,9 @@
   "continent": "Oceania/Asia",
   "country": "Japan",
   "event": "The 2014 Japan Open",
-  "round": "Rd2,Rd3",
+  "round": "Rd2,Rd3(Raijin)",
   "date": "2014-06-05",
+  "hla": 131,
   "holes": 18,
   "ratings": {
     "player1": {
