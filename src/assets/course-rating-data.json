@@ -655,7 +655,7 @@
     "continent": "Oceania/Asia",
     "country": "Japan",
     "event": "The 7th Okinawa Open",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1",
     "date": "2018-02-17",
     "hla": 92,
     "holes": 18,
@@ -667,6 +667,48 @@
         "player2": {
             "score": 76,
             "rating": 844
+        }
+    }
+},
+{
+    "id": 34638,
+    "jpdga": 450,
+    "continent": "Oceania/Asia",
+    "country": "Japan",
+    "event": "The 7th Okinawa Open",
+    "round": "Rd2",
+    "date": "2018-02-17",
+    "hla": 92,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 53,
+            "rating": 1025
+        },
+        "player2": {
+            "score": 76,
+            "rating": 823
+        }
+    }
+},
+{
+    "id": 34638,
+    "jpdga": 450,
+    "continent": "Oceania/Asia",
+    "country": "Japan",
+    "event": "The 7th Okinawa Open",
+    "round": "Rd3",
+    "date": "2018-02-18",
+    "hla": 92,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 50,
+            "rating": 1019
+        },
+        "player2": {
+            "score": 65,
+            "rating": 874
         }
     }
 },
