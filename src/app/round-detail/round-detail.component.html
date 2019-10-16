@@ -13,6 +13,10 @@
       <td>{{detail.holes}}holes @ {{detail.round}}</td>
     </tr>
     <tr>
+      <td>SSA Range:</td>
+      <td>{{getSRCText(detail.ssa)}}</td>
+    </tr>
+    <tr>
       <td>Equation:</td>
       <td>
         Rating = {{detail.weight.toFixed(1)}} * Score + {{detail.offset.toFixed(0)}}
@@ -22,45 +26,36 @@
       <td></td>
       <td>
         <mat-form-field class="equation-args">
-          <input matInput type="number" placeholder="Rating"
+          <input matInput type="number" placeholder="Rating" inputmode="numeric"
             [(ngModel)]="rating"
             (input)="onRatingChanged()">
         </mat-form-field>
         <mat-form-field class="equation-args">
-          <input matInput type="number" placeholder="Score"
+          <input matInput type="number" placeholder="Score" inputmode="numeric"
             [(ngModel)]="score"
             (input)="onScoreChanged()">
         </mat-form-field>
       </td>
     </tr>
     <tr>
-      <td>SSA Range:</td>
-      <td>
-        <a mat-button color="primary"
-          href="https://www.pdga.com/ratings/top-10-best-rounds-ever-5-ssa-ranges-men-women">
-          Category {{detail.category}}<mat-icon>launch</mat-icon>
-        </a>
-      </td>
-    </tr>
-    <tr>
       <td>Info:</td>
       <td>
-        <a *ngIf="detail.jpdga" mat-button color="primary"
+        <a *ngIf="detail.jpdga" class="detail-link"
           href="http://www.jpdga.jp/event.php?tno={{detail.jpdga}}">
-          JPDGA<mat-icon>launch</mat-icon>
+          JPDGA
         </a>
       </td>
     </tr>
     <tr>
       <td>Results:</td>
       <td>
-        <a *ngIf="detail.jpdga" mat-button color="primary"
+        <a *ngIf="detail.jpdga" class="detail-link"
           href="http://www.jpdga.jp/result.php?tno={{detail.jpdga}}">
-          JPDGA<mat-icon>launch</mat-icon>
+          JPDGA
         </a>
-        <a mat-button color="primary"
+        <a *ngIf="detail.id" class="detail-link"
           href="https://www.pdga.com/tour/event/{{detail.id}}">
-          PDGA<mat-icon>launch</mat-icon>
+          PDGA
         </a>
       </td>
     </tr>

@@ -17,6 +17,25 @@ export class RoundDetailComponent {
   rating: number;
   score: number;
 
+  getSRCText(ssa: number) {
+    if (!ssa) {
+      return '';
+    }
+    if (ssa < 48) {
+      return 'Category A (under 48)';
+    }
+    if (ssa < 54) {
+      return 'Category 2A (48-53.9)';
+    }
+    if (ssa < 60) {
+      return 'Category 3A (54-59.9)';
+    }
+    if (ssa < 66) {
+      return 'Category 4A (60-65.9)';
+    }
+    return 'Category 5A (over 66)';
+  }
+
   onRatingChanged() {
     if (typeof this.rating !== 'number') {
       this.score = NaN;
