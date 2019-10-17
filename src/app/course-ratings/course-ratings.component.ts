@@ -8,6 +8,8 @@ import { MatTableDataSource } from '@angular/material/table';
 import { CourseRatingsItem } from '../course-rating';
 import CourseRatingsData from '../../assets/course-rating-data.json';
 
+const BREAKPOINT = 600;
+
 /**
  * @title Data table with sorting, pagination, and filtering.
  */
@@ -27,7 +29,6 @@ export class CourseRatingsComponent implements OnInit {
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   dataSource: MatTableDataSource<CourseRatingsItem>;
-  displayedColumns = ['event', 'hla', 'ssa'];
   expandedElement: CourseRatingsItem | null;
   rssa = 0;
 
@@ -89,7 +90,14 @@ export class CourseRatingsComponent implements OnInit {
   }
 
   getDisplayedColumns() {
-    return this.displayedColumns;
+    return window.innerWidth >= BREAKPOINT
+      ? ['year', 'event', 'round', 'hla', 'ssa']
+      : ['event', 'hla', 'ssa'];
+  }
+
+  getYear(time: string) {
+    const date = new Date(time);
+    return date.getFullYear();
   }
 
   private calcRssa(round: CourseRatingsItem) {
