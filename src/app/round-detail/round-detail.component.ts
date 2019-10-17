@@ -17,6 +17,11 @@ export class RoundDetailComponent {
   rating: number;
   score: number;
 
+  toLocaleDateString(time: string) {
+    const date = new Date(time);
+    return date.toLocaleDateString();
+  }
+
   getSRCText(ssa: number) {
     if (!ssa) {
       return '';
