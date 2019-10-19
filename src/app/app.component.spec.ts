@@ -1,7 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -22,7 +22,7 @@ describe('AppComponent', () => {
         RoundDetailComponent,
       ],
       imports: [
-        NoopAnimationsModule,
+        BrowserAnimationsModule,
         FormsModule,
         MatToolbarModule,
         MatIconModule,
