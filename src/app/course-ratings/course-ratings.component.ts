@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 
 import { MatPaginator } from '@angular/material/paginator';
@@ -26,7 +26,7 @@ const BREAKPOINT = 600;
     ]),
   ],
 })
-export class CourseRatingsComponent implements OnInit {
+export class CourseRatingsComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   dataSource: MatTableDataSource<CourseRatingsItem>;
@@ -80,6 +80,24 @@ export class CourseRatingsComponent implements OnInit {
 
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
+  }
+
+  /**
+   * Set the sort after the view init since this component will
+   * be able to query its view for the initialized sort.
+   */
+  ngAfterViewInit() {
+    this.dataSource.sortingDataAccessor = (item, property) => {
+      switch (property) {
+        case 'event':
+          return this.commonService.getEventTitle(item.event);
+        case 'year':
+          return new Date(item.date);
+        default:
+          // default sorting
+          return item[property];
+      }
+    };
   }
 
   applyFilter(filterValue: string) {

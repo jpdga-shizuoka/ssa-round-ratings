@@ -61,6 +61,14 @@ export class CommonService {
       ? getUrlForGeolocation() + `${course.geolocation[0]},${course.geolocation[1]}`
       : undefined;
   }
+
+  getEventTitle(name: string): string {
+    const eventName = /the (\d+)(st|nd|rd|th|) (.+)/;
+    const results = name.trim().toLowerCase().match(eventName);
+    return (!results || results.length !== 4)
+      ? name
+      : results[3];
+  }
 }
 
 function getKeyFromName(name: string): string {
