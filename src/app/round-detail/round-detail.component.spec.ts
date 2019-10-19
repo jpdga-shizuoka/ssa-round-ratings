@@ -1,4 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
 
 import { RoundDetailComponent } from './round-detail.component';
 
@@ -8,7 +13,13 @@ describe('RoundDetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RoundDetailComponent ]
+      declarations: [ RoundDetailComponent ],
+      imports: [
+        FormsModule,
+        MatIconModule,
+        MatInputModule,
+        MatButtonModule,
+      ],
     })
     .compileComponents();
   }));
