@@ -5,6 +5,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 
+import { CommonService } from '../common.service';
 import { CourseRatingsItem } from '../course-rating';
 import CourseRatingsData from '../../assets/course-rating-data.json';
 
@@ -32,7 +33,7 @@ export class CourseRatingsComponent implements OnInit {
   expandedElement: CourseRatingsItem | null;
   rssa = 0;
 
-  constructor() {
+  constructor(public commonService: CommonService) {
     // Assign the data to the data source for the table to render
     for (const round of CourseRatingsData) {
       round['weight'] = calcWeight(round.ratings.player1, round.ratings.player2);
@@ -87,6 +88,10 @@ export class CourseRatingsComponent implements OnInit {
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+  }
+
+  getEventAliase(name: string): string {
+    return this.commonService.getEventAliase(name);
   }
 
   getDisplayedColumns() {

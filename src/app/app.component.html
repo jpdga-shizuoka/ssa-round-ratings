@@ -1,15 +1,11 @@
 <mat-toolbar class="titlebar" color="primary">
   <span>SSA Round Ratings</span>
   <span class="title-spacer"></span>
-
-  <!-- removed code here for workaround of Github Pages Hosting issue
-  <span class="github-icon"
-        matTooltip="This is open source code">
-    <a href="https://github.com/jpdga-shizuoka/ssa-round-ratings">
-      <img src="../assets/img/github.svg" width="24" height="24">
-    </a>
-  </span> -->
-
+  <span class="title-button-row">
+    <button mat-icon-button aria-label="toggle language" (click)="onClickLanguage()">
+      <mat-icon>translate</mat-icon>
+    </button>
+  </span>
 </mat-toolbar>
 
 <div class='course-ratings'>

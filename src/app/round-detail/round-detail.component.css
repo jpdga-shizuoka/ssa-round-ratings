@@ -12,3 +12,14 @@
 .detail-link {
   margin-right: 1em;
 }
+.round-detail mat-icon {
+  font-size: 20px;
+}
+@media (max-width: 374px) {
+  .round-detail {
+    font-size: small;
+  }
+  .round-detail mat-icon {
+    font-size: 16px;
+  }
+}
