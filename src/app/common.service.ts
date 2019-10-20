@@ -86,7 +86,7 @@ function getUrlForGeolocation(): string {
 }
 
 function isAppleDevice(): boolean {
-  return /iPhone|Macintosh/.test(window.navigator.userAgent);
+  return /iPhone|iPad|Macintosh/.test(window.navigator.userAgent);
 }
 
 function getEventKey(name: string): EventParts | undefined {
