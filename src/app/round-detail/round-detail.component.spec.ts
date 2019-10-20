@@ -32,13 +32,13 @@ describe('RoundDetailComponent', () => {
     component.detail = {
       id: 38544,
       jpdga: 482,
-      continent: "Oceania/Asia",
-      country: "Japan",
-      prefecture: "Aichi",
-      location: "Mikawa Rinkai Ryokuchi",
-      event: "The 18th Chubu Open",
-      round: "Rd1,Rd2,Rd3",
-      date: "2018-12-15",
+      continent: 'Oceania/Asia',
+      country: 'Japan',
+      prefecture: 'Aichi',
+      location: 'Mikawa Rinkai Ryokuchi',
+      event: 'The 18th Chubu Open',
+      round: 'Rd1,Rd2,Rd3',
+      date: '2018-12-15',
       hla: 97,
       holes: 18,
       ratings: {
@@ -54,7 +54,7 @@ describe('RoundDetailComponent', () => {
       ssa: 56,
       weight: -10,
       offset: 1500,
-    }
+    };
     fixture.detectChanges();
   });
 
