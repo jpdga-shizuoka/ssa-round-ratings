@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 
+import { CommonService } from '../common.service';
 import { CourseRatingsItem } from '../course-rating';
 
 const MIN_RATING = 700;
@@ -16,6 +17,14 @@ export class RoundDetailComponent {
 
   rating: number;
   score: number;
+
+  constructor(public commonService: CommonService) {
+  }
+
+  toLocaleDateString(time: string) {
+    const date = new Date(time);
+    return date.toLocaleDateString();
+  }
 
   getSRCText(ssa: number) {
     if (!ssa) {

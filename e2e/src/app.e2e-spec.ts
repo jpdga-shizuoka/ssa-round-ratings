@@ -8,9 +8,9 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display the toolbar title', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to ratings!');
+    expect(page.getTitleText()).toEqual('SSA Round Ratings');
   });
 
   afterEach(async () => {

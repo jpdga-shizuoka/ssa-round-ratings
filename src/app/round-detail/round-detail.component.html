@@ -2,11 +2,22 @@
   <tbody>
     <tr>
       <td>Date:</td>
-      <td>{{detail.date}}</td>
+      <td>{{toLocaleDateString(detail.date)}}</td>
     </tr>
-    <tr>
-      <td>Country:</td>
-      <td>{{detail.country}}, {{detail.continent}}</td>
+    <tr *ngIf="detail.location">
+      <td>Location:</td>
+      <td>
+        {{commonService.getCourseAliase(detail.location)}}
+        <a href="{{commonService.getCourseGeolocation(detail.location)}}">
+          <mat-icon>near_me</mat-icon>
+        </a>
+      </td>
+    </tr>
+    <tr *ngIf="detail.prefecture">
+      <td></td>
+      <td>
+        {{commonService.getPrefectureAliase(detail.prefecture)}}
+      </td>
     </tr>
     <tr>
       <td>Round:</td>

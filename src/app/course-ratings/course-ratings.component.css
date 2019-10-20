@@ -52,3 +52,11 @@ tr.round-element-row:not(.round-expanded-row):active {
 .rssa-margin {
   margin: 0 10px;
 }
+@media (max-width: 400px) {
+  .full-width-table td.mat-cell:first-of-type,
+  .full-width-table td.mat-footer-cell:first-of-type,
+  .full-width-table th.mat-header-cell:first-of-type {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}

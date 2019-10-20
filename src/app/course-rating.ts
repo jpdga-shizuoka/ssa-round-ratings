@@ -3,6 +3,8 @@ export interface CourseRatingsItem {
   jpdga?: number;       // Event ID managed by JPDGA
   continent: string;
   country: string;
+  prefecture?: string;
+  location?: string;    // location of the course
   event: string;        // Event Name
   round: string;        // Round Name
   date: string;         // Date of Round
