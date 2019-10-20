@@ -31,7 +31,6 @@ export class CourseRatingsComponent implements OnInit, AfterViewInit {
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   dataSource: MatTableDataSource<CourseRatingsItem>;
   expandedElement: CourseRatingsItem | null;
-  rssa = 0;
 
   constructor(public commonService: CommonService) {
     // Assign the data to the data source for the table to render
@@ -39,7 +38,6 @@ export class CourseRatingsComponent implements OnInit, AfterViewInit {
       round['weight'] = calcWeight(round.ratings.player1, round.ratings.player2);
       round['offset'] = calcOffset(round);
       round['ssa'] = calcSsa(round);
-      round['rssa'] = this.calcRssa(round);
       round['category'] = calcCategory(round['ssa']);
     }
     CourseRatingsData.sort((a, b) => {
@@ -122,14 +120,6 @@ export class CourseRatingsComponent implements OnInit, AfterViewInit {
     const date = new Date(time);
     return date.getFullYear();
   }
-
-  private calcRssa(round: CourseRatingsItem) {
-    if (this.rssa === 1) {
-      return calcRssa1(round);
-    } else {
-      return calcRssa2(round);
-    }
-  }
 }
 
 function calcWeight(player1: { score: number, rating: number }, player2: { score: number, rating: number }) {
@@ -158,12 +148,4 @@ function calcCategory(ssa: number) {
   } else {
     return '5A';
   }
-}
-
-function calcRssa1(round: CourseRatingsItem) {
-  return round.hla ? round['ssa'] / round.hla * 10 : 0;
-}
-
-function calcRssa2(round: CourseRatingsItem) {
-  return round.hla ? round['ssa'] / Math.log10(round.hla) * 2 : 0;
 }
