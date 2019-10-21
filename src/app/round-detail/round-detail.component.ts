@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { CommonService } from '../common.service';
-import { CourseRatingsItem } from '../course-rating';
+import { CommonService, RoundInfo } from '../common.service';
 
 const MIN_RATING = 700;
 const MAX_RATING = 1200;
@@ -13,17 +12,52 @@ const MAX_RATING = 1200;
 })
 export class RoundDetailComponent {
 
-  @Input() detail: CourseRatingsItem;
+  @Input() round: RoundInfo;
 
   rating: number;
   score: number;
 
-  constructor(public commonService: CommonService) {
+  constructor(private cs: CommonService) {
   }
 
-  toLocaleDateString(time: string) {
-    const date = new Date(time);
+  getDate(round: RoundInfo): string {
+    if (!round || !round.date) {
+      return '';
+    }
+    const date = new Date(round.date);
     return date.toLocaleDateString();
+  }
+
+  getLocation(round: RoundInfo): string {
+    return this.cs.getLocationNameFromEvent(round.event);
+  }
+
+  getGeolocation(round: RoundInfo): string {
+    return this.cs.getGeolocationFromEvent(round.event);
+  }
+
+  getPrefecture(round: RoundInfo): string {
+    return this.cs.getPrefectureFromEvent(round.event);
+  }
+
+  getJpdgaInfo(round: RoundInfo): string | undefined {
+    return this.cs.getJpdgaInfo(round.event);
+  }
+
+  getJpdgaResult(round: RoundInfo): string | undefined {
+    return this.cs.getJpdgaResult(round.event);
+  }
+
+  getPdgaResult(round: RoundInfo): string | undefined {
+    return this.cs.getPdgaResult(round.event);
+  }
+
+  getEquation(round: RoundInfo): string {
+    return `Rating = ${round.weight.toFixed(1)} * Score + ${round.offset.toFixed(0)}`;
+  }
+
+  getRoundStatus(round: RoundInfo): string {
+    return `${round.holes} holes @ ${round.round}`;
   }
 
   getSRCText(ssa: number) {
@@ -80,20 +114,20 @@ export class RoundDetailComponent {
   }
 
   private rating2score(rating: number) {
-    let score = (rating - this.detail.offset) / this.detail.weight;
+    let score = (rating - this.round.offset) / this.round.weight;
     score = Math.round(score * 10) / 10;
     return score;
   }
 
   private score2rating(score: number) {
-    return Math.round(score * this.detail.weight + this.detail.offset);
+    return Math.round(score * this.round.weight + this.round.offset);
   }
 
   private getMinScore() {
-    return (this.detail.holes || 18) * 2;
+    return (this.round.holes || 18) * 2;
   }
 
   private getMaxScore() {
-    return (this.detail.holes || 18) * 6;
+    return (this.round.holes || 18) * 6;
   }
 }

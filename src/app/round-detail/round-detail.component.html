@@ -2,36 +2,29 @@
   <tbody>
     <tr>
       <td>Date:</td>
-      <td>{{toLocaleDateString(detail.date)}}</td>
+      <td>{{getDate(round)}}</td>
     </tr>
-    <tr *ngIf="detail.location">
+    <tr>
       <td>Location:</td>
-      <td>
-        {{commonService.getCourseAliase(detail.location)}}
-        <a href="{{commonService.getCourseGeolocation(detail.location)}}">
-          <mat-icon>near_me</mat-icon>
-        </a>
+      <td>{{getLocation(round)}}
+        <a href="{{getGeolocation(round)}}"><mat-icon>near_me</mat-icon></a>
       </td>
     </tr>
-    <tr *ngIf="detail.prefecture">
+    <tr>
       <td></td>
-      <td>
-        {{commonService.getPrefectureAliase(detail.prefecture)}}
-      </td>
+      <td>{{getPrefecture(round)}}</td>
     </tr>
     <tr>
       <td>Round:</td>
-      <td>{{detail.holes}}holes @ {{detail.round}}</td>
+      <td>{{getRoundStatus(round)}}</td>
     </tr>
     <tr>
       <td>SSA Range:</td>
-      <td>{{getSRCText(detail.ssa)}}</td>
+      <td>{{getSRCText(round.ssa)}}</td>
     </tr>
     <tr>
       <td>Equation:</td>
-      <td>
-        Rating = {{detail.weight.toFixed(1)}} * Score + {{detail.offset.toFixed(0)}}
-      </td>
+      <td>{{getEquation(round)}}</td>
     </tr>
     <tr>
       <td></td>
@@ -51,8 +44,7 @@
     <tr>
       <td>Info:</td>
       <td>
-        <a *ngIf="detail.jpdga" class="detail-link"
-          href="http://www.jpdga.jp/event.php?tno={{detail.jpdga}}">
+        <a class="detail-link" href="{{getJpdgaInfo(round)}}">
           JPDGA
         </a>
       </td>
@@ -60,12 +52,10 @@
     <tr>
       <td>Results:</td>
       <td>
-        <a *ngIf="detail.jpdga" class="detail-link"
-          href="http://www.jpdga.jp/result.php?tno={{detail.jpdga}}">
+        <a class="detail-link" href="{{getJpdgaResult(round)}}">
           JPDGA
         </a>
-        <a *ngIf="detail.id" class="detail-link"
-          href="https://www.pdga.com/tour/event/{{detail.id}}">
+        <a class="detail-link" href="{{getPdgaResult(round)}}">
           PDGA
         </a>
       </td>
