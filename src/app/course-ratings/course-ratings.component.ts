@@ -103,7 +103,7 @@ export class CourseRatingsComponent implements OnInit, AfterViewInit {
     }
   }
 
-  getEvent(round: RoundInfo): string {
+  getEventName(round: RoundInfo): string {
     return this.cs.getEventAliase(round.event);
   }
 
