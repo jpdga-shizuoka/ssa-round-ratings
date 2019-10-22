@@ -4,7 +4,8 @@
       "eventId": "38541"
     },
     "jpdga": {
-      "eventId": "477"
+      "eventId": "477",
+      "topicId": "1333"
     },
     "location": "Mizubayashi Sport Park",
     "date": "2018-10-07"
@@ -14,7 +15,9 @@
       "eventId": "38544"
     },
     "jpdga": {
-      "eventId": "482"
+      "eventId": "482",
+      "topicId": "1351",
+      "photoId": "72157675302985767"
     },
     "location": "Mikawa Rinkai Ryokuchi",
     "date": "2018-12-15"
@@ -24,7 +27,8 @@
       "eventId": "39008"
     },
     "jpdga": {
-      "eventId": "484"
+      "eventId": "484",
+      "topicId": "1361"
     },
     "location": "Yoshino Park",
     "date": "2019-01-26"
@@ -34,7 +38,8 @@
       "eventId": "39009"
     },
     "jpdga": {
-      "eventId": "485"
+      "eventId": "485",
+      "topicId": "1364"
     },
     "location": "Nakijinson Sport Park",
     "date": "2019-02-16"
@@ -54,7 +59,8 @@
       "eventId": "40529"
     },
     "jpdga": {
-      "eventId": "493"
+      "eventId": "493",
+      "topicId": "1378"
     },
     "location": "Yoshinogari Historical Park",
     "date": "2019-04-13"
@@ -64,7 +70,9 @@
       "eventId": "41239"
     },
     "jpdga": {
-      "eventId": "495"
+      "eventId": "495",
+      "topicId": "1385",
+      "photoId": "72157707015695201"
     },
     "location": "Hirugano Kohgen",
     "date": "2019-05-04"
@@ -74,7 +82,9 @@
       "eventId": "41240"
     },
     "jpdga": {
-      "eventId": "497"
+      "eventId": "497",
+      "topicId": "1388",
+      "photoId": "72157708811878088"
     },
     "location": "Kiyosato-no-Mori",
     "date": "2019-05-18"
@@ -84,8 +94,18 @@
       "eventId": "41241"
     },
     "jpdga": {
-      "eventId": "498"
+      "eventId": "498",
+      "topicId": "1389"
     },
+    "urls": [{
+      "type": "video",
+      "title": "MPO Final9 Lead Card",
+      "url": "https://www.facebook.com/kinoshi.minoru.ta/videos/2270697569681115/"
+    },{
+      "type": "website",
+      "title": "Official Site 🇯🇵",
+      "url": "http://www.sukima-labo.com/dg291/"
+    }],
     "location": "Seaside Nature Park",
     "date": "2019-05-25"
   },
@@ -95,8 +115,14 @@
     },
     "jpdga": {
       "eventId": "499",
-      "topicId": "1397"
+      "topicId": "1397",
+      "photoId": "72157709282956977"
     },
+    "urls": [{
+      "type": "video",
+      "title": "Final9 Lead Card",
+      "url": "https://www.facebook.com/kinoshi.minoru.ta/videos/2307136169370588/"
+    }],
     "location": "Hikari-to-Kaze-no-Oka Park",
     "date": "2019-06-22"
   },
@@ -106,7 +132,8 @@
     },
     "jpdga": {
       "eventId": "501",
-      "topicId": "1398"
+      "topicId": "1398",
+      "photoId": "72157709674420071"
     },
     "location": "Hunka-wan Panolama Park",
     "date": "2019-06-29"
@@ -120,6 +147,15 @@
       "photoId": "72157709849371966",
       "topicId": "1402"
     },
+    "urls": [{
+      "type": "video",
+      "title": "MPO Final9 Lead Card",
+      "url": "https://www.facebook.com/kinoshi.minoru.ta/videos/2345622692188602/"
+    },{
+      "type": "website",
+      "title": "Official Site 🇯🇵",
+      "url": "http://www.tochigiflyingdisc.com"
+    }],
     "location": "Kiyohara Kohgyo Danchi",
     "date": "2019-07-14"
   },
@@ -154,9 +190,18 @@
     },
     "jpdga": {
       "eventId": "507",
-      "photoId": "72157710683372748",
+      "photoId": "72157710501866671",
       "topicId": "1410"
     },
+    "urls": [{
+      "type": "video",
+      "title": "FPO Playoff",
+      "url": "https://www.facebook.com/kinoshi.minoru.ta/videos/2415765345174336/"
+    },{
+      "type": "website",
+      "title": "Official Site 🇯🇵",
+      "url": "http://jpdgaiwate.com"
+    }],
     "location": "Kitakami Sport Park",
     "date": "2019-08-11"
   },
@@ -192,8 +237,14 @@
       "eventId": "38543"
     },
     "jpdga": {
-      "eventId": "481"
+      "eventId": "481",
+      "topicId": "1347"
     },
+    "urls": [{
+      "type": "website",
+      "title": "Official Site 🇯🇵",
+      "url": "http://www.jpdgafukuoka.com/blog/?page_id=2146"
+    }],
     "location": "Umino-Nakamichi Seaside Park",
     "date": "2018-12-01"
   },
@@ -292,7 +343,9 @@
       "eventId": "36756"
     },
     "jpdga": {
-      "eventId": "464"
+      "eventId": "464",
+      "topicId": "1413",
+      "photoId": "72157710683372748"
     },
     "location": "Hirugano Kohgen",
     "date": "2018-05-04"
