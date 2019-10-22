@@ -94,7 +94,8 @@
       "eventId": "41242"
     },
     "jpdga": {
-      "eventId": "499"
+      "eventId": "499",
+      "topicId": "1397"
     },
     "location": "Hikari-to-Kaze-no-Oka Park",
     "date": "2019-06-22"
@@ -104,7 +105,8 @@
       "eventId": "41243"
     },
     "jpdga": {
-      "eventId": "501"
+      "eventId": "501",
+      "topicId": "1398"
     },
     "location": "Hunka-wan Panolama Park",
     "date": "2019-06-29"
@@ -114,7 +116,9 @@
       "eventId": "41244"
     },
     "jpdga": {
-      "eventId": "503"
+      "eventId": "503",
+      "photoId": "72157709849371966",
+      "topicId": "1402"
     },
     "location": "Kiyohara Kohgyo Danchi",
     "date": "2019-07-14"
@@ -124,8 +128,23 @@
       "eventId": "41245"
     },
     "jpdga": {
-      "eventId": "505"
+      "eventId": "505",
+      "photoId": "72157710404110366",
+      "topicId": "1407"
     },
+    "urls": [{
+      "type": "video",
+      "title": "MPO Final9 Lead Card",
+      "url": "https://youtu.be/vToHZBT6Frc"
+    },{
+      "type": "video",
+      "title": "FPO Final9 Lead Card",
+      "url": "https://youtu.be/njtndn89M5Q"
+    },{
+      "type": "website",
+      "title": "Official Site 🇯🇵",
+      "url": "http://www.jpdgafukuoka.com/blog/?page_id=2861"
+    }],
     "location": "Umino-Nakamichi Seaside Park",
     "date": "2019-08-03"
   },
@@ -134,7 +153,9 @@
       "eventId": "41246"
     },
     "jpdga": {
-      "eventId": "507"
+      "eventId": "507",
+      "photoId": "72157710683372748",
+      "topicId": "1410"
     },
     "location": "Kitakami Sport Park",
     "date": "2019-08-11"
@@ -144,7 +165,9 @@
       "eventId": "42479"
     },
     "jpdga": {
-      "eventId": "510"
+      "eventId": "510",
+      "photoId": "72157710684380196",
+      "topicId": "1414"
     },
     "location": "Fumin-no-Mori Hiyoshi",
     "date": "2019-08-31"
@@ -156,6 +179,11 @@
     "jpdga": {
       "eventId": "512"
     },
+    "urls": [{
+      "type": "video",
+      "title": "MPO Final9 Lead Card",
+      "url": "https://www.facebook.com/kinoshi.minoru.ta/videos/2473383436079193/"
+    }],
     "location": "Maiko Disc Golf Park",
     "date": "2019-09-22"
   },

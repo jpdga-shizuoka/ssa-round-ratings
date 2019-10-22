@@ -1,25 +1,42 @@
+.round-detail td {
+  padding-bottom: 10px;
+}
 .round-detail td:first-child {
+  vertical-align: top;
   text-align: right;
   font-weight: bold;
+  min-width: 6rem;
 }
-.round-detail td:nth-child(2) {
-  padding-left: 0.5em;
+.detail-link {
+  margin-bottom: 7px;
 }
 .equation-args {
   margin-right: 1.5em;
   max-width: 6em;
 }
-.detail-link {
-  margin-right: 1em;
-}
 .round-detail mat-icon {
-  font-size: 20px;
+  font-size: 16px;
+  height: 16px;
+  width: 16px;
+  margin: 0 5px;
 }
 @media (max-width: 374px) {
   .round-detail {
     font-size: small;
   }
   .round-detail mat-icon {
-    font-size: 16px;
+    font-size: 15px;
+    height: 15px;
+    width: 15px;
   }
+  .round-detail td:first-child {
+    min-width: 5rem;
+  }
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-container>* {
+  flex: auto;
 }

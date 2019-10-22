@@ -1,4 +1,4 @@
-export interface CourseLocation {
+export interface LocationInfo {
   geolocation: [number, number];
   prefecture: string;
 }
@@ -20,7 +20,7 @@ export enum UrlType {
 }
 
 export interface UrlInfo {
-  type: UrlType;
+  type: string;
   title: string;
   url: string;
 }

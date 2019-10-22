@@ -8,9 +8,9 @@ import EVENT_ALIASE from '../assets/model/event-aliase-dictionary.json';
 import LOCATION_ALIASE from '../assets/model/location-aliase-dictionary.json';
 import PREFECTURE_ALIASE from '../assets/model/prefecture-aliase-dictionary.json';
 
-import { RoundInfo } from './models';
+import { RoundInfo, EventInfo, LocationInfo } from './models';
 
-export { RoundInfo };
+export { RoundInfo, EventInfo, LocationInfo };
 
 interface EventParts {
   count: string;
@@ -34,86 +34,78 @@ export class CommonService {
     return ROUNDS;
   }
 
-  getEventAliase(name: string): string {
+  getEventAliase(eventName: string): string {
     if (this.primaryLanguage) {
-      return name;
+      return eventName;
     }
-    const parts = getEventKey(name);
+    const parts = getEventKey(eventName);
     if (!parts) {
-      return name;
+      return eventName;
     }
     const aliase = EVENT_ALIASE[parts.key];
-    return !aliase ? name : `第${parts.count}回 ${aliase}`;
+    return !aliase ? eventName : `第${parts.count}回 ${aliase}`;
   }
 
-  getPrefectureFromEvent(eventName: string): string | undefined {
-    const event = EVENTS[getKeyFromName(eventName)];
-    if (!event || !event.location) {
-      return undefined;
-    }
-    return this.getPrefectureFromLocation(event.location);
-  }
-
-  getPrefectureFromLocation(locationName: string): string | undefined {
-    const location = LOCATIONS[getKeyFromName(locationName)];
-    if (!location || !location.prefecture) {
+  getPrefecture(prefectureName: string): string | undefined {
+    if (!prefectureName) {
       return undefined;
     }
     if (this.primaryLanguage) {
-      return location.prefecture;
+      return prefectureName;
     }
-    return PREFECTURE_ALIASE[getKeyFromName(location.prefecture)]
-      || location.prefecture;
+    return PREFECTURE_ALIASE[getKeyFromName(prefectureName)]
+      || prefectureName;
   }
 
-  getLocationNameFromEvent(eventName: string): string | undefined {
-    const event = EVENTS[getKeyFromName(eventName)];
-    if (!event || !event.location) {
-      return undefined;
-    }
-    return this.getLocationAliase(event.location);
+  getEvent(eventName: string): EventInfo | undefined {
+    return EVENTS[getKeyFromName(eventName)];
   }
 
-  getLocationAliase(locationName: string): string {
+  getLocation(locationName: string): LocationInfo | undefined {
+    return LOCATIONS[getKeyFromName(locationName)];
+  }
+
+  getLocationName(locationName: string): string | undefined {
     if (this.primaryLanguage) {
       return locationName;
     }
     return LOCATION_ALIASE[getKeyFromName(locationName)] || locationName;
   }
 
-  getGeolocationFromEvent(eventName: string): string | undefined {
-    const event = EVENTS[getKeyFromName(eventName)];
-    if (!event || !event.location) {
-      return undefined;
-    }
-    const location = LOCATIONS[getKeyFromName(event.location)];
-    return location && location.geolocation
-      ? getUrlForGeolocation() + `${location.geolocation[0]},${location.geolocation[1]}`
+  getGeolocation(ll: [number, number]): string | undefined {
+    return ll
+      ? getUrlForGeolocation() + `${ll[0]},${ll[1]}`
       : undefined;
   }
 
-  getJpdgaInfo(eventName: string): string | undefined {
-    const event = EVENTS[getKeyFromName(eventName)];
-    if (!event || !event.jpdga || !event.jpdga.eventId) {
-      return undefined;
-    }
-    return `http://www.jpdga.jp/event.php?tno=${event.jpdga.eventId}`;
+  getJpdgaInfo(eventId: string): string | undefined {
+    return eventId
+      ? `http://www.jpdga.jp/event.php?tno=${eventId}`
+      : undefined;
   }
 
-  getJpdgaResult(eventName: string): string | undefined {
-    const event = EVENTS[getKeyFromName(eventName)];
-    if (!event || !event.jpdga || !event.jpdga.eventId) {
-      return undefined;
-    }
-    return `http://www.jpdga.jp/result.php?tno=${event.jpdga.eventId}`;
+  getJpdgaResult(eventId: string): string | undefined {
+    return eventId
+      ? `http://www.jpdga.jp/result.php?tno=${eventId}`
+      : undefined;
   }
 
-  getPdgaResult(eventName: string): string | undefined {
-    const event = EVENTS[getKeyFromName(eventName)];
-    if (!event || !event.pdga || !event.pdga.eventId) {
-      return undefined;
-    }
-    return `https://www.pdga.com/tour/event/${event.pdga.eventId}`;
+  getJpdgaReport(topicId: string): string | undefined {
+    return topicId
+      ? `http://www.jpdga.jp/main/index.php?itemid=${topicId}`
+      : undefined;
+  }
+
+  getJpdgaPhoto(photoId: string): string | undefined {
+    return photoId
+      ? `https://www.flickr.com/photos/jpdga/albums/${photoId}`
+      : undefined;
+  }
+
+  getPdgaResult(eventId: string): string | undefined {
+    return eventId
+      ? `https://www.pdga.com/tour/event/${eventId}`
+      : undefined;
   }
 
   getEventTitle(name: string): string {

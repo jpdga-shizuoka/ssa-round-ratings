@@ -1,9 +1,21 @@
 import { Component, Input } from '@angular/core';
-
-import { CommonService, RoundInfo } from '../common.service';
+import {
+  CommonService, RoundInfo, EventInfo, LocationInfo
+} from '../common.service';
 
 const MIN_RATING = 700;
 const MAX_RATING = 1200;
+const ICONS = {
+  'video': 'ondemand_video',
+  'photo': 'camera_alt',
+  'website': 'public'
+}
+
+interface INFO_MISC {
+  icon: string;
+  title: string;
+  url: string;
+}
 
 @Component({
   selector: 'app-round-detail',
@@ -17,27 +29,119 @@ export class RoundDetailComponent {
   rating: number;
   score: number;
 
+  private event: EventInfo;
+  private location: LocationInfo;
+
   constructor(private cs: CommonService) {
   }
 
-  getDate(round: RoundInfo): string {
-    if (!round || !round.date) {
-      return '';
+  private getEvent(): EventInfo | undefined {
+    if (this.event) {
+      return this.event;
     }
-    const date = new Date(round.date);
+    this.event = this.cs.getEvent(this.round.event);
+    return this.event;
+  }
+
+  private getLocation(): LocationInfo | undefined {
+    if (this.location) {
+      return this.location;
+    }
+    const event = this.getEvent();
+    if (!event.location) {
+      return undefined;
+    }
+    this.location = this.cs.getLocation(event.location);
+    return this.location;
+  }
+
+  getMiscInfo(): INFO_MISC[] {
+    const info: INFO_MISC[] = [];
+    if (!this.round.event) {
+      return info;
+    }
+    const event = this.getEvent();
+    if (!event) {
+      return info;
+    }
+
+    if (event.pdga && event.pdga.eventId) {
+      info.push({
+        icon: 'public',
+        title: 'Results 🇺🇸',
+        url: this.cs.getPdgaResult(event.pdga.eventId)
+      });
+    }
+    if (event.jpdga) {
+      if (event.jpdga.eventId) {
+        info.push({
+          icon: 'public',
+          title: 'Results 🇯🇵',
+          url: this.cs.getJpdgaResult(event.jpdga.eventId)
+        });
+        info.push({
+          icon: 'public',
+          title: 'Papers & Map',
+          url: this.cs.getJpdgaInfo(event.jpdga.eventId)
+        });
+      }
+      if (event.jpdga.topicId) {
+        info.push({
+          icon: 'public',
+          title: 'Report 🇯🇵',
+          url: this.cs.getJpdgaReport(event.jpdga.topicId)
+        });
+      }
+      if (event.jpdga.photoId) {
+        info.push({
+          icon: 'camera_alt',
+          title: 'Photos',
+          url: this.cs.getJpdgaPhoto(event.jpdga.photoId)
+        });
+      }
+    }
+    if (event.urls) {
+      for (let urlInfo of event.urls) {
+        info.push({
+          icon: ICONS[urlInfo.type],
+          title: urlInfo.title,
+          url: urlInfo.url
+        });
+      }
+    }
+    return info;
+  }
+
+  getDate(): string | undefined {
+    if (!this.round.date) {
+      return undefined;
+    }
+    const date = new Date(this.round.date);
     return date.toLocaleDateString();
   }
 
-  getLocation(round: RoundInfo): string {
-    return this.cs.getLocationNameFromEvent(round.event);
+  getLocationName(): string | undefined {
+    const event = this.getEvent();
+    if (!event) {
+      return undefined;
+    }
+    return this.cs.getLocationName(event.location);
   }
 
-  getGeolocation(round: RoundInfo): string {
-    return this.cs.getGeolocationFromEvent(round.event);
+  getGeolocation(): string | undefined {
+    const location = this.getLocation();
+    if (!location || !location.geolocation) {
+      return undefined;
+    }
+    return this.cs.getGeolocation(location.geolocation);
   }
 
-  getPrefecture(round: RoundInfo): string {
-    return this.cs.getPrefectureFromEvent(round.event);
+  getPrefecture(): string | undefined {
+    const location = this.getLocation();
+    if (!location || !location.prefecture) {
+      return undefined;
+    }
+    return this.cs.getPrefecture(location.prefecture);
   }
 
   getJpdgaInfo(round: RoundInfo): string | undefined {
@@ -52,15 +156,19 @@ export class RoundDetailComponent {
     return this.cs.getPdgaResult(round.event);
   }
 
-  getEquation(round: RoundInfo): string {
-    return `Rating = ${round.weight.toFixed(1)} * Score + ${round.offset.toFixed(0)}`;
+  getEquation(): string | undefined {
+    if (!this.round.weight || !this.round.offset) {
+      return undefined;
+    }
+    return `Rating = ${this.round.weight.toFixed(1)} * Score + ${this.round.offset.toFixed(0)}`;
   }
 
-  getRoundStatus(round: RoundInfo): string {
-    return `${round.holes} holes @ ${round.round}`;
+  getRoundStatus(): string {
+    return `${this.round.holes} holes @ ${this.round.round}`;
   }
 
-  getSRCText(ssa: number) {
+  getSRCText() {
+    const ssa = this.round.ssa;
     if (!ssa) {
       return '';
     }

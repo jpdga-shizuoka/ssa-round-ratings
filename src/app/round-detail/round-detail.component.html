@@ -2,29 +2,44 @@
   <tbody>
     <tr>
       <td>Date:</td>
-      <td>{{getDate(round)}}</td>
+      <td><mat-icon>calendar_today</mat-icon>{{getDate()}}</td>
     </tr>
     <tr>
       <td>Location:</td>
-      <td>{{getLocation(round)}}
-        <a href="{{getGeolocation(round)}}"><mat-icon>near_me</mat-icon></a>
+      <td class="flex-container">
+        <div>
+          <a href="{{getGeolocation()}}">
+            <mat-icon>room</mat-icon>{{getLocationName()}}
+          </a>
+        </div>
+        <div>
+          <mat-icon>public</mat-icon>{{getPrefecture()}}
+        </div>
       </td>
     </tr>
     <tr>
-      <td></td>
-      <td>{{getPrefecture(round)}}</td>
-    </tr>
-    <tr>
       <td>Round:</td>
-      <td>{{getRoundStatus(round)}}</td>
+      <td><mat-icon>golf_course</mat-icon>{{getRoundStatus()}}</td>
     </tr>
     <tr>
       <td>SSA Range:</td>
-      <td>{{getSRCText(round.ssa)}}</td>
+      <td><mat-icon>format_list_numbered_rtl</mat-icon>{{getSRCText()}}</td>
+    </tr>
+    <tr>
+      <td>info:</td>
+      <td>
+        <div class="flex-container">
+          <ng-template ngFor let-misc [ngForOf]="getMiscInfo()">
+            <a href="{{misc.url}}" class="detail-link">
+              <mat-icon>{{misc.icon}}</mat-icon>{{misc.title}}
+            </a>
+          </ng-template>
+        </div>
+      </td>
     </tr>
     <tr>
       <td>Equation:</td>
-      <td>{{getEquation(round)}}</td>
+      <td><mat-icon>trending_up</mat-icon>{{getEquation()}}</td>
     </tr>
     <tr>
       <td></td>
@@ -39,25 +54,6 @@
             [(ngModel)]="score"
             (input)="onScoreChanged()">
         </mat-form-field>
-      </td>
-    </tr>
-    <tr>
-      <td>Info:</td>
-      <td>
-        <a class="detail-link" href="{{getJpdgaInfo(round)}}">
-          JPDGA
-        </a>
-      </td>
-    </tr>
-    <tr>
-      <td>Results:</td>
-      <td>
-        <a class="detail-link" href="{{getJpdgaResult(round)}}">
-          JPDGA
-        </a>
-        <a class="detail-link" href="{{getPdgaResult(round)}}">
-          PDGA
-        </a>
       </td>
     </tr>
   </tbody>
