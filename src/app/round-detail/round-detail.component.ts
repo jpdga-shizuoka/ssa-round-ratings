@@ -6,12 +6,12 @@ import {
 const MIN_RATING = 700;
 const MAX_RATING = 1200;
 const ICONS = {
-  'video': 'ondemand_video',
-  'photo': 'camera_alt',
-  'website': 'public'
-}
+  video: 'ondemand_video',
+  photo: 'camera_alt',
+  website: 'public'
+};
 
-interface INFO_MISC {
+interface InfoMisc {
   icon: string;
   title: string;
   url: string;
@@ -55,8 +55,8 @@ export class RoundDetailComponent {
     return this.location;
   }
 
-  getMiscInfo(): INFO_MISC[] {
-    const info: INFO_MISC[] = [];
+  getMiscInfo(): InfoMisc[] {
+    const info: InfoMisc[] = [];
     if (!this.round.event) {
       return info;
     }
@@ -101,7 +101,7 @@ export class RoundDetailComponent {
       }
     }
     if (event.urls) {
-      for (let urlInfo of event.urls) {
+      for (const urlInfo of event.urls) {
         info.push({
           icon: ICONS[urlInfo.type],
           title: urlInfo.title,
