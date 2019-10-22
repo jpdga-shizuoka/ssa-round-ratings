@@ -2,36 +2,44 @@
   <tbody>
     <tr>
       <td>Date:</td>
-      <td>{{toLocaleDateString(detail.date)}}</td>
+      <td><mat-icon>calendar_today</mat-icon>{{getDate()}}</td>
     </tr>
-    <tr *ngIf="detail.location">
+    <tr>
       <td>Location:</td>
-      <td>
-        {{commonService.getCourseAliase(detail.location)}}
-        <a href="{{commonService.getCourseGeolocation(detail.location)}}">
-          <mat-icon>near_me</mat-icon>
-        </a>
-      </td>
-    </tr>
-    <tr *ngIf="detail.prefecture">
-      <td></td>
-      <td>
-        {{commonService.getPrefectureAliase(detail.prefecture)}}
+      <td class="flex-container">
+        <div>
+          <a href="{{getGeolocation()}}">
+            <mat-icon>room</mat-icon>{{getLocationName()}}
+          </a>
+        </div>
+        <div>
+          <mat-icon>public</mat-icon>{{getPrefecture()}}
+        </div>
       </td>
     </tr>
     <tr>
       <td>Round:</td>
-      <td>{{detail.holes}}holes @ {{detail.round}}</td>
+      <td><mat-icon>golf_course</mat-icon>{{getRoundStatus()}}</td>
     </tr>
     <tr>
       <td>SSA Range:</td>
-      <td>{{getSRCText(detail.ssa)}}</td>
+      <td><mat-icon>format_list_numbered_rtl</mat-icon>{{getSRCText()}}</td>
+    </tr>
+    <tr>
+      <td>info:</td>
+      <td>
+        <div class="flex-container">
+          <ng-template ngFor let-misc [ngForOf]="getMiscInfo()">
+            <a href="{{misc.url}}" class="detail-link">
+              <mat-icon>{{misc.icon}}</mat-icon>{{misc.title}}
+            </a>
+          </ng-template>
+        </div>
+      </td>
     </tr>
     <tr>
       <td>Equation:</td>
-      <td>
-        Rating = {{detail.weight.toFixed(1)}} * Score + {{detail.offset.toFixed(0)}}
-      </td>
+      <td><mat-icon>trending_up</mat-icon>{{getEquation()}}</td>
     </tr>
     <tr>
       <td></td>
@@ -46,28 +54,6 @@
             [(ngModel)]="score"
             (input)="onScoreChanged()">
         </mat-form-field>
-      </td>
-    </tr>
-    <tr>
-      <td>Info:</td>
-      <td>
-        <a *ngIf="detail.jpdga" class="detail-link"
-          href="http://www.jpdga.jp/event.php?tno={{detail.jpdga}}">
-          JPDGA
-        </a>
-      </td>
-    </tr>
-    <tr>
-      <td>Results:</td>
-      <td>
-        <a *ngIf="detail.jpdga" class="detail-link"
-          href="http://www.jpdga.jp/result.php?tno={{detail.jpdga}}">
-          JPDGA
-        </a>
-        <a *ngIf="detail.id" class="detail-link"
-          href="https://www.pdga.com/tour/event/{{detail.id}}">
-          PDGA
-        </a>
       </td>
     </tr>
   </tbody>

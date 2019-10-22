@@ -5,9 +5,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 
-import { CommonService } from '../common.service';
-import { CourseRatingsItem } from '../course-rating';
-import CourseRatingsData from '../../assets/course-rating-data.json';
+import { CommonService, RoundInfo } from '../common.service';
 
 const BREAKPOINT = 600;
 
@@ -29,34 +27,31 @@ const BREAKPOINT = 600;
 export class CourseRatingsComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
-  dataSource: MatTableDataSource<CourseRatingsItem>;
-  expandedElement: CourseRatingsItem | null;
-  rssa = 0;
+  dataSource: MatTableDataSource<RoundInfo>;
+  expandedElement: RoundInfo | null;
 
-  constructor(public commonService: CommonService) {
+  constructor(private cs: CommonService) {
     // Assign the data to the data source for the table to render
-    for (const round of CourseRatingsData) {
+    const rounds = this.cs.getRounds();
+    for (const round of rounds) {
       round['weight'] = calcWeight(round.ratings.player1, round.ratings.player2);
       round['offset'] = calcOffset(round);
       round['ssa'] = calcSsa(round);
-      round['rssa'] = this.calcRssa(round);
       round['category'] = calcCategory(round['ssa']);
     }
-    CourseRatingsData.sort((a, b) => {
+    rounds.sort((a, b) => {
       const t1 = new Date(a.date);
       const t2 = new Date(b.date);
       return t2.getTime() - t1.getTime();
     });
-    this.dataSource = new MatTableDataSource(CourseRatingsData);
+    this.dataSource = new MatTableDataSource(rounds);
   }
 
   ngOnInit() {
-    this.dataSource.filterPredicate = (data: CourseRatingsItem, filters: string) => {
+    this.dataSource.filterPredicate = (data: RoundInfo, filters: string) => {
       const matchFilter = [];
       const filterArray = filters.split('&');
-      const columns = [ data.continent,
-                        data.country,
-                        data.event,
+      const columns = [ data.event,
                         data.round,
                         data.date,
                         data.hla,
@@ -90,7 +85,7 @@ export class CourseRatingsComponent implements OnInit, AfterViewInit {
     this.dataSource.sortingDataAccessor = (item, property) => {
       switch (property) {
         case 'event':
-          return this.commonService.getEventTitle(item.event);
+          return this.cs.getEventTitle(item.event);
         case 'year':
           return new Date(item.date);
         default:
@@ -108,8 +103,8 @@ export class CourseRatingsComponent implements OnInit, AfterViewInit {
     }
   }
 
-  getEventAliase(name: string): string {
-    return this.commonService.getEventAliase(name);
+  getEventName(round: RoundInfo): string {
+    return this.cs.getEventAliase(round.event);
   }
 
   getDisplayedColumns() {
@@ -122,25 +117,17 @@ export class CourseRatingsComponent implements OnInit, AfterViewInit {
     const date = new Date(time);
     return date.getFullYear();
   }
-
-  private calcRssa(round: CourseRatingsItem) {
-    if (this.rssa === 1) {
-      return calcRssa1(round);
-    } else {
-      return calcRssa2(round);
-    }
-  }
 }
 
 function calcWeight(player1: { score: number, rating: number }, player2: { score: number, rating: number }) {
   return (player1.rating - player2.rating) / (player1.score - player2.score);
 }
 
-function calcOffset(round: CourseRatingsItem) {
+function calcOffset(round: RoundInfo) {
   return round.ratings.player1.rating - round['weight'] * round.ratings.player1.score;
 }
 
-function calcSsa(round: CourseRatingsItem) {
+function calcSsa(round: RoundInfo) {
   const holes = round.holes || 18;
   const regulation = holes / 18;
   return (1000 - round['offset']) / round['weight'] / regulation;
@@ -158,12 +145,4 @@ function calcCategory(ssa: number) {
   } else {
     return '5A';
   }
-}
-
-function calcRssa1(round: CourseRatingsItem) {
-  return round.hla ? round['ssa'] / round.hla * 10 : 0;
-}
-
-function calcRssa2(round: CourseRatingsItem) {
-  return round.hla ? round['ssa'] / Math.log10(round.hla) * 2 : 0;
 }

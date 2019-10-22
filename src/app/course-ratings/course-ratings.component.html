@@ -3,15 +3,7 @@
     <mat-form-field class="event-search">
       <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search...">
     </mat-form-field>
-    <!-- <div class='ratings-tools-spacer'></div>
-
-    <section class="rssa-section">
-      <label class="rssa-margin">RSSA:</label>
-      <mat-radio-group [(ngModel)]="rssa">
-        <mat-radio-button class="rssa-margin" color='warn' value=1>1</mat-radio-button>
-        <mat-radio-button class="rssa-margin" color='warn' value=2>2</mat-radio-button>
-      </mat-radio-group>
-    </section> -->
+    <div class='ratings-tools-spacer'></div>
   </div>
   <table mat-table class="full-width-table" matSort [dataSource]="dataSource" multiTemplateDataRows>
 
@@ -27,7 +19,7 @@
     <ng-container matColumnDef="event">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Event</th>
       <td mat-cell *matCellDef="let row">
-        {{getEventAliase(row.event)}}
+        {{getEventName(row)}}
       </td>
     </ng-container>
 
@@ -57,22 +49,12 @@
       <td mat-cell *matCellDef="let row">{{row.ssa.toFixed(1)}}</td>
     </ng-container>
 
-    <!-- RSSA Column -->
-    <ng-container matColumnDef="rssa">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header
-          matTooltip="Regulated Scratch Score Average"
-          matTooltipPosition="above">
-        RSSA
-      </th>
-      <td mat-cell *matCellDef="let row">{{row.rssa.toFixed(1)}}</td>
-    </ng-container>
-
     <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
     <ng-container matColumnDef="expandedDetail">
       <td mat-cell *matCellDef="let element" [attr.colspan]="getDisplayedColumns().length">
         <div class="round-element-detail"
              [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
-          <app-round-detail [detail]="element"></app-round-detail>
+          <app-round-detail [round]="element"></app-round-detail>
         </div>
       </td>
     </ng-container>

@@ -1,8 +1,16 @@
 import { Injectable } from '@angular/core';
 
-import COURSE_LOCATIONS from '../assets/course-location.json';
-import PREFECTURES from '../assets/prefecture.json';
-import EVENTS_NAME from '../assets/events.json';
+import EVENTS from '../assets/model/events.json';
+import LOCATIONS from '../assets/model/locations.json';
+import ROUNDS from '../assets/model/rounds.json';
+
+import EVENT_ALIASE from '../assets/model/event-aliase-dictionary.json';
+import LOCATION_ALIASE from '../assets/model/location-aliase-dictionary.json';
+import PREFECTURE_ALIASE from '../assets/model/prefecture-aliase-dictionary.json';
+
+import { RoundInfo, EventInfo, LocationInfo } from './models';
+
+export { RoundInfo, EventInfo, LocationInfo };
 
 interface EventParts {
   count: string;
@@ -22,43 +30,81 @@ export class CommonService {
     this.primaryLanguage = !this.primaryLanguage;
   }
 
-  getEventAliase(name: string): string {
+  getRounds(): RoundInfo[] {
+    return ROUNDS;
+  }
+
+  getEventAliase(eventName: string): string {
     if (this.primaryLanguage) {
-      return name;
+      return eventName;
     }
-    const parts = getEventKey(name);
+    const parts = getEventKey(eventName);
     if (!parts) {
-      return name;
+      return eventName;
     }
-    const event = EVENTS_NAME[parts.key];
-    if (!event) {
-      return name;
-    }
-    return `第${parts.count}回 ${event}`;
+    const aliase = EVENT_ALIASE[parts.key];
+    return !aliase ? eventName : `第${parts.count}回 ${aliase}`;
   }
 
-  getPrefectureAliase(name: string): string {
+  getPrefecture(prefectureName: string): string | undefined {
+    if (!prefectureName) {
+      return undefined;
+    }
     if (this.primaryLanguage) {
-      return name;
+      return prefectureName;
     }
-    const prefecture = PREFECTURES[getKeyFromName(name)];
-    return prefecture || name;
+    return PREFECTURE_ALIASE[getKeyFromName(prefectureName)]
+      || prefectureName;
   }
 
-  getCourseAliase(name: string): string {
+  getEvent(eventName: string): EventInfo | undefined {
+    return EVENTS[getKeyFromName(eventName)];
+  }
+
+  getLocation(locationName: string): LocationInfo | undefined {
+    return LOCATIONS[getKeyFromName(locationName)];
+  }
+
+  getLocationName(locationName: string): string | undefined {
     if (this.primaryLanguage) {
-      return name;
+      return locationName;
     }
-    const course = COURSE_LOCATIONS[getKeyFromName(name)];
-    return (!course || !course.aliase)
-      ? name
-      : course.aliase;
+    return LOCATION_ALIASE[getKeyFromName(locationName)] || locationName;
   }
 
-  getCourseGeolocation(name: string): string | undefined {
-    const course = COURSE_LOCATIONS[getKeyFromName(name)];
-    return course && course.geolocation
-      ? getUrlForGeolocation() + `${course.geolocation[0]},${course.geolocation[1]}`
+  getGeolocation(ll: [number, number]): string | undefined {
+    return ll
+      ? getUrlForGeolocation() + `${ll[0]},${ll[1]}`
+      : undefined;
+  }
+
+  getJpdgaInfo(eventId: string): string | undefined {
+    return eventId
+      ? `http://www.jpdga.jp/event.php?tno=${eventId}`
+      : undefined;
+  }
+
+  getJpdgaResult(eventId: string): string | undefined {
+    return eventId
+      ? `http://www.jpdga.jp/result.php?tno=${eventId}`
+      : undefined;
+  }
+
+  getJpdgaReport(topicId: string): string | undefined {
+    return topicId
+      ? `http://www.jpdga.jp/main/index.php?itemid=${topicId}`
+      : undefined;
+  }
+
+  getJpdgaPhoto(photoId: string): string | undefined {
+    return photoId
+      ? `https://www.flickr.com/photos/jpdga/albums/${photoId}`
+      : undefined;
+  }
+
+  getPdgaResult(eventId: string): string | undefined {
+    return eventId
+      ? `https://www.pdga.com/tour/event/${eventId}`
       : undefined;
   }
 
@@ -75,8 +121,7 @@ function getKeyFromName(name: string): string {
   if (!name) {
     return '';
   }
-  const keys = name.split(',');
-  return keys[0].toLowerCase().trim();
+  return name.trim().toLowerCase().replace(/[ -]/g, '');
 }
 
 function getUrlForGeolocation(): string {
@@ -86,17 +131,21 @@ function getUrlForGeolocation(): string {
 }
 
 function isAppleDevice(): boolean {
-  return /iPhone|Macintosh/.test(window.navigator.userAgent);
+  return /iPhone|iPad|Macintosh/.test(window.navigator.userAgent);
 }
 
 function getEventKey(name: string): EventParts | undefined {
-  const eventName = /the (\d+)(st|nd|rd|th) (.+)/;
-  const results = name.trim().toLowerCase().match(eventName);
+  if (!name) {
+    return undefined;
+  }
+  const eventName = /the(\d+)(st|nd|rd|th)(.+)/;
+  const stripedName = name.trim().toLowerCase().replace(/[ -]/g, '');
+  const results = stripedName.match(eventName);
   if (!results || results.length !== 4) {
     return undefined;
   }
   return {
     count: results[1],
-    key: results[3].replace(/ /g, '')
+    key: results[3]
   };
 }

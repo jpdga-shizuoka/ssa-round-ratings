@@ -1,10 +1,21 @@
 import { Component, Input } from '@angular/core';
-
-import { CommonService } from '../common.service';
-import { CourseRatingsItem } from '../course-rating';
+import {
+  CommonService, RoundInfo, EventInfo, LocationInfo
+} from '../common.service';
 
 const MIN_RATING = 700;
 const MAX_RATING = 1200;
+const ICONS = {
+  video: 'ondemand_video',
+  photo: 'camera_alt',
+  website: 'public'
+};
+
+interface InfoMisc {
+  icon: string;
+  title: string;
+  url: string;
+}
 
 @Component({
   selector: 'app-round-detail',
@@ -13,20 +24,151 @@ const MAX_RATING = 1200;
 })
 export class RoundDetailComponent {
 
-  @Input() detail: CourseRatingsItem;
+  @Input() round: RoundInfo;
 
   rating: number;
   score: number;
 
-  constructor(public commonService: CommonService) {
+  private event: EventInfo;
+  private location: LocationInfo;
+
+  constructor(private cs: CommonService) {
   }
 
-  toLocaleDateString(time: string) {
-    const date = new Date(time);
+  private getEvent(): EventInfo | undefined {
+    if (this.event) {
+      return this.event;
+    }
+    this.event = this.cs.getEvent(this.round.event);
+    return this.event;
+  }
+
+  private getLocation(): LocationInfo | undefined {
+    if (this.location) {
+      return this.location;
+    }
+    const event = this.getEvent();
+    if (!event.location) {
+      return undefined;
+    }
+    this.location = this.cs.getLocation(event.location);
+    return this.location;
+  }
+
+  getMiscInfo(): InfoMisc[] {
+    const info: InfoMisc[] = [];
+    if (!this.round.event) {
+      return info;
+    }
+    const event = this.getEvent();
+    if (!event) {
+      return info;
+    }
+
+    if (event.pdga && event.pdga.eventId) {
+      info.push({
+        icon: 'public',
+        title: 'Results 🇺🇸',
+        url: this.cs.getPdgaResult(event.pdga.eventId)
+      });
+    }
+    if (event.jpdga) {
+      if (event.jpdga.eventId) {
+        info.push({
+          icon: 'public',
+          title: 'Results 🇯🇵',
+          url: this.cs.getJpdgaResult(event.jpdga.eventId)
+        });
+        info.push({
+          icon: 'public',
+          title: 'Papers & Map',
+          url: this.cs.getJpdgaInfo(event.jpdga.eventId)
+        });
+      }
+      if (event.jpdga.topicId) {
+        info.push({
+          icon: 'public',
+          title: 'Report 🇯🇵',
+          url: this.cs.getJpdgaReport(event.jpdga.topicId)
+        });
+      }
+      if (event.jpdga.photoId) {
+        info.push({
+          icon: 'camera_alt',
+          title: 'Photos',
+          url: this.cs.getJpdgaPhoto(event.jpdga.photoId)
+        });
+      }
+    }
+    if (event.urls) {
+      for (const urlInfo of event.urls) {
+        info.push({
+          icon: ICONS[urlInfo.type],
+          title: urlInfo.title,
+          url: urlInfo.url
+        });
+      }
+    }
+    return info;
+  }
+
+  getDate(): string | undefined {
+    if (!this.round.date) {
+      return undefined;
+    }
+    const date = new Date(this.round.date);
     return date.toLocaleDateString();
   }
 
-  getSRCText(ssa: number) {
+  getLocationName(): string | undefined {
+    const event = this.getEvent();
+    if (!event) {
+      return undefined;
+    }
+    return this.cs.getLocationName(event.location);
+  }
+
+  getGeolocation(): string | undefined {
+    const location = this.getLocation();
+    if (!location || !location.geolocation) {
+      return undefined;
+    }
+    return this.cs.getGeolocation(location.geolocation);
+  }
+
+  getPrefecture(): string | undefined {
+    const location = this.getLocation();
+    if (!location || !location.prefecture) {
+      return undefined;
+    }
+    return this.cs.getPrefecture(location.prefecture);
+  }
+
+  getJpdgaInfo(round: RoundInfo): string | undefined {
+    return this.cs.getJpdgaInfo(round.event);
+  }
+
+  getJpdgaResult(round: RoundInfo): string | undefined {
+    return this.cs.getJpdgaResult(round.event);
+  }
+
+  getPdgaResult(round: RoundInfo): string | undefined {
+    return this.cs.getPdgaResult(round.event);
+  }
+
+  getEquation(): string | undefined {
+    if (!this.round.weight || !this.round.offset) {
+      return undefined;
+    }
+    return `Rating = ${this.round.weight.toFixed(1)} * Score + ${this.round.offset.toFixed(0)}`;
+  }
+
+  getRoundStatus(): string {
+    return `${this.round.holes} holes @ ${this.round.round}`;
+  }
+
+  getSRCText() {
+    const ssa = this.round.ssa;
     if (!ssa) {
       return '';
     }
@@ -80,20 +222,20 @@ export class RoundDetailComponent {
   }
 
   private rating2score(rating: number) {
-    let score = (rating - this.detail.offset) / this.detail.weight;
+    let score = (rating - this.round.offset) / this.round.weight;
     score = Math.round(score * 10) / 10;
     return score;
   }
 
   private score2rating(score: number) {
-    return Math.round(score * this.detail.weight + this.detail.offset);
+    return Math.round(score * this.round.weight + this.round.offset);
   }
 
   private getMinScore() {
-    return (this.detail.holes || 18) * 2;
+    return (this.round.holes || 18) * 2;
   }
 
   private getMaxScore() {
-    return (this.detail.holes || 18) * 6;
+    return (this.round.holes || 18) * 6;
   }
 }
