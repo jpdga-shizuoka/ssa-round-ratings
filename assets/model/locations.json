@@ -1,0 +1,78 @@
+{
+  "minamisomahoseridingpark": {
+    "prefecture": "Fukusima",
+    "geolocation": [37.593227, 140.929094]
+  },
+  "maikodiscgolfpark": {
+    "prefecture": "Niigata",
+    "geolocation": [36.982452, 138.826901]
+  },
+  "fuminnomorihiyoshi": {
+    "prefecture": "Kyoto",
+    "geolocation": [35.137323, 135.530041]
+  },
+  "kitakamisportpark": {
+    "prefecture": "Iwate",
+    "geolocation": [39.261938, 141.091096]
+  },
+  "uminonakamichiseasidepark": {
+    "prefecture": "Fukuoka",
+    "geolocation": [33.654713, 130.355778]
+  },
+  "kiyoharakohgyodanchi": {
+    "prefecture": "Tochigi",
+    "geolocation": [36.559136, 139.978235]
+  },
+  "hunkawanpanolamapark": {
+    "prefecture": "Hokkaido",
+    "geolocation": [42.231879, 140.309498]
+  },
+  "hikaritokazenookapark": {
+    "prefecture": "Ibaraki",
+    "geolocation": [36.003104, 140.305402]
+  },
+  "seasidenaturepark": {
+    "prefecture": "Fukui",
+    "geolocation": [36.249289, 136.134013]
+  },
+  "kiyosatonomori": {
+    "prefecture": "Yamanashi",
+    "geolocation": [35.928824, 138.436223]
+  },
+  "hiruganokohgen": {
+    "prefecture": "Gifu",
+    "geolocation": [36.006050, 136.907814]
+  },
+  "yoshinogarihistoricalpark": {
+    "prefecture": "Saga",
+    "geolocation": [33.325602, 130.384607]
+  },
+  "michinokupark": {
+    "prefecture": "Miyagi",
+    "geolocation": [38.181922, 140.671260]
+  },
+  "nakijinsonsportpark": {
+    "prefecture": "Okinawa",
+    "geolocation": [26.694991, 127.977237]
+  },
+  "yoshinopark": {
+    "prefecture": "Kagoshima",
+    "geolocation": [31.633516, 130.594111]
+  },
+  "mikawarinkairyokuchi": {
+    "prefecture": "Aichi",
+    "geolocation": [34.788696, 137.323191]
+  },
+  "kyototambapark": {
+    "prefecture": "Kyoto",
+    "geolocation": [35.166536, 135.416271]
+  },
+  "mizubayashisportpark": {
+    "prefecture": "Akita",
+    "geolocation": [39.378272, 140.031388]
+  },
+  "nasuhighlandgolfclub": {
+    "prefecture": "Tochigi",
+    "geolocation": [37.072469, 139.940032]
+  }
+}

@@ -1,10 +1,4 @@
 [{
-    "id": 38541,
-    "jpdga": 477,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Akita",
-    "location": "Mizubayashi Sport Park",
     "event": "The 18th Tohoku Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-10-07",
@@ -22,12 +16,6 @@
     }
 },
 {
-    "id": 38544,
-    "jpdga": 482,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Aichi",
-    "location": "Mikawa Rinkai Ryokuchi",
     "event": "The 18th Chubu Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-12-15",
@@ -45,12 +33,6 @@
     }
 },
 {
-    "id": 39008,
-    "jpdga": 484,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Kagoshima",
-    "location": "Yoshino Park",
     "event": "The 5th Kagoshima Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-01-26",
@@ -68,12 +50,6 @@
     }
 },
 {
-    "id": 39009,
-    "jpdga": 485,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Okinawa",
-    "location": "Nakijinson Sport Park",
     "event": "The 8th Okinawa Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-02-16",
@@ -91,12 +67,6 @@
     }
 },
 {
-    "id": 40528,
-    "jpdga": 492,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Miyagi",
-    "location": "Michinoku Park",
     "event": "The 2nd Miyagi Michinoku Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-03-23",
@@ -113,12 +83,6 @@
     }
 },
 {
-    "id": 40529,
-    "jpdga": 493,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Saga",
-    "location": "Yoshinogari Historical Park",
     "event": "The 17th Saga Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-04-13",
@@ -136,12 +100,6 @@
     }
 },
 {
-    "id": 41239,
-    "jpdga": 495,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Gifu",
-    "location": "Hirugano Kohgen",
     "event": "The 2nd Gifu Hirugano Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-05-04",
@@ -159,12 +117,6 @@
     }
 },
 {
-    "id": 41240,
-    "jpdga": 497,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Yamanashi",
-    "location": "Kiyosato-no-Mori",
     "event": "The 14th Kiyosatonomori Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-05-18",
@@ -182,12 +134,6 @@
     }
 },
 {
-    "id": 41241,
-    "jpdga": 498,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Fukui",
-    "location": "Seaside Nature Park",
     "event": "The 21st Nippon Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-05-25",
@@ -205,12 +151,6 @@
     }
 },
 {
-    "id": 41242,
-    "jpdga": 499,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Ibaraki",
-    "location": "Hikari-to-Kaze-no-Oka Park",
     "event": "The 14th Masters National Championship",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-06-22",
@@ -228,12 +168,6 @@
     }
 },
 {
-    "id": 41243,
-    "jpdga": 501,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Hokkaido",
-    "location": "Hunka-wan Panolama Park",
     "event": "The 8th Hokkaido Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-06-29",
@@ -251,12 +185,6 @@
     }
 },
 {
-    "id": 41244,
-    "jpdga": 503,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Tochigi",
-    "location": "Kiyohara Kohgyo Danchi",
     "event": "The 23rd Kanto Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-07-14",
@@ -274,12 +202,6 @@
     }
 },
 {
-    "id": 41245,
-    "jpdga": 505,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Fukuoka",
-    "location": "Umino-Nakamichi Seaside Park",
     "event": "The 7th Asia Championship",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-08-03",
@@ -297,12 +219,6 @@
     }
 },
 {
-    "id": 41246,
-    "jpdga": 507,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Iwate",
-    "location": "Kitakami Sport Park",
     "event": "The 14th Michinoku Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-08-11",
@@ -320,13 +236,6 @@
     }
 },
 {
-    "id": 42479,
-    "jpdga": 510,
-    "year": 2019,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Kyoto",
-    "location": "Fumin-no-Mori Hiyoshi",
     "event": "The 22nd Kansai Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-08-31",
@@ -344,12 +253,6 @@
     }
 },
 {
-    "id": 42480,
-    "jpdga": 512,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Niigata",
-    "location": "Maiko Disc Golf Park",
     "event": "The 31st Japan National Championship",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-09-22",
@@ -367,12 +270,6 @@
     }
 },
 {
-    "id": 38543,
-    "jpdga": 481,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Fukuoka",
-    "location": "Umino-Nakamichi Seaside Park",
     "event": "The 32nd Kyushu Open",
     "round": "Rd1 (B,C)",
     "date": "2018-12-01",
@@ -390,12 +287,6 @@
     }
 },
 {
-    "id": 38543,
-    "jpdga": 481,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Fukuoka",
-    "location": "Umino-Nakamichi Seaside Park",
     "event": "The 32nd Kyushu Open",
     "round": "Rd2 (A,B)",
     "date": "2018-12-01",
@@ -413,12 +304,6 @@
     }
 },
 {
-    "id": 38543,
-    "jpdga": 481,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Fukuoka",
-    "location": "Umino-Nakamichi Seaside Park",
     "event": "The 32nd Kyushu Open",
     "round": "Rd3 (A,C)",
     "date": "2018-12-02",
@@ -436,12 +321,6 @@
     }
 },
 {
-    "id": 38542,
-    "jpdga": 479,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Kyoto",
-    "location": "Kyoto Tamba Park",
     "event": "The 14th Kyoto Classic",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-11-17",
@@ -459,12 +338,6 @@
     }
 },
 {
-    "id": 36758,
-    "jpdga": 476,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Niigata",
-    "location": "Maiko Disc Golf Park",
     "event": "The 30th Japan National Championship",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-09-16",
@@ -482,12 +355,6 @@
     }
 },
 {
-    "id": 36757,
-    "jpdga": 474,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Kyoto",
-    "location": "Fumin-no-Mori Hiyoshi",
     "event": "The 21st Kansai Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-09-08",
@@ -505,12 +372,6 @@
     }
 },
 {
-    "id": 36755,
-    "jpdga": 471,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Iwate",
-    "location": "Kitakami Sport Park",
     "event": "The 13th Michinoku Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-08-18",
@@ -528,12 +389,6 @@
     }
 },
 {
-    "id": 36754,
-    "jpdga": 469,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Tochigi",
-    "location": "Kiyohara Kohgyo Danchi",
     "event": "The 22nd Kanto Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-07-14",
@@ -551,12 +406,6 @@
     }
 },
 {
-    "id": 36753,
-    "jpdga": 468,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Hokkaido",
-    "location": "Hunka-wan Panolama Park",
     "event": "The 7th Hokkaido Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-06-30",
@@ -574,12 +423,6 @@
     }
 },
 {
-    "id": 36752,
-    "jpdga": 467,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Ibaraki",
-    "location": "Hikari-to-Kaze-no-Oka Park",
     "event": "The 13th Masters National Championship",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-06-23",
@@ -597,12 +440,6 @@
     }
 },
 {
-    "id": 36414,
-    "jpdga": 465,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Yamanashi",
-    "location": "Kiyosato-no-Mori",
     "event": "The 13th Kiyosatonomori Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-05-19",
@@ -620,12 +457,6 @@
     }
 },
 {
-    "id": 36415,
-    "jpdga": 466,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Fukui",
-    "location": "Seaside Nature Park",
     "event": "The 20th Nippon Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-05-26",
@@ -643,12 +474,6 @@
     }
 },
 {
-    "id": 36756,
-    "jpdga": 464,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Gifu",
-    "location": "Hirugano Kohgen",
     "event": "The 7th Hirugano Kogen tournament",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-05-04",
@@ -666,12 +491,6 @@
     }
 },
 {
-    "id": 36394,
-    "jpdga": 460,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Saga",
-    "location": "Yoshinogari Historical Park",
     "event": "The 16th Saga Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-04-14",
@@ -689,12 +508,6 @@
     }
 },
 {
-    "id": 36395,
-    "jpdga": 459,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Miyagi",
-    "location": "Michinoku Park",
     "event": "The 1st Miyagi Michinoku Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-03-24",
@@ -712,12 +525,6 @@
     }
 },
 {
-    "id": 34638,
-    "jpdga": 450,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Okinawa",
-    "location": "Nakijinson Sport Park",
     "event": "The 7th Okinawa Open",
     "round": "Rd1",
     "date": "2018-02-17",
@@ -735,12 +542,6 @@
     }
 },
 {
-    "id": 34638,
-    "jpdga": 450,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Okinawa",
-    "location": "Nakijinson Sport Park",
     "event": "The 7th Okinawa Open",
     "round": "Rd2",
     "date": "2018-02-17",
@@ -758,12 +559,6 @@
     }
 },
 {
-    "id": 34638,
-    "jpdga": 450,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Okinawa",
-    "location": "Nakijinson Sport Park",
     "event": "The 7th Okinawa Open",
     "round": "Rd3",
     "date": "2018-02-18",
@@ -781,11 +576,6 @@
     }
 },
 {
-    "id": 32822,
-    "jpdga": 447,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "location": "Mikawa Rinkai Ryokuchi,Aichi",
     "event": "The 17th Chubu Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-12-16",
@@ -803,12 +593,6 @@
     }
 },
 {
-    "id": 32821,
-    "jpdga": 446,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Fukuoka",
-    "location": "Umino-Nakamichi Seaside Park",
     "event": "The 31st Kyushu Open",
     "round": "Rd1",
     "date": "2017-12-02",
@@ -825,12 +609,6 @@
     }
 },
 {
-    "id": 32821,
-    "jpdga": 446,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Fukuoka",
-    "location": "Umino-Nakamichi Seaside Park",
     "event": "The 31st Kyushu Open",
     "round": "Rd2",
     "date": "2017-12-02",
@@ -847,12 +625,6 @@
     }
 },
 {
-    "id": 32821,
-    "jpdga": 446,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Fukuoka",
-    "location": "Umino-Nakamichi Seaside Park",
     "event": "The 31st Kyushu Open",
     "round": "Rd3",
     "date": "2017-12-03",
@@ -869,12 +641,6 @@
     }
 },
 {
-    "id": 32820,
-    "jpdga": 445,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Kyoto",
-    "location": "Kyoto Tamba Park",
     "event": "The 13th Kyoto Classic",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-11-18",
@@ -891,12 +657,6 @@
     }
 },
 {
-    "id": 32819,
-    "jpdga": 443,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Akita",
-    "location": "Mizubayashi Sport Park",
     "event": "The 17th Tohoku Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-10-08",
@@ -914,12 +674,6 @@
     }
 },
 {
-    "id": 32814,
-    "jpdga": 442,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Niigata",
-    "location": "Maiko Disc Golf Park",
     "event": "The 29th Japan National Championship",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-09-17",
@@ -937,12 +691,6 @@
     }
 },
 {
-    "id": 32813,
-    "jpdga": 440,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Kyoto",
-    "location": "Fumin-no-Mori Hiyoshi",
     "event": "The 20th Kansai Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-09-02",
@@ -960,12 +708,6 @@
     }
 },
 {
-    "id": 32812,
-    "jpdga": 437,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Iwate",
-    "location": "Kitakami Sport Park",
     "event": "The 12th Michinoku Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-08-05",
@@ -983,12 +725,6 @@
     }
 },
 {
-    "id": 32811,
-    "jpdga": 449,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Kagoshima",
-    "location": "Yoshino Park",
     "event": "The 4th Kagoshima Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-07-29",
@@ -1006,12 +742,6 @@
     }
 },
 {
-    "id": 32810,
-    "jpdga": 434,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Tochigi",
-    "location": "Kiyohara Kohgyo Danchi",
     "event": "The 21st Kanto Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-07-15",
@@ -1029,12 +759,6 @@
     }
 },
 {
-    "id": 32809,
-    "jpdga": 433,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Hokkaido",
-    "location": "Hunka-wan Panolama Park",
     "event": "The 6th Hokkaido Open",
     "round": "Rd1,Rd2,Rd3,Rd4",
     "date": "2017-07-01",
@@ -1052,12 +776,6 @@
     }
 },
 {
-    "id": 32808,
-    "jpdga": 431,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Ibaraki",
-    "location": "Hikari-to-Kaze-no-Oka Park",
     "event": "The 12th Masters National Championship",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-06-24",
@@ -1075,12 +793,6 @@
     }
 },
 {
-    "id": 32253,
-    "jpdga": 427,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Yamanashi",
-    "location": "Kiyosato-no-Mori",
     "event": "The 12th Kiyosatonomori Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-05-21",
@@ -1098,12 +810,6 @@
     }
 },
 {
-    "id": 32254,
-    "jpdga": 428,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Fukui",
-    "location": "Seaside Nature Park",
     "event": "The 6th Fukui Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-05-27",
@@ -1120,12 +826,6 @@
     }
 },
 {
-    "id": 32251,
-    "jpdga": 426,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Fukui",
-    "location": "Seaside Nature Park",
     "event": "The 19th Nippon Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-05-05",
@@ -1143,12 +843,6 @@
     }
 },
 {
-    "id": 32248,
-    "jpdga": 425,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Fukushima",
-    "location": "Minamisoma Hose Riding Park",
     "event": "The 13th Minamisoma Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-04-29",
@@ -1166,12 +860,6 @@
     }
 },
 {
-    "id": 32209,
-    "jpdga": 423,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Saga",
-    "location": "Yoshinogari Historical Park",
     "event": "The 15th Saga Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-04-08",
@@ -1189,12 +877,6 @@
     }
 },
 {
-    "id": 30842,
-    "jpdga": 411,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Okinawa",
-    "location": "Nakijinson Sport Park",
     "event": "The 6th Okinawa Open",
     "round": "Rd1",
     "date": "2017-02-18",
@@ -1211,12 +893,6 @@
     }
 },
 {
-    "id": 30842,
-    "jpdga": 411,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Okinawa",
-    "location": "Nakijinson Sport Park",
     "event": "The 6th Okinawa Open",
     "round": "Rd2",
     "date": "2017-02-18",
@@ -1233,12 +909,6 @@
     }
 },
 {
-    "id": 30842,
-    "jpdga": 411,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Okinawa",
-    "location": "Nakijinson Sport Park",
     "event": "The 6th Okinawa Open",
     "round": "Rd3",
     "date": "2017-02-19",
@@ -1255,12 +925,6 @@
     }
 },
 {
-    "id": 30841,
-    "jpdga": 409,
-    "continent": "Oceania/Asia",
-    "country": "Japan",
-    "prefecture": "Kagoshima",
-    "location": "Yoshino Park",
     "event": "The 3rd Kagoshima Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-01-28",
@@ -1278,11 +942,6 @@
     }
 },
 {
-  "id": 15768,
-  "continent": "Oceania/Asia",
-  "country": "Japan",
-  "prefecture": "Tochigi",
-  "location": "Nasu Highland Golf Club",
   "event": "The 2014 Japan Open",
   "round": "Rd1,Rd4,Rd5(Fujin)",
   "date": "2014-06-05",
@@ -1300,11 +959,6 @@
   }
 },
 {
-  "id": 15768,
-  "continent": "Oceania/Asia",
-  "country": "Japan",
-  "prefecture": "Tochigi",
-  "location": "Nasu Highland Golf Club",
   "event": "The 2014 Japan Open",
   "round": "Rd2,Rd3(Raijin)",
   "date": "2014-06-05",
@@ -1322,11 +976,6 @@
   }
 },
 {
-  "id": 9552,
-  "continent": "Oceania/Asia",
-  "country": "Japan",
-  "prefecture": "Tochigi",
-  "location": "Nasu Highland Golf Club",
   "event": "The 2010 Japan Open",
   "round": "Rd1,Rd4,Semifinal",
   "date": "2010-06-10",
@@ -1343,11 +992,6 @@
   }
 },
 {
-  "id": 9552,
-  "continent": "Oceania/Asia",
-  "country": "Japan",
-  "prefecture": "Tochigi",
-  "location": "Nasu Highland Golf Club",
   "event": "The 2010 Japan Open",
   "round": "Rd2,Rd3",
   "date": "2010-06-10",
@@ -1364,11 +1008,6 @@
   }
 },
 {
-  "id": 7272,
-  "continent": "Oceania/Asia",
-  "country": "Japan",
-  "prefecture": "Tochigi",
-  "location": "Nasu Highland Golf Club",
   "event": "The 2008 Japan Open",
   "round": "Rd1",
   "date": "2008-06-12",
@@ -1385,11 +1024,6 @@
   }
 },
 {
-  "id": 7272,
-  "continent": "Oceania/Asia",
-  "country": "Japan",
-  "prefecture": "Tochigi",
-  "location": "Nasu Highland Golf Club",
   "event": "The 2008 Japan Open",
   "round": "Rd2",
   "date": "2008-06-13",
@@ -1406,11 +1040,6 @@
   }
 },
 {
-  "id": 5506,
-  "continent": "Oceania/Asia",
-  "country": "Japan",
-  "prefecture": "Tochigi",
-  "location": "Nasu Highland Golf Club",
   "event": "The 2006 Japan Open",
   "round": "Rd1",
   "date": "2006-06-15",
@@ -1427,11 +1056,6 @@
   }
 },
 {
-  "id": 5506,
-  "continent": "Oceania/Asia",
-  "country": "Japan",
-  "prefecture": "Tochigi",
-  "location": "Nasu Highland Golf Club",
   "event": "The 2006 Japan Open",
   "round": "Rd2",
   "date": "2006-06-16",
@@ -1448,11 +1072,6 @@
   }
 },
 {
-  "id": 5506,
-  "continent": "Oceania/Asia",
-  "country": "Japan",
-  "prefecture": "Tochigi",
-  "location": "Nasu Highland Golf Club",
   "event": "The 2006 Japan Open",
   "round": "Semifinal",
   "date": "2006-06-16",
