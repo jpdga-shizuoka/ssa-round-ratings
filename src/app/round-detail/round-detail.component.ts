@@ -81,7 +81,7 @@ export class RoundDetailComponent {
         });
         info.push({
           icon: 'public',
-          title: 'Papers & Map',
+          title: 'Papers&Map 🇯🇵',
           url: this.cs.getJpdgaInfo(event.jpdga.eventId)
         });
       }

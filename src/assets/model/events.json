@@ -265,6 +265,11 @@
     "jpdga": {
       "eventId": "476"
     },
+    "urls": [{
+      "type": "video",
+      "title": "MPO Final9",
+      "url": "https://youtu.be/0sYuYTpk-Ss"
+    }],
     "location": "Maiko Disc Golf Park",
     "date": "2018-09-16"
   },
@@ -564,6 +569,43 @@
     "pdga": {
       "eventId": "15768"
     },
+    "urls": [{
+      "type": "video",
+      "title": "MPO Final9",
+      "url": "https://youtu.be/OWR5FkNz-DU"
+    }, {
+      "type": "video",
+      "title": "MPO 5th Round Back9",
+      "url": "https://youtu.be/AL0tFuR0qMo"
+    }, {
+      "type": "video",
+      "title": "MPO 5th Round Front9",
+      "url": "https://youtu.be/8-bTxntUCuM"
+    }, {
+      "type": "video",
+      "title": "Cinematic Trailer",
+      "url": "https://youtu.be/9bcKp7vxDzg"
+    }, {
+      "type": "video",
+      "title": "Welcome to ...",
+      "url": "https://youtu.be/6gZZl6ERQzU"
+    }, {
+      "type": "video",
+      "title": "McBeast Diaries #2",
+      "url": "https://youtu.be/a7rXNmIITA0"
+    }, {
+      "type": "video",
+      "title": "McBeast Diaries #1",
+      "url": "https://youtu.be/lu0uqF8lGCg"
+    },{
+      "type": "website",
+      "title": "Official Site",
+      "url": "http://japanopen.info"
+    },{
+      "type": "website",
+      "title": "Official Site 🇯🇵",
+      "url": "http://www.herodisc.com/japanopen/"
+    }],
     "location": "Nasu Highland Golf Club",
     "date": "2014-06-05"
   },
@@ -571,6 +613,22 @@
     "pdga": {
       "eventId": "9552"
     },
+    "jpdga": {
+      "photoId": "72157624113282793"
+    },
+    "urls": [{
+      "type": "video",
+      "title": "MPO Final #3/3",
+      "url": "https://youtu.be/E99VZGUHt_M"
+    }, {
+      "type": "video",
+      "title": "MPO Final #2/3",
+      "url": "https://youtu.be/tAYsOFUYU8M"
+    }, {
+      "type": "video",
+      "title": "MPO Final #1/3",
+      "url": "https://youtu.be/CZpKT6aeqQ4"
+    }],
     "location": "Nasu Highland Golf Club",
     "date": "2010-06-10"
   },
