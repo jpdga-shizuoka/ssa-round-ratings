@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {
   CommonService, RoundInfo, EventInfo, LocationInfo
 } from '../common.service';
@@ -11,7 +11,7 @@ const ICONS = {
   website: 'public'
 };
 
-interface InfoMisc {
+interface MiscInfo {
   icon: string;
   title: string;
   url: string;
@@ -22,7 +22,7 @@ interface InfoMisc {
   templateUrl: './round-detail.component.html',
   styleUrls: ['./round-detail.component.css']
 })
-export class RoundDetailComponent {
+export class RoundDetailComponent implements OnInit {
 
   @Input() round: RoundInfo;
 
@@ -31,8 +31,13 @@ export class RoundDetailComponent {
 
   private event: EventInfo;
   private location: LocationInfo;
+  private miscInfo: MiscInfo[];
 
   constructor(private cs: CommonService) {
+  }
+
+  ngOnInit() {
+    this.makeMiscInfo();
   }
 
   private getEvent(): EventInfo | undefined {
@@ -55,8 +60,12 @@ export class RoundDetailComponent {
     return this.location;
   }
 
-  getMiscInfo(): InfoMisc[] {
-    const info: InfoMisc[] = [];
+  getMiscInfo(): MiscInfo[] {
+    return this.miscInfo;
+  }
+
+  private makeMiscInfo() {
+    const info: MiscInfo[] = [];
     if (!this.round.event) {
       return info;
     }
@@ -81,7 +90,7 @@ export class RoundDetailComponent {
         });
         info.push({
           icon: 'public',
-          title: 'Papers & Map',
+          title: 'Papers&Map 🇯🇵',
           url: this.cs.getJpdgaInfo(event.jpdga.eventId)
         });
       }
@@ -109,7 +118,7 @@ export class RoundDetailComponent {
         });
       }
     }
-    return info;
+    this.miscInfo = info;
   }
 
   getDate(): string | undefined {
