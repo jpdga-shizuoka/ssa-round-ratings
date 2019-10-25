@@ -43,6 +43,12 @@ export class CommonService {
       return eventName;
     }
     const aliase = EVENT_ALIASE[parts.key];
+    if (!aliase) {
+      return eventName;
+    }
+    if (parts.count > 1960) {
+      return !aliase ? eventName : `${parts.count}年 ${aliase}`;      
+    }
     return !aliase ? eventName : `第${parts.count}回 ${aliase}`;
   }
 
@@ -138,14 +144,13 @@ function getEventKey(name: string): EventParts | undefined {
   if (!name) {
     return undefined;
   }
-  const eventName = /the(\d+)(st|nd|rd|th)(.+)/;
-  const stripedName = name.trim().toLowerCase().replace(/[ -]/g, '');
-  const results = stripedName.match(eventName);
+  const eventName = /the (\d+)(st|nd|rd|th|) (.+)/i;
+  const results = name.trim().toLowerCase().match(eventName);
   if (!results || results.length !== 4) {
     return undefined;
   }
   return {
     count: results[1],
-    key: results[3]
+    key: results[3].replace(/[ -]/g, '')
   };
 }
