@@ -21,7 +21,7 @@
       <td>Round:</td>
       <td><mat-icon>golf_course</mat-icon>{{getRoundStatus()}}</td>
     </tr>
-    <tr>
+    <tr *ngIf="round.ssa">
       <td>SSA Range:</td>
       <td><mat-icon>format_list_numbered_rtl</mat-icon>{{getSRCText()}}</td>
     </tr>
@@ -37,11 +37,11 @@
         </div>
       </td>
     </tr>
-    <tr>
+    <tr *ngIf="round.ssa">
       <td>Equation:</td>
       <td><mat-icon>trending_up</mat-icon>{{getEquation()}}</td>
     </tr>
-    <tr>
+    <tr *ngIf="round.ssa">
       <td></td>
       <td>
         <mat-form-field class="equation-args">

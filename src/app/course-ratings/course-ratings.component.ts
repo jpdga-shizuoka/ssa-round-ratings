@@ -34,10 +34,12 @@ export class CourseRatingsComponent implements OnInit, AfterViewInit {
     // Assign the data to the data source for the table to render
     const rounds = this.cs.getRounds();
     for (const round of rounds) {
-      round['weight'] = calcWeight(round.ratings.player1, round.ratings.player2);
-      round['offset'] = calcOffset(round);
-      round['ssa'] = calcSsa(round);
-      round['category'] = calcCategory(round['ssa']);
+      if (round.ratings) {
+        round['weight'] = calcWeight(round.ratings.player1, round.ratings.player2);
+        round['offset'] = calcOffset(round);
+        round['ssa'] = calcSsa(round);
+        round['category'] = calcCategory(round['ssa']);
+      }
     }
     rounds.sort((a, b) => {
       const t1 = new Date(a.date);
