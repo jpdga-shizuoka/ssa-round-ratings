@@ -1,6 +1,14 @@
 {
+  "showakinenpark": {
+    "prefecture": "Tokyo",
+    "geolocation": [35.711596, 139.391561]
+  },
+  "tatsuminomoriseasidepark": {
+    "prefecture": "Tokyo",
+    "geolocation": [35.649155, 139.813418]
+  },
   "minamisomahoseridingpark": {
-    "prefecture": "Fukusima",
+    "prefecture": "Fukushima",
     "geolocation": [37.593227, 140.929094]
   },
   "maikodiscgolfpark": {

@@ -209,6 +209,15 @@
     "location": "Kitakami Sport Park",
     "date": "2019-08-11"
   },
+  "the8thhiruganokogentournament": {
+    "jpdga": {
+      "eventId": "509",
+      "topicId": "1413",
+      "photoId": "72157710683372748"
+    },
+    "location": "Hirugano Kohgen",
+    "date": "2019-08-25"
+  },
   "the22ndkansaiopen": {
     "pdga": {
       "eventId": "42479"
@@ -219,6 +228,15 @@
     },
     "location": "Fumin-no-Mori Hiyoshi",
     "date": "2019-08-31"
+  },
+  "the4thmihoopen": {
+    "jpdga": {
+      "eventId": "513",
+      "topicId": "1422",
+      "photoId": "72157711341840056"
+    },
+    "location": "Hikari-to-Kaze-no-Oka Park",
+    "date": "2019-09-28"
   },
   "the31stjapannationalchampionship": {
     "pdga": {
@@ -260,6 +278,26 @@
       "topicId": "1343"
     },
     "location": "Kyoto Tamba Park",
+    "date": "2018-11-17"
+  },
+  "the2018showakinenparkopen": {
+    "jpdga": {
+      "eventId": "478"
+    },
+    "urls": [{
+      "type": "website",
+      "title": "Official Site 🇯🇵",
+      "url": "http://jpdga-tokyo.com/skpo/"
+    }, {
+      "type": "website",
+      "title": "Results(2Days) 🇯🇵",
+      "url": "https://www.facebook.com/pg/showakinenparkopen/photos/?tab=album&album_id=683308612050143"
+    }, {
+      "type": "website",
+      "title": "Results(1Days) 🇯🇵",
+      "url": "https://www.facebook.com/pg/showakinenparkopen/photos/?tab=album&album_id=683294415384896"
+    }],
+    "location": "Showa Kinen Park",
     "date": "2018-11-17"
   },
   "the30thjapannationalchampionship": {
@@ -370,14 +408,31 @@
       "eventId": "36756"
     },
     "jpdga": {
-      "eventId": "464",
-      "topicId": "1413",
-      "photoId": "72157710683372748"
+      "eventId": "464"
     },
     "location": "Hirugano Kohgen",
     "date": "2018-05-04"
   },
- "the16thsagaopen": {
+  "the15thminamisomaopen": {
+    "jpdga": {
+      "eventId": "496"
+    },
+    "location": "Minamisoma Hose Riding Park",
+    "date": "2018-05-04"
+  },
+  "the29thtokyoopen": {
+    "pdga": {
+      "eventId": "36411"
+    },
+    "jpdga": {
+      "eventId": "461",
+      "topicId": "1284",
+      "photoId": "72157693175013762"
+    },
+    "location": "Tatsumi-no-Mori Seaside Park",
+    "date": "2018-04-21"
+  },
+  "the16thsagaopen": {
     "pdga": {
       "eventId": "36394"
     },
@@ -579,6 +634,13 @@
     }],
     "location": "Hirugano Kohgen",
     "date": "2017-05-05"
+  },
+  "the14thminamisomaopen": {
+    "jpdga": {
+      "eventId": "462"
+    },
+    "location": "Minamisoma Hose Riding Park",
+    "date": "2018-05-04"
   },
   "the13thminamisomaopen": {
     "pdga": {
