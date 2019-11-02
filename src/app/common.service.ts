@@ -13,7 +13,7 @@ import { RoundInfo, EventInfo, LocationInfo } from './models';
 export { RoundInfo, EventInfo, LocationInfo };
 
 interface EventParts {
-  count: string;
+  count: number;
   key: string;
 }
 
@@ -47,7 +47,7 @@ export class CommonService {
       return eventName;
     }
     if (parts.count > 1960) {
-      return !aliase ? eventName : `${parts.count}年 ${aliase}`;      
+      return !aliase ? eventName : `${parts.count}年 ${aliase}`;
     }
     return !aliase ? eventName : `第${parts.count}回 ${aliase}`;
   }
@@ -150,7 +150,7 @@ function getEventKey(name: string): EventParts | undefined {
     return undefined;
   }
   return {
-    count: results[1],
+    count: parseInt(results[1]),
     key: results[3].replace(/[ -]/g, '')
   };
 }
