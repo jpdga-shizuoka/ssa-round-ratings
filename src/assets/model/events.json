@@ -243,7 +243,8 @@
       "eventId": "42480"
     },
     "jpdga": {
-      "eventId": "512"
+      "eventId": "512",
+      "topicId": "1426"
     },
     "urls": [{
       "type": "video",
