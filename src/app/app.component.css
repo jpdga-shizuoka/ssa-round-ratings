@@ -28,7 +28,7 @@
     flex: 1 1 auto;
 }
 .menu-active {
-  background-color: lightgray;
+  background-color: #efe5fd;
 }
 #menu-header {
   background-image: url("../assets/img/menu-back-image.png");
