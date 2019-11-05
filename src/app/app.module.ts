@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LayoutModule } from '@angular/cdk/layout';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -14,9 +15,12 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import { CourseRatingsComponent } from './course-ratings/course-ratings.component';
 import { RoundDetailComponent } from './round-detail/round-detail.component';
 import { AboutThisSiteComponent } from './about-this-site/about-this-site.component';
@@ -34,6 +38,8 @@ import { TermsComponent } from './terms/terms.component';
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
+    AppRoutingModule,
+    LayoutModule,
     MatToolbarModule,
     MatIconModule,
     MatTooltipModule,
@@ -45,6 +51,8 @@ import { TermsComponent } from './terms/terms.component';
     MatButtonModule,
     MatCheckboxModule,
     MatRadioModule,
+    MatSidenavModule,
+    MatListModule,
     MatCardModule,
   ],
   providers: [],

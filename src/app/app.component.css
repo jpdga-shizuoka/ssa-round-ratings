@@ -1,20 +1,31 @@
-.course-ratings {
+.sidenav-container {
+  height: 100%;
+}
+.sidenav mat-icon {
+  padding-right: 16px;
+}
+.sidenav {
+  width: 250px;
+}
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+/* .app-main {
+  padding: 0;
   padding: 0 10px 10px 10px;
-  max-width: 600px;
+  max-width: 720px;
   margin: auto;
 }
 @media (max-width: 599px) {
-  .course-ratings {
+  .app-main {
     padding: 0;
   }
-}
-.github-icon {
-    padding: 0 14px;
-}
-.titlebar {
-  margin: 0;
-  border: 0;
-}
+} */
 .title-spacer {
     flex: 1 1 auto;
 }
@@ -26,4 +37,35 @@
 .footer-title {
     text-align: center;
     flex: 1 1 auto;
+}
+.menu-active {
+  background-color: lightgray;
+}
+#toolbar-title {
+  visibility: hidden;
+}
+#menu-header {
+  background-image: url("../assets/img/menu-back-image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 64px;
+}
+#menu-header span {
+  flex: 1 1 auto;
+}
+@media (max-width: 599px) {
+  #toolbar {
+    background-image: url("../assets/img/title-back-image.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  #toolbar-title {
+    visibility: visible;
+    margin-left: 12px;
+  }
+  #menu-header {
+    background-size: contain;
+    height: 56px;
+  }
 }
