@@ -155,7 +155,7 @@ function getEventKey(name: string): EventParts | undefined {
     return undefined;
   }
   return {
-    count: parseInt(results[1]),
+    count: parseInt(results[1], 10),
     key: results[3].replace(/[ -]/g, '')
   };
 }
