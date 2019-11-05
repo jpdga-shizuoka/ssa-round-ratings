@@ -20,6 +20,7 @@ import { AppComponent } from './app.component';
 import { CourseRatingsComponent } from './course-ratings/course-ratings.component';
 import { RoundDetailComponent } from './round-detail/round-detail.component';
 import { AboutThisSiteComponent } from './about-this-site/about-this-site.component';
+import { TermsComponent } from './terms/terms.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { AboutThisSiteComponent } from './about-this-site/about-this-site.compon
     CourseRatingsComponent,
     RoundDetailComponent,
     AboutThisSiteComponent,
+    TermsComponent,
   ],
   imports: [
     BrowserModule,

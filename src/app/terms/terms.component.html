@@ -1,0 +1,16 @@
+<table class="full-width-table mat-table" id="terms-table">
+  <thead>
+    <tr class="mat-header-row">
+      <th class="mat-header-cell">Term</th>
+      <th class="mat-header-cell">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-template ngFor let-term [ngForOf]="terms">
+      <tr class="mat-row">
+        <td class="mat-cell">{{term.term}}</td>
+        <td class="mat-cell">{{term.description}}</td>
+      </tr>
+    </ng-template>
+  </tbody>
+</table>
