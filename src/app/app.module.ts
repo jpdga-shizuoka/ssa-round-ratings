@@ -14,16 +14,19 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatCardModule } from '@angular/material/card';
 
 import { AppComponent } from './app.component';
 import { CourseRatingsComponent } from './course-ratings/course-ratings.component';
 import { RoundDetailComponent } from './round-detail/round-detail.component';
+import { AboutThisSiteComponent } from './about-this-site/about-this-site.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CourseRatingsComponent,
     RoundDetailComponent,
+    AboutThisSiteComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,6 +43,7 @@ import { RoundDetailComponent } from './round-detail/round-detail.component';
     MatButtonModule,
     MatCheckboxModule,
     MatRadioModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

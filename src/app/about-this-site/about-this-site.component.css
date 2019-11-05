@@ -1,0 +1,15 @@
+.about-card {
+  margin-bottom: 3px;
+}
+.about-card p {
+  text-align: center;
+}
+.github-card-img img {
+  display: block;
+  margin: auto;
+  width: 128px;
+  padding: 10px 0 0 0;
+}
+.github-card-img h3 {
+  text-align: center;
+}
