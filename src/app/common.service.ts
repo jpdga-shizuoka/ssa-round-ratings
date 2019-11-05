@@ -9,10 +9,9 @@ import EVENT_ALIASE from '../assets/model/event-aliase-dictionary.json';
 import LOCATION_ALIASE from '../assets/model/location-aliase-dictionary.json';
 import PREFECTURE_ALIASE from '../assets/model/prefecture-aliase-dictionary.json';
 
-import { RoundInfo, EventInfo, LocationInfo } from './models';
 import { RoundInfo, EventInfo, LocationInfo, TermDescription } from './models';
 
-export { RoundInfo, EventInfo, LocationInfo };
+export { RoundInfo, EventInfo, LocationInfo, TermDescription };
 
 interface EventParts {
   count: number;
