@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 
 import { MatPaginator } from '@angular/material/paginator';
@@ -30,7 +30,7 @@ export class CourseRatingsComponent implements OnInit, AfterViewInit {
   dataSource: MatTableDataSource<RoundInfo>;
   expandedElement: RoundInfo | null;
 
-  constructor(private cs: CommonService) {
+  constructor(private el: ElementRef, private cs: CommonService) {
     // Assign the data to the data source for the table to render
     const rounds = this.cs.getRounds();
     for (const round of rounds) {
@@ -110,7 +110,7 @@ export class CourseRatingsComponent implements OnInit, AfterViewInit {
   }
 
   getDisplayedColumns() {
-    return window.innerWidth >= BREAKPOINT
+    return this.getWidth() >= BREAKPOINT
       ? ['year', 'event', 'round', 'hla', 'ssa']
       : ['event', 'hla', 'ssa'];
   }
@@ -118,6 +118,10 @@ export class CourseRatingsComponent implements OnInit, AfterViewInit {
   getYear(time: string) {
     const date = new Date(time);
     return date.getFullYear();
+  }
+
+  getWidth() {
+    return this.el.nativeElement.parentElement.clientWidth;
   }
 }
 
