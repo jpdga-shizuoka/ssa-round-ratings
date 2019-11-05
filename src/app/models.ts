@@ -55,3 +55,8 @@ export interface RoundInfo {
   weight?: number;
   offset?: number;
 }
+
+export interface TermDescription {
+  term: string;
+  description: string;
+}

@@ -3,12 +3,14 @@ import { Injectable } from '@angular/core';
 import EVENTS from '../assets/model/events.json';
 import LOCATIONS from '../assets/model/locations.json';
 import ROUNDS from '../assets/model/rounds.json';
+import TERMS from '../assets/model/terms.json';
 
 import EVENT_ALIASE from '../assets/model/event-aliase-dictionary.json';
 import LOCATION_ALIASE from '../assets/model/location-aliase-dictionary.json';
 import PREFECTURE_ALIASE from '../assets/model/prefecture-aliase-dictionary.json';
 
 import { RoundInfo, EventInfo, LocationInfo } from './models';
+import { RoundInfo, EventInfo, LocationInfo, TermDescription } from './models';
 
 export { RoundInfo, EventInfo, LocationInfo };
 
@@ -28,6 +30,10 @@ export class CommonService {
 
   toggleLanguage() {
     this.primaryLanguage = !this.primaryLanguage;
+  }
+
+  getTerms(): TermDescription[] {
+    return TERMS;
   }
 
   getRounds(): RoundInfo[] {
