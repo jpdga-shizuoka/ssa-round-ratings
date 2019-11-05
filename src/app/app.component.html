@@ -3,7 +3,10 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar id="menu-header"><span>DG Japan</span></mat-toolbar>
+    <mat-toolbar id="menu-header"
+      [ngClass]="(isHandset$ | async) ? 'menu-header-low' : 'menu-header-high'">
+      <span>DG Japan</span>
+    </mat-toolbar>
     <mat-nav-list>
       <a mat-list-item routerLink="/upcoming"
         routerLinkActive="menu-active"
@@ -31,7 +34,7 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary" id="toolbar">
+    <mat-toolbar color="primary" [ngClass]="{'toolbar-back': isHandset$ | async}">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -40,7 +43,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span id="toolbar-title">DG Japan</span>
+      <span id="toolbar-title" *ngIf="isHandset$ | async">DG Japan</span>
       <span class="title-spacer"></span>
       <span class="title-button-row">
         <button mat-icon-button aria-label="toggle language" (click)="onClickLanguage()">
