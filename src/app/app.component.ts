@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { MatSidenav } from '@angular/material/sidenav';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
@@ -11,7 +12,7 @@ import { CommonService } from './common.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ratings';
+  @ViewChild('drawer', {static: false}) drawer: MatSidenav;
 
   constructor(
     private breakpointObserver: BreakpointObserver,
@@ -23,6 +24,16 @@ export class AppComponent {
       map(result => result.matches),
       shareReplay()
     );
+
+  onClickLink() {
+    this.breakpointObserver.observe(Breakpoints.Handset)
+    .subscribe(result => {
+      if (result.matches) {
+        this.drawer.close();
+      }
+    })
+    .unsubscribe();
+  }
 
   onClickLanguage() {
     this.commonService.toggleLanguage();
