@@ -24,6 +24,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CourseRatingsComponent } from './course-ratings/course-ratings.component';
 import { RoundDetailComponent } from './round-detail/round-detail.component';
 import { AboutThisSiteComponent } from './about-this-site/about-this-site.component';
+import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
 import { TermsComponent } from './terms/terms.component';
 
 @NgModule({
@@ -32,6 +33,7 @@ import { TermsComponent } from './terms/terms.component';
     CourseRatingsComponent,
     RoundDetailComponent,
     AboutThisSiteComponent,
+    UpcomingEventsComponent,
     TermsComponent,
   ],
   imports: [

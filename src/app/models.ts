@@ -8,7 +8,7 @@ export interface PdgaInfo {
 }
 
 export interface JpdgaInfo {
-  eventId: string;
+  eventId?: string;
   topicId?: string;
   photoId?: string;
 }
@@ -26,12 +26,16 @@ export interface UrlInfo {
 }
 
 export interface EventInfo {
+  title: string;
+  period: {
+    from: string;
+    to: string;
+  };
   location: string;     // location of the course
   pdga?: PdgaInfo;
   jpdga?: JpdgaInfo;
   website?: string;     // url of the event
   urls?: UrlInfo[];
-  date?: string;        // ?????? temporally
 }
 
 export interface RoundInfo {

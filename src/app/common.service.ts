@@ -18,17 +18,41 @@ interface EventParts {
   key: string;
 }
 
+interface EventsMap {
+  [key: string]: EventInfo;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class CommonService {
 
   private primaryLanguage = true;
+  private eventMap: EventsMap;
 
-  constructor() {}
+  constructor() {
+    this.eventMap = makeEventsMap();
+  }
 
   toggleLanguage() {
     this.primaryLanguage = !this.primaryLanguage;
+  }
+
+  getUpcomingEvents(): EventInfo[] {
+    const events: EventInfo[] = [];
+    const now = Date.now();
+    for (const event of EVENTS) {
+      const date = new Date(event.period.to);
+      if (date.getTime() > now) {
+        events.push(event);
+      }
+    }
+    events.sort((a, b) => {
+      const t1 = new Date(a.period.from);
+      const t2 = new Date(b.period.to);
+      return t1.getTime() - t2.getTime();
+    });
+    return events;
   }
 
   getTerms(): TermDescription[] {
@@ -69,7 +93,7 @@ export class CommonService {
   }
 
   getEvent(eventName: string): EventInfo | undefined {
-    return EVENTS[getKeyFromName(eventName)];
+    return this.eventMap[getKeyFromName(eventName)];
   }
 
   getLocation(locationName: string): LocationInfo | undefined {
@@ -158,4 +182,12 @@ function getEventKey(name: string): EventParts | undefined {
     count: parseInt(results[1], 10),
     key: results[3].replace(/[ -]/g, '')
   };
+}
+
+function makeEventsMap(): EventsMap {
+  const eventMap = {};
+  for (const event of EVENTS) {
+    eventMap[getKeyFromName(event.title)] = event;
+  }
+  return eventMap;
 }
