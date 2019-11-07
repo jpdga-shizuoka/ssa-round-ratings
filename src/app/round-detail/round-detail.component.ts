@@ -153,18 +153,6 @@ export class RoundDetailComponent implements OnInit {
     return this.cs.getPrefecture(location.prefecture);
   }
 
-  getJpdgaInfo(round: RoundInfo): string | undefined {
-    return this.cs.getJpdgaInfo(round.event);
-  }
-
-  getJpdgaResult(round: RoundInfo): string | undefined {
-    return this.cs.getJpdgaResult(round.event);
-  }
-
-  getPdgaResult(round: RoundInfo): string | undefined {
-    return this.cs.getPdgaResult(round.event);
-  }
-
   getEquation(): string | undefined {
     if (!this.round.weight || !this.round.offset) {
       return undefined;
