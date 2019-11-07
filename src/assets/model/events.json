@@ -1,4 +1,24 @@
 [{
+  "title": "The 9th Okinawa Open",
+  "location": "Nakijinson Sport Park",
+  "period": {
+    "from": "2020-02-15",
+    "to": "2020-02-16"
+  },
+  "jpdga": {
+    "eventId": "521"
+  }
+}, {
+  "title": "The 6th Kagoshima Open",
+  "location": "Yoshino Park",
+  "period": {
+    "from": "2020-01-25",
+    "to": "2020-01-26"
+  },
+  "jpdga": {
+    "eventId": "520"
+  }
+}, {
   "title": "The 19th Chubu Open",
   "location": "Mikawa Rinkai Ryokuchi",
   "period": {
@@ -6,7 +26,7 @@
     "to": "2019-12-15"
   },
   "jpdga": {
-    "eventId": "1419"
+    "eventId": "518"
   }
 }, {
   "title": "The 33rd Kyushu Open",
@@ -16,7 +36,7 @@
     "to": "2019-12-01"
   },
   "jpdga": {
-    "eventId": "1416"
+    "eventId": "517"
   },
   "urls": [{
     "type": "website",
@@ -31,7 +51,7 @@
     "to": "2019-11-17"
   },
   "jpdga": {
-    "eventId": "1415"
+    "eventId": "516"
   }
 }, {
   "title": "The 19th Tohoku Open",
