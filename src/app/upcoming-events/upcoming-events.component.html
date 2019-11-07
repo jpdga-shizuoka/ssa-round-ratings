@@ -3,7 +3,7 @@
     <!-- Event Column -->
     <ng-container matColumnDef="title">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Event</th>
-      <td mat-cell *matCellDef="let row">{{row.title}}</td>
+      <td mat-cell *matCellDef="let row">{{getTitle(row)}}</td>
     </ng-container>
 
     <!-- Date Column -->

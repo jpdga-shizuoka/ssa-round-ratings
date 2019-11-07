@@ -33,6 +33,10 @@ export class UpcomingEventsComponent implements AfterViewInit, OnInit {
     this.table.dataSource = this.dataSource;
   }
 
+  getTitle(event: EventInfo): string {
+    return this.cs.getEventAliase(event.title);
+  }
+
   getDate(event: EventInfo): string {
     try {
       const from = (new Date(event.period.from))
