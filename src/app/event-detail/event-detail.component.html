@@ -1,0 +1,29 @@
+<table class='event-detail'>
+  <tbody>
+    <tr>
+      <td>Location:</td>
+      <td class="flex-container">
+        <div>
+          <a href="{{getGeolocation()}}">
+            <mat-icon>room</mat-icon>{{getLocationName()}}
+          </a>
+        </div>
+        <div>
+          <mat-icon>public</mat-icon>{{getPrefecture()}}
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>info:</td>
+      <td>
+        <div class="flex-container">
+          <ng-template ngFor let-misc [ngForOf]="getMiscInfo()">
+            <a href="{{misc.url}}" class="detail-link">
+              <mat-icon>{{misc.icon}}</mat-icon>{{misc.title}}
+            </a>
+          </ng-template>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

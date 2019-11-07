@@ -11,6 +11,7 @@ import PREFECTURE_ALIASE from '../assets/model/prefecture-aliase-dictionary.json
 
 import { RoundInfo, EventInfo, LocationInfo, TermDescription } from './models';
 
+export { ICONS, MiscInfo } from './models';
 export { RoundInfo, EventInfo, LocationInfo, TermDescription };
 
 interface EventParts {
