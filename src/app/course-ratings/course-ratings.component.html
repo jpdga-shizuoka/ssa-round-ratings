@@ -1,7 +1,7 @@
 <div class="mat-elevation-z8">
   <div class="ratings-tools">
     <mat-form-field class="event-search">
-      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search...">
+      <input matInput #filter (keyup)="applyFilter(filter.value)" placeholder="Search...">
     </mat-form-field>
     <div class='ratings-tools-spacer'></div>
   </div>

@@ -31,25 +31,19 @@ export class CourseRatingsComponent implements OnInit, AfterViewInit {
   expandedElement: RoundInfo | null;
 
   constructor(private el: ElementRef, private cs: CommonService) {
-    // Assign the data to the data source for the table to render
-    const rounds = this.cs.getRounds();
-    for (const round of rounds) {
-      if (round.ratings) {
-        round['weight'] = calcWeight(round.ratings.player1, round.ratings.player2);
-        round['offset'] = calcOffset(round);
-        round['ssa'] = calcSsa(round);
-        round['category'] = calcCategory(round['ssa']);
-      }
-    }
-    rounds.sort((a, b) => {
-      const t1 = new Date(a.date);
-      const t2 = new Date(b.date);
-      return t2.getTime() - t1.getTime();
-    });
-    this.dataSource = new MatTableDataSource(rounds);
   }
 
   ngOnInit() {
+    this.dataSource = new MatTableDataSource(this.cs.getRounds());
+  }
+
+  /**
+   * Set the sort after the view init since this component will
+   * be able to query its view for the initialized sort.
+   */
+  ngAfterViewInit() {
+    this.dataSource.sort = this.sort;
+    this.dataSource.paginator = this.paginator;
     this.dataSource.filterPredicate = (data: RoundInfo, filters: string) => {
       const matchFilter = [];
       const filterArray = filters.split('&');
@@ -74,16 +68,6 @@ export class CourseRatingsComponent implements OnInit, AfterViewInit {
       });
       return matchFilter.every(Boolean); // AND
     };
-
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
-  }
-
-  /**
-   * Set the sort after the view init since this component will
-   * be able to query its view for the initialized sort.
-   */
-  ngAfterViewInit() {
     this.dataSource.sortingDataAccessor = (item, property) => {
       switch (property) {
         case 'event':
@@ -122,33 +106,5 @@ export class CourseRatingsComponent implements OnInit, AfterViewInit {
 
   getWidth() {
     return this.el.nativeElement.parentElement.clientWidth;
-  }
-}
-
-function calcWeight(player1: { score: number, rating: number }, player2: { score: number, rating: number }) {
-  return (player1.rating - player2.rating) / (player1.score - player2.score);
-}
-
-function calcOffset(round: RoundInfo) {
-  return round.ratings.player1.rating - round['weight'] * round.ratings.player1.score;
-}
-
-function calcSsa(round: RoundInfo) {
-  const holes = round.holes || 18;
-  const regulation = holes / 18;
-  return (1000 - round['offset']) / round['weight'] / regulation;
-}
-
-function calcCategory(ssa: number) {
-  if (ssa < 48) {
-    return 'A';
-  } else if (ssa < 54) {
-    return '2A';
-  } else if (ssa < 60) {
-    return '3A';
-  } else if (ssa < 66) {
-    return '4A';
-  } else {
-    return '5A';
   }
 }
