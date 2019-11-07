@@ -1,3 +1,19 @@
 .full-width-table {
   width: 100%;
 }
+@media (max-width: 400px) {
+  .full-width-table th,
+  .full-width-table td {
+    padding: 0 2.5px;
+  }
+  .full-width-table td.mat-cell:first-of-type,
+  .full-width-table td.mat-footer-cell:first-of-type,
+  .full-width-table th.mat-header-cell:first-of-type {
+    padding-left: 10px;
+  }
+  .full-width-table td.mat-cell:last-of-type,
+  .full-width-table td.mat-footer-cell:last-of-type,
+  .full-width-table th.mat-header-cell:last-of-type {
+    padding-right: 10px;
+  }
+}
