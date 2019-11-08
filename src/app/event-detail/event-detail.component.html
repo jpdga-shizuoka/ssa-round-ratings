@@ -17,6 +17,9 @@
       <td>info:</td>
       <td>
         <div class="flex-container">
+          <a routerLink="/past" [queryParams]="{search: title}" class="detail-link">
+            <mat-icon>golf_course</mat-icon>Check the past rounds
+          </a>
           <ng-template ngFor let-misc [ngForOf]="getMiscInfo()">
             <a href="{{misc.url}}" class="detail-link">
               <mat-icon>{{misc.icon}}</mat-icon>{{misc.title}}

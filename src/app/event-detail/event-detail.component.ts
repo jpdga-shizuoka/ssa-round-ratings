@@ -12,6 +12,7 @@ export class EventDetailComponent implements OnInit {
 
   @Input() event: EventInfo;
 
+  title: string;
   private location: LocationInfo;
   private miscInfo: MiscInfo[];
 
@@ -19,6 +20,7 @@ export class EventDetailComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.title = this.cs.getEventTitle(this.event.title);
     this.makeMiscInfo();
   }
 
