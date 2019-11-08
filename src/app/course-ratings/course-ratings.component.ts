@@ -31,6 +31,11 @@ export class CourseRatingsComponent implements OnInit, AfterViewInit {
   dataSource: MatTableDataSource<RoundInfo>;
   expandedElement: RoundInfo | null;
   search: string;
+  get displayedColumns(): string[] {
+    return this.getWidth() >= BREAKPOINT
+      ? ['year', 'event', 'round', 'hla', 'ssa']
+      : ['event', 'hla', 'ssa'];
+  }
 
   constructor(
     private route: ActivatedRoute,
@@ -105,12 +110,6 @@ export class CourseRatingsComponent implements OnInit, AfterViewInit {
 
   getEventName(round: RoundInfo): string {
     return this.cs.getEventAliase(round.event);
-  }
-
-  getDisplayedColumns() {
-    return this.getWidth() >= BREAKPOINT
-      ? ['year', 'event', 'round', 'hla', 'ssa']
-      : ['event', 'hla', 'ssa'];
   }
 
   getYear(time: string) {
