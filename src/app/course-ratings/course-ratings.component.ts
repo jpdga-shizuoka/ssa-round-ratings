@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
@@ -29,21 +30,18 @@ export class CourseRatingsComponent implements OnInit, AfterViewInit {
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   dataSource: MatTableDataSource<RoundInfo>;
   expandedElement: RoundInfo | null;
+  search: string;
 
-  constructor(private el: ElementRef, private cs: CommonService) {
-  }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private el: ElementRef,
+    private cs: CommonService
+  ) {}
 
   ngOnInit() {
     this.dataSource = new MatTableDataSource(this.cs.getRounds());
-  }
 
-  /**
-   * Set the sort after the view init since this component will
-   * be able to query its view for the initialized sort.
-   */
-  ngAfterViewInit() {
-    this.dataSource.sort = this.sort;
-    this.dataSource.paginator = this.paginator;
     this.dataSource.filterPredicate = (data: RoundInfo, filters: string) => {
       const matchFilter = [];
       const filterArray = filters.split('&');
@@ -68,6 +66,7 @@ export class CourseRatingsComponent implements OnInit, AfterViewInit {
       });
       return matchFilter.every(Boolean); // AND
     };
+
     this.dataSource.sortingDataAccessor = (item, property) => {
       switch (property) {
         case 'event':
@@ -79,6 +78,21 @@ export class CourseRatingsComponent implements OnInit, AfterViewInit {
           return item[property];
       }
     };
+
+    if (this.route.snapshot.queryParamMap.has('search')) {
+      const filter = this.route.snapshot.queryParamMap.get('search');
+      this.dataSource.filter = filter;
+      this.search = filter;
+    }
+  }
+
+  /**
+   * Set the sort after the view init since this component will
+   * be able to query its view for the initialized sort.
+   */
+  ngAfterViewInit() {
+    this.dataSource.sort = this.sort;
+    this.dataSource.paginator = this.paginator;
   }
 
   applyFilter(filterValue: string) {
