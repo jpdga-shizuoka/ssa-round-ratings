@@ -16,8 +16,9 @@
     <ng-container matColumnDef="expandedDetail">
       <td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumns.length">
         <div class="event-element-detail"
-             [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
-          <app-event-detail [event]="element"></app-event-detail>
+             [@detailExpand]="element === expandedElement ? 'expanded' : 'collapsed'">
+          <app-event-detail [event]="element" *ngIf="element === expandedElement">
+          </app-event-detail>
         </div>
       </td>
     </ng-container>

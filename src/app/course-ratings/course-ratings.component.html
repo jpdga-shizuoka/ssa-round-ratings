@@ -53,8 +53,9 @@
     <ng-container matColumnDef="expandedDetail">
       <td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumns.length">
         <div class="round-element-detail"
-             [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
-          <app-round-detail [round]="element"></app-round-detail>
+             [@detailExpand]="element === expandedElement ? 'expanded' : 'collapsed'">
+          <app-round-detail [round]="element" *ngIf="expandedElement === element">
+          </app-round-detail>
         </div>
       </td>
     </ng-container>
