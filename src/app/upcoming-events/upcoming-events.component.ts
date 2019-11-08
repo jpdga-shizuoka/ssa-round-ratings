@@ -24,6 +24,7 @@ export class UpcomingEventsComponent implements AfterViewInit, OnInit {
   @ViewChild(MatSort, {static: false}) sort: MatSort;
   @ViewChild(MatTable, {static: false}) table: MatTable<EventInfo>;
   dataSource: UpcomingEventsDataSource;
+  expandedElement: EventInfo | null;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = ['date', 'title'];
