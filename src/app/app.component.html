@@ -11,12 +11,13 @@
       <a mat-list-item routerLink="/upcoming"
         routerLinkActive="menu-active"
         (click)="onClickLink()">
-        <mat-icon>events</mat-icon>Upcoming events
+        <mat-icon>events</mat-icon>Upcoming Events
       </a>
       <a mat-list-item routerLink="/past"
+      [queryParams]="{ search: 'kanto&2018'}"
         routerLinkActive="menu-active"
         (click)="onClickLink()">
-        <mat-icon>table_chart</mat-icon>Past events
+        <mat-icon>table_chart</mat-icon>Past Rounds
       </a>
       <a mat-list-item routerLink="/terms"
         routerLinkActive="menu-active"
