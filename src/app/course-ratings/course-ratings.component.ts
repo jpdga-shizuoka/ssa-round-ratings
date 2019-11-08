@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
-import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 import { MatPaginator } from '@angular/material/paginator';
@@ -7,6 +6,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 
 import { CommonService, RoundInfo } from '../common.service';
+import { detailExpand } from '../animations';
 
 const BREAKPOINT = 600;
 
@@ -17,13 +17,7 @@ const BREAKPOINT = 600;
   selector: 'app-course-ratings',
   templateUrl: './course-ratings.component.html',
   styleUrls: ['./course-ratings.component.css'],
-  animations: [
-    trigger('detailExpand', [
-      state('collapsed', style({height: '0px', minHeight: '0'})),
-      state('expanded', style({height: '*'})),
-      transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
-    ]),
-  ],
+  animations: [detailExpand],
 })
 export class CourseRatingsComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
