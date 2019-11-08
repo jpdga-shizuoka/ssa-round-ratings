@@ -25,6 +25,7 @@ export class CourseRatingsComponent implements OnInit, AfterViewInit {
   dataSource: MatTableDataSource<RoundInfo>;
   expandedElement: RoundInfo | null;
   search: string;
+  showDetail = false;
   get displayedColumns(): string[] {
     return this.getWidth() >= BREAKPOINT
       ? ['year', 'event', 'round', 'hla', 'ssa']
