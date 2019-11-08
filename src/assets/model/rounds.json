@@ -1,4 +1,11 @@
 [{
+  "event": "The 19th Tohoku Open",
+  "round": "Rd1,Rd2,Rd3",
+  "date": "2019-10-13",
+  "hla": 93,
+  "holes": 18
+},
+{
     "event": "The 18th Tohoku Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-10-07",
