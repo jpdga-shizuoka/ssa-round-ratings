@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonService } from '../common.service';
 
 @Component({
   selector: 'app-about-this-site',
@@ -6,6 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-this-site.component.css']
 })
 export class AboutThisSiteComponent {
-  constructor() {
+
+  get primaryLanguage() {
+    return this.cs.primaryLanguage;
+  }
+
+  constructor(private cs: CommonService) {
   }
 }

@@ -28,7 +28,7 @@ interface EventsMap {
 })
 export class CommonService {
 
-  private primaryLanguage = true;
+  primaryLanguage = true;
   private eventMap: EventsMap;
   private rounds: RoundInfo[];
 
