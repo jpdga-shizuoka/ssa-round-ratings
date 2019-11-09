@@ -2,7 +2,7 @@
   <div class="ratings-tools">
     <mat-form-field class="event-search">
       <input matInput #filter [(ngModel)]="search" (keyup)="applyFilter(filter.value)" placeholder="Search...">
-      <button mat-button *ngIf="search" matSuffix mat-icon-button aria-label="Clear" (click)="search=''">
+      <button mat-button *ngIf="search" matSuffix mat-icon-button aria-label="Clear" (click)="applyFilter('')">
         <mat-icon>close</mat-icon>
       </button>
     </mat-form-field>

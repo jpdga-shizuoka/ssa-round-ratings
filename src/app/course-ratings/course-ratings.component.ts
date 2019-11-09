@@ -96,6 +96,9 @@ export class CourseRatingsComponent implements OnInit, AfterViewInit {
   }
 
   applyFilter(filterValue: string) {
+    if (filterValue === '') {
+      this.search = '';
+    }
     this.dataSource.filter = filterValue.trim().toLowerCase();
 
     if (this.dataSource.paginator) {
