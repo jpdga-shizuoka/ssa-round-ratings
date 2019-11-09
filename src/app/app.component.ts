@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Observable } from 'rxjs';
@@ -11,12 +11,17 @@ import { CommonService } from './common.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   @ViewChild('drawer', {static: false}) drawer: MatSidenav;
 
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private commonService: CommonService) {
+    private cs: CommonService) {
+  }
+
+  ngOnInit() {
+    const language = window.navigator.language.split('-')[0];
+    this.cs.primaryLanguage = language === 'ja' ? false : true;
   }
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
@@ -36,6 +41,6 @@ export class AppComponent {
   }
 
   onClickLanguage() {
-    this.commonService.toggleLanguage();
+    this.cs.toggleLanguage();
   }
 }
