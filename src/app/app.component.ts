@@ -19,16 +19,16 @@ export class AppComponent implements OnInit {
     private cs: CommonService) {
   }
 
-  ngOnInit() {
-    const language = window.navigator.language.split('-')[0];
-    this.cs.primaryLanguage = language === 'ja' ? false : true;
-  }
-
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
       shareReplay()
     );
+
+  ngOnInit() {
+    const language = window.navigator.language.split('-')[0];
+    this.cs.primaryLanguage = language === 'ja' ? false : true;
+  }
 
   onClickLink() {
     this.breakpointObserver.observe(Breakpoints.Handset)
