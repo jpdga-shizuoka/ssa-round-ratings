@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/jpdga-shizuoka/ssa-round-ratings.svg?branch=master)](https://travis-ci.org/jpdga-shizuoka/ssa-round-ratings)
 
-# SSA-Round-Ratings App for Disc Golf Tournaments
+# DG Japan App
 
 This is a small project for disc golfers who love playing disc golf.
 
