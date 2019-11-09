@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatCardModule } from '@angular/material/card';
 
 import { AboutThisSiteComponent } from './about-this-site.component';
 
@@ -8,7 +9,10 @@ describe('AboutThisSiteComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AboutThisSiteComponent ]
+      declarations: [ AboutThisSiteComponent ],
+      imports: [
+        MatCardModule,
+      ]
     })
     .compileComponents();
   }));
