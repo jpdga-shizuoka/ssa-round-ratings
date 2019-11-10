@@ -1,4 +1,8 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
+import { map, shareReplay } from 'rxjs/operators';
+
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
@@ -20,11 +24,19 @@ export class UpcomingEventsComponent implements AfterViewInit, OnInit {
   dataSource: UpcomingEventsDataSource;
   expandedElement: EventInfo | null;
   showDetail = false;
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+  .pipe(
+    map(result => result.matches),
+    shareReplay()
+  );
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = ['date', 'title'];
 
-  constructor(private cs: CommonService) {
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    private cs: CommonService,
+  ) {
   }
 
   ngOnInit() {

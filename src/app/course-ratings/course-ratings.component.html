@@ -1,4 +1,5 @@
 <div class="mat-elevation-z8">
+  <h4 *ngIf="isHandset$ | async">Past Rounds</h4>
   <div class="ratings-tools">
     <mat-form-field class="event-search">
       <input matInput #filter [(ngModel)]="search" (keyup)="applyFilter(filter.value)" placeholder="Search...">

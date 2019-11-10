@@ -1,5 +1,8 @@
 import { Component, OnInit, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
+import { map, shareReplay } from 'rxjs/operators';
 
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
@@ -26,6 +29,11 @@ export class CourseRatingsComponent implements OnInit, AfterViewInit {
   expandedElement: RoundInfo | null;
   search: string;
   showDetail = false;
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+  .pipe(
+    map(result => result.matches),
+    shareReplay()
+  );
   get displayedColumns(): string[] {
     return this.getWidth() >= BREAKPOINT
       ? ['year', 'event', 'round', 'hla', 'ssa']
@@ -33,6 +41,7 @@ export class CourseRatingsComponent implements OnInit, AfterViewInit {
   }
 
   constructor(
+    private breakpointObserver: BreakpointObserver,
     private route: ActivatedRoute,
     private router: Router,
     private el: ElementRef,
