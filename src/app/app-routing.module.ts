@@ -7,7 +7,7 @@ import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.compo
 import { TermsComponent } from './terms/terms.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/past', pathMatch: 'full' },
+  { path: '', redirectTo: '/upcoming', pathMatch: 'full' },
   { path: 'upcoming', component: UpcomingEventsComponent },
   { path: 'past', component: CourseRatingsComponent },
   { path: 'terms', component: TermsComponent },
