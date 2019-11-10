@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { CourseRatingsComponent } from './course-ratings/course-ratings.component';
+import { PastRoundsComponent } from './past-rounds/past-rounds.component';
 import { AboutThisSiteComponent } from './about-this-site/about-this-site.component';
 import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
 import { TermsComponent } from './terms/terms.component';
@@ -9,7 +9,7 @@ import { TermsComponent } from './terms/terms.component';
 const routes: Routes = [
   { path: '', redirectTo: '/upcoming', pathMatch: 'full' },
   { path: 'upcoming', component: UpcomingEventsComponent },
-  { path: 'past', component: CourseRatingsComponent },
+  { path: 'past', component: PastRoundsComponent },
   { path: 'terms', component: TermsComponent },
   { path: 'about', component: AboutThisSiteComponent },
 ];

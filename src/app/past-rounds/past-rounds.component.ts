@@ -17,12 +17,12 @@ const BREAKPOINT = 600;
  * @title Data table with sorting, pagination, and filtering.
  */
 @Component({
-  selector: 'app-course-ratings',
-  templateUrl: './course-ratings.component.html',
-  styleUrls: ['./course-ratings.component.css'],
+  selector: 'app-past-rounds',
+  templateUrl: './past-rounds.component.html',
+  styleUrls: ['./past-rounds.component.css'],
   animations: [detailExpand],
 })
-export class CourseRatingsComponent implements OnInit, AfterViewInit {
+export class PastRoundsComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   dataSource: MatTableDataSource<RoundInfo>;

@@ -19,7 +19,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 
 import { AppComponent } from './app.component';
-import { CourseRatingsComponent } from './course-ratings/course-ratings.component';
+import { PastRoundsComponent } from './past-rounds/past-rounds.component';
 import { RoundDetailComponent } from './round-detail/round-detail.component';
 import { AboutThisSiteComponent } from './about-this-site/about-this-site.component';
 import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
@@ -31,7 +31,7 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        CourseRatingsComponent,
+        PastRoundsComponent,
         RoundDetailComponent,
         AboutThisSiteComponent,
         UpcomingEventsComponent,

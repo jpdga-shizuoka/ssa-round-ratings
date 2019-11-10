@@ -12,17 +12,17 @@ import { MatInputModule } from '@angular/material';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatButtonModule } from '@angular/material/button';
 
-import { CourseRatingsComponent } from './course-ratings.component';
+import { PastRoundsComponent } from './past-rounds.component';
 import { RoundDetailComponent } from '../round-detail/round-detail.component';
 
-describe('CourseRatingsComponent', () => {
-  let component: CourseRatingsComponent;
-  let fixture: ComponentFixture<CourseRatingsComponent>;
+describe('PastRoundsComponent', () => {
+  let component: PastRoundsComponent;
+  let fixture: ComponentFixture<PastRoundsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        CourseRatingsComponent,
+        PastRoundsComponent,
         RoundDetailComponent,
       ],
       imports: [
@@ -42,7 +42,7 @@ describe('CourseRatingsComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CourseRatingsComponent);
+    fixture = TestBed.createComponent(PastRoundsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
