@@ -12,8 +12,9 @@
   width: 500px;
   flex-grow: 1;
   flex-shrink: 1;
+  line-height: 1.4rem;
 }
-.security-card,
+.security-card p,
 .about-card p {
   text-align: center;
 }
@@ -28,5 +29,18 @@
   padding: 10px 0 0 0;
 }
 .github-card-img h3 {
+  text-align: center;
+}
+.terms-table {
+  width: 100%;
+}
+.terms-table td {
+  padding: 10px;
+  border-color: collapse;
+  border-bottom: 1px lightgray solid;
+}
+.terms-table td:first-child {
+  font-weight: bold;
+  min-width: 4rem;
   text-align: center;
 }

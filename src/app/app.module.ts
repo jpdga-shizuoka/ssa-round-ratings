@@ -27,7 +27,6 @@ import { RoundDetailComponent } from './round-detail/round-detail.component';
 import { AboutThisSiteComponent } from './about-this-site/about-this-site.component';
 import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
-import { TermsComponent } from './terms/terms.component';
 import { MonthlyEventsComponent } from './monthly-events/monthly-events.component';
 import { MonthlyDetailComponent } from './monthly-detail/monthly-detail.component';
 
@@ -39,7 +38,6 @@ import { MonthlyDetailComponent } from './monthly-detail/monthly-detail.componen
     AboutThisSiteComponent,
     UpcomingEventsComponent,
     EventDetailComponent,
-    TermsComponent,
     MonthlyEventsComponent,
     MonthlyDetailComponent,
   ],

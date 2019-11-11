@@ -5,14 +5,12 @@ import { PastRoundsComponent } from './past-rounds/past-rounds.component';
 import { AboutThisSiteComponent } from './about-this-site/about-this-site.component';
 import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
 import { MonthlyEventsComponent } from './monthly-events/monthly-events.component';
-import { TermsComponent } from './terms/terms.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/upcoming', pathMatch: 'full' },
   { path: 'upcoming', component: UpcomingEventsComponent },
   { path: 'past', component: PastRoundsComponent },
   { path: 'monthly', component: MonthlyEventsComponent },
-  { path: 'terms', component: TermsComponent },
   { path: 'about', component: AboutThisSiteComponent },
 ];
 

@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import EVENTS from '../assets/model/events.json';
 import LOCATIONS from '../assets/model/locations.json';
 import ROUNDS from '../assets/model/rounds.json';
-import TERMS from '../assets/model/terms.json';
 import MONTHLY_EVENTS from '../assets/model/monthly-events.json';
 
 import EVENT_ALIASE from '../assets/model/event-aliase-dictionary.json';
@@ -82,10 +81,6 @@ export class CommonService {
 
   getMonthlyEvents(): MonthlyEvent[] {
     return MONTHLY_EVENTS;
-  }
-
-  getTerms(): TermDescription[] {
-    return TERMS;
   }
 
   getRounds(): RoundInfo[] {
