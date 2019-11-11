@@ -1,4 +1,24 @@
 [{
+  "title": "The 2020 Doubles Japan Championship",
+  "location": "Hitachi Seaside Park",
+  "period": {
+    "from": "2020-02-29",
+    "to": "2020-03-01"
+  },
+  "jpdga": {
+    "eventId": "522"
+  }
+}, {
+  "title": "The 2020 Team Japan Championship",
+  "location": "Oyama Omoi-no-Mori Park",
+  "period": {
+    "from": "2020-01-12",
+    "to": "2020-01-13"
+  },
+  "jpdga": {
+    "eventId": "519"
+  }
+}, {
   "title": "The 9th Okinawa Open",
   "location": "Nakijinson Sport Park",
   "period": {

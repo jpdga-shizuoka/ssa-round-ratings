@@ -55,6 +55,10 @@
     "prefecture": "Ibaraki",
     "geolocation": [36.003104, 140.305402]
   },
+  "hitachiseasidepark": {
+    "prefecture": "Ibaraki",
+    "geolocation": [36.399269, 140.601818]
+  },
   "seasidenaturepark": {
     "prefecture": "Fukui",
     "geolocation": [36.249289, 136.134013]
