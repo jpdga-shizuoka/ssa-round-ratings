@@ -36,3 +36,16 @@
 .flex-container>* {
   flex: auto;
 }
+@media (max-width: 374px) {
+  .event-detail {
+    font-size: small;
+  }
+  .event-detail mat-icon {
+    font-size: 15px;
+    height: 15px;
+    width: 15px;
+  }
+  .event-detail td:first-child {
+    min-width: 5rem;
+  }
+}
