@@ -29,6 +29,7 @@ import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.compo
 import { EventDetailComponent } from './event-detail/event-detail.component';
 import { TermsComponent } from './terms/terms.component';
 import { MonthlyEventsComponent } from './monthly-events/monthly-events.component';
+import { MonthlyDetailComponent } from './monthly-detail/monthly-detail.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { MonthlyEventsComponent } from './monthly-events/monthly-events.componen
     EventDetailComponent,
     TermsComponent,
     MonthlyEventsComponent,
+    MonthlyDetailComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,11 +6,13 @@ import { MatTable } from '@angular/material/table';
 import { CommonService } from '../common.service';
 import { MonthlyEventsDataSource, MonthlyEvent } from './monthly-events-datasource';
 import { BreakpointObserver, Observable, map, shareReplay, isHandset } from '../utilities';
+import { detailExpand } from '../animations';
 
 @Component({
   selector: 'app-monthly-events',
   templateUrl: './monthly-events.component.html',
   styleUrls: ['./monthly-events.component.css'],
+  animations: [detailExpand],
 })
 export class MonthlyEventsComponent implements AfterViewInit, OnInit {
   @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
@@ -18,6 +20,8 @@ export class MonthlyEventsComponent implements AfterViewInit, OnInit {
   @ViewChild(MatTable, {static: false}) table: MatTable<MonthlyEvent>;
   dataSource: MonthlyEventsDataSource;
   isHandset$: Observable<boolean>;
+  expandedElement: MonthlyEvent | null;
+  showDetail = false;
 
   get displayedColumns$(): Observable<string[]> {
     return this.isHandset$.pipe(
