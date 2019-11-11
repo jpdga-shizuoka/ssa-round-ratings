@@ -1,17 +1,13 @@
 import { Component, OnInit, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
 
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 
 import { CommonService, RoundInfo } from '../common.service';
+import { BreakpointObserver, Observable, map, shareReplay, isHandset } from '../utilities';
 import { detailExpand } from '../animations';
-
-const BREAKPOINT = 600;
 
 /**
  * @title Data table with sorting, pagination, and filtering.
@@ -29,15 +25,15 @@ export class PastRoundsComponent implements OnInit, AfterViewInit {
   expandedElement: RoundInfo | null;
   search: string;
   showDetail = false;
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-  .pipe(
-    map(result => result.matches),
-    shareReplay()
-  );
-  get displayedColumns(): string[] {
-    return this.getWidth() >= BREAKPOINT
-      ? ['year', 'event', 'round', 'hla', 'ssa']
-      : ['event', 'hla', 'ssa'];
+  isHandset$: Observable<boolean>;
+
+  get displayedColumns$(): Observable<string[]> {
+    return this.isHandset$.pipe(
+      map(hs => hs
+        ? ['event', 'hla', 'ssa']
+        : ['year', 'event', 'round', 'hla', 'ssa']),
+      shareReplay()
+    )
   }
 
   constructor(
@@ -46,7 +42,9 @@ export class PastRoundsComponent implements OnInit, AfterViewInit {
     private router: Router,
     private el: ElementRef,
     private cs: CommonService
-  ) {}
+  ) {
+    this.isHandset$ = isHandset(breakpointObserver);
+  }
 
   ngOnInit() {
     this.dataSource = new MatTableDataSource(this.cs.getRounds());
@@ -122,9 +120,5 @@ export class PastRoundsComponent implements OnInit, AfterViewInit {
   getYear(time: string) {
     const date = new Date(time);
     return date.getFullYear();
-  }
-
-  getWidth() {
-    return this.el.nativeElement.parentElement.clientWidth;
   }
 }
