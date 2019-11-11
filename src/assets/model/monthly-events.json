@@ -1,0 +1,79 @@
+[{
+  "title": "Showa",
+  "location": "Showa Kinen Park",
+  "schedule": {
+    "byDay": ["su"],
+    "bySetPos": 1,
+    "byMonth": [2, 3, 6, 7, 8, 9, 10, 12]
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Tokyo Discgolf Association",
+    "url": "http://jpdga-tokyo.com/showamonthly/"
+  }]
+}, {
+  "title": "Ryugasaki",
+  "location": "Furusato Fureai Park",
+  "schedule": {
+    "byDay": ["su"],
+    "bySetPos": 1,
+    "byMonth": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Discgolf Ryugasaki",
+    "url": "https://discgolf.exblog.jp"
+  }]
+}, {
+  "title": "Aikawa",
+  "location": "Aikawa Fureai-no-Mura",
+  "schedule": {
+    "byDay": ["sa"],
+    "bySetPos": 2,
+    "byMonth": [1, 2, 3, 4, 5, 6, 7, 9, 10, 12]
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Kanawaga Discgolf Association",
+    "url": "https://kanagawa-discgolf-association.jimdofree.com"
+  }]
+}, {
+  "title": "Oyama",
+  "location": "Oyama Omoino-Mori Park",
+  "schedule": {
+    "byDay": ["su"],
+    "bySetPos": 2,
+    "byMonth": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Oyama Discgolf Association",
+    "url": "https://facebook.com/小山市ディスクゴルフ協会-1445376232379294/"
+  }]
+}, {
+  "title": "Tatsumi-no-Mori",
+  "location": "Tatsumi-no-Mori Seaside Park",
+  "schedule": {
+    "byDay": ["sa"],
+    "bySetPos": 3,
+    "byMonth": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Tatsumi-no-Mori Discgolf Club",
+    "url": "http://tatsumidgc.com"
+  }]
+}, {
+  "title": "Kiyohara",
+  "location": "Kiyohara Kohgyo Danchi",
+  "schedule": {
+    "byDay": ["su"],
+    "bySetPos": 4,
+    "byMonth": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Tochigi Discgolf Association",
+    "url": "http://www.tochigiflyingdisc.com"
+  }]
+}]

@@ -4,15 +4,33 @@ import EVENTS from '../assets/model/events.json';
 import LOCATIONS from '../assets/model/locations.json';
 import ROUNDS from '../assets/model/rounds.json';
 import TERMS from '../assets/model/terms.json';
+import MONTHLY_EVENTS from '../assets/model/monthly-events.json';
 
 import EVENT_ALIASE from '../assets/model/event-aliase-dictionary.json';
 import LOCATION_ALIASE from '../assets/model/location-aliase-dictionary.json';
 import PREFECTURE_ALIASE from '../assets/model/prefecture-aliase-dictionary.json';
 
-import { RoundInfo, EventInfo, LocationInfo, TermDescription } from './models';
+import {
+  RoundInfo, EventInfo, LocationInfo, TermDescription, MonthlyEvent, Schedule
+} from './models';
 
 export { ICONS, MiscInfo } from './models';
-export { RoundInfo, EventInfo, LocationInfo, TermDescription };
+export { RoundInfo, EventInfo, LocationInfo, TermDescription, MonthlyEvent };
+
+const DaysOfWeek = [{
+  su: 'Sun.', mo: 'Mon.', tu: 'Tue.', we: 'Wed.', th: 'Thu.', fr: 'Fri.', sa: 'Sat.'
+}, {
+  su: '日曜', mo: '月曜', tu: '火曜', we: '水曜', th: '木曜', fr: '金曜', sa: '土曜'
+}];
+const NumberOfWeek = [
+  ['', '1st', '2nd', '3rd', '4th', '5th'],
+  ['', '第1', '第2', '第3', '第4', '第5']
+];
+const MonthTabel = {
+  primary: ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+  secondary: ['', '1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+}
+const MONTH_DEFAULTS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 interface EventParts {
   count: number;
@@ -40,6 +58,11 @@ export class CommonService {
     this.primaryLanguage = !this.primaryLanguage;
   }
 
+  getMonthlyDay(schedule: Schedule): string {
+    const primary = this.primaryLanguage ? 0 : 1;
+    return `${NumberOfWeek[primary][schedule.bySetPos]} ${DaysOfWeek[primary][schedule.byDay[0]]}`;
+  }
+
   getUpcomingEvents(): EventInfo[] {
     const events: EventInfo[] = [];
     const now = Date.now();
@@ -55,6 +78,10 @@ export class CommonService {
       return t1.getTime() - t2.getTime();
     });
     return events;
+  }
+
+  getMonthlyEvents(): MonthlyEvent[] {
+    return MONTHLY_EVENTS;
   }
 
   getTerms(): TermDescription[] {
@@ -114,6 +141,16 @@ export class CommonService {
 
   getEvent(eventName: string): EventInfo | undefined {
     return this.eventMap[getKeyFromName(eventName)];
+  }
+
+  getMonth(schedule: Schedule): string {
+    const results: string[] = [];
+    for (const month of (schedule.byMonth || MONTH_DEFAULTS)) {
+      results.push(this.primaryLanguage
+        ? MonthTabel.primary[month]
+        : MonthTabel.secondary[month]);
+    }
+    return results.join(' ');
   }
 
   getLocation(locationName: string): LocationInfo | undefined {

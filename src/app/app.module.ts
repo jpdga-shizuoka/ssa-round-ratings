@@ -18,6 +18,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -27,6 +28,7 @@ import { AboutThisSiteComponent } from './about-this-site/about-this-site.compon
 import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
 import { TermsComponent } from './terms/terms.component';
+import { MonthlyEventsComponent } from './monthly-events/monthly-events.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,7 @@ import { TermsComponent } from './terms/terms.component';
     UpcomingEventsComponent,
     EventDetailComponent,
     TermsComponent,
+    MonthlyEventsComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,6 +61,7 @@ import { TermsComponent } from './terms/terms.component';
     MatSidenavModule,
     MatListModule,
     MatCardModule,
+    MatTabsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

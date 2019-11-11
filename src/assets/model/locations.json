@@ -31,9 +31,25 @@
     "prefecture": "Tochigi",
     "geolocation": [36.559136, 139.978235]
   },
+  "kiyoharakogyodanchi": {
+    "prefecture": "Tochigi",
+    "geolocation": [36.559136, 139.978235]
+  },
+  "oyamaomoinomoripark": {
+    "prefecture": "Tochigi",
+    "geolocation": [36.274043, 139.799768]
+  },
+  "aikawafureainomura": {
+    "prefecture": "Kanagawa",
+    "geolocation": [35.537993, 139.263713]
+  },
   "hunkawanpanolamapark": {
     "prefecture": "Hokkaido",
     "geolocation": [42.231879, 140.309498]
+  },
+  "furusatofureaipark": {
+    "prefecture": "Ibaraki",
+    "geolocation": [35.901153, 140.161973]
   },
   "hikaritokazenookapark": {
     "prefecture": "Ibaraki",

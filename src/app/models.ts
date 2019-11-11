@@ -38,6 +38,19 @@ export interface EventInfo {
   urls?: UrlInfo[];
 }
 
+export interface Schedule {
+  byDay: string[];      // byDay: ['su', 'mo'], // repeat only sunday and monday
+  bySetPos: number;     // bySetPos: 3, // repeat every 3rd sunday (will take the first element of the byDay array)
+  byMonth?: number[];   // byMonth: [1, 2], // repeat only in january und february,
+}
+
+export interface MonthlyEvent {
+  title: string;
+  location: string;     // location of the course
+  schedule: Schedule;
+  urls?: UrlInfo[];
+}
+
 export interface RoundInfo {
   event: string;        // Event Name
   round: string;        // Round Name
