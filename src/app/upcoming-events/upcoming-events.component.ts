@@ -1,7 +1,4 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
 
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
@@ -9,6 +6,7 @@ import { MatTable } from '@angular/material/table';
 
 import { UpcomingEventsDataSource, EventInfo } from './upcoming-events-datasource';
 import { CommonService } from '../common.service';
+import { BreakpointObserver, Observable, map, shareReplay, isHandset } from '../utilities';
 import { detailExpand } from '../animations';
 
 @Component({
@@ -24,19 +22,20 @@ export class UpcomingEventsComponent implements AfterViewInit, OnInit {
   dataSource: UpcomingEventsDataSource;
   expandedElement: EventInfo | null;
   showDetail = false;
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-  .pipe(
-    map(result => result.matches),
-    shareReplay()
-  );
+  isHandset$: Observable<boolean>;
 
-  /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['date', 'title'];
+  get displayedColumns$(): Observable<string[]> {
+    return this.isHandset$.pipe(
+      map(hs => hs ? ['date', 'title'] : ['date', 'title', 'location']),
+      shareReplay()
+    )
+  }
 
   constructor(
     private breakpointObserver: BreakpointObserver,
     private cs: CommonService,
   ) {
+    this.isHandset$ = isHandset(breakpointObserver);
   }
 
   ngOnInit() {
@@ -65,5 +64,12 @@ export class UpcomingEventsComponent implements AfterViewInit, OnInit {
       const to = (new Date(event.period.to)).toLocaleDateString();
       return `${from} - ${to}`;
     }
+  }
+
+  getLocation(event: EventInfo): string {
+    const name = this.cs.getLocationName(event.location);
+    const location = this.cs.getLocation(event.location);
+    const region = this.cs.getPrefecture(location.prefecture);
+    return `${name}, ${region}`;
   }
 }
