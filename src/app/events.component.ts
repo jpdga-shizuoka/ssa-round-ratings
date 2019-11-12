@@ -21,11 +21,17 @@ export class EventsComponent extends AbstractEventsComponent<EventInfo> {
     try {
       const from = (new Date(event.period.from))
         .toLocaleDateString(undefined, {year: 'numeric', month: 'short', day: 'numeric'});
+      if (event.period.from === event.period.to) {
+        return from;
+      }
       const to = (new Date(event.period.to))
         .toLocaleDateString(undefined, {month: 'short', day: 'numeric'});
       return `${from} - ${to}`;
     } catch {
       const from = (new Date(event.period.from)).toLocaleDateString();
+      if (event.period.from === event.period.to) {
+        return from;
+      }
       const to = (new Date(event.period.to)).toLocaleDateString();
       return `${from} - ${to}`;
     }
