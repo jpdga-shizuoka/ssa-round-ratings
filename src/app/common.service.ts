@@ -10,11 +10,11 @@ import LOCATION_ALIASE from '../assets/model/location-aliase-dictionary.json';
 import PREFECTURE_ALIASE from '../assets/model/prefecture-aliase-dictionary.json';
 
 import {
-  RoundInfo, EventInfo, LocationInfo, TermDescription, MonthlyEvent, Schedule
+  RoundInfo, EventInfo, LocationInfo, TermDescription, Schedule
 } from './models';
 
 export { ICONS, MiscInfo } from './models';
-export { RoundInfo, EventInfo, LocationInfo, TermDescription, MonthlyEvent };
+export { RoundInfo, EventInfo, LocationInfo, TermDescription };
 
 const DaysOfWeek = [{
   su: 'Sun.', mo: 'Mon.', tu: 'Tue.', we: 'Wed.', th: 'Thu.', fr: 'Fri.', sa: 'Sat.'
@@ -79,7 +79,7 @@ export class CommonService {
     return events;
   }
 
-  getMonthlyEvents(): MonthlyEvent[] {
+  getMonthlyEvents(): EventInfo[] {
     return MONTHLY_EVENTS;
   }
 

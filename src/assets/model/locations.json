@@ -11,6 +11,10 @@
     "prefecture": "Fukushima",
     "geolocation": [37.593227, 140.929094]
   },
+  "minamisomabajipark": {
+    "prefecture": "Fukushima",
+    "geolocation": [37.593227, 140.929094]
+  },
   "maikodiscgolfpark": {
     "prefecture": "Niigata",
     "geolocation": [36.982452, 138.826901]
@@ -86,6 +90,10 @@
   "yoshinopark": {
     "prefecture": "Kagoshima",
     "geolocation": [31.633516, 130.594111]
+  },
+  "shiminshikinomori": {
+    "prefecture": "Aichi",
+    "geolocation": [35.312159, 137.002935]
   },
   "mikawarinkairyokuchi": {
     "prefecture": "Aichi",

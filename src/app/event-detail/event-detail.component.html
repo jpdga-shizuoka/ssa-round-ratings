@@ -1,23 +1,25 @@
 <table class='event-detail'>
   <tbody>
+    <tr *ngIf="(showMonthly$ | async) && event.category === 'monthly'">
+      <td>Month:</td>
+      <td>{{monthlySchedule}}</td>
+    </tr>
     <tr>
       <td>Location:</td>
       <td class="flex-container">
         <div>
           <a href="{{getGeolocation()}}">
             <mat-icon>room</mat-icon>{{getLocationName()}}
-          </a>
-        </div>
-        <div>
-          <mat-icon>public</mat-icon>{{getPrefecture()}}
+          </a>, {{getPrefecture()}}
         </div>
       </td>
     </tr>
     <tr>
-      <td>info:</td>
+      <td>Info:</td>
       <td>
         <div class="flex-container">
-          <a routerLink="/past" [queryParams]="{search: title}" class="detail-link">
+          <a routerLink="/past" [queryParams]="{search: title}" class="detail-link"
+            *ngIf="showPastRounds">
             <mat-icon>golf_course</mat-icon>Check the past rounds
           </a>
           <ng-template ngFor let-misc [ngForOf]="getMiscInfo()">

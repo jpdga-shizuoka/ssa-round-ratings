@@ -1,5 +1,26 @@
 [{
-  "title": "Showa",
+  "category": "monthly",
+  "location": "Mizubayashi Sport Park",
+  "schedule": {
+    "byDay": ["su"],
+    "bySetPos": 1
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Facebook",
+    "url": "https://www.facebook.com/水林DiscGolfers-1108088165877772/"
+  }]
+}, {
+  "category": "monthly",
+  "location": "Minamisoma Baji Park",
+  "schedule": {
+    "byDay": ["su"],
+    "bySetPos": 1
+  },
+  "urls": [
+  ]
+}, {
+  "category": "monthly",
   "location": "Showa Kinen Park",
   "schedule": {
     "byDay": ["su"],
@@ -16,7 +37,7 @@
     "url": "https://www.facebook.com/jpdgatokyo/"
   }]
 }, {
-  "title": "Ryugasaki",
+  "category": "monthly",
   "location": "Furusato Fureai Park",
   "schedule": {
     "byDay": ["su"],
@@ -33,7 +54,7 @@
     "url": "https://www.facebook.com/groups/237882656402120/"
   }]
 }, {
-  "title": "Aikawa",
+  "category": "monthly",
   "location": "Aikawa Fureai-no-Mura",
   "schedule": {
     "byDay": ["sa"],
@@ -46,7 +67,7 @@
     "url": "https://kanagawa-discgolf-association.jimdofree.com"
   }]
 }, {
-  "title": "Oyama",
+  "category": "monthly",
   "location": "Oyama Omoino-Mori Park",
   "schedule": {
     "byDay": ["su"],
@@ -59,7 +80,7 @@
     "url": "https://facebook.com/小山市ディスクゴルフ協会-1445376232379294/"
   }]
 }, {
-  "title": "Tatsumi-no-Mori",
+  "category": "monthly",
   "location": "Tatsumi-no-Mori Seaside Park",
   "schedule": {
     "byDay": ["sa"],
@@ -72,7 +93,19 @@
     "url": "http://tatsumidgc.com"
   }]
 }, {
-  "title": "Kiyohara",
+  "category": "monthly",
+  "location": "Kitakami Sport Park",
+  "schedule": {
+    "byDay": ["su"],
+    "bySetPos": 3
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Facebook",
+    "url": "https://www.facebook.com/pg/大堤Disc-Golfers-1848600115381290/"
+  }]
+}, {
+  "category": "monthly",
   "location": "Kiyohara Kohgyo Danchi",
   "schedule": {
     "byDay": ["su"],
@@ -83,5 +116,19 @@
     "type": "website",
     "title": "Tochigi Discgolf Association",
     "url": "http://www.tochigiflyingdisc.com"
+  }]
+
+}, {
+  "category": "monthly",
+  "location": "Michinoku Park",
+  "schedule": {
+    "byDay": ["su"],
+    "bySetPos": 4,
+    "byMonth": [5, 6, 9, 10, 11]
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Michinoku Park",
+    "url": "https://michinoku-park.info/regular_events/diskgolfmonthlytaikai.html"
   }]
 }]

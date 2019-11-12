@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import {
-  CommonService, MonthlyEvent, LocationInfo, MiscInfo, ICONS
+  CommonService, EventInfo, LocationInfo, MiscInfo, ICONS
 } from '../common.service';
 import { BreakpointObserver, Observable, isHandset } from '../utilities';
 
@@ -12,7 +12,7 @@ import { BreakpointObserver, Observable, isHandset } from '../utilities';
 })
 export class MonthlyDetailComponent implements OnInit {
 
-  @Input() event: MonthlyEvent;
+  @Input() event: EventInfo;
   private location: LocationInfo;
   private miscInfo: MiscInfo[];
   isHandset$: Observable<boolean>;

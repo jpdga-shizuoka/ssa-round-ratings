@@ -1,7 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
+
 import {
   CommonService, EventInfo, LocationInfo, ICONS, MiscInfo
 } from '../common.service';
+import {
+  BreakpointObserver, Observable, isHandset, of as observableOf
+} from '../utilities';
 
 @Component({
   selector: 'app-event-detail',
@@ -15,8 +19,29 @@ export class EventDetailComponent implements OnInit {
   title: string;
   private location: LocationInfo;
   private miscInfo: MiscInfo[];
+  isHandset$: Observable<boolean>;
 
-  constructor(private cs: CommonService) {
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    private cs: CommonService,
+  ) {
+    this.isHandset$ = isHandset(breakpointObserver);
+  }
+
+  get monthlySchedule() {
+    return this.cs.getMonth(this.event.schedule);
+  }
+
+  get showPastRounds() {
+    return this.event.category !== 'local'
+        && this.event.category !== 'monthly';
+  }
+
+  get showMonthly$() {
+    if (this.event.category !== 'monthly') {
+      return observableOf(false);
+    }
+    return this.isHandset$;
   }
 
   ngOnInit() {
