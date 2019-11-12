@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import EVENTS from '../assets/model/events.json';
 import LOCATIONS from '../assets/model/locations.json';
 import ROUNDS from '../assets/model/rounds.json';
-import MONTHLY_EVENTS from '../assets/model/monthly-events.json';
 
 import EVENT_ALIASE from '../assets/model/event-aliase-dictionary.json';
 import LOCATION_ALIASE from '../assets/model/location-aliase-dictionary.json';
@@ -28,7 +27,7 @@ const NumberOfWeek = [
 const MonthTabel = {
   primary: ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
   secondary: ['', '1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
-}
+};
 const MONTH_DEFAULTS = [];
 
 interface EventParts {
@@ -60,10 +59,6 @@ export class CommonService {
   getMonthlyDay(schedule: Schedule): string {
     const primary = this.primaryLanguage ? 0 : 1;
     return `${NumberOfWeek[primary][schedule.bySetPos]} ${DaysOfWeek[primary][schedule.byDay[0]]}`;
-  }
-
-  getMonthlyEvents(): EventInfo[] {
-    return MONTHLY_EVENTS;
   }
 
   getRounds(): RoundInfo[] {
