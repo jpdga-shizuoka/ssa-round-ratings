@@ -62,23 +62,6 @@ export class CommonService {
     return `${NumberOfWeek[primary][schedule.bySetPos]} ${DaysOfWeek[primary][schedule.byDay[0]]}`;
   }
 
-  getUpcomingEvents(): EventInfo[] {
-    const events: EventInfo[] = [];
-    const now = Date.now();
-    for (const event of EVENTS) {
-      const date = new Date(event.period.to);
-      if (date.getTime() > now) {
-        events.push(event);
-      }
-    }
-    events.sort((a, b) => {
-      const t1 = new Date(a.period.from);
-      const t2 = new Date(b.period.to);
-      return t1.getTime() - t2.getTime();
-    });
-    return events;
-  }
-
   getMonthlyEvents(): EventInfo[] {
     return MONTHLY_EVENTS;
   }
