@@ -25,8 +25,8 @@
               <div class="event-element-detail"
                    [@detailExpand]="element === expandedElement ? 'expanded' : 'collapsed'"
                    (@detailExpand.done)="showDetail = expandedElement === element">
-                <app-monthly-detail [event]="element" *ngIf="showDetail || expandedElement">
-                </app-monthly-detail>
+                <app-event-detail [event]="element" *ngIf="showDetail || expandedElement">
+                </app-event-detail>
               </div>
             </td>
           </ng-container>

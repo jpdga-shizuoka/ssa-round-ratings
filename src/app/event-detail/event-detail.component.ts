@@ -45,7 +45,7 @@ export class EventDetailComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.title = this.cs.getEventTitle(this.event.title);
+    this.title = this.event.title ? this.cs.getEventTitle(this.event.title) : '';
     this.makeMiscInfo();
   }
 
