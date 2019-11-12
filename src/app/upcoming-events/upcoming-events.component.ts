@@ -28,7 +28,7 @@ export class UpcomingEventsComponent implements AfterViewInit, OnInit {
     return this.isHandset$.pipe(
       map(hs => hs ? ['date', 'title'] : ['date', 'title', 'location']),
       shareReplay()
-    )
+    );
   }
 
   constructor(

@@ -33,7 +33,7 @@ export class PastRoundsComponent implements OnInit, AfterViewInit {
         ? ['event', 'hla', 'ssa']
         : ['year', 'event', 'round', 'hla', 'ssa']),
       shareReplay()
-    )
+    );
   }
 
   constructor(
