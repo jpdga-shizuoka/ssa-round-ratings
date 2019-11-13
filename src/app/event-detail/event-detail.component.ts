@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import {
   CommonService, EventInfo, LocationInfo, ICONS, MiscInfo
@@ -12,13 +12,12 @@ import {
   templateUrl: './event-detail.component.html',
   styleUrls: ['./event-detail.component.css']
 })
-export class EventDetailComponent implements OnInit {
+export class EventDetailComponent {
 
   @Input() event: EventInfo;
 
-  title: string;
-  private location: LocationInfo;
-  private miscInfo: MiscInfo[];
+  private _location: LocationInfo;
+  private _miscInfo: MiscInfo[];
   isHandset$: Observable<boolean>;
 
   constructor(
@@ -26,6 +25,10 @@ export class EventDetailComponent implements OnInit {
     private cs: CommonService,
   ) {
     this.isHandset$ = isHandset(breakpointObserver);
+  }
+
+  get title(): string {
+    return this.event.title ? this.cs.getEventTitle(this.event.title) : '';
   }
 
   get monthlySchedule() {
@@ -44,20 +47,21 @@ export class EventDetailComponent implements OnInit {
     return this.isHandset$;
   }
 
-  ngOnInit() {
-    this.title = this.event.title ? this.cs.getEventTitle(this.event.title) : '';
+  get miscInfo(): MiscInfo[] {
+    if (this._miscInfo) {
+      return this._miscInfo;
+    }
     this.makeMiscInfo();
+    return this._miscInfo;
   }
 
-  getMiscInfo(): MiscInfo[] {
-    return this.miscInfo;
+  get location(): string | undefined {
+    const name = this.cs.getLocationName(this.event.location);
+    const region = this.getRegion();
+    return `${name}, ${region}`;
   }
 
-  getLocationName(): string | undefined {
-    return this.cs.getLocationName(this.event.location);
-  }
-
-  getGeolocation(): string | undefined {
+  get geolocation(): string | undefined {
     const location = this.getLocation();
     if (!location || !location.geolocation) {
       return undefined;
@@ -65,7 +69,7 @@ export class EventDetailComponent implements OnInit {
     return this.cs.getGeolocation(location.geolocation);
   }
 
-  getPrefecture(): string | undefined {
+  private getRegion(): string | undefined {
     const location = this.getLocation();
     if (!location || !location.prefecture) {
       return undefined;
@@ -74,11 +78,11 @@ export class EventDetailComponent implements OnInit {
   }
 
   private getLocation(): LocationInfo | undefined {
-    if (this.location) {
-      return this.location;
+    if (this._location) {
+      return this._location;
     }
-    this.location = this.cs.getLocation(this.event.location);
-    return this.location;
+    this._location = this.cs.getLocation(this.event.location);
+    return this._location;
   }
 
   private makeMiscInfo() {
@@ -101,6 +105,6 @@ export class EventDetailComponent implements OnInit {
         });
       }
     }
-    this.miscInfo = info;
+    this._miscInfo = info;
   }
 }
