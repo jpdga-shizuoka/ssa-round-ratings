@@ -94,11 +94,7 @@ export class RoundDetailComponent {
   }
 
   get date(): string | undefined {
-    if (!this.round.date) {
-      return undefined;
-    }
-    const date = new Date(this.round.date);
-    return date.toLocaleDateString();
+    return this.cs.getDate(this.getEvent());
   }
 
   private getEvent(): EventInfo | undefined {
