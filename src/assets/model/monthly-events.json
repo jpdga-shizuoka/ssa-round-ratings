@@ -106,6 +106,33 @@
   }]
 }, {
   "category": "monthly",
+  "location": "Hamanomiya Park",
+  "schedule": {
+    "byDay": ["su"],
+    "bySetPos": 3,
+    "byMonth": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Hyogo Flying Disc Association",
+    "url": "http://hyfda.jpn.org/bbs200/event.cgi"
+  }]
+
+}, {
+  "category": "monthly",
+  "location": "Umino-Nakamichi Seaside Park",
+  "schedule": {
+    "byDay": ["su"],
+    "bySetPos": 3,
+    "byMonth": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Fukuoka Disc Golf Association",
+    "url": "http://www.jpdgafukuoka.com/"
+  }]
+}, {
+  "category": "monthly",
   "location": "Kiyohara Kohgyo Danchi",
   "schedule": {
     "byDay": ["su"],

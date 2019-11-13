@@ -107,6 +107,10 @@
     "prefecture": "Akita",
     "geolocation": [39.378272, 140.031388]
   },
+  "hamanomiyapark": {
+    "prefecture": "Hyogo",
+    "geolocation": [34.735335, 134.832862]
+  },
   "nasuhighlandgolfclub": {
     "prefecture": "Tochigi",
     "geolocation": [37.072469, 139.940032]
