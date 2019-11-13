@@ -9,7 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 
 import { MonthlyEventsComponent } from './monthly-events.component';
-import { MonthlyDetailComponent } from '../monthly-detail/monthly-detail.component';
+import { EventDetailComponent } from '../event-detail/event-detail.component';
 
 describe('MonthlyEventsComponent', () => {
   let component: MonthlyEventsComponent;
@@ -19,7 +19,7 @@ describe('MonthlyEventsComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         MonthlyEventsComponent,
-        MonthlyDetailComponent,
+        EventDetailComponent,
       ],
       imports: [
         RouterTestingModule,
