@@ -2,34 +2,27 @@
   <tbody>
     <tr>
       <td>Date:</td>
-      <td><mat-icon>calendar_today</mat-icon>{{getDate()}}</td>
+      <td><mat-icon>calendar_today</mat-icon>{{date}}</td>
     </tr>
     <tr>
       <td>Location:</td>
-      <td class="flex-container">
-        <div>
-          <a href="{{getGeolocation()}}">
-            <mat-icon>room</mat-icon>{{getLocationName()}}
-          </a>
-        </div>
-        <div>
-          <mat-icon>public</mat-icon>{{getPrefecture()}}
-        </div>
+      <td>
+        <a href="{{geolocation}}"><mat-icon>room</mat-icon>{{location}}</a>
       </td>
     </tr>
     <tr>
       <td>Round:</td>
-      <td><mat-icon>golf_course</mat-icon>{{getRoundStatus()}}</td>
+      <td><mat-icon>golf_course</mat-icon>{{roundStatus}}</td>
     </tr>
     <tr *ngIf="round.ssa">
       <td>SSA Range:</td>
-      <td><mat-icon>format_list_numbered_rtl</mat-icon>{{getSRCText()}}</td>
+      <td><mat-icon>format_list_numbered_rtl</mat-icon>{{src}}</td>
     </tr>
     <tr>
       <td>info:</td>
       <td>
         <div class="flex-container">
-          <ng-template ngFor let-misc [ngForOf]="getMiscInfo()">
+          <ng-template ngFor let-misc [ngForOf]="miscInfo">
             <a href="{{misc.url}}" class="detail-link">
               <mat-icon>{{misc.icon}}</mat-icon>{{misc.title}}
             </a>
@@ -39,7 +32,7 @@
     </tr>
     <tr *ngIf="round.ssa">
       <td>Equation:</td>
-      <td><mat-icon>trending_up</mat-icon>{{getEquation()}}</td>
+      <td><mat-icon>trending_up</mat-icon>{{equation}}</td>
     </tr>
     <tr *ngIf="round.ssa">
       <td></td>
