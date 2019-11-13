@@ -13,6 +13,26 @@ export class EventsComponent extends AbstractEventsComponent<EventInfo> {
     super(dataSource, breakpointObserver);
   }
 
+  get upcomingEvents() {
+    return this.cs.getMenuAliase('Upcoming Events');
+  }
+
+  get results() {
+    return this.cs.getMenuAliase('Results');
+  }
+
+  get monthlyEvents() {
+    return this.cs.getMenuAliase('Monthly Events');
+  }
+
+  get localEvents() {
+    return this.cs.getMenuAliase('Local Events');
+  }
+
+  get Map() {
+    return this.cs.getMenuAliase('Map');
+  }
+
   getTitle(event: EventInfo): string {
     return this.cs.getEventAliase(event.title);
   }

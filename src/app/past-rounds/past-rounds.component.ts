@@ -36,6 +36,14 @@ export class PastRoundsComponent implements OnInit, AfterViewInit {
     );
   }
 
+  get results() {
+    return this.cs.getMenuAliase('Results');
+  }
+
+  get Map() {
+    return this.cs.getMenuAliase('Map');
+  }
+
   constructor(
     private breakpointObserver: BreakpointObserver,
     private route: ActivatedRoute,
