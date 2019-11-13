@@ -19,11 +19,32 @@ export class AppComponent implements OnInit {
     private cs: CommonService) {
   }
 
+  title: string = "DG Japan";
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
       shareReplay()
     );
+
+  get upcomingEvents() {
+    return this.cs.getMenuAliase('Upcoming Events');
+  }
+
+  get results() {
+    return this.cs.getMenuAliase('Results');
+  }
+
+  get localEvents() {
+    return this.cs.getMenuAliase('Local Events');
+  }
+
+  get monthlyEvents() {
+    return this.cs.getMenuAliase('Monthly Events');
+  }
+
+  get aboutThisSite() {
+    return this.cs.getMenuAliase('About this site');
+  }
 
   ngOnInit() {
     const language = window.navigator.language.split('-')[0];

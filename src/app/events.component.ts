@@ -6,7 +6,7 @@ import { CommonService } from './common.service';
 
 export class EventsComponent extends AbstractEventsComponent<EventInfo> {
   constructor(
-    private cs: CommonService,
+    protected cs: CommonService,
     dataSource: AbstractEventsDataSource<EventInfo>,
     breakpointObserver: BreakpointObserver,
   ) {

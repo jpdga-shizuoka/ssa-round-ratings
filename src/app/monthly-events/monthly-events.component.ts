@@ -21,6 +21,14 @@ export class MonthlyEventsComponent extends EventsComponent {
     );
   }
 
+  get monthlyEvents() {
+    return this.cs.getMenuAliase('Monthly Events');
+  }
+
+  get Map() {
+    return this.cs.getMenuAliase('Map');
+  }
+
   constructor(
     cs: CommonService,
     breakpointObserver: BreakpointObserver,

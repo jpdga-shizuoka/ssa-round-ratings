@@ -7,6 +7,7 @@ import ROUNDS from '../assets/model/rounds.json';
 import EVENT_ALIASE from '../assets/model/event-aliase-dictionary.json';
 import LOCATION_ALIASE from '../assets/model/location-aliase-dictionary.json';
 import PREFECTURE_ALIASE from '../assets/model/prefecture-aliase-dictionary.json';
+import MENU_ALIASE from '../assets/model/menu-aliase-dictionary.json';
 
 import {
   RoundInfo, EventInfo, LocationInfo, TermDescription, Schedule
@@ -101,6 +102,17 @@ export class CommonService {
     });
     this.rounds = rounds;
     return this.rounds;
+  }
+
+  getMenuAliase(name: string): string {
+    if (this.primaryLanguage) {
+      return name;
+    }
+    const alt = MENU_ALIASE[name.toLowerCase()];
+    if (alt) {
+      return alt;
+    }
+    return name;
   }
 
   getEventAliase(eventName: string): string {
