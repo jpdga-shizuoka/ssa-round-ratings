@@ -52,7 +52,8 @@ export class PastRoundsComponent implements OnInit, AfterViewInit {
     this.dataSource.filterPredicate = (data: RoundInfo, filters: string) => {
       const matchFilter = [];
       const filterArray = filters.split('&');
-      const columns = [ data.event,
+      const columns = [ this.cs.getEventAliase(data.event),
+                        data.event,
                         data.round,
                         data.date,
                         data.hla,
