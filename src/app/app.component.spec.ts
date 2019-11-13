@@ -17,6 +17,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
 
 import { AppComponent } from './app.component';
 import { PastRoundsComponent } from './past-rounds/past-rounds.component';
@@ -54,7 +55,7 @@ describe('AppComponent', () => {
         MatRadioModule,
         MatListModule,
         MatCardModule,
-        // AppRoutingModule,
+        MatTabsModule,
       ],
     }).compileComponents();
   }));

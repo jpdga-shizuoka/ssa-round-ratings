@@ -6,6 +6,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTabsModule } from '@angular/material/tabs';
 
 import { LocalEventsComponent } from './local-events.component';
 import { EventDetailComponent } from '../event-detail/event-detail.component';
@@ -27,6 +28,7 @@ describe('LocalEventsComponent', () => {
         MatIconModule,
         MatSortModule,
         MatTableModule,
+        MatTabsModule,
       ]
     }).compileComponents();
   }));

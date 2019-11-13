@@ -11,6 +11,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatInputModule } from '@angular/material';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTabsModule } from '@angular/material/tabs';
 
 import { PastRoundsComponent } from './past-rounds.component';
 import { RoundDetailComponent } from '../round-detail/round-detail.component';
@@ -37,6 +38,7 @@ describe('PastRoundsComponent', () => {
         MatChipsModule,
         MatSortModule,
         MatButtonModule,
+        MatTabsModule,
       ]
     }).compileComponents();
   }));
