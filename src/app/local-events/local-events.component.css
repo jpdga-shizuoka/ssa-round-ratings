@@ -13,10 +13,13 @@ tr.event-detail-row {
   height: 0;
 }
 tr.event-element-row:not(.event-expanded-row):hover {
-  background: lightgray;
+  background: #efefef;
 }
 tr.event-element-row:not(.event-expanded-row):active {
-  background: #efefef;
+  background: #efe5fd;
+}
+tr.event-expanded-row {
+  background: #efe5fd;
 }
 .event-element-row td {
   border-bottom-width: 0;

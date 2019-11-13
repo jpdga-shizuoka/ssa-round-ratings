@@ -16,10 +16,13 @@ tr.round-detail-row {
   height: 0;
 }
 tr.round-element-row:not(.round-expanded-row):hover {
-  background: lightgray;
+  background: #efefef;
 }
 tr.round-element-row:not(.round-expanded-row):active {
-  background: #efefef;
+  background: #efe5fd;
+}
+tr.round-expanded-row {
+  background: #efe5fd;
 }
 .round-element-row td {
   border-bottom-width: 0;
