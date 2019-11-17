@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 
 import EVENTS from '../assets/model/events.json';
+import LOCAL_EVENTS from '../assets/model/local-events.json';
+import MONTHLY_EVENTS from '../assets/model/monthly-events.json';
 import LOCATIONS from '../assets/model/locations.json';
 import ROUNDS from '../assets/model/rounds.json';
 
@@ -55,6 +57,18 @@ export class CommonService {
 
   toggleLanguage() {
     this.primaryLanguage = !this.primaryLanguage;
+  }
+
+  getEvents(category: string): EventInfo[] {
+    switch (category) {
+      case 'upcoming':
+        return filterUpcomingEvents(EVENTS);
+      case 'local':
+        return LOCAL_EVENTS;
+      case 'monthly':
+        return MONTHLY_EVENTS;
+    }
+    return [];
   }
 
   getDate(event: EventInfo): string {
@@ -280,4 +294,21 @@ function calcCategory(ssa: number) {
   } else {
     return '5A';
   }
+}
+
+function filterUpcomingEvents(events: EventInfo[]): EventInfo[] {
+  const result: EventInfo[] = [];
+  const now = Date.now();
+  for (const event of events) {
+    const date = new Date(event.period.to);
+    if (date.getTime() > now) {
+      result.push(event);
+    }
+  }
+  result.sort((a, b) => {
+    const t1 = new Date(a.period.from);
+    const t2 = new Date(b.period.to);
+    return t1.getTime() - t2.getTime();
+  });
+  return result;
 }

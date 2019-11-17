@@ -1,3 +1,10 @@
+export interface GeoMarker {
+  latitude: number;
+  longitude: number;
+  location: string;
+  event: string;
+}
+
 export interface LocationInfo {
   geolocation: [number, number];
   prefecture: string;

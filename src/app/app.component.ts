@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
     private cs: CommonService) {
   }
 
-  title: string = "DG Japan";
+  title = 'DG Japan';
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),

@@ -25,10 +25,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { PastRoundsComponent } from './past-rounds/past-rounds.component';
 import { RoundDetailComponent } from './round-detail/round-detail.component';
 import { AboutThisSiteComponent } from './about-this-site/about-this-site.component';
-import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
-import { MonthlyEventsComponent } from './monthly-events/monthly-events.component';
-import { LocalEventsComponent } from './local-events/local-events.component';
+import { EventsTabsComponent } from './events-tabs/events-tabs.component';
+import { EventsTableComponent } from './events-table/events-table.component';
+import { EventsMapComponent } from './events-map/events-map.component';
 
 @NgModule({
   declarations: [
@@ -36,10 +36,10 @@ import { LocalEventsComponent } from './local-events/local-events.component';
     PastRoundsComponent,
     RoundDetailComponent,
     AboutThisSiteComponent,
-    UpcomingEventsComponent,
     EventDetailComponent,
-    MonthlyEventsComponent,
-    LocalEventsComponent,
+    EventsTabsComponent,
+    EventsTableComponent,
+    EventsMapComponent,
   ],
   imports: [
     BrowserModule,

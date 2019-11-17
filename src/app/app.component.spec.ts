@@ -23,8 +23,10 @@ import { AppComponent } from './app.component';
 import { PastRoundsComponent } from './past-rounds/past-rounds.component';
 import { RoundDetailComponent } from './round-detail/round-detail.component';
 import { AboutThisSiteComponent } from './about-this-site/about-this-site.component';
-import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
+import { EventsTabsComponent } from './events-tabs/events-tabs.component';
+import { EventsTableComponent } from './events-table/events-table.component';
+import { EventsMapComponent } from './events-map/events-map.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -34,8 +36,10 @@ describe('AppComponent', () => {
         PastRoundsComponent,
         RoundDetailComponent,
         AboutThisSiteComponent,
-        UpcomingEventsComponent,
         EventDetailComponent,
+        EventsTabsComponent,
+        EventsTableComponent,
+        EventsMapComponent,
       ],
       imports: [
         RouterTestingModule,
