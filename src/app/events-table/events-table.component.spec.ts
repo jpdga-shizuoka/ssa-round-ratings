@@ -14,14 +14,14 @@ import { EventsTableComponent } from './events-table.component';
 import { EventDetailComponent } from '../event-detail/event-detail.component';
 
 const EVENTS = [{
-  "title": "The 2020 Doubles Japan Championship",
-  "location": "Hitachi Seaside Park",
-  "period": {
-    "from": "2020-02-29",
-    "to": "2020-03-01"
+  title: 'The 2020 Doubles Japan Championship',
+  location: 'Hitachi Seaside Park',
+  period: {
+    from: '2020-02-29',
+    to: '2020-03-01'
   },
-  "jpdga": {
-    "eventId": "522"
+  jpdga: {
+    eventId: '522'
   }
 }];
 
