@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 import { MatTableDataSource } from '@angular/material/table';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { MatDialog } from '@angular/material/dialog';
 
 import { Observable, BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -10,6 +11,7 @@ import { map } from 'rxjs/operators';
 import { EventInfo, GeoMarker } from '../models';
 import { CommonService } from '../common.service';
 import { isHandset } from '../utilities';
+import { MonthlyConfirmDialogComponent } from '../monthly-confirm-dialog/monthly-confirm-dialog.component';
 
 const DISPLAYED_COLUMNS = {
   upcoming: [['date', 'title'],   ['date', 'title', 'location']],
@@ -21,13 +23,21 @@ const TABS_TITLE = {
   local:    ['Local Events', 'Map'],
   monthly:  ['Monthly Events', 'Map']
 };
+const MONTHLY_DIALOG_TITLE = [
+  'Regarding the monthly schedule',
+  '月例会のスケジュールについて'
+];
+const MONTHLY_DIALOG_CONTENT = [
+  'This is just schedule, please check in advance if you want to entry.',
+  'ここに揚げた月例会のスケジュールはおおよその予定です。事前に主催者等へのご確認を願います。'
+];
 
 @Component({
   selector: 'app-events-tabs',
   templateUrl: './events-tabs.component.html',
   styleUrls: ['./events-tabs.component.css']
 })
-export class EventsTabsComponent implements OnInit {
+export class EventsTabsComponent implements OnInit, AfterViewInit {
 
   category: string;
   tableSource: MatTableDataSource<EventInfo>;
@@ -37,6 +47,7 @@ export class EventsTabsComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private cs: CommonService,
+    public dialog: MatDialog,
     breakpointObserver: BreakpointObserver,
   ) {
     this.isHandset$ = isHandset(breakpointObserver);
@@ -44,18 +55,24 @@ export class EventsTabsComponent implements OnInit {
 
   ngOnInit() {
     if (this.route.snapshot.url.length !== 2) {
-      console.log('EventsTabsComponent.OnInit.unexpected url', this.route.snapshot.url);
       return;
     }
     this.category = this.route.snapshot.url[1].path;
     const events = this.cs.getEvents(this.category);
     if (!events) {
-      console.log('EventsTabsComponent.OnInit.unexpected category', this.category);
       return;
     }
     this.tableSource = new MatTableDataSource(events);
     this.mapSource$ = new BehaviorSubject<GeoMarker[]>([]);
     this.makeMaerkersFromEvents(events);
+  }
+
+  ngAfterViewInit() {
+    console.log(sessionStorage.getItem('monthlyConfirmed'));
+    if (this.category === 'monthly'
+    && sessionStorage.getItem('monthlyConfirmed') !== 'true') {
+      this.openMonthlyConfirmDialog();
+    }
   }
 
   get displayedColumns$(): Observable<string[]> {
@@ -70,6 +87,21 @@ export class EventsTabsComponent implements OnInit {
 
   get mapTitle() {
     return this.cs.getMenuAliase(TABS_TITLE[this.category][1]);
+  }
+
+  private openMonthlyConfirmDialog(): void {
+    const dialogRef = this.dialog.open(MonthlyConfirmDialogComponent, {
+      width: '400px',
+      data: {
+        title: MONTHLY_DIALOG_TITLE[this.cs.primaryLanguage ? 0 : 1],
+        content: MONTHLY_DIALOG_CONTENT[this.cs.primaryLanguage ? 0 : 1],
+        confirmed: false
+      }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed', result);
+      sessionStorage.setItem('monthlyConfirmed', result);
+    });
   }
 
   private makeMaerkersFromEvents(events: EventInfo[]) {

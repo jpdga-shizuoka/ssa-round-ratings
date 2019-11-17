@@ -19,6 +19,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -29,6 +30,7 @@ import { EventDetailComponent } from './event-detail/event-detail.component';
 import { EventsTabsComponent } from './events-tabs/events-tabs.component';
 import { EventsTableComponent } from './events-table/events-table.component';
 import { EventsMapComponent } from './events-map/events-map.component';
+import { MonthlyConfirmDialogComponent } from './monthly-confirm-dialog/monthly-confirm-dialog.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,7 @@ import { EventsMapComponent } from './events-map/events-map.component';
     EventsTabsComponent,
     EventsTableComponent,
     EventsMapComponent,
+    MonthlyConfirmDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,6 +65,10 @@ import { EventsMapComponent } from './events-map/events-map.component';
     MatListModule,
     MatCardModule,
     MatTabsModule,
+    MatDialogModule,
+  ],
+  entryComponents: [
+    MonthlyConfirmDialogComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
