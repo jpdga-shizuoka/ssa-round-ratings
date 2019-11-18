@@ -21,7 +21,8 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
-import { PastRoundsComponent } from './past-rounds/past-rounds.component';
+import { RoundsTabsComponent } from './rounds-tabs/rounds-tabs.component';
+import { RoundsTableComponent } from './rounds-table/rounds-table.component';
 import { RoundDetailComponent } from './round-detail/round-detail.component';
 import { AboutThisSiteComponent } from './about-this-site/about-this-site.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
@@ -35,7 +36,8 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        PastRoundsComponent,
+        RoundsTabsComponent,
+        RoundsTableComponent,
         RoundDetailComponent,
         AboutThisSiteComponent,
         EventDetailComponent,
