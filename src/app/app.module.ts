@@ -23,7 +23,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { PastRoundsComponent } from './past-rounds/past-rounds.component';
+import { RoundsTabsComponent } from './rounds-tabs/rounds-tabs.component';
+import { RoundsTableComponent } from './rounds-table/rounds-table.component';
 import { RoundDetailComponent } from './round-detail/round-detail.component';
 import { AboutThisSiteComponent } from './about-this-site/about-this-site.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
@@ -32,10 +33,13 @@ import { EventsTableComponent } from './events-table/events-table.component';
 import { EventsMapComponent } from './events-map/events-map.component';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
+import { environment } from '../environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
-    PastRoundsComponent,
+    RoundsTabsComponent,
+    RoundsTableComponent,
     RoundDetailComponent,
     AboutThisSiteComponent,
     EventDetailComponent,
