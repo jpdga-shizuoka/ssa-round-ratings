@@ -28,8 +28,8 @@ const MONTHLY_DIALOG_TITLE = [
   '月例会のスケジュールについて'
 ];
 const MONTHLY_DIALOG_CONTENT = [
-  'This is just schedule, please check in advance if you want to entry.',
-  'ここに揚げた月例会のスケジュールはおおよその予定です。事前に主催者等へのご確認を願います。'
+  'This is just an annual schedule, please check in advance if you want to entry.',
+  'ここに揚げたスケジュールはおおよその予定です。参加される際は事前に主催者等へのご確認を願います。'
 ];
 
 @Component({
@@ -68,7 +68,6 @@ export class EventsTabsComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    console.log(sessionStorage.getItem('monthlyConfirmed'));
     if (this.category === 'monthly'
     && sessionStorage.getItem('monthlyConfirmed') !== 'true') {
       this.openMonthlyConfirmDialog();
@@ -99,7 +98,6 @@ export class EventsTabsComponent implements OnInit, AfterViewInit {
       }
     });
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed', result);
       sessionStorage.setItem('monthlyConfirmed', result);
     });
   }
