@@ -1,11 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { MatSidenav } from '@angular/material/sidenav';
-import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
 
 import { CommonService } from './common.service';
-import { isHandset } from './utilities';
+import { Observable, isHandset } from './utilities';
 
 @Component({
   selector: 'app-root',
