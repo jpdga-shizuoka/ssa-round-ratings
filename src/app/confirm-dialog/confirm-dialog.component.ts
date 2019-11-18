@@ -8,13 +8,13 @@ export interface DialogData {
 }
 
 @Component({
-  selector: 'app-monthly-confirm-dialog',
-  templateUrl: './monthly-confirm-dialog.component.html',
+  selector: 'app-confirm-dialog',
+  templateUrl: './confirm-dialog.component.html',
 })
-export class MonthlyConfirmDialogComponent {
+export class ConfirmDialogComponent {
 
   constructor(
-    public dialogRef: MatDialogRef<MonthlyConfirmDialog>,
+    public dialogRef: MatDialogRef<ConfirmDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData) {
   }
 }

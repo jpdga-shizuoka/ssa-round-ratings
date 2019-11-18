@@ -13,6 +13,7 @@ import { EventsTabsComponent } from './events-tabs.component';
 import { EventsTableComponent } from '../events-table/events-table.component';
 import { EventsMapComponent } from '../events-map/events-map.component';
 import { EventDetailComponent } from '../event-detail/event-detail.component';
+import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 
 describe('EventsTabsComponent', () => {
   let component: EventsTabsComponent;
@@ -25,6 +26,7 @@ describe('EventsTabsComponent', () => {
         EventsTableComponent,
         EventsMapComponent,
         EventDetailComponent,
+        ConfirmDialogComponent,
       ],
       imports: [
         RouterTestingModule.withRoutes(

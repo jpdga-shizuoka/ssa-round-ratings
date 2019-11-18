@@ -11,7 +11,7 @@ import { map } from 'rxjs/operators';
 import { EventInfo, GeoMarker } from '../models';
 import { CommonService } from '../common.service';
 import { isHandset } from '../utilities';
-import { MonthlyConfirmDialogComponent } from '../monthly-confirm-dialog/monthly-confirm-dialog.component';
+import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 
 const DISPLAYED_COLUMNS = {
   upcoming: [['date', 'title'],   ['date', 'title', 'location']],
@@ -90,7 +90,7 @@ export class EventsTabsComponent implements OnInit, AfterViewInit {
   }
 
   private openMonthlyConfirmDialog(): void {
-    const dialogRef = this.dialog.open(MonthlyConfirmDialogComponent, {
+    const dialogRef = this.dialog.open(ConfirmDialogComponent, {
       width: '400px',
       data: {
         title: MONTHLY_DIALOG_TITLE[this.cs.primaryLanguage ? 0 : 1],

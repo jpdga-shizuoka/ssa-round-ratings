@@ -18,6 +18,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { PastRoundsComponent } from './past-rounds/past-rounds.component';
@@ -27,6 +28,7 @@ import { EventDetailComponent } from './event-detail/event-detail.component';
 import { EventsTabsComponent } from './events-tabs/events-tabs.component';
 import { EventsTableComponent } from './events-table/events-table.component';
 import { EventsMapComponent } from './events-map/events-map.component';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -40,6 +42,7 @@ describe('AppComponent', () => {
         EventsTabsComponent,
         EventsTableComponent,
         EventsMapComponent,
+        ConfirmDialogComponent,
       ],
       imports: [
         RouterTestingModule,
@@ -60,6 +63,7 @@ describe('AppComponent', () => {
         MatListModule,
         MatCardModule,
         MatTabsModule,
+        MatDialogModule,
       ],
     }).compileComponents();
   }));

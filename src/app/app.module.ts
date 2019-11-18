@@ -30,7 +30,7 @@ import { EventDetailComponent } from './event-detail/event-detail.component';
 import { EventsTabsComponent } from './events-tabs/events-tabs.component';
 import { EventsTableComponent } from './events-table/events-table.component';
 import { EventsMapComponent } from './events-map/events-map.component';
-import { MonthlyConfirmDialogComponent } from './monthly-confirm-dialog/monthly-confirm-dialog.component';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +42,7 @@ import { MonthlyConfirmDialogComponent } from './monthly-confirm-dialog/monthly-
     EventsTabsComponent,
     EventsTableComponent,
     EventsMapComponent,
-    MonthlyConfirmDialogComponent,
+    ConfirmDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,7 +68,7 @@ import { MonthlyConfirmDialogComponent } from './monthly-confirm-dialog/monthly-
     MatDialogModule,
   ],
   entryComponents: [
-    MonthlyConfirmDialogComponent,
+    ConfirmDialogComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
