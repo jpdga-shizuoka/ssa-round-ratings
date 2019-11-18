@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
 import { CommonService } from './common.service';
+import { isHandset } from './utilities';
 
 @Component({
   selector: 'app-root',
@@ -13,18 +14,16 @@ import { CommonService } from './common.service';
 })
 export class AppComponent implements OnInit {
   @ViewChild('drawer', {static: false}) drawer: MatSidenav;
+  title = 'DG Japan';
+  isHandset$: Observable<boolean>;
 
   constructor(
-    private breakpointObserver: BreakpointObserver,
-    private cs: CommonService) {
+    private cs: CommonService,
+    breakpointObserver: BreakpointObserver,
+  ) {
+    this.isHandset$ = isHandset(breakpointObserver);
   }
 
-  title = 'DG Japan';
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches),
-      shareReplay()
-    );
 
   get upcomingEvents() {
     return this.cs.getMenuAliase('Upcoming Events');
@@ -52,12 +51,8 @@ export class AppComponent implements OnInit {
   }
 
   onClickLink() {
-    this.breakpointObserver.observe(Breakpoints.Handset)
-    .subscribe(result => {
-      if (result.matches) {
-        this.drawer.close();
-      }
-    })
+    this.isHandset$
+    .subscribe(result => result ? this.drawer.close() : '')
     .unsubscribe();
   }
 
