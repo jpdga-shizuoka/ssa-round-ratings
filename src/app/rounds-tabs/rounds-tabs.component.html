@@ -1,16 +1,19 @@
-<mat-tab-group dynamicHeight>
+<mat-tab-group dynamicHeight [(selectedIndex)]="selectedTab">
   <mat-tab label="{{tableTitle}}">
     <div class="mat-elevation-z4">
       <app-rounds-table
         [dataSource]="tableSource"
-        [displayedColumns$]="displayedColumns$">
+        [displayedColumns$]="displayedColumns$"
+        [markerSelected$]="markerSelected">
       </app-rounds-table>
     </div>
   </mat-tab>
 
   <mat-tab label="{{mapTitle}}">
     <div class="mat-elevation-z4">
-      <app-events-map [mapSource$]="mapSource$">
+      <app-events-map
+        [mapSource$]="mapSource$"
+        (markerSelected)="onMarkerSelected($event)">
       </app-events-map>
     </div>
   </mat-tab>

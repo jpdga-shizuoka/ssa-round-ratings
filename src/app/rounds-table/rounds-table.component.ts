@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
 import { Input, ViewChild } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 
@@ -6,8 +6,9 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 
-import { CommonService, RoundInfo, EventInfo } from '../common.service';
-import { Observable } from '../utilities';
+import { Observable, Subject, Subscription } from 'rxjs';
+
+import { CommonService, RoundInfo, EventInfo, GeoMarker } from '../common.service';
 import { detailExpand } from '../animations';
 
 @Component({
@@ -16,14 +17,16 @@ import { detailExpand } from '../animations';
   styleUrls: ['./rounds-table.component.css'],
   animations: [detailExpand],
 })
-export class RoundsTableComponent implements OnInit, AfterViewInit {
+export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() dataSource: MatTableDataSource<RoundInfo>;
   @Input() displayedColumns$: Observable<string[]>;
+  @Input() markerSelected$: Subject<GeoMarker>;
+  @Input() search: string;
   @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: false}) sort: MatSort;
   expandedElement: RoundInfo | null;
   showDetail = false;
-  search: string;
+  private subscription: Subscription;
 
   constructor(
     private cs: CommonService,
@@ -35,7 +38,12 @@ export class RoundsTableComponent implements OnInit, AfterViewInit {
     this.dataSource.filterPredicate = (data: RoundInfo, filters: string): boolean => {
       const matchFilter = [];
       const filterArray = filters.split('&');
-      const columns = [ this.cs.getEventAliase(data.event),
+      const event = this.cs.getEvent(data.event);
+      const eventName = this.cs.getEventAliase(data.event);
+      const locationName = this.cs.getLocationName(event.location);
+      const columns = [ eventName,
+                        locationName,
+                        event.location,
                         data.event,
                         data.round,
                         data.date,
@@ -74,11 +82,23 @@ export class RoundsTableComponent implements OnInit, AfterViewInit {
       this.dataSource.filter = filter;
       this.search = filter;
     }
+
+    this.subscription = this.markerSelected$.subscribe({
+      next: marker => {
+        const locationName = this.cs.getLocationName(marker.location);
+        this.applyFilter(locationName);
+        this.search = locationName;
+      }
+    });
   }
 
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
   applyFilter(filterValue: string) {

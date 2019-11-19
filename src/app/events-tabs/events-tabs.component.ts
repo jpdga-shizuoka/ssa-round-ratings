@@ -5,7 +5,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Observable, BehaviorSubject, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { EventInfo, GeoMarker } from '../models';
@@ -43,6 +43,8 @@ export class EventsTabsComponent implements OnInit, AfterViewInit {
   tableSource: MatTableDataSource<EventInfo>;
   mapSource$: BehaviorSubject<GeoMarker[]>;
   isHandset$: Observable<boolean>;
+  markerSelected: Subject<GeoMarker>;
+  selectedTab: number;
 
   constructor(
     private route: ActivatedRoute,
@@ -51,6 +53,8 @@ export class EventsTabsComponent implements OnInit, AfterViewInit {
     breakpointObserver: BreakpointObserver,
   ) {
     this.isHandset$ = isHandset(breakpointObserver);
+    this.markerSelected = new Subject<GeoMarker>();
+    this.selectedTab = 0;
   }
 
   ngOnInit() {
@@ -86,6 +90,11 @@ export class EventsTabsComponent implements OnInit, AfterViewInit {
 
   get mapTitle() {
     return this.cs.getMenuAliase(TABS_TITLE[this.category][1]);
+  }
+
+  onMarkerSelected(marker: GeoMarker) {
+    this.markerSelected.next(marker);
+    this.selectedTab = 0;
   }
 
   private openMonthlyConfirmDialog(): void {

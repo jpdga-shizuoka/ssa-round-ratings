@@ -3,7 +3,7 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 
 import { MatTableDataSource } from '@angular/material/table';
 
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Observable, BehaviorSubject, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { RoundInfo, EventInfo, GeoMarker } from '../models';
@@ -23,6 +23,8 @@ export class RoundsTabsComponent implements OnInit, AfterViewInit {
   mapSource$: BehaviorSubject<GeoMarker[]>;
   isHandset$: Observable<boolean>;
   rounds: RoundInfo[];
+  markerSelected: Subject<GeoMarker>;
+  selectedTab: number;
 
   constructor(
     private cs: CommonService,
@@ -35,11 +37,13 @@ export class RoundsTabsComponent implements OnInit, AfterViewInit {
     this.rounds = this.cs.getRounds();
     this.tableSource = new MatTableDataSource<RoundInfo>(this.rounds);
     this.mapSource$ = new BehaviorSubject<GeoMarker[]>([]);
+    this.markerSelected = new Subject<GeoMarker>();
+    this.selectedTab = 0;
+    const markers = this.makeMaerkersFromRounds(this.rounds);
+    this.mapSource$.next(markers);
   }
 
   ngAfterViewInit() {
-    const markers = this.makeMaerkersFromRounds(this.rounds);
-    this.mapSource$.next(markers);
   }
 
   get displayedColumns$(): Observable<string[]> {
@@ -54,6 +58,11 @@ export class RoundsTabsComponent implements OnInit, AfterViewInit {
 
   get mapTitle() {
     return this.cs.getMenuAliase(TABS_TITLE[1]);
+  }
+
+  onMarkerSelected(marker: GeoMarker) {
+    this.markerSelected.next(marker);
+    this.selectedTab = 0;
   }
 
   private makeMaerkersFromRounds(rounds: RoundInfo[]): GeoMarker[] {

@@ -12,11 +12,11 @@ import PREFECTURE_ALIASE from '../assets/model/prefecture-aliase-dictionary.json
 import MENU_ALIASE from '../assets/model/menu-aliase-dictionary.json';
 
 import {
-  RoundInfo, EventInfo, LocationInfo, TermDescription, Schedule
+  RoundInfo, EventInfo, LocationInfo, TermDescription, Schedule, GeoMarker
 } from './models';
 
 export { ICONS, MiscInfo } from './models';
-export { RoundInfo, EventInfo, LocationInfo, TermDescription };
+export { RoundInfo, EventInfo, LocationInfo, TermDescription, GeoMarker };
 
 const DaysOfWeek = [{
   su: 'Sun.', mo: 'Mon.', tu: 'Tue.', we: 'Wed.', th: 'Thu.', fr: 'Fri.', sa: 'Sat.'

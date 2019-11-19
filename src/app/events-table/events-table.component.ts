@@ -1,12 +1,13 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
 import { Input, ViewChild } from '@angular/core';
 
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 
-import { CommonService, EventInfo } from '../common.service';
-import { Observable } from '../utilities';
+import { Observable, BehaviorSubject, Subject, Subscription } from 'rxjs';
+
+import { CommonService, EventInfo, GeoMarker } from '../common.service';
 import { detailExpand } from '../animations';
 
 @Component({
@@ -15,13 +16,15 @@ import { detailExpand } from '../animations';
   styleUrls: ['./events-table.component.css'],
   animations: [detailExpand],
 })
-export class EventsTableComponent implements OnInit, AfterViewInit {
+export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() dataSource: MatTableDataSource<EventInfo>;
   @Input() displayedColumns$: Observable<string[]>;
+  @Input() markerSelected$: Subject<GeoMarker>;
   @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: false}) sort: MatSort;
   expandedElement: EventInfo | null;
   showDetail = false;
+  private subscription: Subscription;
 
   constructor(
     private cs: CommonService,
@@ -29,11 +32,18 @@ export class EventsTableComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
+    this.subscription = this.markerSelected$.subscribe({
+      next: marker => this.onMarkerSelected(marker)
+    });
   }
 
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
   getTitle(event: EventInfo): string {
@@ -57,5 +67,38 @@ export class EventsTableComponent implements OnInit, AfterViewInit {
 
   getMonth(event: EventInfo): string {
     return this.cs.getMonth(event.schedule);
+  }
+
+  private onMarkerSelected(marker: GeoMarker) {
+    const found = this.dataSource.data.find(e => {
+      return e.location === marker.location
+      && (e.title ? e.title === marker.event : true);
+    });
+    if (!found) {
+      return;
+    }
+    this.expandEvent(found);
+  }
+
+  private expandEvent(event: EventInfo) {
+    const position = this.dataSource.data.indexOf(event);
+    if (position < 0) {
+      return;
+    }
+    const pageNumber = Math.floor(position / this.paginator.pageSize);
+    this.goToPage(pageNumber);
+    this.expandedElement = event;
+  }
+
+  /**
+   * https://github.com/angular/components/issues/7615#issuecomment-358620095
+   */
+  private goToPage(pageNumber) {
+    this.paginator.pageIndex = pageNumber;
+    this.paginator.page.next({
+         pageIndex: pageNumber,
+         pageSize: this.paginator.pageSize,
+         length: this.paginator.length
+    });
   }
 }
