@@ -69,6 +69,14 @@ export class EventDetailComponent {
     return this.cs.getGeolocation(location.geolocation);
   }
 
+  get pastResults() {
+    return this.cs.getMenuAliase('Past Results');
+  }
+
+  get seeThePastResults() {
+    return this.cs.getMenuAliase('See the Past Results');
+  }
+
   private getRegion(): string | undefined {
     const location = this.getLocation();
     if (!location || !location.prefecture) {
