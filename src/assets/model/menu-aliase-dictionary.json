@@ -1,7 +1,9 @@
 {
   "upcoming events": "公式戦の予定",
   "results": "公式戦の記録",
-  "local events": "その他の試合",
+  "past results": "公式戦の記録",
+  "local events": "地方戦の予定",
+  "see the past results": "過去の記録を見る",
   "monthly events": "月例会",
   "about this site": "当サイトについて",
   "map": "地図"
