@@ -1,9 +1,36 @@
 [{
   "event": "The 19th Tohoku Open",
-  "round": "Rd1,Rd2,Rd3",
+  "round": "Rd1",
   "date": "2019-10-13",
   "hla": 93,
-  "holes": 18
+  "holes": 18,
+  "ratings": {
+      "player1": {
+          "score": 59,
+          "rating": 999
+      },
+      "player2": {
+          "score": 72,
+          "rating": 893
+      }
+  }
+},
+{
+  "event": "The 19th Tohoku Open",
+  "round": "Rd2,Rd3",
+  "date": "2019-10-13",
+  "hla": 93,
+  "holes": 18,
+  "ratings": {
+      "player1": {
+          "score": 54,
+          "rating": 1021
+      },
+      "player2": {
+          "score": 70,
+          "rating": 883
+      }
+  }
 },
 {
     "event": "The 18th Tohoku Open",
