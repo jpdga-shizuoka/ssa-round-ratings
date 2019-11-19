@@ -66,6 +66,7 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     };
 
     this.dataSource.sortingDataAccessor = (item: RoundInfo, property: string) => {
+      this.expandedElement = null;  // workaround when a detail info is expanded
       switch (property) {
         case 'event':
           return this.cs.getEventTitle(item.event);
