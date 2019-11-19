@@ -1,1 +1,12 @@
-<p>events-map works!</p>
+<agm-map
+  [latitude]="latitude"
+  [longitude]="longitude"
+  [zoom]="zoom">
+    <ng-template ngFor let-m [ngForOf]="mapSource$ | async">
+    <agm-marker
+      [latitude]="m.latitude"
+      [longitude]="m.longitude"
+      (markerClick)="onMarkerSelected($event)">
+    </agm-marker>
+  </ng-template>
+</agm-map>

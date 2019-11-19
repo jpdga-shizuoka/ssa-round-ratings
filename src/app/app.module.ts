@@ -33,6 +33,7 @@ import { EventsTableComponent } from './events-table/events-table.component';
 import { EventsMapComponent } from './events-map/events-map.component';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
+import { AgmCoreModule } from '@agm/core';
 import { environment } from '../environments/environment';
 
 @NgModule({
@@ -70,6 +71,9 @@ import { environment } from '../environments/environment';
     MatCardModule,
     MatTabsModule,
     MatDialogModule,
+    AgmCoreModule.forRoot({
+      apiKey: environment.MAP_API_KEY,
+      libraries: ['places']})
   ],
   entryComponents: [
     ConfirmDialogComponent,
