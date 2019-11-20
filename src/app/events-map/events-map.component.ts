@@ -22,16 +22,21 @@ interface MarkerDialogData {
   template: `
   <h1 mat-dialog-title>{{title}}</h1>
   <div mat-dialog-content>
-    <ng-template ngFor let-event [ngForOf]="data.events">
-      <p>
-        {{eventTitle(event)}}
+    <mat-nav-list>
+      <mat-list-item *ngFor="let event of data.events">
+        <span>{{eventTitle(event)}}</span>
+        <span class="spacer"></span>
         <button mat-stroked-button [mat-dialog-close]="result(event)">
           {{detail}}
         </button>
-      </p>
-    </ng-template>
+      </mat-list-item>
+    </mat-nav-list>
   </div>`,
-  styles: ['h1 { font-size: 16px; }']
+  styles: [
+    '.mat-dialog-title, .mat-list-item { font-size: 16px; }',
+    '.spacer { flex: 1 1 auto; }',
+    '@media (max-width: 374px) {.mat-dialog-title, .mat-list-item { font-size: 15px; }}',
+  ]
 })
 export class MarkerDialogComponent {
   public dialogRef: MatDialogRef<MarkerDialogComponent>;
@@ -96,6 +101,7 @@ export class EventsMapComponent {
 
   openDialog(marker: GeoMarker, eventNames: string[]) {
     this.dialog.open(MarkerDialogComponent, {
+      width: '400px',
       data: {
         position: marker.position,
         location: marker.location,
@@ -103,9 +109,12 @@ export class EventsMapComponent {
       }
     })
     .afterClosed().subscribe(result => {
-       const markers = this.mapSource$.getValue();
-       const mk = markers.find(m => (m.title === result || m.location === result));
-       this.markerSelected.emit(mk);
-     });
+      if (!result) {
+        return;
+      }
+      const markers = this.mapSource$.getValue();
+      const mk = markers.find(m => (m.title === result || m.location === result));
+      this.markerSelected.emit(mk);
+    });
   }
 }
