@@ -4,9 +4,9 @@
   [zoom]="zoom">
     <ng-template ngFor let-m [ngForOf]="mapSource$ | async">
     <agm-marker
-      [latitude]="m.latitude"
-      [longitude]="m.longitude"
-      (markerClick)="onMarkerSelected($event)">
+      [latitude]="m.position.lat"
+      [longitude]="m.position.lng"
+      (markerClick)="onMarkerClick($event)">
     </agm-marker>
   </ng-template>
 </agm-map>

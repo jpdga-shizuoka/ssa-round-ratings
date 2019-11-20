@@ -39,11 +39,11 @@ export class RoundsTabsComponent implements OnInit, AfterViewInit {
     this.mapSource$ = new BehaviorSubject<GeoMarker[]>([]);
     this.markerSelected = new Subject<GeoMarker>();
     this.selectedTab = 0;
-    const markers = this.makeMaerkersFromRounds(this.rounds);
-    this.mapSource$.next(markers);
   }
 
   ngAfterViewInit() {
+    const markers = this.makeMaerkersFromRounds(this.rounds);
+    this.mapSource$.next(markers);
   }
 
   get displayedColumns$(): Observable<string[]> {
@@ -72,10 +72,12 @@ export class RoundsTabsComponent implements OnInit, AfterViewInit {
       const event = this.cs.getEvent(round.event);
       const location = this.cs.getLocation(event.location);
       const marker = {
-        latitude: location.geolocation[0],
-        longitude: location.geolocation[1],
+        position: {
+          lat: location.geolocation[0],
+          lng: location.geolocation[1]
+        },
         location: event.location,
-        event: event.title,
+        title: event.title,
       };
       if (locations.indexOf(event.location) < 0) {
         locations.push(event.location);

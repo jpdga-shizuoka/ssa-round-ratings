@@ -72,7 +72,7 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   private onMarkerSelected(marker: GeoMarker) {
     const found = this.dataSource.data.find(e => {
       return e.location === marker.location
-      && (e.title ? e.title === marker.event : true);
+      && (e.title ? e.title === marker.title : true);
     });
     if (!found) {
       return;

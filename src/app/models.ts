@@ -1,8 +1,10 @@
-export interface GeoMarker {
-  latitude: number;
-  longitude: number;
+export class GeoMarker {
+  position: {
+    lat: number;
+    lng: number;
+  };
   location: string;
-  event: string;
+  title: string;
 }
 
 export interface LocationInfo {

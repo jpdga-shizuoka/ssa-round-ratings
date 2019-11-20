@@ -30,7 +30,7 @@ import { AboutThisSiteComponent } from './about-this-site/about-this-site.compon
 import { EventDetailComponent } from './event-detail/event-detail.component';
 import { EventsTabsComponent } from './events-tabs/events-tabs.component';
 import { EventsTableComponent } from './events-table/events-table.component';
-import { EventsMapComponent } from './events-map/events-map.component';
+import { EventsMapComponent, MarkerDialogComponent } from './events-map/events-map.component';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
 import { AgmCoreModule } from '@agm/core';
@@ -48,6 +48,7 @@ import { environment } from '../environments/environment';
     EventsTableComponent,
     EventsMapComponent,
     ConfirmDialogComponent,
+    MarkerDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -77,6 +78,7 @@ import { environment } from '../environments/environment';
   ],
   entryComponents: [
     ConfirmDialogComponent,
+    MarkerDialogComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

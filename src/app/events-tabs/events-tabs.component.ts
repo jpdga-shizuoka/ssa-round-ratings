@@ -116,10 +116,12 @@ export class EventsTabsComponent implements OnInit, AfterViewInit {
     for (const event of events) {
       const location = this.cs.getLocation(event.location);
       const marker = {
-        latitude: location.geolocation[0],
-        longitude: location.geolocation[1],
+        position: {
+          lat: location.geolocation[0],
+          lng: location.geolocation[1]
+        },
         location: event.location,
-        event: event.title,
+        title: event.title,
       };
       markers.push(marker);
     }
