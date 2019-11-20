@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 
 import { MatTableDataSource } from '@angular/material/table';
@@ -18,7 +18,7 @@ const TABS_TITLE = ['Results', 'Map'];
   templateUrl: './rounds-tabs.component.html',
   styleUrls: ['./rounds-tabs.component.css']
 })
-export class RoundsTabsComponent implements OnInit, AfterViewInit {
+export class RoundsTabsComponent implements OnInit {
   tableSource: MatTableDataSource<RoundInfo>;
   mapSource$: BehaviorSubject<GeoMarker[]>;
   isHandset$: Observable<boolean>;
@@ -39,9 +39,6 @@ export class RoundsTabsComponent implements OnInit, AfterViewInit {
     this.mapSource$ = new BehaviorSubject<GeoMarker[]>([]);
     this.markerSelected = new Subject<GeoMarker>();
     this.selectedTab = 0;
-  }
-
-  ngAfterViewInit() {
     const markers = this.makeMaerkersFromRounds(this.rounds);
     this.mapSource$.next(markers);
   }
