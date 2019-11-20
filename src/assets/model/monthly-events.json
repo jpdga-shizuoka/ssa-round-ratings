@@ -97,12 +97,17 @@
   "location": "Kitakami Sport Park",
   "schedule": {
     "byDay": ["su"],
-    "bySetPos": 3
+    "bySetPos": 3,
+    "byMonth": [4, 5, 6, 7, 8, 9, 10, 11]
   },
   "urls": [{
     "type": "website",
-    "title": "Facebook",
+    "title": "Facebook 🇯🇵",
     "url": "https://www.facebook.com/pg/大堤Disc-Golfers-1848600115381290/"
+  }, {
+    "type": "website",
+    "title": "Iwate, JPDGA 🇯🇵",
+    "url": "http://jpdgaiwate.sakura.ne.jp/"
   }]
 }, {
   "category": "monthly",
