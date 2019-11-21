@@ -1,4 +1,38 @@
 [{
+  "event": "The 19th Tohoku Open",
+  "round": "Rd1",
+  "date": "2019-10-13",
+  "hla": 93,
+  "holes": 18,
+  "ratings": {
+      "player1": {
+          "score": 59,
+          "rating": 999
+      },
+      "player2": {
+          "score": 72,
+          "rating": 893
+      }
+  }
+},
+{
+  "event": "The 19th Tohoku Open",
+  "round": "Rd2,Rd3",
+  "date": "2019-10-13",
+  "hla": 93,
+  "holes": 18,
+  "ratings": {
+      "player1": {
+          "score": 54,
+          "rating": 1021
+      },
+      "player2": {
+          "score": 70,
+          "rating": 883
+      }
+  }
+},
+{
     "event": "The 18th Tohoku Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-10-07",
@@ -115,6 +149,13 @@
             "rating": 847
         }
     }
+},
+{
+    "event": "The 15th Minamisoma Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2019-05-04",
+    "hla": 96,
+    "holes": 18
 },
 {
     "event": "The 14th Kiyosatonomori Open",
@@ -236,6 +277,13 @@
     }
 },
 {
+    "event": "The 8th Hirugano Kogen tournament",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2019-08-25",
+    "hla": 90,
+    "holes": 18
+},
+{
     "event": "The 22nd Kansai Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-08-31",
@@ -285,6 +333,13 @@
             "rating": 884
         }
     }
+},
+{
+    "event": "The 4th Miho Open",
+    "round": "Rd1,Rd2",
+    "date": "2019-09-28",
+    "hla": 63,
+    "holes": 18
 },
 {
     "event": "The 32nd Kyushu Open",
@@ -353,6 +408,13 @@
             "rating": 869
         }
     }
+},
+{
+    "event": "The 2018 Showa Kinen Park Open",
+    "round": "Rd1,Rd2",
+    "date": "2018-11-03",
+    "hla": 64,
+    "holes": 27
 },
 {
     "event": "The 30th Japan National Championship",
@@ -508,6 +570,12 @@
     }
 },
 {
+    "event": "The 14th Minamisoma Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2018-05-04",
+    "holes": 18
+},
+{
     "event": "The 16th Saga Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-04-14",
@@ -523,6 +591,12 @@
             "rating": 849
         }
     }
+},
+{
+    "event": "The 29th Tokyo Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2018-04-21",
+    "holes": 18
 },
 {
     "event": "The 1st Miyagi Michinoku Open",

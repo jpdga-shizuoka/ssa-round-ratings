@@ -1,8 +1,10 @@
 {
+  "tokyo": "東京都",
   "aichi": "愛知県",
   "akita": "秋田県",
   "fukui": "福井県",
   "fukuoka": "福岡県",
+  "fukushima": "福島県",
   "gifu": "岐阜県",
   "hokkaido": "北海道",
   "ibaraki": "茨城県",
@@ -14,5 +16,7 @@
   "okinawa": "沖縄県",
   "saga": "佐賀県",
   "tochigi": "栃木県",
+  "kanagawa": "神奈川県",
+  "hyogo": "兵庫県",
   "yamanashi": "山梨県"
 }
