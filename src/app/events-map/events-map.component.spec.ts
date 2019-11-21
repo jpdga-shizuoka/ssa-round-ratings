@@ -1,4 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatDialogModule } from '@angular/material/dialog';
+import { AgmCoreModule } from '@agm/core';
 
 import { EventsMapComponent } from './events-map.component';
 
@@ -8,7 +10,11 @@ describe('EventsMapComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EventsMapComponent ]
+      declarations: [ EventsMapComponent ],
+      imports: [
+        MatDialogModule,
+        AgmCoreModule.forRoot(),
+      ]
     })
     .compileComponents();
   }));

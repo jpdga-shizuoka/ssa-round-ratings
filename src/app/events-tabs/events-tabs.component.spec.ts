@@ -8,12 +8,17 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 import { EventsTabsComponent } from './events-tabs.component';
 import { EventsTableComponent } from '../events-table/events-table.component';
 import { EventsMapComponent } from '../events-map/events-map.component';
 import { EventDetailComponent } from '../event-detail/event-detail.component';
-import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
+import { NoticeBottomsheetComponent } from '../dialogs/notice-bottomsheet.component';
+
+import { AgmCoreModule } from '@agm/core';
 
 describe('EventsTabsComponent', () => {
   let component: EventsTabsComponent;
@@ -26,7 +31,7 @@ describe('EventsTabsComponent', () => {
         EventsTableComponent,
         EventsMapComponent,
         EventDetailComponent,
-        ConfirmDialogComponent,
+        NoticeBottomsheetComponent,
       ],
       imports: [
         RouterTestingModule.withRoutes(
@@ -38,6 +43,10 @@ describe('EventsTabsComponent', () => {
         MatSortModule,
         MatTableModule,
         MatTabsModule,
+        MatBottomSheetModule,
+        MatFormFieldModule,
+        MatInputModule,
+        AgmCoreModule.forRoot(),
       ]
     })
     .compileComponents();

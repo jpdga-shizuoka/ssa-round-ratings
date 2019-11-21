@@ -8,10 +8,11 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 
-import { Observable, of } from 'rxjs';
+import { Subject, of } from 'rxjs';
 
 import { EventsTableComponent } from './events-table.component';
 import { EventDetailComponent } from '../event-detail/event-detail.component';
+import { GeoMarker } from '../models';
 
 const EVENTS = [{
   title: 'The 2020 Doubles Japan Championship',
@@ -52,6 +53,7 @@ describe('EventsTableComponent', () => {
     component = fixture.componentInstance;
     component.dataSource = new MatTableDataSource(EVENTS);
     component.displayedColumns$ = of(['date', 'title', 'location']);
+    component.markerSelected$ = new Subject<GeoMarker>();
     fixture.detectChanges();
   });
 

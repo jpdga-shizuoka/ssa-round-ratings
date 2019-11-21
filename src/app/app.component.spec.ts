@@ -28,8 +28,10 @@ import { AboutThisSiteComponent } from './about-this-site/about-this-site.compon
 import { EventDetailComponent } from './event-detail/event-detail.component';
 import { EventsTabsComponent } from './events-tabs/events-tabs.component';
 import { EventsTableComponent } from './events-table/events-table.component';
-import { EventsMapComponent } from './events-map/events-map.component';
-import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+import { EventsMapComponent, MarkerDialogComponent } from './events-map/events-map.component';
+import { NoticeBottomsheetComponent } from './dialogs/notice-bottomsheet.component';
+
+import { AgmCoreModule } from '@agm/core';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -44,7 +46,8 @@ describe('AppComponent', () => {
         EventsTabsComponent,
         EventsTableComponent,
         EventsMapComponent,
-        ConfirmDialogComponent,
+        MarkerDialogComponent,
+        NoticeBottomsheetComponent,
       ],
       imports: [
         RouterTestingModule,
@@ -66,6 +69,7 @@ describe('AppComponent', () => {
         MatCardModule,
         MatTabsModule,
         MatDialogModule,
+        AgmCoreModule,
       ],
     }).compileComponents();
   }));
