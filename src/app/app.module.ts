@@ -36,6 +36,7 @@ import { NoticeBottomsheetComponent } from './dialogs/notice-bottomsheet.compone
 
 import { AgmCoreModule } from '@agm/core';
 import { environment } from '../environments/environment';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -75,6 +76,7 @@ import { environment } from '../environments/environment';
     MatDialogModule,
     MatBottomSheetModule,
     AgmCoreModule.forRoot({ apiKey: environment.MAP_API_KEY }),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   entryComponents: [
     NoticeBottomsheetComponent,
