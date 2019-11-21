@@ -4,6 +4,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
+import { MatBottomSheet, MatBottomSheetRef } from '@angular/material/bottom-sheet';
 
 import { Observable, BehaviorSubject, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -11,7 +12,7 @@ import { map } from 'rxjs/operators';
 import { EventInfo, GeoMarker } from '../models';
 import { CommonService } from '../common.service';
 import { isHandset } from '../utilities';
-import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
+import { NoticeBottomsheetComponent } from '../dialogs/notice-bottomsheet.component';
 
 const DISPLAYED_COLUMNS = {
   upcoming: [['date', 'title'],   ['date', 'title', 'location']],
@@ -23,14 +24,6 @@ const TABS_TITLE = {
   local:    ['Local Events', 'Map'],
   monthly:  ['Monthly Events', 'Map']
 };
-const MONTHLY_DIALOG_TITLE = [
-  'Regarding the monthly schedule',
-  '月例会のスケジュールについて'
-];
-const MONTHLY_DIALOG_CONTENT = [
-  'This is just an annual schedule, please check in advance if you want to entry.',
-  'ここに揚げたスケジュールはおおよその予定です。参加される際は事前に主催者等へのご確認を願います。'
-];
 
 @Component({
   selector: 'app-events-tabs',
@@ -49,7 +42,7 @@ export class EventsTabsComponent implements OnInit, AfterViewInit {
   constructor(
     private route: ActivatedRoute,
     private cs: CommonService,
-    public dialog: MatDialog,
+    private bottomsheet: MatBottomSheet,
     breakpointObserver: BreakpointObserver,
   ) {
     this.isHandset$ = isHandset(breakpointObserver);
@@ -74,7 +67,7 @@ export class EventsTabsComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     if (this.category === 'monthly'
     && sessionStorage.getItem('monthlyConfirmed') !== 'true') {
-      this.openMonthlyConfirmDialog();
+      this.openNoticeBottomsheet();
     }
   }
 
@@ -97,18 +90,13 @@ export class EventsTabsComponent implements OnInit, AfterViewInit {
     this.selectedTab = 0;
   }
 
-  private openMonthlyConfirmDialog(): void {
-    const dialogRef = this.dialog.open(ConfirmDialogComponent, {
-      width: '400px',
-      data: {
-        title: MONTHLY_DIALOG_TITLE[this.cs.primaryLanguage ? 0 : 1],
-        content: MONTHLY_DIALOG_CONTENT[this.cs.primaryLanguage ? 0 : 1],
-        confirmed: false
-      }
-    });
-    dialogRef.afterClosed().subscribe(result => {
-      sessionStorage.setItem('monthlyConfirmed', result);
-    });
+  private openNoticeBottomsheet() {
+    const bottomsheetRef = this.bottomsheet.open(NoticeBottomsheetComponent);
+
+    bottomsheetRef.afterDismissed()
+    .subscribe(() => sessionStorage.setItem('monthlyConfirmed', 'true'));
+
+    setTimeout(() => bottomsheetRef.dismiss(), 5000);
   }
 
   private makeMaerkersFromEvents(events: EventInfo[]) {

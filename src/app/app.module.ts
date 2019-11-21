@@ -20,6 +20,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -31,7 +32,7 @@ import { EventDetailComponent } from './event-detail/event-detail.component';
 import { EventsTabsComponent } from './events-tabs/events-tabs.component';
 import { EventsTableComponent } from './events-table/events-table.component';
 import { EventsMapComponent, MarkerDialogComponent } from './events-map/events-map.component';
-import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+import { NoticeBottomsheetComponent } from './dialogs/notice-bottomsheet.component';
 
 import { AgmCoreModule } from '@agm/core';
 import { environment } from '../environments/environment';
@@ -47,7 +48,7 @@ import { environment } from '../environments/environment';
     EventsTabsComponent,
     EventsTableComponent,
     EventsMapComponent,
-    ConfirmDialogComponent,
+    NoticeBottomsheetComponent,
     MarkerDialogComponent,
   ],
   imports: [
@@ -72,12 +73,11 @@ import { environment } from '../environments/environment';
     MatCardModule,
     MatTabsModule,
     MatDialogModule,
-    AgmCoreModule.forRoot({
-      apiKey: environment.MAP_API_KEY,
-      libraries: ['places']})
+    MatBottomSheetModule,
+    AgmCoreModule.forRoot({ apiKey: environment.MAP_API_KEY }),
   ],
   entryComponents: [
-    ConfirmDialogComponent,
+    NoticeBottomsheetComponent,
     MarkerDialogComponent,
   ],
   providers: [],
