@@ -8,9 +8,19 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
+  xit('should display the menu title', () => {
+    page.navigateTo();
+    expect(page.getMenuTitleText()).toEqual('DG Japan');
+  });
+
   it('should display the toolbar title', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('SSA Round Ratings');
+    expect(page.getToolbarTitleText()).toEqual('DG Japan');
+  });
+
+  it('should display the footer title', () => {
+    page.navigateTo();
+    expect(page.getFooterText()).toEqual('Copyright © 2019 SHIZUOKA@JPDGA');
   });
 
   afterEach(async () => {

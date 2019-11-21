@@ -1,6 +1,18 @@
 {
+  "showakinenpark": {
+    "prefecture": "Tokyo",
+    "geolocation": [35.711596, 139.391561]
+  },
+  "tatsuminomoriseasidepark": {
+    "prefecture": "Tokyo",
+    "geolocation": [35.649155, 139.813418]
+  },
   "minamisomahoseridingpark": {
-    "prefecture": "Fukusima",
+    "prefecture": "Fukushima",
+    "geolocation": [37.593227, 140.929094]
+  },
+  "minamisomabajipark": {
+    "prefecture": "Fukushima",
     "geolocation": [37.593227, 140.929094]
   },
   "maikodiscgolfpark": {
@@ -10,6 +22,10 @@
   "fuminnomorihiyoshi": {
     "prefecture": "Kyoto",
     "geolocation": [35.137323, 135.530041]
+  },
+  "hanamakikoikipark": {
+    "prefecture": "Iwate",
+    "geolocation": [39.434693, 141.056849]
   },
   "kitakamisportpark": {
     "prefecture": "Iwate",
@@ -23,13 +39,33 @@
     "prefecture": "Tochigi",
     "geolocation": [36.559136, 139.978235]
   },
+  "kiyoharakogyodanchi": {
+    "prefecture": "Tochigi",
+    "geolocation": [36.559136, 139.978235]
+  },
+  "oyamaomoinomoripark": {
+    "prefecture": "Tochigi",
+    "geolocation": [36.274043, 139.799768]
+  },
+  "aikawafureainomura": {
+    "prefecture": "Kanagawa",
+    "geolocation": [35.537993, 139.263713]
+  },
   "hunkawanpanolamapark": {
     "prefecture": "Hokkaido",
     "geolocation": [42.231879, 140.309498]
   },
+  "furusatofureaipark": {
+    "prefecture": "Ibaraki",
+    "geolocation": [35.901153, 140.161973]
+  },
   "hikaritokazenookapark": {
     "prefecture": "Ibaraki",
     "geolocation": [36.003104, 140.305402]
+  },
+  "hitachiseasidepark": {
+    "prefecture": "Ibaraki",
+    "geolocation": [36.399269, 140.601818]
   },
   "seasidenaturepark": {
     "prefecture": "Fukui",
@@ -59,6 +95,10 @@
     "prefecture": "Kagoshima",
     "geolocation": [31.633516, 130.594111]
   },
+  "shiminshikinomori": {
+    "prefecture": "Aichi",
+    "geolocation": [35.312159, 137.002935]
+  },
   "mikawarinkairyokuchi": {
     "prefecture": "Aichi",
     "geolocation": [34.788696, 137.323191]
@@ -70,6 +110,10 @@
   "mizubayashisportpark": {
     "prefecture": "Akita",
     "geolocation": [39.378272, 140.031388]
+  },
+  "hamanomiyapark": {
+    "prefecture": "Hyogo",
+    "geolocation": [34.735335, 134.832862]
   },
   "nasuhighlandgolfclub": {
     "prefecture": "Tochigi",

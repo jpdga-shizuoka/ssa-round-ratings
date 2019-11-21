@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {
   CommonService, RoundInfo, EventInfo, LocationInfo
 } from '../common.service';
@@ -22,7 +22,7 @@ interface MiscInfo {
   templateUrl: './round-detail.component.html',
   styleUrls: ['./round-detail.component.css']
 })
-export class RoundDetailComponent implements OnInit {
+export class RoundDetailComponent {
 
   @Input() round: RoundInfo;
 
@@ -30,14 +30,71 @@ export class RoundDetailComponent implements OnInit {
   score: number;
 
   private event: EventInfo;
-  private location: LocationInfo;
-  private miscInfo: MiscInfo[];
+  private _location: LocationInfo;
+  private _miscInfo: MiscInfo[];
 
   constructor(private cs: CommonService) {
   }
 
-  ngOnInit() {
+  get location(): string | undefined {
+    const event = this.getEvent();
+    if (!event) {
+      return undefined;
+    }
+    const location = this.cs.getLocationName(event.location);
+    const region = this.getPrefecture();
+    return `${location}, ${region}`;
+  }
+
+  get geolocation(): string | undefined {
+    const location = this.getLocation();
+    if (!location || !location.geolocation) {
+      return undefined;
+    }
+    return this.cs.getGeolocation(location.geolocation);
+  }
+
+  get roundStatus(): string {
+    return `${this.round.holes} holes @ ${this.round.round}`;
+  }
+
+  get src() {
+    const ssa = this.round.ssa;
+    if (!ssa) {
+      return '';
+    }
+    if (ssa < 48) {
+      return 'Category A (under 48)';
+    }
+    if (ssa < 54) {
+      return 'Category 2A (48-53.9)';
+    }
+    if (ssa < 60) {
+      return 'Category 3A (54-59.9)';
+    }
+    if (ssa < 66) {
+      return 'Category 4A (60-65.9)';
+    }
+    return 'Category 5A (over 66)';
+  }
+
+  get miscInfo(): MiscInfo[] {
+    if (this._miscInfo) {
+      return this._miscInfo;
+    }
     this.makeMiscInfo();
+    return this._miscInfo;
+  }
+
+  get equation(): string | undefined {
+    if (!this.round.weight || !this.round.offset) {
+      return undefined;
+    }
+    return `Rating = ${this.round.weight.toFixed(1)} * Score + ${this.round.offset.toFixed(0)}`;
+  }
+
+  get date(): string | undefined {
+    return this.cs.getDate(this.getEvent());
   }
 
   private getEvent(): EventInfo | undefined {
@@ -49,19 +106,15 @@ export class RoundDetailComponent implements OnInit {
   }
 
   private getLocation(): LocationInfo | undefined {
-    if (this.location) {
-      return this.location;
+    if (this._location) {
+      return this._location;
     }
     const event = this.getEvent();
     if (!event.location) {
       return undefined;
     }
-    this.location = this.cs.getLocation(event.location);
-    return this.location;
-  }
-
-  getMiscInfo(): MiscInfo[] {
-    return this.miscInfo;
+    this._location = this.cs.getLocation(event.location);
+    return this._location;
   }
 
   private makeMiscInfo() {
@@ -90,7 +143,7 @@ export class RoundDetailComponent implements OnInit {
         });
         info.push({
           icon: 'public',
-          title: 'Papers&Map 🇯🇵',
+          title: 'Papers 🇯🇵',
           url: this.cs.getJpdgaInfo(event.jpdga.eventId)
         });
       }
@@ -118,82 +171,15 @@ export class RoundDetailComponent implements OnInit {
         });
       }
     }
-    this.miscInfo = info;
+    this._miscInfo = info;
   }
 
-  getDate(): string | undefined {
-    if (!this.round.date) {
-      return undefined;
-    }
-    const date = new Date(this.round.date);
-    return date.toLocaleDateString();
-  }
-
-  getLocationName(): string | undefined {
-    const event = this.getEvent();
-    if (!event) {
-      return undefined;
-    }
-    return this.cs.getLocationName(event.location);
-  }
-
-  getGeolocation(): string | undefined {
-    const location = this.getLocation();
-    if (!location || !location.geolocation) {
-      return undefined;
-    }
-    return this.cs.getGeolocation(location.geolocation);
-  }
-
-  getPrefecture(): string | undefined {
+  private getPrefecture(): string | undefined {
     const location = this.getLocation();
     if (!location || !location.prefecture) {
       return undefined;
     }
     return this.cs.getPrefecture(location.prefecture);
-  }
-
-  getJpdgaInfo(round: RoundInfo): string | undefined {
-    return this.cs.getJpdgaInfo(round.event);
-  }
-
-  getJpdgaResult(round: RoundInfo): string | undefined {
-    return this.cs.getJpdgaResult(round.event);
-  }
-
-  getPdgaResult(round: RoundInfo): string | undefined {
-    return this.cs.getPdgaResult(round.event);
-  }
-
-  getEquation(): string | undefined {
-    if (!this.round.weight || !this.round.offset) {
-      return undefined;
-    }
-    return `Rating = ${this.round.weight.toFixed(1)} * Score + ${this.round.offset.toFixed(0)}`;
-  }
-
-  getRoundStatus(): string {
-    return `${this.round.holes} holes @ ${this.round.round}`;
-  }
-
-  getSRCText() {
-    const ssa = this.round.ssa;
-    if (!ssa) {
-      return '';
-    }
-    if (ssa < 48) {
-      return 'Category A (under 48)';
-    }
-    if (ssa < 54) {
-      return 'Category 2A (48-53.9)';
-    }
-    if (ssa < 60) {
-      return 'Category 3A (54-59.9)';
-    }
-    if (ssa < 66) {
-      return 'Category 4A (60-65.9)';
-    }
-    return 'Category 5A (over 66)';
   }
 
   onRatingChanged() {

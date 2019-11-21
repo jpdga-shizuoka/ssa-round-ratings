@@ -1,19 +1,75 @@
-<mat-toolbar class="titlebar" color="primary">
-  <span>SSA Round Ratings</span>
-  <span class="title-spacer"></span>
-  <span class="title-button-row">
-    <button mat-icon-button aria-label="toggle language" (click)="onClickLanguage()">
-      <mat-icon>translate</mat-icon>
-    </button>
-  </span>
-</mat-toolbar>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar id="menu-header"
+      [ngClass]="(isHandset$ | async) ? 'menu-header-low' : 'menu-header-high'">
+      <span>{{title}}</span>
+    </mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/events/upcoming"
+        routerLinkActive="menu-active"
+        (click)="onClickLink()">
+        <mat-icon>events</mat-icon>{{upcomingEvents}}
+      </a>
+      <a mat-list-item routerLink="/past"
+        routerLinkActive="menu-active"
+        (click)="onClickLink()">
+        <mat-icon>table_chart</mat-icon>{{results}}
+      </a>
 
-<div class='course-ratings'>
-  <app-course-ratings></app-course-ratings>
-</div>
+      <mat-divider></mat-divider>
 
-<mat-toolbar class="footer">
-  <span class="footer-title">
-    Copyright © 2019 <a href="https://jpdga-shizuoka.github.io/home/">SHIZUOKA@JPDGA</a>
-  </span>
-</mat-toolbar>
+      <a mat-list-item routerLink="/events/local"
+        routerLinkActive="menu-active"
+        (click)="onClickLink()">
+        <mat-icon>terrain</mat-icon>{{localEvents}}
+      </a>
+      <a mat-list-item routerLink="/events/monthly"
+        routerLinkActive="menu-active"
+        (click)="onClickLink()">
+        <mat-icon>sync</mat-icon>{{monthlyEvents}}
+      </a>
+    </mat-nav-list>
+
+    <mat-divider></mat-divider>
+
+    <mat-nav-list>
+      <a mat-list-item routerLink="/about"
+        routerLinkActive="menu-active"
+        (click)="onClickLink()">
+        <mat-icon>info</mat-icon>{{aboutThisSite}}
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" [ngClass]="{'toolbar-back': isHandset$ | async}">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span id="toolbar-title" *ngIf="isHandset$ | async">{{title}}</span>
+      <span class="title-spacer"></span>
+      <span class="title-button-row">
+        <button mat-icon-button aria-label="toggle language" (click)="onClickLanguage()">
+          <mat-icon>translate</mat-icon>
+        </button>
+      </span>
+    </mat-toolbar>
+
+    <div class='app-main'>
+      <router-outlet></router-outlet>
+    </div>
+
+    <mat-toolbar class="footer">
+      <span class="footer-title">
+        Copyright © 2019 <a href="https://jpdga-shizuoka.github.io/home/">SHIZUOKA@JPDGA</a>
+      </span>
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>

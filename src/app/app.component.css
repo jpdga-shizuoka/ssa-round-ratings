@@ -1,19 +1,19 @@
-.course-ratings {
-  padding: 0 10px 10px 10px;
-  max-width: 600px;
-  margin: auto;
+.sidenav-container {
+  height: 100%;
 }
-@media (max-width: 599px) {
-  .course-ratings {
-    padding: 0;
-  }
+.sidenav mat-icon {
+  padding-right: 16px;
 }
-.github-icon {
-    padding: 0 14px;
+.sidenav {
+  width: 250px;
 }
-.titlebar {
-  margin: 0;
-  border: 0;
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 .title-spacer {
     flex: 1 1 auto;
@@ -26,4 +26,30 @@
 .footer-title {
     text-align: center;
     flex: 1 1 auto;
+}
+.menu-active {
+  background-color: #efe5fd;
+}
+#menu-header {
+  background-image: url("../assets/img/menu-back-image.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-align: center;
+}
+#menu-header span {
+  flex: 1 1 auto;
+}
+#toolbar-title {
+  margin-left: 12px;
+}
+.toolbar-back {
+  background-image: url("../assets/img/title-back-image.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.menu-header-high {
+  height: 64px;
+}
+.menu-header-low {
+  height: 56px;
 }

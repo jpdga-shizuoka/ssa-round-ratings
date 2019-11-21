@@ -1,20 +1,45 @@
 import { Injectable } from '@angular/core';
 
 import EVENTS from '../assets/model/events.json';
+import LOCAL_EVENTS from '../assets/model/local-events.json';
+import MONTHLY_EVENTS from '../assets/model/monthly-events.json';
 import LOCATIONS from '../assets/model/locations.json';
 import ROUNDS from '../assets/model/rounds.json';
 
 import EVENT_ALIASE from '../assets/model/event-aliase-dictionary.json';
 import LOCATION_ALIASE from '../assets/model/location-aliase-dictionary.json';
 import PREFECTURE_ALIASE from '../assets/model/prefecture-aliase-dictionary.json';
+import MENU_ALIASE from '../assets/model/menu-aliase-dictionary.json';
 
-import { RoundInfo, EventInfo, LocationInfo } from './models';
+import {
+  RoundInfo, EventInfo, LocationInfo, TermDescription, Schedule, GeoMarker
+} from './models';
 
-export { RoundInfo, EventInfo, LocationInfo };
+export { ICONS, MiscInfo } from './models';
+export { RoundInfo, EventInfo, LocationInfo, TermDescription, GeoMarker };
+
+const DaysOfWeek = [{
+  su: 'Sun.', mo: 'Mon.', tu: 'Tue.', we: 'Wed.', th: 'Thu.', fr: 'Fri.', sa: 'Sat.'
+}, {
+  su: '日曜', mo: '月曜', tu: '火曜', we: '水曜', th: '木曜', fr: '金曜', sa: '土曜'
+}];
+const NumberOfWeek = [
+  ['', '1st', '2nd', '3rd', '4th', '5th'],
+  ['', '第1', '第2', '第3', '第4', '第5']
+];
+const MonthTabel = {
+  primary: ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+  secondary: ['', '1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+};
+const MONTH_DEFAULTS = [];
 
 interface EventParts {
-  count: string;
+  count: number;
   key: string;
+}
+
+interface EventsMap {
+  [key: string]: EventInfo;
 }
 
 @Injectable({
@@ -22,16 +47,87 @@ interface EventParts {
 })
 export class CommonService {
 
-  private primaryLanguage = true;
+  primaryLanguage = true;
+  private eventMap: EventsMap;
+  private rounds: RoundInfo[];
 
-  constructor() {}
+  constructor() {
+    this.eventMap = makeEventsMap();
+  }
 
   toggleLanguage() {
     this.primaryLanguage = !this.primaryLanguage;
   }
 
+  getEvents(category: string): EventInfo[] {
+    switch (category) {
+      case 'upcoming':
+        return filterUpcomingEvents(EVENTS);
+      case 'local':
+        return LOCAL_EVENTS;
+      case 'monthly':
+        return MONTHLY_EVENTS;
+    }
+    return [];
+  }
+
+  getDate(event: EventInfo): string {
+    try {
+      const from = (new Date(event.period.from))
+        .toLocaleDateString(undefined, {year: 'numeric', month: 'short', day: 'numeric'});
+      if (event.period.from === event.period.to) {
+        return from;
+      }
+      const to = (new Date(event.period.to))
+        .toLocaleDateString(undefined, {month: 'short', day: 'numeric'});
+      return `${from} - ${to}`;
+    } catch {
+      const from = (new Date(event.period.from)).toLocaleDateString();
+      if (event.period.from === event.period.to) {
+        return from;
+      }
+      const to = (new Date(event.period.to)).toLocaleDateString();
+      return `${from} - ${to}`;
+    }
+  }
+
+  getMonthlyDay(schedule: Schedule): string {
+    return this.primaryLanguage
+    ? `${NumberOfWeek[0][schedule.bySetPos]} ${DaysOfWeek[0][schedule.byDay[0]]}`
+    : `${NumberOfWeek[1][schedule.bySetPos]}${DaysOfWeek[1][schedule.byDay[0]]}`
+  }
+
   getRounds(): RoundInfo[] {
-    return ROUNDS;
+    if (this.rounds) {
+      return this.rounds;
+    }
+    const rounds = ROUNDS.concat();
+    for (const round of rounds) {
+      if (round.ratings) {
+        round['weight'] = calcWeight(round.ratings.player1, round.ratings.player2);
+        round['offset'] = calcOffset(round);
+        round['ssa'] = calcSsa(round);
+        round['category'] = calcCategory(round['ssa']);
+      }
+    }
+    rounds.sort((a, b) => {
+      const t1 = new Date(a.date);
+      const t2 = new Date(b.date);
+      return t2.getTime() - t1.getTime();
+    });
+    this.rounds = rounds;
+    return this.rounds;
+  }
+
+  getMenuAliase(name: string): string {
+    if (this.primaryLanguage) {
+      return name;
+    }
+    const alt = MENU_ALIASE[name.toLowerCase()];
+    if (alt) {
+      return alt;
+    }
+    return name;
   }
 
   getEventAliase(eventName: string): string {
@@ -43,6 +139,12 @@ export class CommonService {
       return eventName;
     }
     const aliase = EVENT_ALIASE[parts.key];
+    if (!aliase) {
+      return eventName;
+    }
+    if (parts.count > 1960) {
+      return !aliase ? eventName : `${parts.count}年 ${aliase}`;
+    }
     return !aliase ? eventName : `第${parts.count}回 ${aliase}`;
   }
 
@@ -58,7 +160,17 @@ export class CommonService {
   }
 
   getEvent(eventName: string): EventInfo | undefined {
-    return EVENTS[getKeyFromName(eventName)];
+    return this.eventMap[getKeyFromName(eventName)];
+  }
+
+  getMonth(schedule: Schedule): string {
+    const results: string[] = [];
+    for (const month of (schedule.byMonth || MONTH_DEFAULTS)) {
+      results.push(this.primaryLanguage
+        ? MonthTabel.primary[month]
+        : MonthTabel.secondary[month]);
+    }
+    return results.join(' ');
   }
 
   getLocation(locationName: string): LocationInfo | undefined {
@@ -138,14 +250,66 @@ function getEventKey(name: string): EventParts | undefined {
   if (!name) {
     return undefined;
   }
-  const eventName = /the(\d+)(st|nd|rd|th)(.+)/;
-  const stripedName = name.trim().toLowerCase().replace(/[ -]/g, '');
-  const results = stripedName.match(eventName);
+  const eventName = /the (\d+)(st|nd|rd|th|) (.+)/i;
+  const results = name.trim().toLowerCase().match(eventName);
   if (!results || results.length !== 4) {
     return undefined;
   }
   return {
-    count: results[1],
-    key: results[3]
+    count: parseInt(results[1], 10),
+    key: results[3].replace(/[ -]/g, '')
   };
+}
+
+function makeEventsMap(): EventsMap {
+  const eventMap = {};
+  for (const event of EVENTS) {
+    eventMap[getKeyFromName(event.title)] = event;
+  }
+  return eventMap;
+}
+
+function calcWeight(player1: { score: number, rating: number }, player2: { score: number, rating: number }) {
+  return (player1.rating - player2.rating) / (player1.score - player2.score);
+}
+
+function calcOffset(round: RoundInfo) {
+  return round.ratings.player1.rating - round['weight'] * round.ratings.player1.score;
+}
+
+function calcSsa(round: RoundInfo) {
+  const holes = round.holes || 18;
+  const regulation = holes / 18;
+  return (1000 - round['offset']) / round['weight'] / regulation;
+}
+
+function calcCategory(ssa: number) {
+  if (ssa < 48) {
+    return 'A';
+  } else if (ssa < 54) {
+    return '2A';
+  } else if (ssa < 60) {
+    return '3A';
+  } else if (ssa < 66) {
+    return '4A';
+  } else {
+    return '5A';
+  }
+}
+
+function filterUpcomingEvents(events: EventInfo[]): EventInfo[] {
+  const result: EventInfo[] = [];
+  const now = Date.now();
+  for (const event of events) {
+    const date = new Date(event.period.to);
+    if (date.getTime() > now) {
+      result.push(event);
+    }
+  }
+  result.sort((a, b) => {
+    const t1 = new Date(a.period.from);
+    const t2 = new Date(b.period.to);
+    return t1.getTime() - t2.getTime();
+  });
+  return result;
 }

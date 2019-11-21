@@ -1,0 +1,46 @@
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  justify-content: center;
+}
+.security-card,
+.about-card {
+  margin: 5px;
+  overflow: hidden;
+  max-width: 599px;
+  width: 500px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  line-height: 1.4rem;
+}
+.security-card p,
+.about-card p {
+  text-align: center;
+}
+.security-card p {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+.github-card-img img {
+  display: block;
+  margin: auto;
+  width: 128px;
+  padding: 10px 0 0 0;
+}
+.github-card-img h3 {
+  text-align: center;
+}
+.terms-table {
+  width: 100%;
+}
+.terms-table td {
+  padding: 10px;
+  border-color: collapse;
+  border-bottom: 1px lightgray solid;
+}
+.terms-table td:first-child {
+  font-weight: bold;
+  min-width: 4rem;
+  text-align: center;
+}

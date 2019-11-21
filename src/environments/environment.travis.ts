@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  MAP_API_KEY: 'xxxx',
+  map: {
+    center: {
+      lat: 36.306148,
+      lng: 137.995148
+    },
+    zoom: 5,
+  }
 };
 
 /*

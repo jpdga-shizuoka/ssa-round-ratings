@@ -1,3 +1,12 @@
+export class GeoMarker {
+  position: {
+    lat: number;
+    lng: number;
+  };
+  location: string;
+  title: string;
+}
+
 export interface LocationInfo {
   geolocation: [number, number];
   prefecture: string;
@@ -8,7 +17,7 @@ export interface PdgaInfo {
 }
 
 export interface JpdgaInfo {
-  eventId: string;
+  eventId?: string;
   topicId?: string;
   photoId?: string;
 }
@@ -26,12 +35,24 @@ export interface UrlInfo {
 }
 
 export interface EventInfo {
+  title?: string;
+  period?: {
+    from: string;
+    to: string;
+  };
   location: string;     // location of the course
   pdga?: PdgaInfo;
   jpdga?: JpdgaInfo;
   website?: string;     // url of the event
   urls?: UrlInfo[];
-  date?: string;        // ?????? temporally
+  category?: string;
+  schedule?: Schedule;
+}
+
+export interface Schedule {
+  byDay: string[];      // byDay: ['su', 'mo'], // repeat only sunday and monday
+  bySetPos: number;     // bySetPos: 3, // repeat every 3rd sunday (will take the first element of the byDay array)
+  byMonth?: number[];   // byMonth: [1, 2], // repeat only in january und february,
 }
 
 export interface RoundInfo {
@@ -54,4 +75,21 @@ export interface RoundInfo {
   category?: string;    // SSA Range Category
   weight?: number;
   offset?: number;
+}
+
+export interface TermDescription {
+  term: string;
+  description: string;
+}
+
+export const ICONS = {
+  video: 'ondemand_video',
+  photo: 'camera_alt',
+  website: 'public'
+};
+
+export interface MiscInfo {
+  icon: string;
+  title: string;
+  url: string;
 }

@@ -1,0 +1,40 @@
+<table class='event-detail'>
+  <tbody>
+    <tr *ngIf="showMonthly$ | async">
+      <td>Month:</td>
+      <td>{{monthlySchedule}}</td>
+    </tr>
+    <tr>
+      <td>Location:</td>
+      <td class="flex-container">
+        <div>
+          <a href="{{geolocation}}">
+            <mat-icon>room</mat-icon>{{location}}<mat-icon>launch</mat-icon>
+          </a>
+        </div>
+      </td>
+    </tr>
+
+    <tr *ngIf="showPastRounds">
+      <td>{{pastResults}}:</td>
+      <td>
+        <a routerLink="/past" [queryParams]="{search: title}" class="detail-link">
+          <mat-icon>table_chart</mat-icon>{{seeThePastResults}}
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Info:</td>
+      <td>
+        <div class="flex-container">
+          <ng-template ngFor let-misc [ngForOf]="miscInfo">
+            <a href="{{misc.url}}" class="detail-link">
+              <mat-icon>{{misc.icon}}</mat-icon>{{misc.title}}
+            </a>
+          </ng-template>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
