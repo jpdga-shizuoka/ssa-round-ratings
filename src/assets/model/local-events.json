@@ -1,7 +1,7 @@
 [{
   "category": "local",
   "title": "The 2019 Iwate Disc Golf Tournament",
-  "location": "Kitakami Sport Park",
+  "location": "Hanamaki Koiki Park",
   "period": {
     "from": "2019-11-24",
     "to": "2019-11-24"
@@ -13,7 +13,7 @@
   }, {
     "type": "website",
     "title": "Iwate, JPDGA 🇯🇵",
-    "url": "http://jpdgaiwate.sakura.ne.jp/"
+    "url": "http://jpdgaiwate.com"
   }]
 }, {
   "category": "local",

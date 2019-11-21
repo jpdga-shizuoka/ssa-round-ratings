@@ -23,6 +23,10 @@
     "prefecture": "Kyoto",
     "geolocation": [35.137323, 135.530041]
   },
+  "hanamakikoikipark": {
+    "prefecture": "Iwate",
+    "geolocation": [39.434693, 141.056849]
+  },
   "kitakamisportpark": {
     "prefecture": "Iwate",
     "geolocation": [39.261938, 141.091096]
