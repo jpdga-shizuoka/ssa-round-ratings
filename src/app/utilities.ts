@@ -10,6 +10,6 @@ export function isHandset(observer: BreakpointObserver): Observable<boolean> {
   .observe(Breakpoints.Handset)
   .pipe(
     map(result => result.matches),
-    shareReplay()
+    shareReplay(1)
   );
 }
