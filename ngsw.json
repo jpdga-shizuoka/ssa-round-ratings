@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1574343078137,
+  "timestamp": 1574346485706,
   "index": "https://jpdga-shizuoka.github.io/ssa-round-ratings/index.html",
   "assetGroups": [
     {
@@ -86,7 +86,7 @@
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/index.html": "6490215dacc74038c20e4452199c02647508a0ed",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/main-es2015.0373edd77ac072092d96.js": "e1dee1bf3957c5377491451b7abca51728f49a2e",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/main-es5.0373edd77ac072092d96.js": "9ada5fe88e9311697dfdd183889db18c74ae744d",
-    "https://jpdga-shizuoka.github.io/ssa-round-ratings/manifest.webmanifest": "d69355c0568c59e07f807eb581c87702ea9261aa",
+    "https://jpdga-shizuoka.github.io/ssa-round-ratings/manifest.webmanifest": "c2f427353b7d5677a75395a0182fafd181cda23e",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/menu-back-image.09e239c4dd4a9127dd33.png": "6138526bcf3aad21418f6b95513f3df66dfb96b7",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/polyfills-es2015.d3e61f0dd2b58e518eca.js": "e2f28c3743afd2899e140ad831df9675c233c02b",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/polyfills-es5.517f1d5415025b3e9b1a.js": "bc55c457c97924a880c8c5bee5337b8d12a7d7d8",
