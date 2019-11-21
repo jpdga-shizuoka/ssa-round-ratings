@@ -92,8 +92,9 @@ export class CommonService {
   }
 
   getMonthlyDay(schedule: Schedule): string {
-    const primary = this.primaryLanguage ? 0 : 1;
-    return `${NumberOfWeek[primary][schedule.bySetPos]} ${DaysOfWeek[primary][schedule.byDay[0]]}`;
+    return this.primaryLanguage
+    ? `${NumberOfWeek[0][schedule.bySetPos]} ${DaysOfWeek[0][schedule.byDay[0]]}`
+    : `${NumberOfWeek[1][schedule.bySetPos]}${DaysOfWeek[1][schedule.byDay[0]]}`
   }
 
   getRounds(): RoundInfo[] {
