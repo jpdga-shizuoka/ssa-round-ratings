@@ -1,3 +1,15 @@
+export type EventCategory = 'upcoming' | 'past' | 'local' | 'monthly';
+
+export interface MarkerDialogData {
+  category: EventCategory;
+  position: {
+    lat: number;
+    lng: number;
+  };
+  location: string;
+  events: string[];
+}
+
 export class GeoMarker {
   position: {
     lat: number;

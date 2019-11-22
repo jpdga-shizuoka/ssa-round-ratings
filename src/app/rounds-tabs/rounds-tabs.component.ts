@@ -64,22 +64,24 @@ export class RoundsTabsComponent implements OnInit {
 
   private makeMaerkersFromRounds(rounds: RoundInfo[]): GeoMarker[] {
     const markers: GeoMarker[] = [];
-    const locations: string[] = [];
+    const eventTitles: string[] = [];
     for (const round of rounds) {
       const event = this.cs.getEvent(round.event);
       const location = this.cs.getLocation(event.location);
+      const eventTitle = this.cs.getEventTitle(event.title);
+      if (eventTitles.indexOf(eventTitle) >= 0) {
+        continue;
+      }
       const marker = {
         position: {
           lat: location.geolocation[0],
           lng: location.geolocation[1]
         },
         location: event.location,
-        title: event.title,
+        title: eventTitle,
       };
-      if (locations.indexOf(event.location) < 0) {
-        locations.push(event.location);
-        markers.push(marker);
-      }
+      eventTitles.push(eventTitle);
+      markers.push(marker);
     }
     return markers;
   }

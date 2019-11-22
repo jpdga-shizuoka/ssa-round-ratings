@@ -1,0 +1,13 @@
+.mat-dialog-title,
+.mat-list-item {
+  font-size: 16px;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+@media (max-width: 374px) {
+  .mat-dialog-title,
+  .mat-list-item {
+    font-size: 15px;
+  }
+}

@@ -31,7 +31,8 @@ import { AboutThisSiteComponent } from './about-this-site/about-this-site.compon
 import { EventDetailComponent } from './event-detail/event-detail.component';
 import { EventsTabsComponent } from './events-tabs/events-tabs.component';
 import { EventsTableComponent } from './events-table/events-table.component';
-import { EventsMapComponent, MarkerDialogComponent } from './events-map/events-map.component';
+import { EventsMapComponent } from './events-map/events-map.component';
+import { MarkerDialogComponent } from './dialogs/marker-dialog.component';
 import { NoticeBottomsheetComponent } from './dialogs/notice-bottomsheet.component';
 
 import { AgmCoreModule } from '@agm/core';

@@ -94,7 +94,7 @@ export class CommonService {
   getMonthlyDay(schedule: Schedule): string {
     return this.primaryLanguage
     ? `${NumberOfWeek[0][schedule.bySetPos]} ${DaysOfWeek[0][schedule.byDay[0]]}`
-    : `${NumberOfWeek[1][schedule.bySetPos]}${DaysOfWeek[1][schedule.byDay[0]]}`
+    : `${NumberOfWeek[1][schedule.bySetPos]}${DaysOfWeek[1][schedule.byDay[0]]}`;
   }
 
   getRounds(): RoundInfo[] {
@@ -136,7 +136,8 @@ export class CommonService {
     }
     const parts = getEventKey(eventName);
     if (!parts) {
-      return eventName;
+      const title = EVENT_ALIASE[getKeyFromName(eventName)];
+      return title ? title : eventName;
     }
     const aliase = EVENT_ALIASE[parts.key];
     if (!aliase) {
