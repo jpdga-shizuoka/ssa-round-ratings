@@ -20,20 +20,20 @@ import { RoundsTableComponent } from './rounds-table.component';
 import { GeoMarker } from '../models';
 
 const ROUNDS = [{
-  "event": "The 19th Tohoku Open",
-  "round": "Rd1",
-  "date": "2019-10-13",
-  "hla": 93,
-  "holes": 18,
-  "ratings": {
-      "player1": {
-          "score": 59,
-          "rating": 999
-      },
-      "player2": {
-          "score": 72,
-          "rating": 893
-      }
+  event: 'The 19th Tohoku Open',
+  round: 'Rd1',
+  date: '2019-10-13',
+  hla: 93,
+  holes: 18,
+  ratings: {
+    player1: {
+      score: 59,
+      rating: 999
+    },
+    player2: {
+      score: 72,
+      rating: 893
+    }
   }
 }];
 
