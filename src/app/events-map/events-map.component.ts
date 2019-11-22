@@ -39,11 +39,11 @@ export class EventsMapComponent {
     this.openDialog(this.category, marker, eventsName);
   }
 
-  openDialog(category: EventCategory, marker: GeoMarker, eventNames: string[]) {
+  openDialog(cat: EventCategory, marker: GeoMarker, eventNames: string[]) {
     this.dialog.open(MarkerDialogComponent, {
       width: '400px',
       data: {
-        category: category,
+        category: cat,
         position: marker.position,
         location: marker.location,
         events: eventNames
