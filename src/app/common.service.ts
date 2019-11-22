@@ -136,7 +136,8 @@ export class CommonService {
     }
     const parts = getEventKey(eventName);
     if (!parts) {
-      return eventName;
+      const title = EVENT_ALIASE[getKeyFromName(eventName)];
+      return title ? title : eventName;
     }
     const aliase = EVENT_ALIASE[parts.key];
     if (!aliase) {
