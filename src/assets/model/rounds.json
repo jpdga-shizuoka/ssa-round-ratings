@@ -1,4 +1,16 @@
 [{
+  "event": "The 15th Kyoto Classic",
+  "round": "Rd1,Rd2,Rd3",
+  "date": "2019-11-16",
+  "holes": 18
+},
+{
+  "event": "The 31st Showa Kinen Park Open",
+  "round": "Rd1,Rd2",
+  "date": "2019-11-02",
+  "holes": 27
+},
+{
   "event": "The 19th Tohoku Open",
   "round": "Rd1",
   "date": "2019-10-13",

@@ -74,6 +74,21 @@
     "eventId": "516"
   }
 }, {
+  "title": "The 31st Showa Kinen Park Open",
+  "location": "Showa Kinen Park",
+  "period": {
+    "from": "2019-11-02",
+    "to": "2019-11-04"
+  },
+  "jpdga": {
+    "eventId": "515"
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Official Site 🇯🇵",
+    "url": "http://jpdga-tokyo.com/skpo/"
+  }]
+}, {
   "title": "The 19th Tohoku Open",
   "location": "Mizubayashi Sport Park",
   "period": {
