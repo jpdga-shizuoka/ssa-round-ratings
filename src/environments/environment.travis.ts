@@ -4,7 +4,6 @@
 
 export const environment = {
   production: false,
-  start_url: '/',
   MAP_API_KEY: 'xxxx',
   map: {
     center: {
