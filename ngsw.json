@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1574712157219,
+  "timestamp": 1574757035123,
   "index": "https://jpdga-shizuoka.github.io/ssa-round-ratings/index.html",
   "assetGroups": [
     {
@@ -10,8 +10,8 @@
       "urls": [
         "https://jpdga-shizuoka.github.io/ssa-round-ratings/favicon.ico",
         "https://jpdga-shizuoka.github.io/ssa-round-ratings/index.html",
-        "https://jpdga-shizuoka.github.io/ssa-round-ratings/main-es2015.9f0989aef051a7189baa.js",
-        "https://jpdga-shizuoka.github.io/ssa-round-ratings/main-es5.9f0989aef051a7189baa.js",
+        "https://jpdga-shizuoka.github.io/ssa-round-ratings/main-es2015.5a7e98061b830aa82190.js",
+        "https://jpdga-shizuoka.github.io/ssa-round-ratings/main-es5.5a7e98061b830aa82190.js",
         "https://jpdga-shizuoka.github.io/ssa-round-ratings/manifest.webmanifest",
         "https://jpdga-shizuoka.github.io/ssa-round-ratings/polyfills-es2015.d3e61f0dd2b58e518eca.js",
         "https://jpdga-shizuoka.github.io/ssa-round-ratings/polyfills-es5.517f1d5415025b3e9b1a.js",
@@ -37,6 +37,7 @@
         "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/icons/icon-512x512.png",
         "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/icons/icon-72x72.png",
         "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/icons/icon-96x96.png",
+        "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/img/DGJAPAN.png",
         "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/img/fujikawa.jpg",
         "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/img/github.svg",
         "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/img/menu-back-image.png",
@@ -69,6 +70,7 @@
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/icons/icon-512x512.png": "0e740861eed1cad011e01c58e811274df04d6e06",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/icons/icon-72x72.png": "3dc883711c2b3ebc687097a8c3e4539c247b2523",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/icons/icon-96x96.png": "6af171be99eb2132b9a6fda2c94491a3c6acd9ef",
+    "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/img/DGJAPAN.png": "2026c2fcf14ffc53bde19865bf0fe76b9bc7bb16",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/img/fujikawa.jpg": "0f54b9b201e6881f51e2847721157c141deab4df",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/img/github.svg": "8df003f2719a6f5bdb499b19d91c3fb6442b504b",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/img/menu-back-image.png": "6138526bcf3aad21418f6b95513f3df66dfb96b7",
@@ -83,9 +85,9 @@
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/model/prefecture-aliase-dictionary.json": "45c671781f135c5301863507f92676c23ec843b4",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/model/rounds.json": "0e34baf1c6ebb9781dec216137cce12d5a99d1ca",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/favicon.ico": "7dcef93f7ad49bb078e3eece25847380b0cfb6b9",
-    "https://jpdga-shizuoka.github.io/ssa-round-ratings/index.html": "b7d061a320e53bb5848e1a7ca82cc0218c70c703",
-    "https://jpdga-shizuoka.github.io/ssa-round-ratings/main-es2015.9f0989aef051a7189baa.js": "0605328f462fa9efb0867b1389753c457608f18c",
-    "https://jpdga-shizuoka.github.io/ssa-round-ratings/main-es5.9f0989aef051a7189baa.js": "ab5de480a9d116af6a347a16fd9daf7a377abdd7",
+    "https://jpdga-shizuoka.github.io/ssa-round-ratings/index.html": "291ac279acd23b684227fb7463bc5d05a7d32bf0",
+    "https://jpdga-shizuoka.github.io/ssa-round-ratings/main-es2015.5a7e98061b830aa82190.js": "c83c34deeda6de6cc71254d41e6d97e19e9b6a4d",
+    "https://jpdga-shizuoka.github.io/ssa-round-ratings/main-es5.5a7e98061b830aa82190.js": "dab10b83ca5249902942ec97c9694d384fb640c9",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/manifest.webmanifest": "c2f427353b7d5677a75395a0182fafd181cda23e",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/menu-back-image.09e239c4dd4a9127dd33.png": "6138526bcf3aad21418f6b95513f3df66dfb96b7",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/polyfills-es2015.d3e61f0dd2b58e518eca.js": "e2f28c3743afd2899e140ad831df9675c233c02b",
