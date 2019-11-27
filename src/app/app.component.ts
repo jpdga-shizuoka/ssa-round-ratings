@@ -14,7 +14,7 @@ interface MyMetaData {
   title: string;
   type: string;
   url: string;
-  image: string;
+  image?: string;
   description?: string;
   keywords?: string;
 }
@@ -101,8 +101,10 @@ export class AppComponent implements OnInit, OnDestroy {
     this.meta.updateTag({ property: 'og:title', content: data.title });
     this.meta.updateTag({ property: 'og:type', content: data.type });
     this.meta.updateTag({ property: 'og:url', content: data.url });
-    this.meta.updateTag({ property: 'og:image', content: data.image });
 
+    if (data.image) {
+      this.meta.updateTag({ property: 'og:image', content: data.image });
+    }
     if (data.keywords) {
       this.meta.updateTag({ name: 'keywords', content: data.keywords });
     }
