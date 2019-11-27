@@ -37,7 +37,7 @@ const routes: Routes = [
   }},
   { path: 'about', component: AboutThisSiteComponent, data: {
     title: 'DG Japan - About Us',
-    description: 'About Us, Security Policy, Terms, Open Source Software Project.',
+    description: 'About Us, Privacy Policy, Terms, Open Source Software Project.',
     keywords: 'disc golf,ssa,scratch scoring averages,japan',
     url: 'https://jpdga-shizuoka.github.io/ssa-round-ratings/about',
     type: 'article',
