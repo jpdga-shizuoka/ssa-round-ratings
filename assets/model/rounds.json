@@ -1,4 +1,23 @@
 [{
+  "event": "The 33rd Kyushu Open",
+  "round": "Rd1(B,C)",
+  "date": "2019-11-30",
+  "hla": 99,
+  "holes": 18
+},
+{
+  "event": "The 33rd Kyushu Open",
+  "round": "Rd2()",
+  "date": "2019-11-30",
+  "holes": 18
+},
+{
+  "event": "The 33rd Kyushu Open",
+  "round": "Rd3()",
+  "date": "2019-12-01",
+  "holes": 18
+},
+{
   "event": "The 15th Kyoto Classic",
   "round": "Rd1,Rd2,Rd3",
   "date": "2019-11-16",
