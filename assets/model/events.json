@@ -56,7 +56,9 @@
     "to": "2019-12-01"
   },
   "jpdga": {
-    "eventId": "517"
+    "eventId": "517",
+    "topicId": "1436",
+    "photoId": "72157712036090861"
   },
   "urls": [{
     "type": "website",
@@ -78,7 +80,9 @@
     "eventId": "42911"
   },
   "jpdga": {
-    "eventId": "516"
+    "eventId": "516",
+    "topicId": "1435",
+    "photoId": "72157712068608068"
   }
 }, {
   "title": "The 31st Showa Kinen Park Open",
