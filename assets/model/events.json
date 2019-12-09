@@ -45,6 +45,9 @@
     "from": "2019-12-14",
     "to": "2019-12-15"
   },
+  "pdga": {
+    "eventId": "43116"
+  },
   "jpdga": {
     "eventId": "518"
   }
@@ -54,6 +57,9 @@
   "period": {
     "from": "2019-11-30",
     "to": "2019-12-01"
+  },
+  "pdga": {
+    "eventId": "42912"
   },
   "jpdga": {
     "eventId": "517",
@@ -92,7 +98,8 @@
     "to": "2019-11-04"
   },
   "jpdga": {
-    "eventId": "515"
+    "eventId": "515",
+    "topicId": "1437"
   },
   "urls": [{
     "type": "website",
