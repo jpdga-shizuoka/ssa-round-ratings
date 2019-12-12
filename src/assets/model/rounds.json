@@ -3,25 +3,65 @@
   "round": "Rd1(B,C)",
   "date": "2019-11-30",
   "hla": 99,
-  "holes": 18
+  "holes": 18,
+  "ratings": {
+      "player1": {
+          "score": 54,
+          "rating": 1005
+      },
+      "player2": {
+          "score": 71,
+          "rating": 851
+      }
+  }
 },
 {
   "event": "The 33rd Kyushu Open",
   "round": "Rd2()",
   "date": "2019-11-30",
-  "holes": 18
+  "holes": 18,
+  "ratings": {
+      "player1": {
+          "score": 49,
+          "rating": 1017
+      },
+      "player2": {
+          "score": 63,
+          "rating": 878
+      }
+  }
 },
 {
   "event": "The 33rd Kyushu Open",
   "round": "Rd3()",
   "date": "2019-12-01",
-  "holes": 18
+  "holes": 18,
+  "ratings": {
+      "player1": {
+          "score": 49,
+          "rating": 1017
+      },
+      "player2": {
+          "score": 67,
+          "rating": 838
+      }
+  }
 },
 {
   "event": "The 15th Kyoto Classic",
   "round": "Rd1,Rd2,Rd3",
   "date": "2019-11-16",
-  "holes": 18
+  "holes": 18,
+  "ratings": {
+      "player1": {
+          "score": 50,
+          "rating": 1044
+      },
+      "player2": {
+          "score": 68,
+          "rating": 882
+      }
+  }
 },
 {
   "event": "The 31st Showa Kinen Park Open",
