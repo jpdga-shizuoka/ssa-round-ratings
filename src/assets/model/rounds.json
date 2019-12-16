@@ -1,4 +1,11 @@
 [{
+  "event": "The 19th Chubu Open",
+  "round": "Rd1,Rd2,Rd3",
+  "date": "2019-12-14",
+  "hla": 104,
+  "holes": 18
+},
+{
   "event": "The 33rd Kyushu Open",
   "round": "Rd1(B,C)",
   "date": "2019-11-30",

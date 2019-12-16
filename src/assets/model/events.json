@@ -50,7 +50,12 @@
   },
   "jpdga": {
     "eventId": "518"
-  }
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Official Site 🇯🇵",
+    "url": "https://aifda.or.jp/news/第19回-中部オープン-ディスクゴルフトーナメント/"
+  }]
 }, {
   "title": "The 33rd Kyushu Open",
   "location": "Umino-Nakamichi Seaside Park",
