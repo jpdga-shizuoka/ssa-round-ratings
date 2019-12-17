@@ -41,4 +41,17 @@
     "title": "Aichi Flying Disc Association 🇯🇵",
     "url": "https://aifda.or.jp/category/discgolf/"
   }]
+}, {
+  "category": "local",
+  "title": "The 8th Ikeda Town Disc Golf Tournament",
+  "location": "Ikeda Town General Gymnasium",
+  "period": {
+    "from": "2020-01-26",
+    "to": "2020-01-26"
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Facebook 🇯🇵",
+    "url": "https://www.facebook.com/gifuflyingdiscassociation/"
+  }]
 }]
