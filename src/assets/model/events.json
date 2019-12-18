@@ -1,5 +1,5 @@
 [{
-  "title": "The 2020 Doubles Japan Championship",
+  "title": "The 2020 National Doubles Championship",
   "location": "Hitachi Seaside Park",
   "period": {
     "from": "2020-02-29",
@@ -169,6 +169,21 @@
     "topicId": "1361"
   }
 }, {
+  "title": "The 2019 National Team Championship",
+  "location": "Oyama Omoinomori Park",
+  "period": {
+    "from": "2019-01-13",
+    "to": "2019-01-14"
+  },
+  "pdga": {
+    "eventId": "39007"
+  },
+  "jpdga": {
+    "eventId": "483",
+    "topicId": "1356",
+    "photoId": "72157675874899007"
+  }
+}, {
   "title": "The 8th Okinawa Open",
   "location": "Nakijinson Sport Park",
   "period": {
@@ -181,6 +196,21 @@
   "jpdga": {
     "eventId": "485",
     "topicId": "1364"
+  }
+}, {
+  "title": "The 2019 National Doubles Championship",
+  "location": "Hitachi Seaside Park",
+  "period": {
+    "from": "2019-03-02",
+    "to": "2019-03-03"
+  },
+  "pdga": {
+    "eventId": "39010"
+  },
+  "jpdga": {
+    "eventId": "486",
+    "topicId": "1367",
+    "photoId": "72157705940728961"
   }
 }, {
   "title": "The 2nd Miyagi Michinoku Open",

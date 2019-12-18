@@ -419,6 +419,22 @@
     "hla": 63,
     "holes": 18
 },
+
+{
+    "event": "The 2019 National Team Championship",
+    "round": "Rd1,2,3,4,5",
+    "date": "2019-01-13",
+    "hla": 82,
+    "holes": 12
+},
+{
+    "event": "The 2019 National Doubles Championship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2019-03-02",
+    "hla": 83,
+    "holes": 18
+},
+
 {
     "event": "The 32nd Kyushu Open",
     "round": "Rd1 (B,C)",
