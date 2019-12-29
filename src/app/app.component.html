@@ -44,7 +44,7 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary" [ngClass]="{'toolbar-back': isHandset$ | async}">
+    <mat-toolbar color="primary" [ngClass]="{'toolbar-back': isHandset$ | async}" id="header">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -66,7 +66,7 @@
       <router-outlet></router-outlet>
     </div>
 
-    <mat-toolbar class="footer">
+    <mat-toolbar class="footer" id="footer">
       <span class="footer-title">
         Copyright © 2019 SHIZUOKA@JPDGA
       </span>
