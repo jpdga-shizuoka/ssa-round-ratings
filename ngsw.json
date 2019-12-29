@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1577457065978,
+  "timestamp": 1577627447899,
   "index": "https://jpdga-shizuoka.github.io/ssa-round-ratings/index.html",
   "assetGroups": [
     {
@@ -10,8 +10,8 @@
       "urls": [
         "https://jpdga-shizuoka.github.io/ssa-round-ratings/favicon.ico",
         "https://jpdga-shizuoka.github.io/ssa-round-ratings/index.html",
-        "https://jpdga-shizuoka.github.io/ssa-round-ratings/main-es2015.b68f2098b30cf11e5db5.js",
-        "https://jpdga-shizuoka.github.io/ssa-round-ratings/main-es5.b68f2098b30cf11e5db5.js",
+        "https://jpdga-shizuoka.github.io/ssa-round-ratings/main-es2015.6ba7892195136a466b07.js",
+        "https://jpdga-shizuoka.github.io/ssa-round-ratings/main-es5.6ba7892195136a466b07.js",
         "https://jpdga-shizuoka.github.io/ssa-round-ratings/manifest.webmanifest",
         "https://jpdga-shizuoka.github.io/ssa-round-ratings/polyfills-es2015.d3e61f0dd2b58e518eca.js",
         "https://jpdga-shizuoka.github.io/ssa-round-ratings/polyfills-es5.517f1d5415025b3e9b1a.js",
@@ -85,9 +85,9 @@
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/model/prefecture-aliase-dictionary.json": "45c671781f135c5301863507f92676c23ec843b4",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/model/rounds.json": "07a9af18669ddd9e60e6b91f36a63fcd5fb1d3e6",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/favicon.ico": "7dcef93f7ad49bb078e3eece25847380b0cfb6b9",
-    "https://jpdga-shizuoka.github.io/ssa-round-ratings/index.html": "2a9b1736474a89ba2d92c28af1972c212fa3d3ad",
-    "https://jpdga-shizuoka.github.io/ssa-round-ratings/main-es2015.b68f2098b30cf11e5db5.js": "640675a5906f26357479b7b131920a8a6adddfe8",
-    "https://jpdga-shizuoka.github.io/ssa-round-ratings/main-es5.b68f2098b30cf11e5db5.js": "e8c9b3b4320224a45463094d09cdb07518d63db9",
+    "https://jpdga-shizuoka.github.io/ssa-round-ratings/index.html": "378dea85409d2bc4012b5dadc8f834627b2624bb",
+    "https://jpdga-shizuoka.github.io/ssa-round-ratings/main-es2015.6ba7892195136a466b07.js": "660d6f1b6858d8df6a5bda664cca82d9d16c97ff",
+    "https://jpdga-shizuoka.github.io/ssa-round-ratings/main-es5.6ba7892195136a466b07.js": "79b19d8e25beef1ce3ad60ba593e9605beccbc63",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/manifest.webmanifest": "c2f427353b7d5677a75395a0182fafd181cda23e",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/menu-back-image.09e239c4dd4a9127dd33.png": "6138526bcf3aad21418f6b95513f3df66dfb96b7",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/polyfills-es2015.d3e61f0dd2b58e518eca.js": "e2f28c3743afd2899e140ad831df9675c233c02b",
