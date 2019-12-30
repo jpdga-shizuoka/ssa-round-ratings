@@ -52,7 +52,11 @@
         <div class="round-element-detail"
              [@detailExpand]="element === expandedElement ? 'expanded' : 'collapsed'"
              (@detailExpand.done)="showDetail = expandedElement === element">
-          <app-round-detail [round]="element" *ngIf="showDetail || expandedElement">
+          <app-round-detail
+            [round]="element"
+            [showHistory]="search ? false : true"
+            (locationChanged)="onLocationChanged($event)"
+            *ngIf="showDetail || expandedElement">
           </app-round-detail>
         </div>
       </td>

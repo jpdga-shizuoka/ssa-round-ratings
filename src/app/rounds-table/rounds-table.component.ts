@@ -88,7 +88,6 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
       next: marker => {
         const locationName = this.cs.getLocationName(marker.location);
         this.applyFilter(locationName);
-        this.search = locationName;
       }
     });
   }
@@ -102,6 +101,10 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     this.subscription.unsubscribe();
   }
 
+  onLocationChanged(location: string) {
+    this.applyFilter(location);
+  }
+
   applyFilter(filterValue: string) {
     if (filterValue === '') {
       this.search = '';
@@ -110,6 +113,7 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+    this.search = filterValue;
   }
 
   getEventName(round: RoundInfo): string {
