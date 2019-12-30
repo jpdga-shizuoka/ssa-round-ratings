@@ -873,6 +873,12 @@
     }
 },
 {
+    "event": "The 2017 Showa Kinen Park Open",
+    "round": "Rd1,Rd2",
+    "date": "2017-11-03",
+    "holes": 27
+},
+{
     "event": "The 17th Tohoku Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-10-08",
@@ -956,6 +962,12 @@
             "rating": 839
         }
     }
+},
+{
+    "event": "The 17th Niigata Open",
+    "round": "Rd1",
+    "date": "2017-07-17",
+    "holes": 9
 },
 {
     "event": "The 21st Kanto Open",
