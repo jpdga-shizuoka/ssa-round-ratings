@@ -101,7 +101,7 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     this.subscription.unsubscribe();
   }
 
-  onLocationChanged(location: string) {
+  onEventSlected(location: string) {
     this.applyFilter(location);
   }
 
@@ -114,6 +114,21 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
       this.dataSource.paginator.firstPage();
     }
     this.search = filterValue;
+  }
+
+  get showHistory() {
+    if (!this.expandedElement) {
+      return false;
+    }
+    if (!this.search) {
+      return true;
+    }
+    const title = this.cs.getEventTitle(this.expandedElement.event);
+    if (this.search.includes(title)
+    ||  this.search.includes(this.cs.getEventTitleAliase(title))) {
+      return false;
+    }
+    return true;
   }
 
   getEventName(round: RoundInfo): string {

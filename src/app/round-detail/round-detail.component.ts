@@ -26,7 +26,7 @@ export class RoundDetailComponent {
 
   @Input() round: RoundInfo;
   @Input() showHistory = true;
-  @Output() locationChanged = new EventEmitter<string>();
+  @Output() eventSlected = new EventEmitter<string>();
 
   rating: number;
   score: number;
@@ -223,8 +223,8 @@ export class RoundDetailComponent {
   }
 
   onHistory() {
-    const location = this.cs.getLocationName(this.getEvent().location);
-    this.locationChanged.emit(location);
+    const title = this.cs.getEventTitle(this.getEvent().title);
+    this.eventSlected.emit(title);
   }
 
   private rating2score(rating: number) {

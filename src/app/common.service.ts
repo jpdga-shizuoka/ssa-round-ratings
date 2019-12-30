@@ -130,6 +130,10 @@ export class CommonService {
     return name;
   }
 
+  getEventTitleAliase(eventTitle: string) {
+    return EVENT_ALIASE[eventTitle];
+  }
+
   getEventAliase(eventName: string): string {
     if (this.primaryLanguage) {
       return eventName;

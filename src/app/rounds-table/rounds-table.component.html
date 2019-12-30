@@ -54,8 +54,8 @@
              (@detailExpand.done)="showDetail = expandedElement === element">
           <app-round-detail
             [round]="element"
-            [showHistory]="search ? false : true"
-            (locationChanged)="onLocationChanged($event)"
+            [showHistory]="showHistory"
+            (eventSlected)="onEventSlected($event)"
             *ngIf="showDetail || expandedElement">
           </app-round-detail>
         </div>
