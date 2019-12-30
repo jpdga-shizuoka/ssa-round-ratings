@@ -545,6 +545,23 @@
     }
 },
 {
+    "event": "The 1st Gifu Hirugano Open",
+    "round": "Rd1,Rd2",
+    "date": "2018-05-04",
+    "hla": 126,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 53,
+            "rating": 1039
+        },
+        "player2": {
+            "score": 72,
+            "rating": 879
+        }
+    }
+},
+{
     "event": "The 13th Michinoku Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-08-18",
@@ -649,8 +666,8 @@
 {
     "event": "The 7th Hirugano Kogen tournament",
     "round": "Rd1,Rd2,Rd3",
-    "date": "2018-05-04",
-    "hla": 126,
+    "date": "2018-08-26",
+    "hla": 93,
     "holes": 18,
     "ratings": {
         "player1": {
@@ -659,7 +676,7 @@
         },
         "player2": {
             "score": 65,
-            "rating": 869
+            "rating": 859
         }
     }
 },
@@ -708,6 +725,13 @@
             "rating": 888
         }
     }
+},
+{
+    "event": "The 2018 National Doubles Championship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2018-03-03",
+    "hla": 86,
+    "holes": 18
 },
 {
     "event": "The 7th Okinawa Open",
@@ -759,6 +783,13 @@
             "rating": 874
         }
     }
+},
+{
+    "event": "The 2018 National Team Championship",
+    "round": "Rd1,2,3,4,5",
+    "date": "2018-01-07",
+    "hla": 83,
+    "holes": 12
 },
 {
     "event": "The 17th Chubu Open",
@@ -1045,6 +1076,13 @@
     }
 },
 {
+    "event": "The 28th Tokyo Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2017-04-15",
+    "hla": 84,
+    "holes": 18
+},
+{
     "event": "The 15th Saga Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-04-08",
@@ -1060,6 +1098,13 @@
             "rating": 835
         }
     }
+},
+{
+    "event": "The 2017 National Doubles Championship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2017-03-04",
+    "hla": 83,
+    "holes": 18
 },
 {
     "event": "The 6th Okinawa Open",
@@ -1125,6 +1170,13 @@
             "rating": 821
         }
     }
+},
+{
+    "event": "The 2017 National Team Championship",
+    "round": "Rd1,2,3,4,5",
+    "date": "2017-01-08",
+    "hla": 75,
+    "holes": 12
 },
 {
   "event": "The 2014 Japan Open",
