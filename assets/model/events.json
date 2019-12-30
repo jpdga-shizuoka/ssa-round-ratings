@@ -818,6 +818,21 @@
     "topicId": "1252"
   }
 }, {
+  "title": "The 2017 Showa Kinen Park Open",
+  "location": "Showa Kinen Park",
+  "period": {
+    "from": "2017-11-03",
+    "to": "2017-11-05"
+  },
+  "jpdga": {
+    "eventId": "444"
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Official Site 🇯🇵",
+    "url": "http://jpdga-tokyo.com/skpo/"
+  }]
+}, {
   "title": "The 17th Tohoku Open",
   "location": "Mizubayashi Sport Park",
   "period": {
@@ -890,6 +905,18 @@
     "eventId": "449",
     "topicId": "1224",
     "photoId": "72157684534534681"
+  }
+}, {
+  "title": "The 17th Niigata Open",
+  "location": "Kiyotsu-gawa Flesh Park",
+  "period": {
+    "from": "2017-07-17",
+    "to": "2017-07-17"
+  },
+  "jpdga": {
+    "eventId": "453",
+    "topicId": "1216",
+    "photoId": "72157684237653100"
   }
 }, {
   "title": "The 21st Kanto Open",
