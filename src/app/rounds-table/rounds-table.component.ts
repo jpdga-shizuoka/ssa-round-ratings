@@ -131,6 +131,10 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     return true;
   }
 
+  getLength(round: RoundInfo) {
+    return round.hla ? round.hla + 'm' : '';
+  }
+
   getEventName(round: RoundInfo): string {
     return this.cs.getEventAliase(round.event);
   }
