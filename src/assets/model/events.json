@@ -243,7 +243,7 @@
   }
 }, {
   "title": "The 2nd Gifu Hirugano Open",
-  "location": "Hirugano Kohgen",
+  "location": "Hirugano Kogen",
   "period": {
     "from": "2019-05-04",
     "to": "2019-05-05"
@@ -411,7 +411,7 @@
   }]
 }, {
   "title": "The 8th Hirugano Kogen Tournament",
-  "location": "Hirugano Kohgen",
+  "location": "Hirugano Kogen",
   "period": {
     "from": "2019-08-25",
     "to": "2019-08-26"
@@ -556,6 +556,19 @@
     "topicId": "1328"
   }
 }, {
+  "title": "The 7th Hirugano Kogen Tournament",
+  "location": "Hirugano Kogen",
+  "period": {
+    "from": "2018-08-26",
+    "to": "2018-08-26"
+  },
+  "pdga": {
+    "eventId": "36756"
+  },
+  "jpdga": {
+    "eventId": "473"
+  }
+}, {
   "title": "The 13th Michinoku Open",
   "location": "Kitakami Sport Park",
   "period": {
@@ -650,17 +663,19 @@
     "url": "https://www.facebook.com/pg/jpdga/photos/?tab=album&album_id=1749953598383774"
   }]
 }, {
-  "title": "The 7th Hirugano Kogen Tournament",
-  "location": "Hirugano Kohgen",
+  "title": "The 1st Gifu Hirugano Open",
+  "location": "Hirugano Kogen",
   "period": {
     "from": "2018-05-04",
     "to": "2018-05-05"
   },
   "pdga": {
-    "eventId": "36756"
+    "eventId": "36412"
   },
   "jpdga": {
-    "eventId": "464"
+    "eventId": "464",
+    "topicId": "1290",
+    "photoId": "72157666684967147"
   }
 }, {
   "title": "The 15th Minamisoma Open",
@@ -716,6 +731,21 @@
     "topicId": "1278"
   }
 }, {
+  "title": "The 2018 National Doubles Championship",
+  "location": "Hitachi Seaside Park",
+  "period": {
+    "from": "2018-03-03",
+    "to": "2018-03-04"
+  },
+  "pdga": {
+    "eventId": "34639"
+  },
+  "jpdga": {
+    "eventId": "451",
+    "topicId": "1274",
+    "photoId": "72157688633291350"
+  }
+}, {
   "title": "The 7th Okinawa Open",
   "location": "Nakijinson Sport Park",
   "period": {
@@ -729,6 +759,21 @@
     "eventId": "450",
     "topicId": "1269",
     "photoId": "72157666163702848"
+  }
+}, {
+  "title": "The 2018 National Team Championship",
+  "location": "Oyama Omoinomori Park",
+  "period": {
+    "from": "2018-01-07",
+    "to": "2018-01-08"
+  },
+  "pdga": {
+    "eventId": "34637"
+  },
+  "jpdga": {
+    "eventId": "448",
+    "topicId": "1262",
+    "photoId": "72157662713540367"
   }
 }, {
   "title": "The 17th Chubu Open",
@@ -920,7 +965,7 @@
   }
 }, {
   "title": "The 19th Nippon Open",
-  "location": "Hirugano Kohgen",
+  "location": "Hirugano Kogen",
   "period": {
     "from": "2017-05-05",
     "to": "2017-05-06"
