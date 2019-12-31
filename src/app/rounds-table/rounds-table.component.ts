@@ -131,6 +131,20 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     return true;
   }
 
+  isDetailExpand(round: RoundInfo) {
+    if (!this.expandedElement) {
+      return false;
+    }
+    if (this.expandedElement.event !== round.event) {
+      return false;
+    }
+    if (this.expandedElement.round !== round.round) {
+      return false;
+    }
+    console.log('isDetailExpand', this.expandedElement.event, round.event, this.expandedElement.round, round.round);
+    return true;
+  }
+
   getLength(round: RoundInfo) {
     return round.hla ? round.hla + 'm' : '';
   }
