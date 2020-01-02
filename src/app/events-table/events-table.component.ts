@@ -69,6 +69,20 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     return this.cs.getMonth(event.schedule);
   }
 
+  isDetailExpand(event: EventInfo) {
+    if (!this.expandedElement) {
+      return false;
+    }
+    if (this.expandedElement.title !== event.title) {
+      return false;
+    }
+    return true;
+  }
+
+  onRawClicked(event: EventInfo) {
+    this.expandedElement = this.isDetailExpand(event) ? null : event;
+  }
+
   private onMarkerSelected(marker: GeoMarker) {
     const found = this.dataSource.data.find(e => {
       return e.location === marker.location

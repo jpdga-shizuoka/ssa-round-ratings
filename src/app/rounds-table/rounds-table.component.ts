@@ -3,13 +3,15 @@ import { Input, ViewChild } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 
 import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
+import { MatSort, MatSortable } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
 
 import { Observable, Subject, Subscription } from 'rxjs';
 
 import { CommonService, RoundInfo, EventInfo, GeoMarker } from '../common.service';
 import { detailExpand } from '../animations';
+import { BottomSheetDetailDisabledComponent } from '../dialogs/bottom-sheet-detail-disabled.component';
 
 @Component({
   selector: 'app-rounds-table',
@@ -21,17 +23,36 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() dataSource: MatTableDataSource<RoundInfo>;
   @Input() displayedColumns$: Observable<string[]>;
   @Input() markerSelected$: Subject<GeoMarker>;
-  @Input() search: string;
+  @Input() search = '';
   @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: false}) sort: MatSort;
   expandedElement: RoundInfo | null;
   showDetail = false;
   private subscription: Subscription;
+  private detailDisabled = false;
+  private sorted = false;
 
   constructor(
     private cs: CommonService,
     private route: ActivatedRoute,
+    private bottomSheet: MatBottomSheet,
   ) {
+    // Issue: multiples rows has been expanded after filtering, sorting and tapping a row to expand it
+    // Expected result: only tapped row must be expanded even after filtering, sorting and tapping a row
+    // Workaround: disable expansion when sorting after filtering has been executed
+    const self = this;
+    const origin = MatSort.prototype.sort;
+    MatSort.prototype.sort = function(sortable: MatSortable) {
+      self.expandedElement = null;
+      origin.call(this, sortable);
+      if (!this.active || this.direction === '') {
+        self.detailDisabled = false;
+        self.sorted = false;
+      } else if (self.search !== '') {
+        self.detailDisabled = true;
+        self.sorted = true;
+      }
+    };
   }
 
   ngOnInit() {
@@ -105,14 +126,20 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     this.applyFilter(location);
   }
 
-  applyFilter(filterValue: string) {
-    if (filterValue === '') {
-      this.search = '';
+  onRawClicked(round: RoundInfo) {
+    if (this.detailDisabled) {
+      this.bottomSheet.open(BottomSheetDetailDisabledComponent);
+      return;
     }
+    this.expandedElement = this.isDetailExpand(round) ? null : round;
+  }
+
+  applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+    this.detailDisabled = this.sorted;
     this.search = filterValue;
   }
 
@@ -141,7 +168,6 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     if (this.expandedElement.round !== round.round) {
       return false;
     }
-    console.log('isDetailExpand', this.expandedElement.event, round.event, this.expandedElement.round, round.round);
     return true;
   }
 

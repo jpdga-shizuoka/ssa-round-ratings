@@ -11,10 +11,13 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { MatListModule } from '@angular/material/list';
 
 import { EventsMapComponent } from '../events-map/events-map.component';
 import { RoundDetailComponent } from '../round-detail/round-detail.component';
 import { RoundsTableComponent } from '../rounds-table/rounds-table.component';
+import { BottomSheetDetailDisabledComponent } from '../dialogs/bottom-sheet-detail-disabled.component';
 import { RoundsTabsComponent } from './rounds-tabs.component';
 
 import { AgmCoreModule } from '@agm/core';
@@ -30,6 +33,7 @@ describe('RoundsTabsComponent', () => {
         RoundsTableComponent,
         EventsMapComponent,
         RoundDetailComponent,
+        BottomSheetDetailDisabledComponent,
       ],
       imports: [
         FormsModule,
@@ -43,6 +47,8 @@ describe('RoundsTabsComponent', () => {
         MatFormFieldModule,
         MatDialogModule,
         MatInputModule,
+        MatListModule,
+        MatBottomSheetModule,
         AgmCoreModule.forRoot(),
       ]
     })

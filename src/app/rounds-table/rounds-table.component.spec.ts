@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 
 import { Subject, of } from 'rxjs';
 
@@ -59,6 +60,7 @@ describe('RoundsTableComponent', () => {
         MatDialogModule,
         MatFormFieldModule,
         MatInputModule,
+        MatBottomSheetModule,
       ]
     })
     .compileComponents();
