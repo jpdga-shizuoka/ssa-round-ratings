@@ -1126,6 +1126,291 @@
     "eventId": "408"
   }
 }, {
+  "title": "The 16th Chubu Open",
+  "location": "Mikawa Rinkai Ryokuchi",
+  "period": {
+    "from": "2016-12-10",
+    "to": "2016-12-11"
+  },
+  "pdga": {
+    "eventId": "30798"
+  },
+  "jpdga": {
+    "eventId": "407"
+  }
+}, {
+  "title": "The 30th Kyushu Open",
+  "location": "Umino-Nakamichi Seaside Park",
+  "period": {
+    "from": "2016-12-03",
+    "to": "2016-12-04"
+  },
+  "pdga": {
+    "eventId": "30797"
+  },
+  "jpdga": {
+    "eventId": "406"
+  }
+}, {
+  "title": "The 12th Kyoto Classic",
+  "location": "Kyoto Tamba Park",
+  "period": {
+    "from": "2016-11-12",
+    "to": "2016-11-13"
+  },
+  "pdga": {
+    "eventId": "30796"
+  },
+  "jpdga": {
+    "eventId": "405"
+  }
+}, {
+  "title": "The 2016 Showa Kinen Park Open",
+  "location": "Showa Kinen Park",
+  "period": {
+    "from": "2016-11-03",
+    "to": "2016-11-06"
+  },
+  "jpdga": {
+    "eventId": "404"
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Official Site 🇯🇵",
+    "url": "http://jpdga-tokyo.com/skpo/"
+  }]
+}, {
+  "title": "The 14th Tohoku Open",
+  "location": "Mizubayashi Sport Park",
+  "period": {
+    "from": "2016-10-08",
+    "to": "2016-10-09"
+  },
+  "pdga": {
+    "eventId": "29897"
+  },
+  "jpdga": {
+    "eventId": "403"
+  }
+}, {
+  "title": "The 28th Japan National Championship",
+  "location": "Maiko Disc Golf Park",
+  "period": {
+    "from": "2016-09-18",
+    "to": "2016-09-19"
+  },
+  "pdga": {
+    "eventId": "28634"
+  },
+  "jpdga": {
+    "eventId": "402"
+  }
+}, {
+  "title": "The 5th Hirugano Kogen Tournament",
+  "location": "Hirugano Kogen",
+  "period": {
+    "from": "2016-08-28",
+    "to": "2016-08-28"
+  },
+  "jpdga": {
+    "eventId": "416"
+  }
+}, {
+  "title": "The 11th Michinoku Open",
+  "location": "Kitakami Sport Park",
+  "period": {
+    "from": "2016-08-20",
+    "to": "2016-08-21"
+  },
+  "pdga": {
+    "eventId": "28490"
+  },
+  "jpdga": {
+    "eventId": "401"
+  }
+}, {
+  "title": "The 20th Kanto Open",
+  "location": "Kiyohara Kohgyo Danchi",
+  "period": {
+    "from": "2016-07-16",
+    "to": "2016-07-18"
+  },
+  "pdga": {
+    "eventId": "28464"
+  },
+  "jpdga": {
+    "eventId": "397"
+  }
+}, {
+  "title": "The 5th Hokkaido Open",
+  "location": "Hunka-wan Panolama Park",
+  "period": {
+    "from": "2016-07-02",
+    "to": "2016-07-03"
+  },
+  "pdga": {
+    "eventId": "28408"
+  },
+  "jpdga": {
+    "eventId": "395"
+  }
+}, {
+  "title": "The 11th Masters National Championship",
+  "location": "Furusato Fureai Park",
+  "period": {
+    "from": "2016-06-18",
+    "to": "2016-06-19"
+  },
+  "pdga": {
+    "eventId": "28390"
+  },
+  "jpdga": {
+    "eventId": "394"
+  }
+}, {
+  "title": "The 5th Maiko Open",
+  "location": "Maiko Disc Golf Park",
+  "period": {
+    "from": "2016-06-11",
+    "to": "2016-06-12"
+  },
+  "pdga": {
+    "eventId": "28377"
+  },
+  "jpdga": {
+    "eventId": "393"
+  }
+}, {
+  "title": "The 11th Kiyosato-no-Mori Open",
+  "location": "Kiyosato-no-Mori",
+  "period": {
+    "from": "2016-05-14",
+    "to": "2016-05-15"
+  },
+  "pdga": {
+    "eventId": "26875"
+  },
+  "jpdga": {
+    "eventId": "391"
+  }
+}, {
+  "title": "The 5th Fukui Open",
+  "location": "Seaside Nature Park",
+  "period": {
+    "from": "2016-05-28",
+    "to": "2016-05-29"
+  },
+  "pdga": {
+    "eventId": "28359"
+  },
+  "jpdga": {
+    "eventId": "392"
+  }
+}, {
+  "title": "The 18th Nippon Open",
+  "location": "Hirugano Kogen",
+  "period": {
+    "from": "2016-04-30",
+    "to": "2016-05-01"
+  },
+  "pdga": {
+    "eventId": "26813"
+  },
+  "jpdga": {
+    "eventId": "390"
+  }
+}, {
+  "title": "The 27th Tokyo Open",
+  "location": "Tatsumi-no-Mori Seaside Park",
+  "period": {
+    "from": "2016-04-16",
+    "to": "2016-04-17"
+  },
+  "pdga": {
+    "eventId": "26760"
+  },
+  "jpdga": {
+    "eventId": "389"
+  }
+}, {
+  "title": "The 14th Saga Open",
+  "location": "Yoshinogari Historical Park",
+  "period": {
+    "from": "2016-04-09",
+    "to": "2016-04-10"
+  },
+  "pdga": {
+    "eventId": "26726"
+  },
+  "jpdga": {
+    "eventId": "388"
+  }
+}, {
+  "title": "The 12th Minamisoma Open",
+  "location": "Minamisoma Hose Riding Park",
+  "period": {
+    "from": "2016-03-20",
+    "to": "2016-03-21"
+  },
+  "pdga": {
+    "eventId": "26552"
+  },
+  "jpdga": {
+    "eventId": "387"
+  }
+}, {
+  "title": "The 2016 National Doubles Championship",
+  "location": "Hitachi Seaside Park",
+  "period": {
+    "from": "2016-03-05",
+    "to": "2016-03-06"
+  },
+  "pdga": {
+    "eventId": "26806"
+  },
+  "jpdga": {
+    "eventId": "352"
+  }
+}, {
+  "title": "The 5th Okinawa Open",
+  "location": "Nakijinson Sport Park",
+  "period": {
+    "from": "2016-02-20",
+    "to": "2016-02-21"
+  },
+  "pdga": {
+    "eventId": "24953"
+  },
+  "jpdga": {
+    "eventId": "351"
+  }
+}, {
+  "title": "The 2nd Kagoshima Open",
+  "location": "Yoshino Park",
+  "period": {
+    "from": "2016-01-23",
+    "to": "2016-01-24"
+  },
+  "pdga": {
+    "eventId": "24807"
+  },
+  "jpdga": {
+    "eventId": "350"
+  }
+}, {
+  "title": "The 2016 National Team Championship",
+  "location": "Oyama Omoinomori Park",
+  "period": {
+    "from": "2016-01-10",
+    "to": "2016-01-11"
+  },
+  "pdga": {
+    "eventId": "24731"
+  },
+  "jpdga": {
+    "eventId": "349"
+  }
+}, {
   "title": "The 2014 Japan Open",
   "location": "Nasu Highland Golf Club",
   "period": {
