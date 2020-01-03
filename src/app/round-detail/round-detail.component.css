@@ -7,6 +7,11 @@
   font-weight: bold;
   min-width: 6rem;
 }
+.history-link {
+  color: -webkit-link;
+  text-decoration: underline;
+  cursor: pointer;
+}
 .detail-link {
   margin-bottom: 7px;
 }
