@@ -69,7 +69,8 @@ export class RoundsTabsComponent implements OnInit {
       const event = this.cs.getEvent(round.event);
       const location = this.cs.getLocation(event.location);
       const eventTitle = this.cs.getEventTitle(event.title);
-      if (eventTitles.indexOf(eventTitle) >= 0) {
+      const eventTitleLoc = eventTitle + event.location;
+      if (eventTitles.indexOf(eventTitleLoc) >= 0) {
         continue;
       }
       const marker = {
@@ -80,7 +81,7 @@ export class RoundsTabsComponent implements OnInit {
         location: event.location,
         title: eventTitle,
       };
-      eventTitles.push(eventTitle);
+      eventTitles.push(eventTitleLoc);
       markers.push(marker);
     }
     return markers;
