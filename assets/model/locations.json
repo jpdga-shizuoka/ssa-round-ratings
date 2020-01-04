@@ -51,6 +51,18 @@
     "prefecture": "Tochigi",
     "geolocation": [36.274043, 139.799768]
   },
+  "oyamasportpark": {
+    "prefecture": "Tochigi",
+    "geolocation": [36.303584, 139.782942]
+  },
+  "tbctaiyoclub": {
+    "prefecture": "Tochigi",
+    "geolocation": [36.271956, 139.798813]
+  },
+  "asominnanomori": {
+    "prefecture": "Kumamoto",
+    "geolocation": [32.920066, 131.090188]
+  },
   "aikawafureainomura": {
     "prefecture": "Kanagawa",
     "geolocation": [35.537993, 139.263713]
