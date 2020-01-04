@@ -1180,7 +1180,7 @@
     "url": "http://jpdga-tokyo.com/skpo/"
   }]
 }, {
-  "title": "The 14th Tohoku Open",
+  "title": "The 16th Tohoku Open",
   "location": "Mizubayashi Sport Park",
   "period": {
     "from": "2016-10-08",
@@ -1406,6 +1406,301 @@
   },
   "pdga": {
     "eventId": "24731"
+  },
+  "jpdga": {
+    "eventId": "349"
+  }
+}, {
+  "title": "The 15th Chubu Open",
+  "location": "Mikawa Rinkai Ryokuchi",
+  "period": {
+    "from": "2015-12-05",
+    "to": "2015-12-06"
+  },
+  "pdga": {
+    "eventId": "20910"
+  },
+  "jpdga": {
+    "eventId": "348"
+  }
+}, {
+  "title": "The 2nd Oyama Open",
+  "location": "TBC Taiyo Club",
+  "period": {
+    "from": "2015-11-23",
+    "to": "2015-11-23"
+  },
+  "jpdga": {
+    "eventId": "357"
+  }
+}, {
+  "title": "The 29th Kyushu Open",
+  "location": "Umino-Nakamichi Seaside Park",
+  "period": {
+    "from": "2015-12-19",
+    "to": "2015-12-20"
+  },
+  "pdga": {
+    "eventId": "22042"
+  },
+  "jpdga": {
+    "eventId": "347"
+  }
+}, {
+  "title": "The 11th Kyoto Classic",
+  "location": "Kyoto Tamba Park",
+  "period": {
+    "from": "2015-11-07",
+    "to": "2015-11-08"
+  },
+  "pdga": {
+    "eventId": "21901"
+  },
+  "jpdga": {
+    "eventId": "346"
+  }
+}, {
+  "title": "The 2015 Showa Kinen Park Open",
+  "location": "Showa Kinen Park",
+  "period": {
+    "from": "2015-10-31",
+    "to": "2015-11-01"
+  },
+  "jpdga": {
+    "eventId": "344"
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Official Site 🇯🇵",
+    "url": "http://jpdga-tokyo.com/skpo/"
+  }]
+}, {
+  "title": "The 15th Tohoku Open",
+  "location": "Mizubayashi Sport Park",
+  "period": {
+    "from": "2015-10-11",
+    "to": "2015-10-12"
+  },
+  "pdga": {
+    "eventId": "21893"
+  },
+  "jpdga": {
+    "eventId": "343"
+  }
+}, {
+  "title": "The 27th Japan National Championship",
+  "location": "Maiko Disc Golf Park",
+  "period": {
+    "from": "2015-09-21",
+    "to": "2015-09-22"
+  },
+  "pdga": {
+    "eventId": "21876"
+  },
+  "jpdga": {
+    "eventId": "342"
+  }
+}, {
+  "title": "The 19th Kansai Open",
+  "location": "Fumin-no-Mori Hiyoshi",
+  "period": {
+    "from": "2015-09-05",
+    "to": "2015-09-06"
+  },
+  "pdga": {
+    "eventId": "21872"
+  },
+  "jpdga": {
+    "eventId": "341"
+  }
+}, {
+  "title": "The 10th Michinoku Open",
+  "location": "Kitakami Sport Park",
+  "period": {
+    "from": "2015-08-22",
+    "to": "2015-08-23"
+  },
+  "pdga": {
+    "eventId": "21866"
+  },
+  "jpdga": {
+    "eventId": "340"
+  }
+}, {
+  "title": "The 15th Aso Open",
+  "location": "Aso Minnano Mori",
+  "period": {
+    "from": "2015-07-25",
+    "to": "2015-07-26"
+  },
+  "pdga": {
+    "eventId": "21321"
+  },
+  "jpdga": {
+    "eventId": "338"
+  }
+}, {
+  "title": "The 19th Kanto Open",
+  "location": "Kiyohara Kohgyo Danchi",
+  "period": {
+    "from": "2015-07-11",
+    "to": "2015-07-12"
+  },
+  "pdga": {
+    "eventId": "21311"
+  },
+  "jpdga": {
+    "eventId": "335"
+  }
+}, {
+  "title": "The 4th Hokkaido Open",
+  "location": "Hunka-wan Panolama Park",
+  "period": {
+    "from": "2015-06-27",
+    "to": "2015-06-28"
+  },
+  "pdga": {
+    "eventId": "21292"
+  },
+  "jpdga": {
+    "eventId": "334"
+  }
+}, {
+  "title": "The 10th Masters National Championship",
+  "location": "Maiko Disc Golf Park",
+  "period": {
+    "from": "2015-06-13",
+    "to": "2015-06-14"
+  },
+  "pdga": {
+    "eventId": "21047"
+  },
+  "jpdga": {
+    "eventId": "333"
+  }
+}, {
+  "title": "The 4th Maiko Open",
+  "location": "Maiko Disc Golf Park",
+  "period": {
+    "from": "2015-06-14",
+    "to": "2015-06-14"
+  },
+  "jpdga": {
+    "eventId": "356"
+  }
+}, {
+  "title": "The 4th Fukui Open",
+  "location": "Seaside Nature Park",
+  "period": {
+    "from": "2015-05-30",
+    "to": "2015-05-31"
+  },
+  "pdga": {
+    "eventId": "21114"
+  },
+  "jpdga": {
+    "eventId": "332"
+  }
+}, {
+  "title": "The 10th Kiyosato-no-Mori Open",
+  "location": "Kiyosato-no-Mori",
+  "period": {
+    "from": "2015-05-16",
+    "to": "2015-05-17"
+  },
+  "pdga": {
+    "eventId": "21106"
+  },
+  "jpdga": {
+    "eventId": "331"
+  }
+}, {
+  "title": "The 17th Nippon Open",
+  "location": "Hirugano Kogen",
+  "period": {
+    "from": "2015-05-04",
+    "to": "2015-05-05"
+  },
+  "pdga": {
+    "eventId": "21053"
+  },
+  "jpdga": {
+    "eventId": "330"
+  }
+}, {
+  "title": "The 26th Tokyo Open",
+  "location": "Tatsumi-no-Mori Seaside Park",
+  "period": {
+    "from": "2015-04-18",
+    "to": "2015-04-19"
+  },
+  "pdga": {
+    "eventId": "21001"
+  },
+  "jpdga": {
+    "eventId": "329"
+  }
+}, {
+  "title": "The 13th Saga Open",
+  "location": "Yoshinogari Historical Park",
+  "period": {
+    "from": "2015-04-11",
+    "to": "2015-04-12"
+  },
+  "pdga": {
+    "eventId": "21002"
+  },
+  "jpdga": {
+    "eventId": "328"
+  }
+}, {
+  "title": "The 2015 National Doubles Championship",
+  "location": "Hitachi Seaside Park",
+  "period": {
+    "from": "2015-03-07",
+    "to": "2015-03-08"
+  },
+  "pdga": {
+    "eventId": "17557"
+  },
+  "jpdga": {
+    "eventId": "318"
+  }
+}, {
+  "title": "The 4th Okinawa Open",
+  "location": "Nakijinson Sport Park",
+  "period": {
+    "from": "2015-02-21",
+    "to": "2015-02-22"
+  },
+  "pdga": {
+    "eventId": "17590"
+  },
+  "jpdga": {
+    "eventId": "317"
+  }
+}, {
+  "title": "The 1st Kagoshima Open",
+  "location": "Yoshino Park",
+  "period": {
+    "from": "2015-01-24",
+    "to": "2015-01-25"
+  },
+  "pdga": {
+    "eventId": "20373"
+  },
+  "jpdga": {
+    "eventId": "321"
+  }
+}, {
+  "title": "The 2015 National Team Championship",
+  "location": "Oyama Sport Park",
+  "period": {
+    "from": "2015-01-11",
+    "to": "2015-01-12"
+  },
+  "pdga": {
+    "eventId": "15594"
   },
   "jpdga": {
     "eventId": "349"
