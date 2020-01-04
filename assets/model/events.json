@@ -241,6 +241,16 @@
     "eventId": "493",
     "topicId": "1378"
   }
+},{
+  "title": "The 1st PWBF Cup",
+  "location": "PICA Activity Park",
+  "period": {
+    "from": "2019-04-13",
+    "to": "2019-04-14"
+  },
+  "jpdga": {
+    "eventId": "494"
+  }
 }, {
   "title": "The 2nd Gifu Hirugano Open",
   "location": "Hirugano Kogen",
@@ -522,6 +532,16 @@
     "title": "Results(1Days) 🇯🇵",
     "url": "https://www.facebook.com/pg/showakinenparkopen/photos/?tab=album&album_id=683294415384896"
   }]
+},{
+  "title": "The 1st PICA Activity Cup",
+  "location": "PICA Activity Park",
+  "period": {
+    "from": "2018-10-14",
+    "to": "2018-10-14"
+  },
+  "jpdga": {
+    "eventId": "489"
+  }
 }, {
   "title": "The 30th Japan National Championship",
   "location": "Maiko Disc Golf Park",
