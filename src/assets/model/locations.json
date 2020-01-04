@@ -67,6 +67,10 @@
     "prefecture": "Kanagawa",
     "geolocation": [35.537993, 139.263713]
   },
+  "picaactivitypark": {
+    "prefecture": "Shizuoka",
+    "geolocation": [35.297226, 138.775824]
+  },
   "hunkawanpanolamapark": {
     "prefecture": "Hokkaido",
     "geolocation": [42.231879, 140.309498]
