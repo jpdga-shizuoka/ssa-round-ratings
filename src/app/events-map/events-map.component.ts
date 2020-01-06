@@ -68,20 +68,23 @@ export class EventsMapComponent {
 function getBodyHeight() {
     const element = document.documentElement;
     const body = document.getElementsByTagName('body')[0];
-    return window.innerHeight || element.clientHeight || body.clientHeight;
+    const height = window.innerHeight
+    || (element != null ? element.clientHeight : null)
+    || (body != null ? body.clientHeight : null);
+    return height != null ? height : 0;
 }
 
 function getHeaderHeight() {
   const element = document.getElementById('header');
-  return element.clientHeight;
+  return element != null ? element.clientHeight : 0;
 }
 
 function getMatHeaderHeight() {
     const element = document.getElementsByTagName('mat-tab-header')[0];
-    return element.clientHeight;
+    return element != null ? element.clientHeight : 0;
 }
 
 function getFooterHeight() {
   const element = document.getElementById('footer');
-  return element.clientHeight;
+  return element != null ? element.clientHeight : 0;
 }
