@@ -64,7 +64,7 @@ export class CommonService {
       case 'upcoming':
         return filterUpcomingEvents(EVENTS);
       case 'local':
-        return LOCAL_EVENTS;
+        return filterUpcomingEvents(LOCAL_EVENTS);
       case 'monthly':
         return MONTHLY_EVENTS;
     }
@@ -101,7 +101,16 @@ export class CommonService {
     if (this.rounds) {
       return this.rounds;
     }
-    const rounds = ROUNDS.concat();
+
+    const rounds: RoundInfo[] = [];
+    const now = Date.now();
+    for (const round of ROUNDS) {
+      const date = new Date(round.date);
+      if (date.getTime() < now) {
+        rounds.push(round);
+      }
+    }
+
     for (const round of rounds) {
       if (round.ratings) {
         round['weight'] = calcWeight(round.ratings.player1, round.ratings.player2);
