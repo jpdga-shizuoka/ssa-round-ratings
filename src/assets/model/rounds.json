@@ -24,10 +24,54 @@
 },
 {
   "event": "The 19th Chubu Open",
-  "round": "Rd1,Rd2,Rd3",
+  "round": "Rd1",
   "date": "2019-12-14",
   "hla": 104,
-  "holes": 18
+  "holes": 18,
+  "ratings": {
+      "player1": {
+          "score": 61,
+          "rating": 1016
+      },
+      "player2": {
+          "score": 84,
+          "rating": 853
+      }
+  }
+},
+{
+  "event": "The 19th Chubu Open",
+  "round": "Rd2",
+  "date": "2019-12-14",
+  "hla": 104,
+  "holes": 18,
+  "ratings": {
+      "player1": {
+          "score": 60,
+          "rating": 1031
+      },
+      "player2": {
+          "score": 83,
+          "rating": 873
+      }
+  }
+},
+{
+  "event": "The 19th Chubu Open",
+  "round": "Rd3",
+  "date": "2019-12-15",
+  "hla": 104,
+  "holes": 18,
+  "ratings": {
+      "player1": {
+          "score": 61,
+          "rating": 1025
+      },
+      "player2": {
+          "score": 82,
+          "rating": 881
+      }
+  }
 },
 {
   "event": "The 33rd Kyushu Open",
