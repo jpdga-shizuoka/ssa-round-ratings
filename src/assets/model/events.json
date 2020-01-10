@@ -1,4 +1,14 @@
 [{
+  "title": "The 3rd Miyagi Michinoku Open",
+  "location": "Michinoku Park",
+  "period": {
+    "from": "2020-03-21",
+    "to": "2020-03-22"
+  },
+  "jpdga": {
+    "eventId": "525"
+  }
+}, {
   "title": "The 2020 National Doubles Championship",
   "location": "Hitachi Seaside Park",
   "period": {
