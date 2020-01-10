@@ -284,8 +284,7 @@ function getEventKey(name: string): EventParts | undefined {
       count: undefined,
       key: results[1].replace(/[ -]/g, '')
     };
-  }
-  else if (results.length !== 4) {
+  } else if (results.length !== 4) {
     return undefined;
   }
   return {
