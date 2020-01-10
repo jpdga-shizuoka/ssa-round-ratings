@@ -43,6 +43,19 @@
   }]
 }, {
   "category": "local",
+  "title": "The Special Cup",
+  "location": "Umino-Nakamichi Seaside Park",
+  "period": {
+    "from": "2020-01-18",
+    "to": "2020-01-18"
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Fukuoka Disc Golf Association 🇯🇵",
+    "url": "http://www.jpdgafukuoka.com"
+  }]
+}, {
+  "category": "local",
   "title": "The 8th Ikeda Town Disc Golf Tournament",
   "location": "Ikeda Town General Gymnasium",
   "period": {
@@ -53,5 +66,109 @@
     "type": "website",
     "title": "Facebook 🇯🇵",
     "url": "https://www.facebook.com/gifuflyingdiscassociation/"
+  }]
+}, {
+  "category": "local",
+  "title": "The Winter Cup",
+  "location": "Umino-Nakamichi Seaside Park",
+  "period": {
+    "from": "2020-02-02",
+    "to": "2020-02-02"
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Fukuoka Disc Golf Association 🇯🇵",
+    "url": "http://www.jpdgafukuoka.com"
+  }]
+}, {
+  "category": "local",
+  "title": "The Special Cup",
+  "location": "Umino-Nakamichi Seaside Park",
+  "period": {
+    "from": "2020-02-09",
+    "to": "2020-02-09"
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Fukuoka Disc Golf Association 🇯🇵",
+    "url": "http://www.jpdgafukuoka.com"
+  }]
+}, {
+  "category": "local",
+  "title": "The Special Cup",
+  "location": "Umino-Nakamichi Seaside Park",
+  "period": {
+    "from": "2020-02-24",
+    "to": "2020-02-24"
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Fukuoka Disc Golf Association 🇯🇵",
+    "url": "http://www.jpdgafukuoka.com"
+  }]
+}, {
+  "category": "local",
+  "title": "The Spring Cup",
+  "location": "Umino-Nakamichi Seaside Park",
+  "period": {
+    "from": "2020-03-01",
+    "to": "2020-03-01"
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Fukuoka Disc Golf Association 🇯🇵",
+    "url": "http://www.jpdgafukuoka.com"
+  }]
+}, {
+  "category": "local",
+  "title": "The Special Cup",
+  "location": "Umino-Nakamichi Seaside Park",
+  "period": {
+    "from": "2020-03-08",
+    "to": "2020-03-08"
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Fukuoka Disc Golf Association 🇯🇵",
+    "url": "http://www.jpdgafukuoka.com"
+  }]
+}, {
+  "category": "local",
+  "title": "The Special Cup",
+  "location": "Umino-Nakamichi Seaside Park",
+  "period": {
+    "from": "2020-03-21",
+    "to": "2020-03-21"
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Fukuoka Disc Golf Association 🇯🇵",
+    "url": "http://www.jpdgafukuoka.com"
+  }]
+}, {
+  "category": "local",
+  "title": "The World Cup",
+  "location": "Umino-Nakamichi Seaside Park",
+  "period": {
+    "from": "2020-03-29",
+    "to": "2020-03-29"
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Fukuoka Disc Golf Association 🇯🇵",
+    "url": "http://www.jpdgafukuoka.com"
+  }]
+}, {
+  "category": "local",
+  "title": "The Aichi Open Disc Golf Series",
+  "location": "Mikawa Rinkai Ryokuchi",
+  "period": {
+    "from": "2020-03-08",
+    "to": "2020-03-08"
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Aichi Flying Disc Association 🇯🇵",
+    "url": "https://aifda.or.jp/category/discgolf/"
   }]
 }]
