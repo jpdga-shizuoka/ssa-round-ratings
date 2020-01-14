@@ -1,9 +1,49 @@
 [{
+    "event": "The 3rd Miyagi Michinoku Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2020-03-21",
+    "holes": 18
+},
+{
+    "event": "The 2020 National Doubles Championship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2020-03-01",
+    "holes": 18
+},
+{
+    "event": "The 9th Okinawa Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2020-02-15",
+    "holes": 18
+},
+{
+    "event": "The 6th Kagoshima Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2020-01-26",
+    "holes": 18
+},
+{
+    "event": "The 2020 National Team Championship",
+    "round": "Rd1,2,3,4,5",
+    "date": "2020-01-12",
+    "holes": 12
+},
+{
   "event": "The 19th Chubu Open",
   "round": "Rd1,Rd2,Rd3",
   "date": "2019-12-14",
   "hla": 104,
-  "holes": 18
+  "holes": 18,
+  "ratings": {
+      "player1": {
+        "score": 60,
+        "rating": 1029
+      },
+      "player2": {
+        "score": 82,
+        "rating": 876
+      }
+  }
 },
 {
   "event": "The 33rd Kyushu Open",

@@ -1,4 +1,14 @@
 [{
+  "title": "The 3rd Miyagi Michinoku Open",
+  "location": "Michinoku Park",
+  "period": {
+    "from": "2020-03-21",
+    "to": "2020-03-22"
+  },
+  "jpdga": {
+    "eventId": "525"
+  }
+}, {
   "title": "The 2020 National Doubles Championship",
   "location": "Hitachi Seaside Park",
   "period": {
@@ -54,6 +64,10 @@
     "photoId": "72157712376685396"
   },
   "urls": [{
+      "type": "video",
+      "title": "A Short Movie for New Champion",
+      "url": "https://www.facebook.com/kinoshi.minoru.ta/videos/2680744102009791/"
+  },{
     "type": "website",
     "title": "Official Site 🇯🇵",
     "url": "https://aifda.or.jp/news/第19回-中部オープン-ディスクゴルフトーナメント/"
