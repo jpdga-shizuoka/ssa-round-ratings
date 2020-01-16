@@ -79,6 +79,9 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     if (this.expandedElement.period !== event.period) {
       return false;
     }
+    if (event.schedule && (this.expandedElement.schedule !== event.schedule)) {
+      return false;
+    }
     return true;
   }
 
