@@ -1,19 +1,14 @@
 dist: trusty
-sudo: false
 
 language: node_js
 node_js:
   - "10"
 
-before_install:
-  - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 762E3157
-
 addons:
-  apt:
-    sources:
-      - google-chrome
-    packages:
-      - google-chrome-stable
+  chrome: stable
+
+before_install:
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 
 cache:
   directories:
