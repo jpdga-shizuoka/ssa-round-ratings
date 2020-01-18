@@ -5,6 +5,9 @@ language: node_js
 node_js:
   - "10"
 
+before_install:
+  - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 762E3157
+
 addons:
   apt:
     sources:
