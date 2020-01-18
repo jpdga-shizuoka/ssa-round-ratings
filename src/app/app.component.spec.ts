@@ -31,6 +31,7 @@ import { EventsTableComponent } from './events-table/events-table.component';
 import { EventsMapComponent } from './events-map/events-map.component';
 import { MarkerDialogComponent } from './dialogs/marker-dialog.component';
 import { NoticeBottomsheetComponent } from './dialogs/notice-bottomsheet.component';
+import { BottomSheetDetailDisabledComponent } from './dialogs/bottom-sheet-detail-disabled.component';
 
 import { AgmCoreModule } from '@agm/core';
 
@@ -49,6 +50,7 @@ describe('AppComponent', () => {
         EventsMapComponent,
         MarkerDialogComponent,
         NoticeBottomsheetComponent,
+        BottomSheetDetailDisabledComponent,
       ],
       imports: [
         RouterTestingModule,

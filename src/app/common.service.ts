@@ -64,7 +64,7 @@ export class CommonService {
       case 'upcoming':
         return filterUpcomingEvents(EVENTS);
       case 'local':
-        return LOCAL_EVENTS;
+        return filterUpcomingEvents(LOCAL_EVENTS);
       case 'monthly':
         return MONTHLY_EVENTS;
     }
@@ -101,7 +101,16 @@ export class CommonService {
     if (this.rounds) {
       return this.rounds;
     }
-    const rounds = ROUNDS.concat();
+
+    const rounds: RoundInfo[] = [];
+    const now = Date.now();
+    for (const round of ROUNDS) {
+      const date = new Date(round.date);
+      if (date.getTime() < now) {
+        rounds.push(round);
+      }
+    }
+
     for (const round of rounds) {
       if (round.ratings) {
         round['weight'] = calcWeight(round.ratings.player1, round.ratings.player2);
@@ -130,23 +139,30 @@ export class CommonService {
     return name;
   }
 
+  getEventTitleAliase(eventTitle: string) {
+    return EVENT_ALIASE[eventTitle];
+  }
+
   getEventAliase(eventName: string): string {
     if (this.primaryLanguage) {
       return eventName;
     }
     const parts = getEventKey(eventName);
-    if (!parts) {
+    if (parts == null) {
       const title = EVENT_ALIASE[getKeyFromName(eventName)];
       return title ? title : eventName;
     }
     const aliase = EVENT_ALIASE[parts.key];
-    if (!aliase) {
+    if (aliase == null) {
       return eventName;
     }
-    if (parts.count > 1960) {
-      return !aliase ? eventName : `${parts.count}年 ${aliase}`;
+    if (parts.count == null) {
+      return aliase;
     }
-    return !aliase ? eventName : `第${parts.count}回 ${aliase}`;
+    if (parts.count > 1960) {
+      return `${parts.count}年 ${aliase}`;
+    }
+    return `第${parts.count}回 ${aliase}`;
   }
 
   getPrefecture(prefectureName: string): string | undefined {
@@ -248,12 +264,27 @@ function isAppleDevice(): boolean {
 }
 
 function getEventKey(name: string): EventParts | undefined {
-  if (!name) {
+  if (name == null) {
     return undefined;
   }
-  const eventName = /the (\d+)(st|nd|rd|th|) (.+)/i;
-  const results = name.trim().toLowerCase().match(eventName);
-  if (!results || results.length !== 4) {
+  const n = name.trim().toLowerCase();
+  const eventName = /the (\d+)(st|nd|rd|th|) (.+)/;
+  const altEventName = /the (.+)/;
+
+  let results = n.match(eventName);
+  if (results == null) {
+    results = n.match(altEventName);
+    if (results == null) {
+      return undefined;
+    }
+    if (results.length !== 2) {
+      return undefined;
+    }
+    return {
+      count: undefined,
+      key: results[1].replace(/[ -]/g, '')
+    };
+  } else if (results.length !== 4) {
     return undefined;
   }
   return {

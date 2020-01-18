@@ -19,6 +19,10 @@
     "prefecture": "Niigata",
     "geolocation": [36.982452, 138.826901]
   },
+  "kiyotsugawafleshpark": {
+    "prefecture": "Niigata",
+    "geolocation": [37.029490, 138.699248]
+  },
   "fuminnomorihiyoshi": {
     "prefecture": "Kyoto",
     "geolocation": [35.137323, 135.530041]
@@ -47,9 +51,25 @@
     "prefecture": "Tochigi",
     "geolocation": [36.274043, 139.799768]
   },
+  "oyamasportpark": {
+    "prefecture": "Tochigi",
+    "geolocation": [36.303584, 139.782942]
+  },
+  "tbctaiyoclub": {
+    "prefecture": "Tochigi",
+    "geolocation": [36.271956, 139.798813]
+  },
+  "asominnanomori": {
+    "prefecture": "Kumamoto",
+    "geolocation": [32.920066, 131.090188]
+  },
   "aikawafureainomura": {
     "prefecture": "Kanagawa",
     "geolocation": [35.537993, 139.263713]
+  },
+  "picaactivitypark": {
+    "prefecture": "Shizuoka",
+    "geolocation": [35.297226, 138.775824]
   },
   "hunkawanpanolamapark": {
     "prefecture": "Hokkaido",
@@ -75,9 +95,13 @@
     "prefecture": "Yamanashi",
     "geolocation": [35.928824, 138.436223]
   },
-  "hiruganokohgen": {
+  "hiruganokogen": {
     "prefecture": "Gifu",
     "geolocation": [36.006050, 136.907814]
+  },
+  "ikedatowngeneralgymnasium": {
+    "prefecture": "Gifu",
+    "geolocation": [35.434064, 136.557196]
   },
   "yoshinogarihistoricalpark": {
     "prefecture": "Saga",

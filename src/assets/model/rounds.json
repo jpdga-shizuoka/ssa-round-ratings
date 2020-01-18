@@ -1,8 +1,116 @@
 [{
+    "event": "The 3rd Miyagi Michinoku Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2020-03-21",
+    "holes": 18
+},
+{
+    "event": "The 2020 National Doubles Championship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2020-03-01",
+    "holes": 18
+},
+{
+    "event": "The 9th Okinawa Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2020-02-15",
+    "holes": 18
+},
+{
+    "event": "The 6th Kagoshima Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2020-01-26",
+    "hla": 100,
+    "holes": 18
+},
+{
+    "event": "The 2020 National Team Championship",
+    "round": "Rd1,2,3,4,5",
+    "date": "2020-01-12",
+    "hla": 82,
+    "holes": 12
+},
+{
+  "event": "The 19th Chubu Open",
+  "round": "Rd1,Rd2,Rd3",
+  "date": "2019-12-14",
+  "hla": 104,
+  "holes": 18,
+  "ratings": {
+      "player1": {
+        "score": 60,
+        "rating": 1029
+      },
+      "player2": {
+        "score": 82,
+        "rating": 876
+      }
+  }
+},
+{
+  "event": "The 33rd Kyushu Open",
+  "round": "Rd1(B,C)",
+  "date": "2019-11-30",
+  "hla": 99,
+  "holes": 18,
+  "ratings": {
+      "player1": {
+          "score": 54,
+          "rating": 1005
+      },
+      "player2": {
+          "score": 71,
+          "rating": 851
+      }
+  }
+},
+{
+  "event": "The 33rd Kyushu Open",
+  "round": "Rd2()",
+  "date": "2019-11-30",
+  "holes": 18,
+  "ratings": {
+      "player1": {
+          "score": 49,
+          "rating": 1017
+      },
+      "player2": {
+          "score": 63,
+          "rating": 878
+      }
+  }
+},
+{
+  "event": "The 33rd Kyushu Open",
+  "round": "Rd3()",
+  "date": "2019-12-01",
+  "holes": 18,
+  "ratings": {
+      "player1": {
+          "score": 49,
+          "rating": 1017
+      },
+      "player2": {
+          "score": 67,
+          "rating": 838
+      }
+  }
+},
+{
   "event": "The 15th Kyoto Classic",
   "round": "Rd1,Rd2,Rd3",
   "date": "2019-11-16",
-  "holes": 18
+  "holes": 18,
+  "ratings": {
+      "player1": {
+          "score": 50,
+          "rating": 1044
+      },
+      "player2": {
+          "score": 68,
+          "rating": 882
+      }
+  }
 },
 {
   "event": "The 31st Showa Kinen Park Open",
@@ -144,6 +252,13 @@
             "rating": 865
         }
     }
+},
+{
+    "event": "The 1st PWBF Cup",
+    "round": "Canceled",
+    "hla": 125,
+    "date": "2019-04-13",
+    "holes": 18
 },
 {
     "event": "The 2nd Gifu Hirugano Open",
@@ -290,7 +405,7 @@
 },
 {
     "event": "The 8th Hirugano Kogen tournament",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,Rd2",
     "date": "2019-08-25",
     "hla": 90,
     "holes": 18
@@ -353,6 +468,22 @@
     "hla": 63,
     "holes": 18
 },
+
+{
+    "event": "The 2019 National Team Championship",
+    "round": "Rd1,2,3,4,5",
+    "date": "2019-01-13",
+    "hla": 82,
+    "holes": 12
+},
+{
+    "event": "The 2019 National Doubles Championship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2019-03-02",
+    "hla": 83,
+    "holes": 18
+},
+
 {
     "event": "The 32nd Kyushu Open",
     "round": "Rd1 (B,C)",
@@ -429,6 +560,12 @@
     "holes": 27
 },
 {
+    "event": "The 1st PICA Activity Cup",
+    "round": "Rd1,Rd2",
+    "date": "2018-10-14",
+    "holes": 18
+},
+{
     "event": "The 30th Japan National Championship",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-09-16",
@@ -459,6 +596,23 @@
         "player2": {
             "score": 71,
             "rating": 899
+        }
+    }
+},
+{
+    "event": "The 1st Gifu Hirugano Open",
+    "round": "Rd1,Rd2",
+    "date": "2018-05-04",
+    "hla": 126,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 53,
+            "rating": 1039
+        },
+        "player2": {
+            "score": 72,
+            "rating": 879
         }
     }
 },
@@ -566,9 +720,9 @@
 },
 {
     "event": "The 7th Hirugano Kogen tournament",
-    "round": "Rd1,Rd2,Rd3",
-    "date": "2018-05-04",
-    "hla": 126,
+    "round": "Rd1,Rd2",
+    "date": "2018-08-26",
+    "hla": 93,
     "holes": 18,
     "ratings": {
         "player1": {
@@ -577,7 +731,7 @@
         },
         "player2": {
             "score": 65,
-            "rating": 869
+            "rating": 859
         }
     }
 },
@@ -626,6 +780,13 @@
             "rating": 888
         }
     }
+},
+{
+    "event": "The 2018 National Doubles Championship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2018-03-03",
+    "hla": 86,
+    "holes": 18
 },
 {
     "event": "The 7th Okinawa Open",
@@ -677,6 +838,13 @@
             "rating": 874
         }
     }
+},
+{
+    "event": "The 2018 National Team Championship",
+    "round": "Rd1,2,3,4,5",
+    "date": "2018-01-07",
+    "hla": 83,
+    "holes": 12
 },
 {
     "event": "The 17th Chubu Open",
@@ -758,6 +926,12 @@
             "rating": 814
         }
     }
+},
+{
+    "event": "The 2017 Showa Kinen Park Open",
+    "round": "Rd1,Rd2",
+    "date": "2017-11-03",
+    "holes": 27
 },
 {
     "event": "The 17th Tohoku Open",
@@ -843,6 +1017,12 @@
             "rating": 839
         }
     }
+},
+{
+    "event": "The 17th Niigata Open",
+    "round": "Rd1",
+    "date": "2017-07-17",
+    "holes": 9
 },
 {
     "event": "The 21st Kanto Open",
@@ -963,6 +1143,13 @@
     }
 },
 {
+    "event": "The 28th Tokyo Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2017-04-15",
+    "hla": 84,
+    "holes": 18
+},
+{
     "event": "The 15th Saga Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-04-08",
@@ -980,9 +1167,17 @@
     }
 },
 {
+    "event": "The 2017 National Doubles Championship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2017-03-04",
+    "hla": 83,
+    "holes": 18
+},
+{
     "event": "The 6th Okinawa Open",
     "round": "Rd1",
     "date": "2017-02-18",
+    "hla": 100,
     "holes": 18,
     "ratings": {
         "player1": {
@@ -999,6 +1194,7 @@
     "event": "The 6th Okinawa Open",
     "round": "Rd2",
     "date": "2017-02-18",
+    "hla": 100,
     "holes": 18,
     "ratings": {
         "player1": {
@@ -1015,6 +1211,7 @@
     "event": "The 6th Okinawa Open",
     "round": "Rd3",
     "date": "2017-02-19",
+    "hla": 100,
     "holes": 18,
     "ratings": {
         "player1": {
@@ -1043,6 +1240,855 @@
             "rating": 821
         }
     }
+},
+{
+    "event": "The 2017 National Team Championship",
+    "round": "Rd1,2,3,4,5",
+    "date": "2017-01-08",
+    "hla": 75,
+    "holes": 12
+},
+{
+    "event": "The 16th Chubu Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-12-10",
+    "hla": 98,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 64,
+            "rating": 990
+        },
+        "player2": {
+            "score": 81,
+            "rating": 866
+        }
+    }
+},
+{
+    "event": "The 30th Kyushu Open",
+    "round": "Rd1",
+    "date": "2016-12-03",
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 49,
+            "rating": 1033
+        },
+        "player2": {
+            "score": 66,
+            "rating": 871
+        }
+    }
+},
+{
+    "event": "The 30th Kyushu Open",
+    "round": "Rd2",
+    "date": "2016-12-03",
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 48,
+            "rating": 1001
+        },
+        "player2": {
+            "score": 66,
+            "rating": 801
+        }
+    }
+},
+{
+    "event": "The 30th Kyushu Open",
+    "round": "Rd3",
+    "date": "2016-12-04",
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 55,
+            "rating": 1022
+        },
+        "player2": {
+            "score": 79,
+            "rating": 821
+        }
+    }
+},
+{
+    "event": "The 12th Kyoto Classic",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-11-12",
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 50,
+            "rating": 1043
+        },
+        "player2": {
+            "score": 70,
+            "rating": 863
+        }
+    }
+},
+{
+    "event": "The 2016 Showa Kinen Park Open",
+    "round": "Rd1,Rd2",
+    "date": "2016-11-03",
+    "holes": 27
+},
+{
+    "event": "The 16th Tohoku Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-10-08",
+    "hla": 75,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 52,
+            "rating": 1014
+        },
+        "player2": {
+            "score": 73,
+            "rating": 818
+        }
+    }
+},
+{
+    "event": "The 28th Japan National Championship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-09-18",
+    "hla": 130,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 58,
+            "rating": 1008
+        },
+        "player2": {
+            "score": 84,
+            "rating": 798
+        }
+    }
+},
+{
+  "event": "The 5th Hirugano Kogen Tournament",
+  "round": "Rd1",
+  "date": "2016-08-28",
+  "holes": 18,
+  "jpdga": {
+    "eventId": "416"
+  }
+},
+{
+    "event": "The 11th Michinoku Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-08-20",
+    "hla": 101,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 53,
+            "rating": 1025
+        },
+        "player2": {
+            "score": 68,
+            "rating": 893
+        }
+    }
+},
+{
+    "event": "The 20th Kanto Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-07-15",
+    "hla": 117,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 58,
+            "rating": 1039
+        },
+        "player2": {
+            "score": 82,
+            "rating": 869
+        }
+    }
+},
+{
+    "event": "The 5th Hokkaido Open",
+    "round": "Rd1,Rd2,Rd3,Rd4",
+    "date": "2016-07-01",
+    "hla": 0,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 52,
+            "rating": 1021
+        },
+        "player2": {
+            "score": 66,
+            "rating": 894
+        }
+    }
+},
+{
+    "event": "The 11th Masters National Championship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-06-18",
+    "hla": 94,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 48,
+            "rating": 1038
+        },
+        "player2": {
+            "score": 67,
+            "rating": 855
+        }
+    }
+},
+
+{
+    "event": "The 5th Maiko Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-06-11",
+    "hla": 0,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 51,
+            "rating": 1007
+        },
+        "player2": {
+            "score": 64,
+            "rating": 881
+        }
+    }
+},
+
+{
+    "event": "The 11th Kiyosatonomori Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-05-14",
+    "hla": 81,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 47,
+            "rating": 1032
+        },
+        "player2": {
+            "score": 61,
+            "rating": 890
+        }
+    }
+},
+{
+    "event": "The 5th Fukui Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-05-28",
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 47,
+            "rating": 1056
+        },
+        "player2": {
+            "score": 68,
+            "rating": 857
+        }
+    }
+},
+{
+    "event": "The 18th Nippon Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-04-30",
+    "hla": 0,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 49,
+            "rating": 1039
+        },
+        "player2": {
+            "score": 69,
+            "rating": 851
+        }
+    }
+},
+{
+    "event": "The 27th Tokyo Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-04-16",
+    "hla": 90,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 50,
+            "rating": 1053
+        },
+        "player2": {
+            "score": 70,
+            "rating": 878
+        }
+    }
+},
+{
+    "event": "The 14th Saga Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-04-09",
+    "hla": 91,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 45,
+            "rating": 1074
+        },
+        "player2": {
+            "score": 73,
+            "rating": 809
+        }
+    }
+},
+{
+    "event": "The 12th Minamisoma Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-03-20",
+    "hla": 108,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 55,
+            "rating": 1037
+        },
+        "player2": {
+            "score": 75,
+            "rating": 879
+        }
+    }
+},
+{
+    "event": "The 2016 National Doubles Championship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-03-04",
+    "hla": 83,
+    "holes": 18
+},
+{
+    "event": "The 5th Okinawa Open",
+    "round": "Rd1",
+    "date": "2016-02-20",
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 64,
+            "rating": 1020
+        },
+        "player2": {
+            "score": 90,
+            "rating": 858
+        }
+    }
+},
+{
+    "event": "The 5th Okinawa Open",
+    "round": "Rd2",
+    "date": "2016-02-20",
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 68,
+            "rating": 996
+        },
+        "player2": {
+            "score": 87,
+            "rating": 878
+        }
+    }
+},
+{
+    "event": "The 5th Okinawa Open",
+    "round": "Rd3",
+    "date": "2016-02-21",
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 62,
+            "rating": 991
+        },
+        "player2": {
+            "score": 78,
+            "rating": 868
+        }
+    }
+},
+{
+    "event": "The 2nd Kagoshima Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-01-23",
+    "hla": 83,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 45,
+            "rating": 1059
+        },
+        "player2": {
+            "score": 66,
+            "rating": 853
+        }
+    }
+},
+{
+    "event": "The 2016 National Team Championship",
+    "round": "Rd1,2,3,4,5",
+    "date": "2016-01-08",
+    "hla": 75,
+    "holes": 12
+},
+{
+    "event": "The 15th Chubu Open",
+    "round": "Rd1",
+    "date": "2015-12-05",
+    "hla": 97,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 57,
+            "rating": 1018
+        },
+        "player2": {
+            "score": 80,
+            "rating": 833
+        }
+    }
+},
+{
+    "event": "The 15th Chubu Open",
+    "round": "Rd2",
+    "date": "2015-12-05",
+    "hla": 97,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 59,
+            "rating": 1016
+        },
+        "player2": {
+            "score": 87,
+            "rating": 803
+        }
+    }
+},
+{
+    "event": "The 15th Chubu Open",
+    "round": "Rd3",
+    "date": "2015-12-06",
+    "hla": 97,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 57,
+            "rating": 1015
+        },
+        "player2": {
+            "score": 80,
+            "rating": 828
+        }
+    }
+},
+{
+    "event": "The 2nd Oyama Open",
+    "round": "Rd1",
+    "date": "2015-11-23",
+    "hla": 101,
+    "holes": 18
+},
+{
+    "event": "The 29th Kyushu Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-12-19",
+    "hla": 89,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 43,
+            "rating": 1062
+        },
+        "player2": {
+            "score": 59,
+            "rating": 890
+        }
+    }
+},
+{
+    "event": "The 11th Kyoto Classic",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-11-07",
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 49,
+            "rating": 1015
+        },
+        "player2": {
+            "score": 69,
+            "rating": 816
+        }
+    }
+},
+{
+    "event": "The 2015 Showa Kinen Park Open",
+    "round": "Rd1,Rd2",
+    "date": "2015-11-03",
+    "holes": 27
+},
+{
+    "event": "The 15th Tohoku Open",
+    "round": "Rd1",
+    "date": "2015-10-11",
+    "hla": 81,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 49,
+            "rating": 1005
+        },
+        "player2": {
+            "score": 64,
+            "rating": 849
+        }
+    }
+},
+{
+    "event": "The 15th Tohoku Open",
+    "round": "Rd2",
+    "date": "2015-10-11",
+    "hla": 81,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 49,
+            "rating": 1040
+        },
+        "player2": {
+            "score": 76,
+            "rating": 787
+        }
+    }
+},
+{
+    "event": "The 15th Tohoku Open",
+    "round": "Rd3",
+    "date": "2015-10-12",
+    "hla": 81,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 49,
+            "rating": 1025
+        },
+        "player2": {
+            "score": 62,
+            "rating": 899
+        }
+    }
+},
+{
+    "event": "The 27th Japan National Championship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-09-21",
+    "hla": 126,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 48,
+            "rating": 1054
+        },
+        "player2": {
+            "score": 71,
+            "rating": 842
+        }
+    }
+},
+{
+    "event": "The 19th Kansai Open",
+    "round": "Rd1,Rd2",
+    "date": "2015-09-05",
+    "hla": 106,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 45,
+            "rating": 1059
+        },
+        "player2": {
+            "score": 69,
+            "rating": 823
+        }
+    }
+},
+{
+    "event": "The 19th Kansai Open",
+    "round": "Rd3",
+    "date": "2015-09-06",
+    "hla": 106,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 51,
+            "rating": 1021
+        },
+        "player2": {
+            "score": 69,
+            "rating": 853
+        }
+    }
+},
+{
+    "event": "The 10th Michinoku Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-08-22",
+    "hla": 110,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 54,
+            "rating": 1034
+        },
+        "player2": {
+            "score": 71,
+            "rating": 893
+        }
+    }
+},
+{
+    "event": "The 15th Aso Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-07-25",
+    "hla": 86,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 45,
+            "rating": 1054
+        },
+        "player2": {
+            "score": 62,
+            "rating": 885
+        }
+    }
+},
+{
+    "event": "The 19th Kanto Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-07-11",
+    "hla": 111,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 52,
+            "rating": 1061
+        },
+        "player2": {
+            "score": 81,
+            "rating": 831
+        }
+    }
+},
+{
+    "event": "The 4th Hokkaido Open",
+    "round": "Rd1,Rd2",
+    "date": "2015-06-27",
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 49,
+            "rating": 1044
+        },
+        "player2": {
+            "score": 71,
+            "rating": 840
+        }
+    }
+},
+{
+    "event": "The 10th Masters National Championship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-06-18",
+    "hla": 105,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 44,
+            "rating": 1063
+        },
+        "player2": {
+            "score": 64,
+            "rating": 862
+        }
+    }
+},
+{
+    "event": "The 4th Fukui Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-05-30",
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 49,
+            "rating": 1042
+        },
+        "player2": {
+            "score": 73,
+            "rating": 819
+        }
+    }
+},
+{
+    "event": "The 10th Kiyosatonomori Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-05-16",
+    "hla": 81,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 47,
+            "rating": 1028
+        },
+        "player2": {
+            "score": 66,
+            "rating": 833
+        }
+    }
+},
+{
+    "event": "The 17th Nippon Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-05-04",
+    "hla": 0,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 49,
+            "rating": 1045
+        },
+        "player2": {
+            "score": 73,
+            "rating": 824
+        }
+    }
+},
+{
+    "event": "The 26th Tokyo Open",
+    "round": "Rd1",
+    "date": "2015-04-18",
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 54,
+            "rating": 1028
+        },
+        "player2": {
+            "score": 74,
+            "rating": 858
+        }
+    }
+},
+{
+    "event": "The 26th Tokyo Open",
+    "round": "Rd2",
+    "date": "2015-04-18",
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 54,
+            "rating": 1043
+        },
+        "player2": {
+            "score": 83,
+            "rating": 812
+        }
+    }
+},
+{
+    "event": "The 26th Tokyo Open",
+    "round": "Rd3",
+    "date": "2015-04-19",
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 48,
+            "rating": 1039
+        },
+        "player2": {
+            "score": 69,
+            "rating": 837
+        }
+    }
+},
+{
+    "event": "The 13th Saga Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-04-11",
+    "hla": 91,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 50,
+            "rating": 1045
+        },
+        "player2": {
+            "score": 75,
+            "rating": 822
+        }
+    }
+},
+{
+    "event": "The 2015 National Doubles Championship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-03-07",
+    "hla": 90,
+    "holes": 18
+},
+{
+    "event": "The 4th Okinawa Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-02-21",
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 44,
+            "rating": 1094
+        },
+        "player2": {
+            "score": 75,
+            "rating": 812
+        }
+    }
+},
+{
+    "event": "The 1st Kagoshima Open",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-01-24",
+    "hla": 85,
+    "holes": 18,
+    "ratings": {
+        "player1": {
+            "score": 49,
+            "rating": 1021
+        },
+        "player2": {
+            "score": 72,
+            "rating": 795
+        }
+    }
+},
+{
+    "event": "The 2015 National Team Championship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-01-11",
+    "hla": 80,
+    "holes": 18
 },
 {
   "event": "The 2014 Japan Open",

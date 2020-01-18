@@ -66,7 +66,7 @@
 
   <mat-card class="security-card">
     <mat-card-header>
-      <mat-card-title>Security Policy</mat-card-title>
+      <mat-card-title>Privacy Policy</mat-card-title>
     </mat-card-header>
     <mat-card-content>
       <p>No Loging</p>
@@ -91,11 +91,17 @@
     <mat-card-content>
       <p *ngIf="primaryLanguage">
         This website is running on the <a href="https://pages.github.com">GitHub Pages</a>.
+        See <a href="https://help.github.com/en/github/site-policy/github-privacy-statement">
+          the Github privacy policy
+        </a> as well.
       </p>
       <p *ngIf="!primaryLanguage">
         本サイトは GitHub が提供する
         <a href="https://pages.github.com">GitHub Pages</a>
         を利用して運用しています。
+        <a href="https://help.github.com/ja/github/site-policy/github-privacy-statement">
+          Githubのプライバシーポリシー
+        </a> も参照ください。
       </p>
     </mat-card-content>
   </mat-card>

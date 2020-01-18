@@ -20,6 +20,11 @@ export class EventsMapComponent {
   longitude = environment.map.center.lng;
   zoom = environment.map.zoom;
 
+  get height() {
+    const height = getBodyHeight() - getHeaderHeight() - getFooterHeight() - getMatHeaderHeight();
+    return height + 'px';
+  }
+
   constructor(
     private cs: CommonService,
     public dialog: MatDialog,
@@ -58,4 +63,28 @@ export class EventsMapComponent {
       this.markerSelected.emit(mk);
     });
   }
+}
+
+function getBodyHeight() {
+    const element = document.documentElement;
+    const body = document.getElementsByTagName('body')[0];
+    const height = window.innerHeight
+    || (element != null ? element.clientHeight : null)
+    || (body != null ? body.clientHeight : null);
+    return height != null ? height : 0;
+}
+
+function getHeaderHeight() {
+  const element = document.getElementById('header');
+  return element != null ? element.clientHeight : 0;
+}
+
+function getMatHeaderHeight() {
+    const element = document.getElementsByTagName('mat-tab-header')[0];
+    return element != null ? element.clientHeight : 0;
+}
+
+function getFooterHeight() {
+  const element = document.getElementById('footer');
+  return element != null ? element.clientHeight : 0;
 }

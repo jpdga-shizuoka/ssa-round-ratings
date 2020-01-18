@@ -34,10 +34,10 @@ import { EventsTableComponent } from './events-table/events-table.component';
 import { EventsMapComponent } from './events-map/events-map.component';
 import { MarkerDialogComponent } from './dialogs/marker-dialog.component';
 import { NoticeBottomsheetComponent } from './dialogs/notice-bottomsheet.component';
+import { BottomSheetDetailDisabledComponent } from './dialogs/bottom-sheet-detail-disabled.component';
 
 import { AgmCoreModule } from '@agm/core';
 import { environment } from '../environments/environment';
-import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -51,6 +51,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     EventsTableComponent,
     EventsMapComponent,
     NoticeBottomsheetComponent,
+    BottomSheetDetailDisabledComponent,
     MarkerDialogComponent,
   ],
   imports: [
@@ -77,10 +78,10 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     MatDialogModule,
     MatBottomSheetModule,
     AgmCoreModule.forRoot({ apiKey: environment.MAP_API_KEY }),
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   entryComponents: [
     NoticeBottomsheetComponent,
+    BottomSheetDetailDisabledComponent,
     MarkerDialogComponent,
   ],
   providers: [],

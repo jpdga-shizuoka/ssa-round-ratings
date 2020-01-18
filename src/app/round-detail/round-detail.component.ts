@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import {
   CommonService, RoundInfo, EventInfo, LocationInfo
 } from '../common.service';
@@ -25,6 +25,8 @@ interface MiscInfo {
 export class RoundDetailComponent {
 
   @Input() round: RoundInfo;
+  @Input() showHistory = true;
+  @Output() eventSlected = new EventEmitter<string>();
 
   rating: number;
   score: number;
@@ -34,6 +36,10 @@ export class RoundDetailComponent {
   private _miscInfo: MiscInfo[];
 
   constructor(private cs: CommonService) {
+  }
+
+  get seeThePastResults() {
+    return this.cs.getMenuAliase('See the Past Results');
   }
 
   get location(): string | undefined {
@@ -214,6 +220,11 @@ export class RoundDetailComponent {
     }
     this.score = Math.round(this.score);
     this.rating = this.score2rating(this.score);
+  }
+
+  onHistory() {
+    const title = this.cs.getEventTitle(this.getEvent().title);
+    this.eventSlected.emit(title);
   }
 
   private rating2score(rating: number) {

@@ -8,19 +8,17 @@ import { AboutThisSiteComponent } from './about-this-site/about-this-site.compon
 const routes: Routes = [
   { path: '', redirectTo: '/events/upcoming', pathMatch: 'full' },
   { path: 'events/upcoming', component: EventsTabsComponent, data: {
-    title: 'DG Japan - Offcial Tournaments',
+    title: 'DG Japan - Offcial Events',
     description: 'Official schedule of the disc golf events held in Japan.',
     keywords: 'disc golf,official tournaments,japan',
     url: 'https://jpdga-shizuoka.github.io/ssa-round-ratings/events/upcoming',
-    image: 'https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/img/DGJAPAN.png',
-    type: 'website',
+    type: 'article',
   }},
   { path: 'events/local', component: EventsTabsComponent, data: {
     title: 'DG Japan - Local Events',
     description: 'Schedule of the local events held in Japan.',
     keywords: 'disc golf,local events,japan',
     url: 'https://jpdga-shizuoka.github.io/ssa-round-ratings/events/local',
-    image: 'https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/img/DGJAPAN.png',
     type: 'article',
   }},
   { path: 'events/monthly', component: EventsTabsComponent, data: {
@@ -28,7 +26,6 @@ const routes: Routes = [
     description: 'Schedule of the local monthly events held in Japan.',
     keywords: 'disc golf,monthly events,japan',
     url: 'https://jpdga-shizuoka.github.io/ssa-round-ratings/events/monthly',
-    image: 'https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/img/DGJAPAN.png',
     type: 'article',
   }},
   { path: 'past', component: RoundsTabsComponent, data: {
@@ -36,15 +33,13 @@ const routes: Routes = [
     description: 'Results of the events held in Japan.',
     keywords: 'disc golf,results,japan',
     url: 'https://jpdga-shizuoka.github.io/ssa-round-ratings/past',
-    image: 'https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/img/DGJAPAN.png',
     type: 'article',
   }},
   { path: 'about', component: AboutThisSiteComponent, data: {
     title: 'DG Japan - About Us',
-    description: 'About Us, Security Policy, Terms, Open Source Software Project.',
+    description: 'About Us, Privacy Policy, Terms, Open Source Software Project.',
     keywords: 'disc golf,ssa,scratch scoring averages,japan',
     url: 'https://jpdga-shizuoka.github.io/ssa-round-ratings/about',
-    image: 'https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/img/DGJAPAN.png',
     type: 'article',
   }},
 ];
