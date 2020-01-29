@@ -158,7 +158,12 @@
   "jpdga": {
     "eventId": "477",
     "topicId": "1333"
-  }
+  },
+  "urls": [{
+    "type": "website",
+    "title": "KAZUO's Room 🇯🇵",
+    "url": "http://tatsumidgc.com/2019/01/post-1330/"
+  }]
 }, {
   "title": "The 18th Chubu Open",
   "location": "Mikawa Rinkai Ryokuchi",
@@ -187,7 +192,12 @@
   "jpdga": {
     "eventId": "484",
     "topicId": "1361"
-  }
+  },
+  "urls": [{
+    "type": "website",
+    "title": "KAZUO's Room 🇯🇵",
+    "url": "http://tatsumidgc.com/2019/03/post-1369/"
+  }]
 }, {
   "title": "The 2019 National Team Championship",
   "location": "Oyama Omoinomori Park",
@@ -1201,7 +1211,12 @@
   },
   "jpdga": {
     "eventId": "405"
-  }
+  },
+  "urls": [{
+    "type": "website",
+    "title": "KAZUO's Room 🇯🇵",
+    "url": "http://tatsumidgc.com/2016/11/post-973/"
+  }]
 }, {
   "title": "The 2016 Showa Kinen Park Open",
   "location": "Showa Kinen Park",
@@ -1216,6 +1231,10 @@
     "type": "website",
     "title": "Official Site 🇯🇵",
     "url": "http://jpdga-tokyo.com/skpo/"
+  }, {
+    "type": "website",
+    "title": "KAZUO's Room 🇯🇵",
+    "url": "http://tatsumidgc.com/2016/11/post-954/"
   }]
 }, {
   "title": "The 16th Tohoku Open",
@@ -1460,7 +1479,12 @@
   },
   "jpdga": {
     "eventId": "348"
-  }
+  },
+  "urls": [{
+    "type": "website",
+    "title": "KAZUO's Room 🇯🇵",
+    "url": "http://tatsumidgc.com/2015/12/post-745/"
+  }]
 }, {
   "title": "The 2nd Oyama Open",
   "location": "TBC Taiyo Club",
@@ -1483,7 +1507,12 @@
   },
   "jpdga": {
     "eventId": "347"
-  }
+  },
+  "urls": [{
+    "type": "website",
+    "title": "KAZUO's Room 🇯🇵",
+    "url": "http://tatsumidgc.com/2016/01/post-787/"
+  }]
 }, {
   "title": "The 11th Kyoto Classic",
   "location": "Kyoto Tamba Park",
@@ -1496,7 +1525,12 @@
   },
   "jpdga": {
     "eventId": "346"
-  }
+  },
+  "urls": [{
+    "type": "website",
+    "title": "KAZUO's Room 🇯🇵",
+    "url": "http://tatsumidgc.com/2015/12/post-732/"
+  }]
 }, {
   "title": "The 2015 Showa Kinen Park Open",
   "location": "Showa Kinen Park",
@@ -1511,6 +1545,10 @@
     "type": "website",
     "title": "Official Site 🇯🇵",
     "url": "http://jpdga-tokyo.com/skpo/"
+  }, {
+    "type": "website",
+    "title": "KAZUO's Room 🇯🇵",
+    "url": "http://tatsumidgc.com/2015/11/post-709/"
   }]
 }, {
   "title": "The 15th Tohoku Open",
@@ -1524,7 +1562,12 @@
   },
   "jpdga": {
     "eventId": "343"
-  }
+  },
+  "urls": [{
+    "type": "website",
+    "title": "KAZUO's Room 🇯🇵",
+    "url": "http://tatsumidgc.com/2015/10/post-699/"
+  }]
 }, {
   "title": "The 27th Japan National Championship",
   "location": "Maiko Disc Golf Park",
@@ -1537,7 +1580,12 @@
   },
   "jpdga": {
     "eventId": "342"
-  }
+  },
+  "urls": [{
+    "type": "website",
+    "title": "KAZUO's Room 🇯🇵",
+    "url": "http://tatsumidgc.com/2015/10/post-639/"
+  }]
 }, {
   "title": "The 19th Kansai Open",
   "location": "Fumin-no-Mori Hiyoshi",
@@ -1563,7 +1611,12 @@
   },
   "jpdga": {
     "eventId": "340"
-  }
+  },
+  "urls": [{
+    "type": "website",
+    "title": "KAZUO's Room 🇯🇵",
+    "url": "http://tatsumidgc.com/2015/09/post-565/"
+  }]
 }, {
   "title": "The 15th Aso Open",
   "location": "Aso Minnano Mori",
@@ -1589,7 +1642,12 @@
   },
   "jpdga": {
     "eventId": "335"
-  }
+  },
+  "urls": [{
+    "type": "website",
+    "title": "KAZUO's Room 🇯🇵",
+    "url": "http://tatsumidgc.com/2015/09/post-565/"
+  }]
 }, {
   "title": "The 4th Hokkaido Open",
   "location": "Hunka-wan Panolama Park",
@@ -1677,7 +1735,12 @@
   },
   "jpdga": {
     "eventId": "329"
-  }
+  },
+  "urls": [{
+    "type": "website",
+    "title": "KAZUO's Room 🇯🇵",
+    "url": "http://tatsumidgc.com/2015/04/第26回東京オープン（2015-4-18-19東京都江東区・辰巳の森/"
+  }]
 }, {
   "title": "The 13th Saga Open",
   "location": "Yoshinogari Historical Park",
