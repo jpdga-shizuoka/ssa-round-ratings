@@ -1,4 +1,228 @@
 [{
+  "title": "The 20th Chubu Open",
+  "location": "Mikawa Rinkai Ryokuchi",
+  "period": {
+    "from": "2020-12-12",
+    "to": "2020-12-13"
+  },
+  "jpdga": {
+    "eventId": "551"
+  }
+}, {
+  "title": "The 34th Kyushu Open",
+  "location": "Umino-Nakamichi Seaside Park",
+  "period": {
+    "from": "2020-11-28",
+    "to": "2020-11-29"
+  },
+  "jpdga": {
+    "eventId": "550"
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Official Site 🇯🇵",
+    "url": "http://www.jpdgafukuoka.com/blog/?page_id=3059"
+  }, {
+    "type": "website",
+    "title": "Facebook 🇯🇵",
+    "url": "https://www.facebook.com/discgolfkyushuopen/"
+  }]
+}, {
+  "title": "The 16th Kyoto Classic",
+  "location": "Kyoto Tamba Park",
+  "period": {
+    "from": "2020-11-14",
+    "to": "2020-11-15"
+  },
+  "jpdga": {
+    "eventId": "549"
+  }
+}, {
+  "title": "The 2020 Showa Kinen Park Open",
+  "location": "Showa Kinen Park",
+  "period": {
+    "from": "2020-10-31",
+    "to": "2020-11-03"
+  },
+  "jpdga": {
+    "eventId": "548"
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Official Site 🇯🇵",
+    "url": "http://jpdga-tokyo.com/skpo/"
+  }]
+}, {
+  "title": "The 20th Tohoku Open",
+  "location": "Mizubayashi Sport Park",
+  "period": {
+    "from": "2020-10-10",
+    "to": "2020-10-11"
+  },
+  "jpdga": {
+    "eventId": "547"
+  }
+}, {
+  "title": "The 32nd Japan National Championship",
+  "location": "Maiko Disc Golf Park",
+  "period": {
+    "from": "2020-09-20",
+    "to": "2020-09-21"
+  },
+  "jpdga": {
+    "eventId": "545"
+  }
+}, {
+  "title": "The 23rd Kansai Open",
+  "location": "Fumin-no-Mori Hiyoshi",
+  "period": {
+    "from": "2020-09-05",
+    "to": "2020-09-06"
+  },
+  "jpdga": {
+    "eventId": "544"
+  }
+}, {
+  "title": "The 15th Michinoku Open",
+  "location": "Kitakami Sport Park",
+  "period": {
+    "from": "2020-08-09",
+    "to": "2020-08-10"
+  },
+  "jpdga": {
+    "eventId": "542"
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Official Site 🇯🇵",
+    "url": "http://jpdgaiwate.com"
+  }]
+}, {
+  "title": "The 22nd Nippon Open",
+  "location": "Umino-Nakamichi Seaside Park",
+  "period": {
+    "from": "2020-08-01",
+    "to": "2020-08-02"
+  },
+  "jpdga": {
+    "eventId": "541"
+  }
+}, {
+  "title": "The 23rd Kanto Open",
+  "location": "Kiyohara Kohgyo Danchi",
+  "period": {
+    "from": "2020-07-24",
+    "to": "2020-07-26"
+  },
+  "jpdga": {
+    "eventId": "539"
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Official Site 🇯🇵",
+    "url": "http://www.tochigiflyingdisc.com"
+  }]
+}, {
+  "title": "The 20th Niigata Open",
+  "location": "Echigo Hillside Park",
+  "period": {
+    "from": "2020-07-19",
+    "to": "2020-07-19"
+  },
+  "jpdga": {
+    "eventId": "540"
+  }
+}, {
+  "title": "The 9th Hokkaido Open",
+  "location": "Hunka-wan Panolama Park",
+  "period": {
+    "from": "2020-07-11",
+    "to": "2020-07-12"
+  },
+  "jpdga": {
+    "eventId": "535"
+  }
+}, {
+  "title": "The 15th Masters National Championship",
+  "location": "Hikari-to-Kaze-no-Oka Park",
+  "period": {
+    "from": "2020-06-27",
+    "to": "2020-06-28"
+  },
+  "jpdga": {
+    "eventId": "534"
+  }
+}, {
+  "title": "The 4th Miho Open",
+  "location": "Hikari-to-Kaze-no-Oka Park",
+  "period": {
+    "from": "2020-06-27",
+    "to": "2020-06-28"
+  },
+  "jpdga": {
+    "eventId": "534"
+  }
+}, {
+  "title": "The 2nd PWBF Cup",
+  "location": "PICA Activity Park",
+  "period": {
+    "from": "2020-06-13",
+    "to": "2020-06-14"
+  },
+  "jpdga": {
+    "eventId": "532"
+  }
+}, {
+  "title": "The 7th Fukui Open",
+  "location": "Seaside Nature Park",
+  "period": {
+    "from": "2020-05-23",
+    "to": "2020-05-24"
+  },
+  "jpdga": {
+    "eventId": "530"
+  }
+}, {
+  "title": "The 15th Kiyosato-no-Mori Open",
+  "location": "Kiyosato-no-Mori",
+  "period": {
+    "from": "2020-05-16",
+    "to": "2020-05-17"
+  },
+  "jpdga": {
+    "eventId": "529"
+  }
+}, {
+  "title": "The 16th Minamisoma Open",
+  "location": "Minamisoma Hose Riding Park",
+  "period": {
+    "from": "2020-05-04",
+    "to": "2020-05-05"
+  },
+  "jpdga": {
+    "eventId": "528"
+  }
+}, {
+  "title": "The 3rd Gifu Hirugano Open",
+  "location": "Hirugano Kogen",
+  "period": {
+    "from": "2020-05-04",
+    "to": "2020-05-05"
+  },
+  "jpdga": {
+    "eventId": "527"
+  }
+}, {
+  "title": "The 18th Saga Open",
+  "location": "Yoshinogari Historical Park",
+  "period": {
+    "from": "2020-04-11",
+    "to": "2020-04-12"
+  },
+  "jpdga": {
+    "eventId": "526"
+  }
+}, {
   "title": "The 3rd Miyagi Michinoku Open",
   "location": "Michinoku Park",
   "period": {
