@@ -24,8 +24,8 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() displayedColumns$: Observable<string[]>;
   @Input() markerSelected$: Subject<GeoMarker>;
   @Input() search = '';
-  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
-  @ViewChild(MatSort, {static: false}) sort: MatSort;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
   expandedElement: RoundInfo | null;
   showDetail = false;
   private subscription: Subscription;

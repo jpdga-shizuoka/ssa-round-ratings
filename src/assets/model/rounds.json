@@ -14,6 +14,7 @@
     "event": "The 9th Okinawa Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2020-02-15",
+    "hla": 99,
     "holes": 18
 },
 {
@@ -21,7 +22,17 @@
     "round": "Rd1,Rd2,Rd3",
     "date": "2020-01-26",
     "hla": 100,
-    "holes": 18
+    "holes": 18,
+    "ratings": {
+        "player1": {
+          "score": 57,
+          "rating": 1010
+        },
+        "player2": {
+          "score": 71,
+          "rating": 894
+        }
+    }
 },
 {
     "event": "The 2020 National Team Championship",

@@ -3,7 +3,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
 import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material';
+import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 
 import { RoundDetailComponent } from './round-detail.component';
