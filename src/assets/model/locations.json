@@ -95,6 +95,10 @@
     "prefecture": "Fukui",
     "geolocation": [36.249289, 136.134013]
   },
+  "fukuicountryclub": {
+    "prefecture": "Fukui",
+    "geolocation": [36.125902, 136.302471]
+  },
   "kiyosatonomori": {
     "prefecture": "Yamanashi",
     "geolocation": [35.928824, 138.436223]
