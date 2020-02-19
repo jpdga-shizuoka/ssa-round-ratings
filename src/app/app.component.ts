@@ -25,7 +25,7 @@ interface MyMetaData {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit, OnDestroy {
-  @ViewChild('drawer', {static: false}) drawer: MatSidenav;
+  @ViewChild('drawer') drawer: MatSidenav;
   title = 'DG Japan';
   isHandset$: Observable<boolean>;
   subscription: Subscription;

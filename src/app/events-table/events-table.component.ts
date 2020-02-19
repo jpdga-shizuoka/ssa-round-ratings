@@ -20,8 +20,8 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() dataSource: MatTableDataSource<EventInfo>;
   @Input() displayedColumns$: Observable<string[]>;
   @Input() markerSelected$: Subject<GeoMarker>;
-  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
-  @ViewChild(MatSort, {static: false}) sort: MatSort;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
   expandedElement: EventInfo | null;
   showDetail = false;
   private subscription: Subscription;
