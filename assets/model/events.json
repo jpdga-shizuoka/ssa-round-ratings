@@ -47,8 +47,8 @@
   "title": "The 16th Kyoto Classic",
   "location": "Kyoto Tamba Park",
   "period": {
-    "from": "2020-11-14",
-    "to": "2020-11-15"
+    "from": "2020-11-21",
+    "to": "2020-11-22"
   },
   "jpdga": {
     "eventId": "549"
@@ -152,8 +152,8 @@
   "title": "The 9th Hokkaido Open",
   "location": "Hunka-wan Panolama Park",
   "period": {
-    "from": "2020-07-11",
-    "to": "2020-07-12"
+    "from": "2020-07-04",
+    "to": "2020-07-05"
   },
   "jpdga": {
     "eventId": "535"
@@ -284,7 +284,9 @@
     "eventId": "44595"
   },
   "jpdga": {
-    "eventId": "521"
+    "eventId": "521",
+    "topicId": "1450",
+    "photoId": "72157713245269286"
   }
 }, {
   "title": "The 6th Kagoshima Open",
