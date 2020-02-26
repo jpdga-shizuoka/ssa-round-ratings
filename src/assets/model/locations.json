@@ -103,6 +103,10 @@
     "prefecture": "Yamanashi",
     "geolocation": [35.928824, 138.436223]
   },
+  "kasaharagreenheights": {
+    "prefecture": "Gifu",
+    "geolocation": [35.304156, 137.164177]
+  },
   "hiruganokogen": {
     "prefecture": "Gifu",
     "geolocation": [36.006050, 136.907814]
@@ -134,6 +138,10 @@
   "mikawarinkairyokuchi": {
     "prefecture": "Aichi",
     "geolocation": [34.788696, 137.323191]
+  },
+  "shinshiropark": {
+    "prefecture": "Aichi",
+    "geolocation": [34.932346, 137.542337]
   },
   "kyototambapark": {
     "prefecture": "Kyoto",
