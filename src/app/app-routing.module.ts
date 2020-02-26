@@ -8,7 +8,7 @@ import { AboutThisSiteComponent } from './about-this-site/about-this-site.compon
 const routes: Routes = [
   { path: '', redirectTo: '/events/upcoming', pathMatch: 'full' },
   { path: 'events/upcoming', component: EventsTabsComponent, data: {
-    title: 'DG Japan - Offcial Events',
+    title: 'DG Japan - JPDGA\'s Official Events',
     description: 'Official schedule of the disc golf events held in Japan.',
     keywords: 'disc golf,official tournaments,japan',
     url: 'https://jpdga-shizuoka.github.io/ssa-round-ratings/events/upcoming',
