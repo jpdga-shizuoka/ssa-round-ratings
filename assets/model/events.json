@@ -8,6 +8,10 @@
   "urls": [{
     "type": "website",
     "title": "Official Site",
+    "url": "http://japanopen.info"
+    },{
+    "type": "website",
+    "title": "Facebook",
     "url": "https://www.facebook.com/Japan-Open-Disc-Golf-2021-108089080754300/"
   },{
     "type": "video",
