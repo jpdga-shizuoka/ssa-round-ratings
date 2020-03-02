@@ -15,6 +15,10 @@
     "prefecture": "Fukushima",
     "geolocation": [37.593227, 140.929094]
   },
+  "okawafurusatopark": {
+    "prefecture": "Fukushima",
+    "geolocation": [37.244885, 139.858533]
+  },
   "maikodiscgolfpark": {
     "prefecture": "Niigata",
     "geolocation": [36.982452, 138.826901]
