@@ -20,7 +20,7 @@ describe('workspace-project App', () => {
 
   it('should display the footer title', () => {
     page.navigateTo();
-    expect(page.getFooterText()).toEqual('Copyright © 2019 SHIZUOKA@JPDGA');
+    expect(page.getFooterText()).toEqual('Copyright © 2019-2020 SHIZUOKA@JPDGA');
   });
 
   afterEach(async () => {
