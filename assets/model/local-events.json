@@ -1,5 +1,22 @@
 [{
   "category": "local",
+  "title": "The 18th Minami Aizu Open",
+  "location": "Okawa Furusato Park",
+  "period": {
+    "from": "2020-08-30",
+    "to": "2020-08-30"
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Facebook 🇯🇵",
+    "url": "https://www.facebook.com/aizuop/"
+  }, {
+    "type": "website",
+    "title": "Facebook Event 🇯🇵",
+    "url": "https://www.facebook.com/events/624679641650201/"
+  }]
+}, {
+  "category": "local",
   "title": "The 2019 Iwate Disc Golf Tournament",
   "location": "Hanamaki Koiki Park",
   "period": {

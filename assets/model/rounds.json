@@ -1,6 +1,6 @@
 [{
     "event": "The 3rd Miyagi Michinoku Open",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "CANCELED",
     "date": "2020-03-21",
     "holes": 18
 },
@@ -8,6 +8,7 @@
     "event": "The 2020 National Doubles Championship",
     "round": "Rd1,Rd2,Rd3",
     "date": "2020-03-01",
+    "hla": 83,
     "holes": 18
 },
 {
