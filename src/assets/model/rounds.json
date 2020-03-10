@@ -16,7 +16,17 @@
     "round": "Rd1,Rd2,Rd3",
     "date": "2020-02-15",
     "hla": 99,
-    "holes": 18
+    "holes": 18,
+    "ratings": {
+        "player1": {
+          "score": 49,
+          "rating": 1074
+        },
+        "player2": {
+          "score": 78,
+          "rating": 833
+        }
+    }
 },
 {
     "event": "The 6th Kagoshima Open",
