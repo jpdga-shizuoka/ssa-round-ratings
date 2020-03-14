@@ -88,7 +88,7 @@
 },
 {
   "event": "The 33rd Kyushu Open",
-  "round": "Rd2()",
+  "round": "Rd2,Rd3()",
   "date": "2019-11-30",
   "holes": 18,
   "ratings": {
@@ -99,22 +99,6 @@
       "player2": {
           "score": 63,
           "rating": 878
-      }
-  }
-},
-{
-  "event": "The 33rd Kyushu Open",
-  "round": "Rd3()",
-  "date": "2019-12-01",
-  "holes": 18,
-  "ratings": {
-      "player1": {
-          "score": 49,
-          "rating": 1017
-      },
-      "player2": {
-          "score": 67,
-          "rating": 838
       }
   }
 },
