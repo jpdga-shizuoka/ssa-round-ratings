@@ -1,8 +1,12 @@
 [![Build Status](https://travis-ci.org/jpdga-shizuoka/ssa-round-ratings.svg?branch=master)](https://travis-ci.org/jpdga-shizuoka/ssa-round-ratings)
 
-# DG Japan App
+![DG JAPAN](https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/img/DGJAPAN.png)
 
-This is a small project for disc golfers who love playing disc golf.
+This is a small project for disc golfers who love playing disc golf in Japan.
+
+## Website
+
+The [DG Japan](https://jpdga-shizuoka.github.io/ssa-round-ratings/) which is a website for this project is running on the GitHub Pages.
 
 ## Deploy
 
@@ -14,9 +18,8 @@ ng deploy
 
 ## References
 
-* Platforme: [Angular](https://angular.io)
-* UI: [Angular Material](https://material.angular.io)
+* Web Application Framework: [Angular](https://angular.io)
 * Deploy to Github Pages: [angular-cli-ghpages](https://github.com/angular-schule/angular-cli-ghpages)
 
 ## Author
-KINOSHITA minoru (SHIZUOKA@JPDGA)
+KINOSHITA minoru
