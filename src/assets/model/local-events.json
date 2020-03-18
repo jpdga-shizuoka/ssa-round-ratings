@@ -1,5 +1,22 @@
 [{
   "category": "local",
+  "title": "The 18th Minami Aizu Open",
+  "location": "Okawa Furusato Park",
+  "period": {
+    "from": "2020-08-30",
+    "to": "2020-08-30"
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Facebook 🇯🇵",
+    "url": "https://www.facebook.com/aizuop/"
+  }, {
+    "type": "website",
+    "title": "Facebook Event 🇯🇵",
+    "url": "https://www.facebook.com/events/624679641650201/"
+  }]
+}, {
+  "category": "local",
   "title": "The 2019 Iwate Disc Golf Tournament",
   "location": "Hanamaki Koiki Park",
   "period": {
@@ -163,8 +180,99 @@
   "title": "The Aichi Open Disc Golf Series",
   "location": "Mikawa Rinkai Ryokuchi",
   "period": {
-    "from": "2020-03-08",
-    "to": "2020-03-08"
+    "from": "2020-04-12",
+    "to": "2020-04-12"
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Aichi Flying Disc Association 🇯🇵",
+    "url": "https://aifda.or.jp/category/discgolf/"
+  }]
+}, {
+  "category": "local",
+  "title": "The Aichi Open Disc Golf Series",
+  "location": "Shimin Shiki-no-mori",
+  "period": {
+    "from": "2020-05-24",
+    "to": "2020-05-24"
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Aichi Flying Disc Association 🇯🇵",
+    "url": "https://aifda.or.jp/category/discgolf/"
+  }]
+}, {
+  "category": "local",
+  "title": "The Aichi Open Disc Golf Series",
+  "location": "Shimin Shiki-no-mori",
+  "period": {
+    "from": "2020-07-05",
+    "to": "2020-07-05"
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Aichi Flying Disc Association 🇯🇵",
+    "url": "https://aifda.or.jp/category/discgolf/"
+  }]
+}, {
+  "category": "local",
+  "title": "The Aichi Open Doubles Tournament",
+  "location": "Shinshiro Park",
+  "period": {
+    "from": "2020-08-02",
+    "to": "2020-08-02"
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Aichi Flying Disc Association 🇯🇵",
+    "url": "https://aifda.or.jp/category/discgolf/"
+  }]
+}, {
+  "category": "local",
+  "title": "The Aichi Open Disc Golf Series",
+  "location": "Shinshiro Park",
+  "period": {
+    "from": "2020-10-04",
+    "to": "2020-10-04"
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Aichi Flying Disc Association 🇯🇵",
+    "url": "https://aifda.or.jp/category/discgolf/"
+  }]
+}, {
+  "category": "local",
+  "title": "The Aichi Open Disc Golf Series",
+  "location": "Kasahara Green Heights",
+  "period": {
+    "from": "2020-11-29",
+    "to": "2020-11-29"
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Aichi Flying Disc Association 🇯🇵",
+    "url": "https://aifda.or.jp/category/discgolf/"
+  }]
+}, {
+  "category": "local",
+  "title": "The New Year Disc Golf Tournament",
+  "location": "Shimin Shiki-no-mori",
+  "period": {
+    "from": "2021-01-10",
+    "to": "2021-01-10"
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Aichi Flying Disc Association 🇯🇵",
+    "url": "https://aifda.or.jp/category/discgolf/"
+  }]
+}, {
+  "category": "local",
+  "title": "The Aichi Open Disc Golf Series",
+  "location": "Mikawa Rinkai Ryokuchi",
+  "period": {
+    "from": "2021-03-07",
+    "to": "2021-03-07"
   },
   "urls": [{
     "type": "website",

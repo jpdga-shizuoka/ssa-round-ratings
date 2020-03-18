@@ -95,11 +95,20 @@ export class EventDetailComponent {
 
   private makeMiscInfo() {
     const info: MiscInfo[] = [];
+    if (this.event.pdga) {
+      if (this.event.pdga.eventId) {
+        info.push({
+          icon: 'public',
+          title: 'PDGA 🇺🇸',
+          url: this.cs.getPdgaResult(this.event.pdga.eventId)
+        });
+      }
+    }
     if (this.event.jpdga) {
       if (this.event.jpdga.eventId) {
         info.push({
           icon: 'public',
-          title: 'Papers 🇯🇵',
+          title: 'JPDGA 🇯🇵',
           url: this.cs.getJpdgaInfo(this.event.jpdga.eventId)
         });
       }

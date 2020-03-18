@@ -8,6 +8,10 @@
   "urls": [{
     "type": "website",
     "title": "Official Site",
+    "url": "http://japanopen.info"
+    },{
+    "type": "website",
+    "title": "Facebook",
     "url": "https://www.facebook.com/Japan-Open-Disc-Golf-2021-108089080754300/"
   },{
     "type": "video",
@@ -21,6 +25,9 @@
     "from": "2020-12-12",
     "to": "2020-12-13"
   },
+  "pdga": {
+    "eventId": "45291"
+  },
   "jpdga": {
     "eventId": "551"
   }
@@ -30,6 +37,9 @@
   "period": {
     "from": "2020-11-28",
     "to": "2020-11-29"
+  },
+  "pdga": {
+    "eventId": "45290"
   },
   "jpdga": {
     "eventId": "550"
@@ -47,8 +57,11 @@
   "title": "The 16th Kyoto Classic",
   "location": "Kyoto Tamba Park",
   "period": {
-    "from": "2020-11-14",
-    "to": "2020-11-15"
+    "from": "2020-11-21",
+    "to": "2020-11-22"
+  },
+  "pdga": {
+    "eventId": "45289"
   },
   "jpdga": {
     "eventId": "549"
@@ -75,6 +88,9 @@
     "from": "2020-10-10",
     "to": "2020-10-11"
   },
+  "pdga": {
+    "eventId": "45288"
+  },
   "jpdga": {
     "eventId": "547"
   }
@@ -84,6 +100,9 @@
   "period": {
     "from": "2020-09-20",
     "to": "2020-09-21"
+  },
+  "pdga": {
+    "eventId": "45287"
   },
   "jpdga": {
     "eventId": "545"
@@ -95,6 +114,9 @@
     "from": "2020-09-05",
     "to": "2020-09-06"
   },
+  "pdga": {
+    "eventId": "45286"
+  },
   "jpdga": {
     "eventId": "544"
   }
@@ -104,6 +126,9 @@
   "period": {
     "from": "2020-08-09",
     "to": "2020-08-10"
+  },
+  "pdga": {
+    "eventId": "45285"
   },
   "jpdga": {
     "eventId": "542"
@@ -120,15 +145,21 @@
     "from": "2020-08-01",
     "to": "2020-08-02"
   },
+  "pdga": {
+    "eventId": "45284"
+  },
   "jpdga": {
     "eventId": "541"
   }
 }, {
-  "title": "The 23rd Kanto Open",
+  "title": "The 24th Kanto Open",
   "location": "Kiyohara Kohgyo Danchi",
   "period": {
     "from": "2020-07-24",
     "to": "2020-07-26"
+  },
+  "pdga": {
+    "eventId": "45283"
   },
   "jpdga": {
     "eventId": "539"
@@ -152,8 +183,11 @@
   "title": "The 9th Hokkaido Open",
   "location": "Hunka-wan Panolama Park",
   "period": {
-    "from": "2020-07-11",
-    "to": "2020-07-12"
+    "from": "2020-07-04",
+    "to": "2020-07-05"
+  },
+  "pdga": {
+    "eventId": "45282"
   },
   "jpdga": {
     "eventId": "535"
@@ -164,6 +198,9 @@
   "period": {
     "from": "2020-06-27",
     "to": "2020-06-28"
+  },
+  "pdga": {
+    "eventId": "45281"
   },
   "jpdga": {
     "eventId": "534"
@@ -195,6 +232,9 @@
     "from": "2020-05-23",
     "to": "2020-05-24"
   },
+  "pdga": {
+    "eventId": "45280"
+  },
   "jpdga": {
     "eventId": "530"
   }
@@ -205,6 +245,9 @@
     "from": "2020-05-16",
     "to": "2020-05-17"
   },
+  "pdga": {
+    "eventId": "45279"
+  },
   "jpdga": {
     "eventId": "529"
   }
@@ -212,8 +255,8 @@
   "title": "The 16th Minamisoma Open",
   "location": "Minamisoma Hose Riding Park",
   "period": {
-    "from": "2020-05-04",
-    "to": "2020-05-05"
+    "from": "2020-05-03",
+    "to": "2020-05-04"
   },
   "jpdga": {
     "eventId": "528"
@@ -225,6 +268,9 @@
     "from": "2020-05-04",
     "to": "2020-05-05"
   },
+  "pdga": {
+    "eventId": "45278"
+  },
   "jpdga": {
     "eventId": "527"
   }
@@ -234,6 +280,9 @@
   "period": {
     "from": "2020-04-11",
     "to": "2020-04-12"
+  },
+  "pdga": {
+    "eventId": "45277"
   },
   "jpdga": {
     "eventId": "526"
@@ -259,7 +308,9 @@
     "eventId": "44596"
   },
   "jpdga": {
-    "eventId": "522"
+    "eventId": "522",
+    "topicId": "1460",
+    "photoId": "72157713382818823"
   }
 }, {
   "title": "The 2020 National Team Championship",
@@ -284,7 +335,9 @@
     "eventId": "44595"
   },
   "jpdga": {
-    "eventId": "521"
+    "eventId": "521",
+    "topicId": "1450",
+    "photoId": "72157713245269286"
   }
 }, {
   "title": "The 6th Kagoshima Open",
