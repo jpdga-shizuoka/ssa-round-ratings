@@ -21,6 +21,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -80,6 +82,8 @@ import { environment } from '../environments/environment';
     MatDialogModule,
     MatBottomSheetModule,
     AgmCoreModule.forRoot({ apiKey: environment.MAP_API_KEY }),
+    MatGridListModule,
+    MatMenuModule,
   ],
   entryComponents: [
     NoticeBottomsheetComponent,
