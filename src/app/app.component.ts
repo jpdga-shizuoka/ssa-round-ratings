@@ -41,6 +41,10 @@ export class AppComponent implements OnInit, OnDestroy {
     this.isHandset$ = isHandset(breakpointObserver);
   }
 
+  get home() {
+    return this.cs.getMenuAliase('Home');    
+  }
+
   get upcomingEvents() {
     return this.cs.getMenuAliase('Upcoming Events');
   }

@@ -21,6 +21,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
+import { DashBoardComponent } from './dash-board/dash-board.component';
 import { RoundsTabsComponent } from './rounds-tabs/rounds-tabs.component';
 import { RoundsTableComponent } from './rounds-table/rounds-table.component';
 import { RoundDetailComponent } from './round-detail/round-detail.component';
@@ -40,6 +41,7 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
+        DashBoardComponent,
         RoundsTabsComponent,
         RoundsTableComponent,
         RoundDetailComponent,

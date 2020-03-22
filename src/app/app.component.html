@@ -8,6 +8,11 @@
       <span>{{title}}</span>
     </mat-toolbar>
     <mat-nav-list>
+      <a mat-list-item routerLink=""
+        routerLinkActive="menu-active" [routerLinkActiveOptions]="{exact: true}"
+        (click)="onClickLink()">
+        <mat-icon>home</mat-icon>{{home}}
+      </a>
       <a mat-list-item routerLink="/events/upcoming"
         routerLinkActive="menu-active"
         (click)="onClickLink()">

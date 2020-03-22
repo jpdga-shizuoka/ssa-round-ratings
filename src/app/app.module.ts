@@ -24,6 +24,7 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { DashBoardComponent } from './dash-board/dash-board.component';
 import { RoundsTabsComponent } from './rounds-tabs/rounds-tabs.component';
 import { RoundsTableComponent } from './rounds-table/rounds-table.component';
 import { RoundDetailComponent } from './round-detail/round-detail.component';
@@ -53,6 +54,7 @@ import { environment } from '../environments/environment';
     NoticeBottomsheetComponent,
     BottomSheetDetailDisabledComponent,
     MarkerDialogComponent,
+    DashBoardComponent,
   ],
   imports: [
     BrowserModule,
