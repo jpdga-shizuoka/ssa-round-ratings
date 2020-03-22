@@ -64,6 +64,15 @@ export class RoundDetailComponent {
     return `${this.round.holes} holes @ ${this.round.round}`;
   }
 
+  get totalPlayers() {
+    if (this.event.players) {
+      return this.event.players.pro
+      + this.event.players.ama
+      + this.event.players.misc;
+    }
+    return 0;
+  }
+
   get src() {
     const ssa = this.round.ssa;
     if (!ssa) {

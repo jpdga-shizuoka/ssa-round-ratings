@@ -10,6 +10,10 @@
         <a href="{{geolocation}}"><mat-icon>room</mat-icon>{{location}}<mat-icon>launch</mat-icon></a>
       </td>
     </tr>
+    <tr *ngIf="totalPlayers">
+      <td>Players:</td>
+      <td><mat-icon>emoji_people</mat-icon>{{totalPlayers}}</td>
+    </tr>
     <tr>
       <td>Round:</td>
       <td><mat-icon>golf_course</mat-icon>{{roundStatus}}</td>
