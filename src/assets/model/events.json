@@ -363,6 +363,11 @@
       "eventId": "521",
       "topicId": "1450",
       "photoId": "72157713245269286"
+    },
+    "players": {
+      "pro": 35,
+      "ama": 8,
+      "misc": 17
     }
   },
   {
@@ -379,6 +384,11 @@
       "eventId": "520",
       "topicId": "1444",
       "photoId": "72157712911825508"
+    },
+    "players": {
+      "pro": 22,
+      "ama": 26,
+      "misc": 2
     }
   },
   {
@@ -392,6 +402,11 @@
       "eventId": "519",
       "topicId": "1447",
       "photoId": "72157713049715633"
+    },
+    "players": {
+      "pro": 28,
+      "ama": 36,
+      "misc": 0
     }
   },
   {
@@ -408,6 +423,11 @@
       "eventId": "518",
       "topicId": "1439",
       "photoId": "72157712376685396"
+    },
+    "players": {
+      "pro": 42,
+      "ama": 16,
+      "misc": 0
     },
     "urls": [
       {
@@ -436,6 +456,11 @@
       "eventId": "517",
       "topicId": "1436",
       "photoId": "72157712036090861"
+    },
+    "players": {
+      "pro": 38,
+      "ama": 26,
+      "misc": 0
     },
     "urls": [
       {
@@ -469,6 +494,11 @@
       "eventId": "516",
       "topicId": "1435",
       "photoId": "72157712068608068"
+    },
+    "players": {
+      "pro": 24,
+      "ama": 17,
+      "misc": 0
     }
   },
   {
@@ -481,6 +511,11 @@
     "jpdga": {
       "eventId": "515",
       "topicId": "1437"
+    },
+    "players": {
+      "pro": 77,
+      "ama": 67,
+      "misc": 2
     },
     "urls": [
       {
@@ -503,6 +538,11 @@
     "jpdga": {
       "eventId": "514",
       "topicId": "1424"
+    },
+    "players": {
+      "pro": 18,
+      "ama": 13,
+      "misc": 0
     }
   },
   {
@@ -516,6 +556,11 @@
       "eventId": "513",
       "topicId": "1422",
       "photoId": "72157711341840056"
+    },
+    "players": {
+      "pro": 14,
+      "ama": 94,
+      "misc": 11
     }
   },
   {
@@ -531,6 +576,11 @@
     "jpdga": {
       "eventId": "512",
       "topicId": "1426"
+    },
+    "players": {
+      "pro": 52,
+      "ama": 11,
+      "misc": 0
     },
     "urls": [
       {
@@ -553,6 +603,11 @@
     "jpdga": {
       "eventId": "510",
       "topicId": "1414"
+    },
+    "players": {
+      "pro": 21,
+      "ama": 20,
+      "misc": 0
     }
   },
   {
@@ -566,6 +621,11 @@
       "eventId": "509",
       "topicId": "1413",
       "photoId": "72157710683372748"
+    },
+    "players": {
+      "pro": 15,
+      "ama": 12,
+      "misc": 0
     }
   },
   {
@@ -582,6 +642,11 @@
       "eventId": "507",
       "photoId": "72157710501866671",
       "topicId": "1410"
+    },
+    "players": {
+      "pro": 40,
+      "ama": 25,
+      "misc": 0
     },
     "urls": [
       {
@@ -610,6 +675,11 @@
       "eventId": "505",
       "photoId": "72157710404110366",
       "topicId": "1407"
+    },
+    "players": {
+      "pro": 57,
+      "ama": 0,
+      "misc": 0
     },
     "urls": [
       {
@@ -644,6 +714,11 @@
       "photoId": "72157709849371966",
       "topicId": "1402"
     },
+    "players": {
+      "pro": 44,
+      "ama": 47,
+      "misc": 0
+    },
     "urls": [
       {
         "type": "video",
@@ -671,6 +746,11 @@
       "eventId": "501",
       "topicId": "1398",
       "photoId": "72157709674420071"
+    },
+    "players": {
+      "pro": 20,
+      "ama": 7,
+      "misc": 5
     }
   },
   {
@@ -687,6 +767,11 @@
       "eventId": "499",
       "topicId": "1397",
       "photoId": "72157709282956977"
+    },
+    "players": {
+      "pro": 33,
+      "ama": 9,
+      "misc": 0
     },
     "urls": [
       {
@@ -709,6 +794,11 @@
     "jpdga": {
       "eventId": "498",
       "topicId": "1389"
+    },
+    "players": {
+      "pro": 29,
+      "ama": 15,
+      "misc": 0
     },
     "urls": [
       {
@@ -742,6 +832,11 @@
       "eventId": "497",
       "topicId": "1388",
       "photoId": "72157708811878088"
+    },
+    "players": {
+      "pro": 33,
+      "ama": 10,
+      "misc": 2
     }
   },
   {
@@ -758,6 +853,27 @@
       "eventId": "495",
       "topicId": "1385",
       "photoId": "72157707015695201"
+    },
+    "players": {
+      "pro": 22,
+      "ama": 12,
+      "misc": 9
+    }
+  },
+  {
+    "title": "The 15th Minamisoma Open",
+    "location": "Minamisoma Hose Riding Park",
+    "period": {
+      "from": "2019-05-04",
+      "to": "2019-05-05"
+    },
+    "jpdga": {
+      "eventId": "496"
+    },
+    "players": {
+      "pro": 64,
+      "ama": 0,
+      "misc": 0
     }
   },
   {
@@ -773,6 +889,11 @@
     "jpdga": {
       "eventId": "493",
       "topicId": "1378"
+    },
+    "players": {
+      "pro": 37,
+      "ama": 18,
+      "misc": 0
     }
   },
   {
@@ -798,6 +919,11 @@
     },
     "jpdga": {
       "eventId": "492"
+    },
+    "players": {
+      "pro": 27,
+      "ama": 17,
+      "misc": 0
     }
   },
   {
@@ -814,6 +940,11 @@
       "eventId": "486",
       "topicId": "1367",
       "photoId": "72157705940728961"
+    },
+    "players": {
+      "pro": 28,
+      "ama": 36,
+      "misc": 0
     }
   },
   {
@@ -829,6 +960,11 @@
     "jpdga": {
       "eventId": "485",
       "topicId": "1364"
+    },
+    "players": {
+      "pro": 36,
+      "ama": 9,
+      "misc": 18
     }
   },
   {
@@ -844,6 +980,11 @@
     "jpdga": {
       "eventId": "484",
       "topicId": "1361"
+    },
+    "players": {
+      "pro": 28,
+      "ama": 31,
+      "misc": 0
     },
     "urls": [
       {
@@ -867,6 +1008,11 @@
       "eventId": "483",
       "topicId": "1356",
       "photoId": "72157675874899007"
+    },
+    "players": {
+      "pro": 32,
+      "ama": 24,
+      "misc": 0
     }
   },
   {
@@ -883,6 +1029,11 @@
       "eventId": "482",
       "topicId": "1351",
       "photoId": "72157675302985767"
+    },
+    "players": {
+      "pro": 42,
+      "ama": 20,
+      "misc": 0
     }
   },
   {
@@ -898,6 +1049,11 @@
     "jpdga": {
       "eventId": "481",
       "topicId": "1347"
+    },
+    "players": {
+      "pro": 59,
+      "ama": 26,
+      "misc": 0
     },
     "urls": [
       {
@@ -920,6 +1076,11 @@
     "jpdga": {
       "eventId": "479",
       "topicId": "1343"
+    },
+    "players": {
+      "pro": 18,
+      "ama": 21,
+      "misc": 3
     }
   },
   {
@@ -931,6 +1092,11 @@
     },
     "jpdga": {
       "eventId": "478"
+    },
+    "players": {
+      "pro": 52,
+      "ama": 71,
+      "misc": 0
     },
     "urls": [
       {
@@ -959,6 +1125,11 @@
     },
     "jpdga": {
       "eventId": "489"
+    },
+    "players": {
+      "pro": 14,
+      "ama": 11,
+      "misc": 0
     }
   },
   {
@@ -974,6 +1145,11 @@
     "jpdga": {
       "eventId": "477",
       "topicId": "1333"
+    },
+    "players": {
+      "pro": 29,
+      "ama": 19,
+      "misc": 0
     },
     "urls": [
       {
@@ -997,6 +1173,11 @@
       "eventId": "476",
       "photoId": "72157702504739115"
     },
+    "players": {
+      "pro": 37,
+      "ama": 20,
+      "misc": 3
+    },
     "urls": [
       {
         "type": "video",
@@ -1018,6 +1199,11 @@
     "jpdga": {
       "eventId": "474",
       "topicId": "1328"
+    },
+    "players": {
+      "pro": 19,
+      "ama": 26,
+      "misc": 0
     }
   },
   {
@@ -1032,6 +1218,11 @@
     },
     "jpdga": {
       "eventId": "473"
+    },
+    "players": {
+      "pro": 19,
+      "ama": 7,
+      "misc": 0
     }
   },
   {
@@ -1048,6 +1239,11 @@
       "eventId": "471",
       "topicId": "1323",
       "photoId": "72157700649414544"
+    },
+    "players": {
+      "pro": 36,
+      "ama": 26,
+      "misc": 0
     }
   },
   {
@@ -1064,6 +1260,11 @@
       "eventId": "469",
       "topicId": "1315",
       "photoId": "72157697820242581"
+    },
+    "players": {
+      "pro": 51,
+      "ama": 37,
+      "misc": 2
     }
   },
   {
@@ -1080,6 +1281,11 @@
       "eventId": "468",
       "topicId": "1308",
       "photoId": "72157669072242757"
+    },
+    "players": {
+      "pro": 15,
+      "ama": 4,
+      "misc": 7
     }
   },
   {
@@ -1096,6 +1302,11 @@
       "eventId": "467",
       "topicId": "1304",
       "photoId": "72157668724913317"
+    },
+    "players": {
+      "pro": 33,
+      "ama": 15,
+      "misc": 0
     }
   },
   {
@@ -1111,6 +1322,11 @@
     "jpdga": {
       "eventId": "466",
       "topicId": "1295"
+    },
+    "players": {
+      "pro": 43,
+      "ama": 25,
+      "misc": 0
     },
     "urls": [
       {
@@ -1134,6 +1350,11 @@
       "eventId": "465",
       "topicId": "1297",
       "photoId": "72157667554830777"
+    },
+    "players": {
+      "pro": 35,
+      "ama": 13,
+      "misc": 2
     }
   },
   {
@@ -1150,17 +1371,11 @@
       "eventId": "464",
       "topicId": "1290",
       "photoId": "72157666684967147"
-    }
-  },
-  {
-    "title": "The 15th Minamisoma Open",
-    "location": "Minamisoma Hose Riding Park",
-    "period": {
-      "from": "2018-05-04",
-      "to": "2018-05-05"
     },
-    "jpdga": {
-      "eventId": "496"
+    "players": {
+      "pro": 26,
+      "ama": 15,
+      "misc": 0
     }
   },
   {
@@ -1172,6 +1387,11 @@
     },
     "jpdga": {
       "eventId": "462"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 64
     }
   },
   {
@@ -1188,6 +1408,11 @@
       "eventId": "461",
       "topicId": "1284",
       "photoId": "72157693175013762"
+    },
+    "players": {
+      "pro": 37,
+      "ama": 29,
+      "misc": 3
     }
   },
   {
@@ -1203,6 +1428,11 @@
     "jpdga": {
       "eventId": "460",
       "topicId": "1283"
+    },
+    "players": {
+      "pro": 38,
+      "ama": 18,
+      "misc": 0
     }
   },
   {
@@ -1218,6 +1448,11 @@
     "jpdga": {
       "eventId": "459",
       "topicId": "1278"
+    },
+    "players": {
+      "pro": 26,
+      "ama": 26,
+      "misc": 0
     }
   },
   {
@@ -1234,6 +1469,11 @@
       "eventId": "451",
       "topicId": "1274",
       "photoId": "72157688633291350"
+    },
+    "players": {
+      "pro": 30,
+      "ama": 34,
+      "misc": 2
     }
   },
   {
@@ -1250,6 +1490,11 @@
       "eventId": "450",
       "topicId": "1269",
       "photoId": "72157666163702848"
+    },
+    "players": {
+      "pro": 28,
+      "ama": 10,
+      "misc": 17
     }
   },
   {
@@ -1266,6 +1511,11 @@
       "eventId": "448",
       "topicId": "1262",
       "photoId": "72157662713540367"
+    },
+    "players": {
+      "pro": 52,
+      "ama": 40,
+      "misc": 0
     }
   },
   {
@@ -1282,6 +1532,11 @@
       "eventId": "447",
       "topicId": "1259",
       "photoId": "72157690494991624"
+    },
+    "players": {
+      "pro": 40,
+      "ama": 27,
+      "misc": 0
     }
   },
   {
@@ -1296,6 +1551,11 @@
     },
     "jpdga": {
       "eventId": "446"
+    },
+    "players": {
+      "pro": 34,
+      "ama": 22,
+      "misc": 2
     }
   },
   {
@@ -1311,6 +1571,11 @@
     "jpdga": {
       "eventId": "445",
       "topicId": "1252"
+    },
+    "players": {
+      "pro": 23,
+      "ama": 12,
+      "misc": 10
     }
   },
   {
@@ -1322,6 +1587,11 @@
     },
     "jpdga": {
       "eventId": "444"
+    },
+    "players": {
+      "pro": 32,
+      "ama": 20,
+      "misc": 0
     },
     "urls": [
       {
@@ -1340,6 +1610,11 @@
     },
     "pdga": {
       "eventId": "32819"
+    },
+    "players": {
+      "pro": 24,
+      "ama": 20,
+      "misc": 0
     },
     "jpdga": {
       "eventId": "443",
@@ -1361,6 +1636,11 @@
       "eventId": "442",
       "topicId": "1241",
       "photoId": "72157685428054912"
+    },
+    "players": {
+      "pro": 53,
+      "ama": 32,
+      "misc": 0
     }
   },
   {
@@ -1376,6 +1656,11 @@
     "jpdga": {
       "eventId": "440",
       "topicId": "1238"
+    },
+    "players": {
+      "pro": 23,
+      "ama": 37,
+      "misc": 0
     }
   },
   {
@@ -1392,6 +1677,11 @@
       "eventId": "437",
       "topicId": "1231",
       "photoId": "72157688047431615"
+    },
+    "players": {
+      "pro": 42,
+      "ama": 31,
+      "misc": 0
     }
   },
   {
@@ -1408,6 +1698,11 @@
       "eventId": "449",
       "topicId": "1224",
       "photoId": "72157684534534681"
+    },
+    "players": {
+      "pro": 30,
+      "ama": 32,
+      "misc": 0
     }
   },
   {
@@ -1421,6 +1716,11 @@
       "eventId": "453",
       "topicId": "1216",
       "photoId": "72157684237653100"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 27
     }
   },
   {
@@ -1437,6 +1737,11 @@
       "eventId": "434",
       "topicId": "1220",
       "photoId": "72157686732796795"
+    },
+    "players": {
+      "pro": 49,
+      "ama": 53,
+      "misc": 3
     }
   },
   {
@@ -1451,6 +1756,11 @@
     },
     "jpdga": {
       "eventId": "433"
+    },
+    "players": {
+      "pro": 10,
+      "ama": 2,
+      "misc": 1
     }
   },
   {
@@ -1467,6 +1777,11 @@
       "eventId": "431",
       "topicId": "1211",
       "photoId": "72157682871842313"
+    },
+    "players": {
+      "pro": 37,
+      "ama": 14,
+      "misc": 0
     }
   },
   {
@@ -1482,6 +1797,11 @@
     "jpdga": {
       "eventId": "428",
       "topicId": "1204"
+    },
+    "players": {
+      "pro": 41,
+      "ama": 28,
+      "misc": 0
     }
   },
   {
@@ -1498,6 +1818,11 @@
       "eventId": "427",
       "topicId": "1208",
       "photoId": "72157684809835335"
+    },
+    "players": {
+      "pro": 41,
+      "ama": 13,
+      "misc": 0
     }
   },
   {
@@ -1513,6 +1838,11 @@
     "jpdga": {
       "eventId": "426",
       "topicId": "1201"
+    },
+    "players": {
+      "pro": 31,
+      "ama": 17,
+      "misc": 0
     },
     "urls": [
       {
@@ -1539,6 +1869,11 @@
     },
     "jpdga": {
       "eventId": "425"
+    },
+    "players": {
+      "pro": 31,
+      "ama": 41,
+      "misc": 0
     }
   },
   {
@@ -1555,6 +1890,11 @@
       "eventId": "424",
       "topicId": "1196",
       "photoId": "72157680942530721"
+    },
+    "players": {
+      "pro": 29,
+      "ama": 32,
+      "misc": 3
     }
   },
   {
@@ -1571,6 +1911,11 @@
       "eventId": "423",
       "topicId": "1187",
       "photoId": "72157682432495346"
+    },
+    "players": {
+      "pro": 42,
+      "ama": 17,
+      "misc": 0
     }
   },
   {
@@ -1587,6 +1932,11 @@
       "eventId": "412",
       "topicId": "1179",
       "photoId": "72157681142332826"
+    },
+    "players": {
+      "pro": 28,
+      "ama": 40,
+      "misc": 0
     }
   },
   {
@@ -1603,6 +1953,11 @@
       "eventId": "411",
       "topicId": "1176",
       "photoId": "72157679184251340"
+    },
+    "players": {
+      "pro": 35,
+      "ama": 22,
+      "misc": 15
     }
   },
   {
@@ -1619,6 +1974,11 @@
       "eventId": "409",
       "topicId": "1172",
       "photoId": "72157679832154115"
+    },
+    "players": {
+      "pro": 26,
+      "ama": 26,
+      "misc": 0
     }
   },
   {
@@ -1633,6 +1993,11 @@
     },
     "jpdga": {
       "eventId": "408"
+    },
+    "players": {
+      "pro": 40,
+      "ama": 24,
+      "misc": 0
     }
   },
   {
@@ -1647,6 +2012,11 @@
     },
     "jpdga": {
       "eventId": "407"
+    },
+    "players": {
+      "pro": 35,
+      "ama": 31,
+      "misc": 0
     }
   },
   {
@@ -1661,6 +2031,11 @@
     },
     "jpdga": {
       "eventId": "406"
+    },
+    "players": {
+      "pro": 51,
+      "ama": 25,
+      "misc": 0
     }
   },
   {
@@ -1675,6 +2050,11 @@
     },
     "jpdga": {
       "eventId": "405"
+    },
+    "players": {
+      "pro": 23,
+      "ama": 13,
+      "misc": 0
     },
     "urls": [
       {
@@ -1693,6 +2073,11 @@
     },
     "jpdga": {
       "eventId": "404"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
     },
     "urls": [
       {
@@ -1719,6 +2104,11 @@
     },
     "jpdga": {
       "eventId": "403"
+    },
+    "players": {
+      "pro": 32,
+      "ama": 18,
+      "misc": 0
     }
   },
   {
@@ -1733,6 +2123,11 @@
     },
     "jpdga": {
       "eventId": "402"
+    },
+    "players": {
+      "pro": 68,
+      "ama": 34,
+      "misc": 0
     }
   },
   {
@@ -1744,6 +2139,11 @@
     },
     "jpdga": {
       "eventId": "416"
+    },
+    "players": {
+      "pro": 18,
+      "ama": 7,
+      "misc": 0
     }
   },
   {
@@ -1758,6 +2158,11 @@
     },
     "jpdga": {
       "eventId": "401"
+    },
+    "players": {
+      "pro": 45,
+      "ama": 33,
+      "misc": 0
     }
   },
   {
@@ -1772,6 +2177,11 @@
     },
     "jpdga": {
       "eventId": "397"
+    },
+    "players": {
+      "pro": 65,
+      "ama": 68,
+      "misc": 0
     }
   },
   {
@@ -1786,6 +2196,11 @@
     },
     "jpdga": {
       "eventId": "395"
+    },
+    "players": {
+      "pro": 7,
+      "ama": 5,
+      "misc": 1
     }
   },
   {
@@ -1800,6 +2215,11 @@
     },
     "jpdga": {
       "eventId": "394"
+    },
+    "players": {
+      "pro": 35,
+      "ama": 22,
+      "misc": 11
     }
   },
   {
@@ -1814,6 +2234,11 @@
     },
     "jpdga": {
       "eventId": "393"
+    },
+    "players": {
+      "pro": 16,
+      "ama": 18,
+      "misc": 0
     }
   },
   {
@@ -1828,6 +2253,11 @@
     },
     "jpdga": {
       "eventId": "392"
+    },
+    "players": {
+      "pro": 36,
+      "ama": 35,
+      "misc": 0
     }
   },
   {
@@ -1842,6 +2272,11 @@
     },
     "jpdga": {
       "eventId": "391"
+    },
+    "players": {
+      "pro": 33,
+      "ama": 16,
+      "misc": 13
     }
   },
   {
@@ -1856,6 +2291,11 @@
     },
     "jpdga": {
       "eventId": "390"
+    },
+    "players": {
+      "pro": 39,
+      "ama": 26,
+      "misc": 0
     }
   },
   {
@@ -1870,6 +2310,11 @@
     },
     "jpdga": {
       "eventId": "389"
+    },
+    "players": {
+      "pro": 56,
+      "ama": 46,
+      "misc": 1
     }
   },
   {
@@ -1884,6 +2329,11 @@
     },
     "jpdga": {
       "eventId": "388"
+    },
+    "players": {
+      "pro": 35,
+      "ama": 21,
+      "misc": 0
     }
   },
   {
@@ -1898,6 +2348,11 @@
     },
     "jpdga": {
       "eventId": "387"
+    },
+    "players": {
+      "pro": 23,
+      "ama": 24,
+      "misc": 0
     }
   },
   {
@@ -1912,6 +2367,11 @@
     },
     "jpdga": {
       "eventId": "352"
+    },
+    "players": {
+      "pro": 42,
+      "ama": 24,
+      "misc": 0
     }
   },
   {
@@ -1926,6 +2386,11 @@
     },
     "jpdga": {
       "eventId": "351"
+    },
+    "players": {
+      "pro": 22,
+      "ama": 15,
+      "misc": 15
     }
   },
   {
@@ -1940,6 +2405,11 @@
     },
     "jpdga": {
       "eventId": "350"
+    },
+    "players": {
+      "pro": 36,
+      "ama": 29,
+      "misc": 3
     }
   },
   {
@@ -1954,6 +2424,11 @@
     },
     "jpdga": {
       "eventId": "349"
+    },
+    "players": {
+      "pro": 24,
+      "ama": 8,
+      "misc": 0
     }
   },
   {
@@ -1968,6 +2443,11 @@
     },
     "jpdga": {
       "eventId": "347"
+    },
+    "players": {
+      "pro": 46,
+      "ama": 26,
+      "misc": 0
     },
     "urls": [
       {
@@ -1990,6 +2470,11 @@
     "jpdga": {
       "eventId": "348"
     },
+    "players": {
+      "pro": 36,
+      "ama": 33,
+      "misc": 0
+    },
     "urls": [
       {
         "type": "website",
@@ -2007,6 +2492,11 @@
     },
     "jpdga": {
       "eventId": "357"
+    },
+    "players": {
+      "pro": 30,
+      "ama": 31,
+      "misc": 0
     }
   },
   {
@@ -2021,6 +2511,11 @@
     },
     "jpdga": {
       "eventId": "346"
+    },
+    "players": {
+      "pro": 22,
+      "ama": 18,
+      "misc": 0
     },
     "urls": [
       {
@@ -2039,6 +2534,11 @@
     },
     "jpdga": {
       "eventId": "344"
+    },
+    "players": {
+      "pro": 38,
+      "ama": 27,
+      "misc": 0
     },
     "urls": [
       {
@@ -2066,6 +2566,11 @@
     "jpdga": {
       "eventId": "343"
     },
+    "players": {
+      "pro": 31,
+      "ama": 25,
+      "misc": 0
+    },
     "urls": [
       {
         "type": "website",
@@ -2087,6 +2592,11 @@
     "jpdga": {
       "eventId": "342"
     },
+    "players": {
+      "pro": 60,
+      "ama": 44,
+      "misc": 3
+    },
     "urls": [
       {
         "type": "website",
@@ -2107,6 +2617,11 @@
     },
     "jpdga": {
       "eventId": "341"
+    },
+    "players": {
+      "pro": 31,
+      "ama": 33,
+      "misc": 0
     }
   },
   {
@@ -2121,6 +2636,11 @@
     },
     "jpdga": {
       "eventId": "340"
+    },
+    "players": {
+      "pro": 57,
+      "ama": 35,
+      "misc": 0
     },
     "urls": [
       {
@@ -2142,6 +2662,11 @@
     },
     "jpdga": {
       "eventId": "338"
+    },
+    "players": {
+      "pro": 41,
+      "ama": 17,
+      "misc": 22
     }
   },
   {
@@ -2156,6 +2681,11 @@
     },
     "jpdga": {
       "eventId": "335"
+    },
+    "players": {
+      "pro": 45,
+      "ama": 57,
+      "misc": 4
     },
     "urls": [
       {
@@ -2177,6 +2707,11 @@
     },
     "jpdga": {
       "eventId": "334"
+    },
+    "players": {
+      "pro": 11,
+      "ama": 10,
+      "misc": 5
     }
   },
   {
@@ -2188,6 +2723,11 @@
     },
     "jpdga": {
       "eventId": "356"
+    },
+    "players": {
+      "pro": 6,
+      "ama": 2,
+      "misc": 0
     }
   },
   {
@@ -2202,6 +2742,11 @@
     },
     "jpdga": {
       "eventId": "333"
+    },
+    "players": {
+      "pro": 34,
+      "ama": 17,
+      "misc": 0
     }
   },
   {
@@ -2216,6 +2761,11 @@
     },
     "jpdga": {
       "eventId": "332"
+    },
+    "players": {
+      "pro": 22,
+      "ama": 29,
+      "misc": 0
     }
   },
   {
@@ -2230,6 +2780,11 @@
     },
     "jpdga": {
       "eventId": "331"
+    },
+    "players": {
+      "pro": 35,
+      "ama": 37,
+      "misc": 0
     }
   },
   {
@@ -2244,6 +2799,11 @@
     },
     "jpdga": {
       "eventId": "330"
+    },
+    "players": {
+      "pro": 35,
+      "ama": 21,
+      "misc": 0
     }
   },
   {
@@ -2258,6 +2818,11 @@
     },
     "jpdga": {
       "eventId": "329"
+    },
+    "players": {
+      "pro": 42,
+      "ama": 44,
+      "misc": 0
     },
     "urls": [
       {
@@ -2279,6 +2844,11 @@
     },
     "jpdga": {
       "eventId": "328"
+    },
+    "players": {
+      "pro": 35,
+      "ama": 22,
+      "misc": 0
     }
   },
   {
@@ -2293,6 +2863,11 @@
     },
     "jpdga": {
       "eventId": "318"
+    },
+    "players": {
+      "pro": 28,
+      "ama": 38,
+      "misc": 0
     }
   },
   {
@@ -2307,6 +2882,11 @@
     },
     "jpdga": {
       "eventId": "317"
+    },
+    "players": {
+      "pro": 21,
+      "ama": 29,
+      "misc": 20
     }
   },
   {
@@ -2321,6 +2901,11 @@
     },
     "jpdga": {
       "eventId": "321"
+    },
+    "players": {
+      "pro": 35,
+      "ama": 37,
+      "misc": 4
     }
   },
   {
@@ -2335,6 +2920,11 @@
     },
     "jpdga": {
       "eventId": "349"
+    },
+    "players": {
+      "pro": 28,
+      "ama": 20,
+      "misc": 0
     }
   },
   {

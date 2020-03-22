@@ -59,6 +59,11 @@ export interface EventInfo {
   urls?: UrlInfo[];
   category?: string;
   schedule?: Schedule;
+  players?: {
+    pro: number;
+    ama: number;
+    misc: number;
+  }
 }
 
 export interface Schedule {
