@@ -1,0 +1,23 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Anual Total Players</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <ngx-charts-bar-vertical-stacked
+      [results]="chartSource"
+      [xAxis]="xAxis"
+      [yAxis]="yAxis"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      [gradient]="gradient"
+      [legend]="legend"
+      [legendPosition]="legendPosition"
+      [animations]="animations"
+      [showDataLabel]="showDataLabel"
+      [scheme]="colorScheme"
+      (select)="onSelect($event)">
+    </ngx-charts-bar-vertical-stacked>
+  </mat-card-content>
+</mat-card>

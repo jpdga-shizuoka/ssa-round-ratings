@@ -29,6 +29,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { DashBoardComponent } from './dash-board/dash-board.component';
 import { RoundsTabsComponent } from './rounds-tabs/rounds-tabs.component';
 import { RoundsTableComponent } from './rounds-table/rounds-table.component';
+import { TotalPlayersComponent } from './total-players/total-players.component';
 import { RoundDetailComponent } from './round-detail/round-detail.component';
 import { AboutThisSiteComponent } from './about-this-site/about-this-site.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
@@ -41,6 +42,7 @@ import { BottomSheetDetailDisabledComponent } from './dialogs/bottom-sheet-detai
 
 import { AgmCoreModule } from '@agm/core';
 import { environment } from '../environments/environment';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [
@@ -57,6 +59,7 @@ import { environment } from '../environments/environment';
     BottomSheetDetailDisabledComponent,
     MarkerDialogComponent,
     DashBoardComponent,
+    TotalPlayersComponent,
   ],
   imports: [
     BrowserModule,
@@ -84,6 +87,7 @@ import { environment } from '../environments/environment';
     AgmCoreModule.forRoot({ apiKey: environment.MAP_API_KEY }),
     MatGridListModule,
     MatMenuModule,
+    NgxChartsModule,
   ],
   entryComponents: [
     NoticeBottomsheetComponent,

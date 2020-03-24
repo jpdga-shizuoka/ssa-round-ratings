@@ -46,6 +46,12 @@ export interface UrlInfo {
   url: string;
 }
 
+export interface Players {
+  pro: number;
+  ama: number;
+  misc: number;
+}
+
 export interface EventInfo {
   title?: string;
   period?: {
@@ -59,11 +65,7 @@ export interface EventInfo {
   urls?: UrlInfo[];
   category?: string;
   schedule?: Schedule;
-  players?: {
-    pro: number;
-    ama: number;
-    misc: number;
-  }
+  players?: Players;
 }
 
 export interface Schedule {
@@ -109,4 +111,9 @@ export interface MiscInfo {
   icon: string;
   title: string;
   url: string;
+}
+
+export interface TotalYearPlayers {
+  year: number;
+  players: Players;
 }

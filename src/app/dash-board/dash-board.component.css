@@ -1,21 +1,15 @@
-.grid-container {
-  margin: 20px;
+.dashboard-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  justify-content: center;
 }
-
-.dashboard-card {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  right: 15px;
-  bottom: 15px;
-}
-
-.more-button {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-}
-
-.dashboard-card-content {
-  text-align: center;
+.app-total-players {
+  margin: 5px;
+  overflow: hidden;
+  max-width: 599px;
+  width: 500px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  line-height: 1.4rem;
 }

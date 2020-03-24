@@ -12,6 +12,7 @@ import PREFECTURE_ALIASE from '../assets/model/prefecture-aliase-dictionary.json
 import MENU_ALIASE from '../assets/model/menu-aliase-dictionary.json';
 
 import {
+  TotalYearPlayers, Players,
   RoundInfo, EventInfo, LocationInfo, TermDescription, Schedule, GeoMarker
 } from './models';
 
@@ -42,6 +43,45 @@ interface EventsMap {
   [key: string]: EventInfo;
 }
 
+class CEventInfo {
+
+  constructor(private event: EventInfo) {}
+
+  get year(): number {
+    const date = new Date(this.event.period.from);
+    return date.getFullYear();
+  }
+}
+
+class CTotalYearPlayers {
+  private annualPlayers = {};
+
+  add(year: number, players: Players) {
+    if (!this.annualPlayers[year]) {
+      this.annualPlayers[year] = {
+        pro: 0,
+        ama: 0,
+        misc: 0
+      };
+    }
+    this.annualPlayers[year].pro += players.pro;
+    this.annualPlayers[year].ama += players.ama;
+    this.annualPlayers[year].misc += players.misc;
+  }
+
+  get result(): TotalYearPlayers[] {
+    const result: TotalYearPlayers[] = [];
+
+    Object.keys(this.annualPlayers).forEach(key => {
+      result.push({
+        year: parseInt(key, 10),
+        players: this.annualPlayers[key]
+      });
+    });
+    return result;
+  }
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -61,6 +101,8 @@ export class CommonService {
 
   getEvents(category: string): EventInfo[] {
     switch (category) {
+      case 'past':
+        return filterPastEvents(EVENTS);
       case 'upcoming':
         return filterUpcomingEvents(EVENTS);
       case 'local':
@@ -69,6 +111,18 @@ export class CommonService {
         return MONTHLY_EVENTS;
     }
     return [];
+  }
+
+  getTotalPlayers(): TotalYearPlayers[] {
+    const events = this.getEvents('past');
+    const total = new CTotalYearPlayers();
+    events.forEach(event => {
+      if (event.players) {
+        const info = new CEventInfo(event);
+        total.add(info.year, event.players);
+      }
+    });
+    return total.result;
   }
 
   getDate(event: EventInfo): string {
@@ -335,6 +389,23 @@ function filterUpcomingEvents(events: EventInfo[]): EventInfo[] {
   for (const event of events) {
     const date = new Date(event.period.to);
     if (date.getTime() > now) {
+      result.push(event);
+    }
+  }
+  result.sort((a, b) => {
+    const t1 = new Date(a.period.from);
+    const t2 = new Date(b.period.to);
+    return t1.getTime() - t2.getTime();
+  });
+  return result;
+}
+
+function filterPastEvents(events: EventInfo[]): EventInfo[] {
+  const result: EventInfo[] = [];
+  const now = Date.now();
+  for (const event of events) {
+    const date = new Date(event.period.to);
+    if (date.getTime() < now) {
       result.push(event);
     }
   }

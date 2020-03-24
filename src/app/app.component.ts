@@ -42,7 +42,7 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   get home() {
-    return this.cs.getMenuAliase('Home');    
+    return this.cs.getMenuAliase('Home');
   }
 
   get upcomingEvents() {
