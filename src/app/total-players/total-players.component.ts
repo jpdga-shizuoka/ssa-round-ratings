@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, BehaviorSubject, Subject } from 'rxjs';
 
 import { CommonService } from '../common.service';
 
@@ -28,7 +27,7 @@ export class TotalPlayersComponent implements OnInit {
   xAxisLabel = 'Year';
   yAxisLabel = 'Players';
   gradient = false;
-  legend = true;
+  legend = false;
   legendPosition = 'below';
   showDataLabel = true;
   animations = true;

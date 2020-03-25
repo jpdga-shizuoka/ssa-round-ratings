@@ -1,29 +1,24 @@
-<div class="dashboard-container">
+<mat-tab-group>
+  <mat-tab label="Upcoming Events">
+    <app-events-table
+      [dataSource]="tableSourceUpcoming"
+      [displayedColumns$]="displayedColumnsUpcoming$">
+    </app-events-table>
+  </mat-tab>
+</mat-tab-group>
 
-  <mat-card class="card">
-    <mat-card-header>
-      <mat-card-title>Upcoming Events</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <app-events-table
-        [dataSource]="tableSourceUpcoming"
-        [displayedColumns$]="displayedColumnsUpcoming$">
-      </app-events-table>
-    </mat-card-content>
-  </mat-card>
+<mat-tab-group>
+  <mat-tab label="Latest Results">
+    <app-rounds-table
+      [dataSource]="tableSourcePast"
+      [displayedColumns$]="displayedColumnsPast$">
+    </app-rounds-table>
+  </mat-tab>
+</mat-tab-group>
 
-  <mat-card class="card">
-    <mat-card-header>
-      <mat-card-title>Latest Results</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <app-rounds-table
-        [dataSource]="tableSourcePast"
-        [displayedColumns$]="displayedColumnsPast$">
-      </app-rounds-table>
-    </mat-card-content>
-  </mat-card>
-
-  <app-total-players class="app-total-players" id="app-total-players">
-  </app-total-players>
-</div>
+<mat-tab-group>
+  <mat-tab label="Anual Total Players">
+    <app-total-players>
+    </app-total-players>
+  </mat-tab>
+</mat-tab-group>
