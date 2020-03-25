@@ -1,6 +1,6 @@
 <div class="mat-elevation-z8">
   <div class="ratings-tools">
-    <mat-form-field class="event-search">
+    <mat-form-field class="event-search" *ngIf="showPagenator">
       <input matInput #filter [(ngModel)]="search" (keyup)="applyFilter(filter.value)" placeholder="Search...">
       <button mat-button *ngIf="search" matSuffix mat-icon-button aria-label="Clear" (click)="applyFilter('')">
         <mat-icon>close</mat-icon>
@@ -71,10 +71,10 @@
     <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="round-detail-row"></tr>
   </table>
 
-  <mat-paginator #paginator
+  <mat-paginator *ngIf="showPagenator" #paginator
       [length]="dataSource?.data.length"
       [pageIndex]="0"
       [pageSize]="20"
-      [pageSizeOptions]="[5, 10, 20, 50, 100]">
+      [pageSizeOptions]="pageSizeOptions">
   </mat-paginator>
 </div>

@@ -24,6 +24,7 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild(MatSort) sort: MatSort;
   expandedElement: EventInfo | null;
   showDetail = false;
+  pageSizeOptions = [10, 20, 50, 100];
   private subscription: Subscription;
 
   constructor(
@@ -32,9 +33,11 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.subscription = this.markerSelected$.subscribe({
-      next: marker => this.onMarkerSelected(marker)
-    });
+    if (this.markerSelected$) {
+      this.subscription = this.markerSelected$.subscribe({
+        next: marker => this.onMarkerSelected(marker)
+      });
+    }
   }
 
   ngAfterViewInit() {
@@ -43,7 +46,13 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.subscription.unsubscribe();
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
+  }
+
+  get showPagenator(): boolean {
+    return this.dataSource.data.length > this.pageSizeOptions[0];
   }
 
   getTitle(event: EventInfo): string {

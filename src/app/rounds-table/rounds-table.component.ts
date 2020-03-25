@@ -28,6 +28,7 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild(MatSort) sort: MatSort;
   expandedElement: RoundInfo | null;
   showDetail = false;
+  pageSizeOptions = [5, 10, 20, 50, 100];
   private subscription: Subscription;
   private detailDisabled = false;
   private sorted = false;
@@ -105,12 +106,14 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
       this.search = filter;
     }
 
-    this.subscription = this.markerSelected$.subscribe({
-      next: marker => {
-        const locationName = this.cs.getLocationName(marker.location);
-        this.applyFilter(locationName);
-      }
-    });
+    if (this.markerSelected$) {
+      this.subscription = this.markerSelected$.subscribe({
+        next: marker => {
+          const locationName = this.cs.getLocationName(marker.location);
+          this.applyFilter(locationName);
+        }
+      });
+    }
   }
 
   ngAfterViewInit() {
@@ -119,7 +122,9 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.subscription.unsubscribe();
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
   }
 
   onEventSlected(location: string) {
@@ -141,6 +146,10 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     }
     this.detailDisabled = this.sorted;
     this.search = filterValue;
+  }
+
+  get showPagenator() {
+    return this.dataSource.data.length > this.pageSizeOptions[0];
   }
 
   get showHistory() {

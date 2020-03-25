@@ -13,3 +13,12 @@
   flex-shrink: 1;
   line-height: 1.4rem;
 }
+.card {
+  margin: 5px;
+  overflow: hidden;
+  max-width: 599px;
+  width: 500px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  line-height: 1.4rem;
+}

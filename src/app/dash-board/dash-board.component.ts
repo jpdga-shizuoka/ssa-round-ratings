@@ -1,33 +1,49 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import { MatTableDataSource } from '@angular/material/table';
+import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
+
+import { CommonService, EventInfo, RoundInfo } from '../common.service';
+import { isHandset } from '../utilities';
+
+const DISPLAYED_COLUMNS_UPCOMING = [['date', 'title'], ['date', 'title', 'location']];
+const DISPLAYED_COLUMNS_PAST = [['event', 'hla', 'ssa'], ['year', 'event', 'round', 'hla', 'ssa']];
 
 @Component({
   selector: 'app-dash-board',
   templateUrl: './dash-board.component.html',
   styleUrls: ['./dash-board.component.css']
 })
-export class DashBoardComponent {
-  /** Based on the screen size, switch from standard to one column per row */
-  cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
-    map(({ matches }) => {
-      if (matches) {
-        return [
-          { title: 'Card 1', cols: 1, rows: 1 },
-          { title: 'Card 2', cols: 1, rows: 1 },
-          { title: 'Card 3', cols: 1, rows: 1 },
-          { title: 'Card 4', cols: 1, rows: 1 }
-        ];
-      }
+export class DashBoardComponent implements OnInit {
 
-      return [
-        { title: 'Card 1', cols: 2, rows: 1 },
-        { title: 'Card 2', cols: 1, rows: 1 },
-        { title: 'Card 3', cols: 1, rows: 2 },
-        { title: 'Card 4', cols: 1, rows: 1 }
-      ];
-    })
-  );
+  tableSourceUpcoming: MatTableDataSource<EventInfo>;
+  tableSourcePast: MatTableDataSource<RoundInfo>;
+  isHandset$: Observable<boolean>;
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(
+    private cs: CommonService,
+    breakpointObserver: BreakpointObserver,
+  ) {
+    this.isHandset$ = isHandset(breakpointObserver);
+  }
+
+  ngOnInit() {
+    this.tableSourceUpcoming
+      = new MatTableDataSource<EventInfo>(this.cs.getEvents('upcoming').slice(0, 3));
+    this.tableSourcePast
+      = new MatTableDataSource<RoundInfo>(this.cs.getRounds().slice(0, 3));
+  }
+
+  get displayedColumnsUpcoming$(): Observable<string[]> {
+    return this.isHandset$.pipe(
+      map(hs => DISPLAYED_COLUMNS_UPCOMING[hs ? 0 : 1])
+    );
+  }
+
+  get displayedColumnsPast$(): Observable<string[]> {
+    return this.isHandset$.pipe(
+      map(hs => DISPLAYED_COLUMNS_PAST[hs ? 0 : 1])
+    );
+  }
 }
