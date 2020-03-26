@@ -11,7 +11,7 @@ const VIDEOS = [{
   title: 'The 33rd Kyushu Open',
   subttl: 'Kyushu Open Digest',
   date: new Date('2019-10-13'),
-  url: "https://youtu.be/vToHZBT6Frc",
+  url: 'https://youtu.be/vToHZBT6Frc',
 }];
 
 describe('VideosTableComponent', () => {
