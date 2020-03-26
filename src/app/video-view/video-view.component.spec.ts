@@ -16,6 +16,12 @@ describe('VideoViewComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(VideoViewComponent);
     component = fixture.componentInstance;
+    component.video = {
+      title: 'The 33rd Kyushu Open',
+      subttl: 'Kyushu Open Digest',
+      date: new Date('2019-10-13'),
+      url: 'https://youtu.be/vToHZBT6Frc',
+    };
     fixture.detectChanges();
   });
 
