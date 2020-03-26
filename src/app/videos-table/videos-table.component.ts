@@ -32,7 +32,7 @@ export class VideosTableComponent implements AfterViewInit, OnInit {
   }
 
   showView(video: VideoInfo): boolean {
-    return this.showDetail || this.expandedElement;
+    return this.showDetail || !!this.expandedElement;
   }
 
   isDetailExpand(video: VideoInfo): boolean {

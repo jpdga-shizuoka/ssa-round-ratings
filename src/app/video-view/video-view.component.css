@@ -1,0 +1,25 @@
+.video-view {
+  width: 100%;
+}
+.video-view mat-icon {
+  font-size: 16px;
+  height: 16px;
+  width: 16px;
+  margin: 0 5px;
+}
+@media (max-width: 374px) {
+  .video-view {
+    font-size: small;
+  }
+  .video-view mat-icon {
+    font-size: 15px;
+    height: 15px;
+    width: 15px;
+  }
+  .video-view td:first-child {
+    min-width: 5rem;
+  }
+}
+.video-link {
+  margin-bottom: 7px;
+}

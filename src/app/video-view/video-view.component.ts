@@ -10,7 +10,7 @@ const YOUTUBE = /https:\/\/youtu.be\/([0-9a-zA-Z]+)/
   templateUrl: './video-view.component.html',
   styleUrls: ['./video-view.component.css']
 })
-export class VideoViewComponent implements OnInit {
+export class VideoViewComponent implements OnInit, OnDestroy {
   @Input() video: VideoInfo;
   videoId: string | undefined = undefined;
   videoType: 'YT' | 'FB' | undefined = undefined;
@@ -18,15 +18,14 @@ export class VideoViewComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    let result = this.video.url.match(YOUTUBE);
-    if (result != null) {
-      this.videoType = 'YT';
-      this.videoId = result[1];
-    }
-    result = this.video.url.match(FACEBOOK);
-    if (result != null) {
+    let result: string[] | null;
+    if ((result = this.video.url.match(FACEBOOK)) != null) {
       this.videoType = 'FB';
       this.videoId = result[0];
+    }
+    else if ((result = this.video.url.match(YOUTUBE)) != null) {
+        this.videoType = 'YT';
+        this.videoId = result[1];
     }
     console.log('OnInit', this.videoType, this.videoId);
   }

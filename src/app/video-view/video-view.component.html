@@ -1,8 +1,14 @@
-<div *ngIf="isYoutubeVideo; else facebookVideo">
-  YouTube={{videoId}}
-  <!-- <youtube-player videoId="videoId">
-  </youtube-player> -->
+<div class="video-view">
+  <div *ngIf="isYoutubeVideo; else facebookVideo">
+    YouTube={{videoId}}
+  </div>
+  <ng-template #facebookVideo>
+    <div class="video-link">
+      <a href="{{video.url}}" target="_blank" rel="noopener">
+        <mat-icon>play_circle_filled</mat-icon>
+        Playback by Facebook
+        <mat-icon>launch</mat-icon>
+      </a>
+    </div>
+  </ng-template>
 </div>
-<ng-template #facebookVideo>
-  Facebook={{video.url}}
-</ng-template>
