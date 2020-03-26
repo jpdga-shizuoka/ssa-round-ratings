@@ -44,6 +44,7 @@ import { AgmCoreModule } from '@agm/core';
 import { environment } from '../environments/environment';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { VideosTableComponent } from './videos-table/videos-table.component';
+import { VideoViewComponent } from './video-view/video-view.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { VideosTableComponent } from './videos-table/videos-table.component';
     DashBoardComponent,
     TotalPlayersComponent,
     VideosTableComponent,
+    VideoViewComponent,
   ],
   imports: [
     BrowserModule,
