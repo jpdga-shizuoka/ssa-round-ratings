@@ -3,8 +3,6 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
 import { MatTableDataSource } from '@angular/material/table';
-// import { VideosTableDataSource, VideosTableItem } from './videos-table-datasource';
-// import { animate, state, style, transition, trigger } from '@angular/animations';
 import { detailExpand } from '../animations';
 
 import { VideoInfo } from '../models';
@@ -19,24 +17,25 @@ export class VideosTableComponent implements AfterViewInit, OnInit {
   @Input() dataSource: MatTableDataSource<VideoInfo>;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-  // @ViewChild(MatTable) table: MatTable<VideosTableItem>;
-  // dataSource: VideosTableDataSource;
-  expandedElement: VideoInfo | null;
+  expandedElement: VideoInfo | null = null;
+  showDetail = false;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = ['title', 'subttl'];
 
   ngOnInit() {
-    // this.dataSource = new VideosTableDataSource();
   }
 
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
-    // this.table.dataSource = this.dataSource;
   }
 
-  isDetailExpand(video: VideoInfo) {
+  showView(video: VideoInfo): boolean {
+    return this.showDetail || this.expandedElement;
+  }
+
+  isDetailExpand(video: VideoInfo): boolean {
     return this.expandedElement === video;
   }
 

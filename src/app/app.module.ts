@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -71,6 +72,7 @@ import { VideoViewComponent } from './video-view/video-view.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     LayoutModule,
+    YouTubePlayerModule,
     MatToolbarModule,
     MatIconModule,
     MatTooltipModule,

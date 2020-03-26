@@ -1,4 +1,8 @@
-<p>video-view works!</p>
-<p>{{video.title}}</p>
-<p>{{video.subttl}}</p>
-<p>{{video.url}}</p>
+<div *ngIf="isYoutubeVideo; else facebookVideo">
+  YouTube={{videoId}}
+  <!-- <youtube-player videoId="videoId">
+  </youtube-player> -->
+</div>
+<ng-template #facebookVideo>
+  Facebook={{video.url}}
+</ng-template>
