@@ -68,6 +68,13 @@ export interface EventInfo {
   players?: Players;
 }
 
+export interface VideoInfo {
+  title: string;
+  subttl: string;
+  date: Date;
+  url: string;
+}
+
 export interface Schedule {
   byDay: string[];      // byDay: ['su', 'mo'], // repeat only sunday and monday
   bySetPos: number;     // bySetPos: 3, // repeat every 3rd sunday (will take the first element of the byDay array)
@@ -116,4 +123,9 @@ export interface MiscInfo {
 export interface TotalYearPlayers {
   year: number;
   players: Players;
+}
+
+export interface PastLists {
+  players: TotalYearPlayers[];
+  videos: VideoInfo[];
 }

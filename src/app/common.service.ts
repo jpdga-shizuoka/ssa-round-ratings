@@ -12,7 +12,7 @@ import PREFECTURE_ALIASE from '../assets/model/prefecture-aliase-dictionary.json
 import MENU_ALIASE from '../assets/model/menu-aliase-dictionary.json';
 
 import {
-  TotalYearPlayers, Players,
+  TotalYearPlayers, Players, VideoInfo, PastLists,
   RoundInfo, EventInfo, LocationInfo, TermDescription, Schedule, GeoMarker
 } from './models';
 
@@ -123,6 +123,44 @@ export class CommonService {
       }
     });
     return total.result;
+  }
+
+  getPastLists(): PastLists {
+    const total = new CTotalYearPlayers();
+    const list: VideoInfo[] = [];
+    const events = this.getEvents('past');
+
+    events.forEach(event => {
+      if (event.players) {
+        const info = new CEventInfo(event);
+        total.add(info.year, event.players);
+      }
+      if (event.urls) {
+        event.urls.forEach(url => {
+          if (url.type === 'video') {
+            list.push({
+              title: event.title,
+              subttl: url.title,
+              date: new Date(event.period.from),
+              url: url.url,
+            });
+          }
+        });
+        list.sort((a, b) => {
+          if (a.date < b.date) {
+            return 1;
+          }
+          if (a.date > b.date) {
+            return -1;
+          }
+          return 0;
+        });
+      }
+    });
+    return {
+      players: total.result,
+      videos: list,
+    };
   }
 
   getDate(event: EventInfo): string {

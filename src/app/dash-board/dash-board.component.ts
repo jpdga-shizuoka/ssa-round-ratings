@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { CommonService, EventInfo, RoundInfo } from '../common.service';
+import { VideoInfo, TotalYearPlayers } from '../models';
 import { isHandset } from '../utilities';
 
 const DISPLAYED_COLUMNS_UPCOMING = [['date', 'title'], ['date', 'title', 'location']];
@@ -19,6 +20,8 @@ export class DashBoardComponent implements OnInit {
 
   tableSourceUpcoming: MatTableDataSource<EventInfo>;
   tableSourcePast: MatTableDataSource<RoundInfo>;
+  videosSource: MatTableDataSource<VideoInfo>;
+  playersSource: TotalYearPlayers[];
   isHandset$: Observable<boolean>;
 
   constructor(
@@ -33,6 +36,10 @@ export class DashBoardComponent implements OnInit {
       = new MatTableDataSource<EventInfo>(this.cs.getEvents('upcoming').slice(0, 3));
     this.tableSourcePast
       = new MatTableDataSource<RoundInfo>(this.cs.getRounds().slice(0, 3));
+
+    const lists = this.cs.getPastLists();
+    this.videosSource = new MatTableDataSource<VideoInfo>(lists.videos);
+    this.playersSource = lists.players;
   }
 
   get displayedColumnsUpcoming$(): Observable<string[]> {

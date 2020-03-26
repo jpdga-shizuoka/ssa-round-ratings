@@ -43,6 +43,7 @@ import { BottomSheetDetailDisabledComponent } from './dialogs/bottom-sheet-detai
 import { AgmCoreModule } from '@agm/core';
 import { environment } from '../environments/environment';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { VideosTableComponent } from './videos-table/videos-table.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     MarkerDialogComponent,
     DashBoardComponent,
     TotalPlayersComponent,
+    VideosTableComponent,
   ],
   imports: [
     BrowserModule,
