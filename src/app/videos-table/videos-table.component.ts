@@ -1,12 +1,21 @@
 import { AfterViewInit, Component, OnInit, ViewChild, Input } from '@angular/core';
+import { BreakpointObserver } from '@angular/cdk/layout';
+
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+
+import { CommonService } from '../common.service';
 import { VideoBottomsheetComponent } from '../dialogs/video-bottomsheet.component';
 import { VideoInfo } from '../models';
+import { isHandset } from '../utilities';
+
+const DISPLAYED_COLUMNS = [['title', 'subttl'], [ 'year', 'title', 'subttl']];
 
 @Component({
   selector: 'app-videos-table',
@@ -18,10 +27,21 @@ export class VideosTableComponent implements AfterViewInit, OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['title', 'subttl'];
+  isHandset$: Observable<boolean>;
 
-  constructor(private bottomSheet: MatBottomSheet) {}
+  get displayedColumns$(): Observable<string[]> {
+    return this.isHandset$.pipe(
+      map(hs => DISPLAYED_COLUMNS[hs ? 0 : 1])
+    );
+  }
+
+  constructor(
+    private cs: CommonService,
+    private bottomSheet: MatBottomSheet,
+    breakpointObserver: BreakpointObserver,
+  ) {
+    this.isHandset$ = isHandset(breakpointObserver);
+  }
 
   ngOnInit() {
     // This code loads the IFrame Player API code asynchronously, according to the instructions at
@@ -37,8 +57,11 @@ export class VideosTableComponent implements AfterViewInit, OnInit {
   }
 
   onRawClicked(video: VideoInfo) {
-    console.log('onRawClicked');
     this.openVideoSheet(video);
+  }
+
+  getTitle(video: VideoInfo): string {
+    return this.cs.getEventAliase(video.title);
   }
 
   private openVideoSheet(video: VideoInfo) {
