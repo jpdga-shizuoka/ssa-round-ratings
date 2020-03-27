@@ -1,5 +1,7 @@
 .video-view {
   width: 100%;
+  text-align: center;
+  display: block;
 }
 .video-view h1 {
   font-size: 1.4em;
@@ -15,6 +17,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  overflow: auto;
 }
 .fb-view {
   padding: 32px 0;
@@ -28,7 +31,7 @@ h1, h2, h3 {
   margin-left: auto;
   margin-right: auto;
 }
-@media (max-width: 374px) {
+@media (max-width: 420px) {
   .video-view h1 {
     font-size: 18px;
   }
@@ -49,5 +52,8 @@ h1, h2, h3 {
   }
   .fb-view {
     padding: 16px 0;
+  }
+  .yt-view {
+    overflow: visible;
   }
 }

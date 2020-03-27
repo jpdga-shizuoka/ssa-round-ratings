@@ -1,5 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MatBottomSheetRef, MAT_BOTTOM_SHEET_DATA} from '@angular/material/bottom-sheet';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 import { CommonService } from '../common.service';
 import { VideoInfo } from '../models';
@@ -17,15 +18,23 @@ const YOUTUBE_SHORT = /https:\/\/youtu.be\/([0-9a-zA-Z_\-]+)/;
 export class VideoBottomsheetComponent {
   videoId: string | undefined = undefined;
   videoType: 'YT' | 'FB' | undefined = undefined;
+  width = 640;
+  height = 390;
 
   constructor(
     @Inject(MAT_BOTTOM_SHEET_DATA) public video: VideoInfo,
+    private deviceService: DeviceDetectorService,
     private bottomSheetRef: MatBottomSheetRef<VideoBottomsheetComponent>,
     private cs: CommonService,
   ) {
     this.bottomSheetRef.afterDismissed().subscribe(() => {
       this.videoId = undefined;
     });
+
+    if (this.deviceService.isMobile()) {
+      this.width = 320;
+      this.height = 195;
+    }
 
     let result: string[] | null;
     result = this.video.url.match(FACEBOOK);
@@ -36,15 +45,15 @@ export class VideoBottomsheetComponent {
     }
     result = this.video.url.match(YOUTUBE);
     if (result != null) {
-        this.videoType = 'YT';
-        this.videoId = result[1];
-        return;
+      this.videoType = 'YT';
+      this.videoId = result[1];
+      return;
     }
     result = this.video.url.match(YOUTUBE_SHORT);
     if (result != null) {
-        this.videoType = 'YT';
-        this.videoId = result[1];
-        return;
+      this.videoType = 'YT';
+      this.videoId = result[1];
+      return;
     }
   }
 

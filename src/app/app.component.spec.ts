@@ -22,6 +22,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 
 import { AppComponent } from './app.component';
 import { DashBoardComponent } from './dash-board/dash-board.component';
@@ -38,6 +39,7 @@ import { NoticeBottomsheetComponent } from './dialogs/notice-bottomsheet.compone
 import { BottomSheetDetailDisabledComponent } from './dialogs/bottom-sheet-detail-disabled.component';
 
 import { AgmCoreModule } from '@agm/core';
+import { DeviceDetectorModule } from 'ngx-device-detector';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -78,7 +80,9 @@ describe('AppComponent', () => {
         MatCardModule,
         MatTabsModule,
         MatDialogModule,
+        MatBottomSheetModule,
         AgmCoreModule,
+        DeviceDetectorModule,
       ],
     }).compileComponents();
   }));

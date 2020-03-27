@@ -44,8 +44,9 @@ import { VideoBottomsheetComponent } from './dialogs/video-bottomsheet.component
 import { BottomSheetDetailDisabledComponent } from './dialogs/bottom-sheet-detail-disabled.component';
 
 import { AgmCoreModule } from '@agm/core';
-import { environment } from '../environments/environment';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { DeviceDetectorModule } from 'ngx-device-detector';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -94,6 +95,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     MatGridListModule,
     MatMenuModule,
     NgxChartsModule,
+    DeviceDetectorModule.forRoot(),
   ],
   entryComponents: [
     NoticeBottomsheetComponent,

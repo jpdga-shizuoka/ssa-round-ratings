@@ -1,7 +1,10 @@
 <div class="video-view">
   <div *ngIf="isYoutubeVideo; else facebookVideo">
     <div class="yt-view">
-      <youtube-player [videoId]="videoId">
+      <youtube-player
+        [videoId]="videoId"
+        [width]="width"
+        [height]="height">
       </youtube-player>
     </div>
   </div>
@@ -16,14 +19,10 @@
       </h1>
     </div>
   </ng-template>
-  <mat-nav-list>
-    <mat-list-item>
-      <h3>{{title}}</h3>
-    </mat-list-item>
-    <mat-list-item>
-      <h2>
-        {{event}}
-      </h2>
-    </mat-list-item>
-  </mat-nav-list>
+  <div>
+    <h3>{{title}}</h3>
+    <h2>
+      {{event}}
+    </h2>
+  <div>
 </div>

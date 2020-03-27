@@ -4,6 +4,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatTableDataSource } from '@angular/material/table';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 
 import { VideosTableComponent } from './videos-table.component';
 
@@ -26,6 +27,7 @@ describe('VideosTableComponent', () => {
         MatPaginatorModule,
         MatSortModule,
         MatTableModule,
+        MatBottomSheetModule,
       ]
     }).compileComponents();
   }));
