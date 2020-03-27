@@ -20,6 +20,7 @@ export class VideoBottomsheetComponent {
   videoType: 'YT' | 'FB' | undefined = undefined;
   width = 640;
   height = 390;
+  isMobile = false;
 
   constructor(
     @Inject(MAT_BOTTOM_SHEET_DATA) public video: VideoInfo,
@@ -32,6 +33,7 @@ export class VideoBottomsheetComponent {
     });
 
     if (this.deviceService.isMobile()) {
+      this.isMobile = true;
       this.width = 320;
       this.height = 195;
     }
@@ -57,6 +59,10 @@ export class VideoBottomsheetComponent {
     }
   }
 
+  get year(): number {
+    return this.video.date.getFullYear();
+  }
+
   get event(): string {
     return this.video.title;
   }
@@ -67,5 +73,9 @@ export class VideoBottomsheetComponent {
 
   get isYoutubeVideo(): boolean {
     return this.videoType === 'YT';
+  }
+
+  eventTitle(name: string) {
+    return this.cs.getEventAliase(name);
   }
 }

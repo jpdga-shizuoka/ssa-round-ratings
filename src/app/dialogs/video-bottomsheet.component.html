@@ -20,9 +20,10 @@
     </div>
   </ng-template>
   <div>
-    <h3>{{title}}</h3>
-    <h2>
-      {{event}}
-    </h2>
+    <p>{{title}}</p>
+    <h3>
+      {{eventTitle(event)}}
+    </h3>
+    <p *ngIf="isMobile">{{year}}</p>
   <div>
 </div>
