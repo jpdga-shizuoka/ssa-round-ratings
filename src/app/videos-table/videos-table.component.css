@@ -13,10 +13,3 @@ tr.element-row:active {
 .element-row td {
   border-bottom-width: 0;
 }
-
-.bottom-sheet-container {
-  width: 640px;
-  padding: 0px;
-  background: 'black';
-  background-color: 'black';
-}

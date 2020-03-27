@@ -44,7 +44,6 @@ export class VideosTableComponent implements AfterViewInit, OnInit {
   private openVideoSheet(video: VideoInfo) {
     const bottomSheetRef = this.bottomSheet.open(VideoBottomsheetComponent, {
       data: video,
-      panelClass: 'bottom-sheet-container',
     });
   }
 }
