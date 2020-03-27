@@ -31,6 +31,7 @@ import { DashBoardComponent } from './dash-board/dash-board.component';
 import { RoundsTabsComponent } from './rounds-tabs/rounds-tabs.component';
 import { RoundsTableComponent } from './rounds-table/rounds-table.component';
 import { TotalPlayersComponent } from './total-players/total-players.component';
+import { VideosTableComponent } from './videos-table/videos-table.component';
 import { RoundDetailComponent } from './round-detail/round-detail.component';
 import { AboutThisSiteComponent } from './about-this-site/about-this-site.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
@@ -39,13 +40,12 @@ import { EventsTableComponent } from './events-table/events-table.component';
 import { EventsMapComponent } from './events-map/events-map.component';
 import { MarkerDialogComponent } from './dialogs/marker-dialog.component';
 import { NoticeBottomsheetComponent } from './dialogs/notice-bottomsheet.component';
+import { VideoBottomsheetComponent } from './dialogs/video-bottomsheet.component';
 import { BottomSheetDetailDisabledComponent } from './dialogs/bottom-sheet-detail-disabled.component';
 
 import { AgmCoreModule } from '@agm/core';
 import { environment } from '../environments/environment';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { VideosTableComponent } from './videos-table/videos-table.component';
-import { VideoViewComponent } from './video-view/video-view.component';
 
 @NgModule({
   declarations: [
@@ -59,12 +59,12 @@ import { VideoViewComponent } from './video-view/video-view.component';
     EventsTableComponent,
     EventsMapComponent,
     NoticeBottomsheetComponent,
+    VideoBottomsheetComponent,
     BottomSheetDetailDisabledComponent,
     MarkerDialogComponent,
     DashBoardComponent,
     TotalPlayersComponent,
     VideosTableComponent,
-    VideoViewComponent,
   ],
   imports: [
     BrowserModule,

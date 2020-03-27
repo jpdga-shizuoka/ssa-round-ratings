@@ -1,0 +1,29 @@
+<div class="video-view">
+  <div *ngIf="isYoutubeVideo; else facebookVideo">
+    <div class="yt-view">
+      <youtube-player [videoId]="videoId">
+      </youtube-player>
+    </div>
+  </div>
+  <ng-template #facebookVideo>
+    <div class="fb-view">
+      <h1>
+        <a href="{{video.url}}" target="_blank" rel="noopener">
+          <mat-icon>play_circle_filled</mat-icon>
+          Playback by Facebook
+          <mat-icon>launch</mat-icon>
+        </a>
+      </h1>
+    </div>
+  </ng-template>
+  <mat-nav-list>
+    <mat-list-item>
+      <h3>{{title}}</h3>
+    </mat-list-item>
+    <mat-list-item>
+      <h2>
+        {{event}}
+      </h2>
+    </mat-list-item>
+  </mat-nav-list>
+</div>
