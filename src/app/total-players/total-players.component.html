@@ -1,16 +1,52 @@
-<ngx-charts-bar-vertical-stacked
-  [results]="chartSource"
-  [xAxis]="xAxis"
-  [yAxis]="yAxis"
-  [showXAxisLabel]="showXAxisLabel"
-  [showYAxisLabel]="showYAxisLabel"
-  [xAxisLabel]="xAxisLabel"
-  [yAxisLabel]="yAxisLabel"
-  [gradient]="gradient"
-  [legend]="legend"
-  [legendPosition]="legendPosition"
-  [animations]="animations"
-  [showDataLabel]="showDataLabel"
-  [scheme]="colorScheme"
-  (select)="onSelect($event)">
-</ngx-charts-bar-vertical-stacked>
+<div class="chart">
+  <ngx-charts-bar-vertical-stacked
+    [results]="chartSource"
+    [xAxis]="xAxis"
+    [yAxis]="yAxis"
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel"
+    [yAxisLabel]="yAxisLabel"
+    [gradient]="gradient"
+    [legend]="legend"
+    [legendPosition]="legendPosition"
+    [animations]="animations"
+    [showDataLabel]="showDataLabel"
+    [scheme]="colorScheme"
+    (select)="onSelect($event)">
+  </ngx-charts-bar-vertical-stacked>
+</div>
+
+<div class="legend">
+  <table>
+    <tbody>
+      <tr>
+        <td bgcolor="#008b00"></td>
+        <td>
+          Misc
+          (ジュニア等, 2018年南相馬オープンはプロ/アマ混在のためMISCとして集計)
+        </td>
+      </tr>
+      <tr>
+        <td bgcolor="#61d800"></td>
+        <td>Ama</td>
+      </tr>
+      <tr>
+        <td bgcolor="aaf255"></td>
+        <td>Pro</td>
+      </tr>
+      <tr>
+        <td>*1</td>
+        <td>JPDGA公式戦/公認戦に参加したプレーヤ数を集計</td>
+      </tr>
+      <tr>
+        <td>*2</td>
+        <td>プレーヤ数は延べ人数である</td>
+      </tr>
+      <tr>
+        <td>*3</td>
+        <td>2016年昭和記念公園オープンは記録が無いため集計に入れず</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
