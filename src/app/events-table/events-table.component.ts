@@ -2,7 +2,6 @@ import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
 import { Input, ViewChild } from '@angular/core';
 
 import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 
 import { Observable, BehaviorSubject, Subject, Subscription } from 'rxjs';
@@ -23,7 +22,6 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() markerSelected$: Subject<GeoMarker>;
   @Input() category: EventCategory;
   @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
   expandedElement: EventInfo | null;
   showDetail = false;
   pageSizeOptions = [10, 20, 50, 100];
@@ -43,7 +41,6 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
   }
 

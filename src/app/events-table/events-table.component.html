@@ -1,6 +1,6 @@
 <div *ngIf="isMinimum; else elseBlock">
   <div class="mat-elevation-z8">
-    <table mat-table class="full-width-table" matSort aria-label="Elements"
+    <table mat-table class="full-width-table" aria-label="Elements"
       multiTemplateDataRows
       [dataSource]="dataSource">
 
@@ -20,7 +20,7 @@
       </ng-container>
 
       <ng-container matColumnDef="date">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Date</th>
+        <th mat-header-cell *matHeaderCellDef>Date</th>
         <td mat-cell *matCellDef="let row">{{getDate(row)}}</td>
       </ng-container>
 
@@ -61,7 +61,7 @@
 </div>
 <ng-template #elseBlock>
   <div class="mat-elevation-z8">
-    <table mat-table class="full-width-table" matSort aria-label="Elements"
+    <table mat-table class="full-width-table" aria-label="Elements"
       multiTemplateDataRows
       [dataSource]="dataSource">
 
@@ -81,7 +81,7 @@
       </ng-container>
 
       <ng-container matColumnDef="date">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Date</th>
+        <th mat-header-cell *matHeaderCellDef>Date</th>
         <td mat-cell *matCellDef="let row">{{getDate(row)}}</td>
       </ng-container>
 
