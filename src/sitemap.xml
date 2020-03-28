@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jpdga-shizuoka.github.io/ssa-round-ratings/</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://jpdga-shizuoka.github.io/ssa-round-ratings</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://jpdga-shizuoka.github.io/ssa-round-ratings/events/upcoming</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://jpdga-shizuoka.github.io/ssa-round-ratings/events/past</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://jpdga-shizuoka.github.io/ssa-round-ratings/events/local</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://jpdga-shizuoka.github.io/ssa-round-ratings/events/monthly</loc>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://jpdga-shizuoka.github.io/ssa-round-ratings/about</loc>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
   </url>
 </urlset>
