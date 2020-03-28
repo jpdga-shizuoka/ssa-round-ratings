@@ -4,6 +4,23 @@
 
 This is a small project for disc golfers who love playing disc golf in Japan.
 
+## Screen shots
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="screenshots/IMG_2797.jpeg" alt="Top page" height="221" width="150">
+      <td><img src="screenshots/IMG_2798.jpeg" alt="Top page" height="221" width="150">
+      <td><img src="screenshots/IMG_2799.jpeg" alt="Top page" height="221" width="150">
+    </tr>
+    <tr>
+      <td><img src="screenshots/IMG_2800.jpeg" alt="Top page" height="221" width="150">
+      <td><img src="screenshots/IMG_2801.jpeg" alt="Top page" height="221" width="150">
+      <td><img src="screenshots/IMG_2802.jpeg" alt="Top page" height="221" width="150">
+    </tr>
+  </tbody>
+</table>
+
 ## Website
 
 The [DG Japan](https://jpdga-shizuoka.github.io/ssa-round-ratings/) which is a website for this project is running on the GitHub Pages.
