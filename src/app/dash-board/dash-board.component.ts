@@ -42,6 +42,22 @@ export class DashBoardComponent implements OnInit {
     this.playersSource = lists.players;
   }
 
+  get upcomingEvents() {
+    return this.cs.getMenuAliase('Upcoming Events');
+  }
+
+  get results() {
+    return this.cs.getMenuAliase('Results');
+  }
+
+  get videos() {
+    return this.cs.getMenuAliase('Video Library');
+  }
+
+  get players() {
+    return this.cs.getMenuAliase('Anual Total Players');
+  }
+
   get displayedColumnsUpcoming$(): Observable<string[]> {
     return this.isHandset$.pipe(
       map(hs => DISPLAYED_COLUMNS_UPCOMING[hs ? 0 : 1])

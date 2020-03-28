@@ -1,5 +1,5 @@
 <mat-tab-group>
-  <mat-tab label="Upcoming Events">
+  <mat-tab label="{{upcomingEvents}}">
     <app-events-table
       [category]="'upcoming'"
       [dataSource]="tableSourceUpcoming"
@@ -9,7 +9,7 @@
 </mat-tab-group>
 
 <mat-tab-group>
-  <mat-tab label="Latest Rounds">
+  <mat-tab label="{{results}}">
     <app-rounds-table
       [dataSource]="tableSourcePast"
       [displayedColumns$]="displayedColumnsPast$">
@@ -18,7 +18,7 @@
 </mat-tab-group>
 
 <mat-tab-group>
-  <mat-tab label="Videos">
+  <mat-tab label="{{videos}}">
     <app-videos-table
       [dataSource]="videosSource">
     </app-videos-table>
@@ -26,7 +26,7 @@
 </mat-tab-group>
 
 <mat-tab-group>
-  <mat-tab label="Anual Total Players">
+  <mat-tab label="{{players}}">
     <app-total-players>
     </app-total-players>
   </mat-tab>
