@@ -1,6 +1,7 @@
 <mat-tab-group>
   <mat-tab label="Upcoming Events">
     <app-events-table
+      [category]="'upcoming'"
       [dataSource]="tableSourceUpcoming"
       [displayedColumns$]="displayedColumnsUpcoming$">
     </app-events-table>

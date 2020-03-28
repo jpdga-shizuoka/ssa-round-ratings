@@ -8,6 +8,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Observable, BehaviorSubject, Subject, Subscription } from 'rxjs';
 
 import { CommonService, EventInfo, GeoMarker } from '../common.service';
+import { EventCategory } from '../models';
 import { detailExpand } from '../animations';
 
 @Component({
@@ -20,6 +21,7 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() dataSource: MatTableDataSource<EventInfo>;
   @Input() displayedColumns$: Observable<string[]>;
   @Input() markerSelected$: Subject<GeoMarker>;
+  @Input() category: EventCategory;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   expandedElement: EventInfo | null;
@@ -51,8 +53,12 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     }
   }
 
-  get showPagenator(): boolean {
-    return this.dataSource.data.length > this.pageSizeOptions[0];
+  get isMinimum(): boolean {
+    return this.dataSource.data.length <= this.pageSizeOptions[0];
+  }
+
+  get more(): string {
+    return this.cs.primaryLanguage ? 'More...' : 'さらに見る';
   }
 
   getTitle(event: EventInfo): string {
