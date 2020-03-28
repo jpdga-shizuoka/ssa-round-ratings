@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: '', component: DashBoardComponent, data: {
     title: 'DG Japan',
     description: 'Information of the disc golf events held in Japan.',
-    keywords: 'disc golf,japan,schedule,stats,results',
+    keywords: 'disc golf,events,japan,schedule,stats,results,videos',
     url: 'https://jpdga-shizuoka.github.io/ssa-round-ratings',
     type: 'article',
   }},
@@ -38,7 +38,7 @@ const routes: Routes = [
   { path: 'past', component: RoundsTabsComponent, data: {
     title: 'DG Japan - Results',
     description: 'Results of the official disc golf events held in Japan.',
-    keywords: 'disc golf,results,japan',
+    keywords: 'disc golf,events,results,japan',
     url: 'https://jpdga-shizuoka.github.io/ssa-round-ratings/past',
     type: 'article',
   }},
