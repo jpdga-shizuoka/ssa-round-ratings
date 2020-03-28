@@ -56,6 +56,9 @@ tr.round-expanded-row {
   margin: 0 10px;
 }
 @media (max-width: 400px) {
+  .full-width-table td {
+    font-size: 12px;
+  }
   .full-width-table th,
   .full-width-table td {
     padding: 0 2.5px;
