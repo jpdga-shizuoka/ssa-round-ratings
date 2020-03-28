@@ -148,8 +148,12 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     this.search = filterValue;
   }
 
-  get showPagenator() {
-    return this.dataSource.data.length > this.pageSizeOptions[0];
+  get isMinimum() {
+    return this.dataSource.data.length <= this.pageSizeOptions[0];
+  }
+
+  get more(): string {
+    return this.cs.primaryLanguage ? 'More...' : 'さらに見る';
   }
 
   get showHistory() {

@@ -55,6 +55,9 @@ tr.round-expanded-row {
 .rssa-margin {
   margin: 0 10px;
 }
+.more {
+  text-align: right;
+}
 @media (max-width: 400px) {
   .full-width-table td {
     font-size: 12px;
