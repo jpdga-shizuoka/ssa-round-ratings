@@ -1,8 +1,15 @@
-<mat-tab-group>
+<mat-tab-group (selectedTabChange)="onEventsTabChange($event)">
   <mat-tab label="{{upcomingEvents}}">
     <app-events-table
       [category]="'upcoming'"
       [dataSource]="tableSourceUpcoming"
+      [displayedColumns$]="displayedColumnsUpcoming$">
+    </app-events-table>
+  </mat-tab>
+  <mat-tab label="{{localEvents}}">
+    <app-events-table
+      [category]="'local'"
+      [dataSource]="tableSourceLocal"
       [displayedColumns$]="displayedColumnsUpcoming$">
     </app-events-table>
   </mat-tab>

@@ -10,6 +10,7 @@ import { isHandset } from '../utilities';
 
 const DISPLAYED_COLUMNS_UPCOMING = [['date', 'title'], ['date', 'title', 'location']];
 const DISPLAYED_COLUMNS_PAST = [['event', 'hla', 'ssa'], ['year', 'event', 'round', 'hla', 'ssa']];
+const LOCAL_EVENT_ID = 1;
 
 @Component({
   selector: 'app-dash-board',
@@ -19,6 +20,7 @@ const DISPLAYED_COLUMNS_PAST = [['event', 'hla', 'ssa'], ['year', 'event', 'roun
 export class DashBoardComponent implements OnInit {
 
   tableSourceUpcoming: MatTableDataSource<EventInfo>;
+  tableSourceLocal: MatTableDataSource<EventInfo>;
   tableSourcePast: MatTableDataSource<RoundInfo>;
   videosSource: MatTableDataSource<VideoInfo>;
   playersSource: TotalYearPlayers[];
@@ -32,6 +34,8 @@ export class DashBoardComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.tableSourceLocal
+      = new MatTableDataSource<EventInfo>();
     this.tableSourceUpcoming
       = new MatTableDataSource<EventInfo>(this.cs.getEvents('upcoming').slice(0, 3));
     this.tableSourcePast
@@ -44,6 +48,10 @@ export class DashBoardComponent implements OnInit {
 
   get upcomingEvents() {
     return this.cs.getMenuAliase('Upcoming Events');
+  }
+
+  get localEvents() {
+    return this.cs.getMenuAliase('Local Events');
   }
 
   get results() {
@@ -68,5 +76,11 @@ export class DashBoardComponent implements OnInit {
     return this.isHandset$.pipe(
       map(hs => DISPLAYED_COLUMNS_PAST[hs ? 0 : 1])
     );
+  }
+
+  onEventsTabChange(event) {
+    if (event.index === LOCAL_EVENT_ID && !this.tableSourceLocal.data.length) {
+      this.tableSourceLocal.data = this.cs.getEvents('local').slice(0, 3);
+    }
   }
 }
