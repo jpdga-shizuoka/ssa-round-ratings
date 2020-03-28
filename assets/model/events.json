@@ -97,6 +97,20 @@
     ]
   },
   {
+    "title": "The 7th Fukui Open",
+    "location": "Seaside Nature Park",
+    "period": {
+      "from": "2020-10-17",
+      "to": "2020-10-18"
+    },
+    "pdga": {
+      "eventId": "45280"
+    },
+    "jpdga": {
+      "eventId": "530"
+    }
+  },
+  {
     "title": "The 20th Tohoku Open",
     "location": "Mizubayashi Sport Park",
     "period": {
@@ -253,20 +267,6 @@
     },
     "jpdga": {
       "eventId": "532"
-    }
-  },
-  {
-    "title": "The 7th Fukui Open",
-    "location": "Seaside Nature Park",
-    "period": {
-      "from": "2020-05-23",
-      "to": "2020-05-24"
-    },
-    "pdga": {
-      "eventId": "45280"
-    },
-    "jpdga": {
-      "eventId": "530"
     }
   },
   {
