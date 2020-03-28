@@ -59,6 +59,12 @@ export class VideoBottomsheetComponent {
     }
   }
 
+  get facebookLink(): string {
+    return this.cs.primaryLanguage
+      ? 'Playback by Facebook'
+      : 'Facebookで再生';
+  }
+
   get year(): number {
     return this.video.date.getFullYear();
   }
