@@ -1,7 +1,9 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { TestBed, async } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -19,8 +21,11 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 
 import { AppComponent } from './app.component';
+import { DashBoardComponent } from './dash-board/dash-board.component';
 import { RoundsTabsComponent } from './rounds-tabs/rounds-tabs.component';
 import { RoundsTableComponent } from './rounds-table/rounds-table.component';
 import { RoundDetailComponent } from './round-detail/round-detail.component';
@@ -34,12 +39,15 @@ import { NoticeBottomsheetComponent } from './dialogs/notice-bottomsheet.compone
 import { BottomSheetDetailDisabledComponent } from './dialogs/bottom-sheet-detail-disabled.component';
 
 import { AgmCoreModule } from '@agm/core';
+import { DeviceDetectorModule } from 'ngx-device-detector';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
       declarations: [
         AppComponent,
+        DashBoardComponent,
         RoundsTabsComponent,
         RoundsTableComponent,
         RoundDetailComponent,
@@ -56,6 +64,7 @@ describe('AppComponent', () => {
         RouterTestingModule,
         BrowserAnimationsModule,
         FormsModule,
+        YouTubePlayerModule,
         MatSidenavModule,
         MatToolbarModule,
         MatIconModule,
@@ -72,7 +81,9 @@ describe('AppComponent', () => {
         MatCardModule,
         MatTabsModule,
         MatDialogModule,
+        MatBottomSheetModule,
         AgmCoreModule,
+        DeviceDetectorModule,
       ],
     }).compileComponents();
   }));

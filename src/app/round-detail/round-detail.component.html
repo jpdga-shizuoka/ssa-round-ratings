@@ -7,8 +7,14 @@
     <tr>
       <td>Location:</td>
       <td>
-        <a href="{{geolocation}}"><mat-icon>room</mat-icon>{{location}}<mat-icon>launch</mat-icon></a>
+        <a href="{{geolocation}}" target="_blank" rel="noopener">
+          <mat-icon>room</mat-icon>{{location}}<mat-icon>launch</mat-icon>
+        </a>
       </td>
+    </tr>
+    <tr *ngIf="totalPlayers">
+      <td>Players:</td>
+      <td><mat-icon>emoji_people</mat-icon>{{totalPlayers}}</td>
     </tr>
     <tr>
       <td>Round:</td>
@@ -31,7 +37,7 @@
       <td>
         <div class="flex-container">
           <ng-template ngFor let-misc [ngForOf]="miscInfo">
-            <a href="{{misc.url}}" class="detail-link">
+            <a href="{{misc.url}}" class="detail-link" target="_blank" rel="noopener">
               <mat-icon>{{misc.icon}}</mat-icon>{{misc.title}}
             </a>
           </ng-template>

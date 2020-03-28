@@ -28,6 +28,7 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild(MatSort) sort: MatSort;
   expandedElement: RoundInfo | null;
   showDetail = false;
+  pageSizeOptions = [5, 10, 20, 50, 100];
   private subscription: Subscription;
   private detailDisabled = false;
   private sorted = false;
@@ -105,12 +106,14 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
       this.search = filter;
     }
 
-    this.subscription = this.markerSelected$.subscribe({
-      next: marker => {
-        const locationName = this.cs.getLocationName(marker.location);
-        this.applyFilter(locationName);
-      }
-    });
+    if (this.markerSelected$) {
+      this.subscription = this.markerSelected$.subscribe({
+        next: marker => {
+          const locationName = this.cs.getLocationName(marker.location);
+          this.applyFilter(locationName);
+        }
+      });
+    }
   }
 
   ngAfterViewInit() {
@@ -119,7 +122,9 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.subscription.unsubscribe();
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
   }
 
   onEventSlected(location: string) {
@@ -143,6 +148,14 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     this.search = filterValue;
   }
 
+  get isMinimum() {
+    return this.dataSource.data.length <= this.pageSizeOptions[0];
+  }
+
+  get more(): string {
+    return this.cs.primaryLanguage ? 'More...' : 'さらに見る';
+  }
+
   get showHistory() {
     if (!this.expandedElement) {
       return false;
@@ -158,6 +171,10 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     return true;
   }
 
+  isCanceled(round: RoundInfo) {
+    return round.round === 'CANCELED';
+  }
+
   isDetailExpand(round: RoundInfo) {
     if (!this.expandedElement) {
       return false;
@@ -169,6 +186,14 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
       return false;
     }
     return true;
+  }
+
+  getRawClass(round: RoundInfo) {
+    return {
+      canceled: this.isCanceled(round),
+      'round-element-row': true,
+      'round-expanded-row': this.isDetailExpand(round)
+    };
   }
 
   getLength(round: RoundInfo) {

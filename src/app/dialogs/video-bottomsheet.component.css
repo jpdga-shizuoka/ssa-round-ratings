@@ -1,0 +1,59 @@
+.video-view {
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+.video-view h1 {
+  font-size: 1.4em;
+}
+.video-view mat-icon {
+  font-size: 32px;
+  height: 32px;
+  width: 32px;
+  margin: 0 5px;
+}
+.yt-view {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+}
+.fb-view {
+  padding: 32px 0;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+h1, h2, h3 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 420px) {
+  .video-view h1 {
+    font-size: 18px;
+  }
+  .video-view h2 {
+    font-size: 16px;
+  }
+  .video-view h3 {
+    font-size: 14px;
+  }
+  .video-view {
+    font-size: small;
+  }
+  .video-view mat-icon {
+    font-size: 17px;
+    height: 17px;
+    width: 17px;
+    margin: 0;
+  }
+  .fb-view {
+    padding: 16px 0;
+  }
+  .yt-view {
+    overflow: visible;
+  }
+}

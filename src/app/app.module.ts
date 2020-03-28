@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -21,11 +22,15 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { DashBoardComponent } from './dash-board/dash-board.component';
 import { RoundsTabsComponent } from './rounds-tabs/rounds-tabs.component';
 import { RoundsTableComponent } from './rounds-table/rounds-table.component';
+import { TotalPlayersComponent } from './total-players/total-players.component';
+import { VideosTableComponent } from './videos-table/videos-table.component';
 import { RoundDetailComponent } from './round-detail/round-detail.component';
 import { AboutThisSiteComponent } from './about-this-site/about-this-site.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
@@ -34,9 +39,12 @@ import { EventsTableComponent } from './events-table/events-table.component';
 import { EventsMapComponent } from './events-map/events-map.component';
 import { MarkerDialogComponent } from './dialogs/marker-dialog.component';
 import { NoticeBottomsheetComponent } from './dialogs/notice-bottomsheet.component';
+import { VideoBottomsheetComponent } from './dialogs/video-bottomsheet.component';
 import { BottomSheetDetailDisabledComponent } from './dialogs/bottom-sheet-detail-disabled.component';
 
 import { AgmCoreModule } from '@agm/core';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { DeviceDetectorModule } from 'ngx-device-detector';
 import { environment } from '../environments/environment';
 
 @NgModule({
@@ -51,8 +59,12 @@ import { environment } from '../environments/environment';
     EventsTableComponent,
     EventsMapComponent,
     NoticeBottomsheetComponent,
+    VideoBottomsheetComponent,
     BottomSheetDetailDisabledComponent,
     MarkerDialogComponent,
+    DashBoardComponent,
+    TotalPlayersComponent,
+    VideosTableComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,6 +72,7 @@ import { environment } from '../environments/environment';
     BrowserAnimationsModule,
     AppRoutingModule,
     LayoutModule,
+    YouTubePlayerModule,
     MatToolbarModule,
     MatIconModule,
     MatTooltipModule,
@@ -78,6 +91,9 @@ import { environment } from '../environments/environment';
     MatDialogModule,
     MatBottomSheetModule,
     AgmCoreModule.forRoot({ apiKey: environment.MAP_API_KEY }),
+    MatMenuModule,
+    NgxChartsModule,
+    DeviceDetectorModule.forRoot(),
   ],
   entryComponents: [
     NoticeBottomsheetComponent,

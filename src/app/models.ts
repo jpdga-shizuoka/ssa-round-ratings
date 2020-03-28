@@ -46,6 +46,12 @@ export interface UrlInfo {
   url: string;
 }
 
+export interface Players {
+  pro: number;
+  ama: number;
+  misc: number;
+}
+
 export interface EventInfo {
   title?: string;
   period?: {
@@ -53,12 +59,21 @@ export interface EventInfo {
     to: string;
   };
   location: string;     // location of the course
+  status?: string;
   pdga?: PdgaInfo;
   jpdga?: JpdgaInfo;
   website?: string;     // url of the event
   urls?: UrlInfo[];
   category?: string;
   schedule?: Schedule;
+  players?: Players;
+}
+
+export interface VideoInfo {
+  title: string;
+  subttl: string;
+  date: Date;
+  url: string;
 }
 
 export interface Schedule {
@@ -104,4 +119,14 @@ export interface MiscInfo {
   icon: string;
   title: string;
   url: string;
+}
+
+export interface TotalYearPlayers {
+  year: number;
+  players: Players;
+}
+
+export interface PastLists {
+  players: TotalYearPlayers[];
+  videos: VideoInfo[];
 }

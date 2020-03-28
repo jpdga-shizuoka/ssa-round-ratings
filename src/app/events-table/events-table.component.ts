@@ -2,12 +2,12 @@ import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
 import { Input, ViewChild } from '@angular/core';
 
 import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 
 import { Observable, BehaviorSubject, Subject, Subscription } from 'rxjs';
 
 import { CommonService, EventInfo, GeoMarker } from '../common.service';
+import { EventCategory } from '../models';
 import { detailExpand } from '../animations';
 
 @Component({
@@ -20,10 +20,11 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() dataSource: MatTableDataSource<EventInfo>;
   @Input() displayedColumns$: Observable<string[]>;
   @Input() markerSelected$: Subject<GeoMarker>;
+  @Input() category: EventCategory;
   @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
   expandedElement: EventInfo | null;
   showDetail = false;
+  pageSizeOptions = [10, 20, 50, 100];
   private subscription: Subscription;
 
   constructor(
@@ -32,18 +33,29 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.subscription = this.markerSelected$.subscribe({
-      next: marker => this.onMarkerSelected(marker)
-    });
+    if (this.markerSelected$) {
+      this.subscription = this.markerSelected$.subscribe({
+        next: marker => this.onMarkerSelected(marker)
+      });
+    }
   }
 
   ngAfterViewInit() {
-    this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
   }
 
   ngOnDestroy() {
-    this.subscription.unsubscribe();
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
+  }
+
+  get isMinimum(): boolean {
+    return this.dataSource.data.length <= this.pageSizeOptions[0];
+  }
+
+  get more(): string {
+    return this.cs.primaryLanguage ? 'More...' : 'さらに見る';
   }
 
   getTitle(event: EventInfo): string {
@@ -67,6 +79,18 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
 
   getMonth(event: EventInfo): string {
     return this.cs.getMonth(event.schedule);
+  }
+
+  getRawClass(event: EventInfo) {
+    return {
+      canceled: this.isCanceled(event),
+      'event-element-row': true,
+      'event-expanded-row': this.isDetailExpand(event)
+    };
+  }
+
+  isCanceled(event: EventInfo) {
+    return event.status === 'CANCELED';
   }
 
   isDetailExpand(event: EventInfo) {

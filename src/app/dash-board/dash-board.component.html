@@ -1,0 +1,33 @@
+<mat-tab-group>
+  <mat-tab label="{{upcomingEvents}}">
+    <app-events-table
+      [category]="'upcoming'"
+      [dataSource]="tableSourceUpcoming"
+      [displayedColumns$]="displayedColumnsUpcoming$">
+    </app-events-table>
+  </mat-tab>
+</mat-tab-group>
+
+<mat-tab-group>
+  <mat-tab label="{{results}}">
+    <app-rounds-table
+      [dataSource]="tableSourcePast"
+      [displayedColumns$]="displayedColumnsPast$">
+    </app-rounds-table>
+  </mat-tab>
+</mat-tab-group>
+
+<mat-tab-group>
+  <mat-tab label="{{videos}}">
+    <app-videos-table
+      [dataSource]="videosSource">
+    </app-videos-table>
+  </mat-tab>
+</mat-tab-group>
+
+<mat-tab-group>
+  <mat-tab label="{{players}}">
+    <app-total-players>
+    </app-total-players>
+  </mat-tab>
+</mat-tab-group>

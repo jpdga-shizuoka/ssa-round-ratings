@@ -19,6 +19,10 @@ tr.round-element-row:not(.round-expanded-row):active {
 tr.round-expanded-row {
   background: #efe5fd;
 }
+.canceled td {
+  color: #900000;
+  text-decoration: line-through;
+}
 .round-element-row td {
   border-bottom-width: 0;
 }
@@ -55,7 +59,13 @@ tr.round-expanded-row {
 .rssa-margin {
   margin: 0 10px;
 }
+.more {
+  text-align: right;
+}
 @media (max-width: 400px) {
+  .full-width-table td {
+    font-size: 12px;
+  }
   .full-width-table th,
   .full-width-table td {
     padding: 0 2.5px;
