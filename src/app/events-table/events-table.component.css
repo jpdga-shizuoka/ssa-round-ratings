@@ -16,6 +16,10 @@ tr.event-element-row:not(.event-expanded-row):active {
 tr.event-expanded-row {
   background: #efe5fd;
 }
+.canceled td {
+  color: #900000;
+  text-decoration: line-through;
+}
 .event-element-row td {
   border-bottom-width: 0;
 }

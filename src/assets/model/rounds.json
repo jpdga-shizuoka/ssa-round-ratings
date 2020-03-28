@@ -1,5 +1,11 @@
 [
   {
+    "event": "The 18th Saga Open",
+    "date": "2020-04-11",
+    "round": "CANCELED",
+    "holes": 18
+  },
+  {
     "event": "The 3rd Miyagi Michinoku Open",
     "round": "CANCELED",
     "date": "2020-03-21",
@@ -386,7 +392,7 @@
   },
   {
     "event": "The 1st PWBF Cup",
-    "round": "Canceled",
+    "round": "CANCELED",
     "hla": 125,
     "date": "2019-04-13",
     "holes": 18

@@ -50,8 +50,7 @@
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns$ | async"></tr>
       <tr mat-row *matRowDef="let element; columns: displayedColumns$ | async;"
-          class="event-element-row"
-          [class.event-expanded-row]="isDetailExpand(element)"
+          [ngClass]="getRawClass(element)"
           (click)="onRawClicked(element)">
       </tr>
       <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="event-detail-row"></tr>
@@ -104,8 +103,7 @@
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns$ | async"></tr>
       <tr mat-row *matRowDef="let element; columns: displayedColumns$ | async;"
-          class="event-element-row"
-          [class.event-expanded-row]="isDetailExpand(element)"
+          [ngClass]="getRawClass(element)"
           (click)="onRawClicked(element)">
       </tr>
       <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="event-detail-row"></tr>

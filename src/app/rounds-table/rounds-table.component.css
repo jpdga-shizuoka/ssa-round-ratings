@@ -19,6 +19,10 @@ tr.round-element-row:not(.round-expanded-row):active {
 tr.round-expanded-row {
   background: #efe5fd;
 }
+.canceled td {
+  color: #900000;
+  text-decoration: line-through;
+}
 .round-element-row td {
   border-bottom-width: 0;
 }

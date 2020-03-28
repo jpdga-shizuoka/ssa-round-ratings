@@ -290,6 +290,7 @@
       "from": "2020-05-04",
       "to": "2020-05-05"
     },
+    "status": "CANCELED",
     "pdga": {
       "eventId": "45278"
     },
@@ -315,6 +316,7 @@
       "from": "2020-04-11",
       "to": "2020-04-12"
     },
+    "status": "CANCELED",
     "pdga": {
       "eventId": "45277"
     },
@@ -329,6 +331,7 @@
       "from": "2020-03-21",
       "to": "2020-03-22"
     },
+    "status": "CANCELED",
     "jpdga": {
       "eventId": "525"
     }
@@ -903,6 +906,7 @@
       "from": "2019-04-13",
       "to": "2019-04-14"
     },
+    "status": "CANCELED",
     "jpdga": {
       "eventId": "494"
     }

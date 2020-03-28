@@ -73,8 +73,7 @@
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns$ | async"></tr>
       <tr mat-row *matRowDef="let element; columns: displayedColumns$ | async;"
-          class="round-element-row"
-          [class.round-expanded-row]="isDetailExpand(element)"
+          [ngClass]="getRawClass(element)"
           (click)="onRawClicked(element)">
       </tr>
       <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="round-detail-row"></tr>
@@ -149,8 +148,7 @@
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns$ | async"></tr>
       <tr mat-row *matRowDef="let element; columns: displayedColumns$ | async;"
-          class="round-element-row"
-          [class.round-expanded-row]="isDetailExpand(element)"
+          [ngClass]="getRawClass(element)"
           (click)="onRawClicked(element)">
       </tr>
       <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="round-detail-row"></tr>

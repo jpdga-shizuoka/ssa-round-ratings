@@ -59,6 +59,7 @@ export interface EventInfo {
     to: string;
   };
   location: string;     // location of the course
+  status?: string;
   pdga?: PdgaInfo;
   jpdga?: JpdgaInfo;
   website?: string;     // url of the event

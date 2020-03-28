@@ -171,6 +171,10 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     return true;
   }
 
+  isCanceled(round: RoundInfo) {
+    return round.round === 'CANCELED';
+  }
+
   isDetailExpand(round: RoundInfo) {
     if (!this.expandedElement) {
       return false;
@@ -182,6 +186,14 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
       return false;
     }
     return true;
+  }
+
+  getRawClass(round: RoundInfo) {
+    return {
+      canceled: this.isCanceled(round),
+      'round-element-row': true,
+      'round-expanded-row': this.isDetailExpand(round)
+    };
   }
 
   getLength(round: RoundInfo) {

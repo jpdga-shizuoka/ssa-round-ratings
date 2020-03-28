@@ -84,6 +84,18 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     return this.cs.getMonth(event.schedule);
   }
 
+  getRawClass(event: EventInfo) {
+    return {
+      canceled: this.isCanceled(event),
+      'event-element-row': true,
+      'event-expanded-row': this.isDetailExpand(event)
+    };
+  }
+
+  isCanceled(event: EventInfo) {
+    return event.status === 'CANCELED';
+  }
+
   isDetailExpand(event: EventInfo) {
     if (!this.expandedElement) {
       return false;
