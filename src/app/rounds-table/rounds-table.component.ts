@@ -30,7 +30,8 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   expandedElement: RoundInfo | null;
   showDetail = false;
   pageSizeOptions = [5, 10, 20, 50, 100];
-  private subscription: Subscription;
+  private ssMarker: Subscription;
+  private ssQuery: Subscription;
   private detailDisabled = false;
   private sorted = false;
 
@@ -58,6 +59,7 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnInit() {
+    console.log('OnInit')
     this.dataSource.filterPredicate = (data: RoundInfo, filters: string): boolean => {
       const matchFilter = [];
       const filterArray = filters.split('&');
@@ -103,18 +105,24 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
 
     if (this.route.snapshot.queryParamMap.has('search')) {
       const filter = this.route.snapshot.queryParamMap.get('search');
-      this.dataSource.filter = filter;
-      this.search = filter;
+      this.updateSearch(filter);
     }
 
     if (this.markerSelected$) {
-      this.subscription = this.markerSelected$.subscribe({
+      this.ssMarker = this.markerSelected$.subscribe({
         next: marker => {
           const locationName = this.cs.getLocationName(marker.location);
           this.applyFilter(locationName);
         }
       });
     }
+
+    this.ssQuery = this.route.queryParams.subscribe(query => {
+      console.log('queryParams', query);
+      if (query.search) {
+        this.updateSearch(query.search);
+      }
+    });
   }
 
   ngAfterViewInit() {
@@ -123,8 +131,11 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    if (this.subscription) {
-      this.subscription.unsubscribe();
+    if (this.ssMarker) {
+      this.ssMarker.unsubscribe();
+    }
+    if (this.ssQuery) {
+      this.ssQuery.unsubscribe();
     }
   }
 
@@ -209,5 +220,12 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   getYear(time: string) {
     const date = new Date(time);
     return date.getFullYear();
+  }
+
+  private updateSearch(query: string) {
+    this.dataSource.filter = query;
+    this.search = query;
+    this.expandedElement = null;
+    this.showDetail = false;
   }
 }
