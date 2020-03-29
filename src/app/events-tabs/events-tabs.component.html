@@ -1,6 +1,6 @@
 <mat-tab-group dynamicHeight [(selectedIndex)]="selectedTab">
   <mat-tab label="{{tableTitle}}">
-    <ng-template matTabContent>
+    <!-- <ng-template matTabContent> -->
       <div class="mat-elevation-z4">
         <app-events-table
           [dataSource]="tableSource"
@@ -8,11 +8,11 @@
           [markerSelected$]="markerSelected">
         </app-events-table>
       </div>
-    </ng-template>
+    <!-- </ng-template> -->
   </mat-tab>
 
   <mat-tab label="{{mapTitle}}">
-    <ng-template matTabContent>
+    <!-- <ng-template matTabContent> -->
       <div class="mat-elevation-z4">
         <app-events-map
           [category]="category"
@@ -20,6 +20,6 @@
           (markerSelected)="onMarkerSelected($event)">
         </app-events-map>
       </div>
-    </ng-template>
+    <!-- </ng-template> -->
   </mat-tab>
 </mat-tab-group>
