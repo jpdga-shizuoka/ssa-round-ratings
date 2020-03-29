@@ -24,6 +24,7 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() displayedColumns$: Observable<string[]>;
   @Input() markerSelected$: Subject<GeoMarker>;
   @Input() search = '';
+  @Input() showMore = false;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   expandedElement: RoundInfo | null;
@@ -149,7 +150,8 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   get isMinimum() {
-    return this.dataSource.data.length <= this.pageSizeOptions[0];
+    return this.showMore
+      && this.dataSource.data.length <= this.pageSizeOptions[0];
   }
 
   get more(): string {

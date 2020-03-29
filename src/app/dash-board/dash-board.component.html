@@ -1,6 +1,7 @@
 <mat-tab-group (selectedTabChange)="onEventsTabChange($event)">
   <mat-tab label="{{upcomingEvents}}">
     <app-events-table
+      [showMore]="true"
       [category]="'upcoming'"
       [dataSource]="tableSourceUpcoming"
       [displayedColumns$]="displayedColumnsUpcoming$">
@@ -8,6 +9,7 @@
   </mat-tab>
   <mat-tab label="{{localEvents}}">
     <app-events-table
+      [showMore]="true"
       [category]="'local'"
       [dataSource]="tableSourceLocal"
       [displayedColumns$]="displayedColumnsUpcoming$">
@@ -18,6 +20,7 @@
 <mat-tab-group>
   <mat-tab label="{{results}}">
     <app-rounds-table
+      [showMore]="true"
       [dataSource]="tableSourcePast"
       [displayedColumns$]="displayedColumnsPast$">
     </app-rounds-table>
