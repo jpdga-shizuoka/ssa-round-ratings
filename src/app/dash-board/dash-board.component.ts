@@ -34,6 +34,8 @@ export class DashBoardComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.videosSource
+      = new MatTableDataSource<VideoInfo>();
     this.tableSourceLocal
       = new MatTableDataSource<EventInfo>();
     this.tableSourceUpcoming
@@ -41,9 +43,11 @@ export class DashBoardComponent implements OnInit {
     this.tableSourcePast
       = new MatTableDataSource<RoundInfo>(this.cs.getRounds().slice(0, 3));
 
-    const lists = this.cs.getPastLists();
-    this.videosSource = new MatTableDataSource<VideoInfo>(lists.videos);
-    this.playersSource = lists.players;
+    setTimeout(() => {
+      const lists = this.cs.getPastLists();
+      this.videosSource.data = lists.videos;
+      this.playersSource = lists.players;
+    });
   }
 
   get upcomingEvents() {
