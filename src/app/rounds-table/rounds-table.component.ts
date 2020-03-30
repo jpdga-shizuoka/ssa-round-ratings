@@ -59,7 +59,6 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnInit() {
-    console.log('OnInit')
     this.dataSource.filterPredicate = (data: RoundInfo, filters: string): boolean => {
       const matchFilter = [];
       const filterArray = filters.split('&');
@@ -118,7 +117,6 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     }
 
     this.ssQuery = this.route.queryParams.subscribe(query => {
-      console.log('queryParams', query);
       if (query.search) {
         this.updateSearch(query.search);
       }
