@@ -44,3 +44,6 @@
   min-width: 4rem;
   text-align: center;
 }
+.oss-table td:first-child {
+  text-align: right;
+}
