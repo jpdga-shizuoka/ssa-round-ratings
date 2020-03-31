@@ -34,6 +34,7 @@ import { EventDetailComponent } from './event-detail/event-detail.component';
 import { EventsTabsComponent } from './events-tabs/events-tabs.component';
 import { EventsTableComponent } from './events-table/events-table.component';
 import { EventsMapComponent } from './events-map/events-map.component';
+import { JapanOpenComponent } from './japan-open/japan-open.component';
 import { MarkerDialogComponent } from './dialogs/marker-dialog.component';
 import { NoticeBottomsheetComponent } from './dialogs/notice-bottomsheet.component';
 import { BottomSheetDetailDisabledComponent } from './dialogs/bottom-sheet-detail-disabled.component';
@@ -56,6 +57,7 @@ describe('AppComponent', () => {
         EventsTabsComponent,
         EventsTableComponent,
         EventsMapComponent,
+        JapanOpenComponent,
         MarkerDialogComponent,
         NoticeBottomsheetComponent,
         BottomSheetDetailDisabledComponent,

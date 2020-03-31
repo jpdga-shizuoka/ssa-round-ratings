@@ -1,0 +1,27 @@
+<mat-card>
+  <img mat-card-image
+    src="../../assets/img/japanopen2021.jpg"
+    alt="Japan Open Disc Golf Tournament 2021">
+  <mat-card-header>
+    <mat-card-title>Japan Open returns to</mat-card-title>
+    <mat-card-subtitle>Sakai City, Fukui, 18-21 May</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-actions>
+    <button mat-button>
+      <a href="http://japanopen.info" target="_blank" rel="noopener">
+        Ofiicial site: Japanopen.info
+      </a>
+    </button>
+    <button mat-button>
+      <a href="{{geolocation}}" target="_blank" rel="noopener">
+        Location: Fukui Country Club
+      </a>
+    </button>
+  </mat-card-actions>
+
+  <div class="video-lib">
+    <h4>Video Library:</h4>
+    <app-videos-table class="video-table" [dataSource]="videosSource">
+    </app-videos-table>
+  </div>
+</mat-card>

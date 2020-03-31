@@ -1,0 +1,14 @@
+mat-card-actions {
+  text-align: center;
+}
+.video-table {
+  display: block;
+  width: calc(100% + 32px);
+  margin: 0 -16px 16px -16px;
+}
+.video-lib h4 {
+  font-size: 14px;
+  color: dimgray;
+  margin-top: 0;
+  margin-bottom: 8px;
+}

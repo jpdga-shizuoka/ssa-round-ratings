@@ -99,7 +99,7 @@ export class CommonService {
     this.primaryLanguage = !this.primaryLanguage;
   }
 
-  getEvents(category: string): EventInfo[] {
+  getEvents(category?: string): EventInfo[] {
     switch (category) {
       case 'past':
         return filterPastEvents(EVENTS);
@@ -109,6 +109,8 @@ export class CommonService {
         return filterUpcomingEvents(LOCAL_EVENTS);
       case 'monthly':
         return MONTHLY_EVENTS;
+      case undefined:
+        return EVENTS;
     }
     return [];
   }
@@ -123,6 +125,30 @@ export class CommonService {
       }
     });
     return total.result;
+  }
+
+  getVideoList(key: string | undefined): VideoInfo[] {
+    const list: VideoInfo[] = [];
+    this.getEvents().forEach(event => {
+      if (event.urls) {
+        event.urls.forEach(url => {
+          if (url.type !== 'video') {
+            return;
+          }
+          if (key && !event.title.toLowerCase().includes(key.toLowerCase())) {
+            return;
+          }
+          list.push({
+            title: event.title,
+            subttl: url.title,
+            date: new Date(event.period.from),
+            url: url.url,
+          });
+        });
+        list.sort((a, b) => compareByDate(a.date, b.date));
+      }
+    });
+    return list;
   }
 
   getPastLists(): PastLists {
@@ -146,15 +172,7 @@ export class CommonService {
             });
           }
         });
-        list.sort((a, b) => {
-          if (a.date < b.date) {
-            return 1;
-          }
-          if (a.date > b.date) {
-            return -1;
-          }
-          return 0;
-        });
+        list.sort((a, b) => compareByDate(a.date, b.date));
       }
     });
     return {
@@ -293,7 +311,16 @@ export class CommonService {
     return LOCATION_ALIASE[getKeyFromName(locationName)] || locationName;
   }
 
-  getGeolocation(ll: [number, number]): string | undefined {
+  getGeolocation(location: [number, number] | string): string | undefined {
+    let ll: [number, number];
+    if (Array.isArray(location)) {
+      ll = location;
+    } else if (typeof location === 'string') {
+      const info = this.getLocation(location);
+      if (info?.geolocation) {
+        ll = info.geolocation;
+      }
+    }
     return ll
       ? getUrlForGeolocation() + `${ll[0]},${ll[1]}`
       : undefined;
@@ -453,4 +480,14 @@ function filterPastEvents(events: EventInfo[]): EventInfo[] {
     return t1.getTime() - t2.getTime();
   });
   return result;
+}
+
+function compareByDate(a: Date, b: Date): number {
+  if (a < b) {
+    return 1;
+  }
+  if (a > b) {
+    return -1;
+  }
+  return 0;
 }
