@@ -1501,6 +1501,13 @@
       "topicId": "1269",
       "photoId": "72157666163702848"
     },
+    "urls": [
+      {
+        "type": "video",
+        "title": "FPO Final9",
+        "url": "https://youtu.be/RTERs8ypbJg"
+      }
+    ],
     "players": {
       "pro": 28,
       "ama": 10,
@@ -1964,6 +1971,18 @@
       "topicId": "1176",
       "photoId": "72157679184251340"
     },
+    "urls": [
+      {
+        "type": "video",
+        "title": "Digest",
+        "url": "https://youtu.be/HNAjKZg2ZDY"
+      },
+      {
+        "type": "video",
+        "title": "FPO Final9",
+        "url": "https://youtu.be/RTERs8ypbJg"
+      }
+    ],
     "players": {
       "pro": 35,
       "ama": 22,
@@ -2397,6 +2416,13 @@
     "jpdga": {
       "eventId": "351"
     },
+    "urls": [
+      {
+        "type": "video",
+        "title": "MPO Final9",
+        "url": "https://youtu.be/ndyCS9Xw_rQ"
+      }
+    ],
     "players": {
       "pro": 22,
       "ama": 15,
@@ -2416,6 +2442,13 @@
     "jpdga": {
       "eventId": "350"
     },
+    "urls": [
+      {
+        "type": "video",
+        "title": "MPO Final9",
+        "url": "https://youtu.be/ndyCS9Xw_rQ"
+      }
+    ],
     "players": {
       "pro": 36,
       "ama": 29,
@@ -2901,8 +2934,13 @@
     "urls": [
       {
         "type": "video",
-        "title": "FPO Final9",
-        "url": "https://youtu.be/9qZXSGHdNJg"
+        "title": "MPO Final9 #1",
+        "url": "https://youtu.be/hZEgBiAa36w"
+      },
+      {
+        "type": "video",
+        "title": "MPO Final9 #2",
+        "url": "https://youtu.be/F5MdwUp_xrU"
       }
     ]
   },
@@ -2988,6 +3026,24 @@
     ]
   },
   {
+    "title": "The 4th Hokkaido Open",
+    "location": "Hunka-wan Panolama Park",
+    "period": {
+      "from": "2014-06-28",
+      "to": "2014-06-29"
+    },
+    "jpdga": {
+      "eventId": "322"
+    },
+    "urls": [
+      {
+        "type": "video",
+        "title": "Final Digest",
+        "url": "https://youtu.be/uqXRbIhdWhs"
+      }
+    ]
+  },
+  {
     "title": "The 2014 Japan Open",
     "location": "Nasu Highland Golf Club",
     "period": {
@@ -3064,6 +3120,24 @@
     ]
   },
   {
+    "title": "The 3rd Okinawa Open",
+    "location": "Nakijinson Sport Park",
+    "period": {
+      "from": "2014-02-22",
+      "to": "2014-02-23"
+    },
+    "jpdga": {
+      "eventId": "262"
+    },
+    "urls": [
+      {
+        "type": "video",
+        "title": "FPO Final9",
+        "url": "https://youtu.be/75fLJuw_Rn8"
+      }
+    ]
+  },
+  {
     "title": "The 27th Kyushu Open",
     "location": "Umino-Nakamichi Seaside Park",
     "period": {
@@ -3114,6 +3188,24 @@
         "type": "video",
         "title": "MPO Final9",
         "url": "https://youtu.be/rjY60OQu4s0"
+      }
+    ]
+  },
+  {
+    "title": "The 12th Aso Open",
+    "location": "Aso Minnano Mori",
+    "period": {
+      "from": "2012-07-28",
+      "to": "2012-07-29"
+    },
+    "jpdga": {
+      "eventId": "220"
+    },
+    "urls": [
+      {
+        "type": "video",
+        "title": "MPO Final Digest",
+        "url": "https://youtu.be/fSRe323MITI"
       }
     ]
   },
