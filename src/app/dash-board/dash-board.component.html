@@ -1,4 +1,8 @@
-<mat-tab-group (selectedTabChange)="onEventsTabChange($event)">
+<h4>
+  <a routerLink="/events/upcoming"><mat-icon>events</mat-icon>{{schedule}}</a>
+</h4>
+<mat-tab-group class="mat-elevation-z2"
+  (selectedTabChange)="onEventsTabChange($event)">
   <mat-tab label="{{upcomingEvents}}">
     <app-events-table
       [showMore]="true"
@@ -21,7 +25,10 @@
   </mat-tab>
 </mat-tab-group>
 
-<mat-tab-group>
+<h4>
+  <a routerLink="/past"><mat-icon>table_chart</mat-icon>{{results}}</a>
+</h4>
+<mat-tab-group class="mat-elevation-z2">
   <mat-tab label="{{results}}">
     <app-rounds-table
       [showMore]="true"
@@ -37,7 +44,8 @@
   </mat-tab>
 </mat-tab-group>
 
-<mat-tab-group>
+<h4><mat-icon>bar_chart</mat-icon>{{stats}}</h4>
+<mat-tab-group class="mat-elevation-z2">
   <mat-tab label="{{players}}">
     <app-total-players>
     </app-total-players>

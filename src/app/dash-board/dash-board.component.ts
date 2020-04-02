@@ -52,15 +52,23 @@ export class DashBoardComponent implements OnInit {
   }
 
   get upcomingEvents() {
-    return this.cs.getMenuAliase('Upcoming Events');
+    return this.cs.getMenuAliase('Official');
   }
 
   get localEvents() {
-    return this.cs.getMenuAliase('Local Events');
+    return this.cs.getMenuAliase('Local');
+  }
+
+  get schedule() {
+    return this.cs.getMenuAliase('Schedule');
   }
 
   get results() {
     return this.cs.getMenuAliase('Results');
+  }
+
+  get stats() {
+    return this.cs.getMenuAliase('Stats');
   }
 
   get videos() {
