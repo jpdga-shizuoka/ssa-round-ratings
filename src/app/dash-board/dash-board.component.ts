@@ -72,7 +72,7 @@ export class DashBoardComponent implements OnInit {
   }
 
   get videos() {
-    return this.cs.getMenuAliase('Video Library');
+    return this.cs.getMenuAliase('Videos');
   }
 
   get players() {
