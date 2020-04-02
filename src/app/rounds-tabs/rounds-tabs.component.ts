@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { ActivatedRoute } from '@angular/router';
 
@@ -12,7 +13,7 @@ import { CommonService } from '../common.service';
 import { isHandset } from '../utilities';
 
 const DISPLAYED_COLUMNS = [['event', 'hla', 'ssa'], ['year', 'event', 'round', 'hla', 'ssa']];
-const TABS_TITLE = ['Results', 'Map'];
+const TABS_TITLE = ['Rounds', 'Location map'];
 
 @Component({
   selector: 'app-rounds-tabs',
@@ -31,6 +32,7 @@ export class RoundsTabsComponent implements OnInit {
   constructor(
     private cs: CommonService,
     private route: ActivatedRoute,
+    private location: Location,
     breakpointObserver: BreakpointObserver,
   ) {
     route.url.pipe(map(segments => console.log('url', segments)));
@@ -72,6 +74,14 @@ export class RoundsTabsComponent implements OnInit {
 
   get videos() {
     return this.cs.getMenuAliase('Videos');
+  }
+
+  get title() {
+    return this.cs.getMenuAliase('Results');
+  }
+
+  back() {
+    this.location.back();
   }
 
   onMarkerSelected(marker: GeoMarker) {
