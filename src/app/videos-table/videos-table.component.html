@@ -1,14 +1,15 @@
-<div class="serach" *ngIf="!isMinimum">
-  <mat-form-field class="event-search">
+<div class="search" *ngIf="!isMinimum && showSearch">
+  <mat-form-field class="search-box">
     <input matInput #filter [(ngModel)]="search" (keyup)="applyFilter(filter.value)" placeholder="Search...">
     <button mat-button *ngIf="search" matSuffix mat-icon-button aria-label="Clear" (click)="applyFilter('')">
       <mat-icon>close</mat-icon>
     </button>
   </mat-form-field>
-  <div class='serach-spacer'></div>
+  <div class='search-spacer'></div>
 </div>
 
-<table mat-table class="mat-elevation-z8 full-width-table" [dataSource]="dataSource">
+<table mat-table class="full-width-table"
+  [dataSource]="dataSource">
 
   <ng-container matColumnDef="year">
     <th mat-header-cell *matHeaderCellDef>Year</th>

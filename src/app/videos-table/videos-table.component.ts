@@ -24,11 +24,12 @@ const DISPLAYED_COLUMNS = [['title', 'subttl'], [ 'year', 'title', 'subttl']];
 })
 export class VideosTableComponent implements AfterViewInit, OnInit {
   @Input() dataSource: MatTableDataSource<VideoInfo>;
+  @Input() pageSizeOptions = [10, 20, 50, 100];
+  @Input() showSearch = true;
   @Input() showMore = false;
   @Input() search = '';
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-  pageSizeOptions = [10, 20, 50, 100];
 
   isHandset$: Observable<boolean>;
 
