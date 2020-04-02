@@ -57,7 +57,7 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   get more(): string {
-    return this.cs.primaryLanguage ? 'More...' : 'さらに見る';
+    return this.cs.getMenuAliase('More');
   }
 
   getTitle(event: EventInfo): string {
