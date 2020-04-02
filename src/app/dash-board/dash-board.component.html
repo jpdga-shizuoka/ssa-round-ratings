@@ -34,6 +34,7 @@
 <mat-tab-group>
   <mat-tab label="{{videos}}">
     <app-videos-table
+      [showMore]="true"
       [dataSource]="videosSource">
     </app-videos-table>
   </mat-tab>

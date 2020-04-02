@@ -3,12 +3,20 @@
     <!-- <ng-template matTabContent> -->
       <div class="mat-elevation-z4">
         <app-rounds-table
-          [dataSource]="tableSource"
+          [dataSource]="roundsSource"
           [displayedColumns$]="displayedColumns$"
           [markerSelected$]="markerSelected">
         </app-rounds-table>
       </div>
     <!-- </ng-template> -->
+  </mat-tab>
+
+  <mat-tab label="{{videos}}">
+    <div class="mat-elevation-z4">
+      <app-videos-table
+        [dataSource]="videosSource">
+      </app-videos-table>
+    </div>
   </mat-tab>
 
   <mat-tab label="{{mapTitle}}">

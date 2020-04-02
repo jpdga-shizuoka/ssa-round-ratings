@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
+import { ActivatedRoute } from '@angular/router';
 
 import { MatTableDataSource } from '@angular/material/table';
 
 import { Observable, BehaviorSubject, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { RoundInfo, EventInfo, GeoMarker } from '../models';
+import { RoundInfo, EventInfo, VideoInfo, GeoMarker } from '../models';
 import { CommonService } from '../common.service';
 import { isHandset } from '../utilities';
 
@@ -19,28 +20,40 @@ const TABS_TITLE = ['Results', 'Map'];
   styleUrls: ['./rounds-tabs.component.css']
 })
 export class RoundsTabsComponent implements OnInit {
-  tableSource: MatTableDataSource<RoundInfo>;
+  roundsSource: MatTableDataSource<RoundInfo>;
+  videosSource: MatTableDataSource<VideoInfo>;
   mapSource$: BehaviorSubject<GeoMarker[]>;
   isHandset$: Observable<boolean>;
   rounds: RoundInfo[];
   markerSelected: Subject<GeoMarker>;
-  selectedTab: number;
+  selectedTab = 0;
 
   constructor(
     private cs: CommonService,
+    private route: ActivatedRoute,
     breakpointObserver: BreakpointObserver,
   ) {
+    route.url.pipe(map(segments => console.log('url', segments)));
     this.isHandset$ = isHandset(breakpointObserver);
   }
 
   ngOnInit() {
     this.rounds = this.cs.getRounds();
-    this.tableSource = new MatTableDataSource<RoundInfo>(this.rounds);
+    this.roundsSource = new MatTableDataSource<RoundInfo>(this.rounds);
+    this.videosSource = new MatTableDataSource<VideoInfo>();
     this.mapSource$ = new BehaviorSubject<GeoMarker[]>([]);
     this.markerSelected = new Subject<GeoMarker>();
-    this.selectedTab = 0;
-    const markers = this.makeMaerkersFromRounds(this.rounds);
-    this.mapSource$.next(markers);
+    switch (this.route.snapshot.url[1]?.path) {
+      case 'video':
+        this.selectedTab = 1;
+        break;
+      case 'map':
+        this.selectedTab = 2;
+        break;
+      default:
+        this.selectedTab = 0;
+    }
+    this.doLazyLoading();
   }
 
   get displayedColumns$(): Observable<string[]> {
@@ -57,9 +70,22 @@ export class RoundsTabsComponent implements OnInit {
     return this.cs.getMenuAliase(TABS_TITLE[1]);
   }
 
+  get videos() {
+    return this.cs.getMenuAliase('Videos');
+  }
+
   onMarkerSelected(marker: GeoMarker) {
     this.markerSelected.next(marker);
     this.selectedTab = 0;
+  }
+
+  private doLazyLoading() {
+    setTimeout(() => {
+      const lists = this.cs.getPastLists();
+      this.videosSource.data = lists.videos;
+      const markers = this.makeMaerkersFromRounds(this.rounds);
+      this.mapSource$.next(markers);
+    });
   }
 
   private makeMaerkersFromRounds(rounds: RoundInfo[]): GeoMarker[] {

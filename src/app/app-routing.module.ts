@@ -42,6 +42,13 @@ const routes: Routes = [
     url: 'https://jpdga-shizuoka.github.io/ssa-round-ratings/past',
     type: 'article',
   }},
+  { path: 'past/video', component: RoundsTabsComponent, data: {
+    title: 'DG Japan - Video',
+    description: 'Video library of the official disc golf events held in Japan.',
+    keywords: 'disc golf,events,results,japan,video',
+    url: 'https://jpdga-shizuoka.github.io/ssa-round-ratings/past/video',
+    type: 'article',
+  }},
   { path: 'about', component: AboutThisSiteComponent, data: {
     title: 'DG Japan - About Us',
     description: 'About Us, Privacy Policy, Terms, Open Source Software Project.',

@@ -45,7 +45,7 @@ export class DashBoardComponent implements OnInit {
 
     setTimeout(() => {
       const lists = this.cs.getPastLists();
-      this.videosSource.data = lists.videos;
+      this.videosSource.data = lists.videos.slice(0, 5);
       this.playersSource = lists.players;
     });
   }

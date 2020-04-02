@@ -9,11 +9,19 @@ tr.element-row:hover {
 tr.element-row:active {
   background: #efefef;
 }
-
+.serach {
+  display: flex;
+}
+.serach-checkbox mat-checkbox {
+    padding: 0 10px;
+    font-size: small;
+}
 .element-row td {
   border-bottom-width: 0;
 }
-
+.more {
+  text-align: right;
+}
 @media (max-width: 400px) {
   .full-width-table td {
     font-size: 12px;
