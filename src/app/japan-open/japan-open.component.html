@@ -21,7 +21,10 @@
 
   <div class="video-lib">
     <h4>Video Library:</h4>
-    <app-videos-table class="video-table" [dataSource]="videosSource">
+    <app-videos-table class="video-table mat-elevation-z2"
+      [showSearch]="false"
+      [pageSizeOptions]=[5]
+      [dataSource]="videosSource">
     </app-videos-table>
   </div>
 </mat-card>

@@ -4,7 +4,7 @@ mat-card-actions {
 .video-table {
   display: block;
   width: calc(100% + 32px);
-  margin: 0 -16px 16px -16px;
+  margin: 0 -16px -16px -16px;
 }
 .video-lib h4 {
   font-size: 14px;
