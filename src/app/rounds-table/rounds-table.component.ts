@@ -29,7 +29,7 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild(MatSort) sort: MatSort;
   expandedElement: RoundInfo | null;
   showDetail = false;
-  pageSizeOptions = [5, 10, 20, 50, 100];
+  pageSizeOptions = [10, 20, 50, 100];
   private ssMarker: Subscription;
   private ssQuery: Subscription;
   private detailDisabled = false;
@@ -159,12 +159,11 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   get isMinimum() {
-    return this.showMore
-      && this.dataSource.data.length <= this.pageSizeOptions[0];
+    return this.dataSource.data.length <= this.pageSizeOptions[0];
   }
 
   get more(): string {
-    return this.cs.primaryLanguage ? 'More...' : 'さらに見る';
+    return this.cs.getMenuAliase('More');
   }
 
   get showHistory() {
