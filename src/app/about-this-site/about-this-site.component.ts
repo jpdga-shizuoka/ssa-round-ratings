@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Location } from '@angular/common';
+
 import { CommonService } from '../common.service';
 
 @Component({
@@ -12,6 +14,17 @@ export class AboutThisSiteComponent {
     return this.cs.primaryLanguage;
   }
 
-  constructor(private cs: CommonService) {
+  get title() {
+    return this.cs.getMenuAliase('About this site');
+  }
+
+  constructor(
+    private cs: CommonService,
+    private location: Location,
+  ) {
+  }
+
+  back() {
+    this.location.back();
   }
 }
