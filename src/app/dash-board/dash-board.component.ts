@@ -41,9 +41,10 @@ export class DashBoardComponent implements OnInit {
     this.tableSourceUpcoming
       = new MatTableDataSource<EventInfo>(this.cs.getEvents('upcoming').slice(0, 3));
     this.tableSourcePast
-      = new MatTableDataSource<RoundInfo>(this.cs.getRounds().slice(0, 3));
+      = new MatTableDataSource<RoundInfo>();
 
     setTimeout(() => {
+      this.tableSourcePast.data = this.cs.getRounds().slice(0, 5);
       const lists = this.cs.getPastLists();
       this.videosSource.data = lists.videos.slice(0, 5);
       this.playersSource = lists.players;
