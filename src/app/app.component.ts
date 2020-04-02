@@ -46,7 +46,7 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   get upcomingEvents() {
-    return this.cs.getMenuAliase('Upcoming Events');
+    return this.cs.getMenuAliase('Schedule');
   }
 
   get results() {
