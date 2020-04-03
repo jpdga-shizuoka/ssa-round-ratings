@@ -89,7 +89,7 @@ export class EventsTabsComponent implements OnInit, AfterViewInit {
 
   get title() {
     let schedule = 'Schedule';
-    switch(this.category) {
+    switch (this.category) {
       case 'local':
         schedule = 'Local Events';
         break;
