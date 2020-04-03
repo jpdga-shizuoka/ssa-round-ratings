@@ -47,6 +47,7 @@ import { AgmCoreModule } from '@agm/core';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { DeviceDetectorModule } from 'ngx-device-detector';
 import { environment } from '../environments/environment';
+import { StatsTabsComponent } from './stats-tabs/stats-tabs.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { environment } from '../environments/environment';
     TotalPlayersComponent,
     VideosTableComponent,
     JapanOpenComponent,
+    StatsTabsComponent,
   ],
   imports: [
     BrowserModule,

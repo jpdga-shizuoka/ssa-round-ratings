@@ -1,0 +1,17 @@
+h4 mat-icon {
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+h4 mat-icon:hover {
+  background-color: lightgray;
+}
+h4 mat-icon:active {
+  background-color: lightgray;
+}
+h4 a {
+  text-decoration: none;
+  display: inline-flex;
+  vertical-align: middle;
+}

@@ -61,6 +61,10 @@ export class AppComponent implements OnInit, OnDestroy {
     return this.cs.getMenuAliase('Monthly Events');
   }
 
+  get stats() {
+    return this.cs.getMenuAliase('Stats');
+  }
+
   get aboutThisSite() {
     return this.cs.getMenuAliase('About this site');
   }
