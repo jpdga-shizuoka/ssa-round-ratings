@@ -21,6 +21,10 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://jpdga-shizuoka.github.io/ssa-round-ratings/stats</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://jpdga-shizuoka.github.io/ssa-round-ratings/about</loc>
     <changefreq>monthly</changefreq>
   </url>
