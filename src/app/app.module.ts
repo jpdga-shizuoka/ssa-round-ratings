@@ -32,6 +32,7 @@ import { RoundsTableComponent } from './rounds-table/rounds-table.component';
 import { TotalPlayersComponent } from './total-players/total-players.component';
 import { VideosTableComponent } from './videos-table/videos-table.component';
 import { RoundDetailComponent } from './round-detail/round-detail.component';
+import { StatsTabsComponent } from './stats-tabs/stats-tabs.component';
 import { AboutThisSiteComponent } from './about-this-site/about-this-site.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
 import { EventsTabsComponent } from './events-tabs/events-tabs.component';
@@ -47,7 +48,6 @@ import { AgmCoreModule } from '@agm/core';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { DeviceDetectorModule } from 'ngx-device-detector';
 import { environment } from '../environments/environment';
-import { StatsTabsComponent } from './stats-tabs/stats-tabs.component';
 
 @NgModule({
   declarations: [

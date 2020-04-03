@@ -1,3 +1,4 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
@@ -7,6 +8,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 import { Subject, of } from 'rxjs';
 
@@ -32,6 +35,7 @@ describe('EventsTableComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
       declarations: [
         EventsTableComponent,
         EventDetailComponent,
@@ -43,6 +47,8 @@ describe('EventsTableComponent', () => {
         MatPaginatorModule,
         MatSortModule,
         MatTableModule,
+        MatFormFieldModule,
+        MatInputModule,
       ]
     })
     .compileComponents();

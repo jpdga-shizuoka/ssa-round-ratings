@@ -23,24 +23,28 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { AppComponent } from './app.component';
 import { DashBoardComponent } from './dash-board/dash-board.component';
 import { RoundsTabsComponent } from './rounds-tabs/rounds-tabs.component';
 import { RoundsTableComponent } from './rounds-table/rounds-table.component';
 import { RoundDetailComponent } from './round-detail/round-detail.component';
+import { StatsTabsComponent } from './stats-tabs/stats-tabs.component';
 import { AboutThisSiteComponent } from './about-this-site/about-this-site.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
 import { EventsTabsComponent } from './events-tabs/events-tabs.component';
 import { EventsTableComponent } from './events-table/events-table.component';
 import { EventsMapComponent } from './events-map/events-map.component';
 import { JapanOpenComponent } from './japan-open/japan-open.component';
+import { TotalPlayersComponent } from './total-players/total-players.component';
 import { MarkerDialogComponent } from './dialogs/marker-dialog.component';
 import { NoticeBottomsheetComponent } from './dialogs/notice-bottomsheet.component';
 import { BottomSheetDetailDisabledComponent } from './dialogs/bottom-sheet-detail-disabled.component';
 
 import { AgmCoreModule } from '@agm/core';
 import { DeviceDetectorModule } from 'ngx-device-detector';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -52,12 +56,14 @@ describe('AppComponent', () => {
         RoundsTabsComponent,
         RoundsTableComponent,
         RoundDetailComponent,
+        StatsTabsComponent,
         AboutThisSiteComponent,
         EventDetailComponent,
         EventsTabsComponent,
         EventsTableComponent,
         EventsMapComponent,
         JapanOpenComponent,
+        TotalPlayersComponent,
         MarkerDialogComponent,
         NoticeBottomsheetComponent,
         BottomSheetDetailDisabledComponent,
@@ -84,8 +90,10 @@ describe('AppComponent', () => {
         MatTabsModule,
         MatDialogModule,
         MatBottomSheetModule,
+        MatFormFieldModule,
         AgmCoreModule,
         DeviceDetectorModule,
+        NgxChartsModule,
       ],
     }).compileComponents();
   }));
