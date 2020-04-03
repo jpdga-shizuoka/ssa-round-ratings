@@ -6,9 +6,10 @@ mat-card-actions {
   width: calc(100% + 32px);
   margin: 0 -16px -16px -16px;
 }
-.video-lib h4 {
-  font-size: 14px;
-  color: dimgray;
-  margin-top: 0;
-  margin-bottom: 8px;
+a {
+  text-decoration: none;
+}
+.action-item {
+  margin: 6px 5px;
+  white-space: normal;
 }

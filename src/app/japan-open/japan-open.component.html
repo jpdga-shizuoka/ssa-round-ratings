@@ -7,20 +7,21 @@
     <mat-card-subtitle>Sakai City, Fukui, May 18-21, 2021.</mat-card-subtitle>
   </mat-card-header>
   <mat-card-actions>
-    <button mat-button>
+    <div class="my-align action-item">
+      <mat-icon>public</mat-icon>Official site:
       <a href="http://japanopen.info" target="_blank" rel="noopener">
-        Official site: Japanopen.info
+        <div class="my-align">Japanopen.info</div>
       </a>
-    </button>
-    <button mat-button>
+    </div>
+    <div class="my-align action-item">
+      <mat-icon>place</mat-icon>Location:
       <a href="{{geolocation}}" target="_blank" rel="noopener">
-        Location: Fukui Country Club
+        <div class="my-align">Fukui Country Club</div>
       </a>
-    </button>
+    </div>
   </mat-card-actions>
 
   <div class="video-lib">
-    <h4>Video Library:</h4>
     <app-videos-table class="video-table mat-elevation-z2"
       [showSearch]="false"
       [pageSizeOptions]=[5]
