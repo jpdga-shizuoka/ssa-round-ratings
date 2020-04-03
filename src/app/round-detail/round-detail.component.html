@@ -27,7 +27,8 @@
     <tr *ngIf="showHistory">
       <td>History:</td>
       <td>
-        <a class="history-link" (click)="onHistory()">
+        <!-- <a class="history-link" (click)="onHistory()"> -->
+        <a routerLink="/past" [queryParams]="{search: title}" class="history-link">
           <mat-icon>table_chart</mat-icon>{{seeThePastResults}}
         </a>
       </td>

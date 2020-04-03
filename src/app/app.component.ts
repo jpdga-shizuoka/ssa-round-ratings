@@ -46,7 +46,7 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   get upcomingEvents() {
-    return this.cs.getMenuAliase('Upcoming Events');
+    return this.cs.getMenuAliase('Schedule');
   }
 
   get results() {
@@ -59,6 +59,10 @@ export class AppComponent implements OnInit, OnDestroy {
 
   get monthlyEvents() {
     return this.cs.getMenuAliase('Monthly Events');
+  }
+
+  get stats() {
+    return this.cs.getMenuAliase('Stats');
   }
 
   get aboutThisSite() {

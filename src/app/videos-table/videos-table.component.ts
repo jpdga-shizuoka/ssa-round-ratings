@@ -24,6 +24,10 @@ const DISPLAYED_COLUMNS = [['title', 'subttl'], [ 'year', 'title', 'subttl']];
 })
 export class VideosTableComponent implements AfterViewInit, OnInit {
   @Input() dataSource: MatTableDataSource<VideoInfo>;
+  @Input() pageSizeOptions = [10, 20, 50, 100];
+  @Input() showSearch = true;
+  @Input() showMore = false;
+  @Input() search = '';
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
@@ -41,6 +45,15 @@ export class VideosTableComponent implements AfterViewInit, OnInit {
     breakpointObserver: BreakpointObserver,
   ) {
     this.isHandset$ = isHandset(breakpointObserver);
+  }
+
+  get isMinimum(): boolean {
+    return this.showMore
+      && this.dataSource.data.length <= this.pageSizeOptions[0];
+  }
+
+  get more(): string {
+    return this.cs.getMenuAliase('More');
   }
 
   ngOnInit() {
@@ -62,6 +75,14 @@ export class VideosTableComponent implements AfterViewInit, OnInit {
 
   getTitle(video: VideoInfo): string {
     return this.cs.getEventAliase(video.title);
+  }
+
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
+    this.search = filterValue;
   }
 
   private openVideoSheet(video: VideoInfo) {

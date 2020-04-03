@@ -1,19 +1,27 @@
 table {
   width: 100%;
 }
-
 tr.element-row:hover {
   background: whitesmoke;
 }
-
 tr.element-row:active {
   background: #efefef;
 }
-
+.search {
+  display: flex;
+}
+.search-box {
+  padding: 10px 0 0 25px;
+}
+.search-spacer {
+  flex: 1 1 auto;
+}
 .element-row td {
   border-bottom-width: 0;
 }
-
+.more {
+  text-align: right;
+}
 @media (max-width: 400px) {
   .full-width-table td {
     font-size: 12px;

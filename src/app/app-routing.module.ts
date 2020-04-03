@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashBoardComponent } from './dash-board/dash-board.component';
 import { RoundsTabsComponent } from './rounds-tabs/rounds-tabs.component';
 import { EventsTabsComponent } from './events-tabs/events-tabs.component';
+import { StatsTabsComponent } from './stats-tabs/stats-tabs.component';
 import { AboutThisSiteComponent } from './about-this-site/about-this-site.component';
 
 const routes: Routes = [
@@ -40,6 +41,20 @@ const routes: Routes = [
     description: 'Results of the official disc golf events held in Japan.',
     keywords: 'disc golf,events,results,japan',
     url: 'https://jpdga-shizuoka.github.io/ssa-round-ratings/past',
+    type: 'article',
+  }},
+  { path: 'past/video', component: RoundsTabsComponent, data: {
+    title: 'DG Japan - Video',
+    description: 'Video library of the official disc golf events held in Japan.',
+    keywords: 'disc golf,events,results,japan,video',
+    url: 'https://jpdga-shizuoka.github.io/ssa-round-ratings/past/video',
+    type: 'article',
+  }},
+  { path: 'stats', component: StatsTabsComponent, data: {
+    title: 'DG Japan - Stats',
+    description: 'Stats of the official disc golf events held in Japan.',
+    keywords: 'disc golf,events,stats,japan',
+    url: 'https://jpdga-shizuoka.github.io/ssa-round-ratings/stats',
     type: 'article',
   }},
   { path: 'about', component: AboutThisSiteComponent, data: {

@@ -1,0 +1,15 @@
+mat-card-actions {
+  text-align: center;
+}
+.video-table {
+  display: block;
+  width: calc(100% + 32px);
+  margin: 0 -16px -16px -16px;
+}
+a {
+  text-decoration: none;
+}
+.action-item {
+  margin: 6px 5px;
+  white-space: normal;
+}

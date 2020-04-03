@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import {
   CommonService, RoundInfo, EventInfo, LocationInfo
 } from '../common.service';
@@ -26,7 +26,6 @@ export class RoundDetailComponent {
 
   @Input() round: RoundInfo;
   @Input() showHistory = true;
-  @Output() eventSlected = new EventEmitter<string>();
 
   rating: number;
   score: number;
@@ -110,6 +109,10 @@ export class RoundDetailComponent {
 
   get date(): string | undefined {
     return this.cs.getDate(this.getEvent());
+  }
+
+  get title() {
+    return this.cs.getEventTitle(this.getEvent().title);
   }
 
   private getEvent(): EventInfo | undefined {
@@ -229,11 +232,6 @@ export class RoundDetailComponent {
     }
     this.score = Math.round(this.score);
     this.rating = this.score2rating(this.score);
-  }
-
-  onHistory() {
-    const title = this.cs.getEventTitle(this.getEvent().title);
-    this.eventSlected.emit(title);
   }
 
   private rating2score(rating: number) {

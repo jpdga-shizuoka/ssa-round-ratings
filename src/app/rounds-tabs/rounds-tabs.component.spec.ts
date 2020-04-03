@@ -1,3 +1,4 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,6 +18,7 @@ import { MatListModule } from '@angular/material/list';
 import { EventsMapComponent } from '../events-map/events-map.component';
 import { RoundDetailComponent } from '../round-detail/round-detail.component';
 import { RoundsTableComponent } from '../rounds-table/rounds-table.component';
+import { VideosTableComponent } from '../videos-table/videos-table.component';
 import { BottomSheetDetailDisabledComponent } from '../dialogs/bottom-sheet-detail-disabled.component';
 import { RoundsTabsComponent } from './rounds-tabs.component';
 
@@ -28,10 +30,12 @@ describe('RoundsTabsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
       declarations: [
         RoundsTabsComponent,
         RoundsTableComponent,
         EventsMapComponent,
+        VideosTableComponent,
         RoundDetailComponent,
         BottomSheetDetailDisabledComponent,
       ],

@@ -32,11 +32,13 @@ import { RoundsTableComponent } from './rounds-table/rounds-table.component';
 import { TotalPlayersComponent } from './total-players/total-players.component';
 import { VideosTableComponent } from './videos-table/videos-table.component';
 import { RoundDetailComponent } from './round-detail/round-detail.component';
+import { StatsTabsComponent } from './stats-tabs/stats-tabs.component';
 import { AboutThisSiteComponent } from './about-this-site/about-this-site.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
 import { EventsTabsComponent } from './events-tabs/events-tabs.component';
 import { EventsTableComponent } from './events-table/events-table.component';
 import { EventsMapComponent } from './events-map/events-map.component';
+import { JapanOpenComponent } from './japan-open/japan-open.component';
 import { MarkerDialogComponent } from './dialogs/marker-dialog.component';
 import { NoticeBottomsheetComponent } from './dialogs/notice-bottomsheet.component';
 import { VideoBottomsheetComponent } from './dialogs/video-bottomsheet.component';
@@ -65,6 +67,8 @@ import { environment } from '../environments/environment';
     DashBoardComponent,
     TotalPlayersComponent,
     VideosTableComponent,
+    JapanOpenComponent,
+    StatsTabsComponent,
   ],
   imports: [
     BrowserModule,

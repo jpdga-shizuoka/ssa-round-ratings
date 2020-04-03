@@ -1,5 +1,11 @@
 [
   {
+    "event": "The 16th Minamisoma Open",
+    "date": "2020-05-03",
+    "round": "CANCELED",
+    "holes": 18
+  },
+  {
     "event": "The 18th Saga Open",
     "date": "2020-04-11",
     "round": "CANCELED",
@@ -333,7 +339,7 @@
     }
   },
   {
-    "event": "The 14th Kiyosatonomori Open",
+    "event": "The 14th Kiyosato-no-mori Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-05-18",
     "hla": 81,
@@ -713,7 +719,7 @@
     }
   },
   {
-    "event": "The 13th Kiyosatonomori Open",
+    "event": "The 13th Kiyosato-no-mori Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-05-19",
     "hla": 81,
@@ -1103,7 +1109,7 @@
     }
   },
   {
-    "event": "The 12th Kiyosatonomori Open",
+    "event": "The 12th Kiyosato-no-mori Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-05-21",
     "hla": 81,
@@ -1491,7 +1497,7 @@
     }
   },
   {
-    "event": "The 11th Kiyosatonomori Open",
+    "event": "The 11th Kiyosato-no-mori Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2016-05-14",
     "hla": 81,
@@ -1954,7 +1960,7 @@
     }
   },
   {
-    "event": "The 10th Kiyosatonomori Open",
+    "event": "The 10th Kiyosato-no-mori Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2015-05-16",
     "hla": 81,

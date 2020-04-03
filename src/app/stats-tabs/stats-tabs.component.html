@@ -1,0 +1,11 @@
+<h4>
+  <a (click)="back()">
+    <mat-icon>arrow_back</mat-icon>{{title}}
+  </a>
+</h4>
+<mat-tab-group class="mat-elevation-z2">
+  <mat-tab label="{{players}}">
+    <app-total-players>
+    </app-total-players>
+  </mat-tab>
+</mat-tab-group>

@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 import { MatTableDataSource } from '@angular/material/table';
@@ -20,9 +21,9 @@ const DISPLAYED_COLUMNS = {
   monthly:  [['location', 'day'], ['location', 'day', 'month']]
 };
 const TABS_TITLE = {
-  upcoming: ['Upcoming Events', 'Map'],
-  local:    ['Local Events', 'Map'],
-  monthly:  ['Monthly Events', 'Map']
+  upcoming: ['Official', 'Location map'],
+  local:    ['Local', 'Location Map'],
+  monthly:  ['Monthly', 'Location Map']
 };
 
 @Component({
@@ -41,6 +42,7 @@ export class EventsTabsComponent implements OnInit, AfterViewInit {
 
   constructor(
     private route: ActivatedRoute,
+    private location: Location,
     private cs: CommonService,
     private bottomsheet: MatBottomSheet,
     breakpointObserver: BreakpointObserver,
@@ -83,6 +85,23 @@ export class EventsTabsComponent implements OnInit, AfterViewInit {
 
   get mapTitle() {
     return this.cs.getMenuAliase(TABS_TITLE[this.category][1]);
+  }
+
+  get title() {
+    let schedule = 'Schedule';
+    switch (this.category) {
+      case 'local':
+        schedule = 'Local Events';
+        break;
+      case 'monthly':
+        schedule = 'Monthly Events';
+        break;
+    }
+    return this.cs.getMenuAliase(schedule);
+  }
+
+  back() {
+    this.location.back();
   }
 
   onMarkerSelected(marker: GeoMarker) {

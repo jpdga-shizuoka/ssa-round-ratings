@@ -1,8 +1,8 @@
+<h4>
+  <a (click)="back()"><mat-icon>arrow_back</mat-icon>{{title}}</a>
+</h4>
 <div class="about-container">
   <mat-card class="about-card">
-    <mat-card-header>
-      <mat-card-title>About this site</mat-card-title>
-    </mat-card-header>
     <img mat-card-image src="assets/img/fujikawa.jpg">
     <mat-card-content>
       <p *ngIf="primaryLanguage">
@@ -124,6 +124,41 @@
         <a href="https://github.com/jpdga-shizuoka/ssa-round-ratings">Github</a>
         に公開されております。
       </p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="about-card">
+    <mat-card-header>
+      <mat-card-title>Platform & Libs</mat-card-title>
+    </mat-card-header>
+    <div class="github-card-img">
+      <img alt="Angular Logo"
+        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+      />
+    </div>
+    <mat-card-content>
+      <p *ngIf="primaryLanguage">
+        This site is constructed from the following open source software mainly:
+      </p>
+      <p *ngIf="!primaryLanguage">
+        本サイトは以下のオープンソースソフトウェアを主に利用して構築されました:
+      </p>
+      <table class="oss-table">
+        <tbody>
+          <tr>
+            <td>Web Application Platform:</td>
+            <td><a href="https://angular.io">Angular</a></td>
+          </tr>
+          <tr>
+            <td>Google Maps Library:</td>
+            <td><a href="https://angular-maps.com">Angular Google Maps</a></td>
+          </tr>
+          <tr>
+            <td>Chart Library:</td>
+            <td><a href="https://swimlane.github.io/ngx-charts/">ngx-charts</a></td>
+          </tr>
+        </tbody>
+      </table>
     </mat-card-content>
   </mat-card>
 </div>

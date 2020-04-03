@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AboutThisSiteComponent } from './about-this-site.component';
 
@@ -11,6 +12,7 @@ describe('AboutThisSiteComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ AboutThisSiteComponent ],
       imports: [
+        MatIconModule,
         MatCardModule,
       ]
     })

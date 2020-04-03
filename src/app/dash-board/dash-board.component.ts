@@ -5,11 +5,12 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { CommonService, EventInfo, RoundInfo } from '../common.service';
-import { VideoInfo, TotalYearPlayers } from '../models';
+import { VideoInfo } from '../models';
 import { isHandset } from '../utilities';
 
 const DISPLAYED_COLUMNS_UPCOMING = [['date', 'title'], ['date', 'title', 'location']];
 const DISPLAYED_COLUMNS_PAST = [['event', 'hla', 'ssa'], ['year', 'event', 'round', 'hla', 'ssa']];
+const LOCAL_EVENT_ID = 1;
 
 @Component({
   selector: 'app-dash-board',
@@ -19,9 +20,9 @@ const DISPLAYED_COLUMNS_PAST = [['event', 'hla', 'ssa'], ['year', 'event', 'roun
 export class DashBoardComponent implements OnInit {
 
   tableSourceUpcoming: MatTableDataSource<EventInfo>;
+  tableSourceLocal: MatTableDataSource<EventInfo>;
   tableSourcePast: MatTableDataSource<RoundInfo>;
   videosSource: MatTableDataSource<VideoInfo>;
-  playersSource: TotalYearPlayers[];
   isHandset$: Observable<boolean>;
 
   constructor(
@@ -32,18 +33,32 @@ export class DashBoardComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.videosSource
+      = new MatTableDataSource<VideoInfo>();
+    this.tableSourceLocal
+      = new MatTableDataSource<EventInfo>();
     this.tableSourceUpcoming
       = new MatTableDataSource<EventInfo>(this.cs.getEvents('upcoming').slice(0, 3));
     this.tableSourcePast
-      = new MatTableDataSource<RoundInfo>(this.cs.getRounds().slice(0, 3));
+      = new MatTableDataSource<RoundInfo>();
 
-    const lists = this.cs.getPastLists();
-    this.videosSource = new MatTableDataSource<VideoInfo>(lists.videos);
-    this.playersSource = lists.players;
+    setTimeout(() => {
+      this.tableSourcePast.data = this.cs.getRounds().slice(0, 5);
+      const lists = this.cs.getPastLists();
+      this.videosSource.data = lists.videos.slice(0, 5);
+    });
   }
 
   get upcomingEvents() {
-    return this.cs.getMenuAliase('Upcoming Events');
+    return this.cs.getMenuAliase('Official');
+  }
+
+  get localEvents() {
+    return this.cs.getMenuAliase('Local');
+  }
+
+  get schedule() {
+    return this.cs.getMenuAliase('Schedule');
   }
 
   get results() {
@@ -51,11 +66,7 @@ export class DashBoardComponent implements OnInit {
   }
 
   get videos() {
-    return this.cs.getMenuAliase('Video Library');
-  }
-
-  get players() {
-    return this.cs.getMenuAliase('Anual Total Players');
+    return this.cs.getMenuAliase('Videos');
   }
 
   get displayedColumnsUpcoming$(): Observable<string[]> {
@@ -68,5 +79,11 @@ export class DashBoardComponent implements OnInit {
     return this.isHandset$.pipe(
       map(hs => DISPLAYED_COLUMNS_PAST[hs ? 0 : 1])
     );
+  }
+
+  onEventsTabChange(event) {
+    if (event.index === LOCAL_EVENT_ID && !this.tableSourceLocal.data.length) {
+      this.tableSourceLocal.data = this.cs.getEvents('local').slice(0, 3);
+    }
   }
 }

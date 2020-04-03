@@ -21,6 +21,7 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() displayedColumns$: Observable<string[]>;
   @Input() markerSelected$: Subject<GeoMarker>;
   @Input() category: EventCategory;
+  @Input() showMore = false;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   expandedElement: EventInfo | null;
   showDetail = false;
@@ -51,11 +52,12 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   get isMinimum(): boolean {
-    return this.dataSource.data.length <= this.pageSizeOptions[0];
+    return this.showMore
+      && this.dataSource.data.length <= this.pageSizeOptions[0];
   }
 
   get more(): string {
-    return this.cs.primaryLanguage ? 'More...' : 'さらに見る';
+    return this.cs.getMenuAliase('More');
   }
 
   getTitle(event: EventInfo): string {

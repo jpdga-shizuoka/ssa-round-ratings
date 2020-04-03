@@ -13,6 +13,9 @@
         (click)="onClickLink()">
         <mat-icon>home</mat-icon>{{home}}
       </a>
+
+      <mat-divider></mat-divider>
+
       <a mat-list-item routerLink="/events/upcoming"
         routerLinkActive="menu-active"
         (click)="onClickLink()">
@@ -41,6 +44,11 @@
     <mat-divider></mat-divider>
 
     <mat-nav-list>
+      <a mat-list-item routerLink="/stats"
+        routerLinkActive="menu-active"
+        (click)="onClickLink()">
+        <mat-icon>bar_chart</mat-icon>{{stats}}
+      </a>
       <a mat-list-item routerLink="/about"
         routerLinkActive="menu-active"
         (click)="onClickLink()">
