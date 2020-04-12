@@ -5,7 +5,7 @@
 .spacer {
   flex: 1 1 auto;
 }
-@media (max-width: 374px) {
+@media (max-width: 414px) {
   .mat-dialog-title,
   .mat-list-item {
     font-size: 15px;

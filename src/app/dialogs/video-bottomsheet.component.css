@@ -31,7 +31,7 @@ h1, h2, h3 {
   margin-left: auto;
   margin-right: auto;
 }
-@media (max-width: 420px) {
+@media (max-width: 414px) {
   .video-view h1 {
     font-size: 18px;
   }
