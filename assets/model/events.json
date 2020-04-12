@@ -281,6 +281,7 @@
       "from": "2020-05-16",
       "to": "2020-05-17"
     },
+    "status": "CANCELED",
     "pdga": {
       "eventId": "45279"
     },
@@ -2941,6 +2942,11 @@
         "type": "video",
         "title": "MPO Final9 #2",
         "url": "https://youtu.be/F5MdwUp_xrU"
+      },
+      {
+        "type": "video",
+        "title": "FPO Final9",
+        "url": "https://youtu.be/eKDjRkdgsHc"
       }
     ]
   },
