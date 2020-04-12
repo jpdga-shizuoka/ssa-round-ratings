@@ -29,7 +29,7 @@ export class VideoBottomsheetComponent {
     private bottomSheetRef: MatBottomSheetRef<VideoBottomsheetComponent>,
     private cs: CommonService,
   ) {
-    const width = window.innerWidth - VIDEO_SIDE_PADDING*2;
+    const width = window.innerWidth - VIDEO_SIDE_PADDING * 2;
     this.width = Math.min(MAX_VIDEO_WIDTH, width);
     this.height = this.width / 16 * 9;
 
