@@ -4,11 +4,16 @@ import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
 import { MatSidenav } from '@angular/material/sidenav';
 
-import { Subscription } from 'rxjs';
 import { filter, map, mergeMap } from 'rxjs/operators';
 
 import { CommonService } from './common.service';
-import { Observable, isHandset } from './utilities';
+import {
+  isHandset,
+  subscribeMetaDescription,
+  MetaDescription,
+  Observable,
+  Subscription,
+} from './utilities';
 
 interface MyMetaData {
   title: string;
@@ -24,18 +29,18 @@ interface MyMetaData {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent implements OnInit, OnDestroy, MetaDescription {
   @ViewChild('drawer') drawer: MatSidenav;
   title = 'DG Japan';
   isHandset$: Observable<boolean>;
-  subscription: Subscription;
+  metaSubscription: Subscription;
 
   constructor(
     private cs: CommonService,
-    private route: ActivatedRoute,
-    private titleService: Title,
-    private meta: Meta,
-    public router: Router,
+    public ngActivatedRoute: ActivatedRoute,
+    public ngTitle: Title,
+    public ngMeta: Meta,
+    public ngRouter: Router,
     breakpointObserver: BreakpointObserver,
   ) {
     this.isHandset$ = isHandset(breakpointObserver);
@@ -73,23 +78,12 @@ export class AppComponent implements OnInit, OnDestroy {
     const language = window.navigator.language.split('-')[0];
     this.cs.primaryLanguage = language === 'ja' ? false : true;
 
-    this.subscription = this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd),
-      map(() => this.route),
-      map(route => {
-        while (route.firstChild) {
-          route = route.firstChild;
-        }
-        return route;
-      }),
-      filter(route => route.outlet === 'primary'),
-      mergeMap(route => route.data)
-    ).subscribe((data: MyMetaData) => this.updateDescription(data));
+    this.metaSubscription = subscribeMetaDescription(this);
   }
 
   ngOnDestroy() {
-    if (this.subscription) {
-      this.subscription.unsubscribe();
+    if (this.metaSubscription) {
+      this.metaSubscription.unsubscribe();
     }
   }
 
@@ -101,23 +95,5 @@ export class AppComponent implements OnInit, OnDestroy {
 
   onClickLanguage() {
     this.cs.toggleLanguage();
-  }
-
-  private updateDescription(data: MyMetaData) {
-    this.titleService.setTitle(data.title);
-    this.meta.updateTag({ name: 'description', content: data.description });
-    this.meta.updateTag({ property: 'og:title', content: data.title });
-    this.meta.updateTag({ property: 'og:type', content: data.type });
-    this.meta.updateTag({ property: 'og:url', content: data.url });
-
-    if (data.image) {
-      this.meta.updateTag({ property: 'og:image', content: data.image });
-    }
-    if (data.keywords) {
-      this.meta.updateTag({ name: 'keywords', content: data.keywords });
-    }
-    if (data.description) {
-      this.meta.updateTag({ property: 'og:description', content: data.description });
-    }
   }
 }

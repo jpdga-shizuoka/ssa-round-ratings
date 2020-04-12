@@ -1,9 +1,19 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable, of } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
+import { NavigationEnd } from '@angular/router';
+import { Observable, Subscription, of } from 'rxjs';
+import { map, shareReplay, filter, mergeMap } from 'rxjs/operators';
 
-export { BreakpointObserver, Observable, of };
-export { map, shareReplay };
+import { MetaData, MetaDescription } from './models';
+
+export { map, shareReplay, of };
+export {
+  MetaDescription,
+  BreakpointObserver,
+  Observable,
+  Subscription
+};
+
+const IMAGE_PATH = '/assets/img/DGJAPAN.png';
 
 export function isHandset(observer: BreakpointObserver): Observable<boolean> {
   return observer
@@ -12,4 +22,39 @@ export function isHandset(observer: BreakpointObserver): Observable<boolean> {
     map(result => result.matches),
     shareReplay(1)
   );
+}
+
+export function subscribeMetaDescription(mdo: MetaDescription): Subscription {
+  return mdo.ngRouter.events.pipe(
+    filter(event => event instanceof NavigationEnd),
+    map(() => mdo.ngActivatedRoute),
+    map(route => {
+      while (route.firstChild) {
+        route = route.firstChild;
+      }
+      return route;
+    }),
+    filter(route => route.outlet === 'primary'),
+    mergeMap(route => route.data)
+  ).subscribe((data: any) => updateDescription(mdo, data));
+}
+
+function updateDescription(mdo: MetaDescription, data?: any): void {
+  if (!data.metaDescription) {
+    return;
+  }
+  const md = data.metaDescription as MetaData;
+  const url = window.location.protocol + '//' + window.location.host;
+  const image = url + IMAGE_PATH;
+  const href = url + window.location.pathname;
+  mdo.ngTitle.setTitle(md.title);
+  mdo.ngMeta.updateTag({ name: 'description', content: md.description });
+  mdo.ngMeta.updateTag({ property: 'og:description', content: md.description });
+  mdo.ngMeta.updateTag({ property: 'og:title', content: md.title });
+  mdo.ngMeta.updateTag({ property: 'og:type', content: md.type || 'website' });
+  mdo.ngMeta.updateTag({ property: 'og:url', content: md.url || href });
+  mdo.ngMeta.updateTag({ property: 'og:image', content: md.image || image});
+  if (md.keywords) {
+    mdo.ngMeta.updateTag({ name: 'keywords', content: md.keywords });
+  }
 }
