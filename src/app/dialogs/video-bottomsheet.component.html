@@ -4,7 +4,8 @@
       <youtube-player
         [videoId]="videoId"
         [width]="width"
-        [height]="height">
+        [height]="height"
+        (stateChange)="onStateChange($event)">
       </youtube-player>
     </div>
   </div>
