@@ -1,4 +1,5 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, ViewChild, ElementRef } from '@angular/core';
+import { YouTubePlayer } from '@angular/youtube-player';
 import { MatBottomSheetRef, MAT_BOTTOM_SHEET_DATA} from '@angular/material/bottom-sheet';
 import { DeviceDetectorService } from 'ngx-device-detector';
 
@@ -17,6 +18,7 @@ const VIDEO_SIDE_PADDING = 16;
   styleUrls: ['./video-bottomsheet.component.css']
 })
 export class VideoBottomsheetComponent {
+  @ViewChild('player') player: YouTubePlayer;
   videoId: string | undefined = undefined;
   videoType: 'YT' | 'FB' | undefined = undefined;
   width: number;
@@ -95,5 +97,11 @@ export class VideoBottomsheetComponent {
     if (event?.data === 0) {
       this.bottomSheetRef.dismiss();
     }
+  }
+  //
+  //  @see https://developers.google.com/youtube/iframe_api_reference#Events
+  //
+  onReady(event: any) {
+    this.player.playVideo();
   }
 }
