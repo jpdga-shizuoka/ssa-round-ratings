@@ -4,6 +4,7 @@ import { Observable, Subscription, of } from 'rxjs';
 import { map, shareReplay, filter, mergeMap } from 'rxjs/operators';
 
 import { MetaData, MetaDescription } from './models';
+import { environment } from '../environments/environment';
 
 export { map, shareReplay, of };
 export {
@@ -45,7 +46,7 @@ function updateDescription(mdo: MetaDescription, data?: any): void {
   }
   const md = data.metaDescription as MetaData;
   const url = window.location.protocol + '//' + window.location.host;
-  const image = url + IMAGE_PATH;
+  const image = url + environment.projectPathName + IMAGE_PATH;
   const href = url + window.location.pathname;
   mdo.ngTitle.setTitle(md.title);
   mdo.ngMeta.updateTag({ name: 'description', content: md.description });
