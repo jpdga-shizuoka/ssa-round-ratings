@@ -199,6 +199,7 @@
       "from": "2020-07-24",
       "to": "2020-07-26"
     },
+    "status": "CANCELED",
     "pdga": {
       "eventId": "45283"
     },
@@ -2443,13 +2444,6 @@
     "jpdga": {
       "eventId": "350"
     },
-    "urls": [
-      {
-        "type": "video",
-        "title": "MPO Final9",
-        "url": "https://youtu.be/ndyCS9Xw_rQ"
-      }
-    ],
     "players": {
       "pro": 36,
       "ama": 29,
