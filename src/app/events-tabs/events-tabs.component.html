@@ -5,18 +5,22 @@
   [(selectedIndex)]="selectedTab">
 
   <mat-tab label="{{tableTitle}}">
-    <app-events-table
-      [dataSource]="tableSource"
-      [displayedColumns$]="displayedColumns$"
-      [markerSelected$]="markerSelected">
-    </app-events-table>
+    <div>
+      <app-events-table
+        [dataSource]="tableSource"
+        [displayedColumns$]="displayedColumns$"
+        [markerSelected$]="markerSelected">
+      </app-events-table>      
+    </div>
   </mat-tab>
 
   <mat-tab label="{{mapTitle}}">
-    <app-events-map
-      [category]="category"
-      [mapSource$]="mapSource$"
-      (markerSelected)="onMarkerSelected($event)">
-    </app-events-map>
+    <div>
+      <app-events-map
+        [category]="category"
+        [mapSource$]="mapSource$"
+        (markerSelected)="onMarkerSelected($event)">
+      </app-events-map>
+    </div>
   </mat-tab>
 </mat-tab-group>
