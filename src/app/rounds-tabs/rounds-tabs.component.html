@@ -7,17 +7,21 @@
   [(selectedIndex)]="selectedTab">
 
   <mat-tab label="{{tableTitle}}">
+    <div>
       <app-rounds-table
         [dataSource]="roundsSource"
         [displayedColumns$]="displayedColumns$"
         [markerSelected$]="markerSelected">
       </app-rounds-table>
+    </div>
   </mat-tab>
 
   <mat-tab label="{{videos}}">
-    <app-videos-table
-      [dataSource]="videosSource">
-    </app-videos-table>
+    <div>
+      <app-videos-table
+        [dataSource]="videosSource">
+      </app-videos-table>
+    </div>
   </mat-tab>
 
   <mat-tab label="{{mapTitle}}">

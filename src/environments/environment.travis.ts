@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  projectPathName: '',
   MAP_API_KEY: 'xxxx',
   map: {
     center: {

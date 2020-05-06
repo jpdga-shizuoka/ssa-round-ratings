@@ -6,7 +6,7 @@ h1 {
   font-size: 16px;
   padding-bottom: 10px;
 }
-@media (max-width: 374px) {
+@media (max-width: 414px) {
   h1,
   .mat-nav-list,
   .mat-list-item {

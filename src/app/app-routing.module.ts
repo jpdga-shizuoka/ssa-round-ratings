@@ -8,62 +8,46 @@ import { StatsTabsComponent } from './stats-tabs/stats-tabs.component';
 import { AboutThisSiteComponent } from './about-this-site/about-this-site.component';
 
 const routes: Routes = [
-  { path: '', component: DashBoardComponent, data: {
+  { path: '', component: DashBoardComponent, data: { metaDescription: {
     title: 'DG Japan',
     description: 'Information of the disc golf events held in Japan.',
     keywords: 'disc golf,events,japan,schedule,stats,results,videos',
-    url: 'https://jpdga-shizuoka.github.io/ssa-round-ratings',
-    type: 'article',
-  }},
-  { path: 'events/upcoming', component: EventsTabsComponent, data: {
+  }}},
+  { path: 'events/upcoming', component: EventsTabsComponent, data: { metaDescription: {
     title: 'DG Japan - Disc Golf Events',
     description: 'Schedule of the official disc golf events held in Japan.',
     keywords: 'disc golf,official events,japan',
-    url: 'https://jpdga-shizuoka.github.io/ssa-round-ratings/events/upcoming',
-    type: 'article',
-  }},
-  { path: 'events/local', component: EventsTabsComponent, data: {
+  }}},
+  { path: 'events/local', component: EventsTabsComponent, data: { metaDescription: {
     title: 'DG Japan - Local Events',
     description: 'Schedule of the local events held in Japan.',
     keywords: 'disc golf,local events,japan',
-    url: 'https://jpdga-shizuoka.github.io/ssa-round-ratings/events/local',
-    type: 'article',
-  }},
-  { path: 'events/monthly', component: EventsTabsComponent, data: {
+  }}},
+  { path: 'events/monthly', component: EventsTabsComponent, data: { metaDescription: {
     title: 'DG Japan - Monthly Events',
     description: 'Schedule of the local monthly events held in Japan.',
     keywords: 'disc golf,monthly events,japan',
-    url: 'https://jpdga-shizuoka.github.io/ssa-round-ratings/events/monthly',
-    type: 'article',
-  }},
-  { path: 'past', component: RoundsTabsComponent, data: {
+  }}},
+  { path: 'past', component: RoundsTabsComponent, data: { metaDescription: {
     title: 'DG Japan - Results',
     description: 'Results of the official disc golf events held in Japan.',
     keywords: 'disc golf,events,results,japan',
-    url: 'https://jpdga-shizuoka.github.io/ssa-round-ratings/past',
-    type: 'article',
-  }},
-  { path: 'past/video', component: RoundsTabsComponent, data: {
+  }}},
+  { path: 'past/video', component: RoundsTabsComponent, data: { metaDescription: {
     title: 'DG Japan - Video',
     description: 'Video library of the official disc golf events held in Japan.',
     keywords: 'disc golf,events,results,japan,video',
-    url: 'https://jpdga-shizuoka.github.io/ssa-round-ratings/past/video',
-    type: 'article',
-  }},
-  { path: 'stats', component: StatsTabsComponent, data: {
+  }}},
+  { path: 'stats', component: StatsTabsComponent, data: { metaDescription: {
     title: 'DG Japan - Stats',
     description: 'Stats of the official disc golf events held in Japan.',
     keywords: 'disc golf,events,stats,japan',
-    url: 'https://jpdga-shizuoka.github.io/ssa-round-ratings/stats',
-    type: 'article',
-  }},
-  { path: 'about', component: AboutThisSiteComponent, data: {
+  }}},
+  { path: 'about', component: AboutThisSiteComponent, data: { metaDescription: {
     title: 'DG Japan - About Us',
     description: 'About Us, Privacy Policy, Terms, Open Source Software Project.',
     keywords: 'disc golf,ssa,scratch scoring averages,japan',
-    url: 'https://jpdga-shizuoka.github.io/ssa-round-ratings/about',
-    type: 'article',
-  }},
+  }}},
 ];
 
 @NgModule({

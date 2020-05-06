@@ -1,5 +1,6 @@
 export const environment = {
   production: true,
+  projectPathName: '/ssa-round-ratings',
   MAP_API_KEY: 'AIzaSyDfyR-mHrebjYkaU5LCF1HxDO_XWN4IjzA',
   map: {
     center: {

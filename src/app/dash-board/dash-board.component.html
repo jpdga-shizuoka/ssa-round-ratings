@@ -4,20 +4,24 @@
 <mat-tab-group class="mat-elevation-z2"
   (selectedTabChange)="onEventsTabChange($event)">
   <mat-tab label="{{upcomingEvents}}">
-    <app-events-table
-      [showMore]="true"
-      [category]="'upcoming'"
-      [dataSource]="tableSourceUpcoming"
-      [displayedColumns$]="displayedColumnsUpcoming$">
-    </app-events-table>
+    <div>
+      <app-events-table
+        [showMore]="true"
+        [category]="'upcoming'"
+        [dataSource]="tableSourceUpcoming"
+        [displayedColumns$]="displayedColumnsUpcoming$">
+      </app-events-table>
+    </div>
   </mat-tab>
   <mat-tab label="{{localEvents}}">
-    <app-events-table
-      [showMore]="true"
-      [category]="'local'"
-      [dataSource]="tableSourceLocal"
-      [displayedColumns$]="displayedColumnsUpcoming$">
-    </app-events-table>
+    <div>
+      <app-events-table
+        [showMore]="true"
+        [category]="'local'"
+        [dataSource]="tableSourceLocal"
+        [displayedColumns$]="displayedColumnsUpcoming$">
+      </app-events-table>
+    </div>
   </mat-tab>
   <mat-tab label="Japan Open">
     <app-japan-open>
@@ -30,16 +34,20 @@
 </h4>
 <mat-tab-group class="mat-elevation-z2">
   <mat-tab label="{{results}}">
-    <app-rounds-table
-      [showMore]="true"
-      [dataSource]="tableSourcePast"
-      [displayedColumns$]="displayedColumnsPast$">
-    </app-rounds-table>
+    <div>
+      <app-rounds-table
+        [showMore]="true"
+        [dataSource]="tableSourcePast"
+        [displayedColumns$]="displayedColumnsPast$">
+      </app-rounds-table>
+    </div>
   </mat-tab>
   <mat-tab label="{{videos}}">
-    <app-videos-table
-      [showMore]="true"
-      [dataSource]="videosSource">
-    </app-videos-table>
+    <div>
+      <app-videos-table
+        [showMore]="true"
+        [dataSource]="videosSource">
+      </app-videos-table>
+    </div>
   </mat-tab>
 </mat-tab-group>

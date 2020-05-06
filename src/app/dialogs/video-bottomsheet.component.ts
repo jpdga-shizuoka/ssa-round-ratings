@@ -1,4 +1,5 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, ViewChild, ElementRef } from '@angular/core';
+import { YouTubePlayer } from '@angular/youtube-player';
 import { MatBottomSheetRef, MAT_BOTTOM_SHEET_DATA} from '@angular/material/bottom-sheet';
 import { DeviceDetectorService } from 'ngx-device-detector';
 
@@ -8,7 +9,8 @@ import { VideoInfo } from '../models';
 const FACEBOOK = /https:\/\/www.facebook.com\/.+\/videos\/(\d+)\//;
 const YOUTUBE = /https:\/\/www.youtube.com\/watch?v=([0-9a-zA-Z_\-]+)/;
 const YOUTUBE_SHORT = /https:\/\/youtu.be\/([0-9a-zA-Z_\-]+)/;
-
+const MAX_VIDEO_WIDTH = 640;
+const VIDEO_SIDE_PADDING = 16;
 
 @Component({
   selector: 'app-video-bottomsheet',
@@ -16,10 +18,11 @@ const YOUTUBE_SHORT = /https:\/\/youtu.be\/([0-9a-zA-Z_\-]+)/;
   styleUrls: ['./video-bottomsheet.component.css']
 })
 export class VideoBottomsheetComponent {
+  @ViewChild('player') player: YouTubePlayer;
   videoId: string | undefined = undefined;
   videoType: 'YT' | 'FB' | undefined = undefined;
-  width = 640;
-  height = 390;
+  width: number;
+  height: number;
   isMobile = false;
 
   constructor(
@@ -28,14 +31,16 @@ export class VideoBottomsheetComponent {
     private bottomSheetRef: MatBottomSheetRef<VideoBottomsheetComponent>,
     private cs: CommonService,
   ) {
+    const width = window.innerWidth - VIDEO_SIDE_PADDING * 2;
+    this.width = Math.min(MAX_VIDEO_WIDTH, width);
+    this.height = this.width / 16 * 9;
+
     this.bottomSheetRef.afterDismissed().subscribe(() => {
       this.videoId = undefined;
     });
 
     if (this.deviceService.isMobile()) {
       this.isMobile = true;
-      this.width = 320;
-      this.height = 195;
     }
 
     let result: string[] | null;
@@ -83,5 +88,20 @@ export class VideoBottomsheetComponent {
 
   eventTitle(name: string) {
     return this.cs.getEventAliase(name);
+  }
+
+  //
+  // https://developers.google.com/youtube/iframe_api_reference#Playback_status
+  //
+  onStateChange(event: any) {
+    if (event?.data === 0) {
+      this.bottomSheetRef.dismiss();
+    }
+  }
+  //
+  //  @see https://developers.google.com/youtube/iframe_api_reference#Events
+  //
+  onReady(event: any) {
+    this.player.playVideo();
   }
 }

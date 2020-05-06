@@ -16,7 +16,7 @@
   width: 16px;
   margin: 0 5px;
 }
-@media (max-width: 374px) {
+@media (max-width: 414px) {
   .event-detail {
     font-size: small;
   }

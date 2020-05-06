@@ -1,3 +1,6 @@
+import { Router, ActivatedRoute } from '@angular/router';
+import { Title, Meta } from '@angular/platform-browser';
+
 export type EventCategory = 'upcoming' | 'past' | 'local' | 'monthly';
 
 export interface MarkerDialogData {
@@ -129,4 +132,20 @@ export interface TotalYearPlayers {
 export interface PastLists {
   players: TotalYearPlayers[];
   videos: VideoInfo[];
+}
+
+export interface MetaData {
+  title: string;
+  type?: string;
+  url?: string;
+  image?: string;
+  description?: string;
+  keywords?: string;
+}
+
+export interface MetaDescription {
+  ngActivatedRoute: ActivatedRoute;
+  ngTitle: Title;
+  ngMeta: Meta;
+  ngRouter: Router;
 }
