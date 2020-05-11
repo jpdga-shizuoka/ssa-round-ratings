@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = '../src/assets/model/';
+const filename = 'rounds.json';
+const filepath = path + filename;
+const rounds = JSON.parse(fs.readFileSync(filepath, 'utf8'));
+const regexp = /[ \-\.\,\(\)]/g;
+rounds.forEach(round => {
+  eventId = round.event.toLowerCase().replace(regexp, '');
+  roundId = round.round.toLowerCase().replace(regexp, '');
+  round.id = eventId + '.' + roundId;
+  round.event = eventId;
+});
+
+fs.writeFileSync(filename, JSON.stringify(rounds, null, '  '));

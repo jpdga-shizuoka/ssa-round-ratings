@@ -15,7 +15,7 @@
     </div>
     <div class="my-align action-item">
       <mat-icon>place</mat-icon>Location:
-      <a href="{{geolocation}}" target="_blank" rel="noopener">
+      <a href="{{location?.geolocation | geolink}}" target="_blank" rel="noopener">
         <div class="my-align">Fukui Country Club</div>
       </a>
     </div>
@@ -24,8 +24,8 @@
   <div class="video-lib">
     <app-videos-table class="video-table mat-elevation-z2"
       [showSearch]="false"
-      [pageSizeOptions]=[5]
-      [dataSource]="videosSource">
+      [keyword]="'japan open'"
+      [pageSizeOptions]=[5]>
     </app-videos-table>
   </div>
 </mat-card>

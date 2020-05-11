@@ -3,13 +3,10 @@ import { Location } from '@angular/common';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { ActivatedRoute } from '@angular/router';
 
-import { MatTableDataSource } from '@angular/material/table';
-
-import { Observable, BehaviorSubject, Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { RoundInfo, EventInfo, VideoInfo, GeoMarker } from '../models';
-import { CommonService } from '../common.service';
+import { GeoMarker } from '../models';
 import { isHandset } from '../utilities';
 
 const DISPLAYED_COLUMNS = [['event', 'hla', 'ssa'], ['year', 'event', 'round', 'hla', 'ssa']];
@@ -21,29 +18,19 @@ const TABS_TITLE = ['Rounds', 'Location map'];
   styleUrls: ['./rounds-tabs.component.css']
 })
 export class RoundsTabsComponent implements OnInit {
-  roundsSource: MatTableDataSource<RoundInfo>;
-  videosSource: MatTableDataSource<VideoInfo>;
-  mapSource$: BehaviorSubject<GeoMarker[]>;
   isHandset$: Observable<boolean>;
-  rounds: RoundInfo[];
   markerSelected: Subject<GeoMarker>;
   selectedTab = 0;
 
   constructor(
-    private cs: CommonService,
     private route: ActivatedRoute,
     private location: Location,
     breakpointObserver: BreakpointObserver,
   ) {
-    route.url.pipe(map(segments => console.log('url', segments)));
     this.isHandset$ = isHandset(breakpointObserver);
   }
 
   ngOnInit() {
-    this.rounds = this.cs.getRounds();
-    this.roundsSource = new MatTableDataSource<RoundInfo>(this.rounds);
-    this.videosSource = new MatTableDataSource<VideoInfo>();
-    this.mapSource$ = new BehaviorSubject<GeoMarker[]>([]);
     this.markerSelected = new Subject<GeoMarker>();
     switch (this.route.snapshot.url[1]?.path) {
       case 'video':
@@ -55,7 +42,6 @@ export class RoundsTabsComponent implements OnInit {
       default:
         this.selectedTab = 0;
     }
-    this.doLazyLoading();
   }
 
   get displayedColumns$(): Observable<string[]> {
@@ -65,19 +51,11 @@ export class RoundsTabsComponent implements OnInit {
   }
 
   get tableTitle() {
-    return this.cs.getMenuAliase(TABS_TITLE[0]);
+    return TABS_TITLE[0];
   }
 
   get mapTitle() {
-    return this.cs.getMenuAliase(TABS_TITLE[1]);
-  }
-
-  get videos() {
-    return this.cs.getMenuAliase('Videos');
-  }
-
-  get title() {
-    return this.cs.getMenuAliase('Results');
+    return TABS_TITLE[1];
   }
 
   back() {
@@ -87,39 +65,5 @@ export class RoundsTabsComponent implements OnInit {
   onMarkerSelected(marker: GeoMarker) {
     this.markerSelected.next(marker);
     this.selectedTab = 0;
-  }
-
-  private doLazyLoading() {
-    setTimeout(() => {
-      const lists = this.cs.getPastLists();
-      this.videosSource.data = lists.videos;
-      const markers = this.makeMaerkersFromRounds(this.rounds);
-      this.mapSource$.next(markers);
-    });
-  }
-
-  private makeMaerkersFromRounds(rounds: RoundInfo[]): GeoMarker[] {
-    const markers: GeoMarker[] = [];
-    const eventTitles: string[] = [];
-    for (const round of rounds) {
-      const event = this.cs.getEvent(round.event);
-      const location = this.cs.getLocation(event.location);
-      const eventTitle = this.cs.getEventTitle(event.title);
-      const eventTitleLoc = eventTitle + event.location;
-      if (eventTitles.indexOf(eventTitleLoc) >= 0) {
-        continue;
-      }
-      const marker = {
-        position: {
-          lat: location.geolocation[0],
-          lng: location.geolocation[1]
-        },
-        location: event.location,
-        title: eventTitle,
-      };
-      eventTitles.push(eventTitleLoc);
-      markers.push(marker);
-    }
-    return markers;
   }
 }

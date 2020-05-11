@@ -1,7 +1,16 @@
 import { Router, ActivatedRoute } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
+import { Observable } from 'rxjs';
 
-export type EventCategory = 'upcoming' | 'past' | 'local' | 'monthly';
+export type EventCategory = 'upcoming' | 'past' | 'local' | 'monthly' | 'video';
+export type EventId = string;
+export type RoundId = string;
+export type LocationId = string;
+export type Period = {
+  from: string;
+  to: string;
+};
+export type GeoPosition = [number, number];
 
 export interface MarkerDialogData {
   category: EventCategory;
@@ -23,7 +32,9 @@ export class GeoMarker {
 }
 
 export interface LocationInfo {
-  geolocation: [number, number];
+  id: LocationId;
+  title: string;
+  geolocation: GeoPosition;
   prefecture: string;
 }
 
@@ -56,12 +67,11 @@ export interface Players {
 }
 
 export interface EventInfo {
+  id: EventId;
   title?: string;
-  period?: {
-    from: string;
-    to: string;
-  };
-  location: string;     // location of the course
+  period?: Period;
+  location: LocationId;
+  location$?: Observable<LocationInfo>;
   status?: string;
   pdga?: PdgaInfo;
   jpdga?: JpdgaInfo;
@@ -86,7 +96,9 @@ export interface Schedule {
 }
 
 export interface RoundInfo {
-  event: string;        // Event Name
+  id: RoundId;
+  event: EventId;       // Event Id
+  event$?: Observable<EventInfo>;
   round: string;        // Round Name
   date: string;         // Date of Round
   hla?: number;         // Hole Length Average (m)

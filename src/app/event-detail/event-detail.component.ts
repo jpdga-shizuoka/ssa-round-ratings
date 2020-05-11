@@ -1,38 +1,45 @@
-import { Component, Input } from '@angular/core';
-
+import { Component, Input, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
 import {
-  CommonService, EventInfo, LocationInfo, ICONS, MiscInfo
+  CommonService, ICONS, MiscInfo
 } from '../common.service';
 import {
   BreakpointObserver, Observable, isHandset, of as observableOf
 } from '../utilities';
+import { RemoteService, EventInfo, LocationInfo } from '../remote.service';
 
 @Component({
   selector: 'app-event-detail',
   templateUrl: './event-detail.component.html',
   styleUrls: ['./event-detail.component.css']
 })
-export class EventDetailComponent {
-
+export class EventDetailComponent implements OnInit, OnDestroy {
   @Input() event: EventInfo;
-
-  private _location: LocationInfo;
-  private _miscInfo: MiscInfo[];
+  private ssLocation: Subscription;
+  location: LocationInfo;
+  miscInfo: MiscInfo[];
   isHandset$: Observable<boolean>;
 
   constructor(
     private breakpointObserver: BreakpointObserver,
     private cs: CommonService,
+    private readonly remote: RemoteService,
   ) {
     this.isHandset$ = isHandset(breakpointObserver);
   }
 
-  get title(): string {
-    return this.event.title ? this.cs.getEventTitle(this.event.title) : '';
+  ngOnInit() {
+    this.ssLocation = this.remote.getLocation(this.event.location)
+      .subscribe(location => this.location = location);
+    this.makeMiscInfo();
   }
 
-  get monthlySchedule() {
-    return this.cs.getMonth(this.event.schedule);
+  ngOnDestroy() {
+    this.ssLocation?.unsubscribe();
+  }
+
+  get title(): string {
+    return this.event.title ? this.cs.getEventTitle(this.event.title) : '';
   }
 
   get showPastRounds() {
@@ -45,52 +52,6 @@ export class EventDetailComponent {
       return observableOf(false);
     }
     return this.isHandset$;
-  }
-
-  get miscInfo(): MiscInfo[] {
-    if (this._miscInfo) {
-      return this._miscInfo;
-    }
-    this.makeMiscInfo();
-    return this._miscInfo;
-  }
-
-  get location(): string | undefined {
-    const name = this.cs.getLocationName(this.event.location);
-    const region = this.getRegion();
-    return `${name}, ${region}`;
-  }
-
-  get geolocation(): string | undefined {
-    const location = this.getLocation();
-    if (!location || !location.geolocation) {
-      return undefined;
-    }
-    return this.cs.getGeolocation(location.geolocation);
-  }
-
-  get pastResults() {
-    return this.cs.getMenuAliase('Past Results');
-  }
-
-  get seeThePastResults() {
-    return this.cs.getMenuAliase('See the Past Results');
-  }
-
-  private getRegion(): string | undefined {
-    const location = this.getLocation();
-    if (!location || !location.prefecture) {
-      return undefined;
-    }
-    return this.cs.getPrefecture(location.prefecture);
-  }
-
-  private getLocation(): LocationInfo | undefined {
-    if (this._location) {
-      return this._location;
-    }
-    this._location = this.cs.getLocation(this.event.location);
-    return this._location;
   }
 
   private makeMiscInfo() {
@@ -122,6 +83,6 @@ export class EventDetailComponent {
         });
       }
     }
-    this._miscInfo = info;
+    this.miscInfo = info;
   }
 }

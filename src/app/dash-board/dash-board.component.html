@@ -1,24 +1,23 @@
 <h4>
-  <a routerLink="/events/upcoming"><mat-icon>events</mat-icon>{{schedule}}</a>
+  <a routerLink="/events/upcoming"><mat-icon>events</mat-icon>{{'Schedule' | localize}}</a>
 </h4>
-<mat-tab-group class="mat-elevation-z2"
-  (selectedTabChange)="onEventsTabChange($event)">
-  <mat-tab label="{{upcomingEvents}}">
+<mat-tab-group class="mat-elevation-z2">
+  <mat-tab label="{{'Official' | localize}}">
     <div>
       <app-events-table
         [showMore]="true"
+        [limit]="3"
         [category]="'upcoming'"
-        [dataSource]="tableSourceUpcoming"
         [displayedColumns$]="displayedColumnsUpcoming$">
       </app-events-table>
     </div>
   </mat-tab>
-  <mat-tab label="{{localEvents}}">
+  <mat-tab label="{{'Local' | localize}}">
     <div>
       <app-events-table
         [showMore]="true"
+        [limit]="3"
         [category]="'local'"
-        [dataSource]="tableSourceLocal"
         [displayedColumns$]="displayedColumnsUpcoming$">
       </app-events-table>
     </div>
@@ -30,23 +29,24 @@
 </mat-tab-group>
 
 <h4>
-  <a routerLink="/past"><mat-icon>table_chart</mat-icon>{{results}}</a>
+  <a routerLink="/past"><mat-icon>table_chart</mat-icon>{{'Results' | localize}}</a>
 </h4>
 <mat-tab-group class="mat-elevation-z2">
-  <mat-tab label="{{results}}">
+  <mat-tab label="{{'Results' | localize}}">
     <div>
       <app-rounds-table
         [showMore]="true"
-        [dataSource]="tableSourcePast"
+        [limit]="5"
         [displayedColumns$]="displayedColumnsPast$">
       </app-rounds-table>
     </div>
   </mat-tab>
-  <mat-tab label="{{videos}}">
+  <mat-tab label="{{'Videos' | localize}}">
     <div>
       <app-videos-table
-        [showMore]="true"
-        [dataSource]="videosSource">
+        [limit]="5"
+        [category]="'past'"
+        [showMore]="true">
       </app-videos-table>
     </div>
   </mat-tab>

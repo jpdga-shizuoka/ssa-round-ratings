@@ -1,0 +1,2407 @@
+[
+  {
+    "event": "the16thminamisomaopen",
+    "date": "2020-05-03",
+    "round": "CANCELED",
+    "holes": 18,
+    "id": "the16thminamisomaopen.canceled"
+  },
+  {
+    "event": "the18thsagaopen",
+    "date": "2020-04-11",
+    "round": "CANCELED",
+    "holes": 18,
+    "id": "the18thsagaopen.canceled"
+  },
+  {
+    "event": "the3rdmiyagimichinokuopen",
+    "round": "CANCELED",
+    "date": "2020-03-21",
+    "holes": 18,
+    "id": "the3rdmiyagimichinokuopen.canceled"
+  },
+  {
+    "event": "the2020nationaldoubleschampionship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2020-03-01",
+    "hla": 83,
+    "holes": 18,
+    "id": "the2020nationaldoubleschampionship.rd1rd2rd3"
+  },
+  {
+    "event": "the9thokinawaopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2020-02-15",
+    "hla": 99,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 49,
+        "rating": 1074
+      },
+      "player2": {
+        "score": 78,
+        "rating": 833
+      }
+    },
+    "id": "the9thokinawaopen.rd1rd2rd3"
+  },
+  {
+    "event": "the6thkagoshimaopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2020-01-26",
+    "hla": 100,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 57,
+        "rating": 1010
+      },
+      "player2": {
+        "score": 71,
+        "rating": 894
+      }
+    },
+    "id": "the6thkagoshimaopen.rd1rd2rd3"
+  },
+  {
+    "event": "the2020nationalteamchampionship",
+    "round": "Rd1,2,3,4,5",
+    "date": "2020-01-12",
+    "hla": 82,
+    "holes": 12,
+    "id": "the2020nationalteamchampionship.rd12345"
+  },
+  {
+    "event": "the19thchubuopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2019-12-14",
+    "hla": 104,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 60,
+        "rating": 1029
+      },
+      "player2": {
+        "score": 82,
+        "rating": 876
+      }
+    },
+    "id": "the19thchubuopen.rd1rd2rd3"
+  },
+  {
+    "event": "the33rdkyushuopen",
+    "round": "Rd1(B,C)",
+    "date": "2019-11-30",
+    "hla": 99,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 54,
+        "rating": 1005
+      },
+      "player2": {
+        "score": 71,
+        "rating": 851
+      }
+    },
+    "id": "the33rdkyushuopen.rd1bc"
+  },
+  {
+    "event": "the33rdkyushuopen",
+    "round": "Rd2,Rd3()",
+    "date": "2019-11-30",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 49,
+        "rating": 1017
+      },
+      "player2": {
+        "score": 63,
+        "rating": 878
+      }
+    },
+    "id": "the33rdkyushuopen.rd2rd3"
+  },
+  {
+    "event": "the15thkyotoclassic",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2019-11-16",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 50,
+        "rating": 1044
+      },
+      "player2": {
+        "score": 68,
+        "rating": 882
+      }
+    },
+    "id": "the15thkyotoclassic.rd1rd2rd3"
+  },
+  {
+    "event": "the31stshowakinenparkopen",
+    "round": "Rd1,Rd2",
+    "date": "2019-11-02",
+    "holes": 27,
+    "id": "the31stshowakinenparkopen.rd1rd2"
+  },
+  {
+    "event": "the19thtohokuopen",
+    "round": "Rd1",
+    "date": "2019-10-13",
+    "hla": 93,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 59,
+        "rating": 999
+      },
+      "player2": {
+        "score": 72,
+        "rating": 893
+      }
+    },
+    "id": "the19thtohokuopen.rd1"
+  },
+  {
+    "event": "the19thtohokuopen",
+    "round": "Rd2,Rd3",
+    "date": "2019-10-13",
+    "hla": 93,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 54,
+        "rating": 1021
+      },
+      "player2": {
+        "score": 70,
+        "rating": 883
+      }
+    },
+    "id": "the19thtohokuopen.rd2rd3"
+  },
+  {
+    "event": "the4thmihoopen",
+    "round": "Rd1,Rd2",
+    "date": "2019-09-28",
+    "hla": 63,
+    "holes": 18,
+    "id": "the4thmihoopen.rd1rd2"
+  },
+  {
+    "event": "the31stjapannationalchampionship",
+    "round": "Rd3",
+    "date": "2019-09-23",
+    "hla": 121,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 53,
+        "rating": 1051
+      },
+      "player2": {
+        "score": 74,
+        "rating": 884
+      }
+    },
+    "id": "the31stjapannationalchampionship.rd3"
+  },
+  {
+    "event": "the31stjapannationalchampionship",
+    "round": "Rd1,Rd2",
+    "date": "2019-09-22",
+    "hla": 121,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 53,
+        "rating": 1025
+      },
+      "player2": {
+        "score": 69,
+        "rating": 885
+      }
+    },
+    "id": "the31stjapannationalchampionship.rd1rd2"
+  },
+  {
+    "event": "the22ndkansaiopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2019-08-31",
+    "hla": 99,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 51,
+        "rating": 1000
+      },
+      "player2": {
+        "score": 65,
+        "rating": 862
+      }
+    },
+    "id": "the22ndkansaiopen.rd1rd2rd3"
+  },
+  {
+    "event": "the8thhiruganokogentournament",
+    "round": "Rd1,Rd2",
+    "date": "2019-08-25",
+    "hla": 90,
+    "holes": 18,
+    "id": "the8thhiruganokogentournament.rd1rd2"
+  },
+  {
+    "event": "the14thmichinokuopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2019-08-11",
+    "hla": 96,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 58,
+        "rating": 1007
+      },
+      "player2": {
+        "score": 74,
+        "rating": 877
+      }
+    },
+    "id": "the14thmichinokuopen.rd1rd2rd3"
+  },
+  {
+    "event": "the7thasiachampionship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2019-08-03",
+    "hla": 122,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 55,
+        "rating": 1048
+      },
+      "player2": {
+        "score": 74,
+        "rating": 904
+      }
+    },
+    "id": "the7thasiachampionship.rd1rd2rd3"
+  },
+  {
+    "event": "the23rdkantoopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2019-07-14",
+    "hla": 109,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 57,
+        "rating": 1043
+      },
+      "player2": {
+        "score": 68,
+        "rating": 964
+      }
+    },
+    "id": "the23rdkantoopen.rd1rd2rd3"
+  },
+  {
+    "event": "the8thhokkaidoopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2019-06-29",
+    "hla": 113,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 56,
+        "rating": 1016
+      },
+      "player2": {
+        "score": 70,
+        "rating": 900
+      }
+    },
+    "id": "the8thhokkaidoopen.rd1rd2rd3"
+  },
+  {
+    "event": "the14thmastersnationalchampionship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2019-06-22",
+    "hla": 75,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 51,
+        "rating": 997
+      },
+      "player2": {
+        "score": 64,
+        "rating": 869
+      }
+    },
+    "id": "the14thmastersnationalchampionship.rd1rd2rd3"
+  },
+  {
+    "event": "the21stnipponopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2019-05-25",
+    "hla": 96,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 54,
+        "rating": 1024
+      },
+      "player2": {
+        "score": 74,
+        "rating": 846
+      }
+    },
+    "id": "the21stnipponopen.rd1rd2rd3"
+  },
+  {
+    "event": "the14thkiyosatonomoriopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2019-05-18",
+    "hla": 81,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 51,
+        "rating": 1012
+      },
+      "player2": {
+        "score": 68,
+        "rating": 849
+      }
+    },
+    "id": "the14thkiyosatonomoriopen.rd1rd2rd3"
+  },
+  {
+    "event": "the2ndgifuhiruganoopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2019-05-04",
+    "hla": 121,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 59,
+        "rating": 977
+      },
+      "player2": {
+        "score": 74,
+        "rating": 847
+      }
+    },
+    "id": "the2ndgifuhiruganoopen.rd1rd2rd3"
+  },
+  {
+    "event": "the15thminamisomaopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2019-05-04",
+    "hla": 96,
+    "holes": 18,
+    "id": "the15thminamisomaopen.rd1rd2rd3"
+  },
+  {
+    "event": "the17thsagaopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2019-04-13",
+    "hla": 91,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 48,
+        "rating": 1062
+      },
+      "player2": {
+        "score": 70,
+        "rating": 865
+      }
+    },
+    "id": "the17thsagaopen.rd1rd2rd3"
+  },
+  {
+    "event": "the1stpwbfcup",
+    "round": "CANCELED",
+    "hla": 125,
+    "date": "2019-04-13",
+    "holes": 18,
+    "id": "the1stpwbfcup.canceled"
+  },
+  {
+    "event": "the2ndmiyagimichinokuopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2019-03-23",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 54,
+        "rating": 1018
+      },
+      "player2": {
+        "score": 68,
+        "rating": 895
+      }
+    },
+    "id": "the2ndmiyagimichinokuopen.rd1rd2rd3"
+  },
+  {
+    "event": "the2019nationaldoubleschampionship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2019-03-02",
+    "hla": 83,
+    "holes": 18,
+    "id": "the2019nationaldoubleschampionship.rd1rd2rd3"
+  },
+  {
+    "event": "the8thokinawaopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2019-02-16",
+    "hla": 92,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 51,
+        "rating": 1043
+      },
+      "player2": {
+        "score": 73,
+        "rating": 851
+      }
+    },
+    "id": "the8thokinawaopen.rd1rd2rd3"
+  },
+  {
+    "event": "the5thkagoshimaopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2019-01-26",
+    "hla": 101,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 56,
+        "rating": 1037
+      },
+      "player2": {
+        "score": 80,
+        "rating": 853
+      }
+    },
+    "id": "the5thkagoshimaopen.rd1rd2rd3"
+  },
+  {
+    "event": "the2019nationalteamchampionship",
+    "round": "Rd1,2,3,4,5",
+    "date": "2019-01-13",
+    "hla": 82,
+    "holes": 12,
+    "id": "the2019nationalteamchampionship.rd12345"
+  },
+  {
+    "event": "the18thchubuopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2018-12-15",
+    "hla": 97,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 62,
+        "rating": 1008
+      },
+      "player2": {
+        "score": 79,
+        "rating": 886
+      }
+    },
+    "id": "the18thchubuopen.rd1rd2rd3"
+  },
+  {
+    "event": "the32ndkyushuopen",
+    "round": "Rd3 (A,C)",
+    "date": "2018-12-02",
+    "hla": 83,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 52,
+        "rating": 973
+      },
+      "player2": {
+        "score": 64,
+        "rating": 848
+      }
+    },
+    "id": "the32ndkyushuopen.rd3ac"
+  },
+  {
+    "event": "the32ndkyushuopen",
+    "round": "Rd1 (B,C)",
+    "date": "2018-12-01",
+    "hla": 97,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 53,
+        "rating": 984
+      },
+      "player2": {
+        "score": 71,
+        "rating": 808
+      }
+    },
+    "id": "the32ndkyushuopen.rd1bc"
+  },
+  {
+    "event": "the32ndkyushuopen",
+    "round": "Rd2 (A,B)",
+    "date": "2018-12-01",
+    "hla": 82,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 52,
+        "rating": 1003
+      },
+      "player2": {
+        "score": 66,
+        "rating": 869
+      }
+    },
+    "id": "the32ndkyushuopen.rd2ab"
+  },
+  {
+    "event": "the14thkyotoclassic",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2018-11-17",
+    "hla": 88,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 49,
+        "rating": 1032
+      },
+      "player2": {
+        "score": 66,
+        "rating": 869
+      }
+    },
+    "id": "the14thkyotoclassic.rd1rd2rd3"
+  },
+  {
+    "event": "the2018showakinenparkopen",
+    "round": "Rd1,Rd2",
+    "date": "2018-11-03",
+    "hla": 64,
+    "holes": 27,
+    "id": "the2018showakinenparkopen.rd1rd2"
+  },
+  {
+    "event": "the1stpicaactivitycup",
+    "round": "Rd1,Rd2",
+    "date": "2018-10-14",
+    "holes": 18,
+    "id": "the1stpicaactivitycup.rd1rd2"
+  },
+  {
+    "event": "the18thtohokuopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2018-10-07",
+    "hla": 83,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 55,
+        "rating": 991
+      },
+      "player2": {
+        "score": 70,
+        "rating": 853
+      }
+    },
+    "id": "the18thtohokuopen.rd1rd2rd3"
+  },
+  {
+    "event": "the30thjapannationalchampionship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2018-09-16",
+    "hla": 114,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 52,
+        "rating": 1024
+      },
+      "player2": {
+        "score": 72,
+        "rating": 842
+      }
+    },
+    "id": "the30thjapannationalchampionship.rd1rd2rd3"
+  },
+  {
+    "event": "the21stkansaiopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2018-09-08",
+    "hla": 106,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 58,
+        "rating": 1021
+      },
+      "player2": {
+        "score": 71,
+        "rating": 899
+      }
+    },
+    "id": "the21stkansaiopen.rd1rd2rd3"
+  },
+  {
+    "event": "the7thhiruganokogentournament",
+    "round": "Rd1,Rd2",
+    "date": "2018-08-26",
+    "hla": 93,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 49,
+        "rating": 1017
+      },
+      "player2": {
+        "score": 65,
+        "rating": 859
+      }
+    },
+    "id": "the7thhiruganokogentournament.rd1rd2"
+  },
+  {
+    "event": "the13thmichinokuopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2018-08-18",
+    "hla": 104,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 52,
+        "rating": 1039
+      },
+      "player2": {
+        "score": 72,
+        "rating": 867
+      }
+    },
+    "id": "the13thmichinokuopen.rd1rd2rd3"
+  },
+  {
+    "event": "the22ndkantoopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2018-07-14",
+    "hla": 92,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 52,
+        "rating": 1075
+      },
+      "player2": {
+        "score": 80,
+        "rating": 869
+      }
+    },
+    "id": "the22ndkantoopen.rd1rd2rd3"
+  },
+  {
+    "event": "the7thhokkaidoopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2018-06-30",
+    "hla": 115,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 50,
+        "rating": 1044
+      },
+      "player2": {
+        "score": 69,
+        "rating": 873
+      }
+    },
+    "id": "the7thhokkaidoopen.rd1rd2rd3"
+  },
+  {
+    "event": "the13thmastersnationalchampionship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2018-06-23",
+    "hla": 75,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 48,
+        "rating": 1023
+      },
+      "player2": {
+        "score": 65,
+        "rating": 852
+      }
+    },
+    "id": "the13thmastersnationalchampionship.rd1rd2rd3"
+  },
+  {
+    "event": "the20thnipponopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2018-05-26",
+    "hla": 94,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 52,
+        "rating": 1023
+      },
+      "player2": {
+        "score": 71,
+        "rating": 851
+      }
+    },
+    "id": "the20thnipponopen.rd1rd2rd3"
+  },
+  {
+    "event": "the13thkiyosatonomoriopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2018-05-19",
+    "hla": 81,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 50,
+        "rating": 1021
+      },
+      "player2": {
+        "score": 65,
+        "rating": 877
+      }
+    },
+    "id": "the13thkiyosatonomoriopen.rd1rd2rd3"
+  },
+  {
+    "event": "the1stgifuhiruganoopen",
+    "round": "Rd1,Rd2",
+    "date": "2018-05-04",
+    "hla": 126,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 53,
+        "rating": 1039
+      },
+      "player2": {
+        "score": 72,
+        "rating": 879
+      }
+    },
+    "id": "the1stgifuhiruganoopen.rd1rd2"
+  },
+  {
+    "event": "the14thminamisomaopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2018-05-04",
+    "holes": 18,
+    "id": "the14thminamisomaopen.rd1rd2rd3"
+  },
+  {
+    "event": "the29thtokyoopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2018-04-21",
+    "holes": 18,
+    "id": "the29thtokyoopen.rd1rd2rd3"
+  },
+  {
+    "event": "the16thsagaopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2018-04-14",
+    "hla": 96,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 48,
+        "rating": 1090
+      },
+      "player2": {
+        "score": 78,
+        "rating": 849
+      }
+    },
+    "id": "the16thsagaopen.rd1rd2rd3"
+  },
+  {
+    "event": "the1stmiyagimichinokuopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2018-03-24",
+    "hla": 91,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 51,
+        "rating": 1012
+      },
+      "player2": {
+        "score": 64,
+        "rating": 888
+      }
+    },
+    "id": "the1stmiyagimichinokuopen.rd1rd2rd3"
+  },
+  {
+    "event": "the2018nationaldoubleschampionship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2018-03-03",
+    "hla": 86,
+    "holes": 18,
+    "id": "the2018nationaldoubleschampionship.rd1rd2rd3"
+  },
+  {
+    "event": "the7thokinawaopen",
+    "round": "Rd3",
+    "date": "2018-02-18",
+    "hla": 92,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 50,
+        "rating": 1019
+      },
+      "player2": {
+        "score": 65,
+        "rating": 874
+      }
+    },
+    "id": "the7thokinawaopen.rd3"
+  },
+  {
+    "event": "the7thokinawaopen",
+    "round": "Rd1",
+    "date": "2018-02-17",
+    "hla": 92,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 53,
+        "rating": 1037
+      },
+      "player2": {
+        "score": 76,
+        "rating": 844
+      }
+    },
+    "id": "the7thokinawaopen.rd1"
+  },
+  {
+    "event": "the7thokinawaopen",
+    "round": "Rd2",
+    "date": "2018-02-17",
+    "hla": 92,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 53,
+        "rating": 1025
+      },
+      "player2": {
+        "score": 76,
+        "rating": 823
+      }
+    },
+    "id": "the7thokinawaopen.rd2"
+  },
+  {
+    "event": "the2018nationalteamchampionship",
+    "round": "Rd1,2,3,4,5",
+    "date": "2018-01-07",
+    "hla": 83,
+    "holes": 12,
+    "id": "the2018nationalteamchampionship.rd12345"
+  },
+  {
+    "event": "the17thchubuopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2017-12-16",
+    "hla": 101,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 61,
+        "rating": 1008
+      },
+      "player2": {
+        "score": 82,
+        "rating": 853
+      }
+    },
+    "id": "the17thchubuopen.rd1rd2rd3"
+  },
+  {
+    "event": "the31stkyushuopen",
+    "round": "Rd3",
+    "date": "2017-12-03",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 54,
+        "rating": 1002
+      },
+      "player2": {
+        "score": 67,
+        "rating": 883
+      }
+    },
+    "id": "the31stkyushuopen.rd3"
+  },
+  {
+    "event": "the31stkyushuopen",
+    "round": "Rd1",
+    "date": "2017-12-02",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 50,
+        "rating": 1037
+      },
+      "player2": {
+        "score": 74,
+        "rating": 817
+      }
+    },
+    "id": "the31stkyushuopen.rd1"
+  },
+  {
+    "event": "the31stkyushuopen",
+    "round": "Rd2",
+    "date": "2017-12-02",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 48,
+        "rating": 1024
+      },
+      "player2": {
+        "score": 63,
+        "rating": 875
+      }
+    },
+    "id": "the31stkyushuopen.rd2"
+  },
+  {
+    "event": "the13thkyotoclassic",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2017-11-18",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 49,
+        "rating": 1050
+      },
+      "player2": {
+        "score": 75,
+        "rating": 814
+      }
+    },
+    "id": "the13thkyotoclassic.rd1rd2rd3"
+  },
+  {
+    "event": "the2017showakinenparkopen",
+    "round": "Rd1,Rd2",
+    "date": "2017-11-03",
+    "holes": 27,
+    "id": "the2017showakinenparkopen.rd1rd2"
+  },
+  {
+    "event": "the17thtohokuopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2017-10-08",
+    "hla": 84,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 49,
+        "rating": 1017
+      },
+      "player2": {
+        "score": 67,
+        "rating": 839
+      }
+    },
+    "id": "the17thtohokuopen.rd1rd2rd3"
+  },
+  {
+    "event": "the29thjapannationalchampionship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2017-09-17",
+    "hla": 128,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 55,
+        "rating": 1024
+      },
+      "player2": {
+        "score": 80,
+        "rating": 816
+      }
+    },
+    "id": "the29thjapannationalchampionship.rd1rd2rd3"
+  },
+  {
+    "event": "the20thkansaiopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2017-09-02",
+    "hla": 104,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 52,
+        "rating": 1049
+      },
+      "player2": {
+        "score": 74,
+        "rating": 866
+      }
+    },
+    "id": "the20thkansaiopen.rd1rd2rd3"
+  },
+  {
+    "event": "the12thmichinokuopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2017-08-05",
+    "hla": 104,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 55,
+        "rating": 1016
+      },
+      "player2": {
+        "score": 72,
+        "rating": 871
+      }
+    },
+    "id": "the12thmichinokuopen.rd1rd2rd3"
+  },
+  {
+    "event": "the4thkagoshimaopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2017-07-29",
+    "hla": 94,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 53,
+        "rating": 1012
+      },
+      "player2": {
+        "score": 72,
+        "rating": 839
+      }
+    },
+    "id": "the4thkagoshimaopen.rd1rd2rd3"
+  },
+  {
+    "event": "the17thniigataopen",
+    "round": "Rd1",
+    "date": "2017-07-17",
+    "holes": 9,
+    "id": "the17thniigataopen.rd1"
+  },
+  {
+    "event": "the21stkantoopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2017-07-15",
+    "hla": 117,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 60,
+        "rating": 1021
+      },
+      "player2": {
+        "score": 83,
+        "rating": 855
+      }
+    },
+    "id": "the21stkantoopen.rd1rd2rd3"
+  },
+  {
+    "event": "the6thhokkaidoopen",
+    "round": "Rd1,Rd2,Rd3,Rd4",
+    "date": "2017-07-01",
+    "hla": 117,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 50,
+        "rating": 1017
+      },
+      "player2": {
+        "score": 68,
+        "rating": 843
+      }
+    },
+    "id": "the6thhokkaidoopen.rd1rd2rd3rd4"
+  },
+  {
+    "event": "the12thmastersnationalchampionship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2017-06-24",
+    "hla": 73,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 49,
+        "rating": 1000
+      },
+      "player2": {
+        "score": 63,
+        "rating": 851
+      }
+    },
+    "id": "the12thmastersnationalchampionship.rd1rd2rd3"
+  },
+  {
+    "event": "the6thfukuiopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2017-05-27",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 51,
+        "rating": 1022
+      },
+      "player2": {
+        "score": 66,
+        "rating": 882
+      }
+    },
+    "id": "the6thfukuiopen.rd1rd2rd3"
+  },
+  {
+    "event": "the12thkiyosatonomoriopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2017-05-21",
+    "hla": 81,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 50,
+        "rating": 1010
+      },
+      "player2": {
+        "score": 67,
+        "rating": 843
+      }
+    },
+    "id": "the12thkiyosatonomoriopen.rd1rd2rd3"
+  },
+  {
+    "event": "the19thnipponopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2017-05-05",
+    "hla": 109,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 50,
+        "rating": 1031
+      },
+      "player2": {
+        "score": 65,
+        "rating": 891
+      }
+    },
+    "id": "the19thnipponopen.rd1rd2rd3"
+  },
+  {
+    "event": "the13thminamisomaopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2017-04-29",
+    "hla": 101,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 51,
+        "rating": 1033
+      },
+      "player2": {
+        "score": 72,
+        "rating": 843
+      }
+    },
+    "id": "the13thminamisomaopen.rd1rd2rd3"
+  },
+  {
+    "event": "the28thtokyoopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2017-04-15",
+    "hla": 84,
+    "holes": 18,
+    "id": "the28thtokyoopen.rd1rd2rd3"
+  },
+  {
+    "event": "the15thsagaopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2017-04-08",
+    "hla": 93,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 46,
+        "rating": 1083
+      },
+      "player2": {
+        "score": 74,
+        "rating": 835
+      }
+    },
+    "id": "the15thsagaopen.rd1rd2rd3"
+  },
+  {
+    "event": "the2017nationaldoubleschampionship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2017-03-04",
+    "hla": 83,
+    "holes": 18,
+    "id": "the2017nationaldoubleschampionship.rd1rd2rd3"
+  },
+  {
+    "event": "the6thokinawaopen",
+    "round": "Rd3",
+    "date": "2017-02-19",
+    "hla": 100,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 50,
+        "rating": 1047
+      },
+      "player2": {
+        "score": 75,
+        "rating": 824
+      }
+    },
+    "id": "the6thokinawaopen.rd3"
+  },
+  {
+    "event": "the6thokinawaopen",
+    "round": "Rd1",
+    "date": "2017-02-18",
+    "hla": 100,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 45,
+        "rating": 1084
+      },
+      "player2": {
+        "score": 75,
+        "rating": 810
+      }
+    },
+    "id": "the6thokinawaopen.rd1"
+  },
+  {
+    "event": "the6thokinawaopen",
+    "round": "Rd2",
+    "date": "2017-02-18",
+    "hla": 100,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 58,
+        "rating": 1033
+      },
+      "player2": {
+        "score": 88,
+        "rating": 813
+      }
+    },
+    "id": "the6thokinawaopen.rd2"
+  },
+  {
+    "event": "the3rdkagoshimaopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2017-01-28",
+    "hla": 84,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 51,
+        "rating": 999
+      },
+      "player2": {
+        "score": 69,
+        "rating": 821
+      }
+    },
+    "id": "the3rdkagoshimaopen.rd1rd2rd3"
+  },
+  {
+    "event": "the2017nationalteamchampionship",
+    "round": "Rd1,2,3,4,5",
+    "date": "2017-01-08",
+    "hla": 75,
+    "holes": 12,
+    "id": "the2017nationalteamchampionship.rd12345"
+  },
+  {
+    "event": "the16thchubuopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-12-10",
+    "hla": 98,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 64,
+        "rating": 990
+      },
+      "player2": {
+        "score": 81,
+        "rating": 866
+      }
+    },
+    "id": "the16thchubuopen.rd1rd2rd3"
+  },
+  {
+    "event": "the30thkyushuopen",
+    "round": "Rd3",
+    "date": "2016-12-04",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 55,
+        "rating": 1022
+      },
+      "player2": {
+        "score": 79,
+        "rating": 821
+      }
+    },
+    "id": "the30thkyushuopen.rd3"
+  },
+  {
+    "event": "the30thkyushuopen",
+    "round": "Rd1",
+    "date": "2016-12-03",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 49,
+        "rating": 1033
+      },
+      "player2": {
+        "score": 66,
+        "rating": 871
+      }
+    },
+    "id": "the30thkyushuopen.rd1"
+  },
+  {
+    "event": "the30thkyushuopen",
+    "round": "Rd2",
+    "date": "2016-12-03",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 48,
+        "rating": 1001
+      },
+      "player2": {
+        "score": 66,
+        "rating": 801
+      }
+    },
+    "id": "the30thkyushuopen.rd2"
+  },
+  {
+    "event": "the12thkyotoclassic",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-11-12",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 50,
+        "rating": 1043
+      },
+      "player2": {
+        "score": 70,
+        "rating": 863
+      }
+    },
+    "id": "the12thkyotoclassic.rd1rd2rd3"
+  },
+  {
+    "event": "the2016showakinenparkopen",
+    "round": "Rd1,Rd2",
+    "date": "2016-11-03",
+    "holes": 27,
+    "id": "the2016showakinenparkopen.rd1rd2"
+  },
+  {
+    "event": "the16thtohokuopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-10-08",
+    "hla": 75,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 52,
+        "rating": 1014
+      },
+      "player2": {
+        "score": 73,
+        "rating": 818
+      }
+    },
+    "id": "the16thtohokuopen.rd1rd2rd3"
+  },
+  {
+    "event": "the28thjapannationalchampionship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-09-18",
+    "hla": 130,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 58,
+        "rating": 1008
+      },
+      "player2": {
+        "score": 84,
+        "rating": 798
+      }
+    },
+    "id": "the28thjapannationalchampionship.rd1rd2rd3"
+  },
+  {
+    "event": "the5thhiruganokogentournament",
+    "round": "Rd1",
+    "date": "2016-08-28",
+    "holes": 18,
+    "jpdga": {
+      "eventId": "416"
+    },
+    "id": "the5thhiruganokogentournament.rd1"
+  },
+  {
+    "event": "the11thmichinokuopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-08-20",
+    "hla": 101,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 53,
+        "rating": 1025
+      },
+      "player2": {
+        "score": 68,
+        "rating": 893
+      }
+    },
+    "id": "the11thmichinokuopen.rd1rd2rd3"
+  },
+  {
+    "event": "the20thkantoopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-07-15",
+    "hla": 117,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 58,
+        "rating": 1039
+      },
+      "player2": {
+        "score": 82,
+        "rating": 869
+      }
+    },
+    "id": "the20thkantoopen.rd1rd2rd3"
+  },
+  {
+    "event": "the5thhokkaidoopen",
+    "round": "Rd1,Rd2,Rd3,Rd4",
+    "date": "2016-07-01",
+    "hla": 0,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 52,
+        "rating": 1021
+      },
+      "player2": {
+        "score": 66,
+        "rating": 894
+      }
+    },
+    "id": "the5thhokkaidoopen.rd1rd2rd3rd4"
+  },
+  {
+    "event": "the11thmastersnationalchampionship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-06-18",
+    "hla": 94,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 48,
+        "rating": 1038
+      },
+      "player2": {
+        "score": 67,
+        "rating": 855
+      }
+    },
+    "id": "the11thmastersnationalchampionship.rd1rd2rd3"
+  },
+  {
+    "event": "the5thmaikoopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-06-11",
+    "hla": 0,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 51,
+        "rating": 1007
+      },
+      "player2": {
+        "score": 64,
+        "rating": 881
+      }
+    },
+    "id": "the5thmaikoopen.rd1rd2rd3"
+  },
+  {
+    "event": "the5thfukuiopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-05-28",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 47,
+        "rating": 1056
+      },
+      "player2": {
+        "score": 68,
+        "rating": 857
+      }
+    },
+    "id": "the5thfukuiopen.rd1rd2rd3"
+  },
+  {
+    "event": "the11thkiyosatonomoriopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-05-14",
+    "hla": 81,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 47,
+        "rating": 1032
+      },
+      "player2": {
+        "score": 61,
+        "rating": 890
+      }
+    },
+    "id": "the11thkiyosatonomoriopen.rd1rd2rd3"
+  },
+  {
+    "event": "the18thnipponopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-04-30",
+    "hla": 0,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 49,
+        "rating": 1039
+      },
+      "player2": {
+        "score": 69,
+        "rating": 851
+      }
+    },
+    "id": "the18thnipponopen.rd1rd2rd3"
+  },
+  {
+    "event": "the27thtokyoopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-04-16",
+    "hla": 90,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 50,
+        "rating": 1053
+      },
+      "player2": {
+        "score": 70,
+        "rating": 878
+      }
+    },
+    "id": "the27thtokyoopen.rd1rd2rd3"
+  },
+  {
+    "event": "the14thsagaopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-04-09",
+    "hla": 91,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 45,
+        "rating": 1074
+      },
+      "player2": {
+        "score": 73,
+        "rating": 809
+      }
+    },
+    "id": "the14thsagaopen.rd1rd2rd3"
+  },
+  {
+    "event": "the12thminamisomaopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-03-20",
+    "hla": 108,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 55,
+        "rating": 1037
+      },
+      "player2": {
+        "score": 75,
+        "rating": 879
+      }
+    },
+    "id": "the12thminamisomaopen.rd1rd2rd3"
+  },
+  {
+    "event": "the2016nationaldoubleschampionship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-03-04",
+    "hla": 83,
+    "holes": 18,
+    "id": "the2016nationaldoubleschampionship.rd1rd2rd3"
+  },
+  {
+    "event": "the5thokinawaopen",
+    "round": "Rd3",
+    "date": "2016-02-21",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 62,
+        "rating": 991
+      },
+      "player2": {
+        "score": 78,
+        "rating": 868
+      }
+    },
+    "id": "the5thokinawaopen.rd3"
+  },
+  {
+    "event": "the5thokinawaopen",
+    "round": "Rd1",
+    "date": "2016-02-20",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 64,
+        "rating": 1020
+      },
+      "player2": {
+        "score": 90,
+        "rating": 858
+      }
+    },
+    "id": "the5thokinawaopen.rd1"
+  },
+  {
+    "event": "the5thokinawaopen",
+    "round": "Rd2",
+    "date": "2016-02-20",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 68,
+        "rating": 996
+      },
+      "player2": {
+        "score": 87,
+        "rating": 878
+      }
+    },
+    "id": "the5thokinawaopen.rd2"
+  },
+  {
+    "event": "the2ndkagoshimaopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2016-01-23",
+    "hla": 83,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 45,
+        "rating": 1059
+      },
+      "player2": {
+        "score": 66,
+        "rating": 853
+      }
+    },
+    "id": "the2ndkagoshimaopen.rd1rd2rd3"
+  },
+  {
+    "event": "the2016nationalteamchampionship",
+    "round": "Rd1,2,3,4,5",
+    "date": "2016-01-08",
+    "hla": 75,
+    "holes": 12,
+    "id": "the2016nationalteamchampionship.rd12345"
+  },
+  {
+    "event": "the29thkyushuopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-12-19",
+    "hla": 89,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 43,
+        "rating": 1062
+      },
+      "player2": {
+        "score": 59,
+        "rating": 890
+      }
+    },
+    "id": "the29thkyushuopen.rd1rd2rd3"
+  },
+  {
+    "event": "the15thchubuopen",
+    "round": "Rd3",
+    "date": "2015-12-06",
+    "hla": 97,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 57,
+        "rating": 1015
+      },
+      "player2": {
+        "score": 80,
+        "rating": 828
+      }
+    },
+    "id": "the15thchubuopen.rd3"
+  },
+  {
+    "event": "the15thchubuopen",
+    "round": "Rd1",
+    "date": "2015-12-05",
+    "hla": 97,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 57,
+        "rating": 1018
+      },
+      "player2": {
+        "score": 80,
+        "rating": 833
+      }
+    },
+    "id": "the15thchubuopen.rd1"
+  },
+  {
+    "event": "the15thchubuopen",
+    "round": "Rd2",
+    "date": "2015-12-05",
+    "hla": 97,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 59,
+        "rating": 1016
+      },
+      "player2": {
+        "score": 87,
+        "rating": 803
+      }
+    },
+    "id": "the15thchubuopen.rd2"
+  },
+  {
+    "event": "the2ndoyamaopen",
+    "round": "Rd1",
+    "date": "2015-11-23",
+    "hla": 101,
+    "holes": 18,
+    "id": "the2ndoyamaopen.rd1"
+  },
+  {
+    "event": "the11thkyotoclassic",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-11-07",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 49,
+        "rating": 1015
+      },
+      "player2": {
+        "score": 69,
+        "rating": 816
+      }
+    },
+    "id": "the11thkyotoclassic.rd1rd2rd3"
+  },
+  {
+    "event": "the2015showakinenparkopen",
+    "round": "Rd1,Rd2",
+    "date": "2015-11-03",
+    "holes": 27,
+    "id": "the2015showakinenparkopen.rd1rd2"
+  },
+  {
+    "event": "the15thtohokuopen",
+    "round": "Rd3",
+    "date": "2015-10-12",
+    "hla": 81,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 49,
+        "rating": 1025
+      },
+      "player2": {
+        "score": 62,
+        "rating": 899
+      }
+    },
+    "id": "the15thtohokuopen.rd3"
+  },
+  {
+    "event": "the15thtohokuopen",
+    "round": "Rd1",
+    "date": "2015-10-11",
+    "hla": 81,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 49,
+        "rating": 1005
+      },
+      "player2": {
+        "score": 64,
+        "rating": 849
+      }
+    },
+    "id": "the15thtohokuopen.rd1"
+  },
+  {
+    "event": "the15thtohokuopen",
+    "round": "Rd2",
+    "date": "2015-10-11",
+    "hla": 81,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 49,
+        "rating": 1040
+      },
+      "player2": {
+        "score": 76,
+        "rating": 787
+      }
+    },
+    "id": "the15thtohokuopen.rd2"
+  },
+  {
+    "event": "the27thjapannationalchampionship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-09-21",
+    "hla": 126,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 48,
+        "rating": 1054
+      },
+      "player2": {
+        "score": 71,
+        "rating": 842
+      }
+    },
+    "id": "the27thjapannationalchampionship.rd1rd2rd3"
+  },
+  {
+    "event": "the19thkansaiopen",
+    "round": "Rd3",
+    "date": "2015-09-06",
+    "hla": 106,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 51,
+        "rating": 1021
+      },
+      "player2": {
+        "score": 69,
+        "rating": 853
+      }
+    },
+    "id": "the19thkansaiopen.rd3"
+  },
+  {
+    "event": "the19thkansaiopen",
+    "round": "Rd1,Rd2",
+    "date": "2015-09-05",
+    "hla": 106,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 45,
+        "rating": 1059
+      },
+      "player2": {
+        "score": 69,
+        "rating": 823
+      }
+    },
+    "id": "the19thkansaiopen.rd1rd2"
+  },
+  {
+    "event": "the10thmichinokuopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-08-22",
+    "hla": 110,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 54,
+        "rating": 1034
+      },
+      "player2": {
+        "score": 71,
+        "rating": 893
+      }
+    },
+    "id": "the10thmichinokuopen.rd1rd2rd3"
+  },
+  {
+    "event": "the15thasoopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-07-25",
+    "hla": 86,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 45,
+        "rating": 1054
+      },
+      "player2": {
+        "score": 62,
+        "rating": 885
+      }
+    },
+    "id": "the15thasoopen.rd1rd2rd3"
+  },
+  {
+    "event": "the19thkantoopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-07-11",
+    "hla": 111,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 52,
+        "rating": 1061
+      },
+      "player2": {
+        "score": 81,
+        "rating": 831
+      }
+    },
+    "id": "the19thkantoopen.rd1rd2rd3"
+  },
+  {
+    "event": "the4thhokkaidoopen",
+    "round": "Rd1,Rd2",
+    "date": "2015-06-27",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 49,
+        "rating": 1044
+      },
+      "player2": {
+        "score": 71,
+        "rating": 840
+      }
+    },
+    "id": "the4thhokkaidoopen.rd1rd2"
+  },
+  {
+    "event": "the10thmastersnationalchampionship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-06-18",
+    "hla": 105,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 44,
+        "rating": 1063
+      },
+      "player2": {
+        "score": 64,
+        "rating": 862
+      }
+    },
+    "id": "the10thmastersnationalchampionship.rd1rd2rd3"
+  },
+  {
+    "event": "the4thfukuiopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-05-30",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 49,
+        "rating": 1042
+      },
+      "player2": {
+        "score": 73,
+        "rating": 819
+      }
+    },
+    "id": "the4thfukuiopen.rd1rd2rd3"
+  },
+  {
+    "event": "the10thkiyosatonomoriopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-05-16",
+    "hla": 81,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 47,
+        "rating": 1028
+      },
+      "player2": {
+        "score": 66,
+        "rating": 833
+      }
+    },
+    "id": "the10thkiyosatonomoriopen.rd1rd2rd3"
+  },
+  {
+    "event": "the17thnipponopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-05-04",
+    "hla": 0,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 49,
+        "rating": 1045
+      },
+      "player2": {
+        "score": 73,
+        "rating": 824
+      }
+    },
+    "id": "the17thnipponopen.rd1rd2rd3"
+  },
+  {
+    "event": "the26thtokyoopen",
+    "round": "Rd3",
+    "date": "2015-04-19",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 48,
+        "rating": 1039
+      },
+      "player2": {
+        "score": 69,
+        "rating": 837
+      }
+    },
+    "id": "the26thtokyoopen.rd3"
+  },
+  {
+    "event": "the26thtokyoopen",
+    "round": "Rd1",
+    "date": "2015-04-18",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 54,
+        "rating": 1028
+      },
+      "player2": {
+        "score": 74,
+        "rating": 858
+      }
+    },
+    "id": "the26thtokyoopen.rd1"
+  },
+  {
+    "event": "the26thtokyoopen",
+    "round": "Rd2",
+    "date": "2015-04-18",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 54,
+        "rating": 1043
+      },
+      "player2": {
+        "score": 83,
+        "rating": 812
+      }
+    },
+    "id": "the26thtokyoopen.rd2"
+  },
+  {
+    "event": "the13thsagaopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-04-11",
+    "hla": 91,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 50,
+        "rating": 1045
+      },
+      "player2": {
+        "score": 75,
+        "rating": 822
+      }
+    },
+    "id": "the13thsagaopen.rd1rd2rd3"
+  },
+  {
+    "event": "the2015nationaldoubleschampionship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-03-07",
+    "hla": 90,
+    "holes": 18,
+    "id": "the2015nationaldoubleschampionship.rd1rd2rd3"
+  },
+  {
+    "event": "the4thokinawaopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-02-21",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 44,
+        "rating": 1094
+      },
+      "player2": {
+        "score": 75,
+        "rating": 812
+      }
+    },
+    "id": "the4thokinawaopen.rd1rd2rd3"
+  },
+  {
+    "event": "the1stkagoshimaopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-01-24",
+    "hla": 85,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 49,
+        "rating": 1021
+      },
+      "player2": {
+        "score": 72,
+        "rating": 795
+      }
+    },
+    "id": "the1stkagoshimaopen.rd1rd2rd3"
+  },
+  {
+    "event": "the2015nationalteamchampionship",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2015-01-11",
+    "hla": 80,
+    "holes": 18,
+    "id": "the2015nationalteamchampionship.rd1rd2rd3"
+  },
+  {
+    "event": "the2014japanopen",
+    "round": "Rd1,Rd4,Rd5(Fujin)",
+    "date": "2014-06-05",
+    "hla": 146,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 56,
+        "rating": 1046
+      },
+      "player2": {
+        "score": 76,
+        "rating": 898
+      }
+    },
+    "id": "the2014japanopen.rd1rd4rd5fujin"
+  },
+  {
+    "event": "the2014japanopen",
+    "round": "Rd2,Rd3(Raijin)",
+    "date": "2014-06-05",
+    "hla": 131,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 51,
+        "rating": 1070
+      },
+      "player2": {
+        "score": 77,
+        "rating": 891
+      }
+    },
+    "id": "the2014japanopen.rd2rd3raijin"
+  },
+  {
+    "event": "the2010japanopen",
+    "round": "Rd1,Rd4,Semifinal",
+    "date": "2010-06-10",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 54,
+        "rating": 1047
+      },
+      "player2": {
+        "score": 76,
+        "rating": 848
+      }
+    },
+    "id": "the2010japanopen.rd1rd4semifinal"
+  },
+  {
+    "event": "the2010japanopen",
+    "round": "Rd2,Rd3",
+    "date": "2010-06-10",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 51,
+        "rating": 1056
+      },
+      "player2": {
+        "score": 84,
+        "rating": 812
+      }
+    },
+    "id": "the2010japanopen.rd2rd3"
+  },
+  {
+    "event": "the2008japanopen",
+    "round": "Rd2",
+    "date": "2008-06-13",
+    "holes": 27,
+    "ratings": {
+      "player1": {
+        "score": 83,
+        "rating": 1038
+      },
+      "player2": {
+        "score": 114,
+        "rating": 877
+      }
+    },
+    "id": "the2008japanopen.rd2"
+  },
+  {
+    "event": "the2008japanopen",
+    "round": "Rd1",
+    "date": "2008-06-12",
+    "holes": 27,
+    "ratings": {
+      "player1": {
+        "score": 85,
+        "rating": 1023
+      },
+      "player2": {
+        "score": 112,
+        "rating": 880
+      }
+    },
+    "id": "the2008japanopen.rd1"
+  },
+  {
+    "event": "the2006japanopen",
+    "round": "Rd2",
+    "date": "2006-06-16",
+    "holes": 27,
+    "ratings": {
+      "player1": {
+        "score": 81,
+        "rating": 1042
+      },
+      "player2": {
+        "score": 113,
+        "rating": 871
+      }
+    },
+    "id": "the2006japanopen.rd2"
+  },
+  {
+    "event": "the2006japanopen",
+    "round": "Semifinal",
+    "date": "2006-06-16",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 53,
+        "rating": 1055
+      },
+      "player2": {
+        "score": 73,
+        "rating": 898
+      }
+    },
+    "id": "the2006japanopen.semifinal"
+  },
+  {
+    "event": "the2006japanopen",
+    "round": "Rd1",
+    "date": "2006-06-15",
+    "holes": 27,
+    "ratings": {
+      "player1": {
+        "score": 86,
+        "rating": 1040
+      },
+      "player2": {
+        "score": 132,
+        "rating": 819
+      }
+    },
+    "id": "the2006japanopen.rd1"
+  }
+]

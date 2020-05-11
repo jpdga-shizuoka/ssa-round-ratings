@@ -4,14 +4,16 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort, MatSortable } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material/table';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 
 import { Observable, Subject, Subscription } from 'rxjs';
 
-import { CommonService, RoundInfo, EventInfo, GeoMarker } from '../common.service';
+import { CommonService, GeoMarker } from '../common.service';
 import { detailExpand } from '../animations';
 import { BottomSheetDetailDisabledComponent } from '../dialogs/bottom-sheet-detail-disabled.component';
+import { RemoteService, RoundInfo, EventInfo } from '../remote.service';
+import { RoundsDataSource } from './rounds-datasource';
+import { LocalizeService } from '../localize.service';
 
 @Component({
   selector: 'app-rounds-table',
@@ -20,13 +22,14 @@ import { BottomSheetDetailDisabledComponent } from '../dialogs/bottom-sheet-deta
   animations: [detailExpand],
 })
 export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
-  @Input() dataSource: MatTableDataSource<RoundInfo>;
   @Input() displayedColumns$: Observable<string[]>;
   @Input() markerSelected$: Subject<GeoMarker>;
   @Input() search = '';
   @Input() showMore = false;
+  @Input() limit: number;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
+  dataSource: RoundsDataSource;
   expandedElement: RoundInfo | null;
   showDetail = false;
   pageSizeOptions = [10, 20, 50, 100];
@@ -39,69 +42,11 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     private cs: CommonService,
     private route: ActivatedRoute,
     private bottomSheet: MatBottomSheet,
-  ) {
-    // Issue: multiples rows has been expanded after filtering, sorting and tapping a row to expand it
-    // Expected result: only tapped row must be expanded even after filtering, sorting and tapping a row
-    // Workaround: disable expansion when sorting after filtering has been executed
-    const self = this;
-    const origin = MatSort.prototype.sort;
-    MatSort.prototype.sort = function(sortable: MatSortable) {
-      self.expandedElement = null;
-      origin.call(this, sortable);
-      if (!this.active || this.direction === '') {
-        self.detailDisabled = false;
-        self.sorted = false;
-      } else if (self.search !== '') {
-        self.detailDisabled = true;
-        self.sorted = true;
-      }
-    };
-  }
+    private readonly localize: LocalizeService,
+    private readonly remote: RemoteService,
+  ) { }
 
   ngOnInit() {
-    this.dataSource.filterPredicate = (data: RoundInfo, filters: string): boolean => {
-      const matchFilter = [];
-      const filterArray = filters.split('&');
-      const event = this.cs.getEvent(data.event);
-      const eventName = this.cs.getEventAliase(data.event);
-      const locationName = this.cs.getLocationName(event.location);
-      const columns = [ eventName,
-                        locationName,
-                        event.location,
-                        data.event,
-                        data.round,
-                        data.date,
-                        data.hla,
-                        data.holes,
-                        data.ssa,
-                        data.category,
-      ];
-      filterArray.forEach(filter => {
-        const customFilter = [];
-        columns.forEach(column => {
-          if (column != null) {
-            const scolumn = typeof column === 'number' ? column.toString() : column;
-            customFilter.push(scolumn.toLowerCase().includes(filter));
-          }
-        });
-        matchFilter.push(customFilter.some(Boolean)); // OR
-      });
-      return matchFilter.every(Boolean); // AND
-    };
-
-    this.dataSource.sortingDataAccessor = (item: RoundInfo, property: string) => {
-      this.expandedElement = null;  // workaround when a detail info is expanded
-      switch (property) {
-        case 'event':
-          return this.cs.getEventTitle(item.event);
-        case 'year':
-          return new Date(item.date);
-        default:
-          // default sorting
-          return item[property];
-      }
-    };
-
     if (this.route.snapshot.queryParamMap.has('search')) {
       const filter = this.route.snapshot.queryParamMap.get('search');
       this.updateSearch(filter);
@@ -110,17 +55,16 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     if (this.markerSelected$) {
       this.ssMarker = this.markerSelected$.subscribe({
         next: marker => {
-          const locationName = this.cs.getLocationName(marker.location);
+          const locationName = this.localize.transform(marker.location);
           this.applyFilter(locationName);
         }
       });
     }
 
-    this.ssQuery = this.route.queryParams.subscribe(query => {
-      if (query.search) {
-        this.updateSearch(query.search);
-      }
-    });
+    this.ssQuery = this.route.queryParams
+      .subscribe(query => this.updateSearch(query.search));
+
+    this.dataSource = new RoundsDataSource(this.remote, this.localize, this.limit);
   }
 
   ngAfterViewInit() {
@@ -129,12 +73,8 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    if (this.ssMarker) {
-      this.ssMarker.unsubscribe();
-    }
-    if (this.ssQuery) {
-      this.ssQuery.unsubscribe();
-    }
+    this.ssQuery?.unsubscribe();
+    this.ssMarker?.unsubscribe();
   }
 
   onEventSlected(location: string) {
@@ -159,11 +99,7 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   get isMinimum() {
-    return this.dataSource.data.length <= this.pageSizeOptions[0];
-  }
-
-  get more(): string {
-    return this.cs.getMenuAliase('More');
+    return this.limit <= this.pageSizeOptions[0];
   }
 
   get showHistory() {
@@ -175,7 +111,7 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     }
     const title = this.cs.getEventTitle(this.expandedElement.event);
     if (this.search.includes(title)
-    ||  this.search.includes(this.cs.getEventTitleAliase(title))) {
+    ||  this.search.includes(this.localize.transform(title))) {
       return false;
     }
     return true;
@@ -210,16 +146,15 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     return round.hla ? round.hla + 'm' : '';
   }
 
-  getEventName(round: RoundInfo): string {
-    return this.cs.getEventAliase(round.event);
-  }
-
   getYear(time: string) {
     const date = new Date(time);
     return date.getFullYear();
   }
 
-  private updateSearch(query: string) {
+  private updateSearch(query?: string) {
+    if (!query) {
+      return;
+    }
     this.dataSource.filter = query;
     this.search = query;
     this.expandedElement = null;

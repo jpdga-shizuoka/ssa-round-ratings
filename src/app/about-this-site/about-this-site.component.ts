@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Location } from '@angular/common';
 
-import { CommonService } from '../common.service';
+import { LocalizeService } from '../localize.service';
 
 @Component({
   selector: 'app-about-this-site',
@@ -11,15 +11,11 @@ import { CommonService } from '../common.service';
 export class AboutThisSiteComponent {
 
   get primaryLanguage() {
-    return this.cs.primaryLanguage;
-  }
-
-  get title() {
-    return this.cs.getMenuAliase('About this site');
+    return this.localize.isGlobal;
   }
 
   constructor(
-    private cs: CommonService,
+    private localize: LocalizeService,
     private location: Location,
   ) {
   }

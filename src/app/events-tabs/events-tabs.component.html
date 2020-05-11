@@ -1,24 +1,23 @@
 <h4>
-  <a (click)="back()"><mat-icon>arrow_back</mat-icon>{{title}}</a>
+  <a (click)="back()"><mat-icon>arrow_back</mat-icon>{{title | localize}}</a>
 </h4>
 <mat-tab-group class="mat-elevation-z2" dynamicHeight
   [(selectedIndex)]="selectedTab">
 
-  <mat-tab label="{{tableTitle}}">
+  <mat-tab label="{{tableTitle | localize}}">
     <div>
       <app-events-table
-        [dataSource]="tableSource"
+        [category]="category"
         [displayedColumns$]="displayedColumns$"
         [markerSelected$]="markerSelected">
-      </app-events-table>      
+      </app-events-table>
     </div>
   </mat-tab>
 
-  <mat-tab label="{{mapTitle}}">
+  <mat-tab label="{{mapTitle | localize}}">
     <div>
       <app-events-map
         [category]="category"
-        [mapSource$]="mapSource$"
         (markerSelected)="onMarkerSelected($event)">
       </app-events-map>
     </div>

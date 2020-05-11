@@ -2,13 +2,15 @@
   <tbody>
     <tr>
       <td>Date:</td>
-      <td><mat-icon>calendar_today</mat-icon>{{date}}</td>
+      <td><mat-icon>calendar_today</mat-icon>{{round.date}}</td>
     </tr>
     <tr>
       <td>Location:</td>
       <td>
-        <a href="{{geolocation}}" target="_blank" rel="noopener">
-          <mat-icon>room</mat-icon>{{location}}<mat-icon>launch</mat-icon>
+        <a href="{{location?.geolocation | geolink}}" target="_blank" rel="noopener">
+          <mat-icon>room</mat-icon>
+          {{location?.title | localize}}, {{location?.prefecture | localize}}
+          <mat-icon>launch</mat-icon>
         </a>
       </td>
     </tr>
@@ -29,7 +31,7 @@
       <td>
         <!-- <a class="history-link" (click)="onHistory()"> -->
         <a routerLink="/past" [queryParams]="{search: title}" class="history-link">
-          <mat-icon>table_chart</mat-icon>{{seeThePastResults}}
+          <mat-icon>table_chart</mat-icon>{{'See the Past Results' | localize}}
         </a>
       </td>
     </tr>

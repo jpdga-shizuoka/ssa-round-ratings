@@ -2,8 +2,6 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-
-import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 import { MatBottomSheet, MatBottomSheetRef } from '@angular/material/bottom-sheet';
 
@@ -34,8 +32,6 @@ const TABS_TITLE = {
 export class EventsTabsComponent implements OnInit, AfterViewInit {
 
   category: string;
-  tableSource: MatTableDataSource<EventInfo>;
-  mapSource$: BehaviorSubject<GeoMarker[]>;
   isHandset$: Observable<boolean>;
   markerSelected: Subject<GeoMarker>;
   selectedTab: number;
@@ -50,20 +46,14 @@ export class EventsTabsComponent implements OnInit, AfterViewInit {
     this.isHandset$ = isHandset(breakpointObserver);
     this.markerSelected = new Subject<GeoMarker>();
     this.selectedTab = 0;
-  }
 
-  ngOnInit() {
     if (this.route.snapshot.url.length !== 2) {
       return;
     }
     this.category = this.route.snapshot.url[1].path;
-    const events = this.cs.getEvents(this.category);
-    if (!events) {
-      return;
-    }
-    this.tableSource = new MatTableDataSource(events);
-    this.mapSource$ = new BehaviorSubject<GeoMarker[]>([]);
-    this.makeMaerkersFromEvents(events);
+  }
+
+  ngOnInit() {
   }
 
   ngAfterViewInit() {
@@ -80,11 +70,11 @@ export class EventsTabsComponent implements OnInit, AfterViewInit {
   }
 
   get tableTitle() {
-    return this.cs.getMenuAliase(TABS_TITLE[this.category][0]);
+    return TABS_TITLE[this.category][0];
   }
 
   get mapTitle() {
-    return this.cs.getMenuAliase(TABS_TITLE[this.category][1]);
+    return TABS_TITLE[this.category][1];
   }
 
   get title() {
@@ -97,7 +87,7 @@ export class EventsTabsComponent implements OnInit, AfterViewInit {
         schedule = 'Monthly Events';
         break;
     }
-    return this.cs.getMenuAliase(schedule);
+    return schedule;
   }
 
   back() {
@@ -118,20 +108,20 @@ export class EventsTabsComponent implements OnInit, AfterViewInit {
     setTimeout(() => bottomsheetRef.dismiss(), 5000);
   }
 
-  private makeMaerkersFromEvents(events: EventInfo[]) {
-    const markers: GeoMarker[] = [];
-    for (const event of events) {
-      const location = this.cs.getLocation(event.location);
-      const marker = {
-        position: {
-          lat: location.geolocation[0],
-          lng: location.geolocation[1]
-        },
-        location: event.location,
-        title: event.title,
-      };
-      markers.push(marker);
-    }
-    this.mapSource$.next(markers);
-  }
+  // private makeMaerkersFromEvents(events: EventInfo[]) {
+  //   const markers: GeoMarker[] = [];
+  //   for (const event of events) {
+  //     const location = this.cs.getLocation(event.location);
+  //     const marker = {
+  //       position: {
+  //         lat: location.geolocation[0],
+  //         lng: location.geolocation[1]
+  //       },
+  //       location: event.location,
+  //       title: event.title,
+  //     };
+  //     markers.push(marker);
+  //   }
+  //   this.mapSource$.next(markers);
+  // }
 }

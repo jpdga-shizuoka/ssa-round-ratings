@@ -2,24 +2,26 @@
   <tbody>
     <tr *ngIf="showMonthly$ | async">
       <td>Month:</td>
-      <td>{{monthlySchedule}}</td>
+      <td>{{event.schedule | schedule:'month'}}</td>
     </tr>
     <tr>
       <td>Location:</td>
       <td class="flex-container">
         <div>
-          <a href="{{geolocation}}" target="_blank" rel="noopener">
-            <mat-icon>room</mat-icon>{{location}}<mat-icon>launch</mat-icon>
+          <a href="{{location?.geolocation | geolink}}" target="_blank" rel="noopener">
+            <mat-icon>room</mat-icon>
+            {{location?.title | localize}}, {{location?.prefecture | localize}}
+            <mat-icon>launch</mat-icon>
           </a>
         </div>
       </td>
     </tr>
 
     <tr *ngIf="showPastRounds">
-      <td>{{pastResults}}:</td>
+      <td>{{'Past Results' | localize}}:</td>
       <td>
         <a routerLink="/past" [queryParams]="{search: title}" class="detail-link">
-          <mat-icon>table_chart</mat-icon>{{seeThePastResults}}
+          <mat-icon>table_chart</mat-icon>{{'See the Past Results' | localize}}
         </a>
       </td>
     </tr>

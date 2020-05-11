@@ -15,7 +15,7 @@
       <h1>
         <a href="{{video.url}}" target="_blank" rel="noopener">
           <mat-icon>play_circle_filled</mat-icon>
-          {{facebookLink}}
+          {{'Playback by Facebook' | localize}}
           <mat-icon>launch</mat-icon>
         </a>
       </h1>
@@ -24,7 +24,7 @@
   <div>
     <p>{{title}}</p>
     <h3>
-      {{eventTitle(event)}}
+      {{event | localize}}
     </h3>
     <p *ngIf="isMobile">{{year}}</p>
   <div>

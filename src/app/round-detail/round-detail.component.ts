@@ -1,7 +1,7 @@
-import { Component, Input, Output } from '@angular/core';
-import {
-  CommonService, RoundInfo, EventInfo, LocationInfo
-} from '../common.service';
+import { Component, Input, Output, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { CommonService } from '../common.service';
+import { RemoteService, RoundInfo, EventInfo, LocationInfo, LocationId } from '../remote.service';
 
 const MIN_RATING = 700;
 const MAX_RATING = 1200;
@@ -22,7 +22,7 @@ interface MiscInfo {
   templateUrl: './round-detail.component.html',
   styleUrls: ['./round-detail.component.css']
 })
-export class RoundDetailComponent {
+export class RoundDetailComponent implements OnInit, OnDestroy {
 
   @Input() round: RoundInfo;
   @Input() showHistory = true;
@@ -31,32 +31,29 @@ export class RoundDetailComponent {
   score: number;
 
   private event: EventInfo;
-  private _location: LocationInfo;
   private _miscInfo: MiscInfo[];
+  private ssEvent: Subscription;
+  private ssLocation: Subscription;
+  location?: LocationInfo;
 
-  constructor(private cs: CommonService) {
+  constructor(
+    private cs: CommonService,
+    private readonly remote: RemoteService,
+  ) {
   }
 
-  get seeThePastResults() {
-    return this.cs.getMenuAliase('See the Past Results');
+  ngOnInit() {
+    this.ssEvent = this.remote.getEvent(this.round.event, 'past')
+    .subscribe(
+      event => this.event = event,
+      err => console.log(err),
+      () => this.getLocation(this.event.location)
+    );
   }
 
-  get location(): string | undefined {
-    const event = this.getEvent();
-    if (!event) {
-      return undefined;
-    }
-    const location = this.cs.getLocationName(event.location);
-    const region = this.getPrefecture();
-    return `${location}, ${region}`;
-  }
-
-  get geolocation(): string | undefined {
-    const location = this.getLocation();
-    if (!location || !location.geolocation) {
-      return undefined;
-    }
-    return this.cs.getGeolocation(location.geolocation);
+  ngOnDestroy() {
+    this.ssEvent?.unsubscribe();
+    this.ssLocation?.unsubscribe();
   }
 
   get roundStatus(): string {
@@ -64,7 +61,7 @@ export class RoundDetailComponent {
   }
 
   get totalPlayers() {
-    if (this.event.players) {
+    if (this.event?.players) {
       return this.event.players.pro
       + this.event.players.ama
       + this.event.players.misc;
@@ -93,10 +90,10 @@ export class RoundDetailComponent {
   }
 
   get miscInfo(): MiscInfo[] {
-    if (this._miscInfo) {
-      return this._miscInfo;
-    }
-    this.makeMiscInfo();
+    // if (this._miscInfo) {
+    //   return this._miscInfo;
+    // }
+    // this.makeMiscInfo();
     return this._miscInfo;
   }
 
@@ -107,43 +104,21 @@ export class RoundDetailComponent {
     return `Rating = ${this.round.weight.toFixed(1)} * Score + ${this.round.offset.toFixed(0)}`;
   }
 
-  get date(): string | undefined {
-    return this.cs.getDate(this.getEvent());
-  }
-
   get title() {
-    return this.cs.getEventTitle(this.getEvent().title);
+    return this.cs.getEventTitle(this.event?.title);
   }
 
-  private getEvent(): EventInfo | undefined {
-    if (this.event) {
-      return this.event;
-    }
-    this.event = this.cs.getEvent(this.round.event);
-    return this.event;
-  }
-
-  private getLocation(): LocationInfo | undefined {
-    if (this._location) {
-      return this._location;
-    }
-    const event = this.getEvent();
-    if (!event.location) {
-      return undefined;
-    }
-    this._location = this.cs.getLocation(event.location);
-    return this._location;
+  private getLocation(id: LocationId) {
+    this.ssLocation = this.remote.getLocation(id).subscribe(
+      location => this.location = location,
+      err => console.log(err),
+      () => this.makeMiscInfo()
+    );
   }
 
   private makeMiscInfo() {
     const info: MiscInfo[] = [];
-    if (!this.round.event) {
-      return info;
-    }
-    const event = this.getEvent();
-    if (!event) {
-      return info;
-    }
+    const event = this.event;
 
     if (event.pdga && event.pdga.eventId) {
       info.push({
@@ -190,14 +165,6 @@ export class RoundDetailComponent {
       }
     }
     this._miscInfo = info;
-  }
-
-  private getPrefecture(): string | undefined {
-    const location = this.getLocation();
-    if (!location || !location.prefecture) {
-      return undefined;
-    }
-    return this.cs.getPrefecture(location.prefecture);
   }
 
   onRatingChanged() {

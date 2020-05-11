@@ -46,34 +46,6 @@ export class AppComponent implements OnInit, OnDestroy, MetaDescription {
     this.isHandset$ = isHandset(breakpointObserver);
   }
 
-  get home() {
-    return this.cs.getMenuAliase('Home');
-  }
-
-  get upcomingEvents() {
-    return this.cs.getMenuAliase('Schedule');
-  }
-
-  get results() {
-    return this.cs.getMenuAliase('Results');
-  }
-
-  get localEvents() {
-    return this.cs.getMenuAliase('Local Events');
-  }
-
-  get monthlyEvents() {
-    return this.cs.getMenuAliase('Monthly Events');
-  }
-
-  get stats() {
-    return this.cs.getMenuAliase('Stats');
-  }
-
-  get aboutThisSite() {
-    return this.cs.getMenuAliase('About this site');
-  }
-
   ngOnInit() {
     const language = window.navigator.language.split('-')[0];
     this.cs.primaryLanguage = language === 'ja' ? false : true;

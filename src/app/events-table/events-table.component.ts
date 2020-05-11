@@ -1,14 +1,14 @@
-import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
-import { Input, ViewChild } from '@angular/core';
-
+import {
+  Component, OnInit, AfterViewInit, OnDestroy, Input, ViewChild
+} from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
-import { MatTableDataSource } from '@angular/material/table';
+import { Observable, Subject, Subscription } from 'rxjs';
 
-import { Observable, BehaviorSubject, Subject, Subscription } from 'rxjs';
-
-import { CommonService, EventInfo, GeoMarker } from '../common.service';
+import { GeoMarker } from '../common.service';
 import { EventCategory } from '../models';
 import { detailExpand } from '../animations';
+import { RemoteService } from '../remote.service';
+import { EventsDataSource, EventInfo } from './events-datasource';
 
 @Component({
   selector: 'app-events-table',
@@ -17,23 +17,22 @@ import { detailExpand } from '../animations';
   animations: [detailExpand],
 })
 export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
-  @Input() dataSource: MatTableDataSource<EventInfo>;
   @Input() displayedColumns$: Observable<string[]>;
   @Input() markerSelected$: Subject<GeoMarker>;
   @Input() category: EventCategory;
   @Input() showMore = false;
+  @Input() limit: number;
   @ViewChild(MatPaginator) paginator: MatPaginator;
+  dataSource: EventsDataSource;
   expandedElement: EventInfo | null;
   showDetail = false;
   pageSizeOptions = [10, 20, 50, 100];
   private subscription: Subscription;
 
-  constructor(
-    private cs: CommonService,
-  ) {
-  }
+  constructor(private readonly remote: RemoteService) { }
 
   ngOnInit() {
+    this.dataSource = new EventsDataSource(this.remote, this.category, this.limit);
     if (this.markerSelected$) {
       this.subscription = this.markerSelected$.subscribe({
         next: marker => this.onMarkerSelected(marker)
@@ -46,41 +45,11 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    if (this.subscription) {
-      this.subscription.unsubscribe();
-    }
+    this.subscription?.unsubscribe();
   }
 
   get isMinimum(): boolean {
-    return this.showMore
-      && this.dataSource.data.length <= this.pageSizeOptions[0];
-  }
-
-  get more(): string {
-    return this.cs.getMenuAliase('More');
-  }
-
-  getTitle(event: EventInfo): string {
-    return this.cs.getEventAliase(event.title);
-  }
-
-  getDate(event: EventInfo): string {
-    return this.cs.getDate(event);
-  }
-
-  getLocation(event: EventInfo): string {
-    const name = this.cs.getLocationName(event.location);
-    const location = this.cs.getLocation(event.location);
-    const region = this.cs.getPrefecture(location.prefecture);
-    return `${name}, ${region}`;
-  }
-
-  getDay(event: EventInfo): string {
-    return this.cs.getMonthlyDay(event.schedule);
-  }
-
-  getMonth(event: EventInfo): string {
-    return this.cs.getMonth(event.schedule);
+    return this.showMore && this.limit <= this.pageSizeOptions[0];
   }
 
   getRawClass(event: EventInfo) {

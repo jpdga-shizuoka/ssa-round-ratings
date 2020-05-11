@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { YouTubePlayerModule } from '@angular/youtube-player';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -43,6 +44,12 @@ import { MarkerDialogComponent } from './dialogs/marker-dialog.component';
 import { NoticeBottomsheetComponent } from './dialogs/notice-bottomsheet.component';
 import { VideoBottomsheetComponent } from './dialogs/video-bottomsheet.component';
 import { BottomSheetDetailDisabledComponent } from './dialogs/bottom-sheet-detail-disabled.component';
+import { SchedulePipe } from './schedule.pipe';
+import { GeolinkPipe } from './geolink.pipe';
+import { LocalizePipe } from './localize.pipe';
+import { PeriodPipe } from './period.pipe';
+import { LocationPipe } from './location.pipe';
+import { EventPipe } from './event.pipe';
 
 import { AgmCoreModule } from '@agm/core';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
@@ -69,6 +76,12 @@ import { environment } from '../environments/environment';
     VideosTableComponent,
     JapanOpenComponent,
     StatsTabsComponent,
+    SchedulePipe,
+    GeolinkPipe,
+    LocalizePipe,
+    PeriodPipe,
+    LocationPipe,
+    EventPipe,
   ],
   imports: [
     BrowserModule,
@@ -77,6 +90,7 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     LayoutModule,
     YouTubePlayerModule,
+    HttpClientModule,
     MatToolbarModule,
     MatIconModule,
     MatTooltipModule,
