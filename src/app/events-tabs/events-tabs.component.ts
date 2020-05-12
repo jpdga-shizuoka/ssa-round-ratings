@@ -8,7 +8,8 @@ import { MatBottomSheet, MatBottomSheetRef } from '@angular/material/bottom-shee
 import { Observable, BehaviorSubject, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { EventInfo, GeoMarker } from '../models';
+import { GeoMarker } from '../map-common';
+import { EventInfo } from '../models';
 import { isHandset } from '../ng-utilities';
 import { NoticeBottomsheetComponent } from '../dialogs/notice-bottomsheet.component';
 

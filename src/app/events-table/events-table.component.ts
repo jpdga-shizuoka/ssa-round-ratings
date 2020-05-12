@@ -4,7 +4,7 @@ import {
 import { MatPaginator } from '@angular/material/paginator';
 import { Observable, Subject, Subscription } from 'rxjs';
 
-import { GeoMarker } from '../models';
+import { GeoMarker } from '../map-common';
 import { EventCategory } from '../models';
 import { detailExpand } from '../animations';
 import { RemoteService } from '../remote.service';

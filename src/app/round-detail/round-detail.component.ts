@@ -4,20 +4,10 @@ import {
   getEventTitle, getPdgaResult, getJpdgaResult, getJpdgaInfo, getJpdgaReport, getJpdgaPhoto
 } from '../app-libs';
 import { RemoteService, RoundInfo, EventInfo, LocationInfo, LocationId } from '../remote.service';
+import { MiscInfo, ICONS } from '../app-common';
 
 const MIN_RATING = 700;
 const MAX_RATING = 1200;
-const ICONS = {
-  video: 'ondemand_video',
-  photo: 'camera_alt',
-  website: 'public'
-};
-
-interface MiscInfo {
-  icon: string;
-  title: string;
-  url: string;
-}
 
 @Component({
   selector: 'app-round-detail',

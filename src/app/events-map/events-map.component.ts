@@ -2,7 +2,8 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { BehaviorSubject, from } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
 
-import { GeoMarker, EventCategory } from '../models';
+import { GeoMarker } from '../map-common';
+import { EventCategory } from '../models';
 import { MarkerDialogComponent } from '../dialogs/marker-dialog.component';
 import { environment } from '../../environments/environment';
 import { RemoteService, EventInfo, LocationInfo } from '../remote.service';

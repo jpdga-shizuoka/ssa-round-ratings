@@ -1,5 +1,3 @@
-import { Router, ActivatedRoute } from '@angular/router';
-import { Title, Meta } from '@angular/platform-browser';
 import { Observable } from 'rxjs';
 
 export type EventCategory = 'upcoming' | 'past' | 'local' | 'monthly' | 'video';
@@ -11,25 +9,6 @@ export interface Period {
   to: string;
 }
 export type GeoPosition = [number, number];
-
-export interface MarkerDialogData {
-  category: EventCategory;
-  position: {
-    lat: number;
-    lng: number;
-  };
-  location: string;
-  events: string[];
-}
-
-export class GeoMarker {
-  position: {
-    lat: number;
-    lng: number;
-  };
-  location: string;
-  title: string;
-}
 
 export interface LocationInfo {
   id: LocationId;
@@ -46,12 +25,6 @@ export interface JpdgaInfo {
   eventId?: string;
   topicId?: string;
   photoId?: string;
-}
-
-export enum UrlType {
-  Video = 'video',
-  Photo = 'photo',
-  Website = 'website',
 }
 
 export interface UrlInfo {
@@ -119,45 +92,7 @@ export interface RoundInfo {
   offset?: number;
 }
 
-export interface TermDescription {
-  term: string;
-  description: string;
-}
-
-export const ICONS = {
-  video: 'ondemand_video',
-  photo: 'camera_alt',
-  website: 'public'
-};
-
-export interface MiscInfo {
-  icon: string;
-  title: string;
-  url: string;
-}
-
 export interface TotalYearPlayers {
   year: number;
   players: Players;
-}
-
-export interface PastLists {
-  players: TotalYearPlayers[];
-  videos: VideoInfo[];
-}
-
-export interface MetaData {
-  title: string;
-  type?: string;
-  url?: string;
-  image?: string;
-  description?: string;
-  keywords?: string;
-}
-
-export interface MetaDescription {
-  ngActivatedRoute: ActivatedRoute;
-  ngTitle: Title;
-  ngMeta: Meta;
-  ngRouter: Router;
 }

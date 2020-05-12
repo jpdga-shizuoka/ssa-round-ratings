@@ -1,7 +1,17 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { EventCategory, MarkerDialogData } from '../models';
+import { EventCategory } from '../models';
 import { RemoteService, LocationInfo } from '../remote.service';
+
+export interface MarkerDialogData {
+  category: EventCategory;
+  position: {
+    lat: number;
+    lng: number;
+  };
+  location: string;
+  events: string[];
+}
 
 @Component({
   selector: 'app-marker-dialog',

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { ICONS, MiscInfo } from '../models';
+import { ICONS, MiscInfo } from '../app-common';
 import {
   BreakpointObserver, Observable, isHandset, of as observableOf
 } from '../ng-utilities';

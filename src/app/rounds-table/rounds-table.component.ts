@@ -8,7 +8,7 @@ import { MatBottomSheet } from '@angular/material/bottom-sheet';
 
 import { Observable, Subject, Subscription } from 'rxjs';
 
-import { GeoMarker } from '../models';
+import { GeoMarker } from '../map-common';
 import { detailExpand } from '../animations';
 import { BottomSheetDetailDisabledComponent } from '../dialogs/bottom-sheet-detail-disabled.component';
 import { RemoteService, RoundInfo, EventInfo } from '../remote.service';

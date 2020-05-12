@@ -6,7 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { GeoMarker } from '../models';
+import { GeoMarker } from '../map-common';
 import { isHandset } from '../ng-utilities';
 
 const DISPLAYED_COLUMNS = [['event', 'hla', 'ssa'], ['year', 'event', 'round', 'hla', 'ssa']];

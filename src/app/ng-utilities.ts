@@ -1,20 +1,36 @@
+import { Router, ActivatedRoute } from '@angular/router';
+import { Title, Meta } from '@angular/platform-browser';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { NavigationEnd } from '@angular/router';
 import { Observable, Subscription, of } from 'rxjs';
 import { map, shareReplay, filter, mergeMap } from 'rxjs/operators';
 
-import { MetaData, MetaDescription } from './models';
 import { environment } from '../environments/environment';
 
 export { map, shareReplay, of };
 export {
-  MetaDescription,
   BreakpointObserver,
   Observable,
   Subscription
 };
 
 const IMAGE_PATH = '/assets/img/DGJAPAN.png';
+
+export interface MetaData {
+  title: string;
+  type?: string;
+  url?: string;
+  image?: string;
+  description?: string;
+  keywords?: string;
+}
+
+export interface MetaDescription {
+  ngActivatedRoute: ActivatedRoute;
+  ngTitle: Title;
+  ngMeta: Meta;
+  ngRouter: Router;
+}
 
 export function isHandset(observer: BreakpointObserver): Observable<boolean> {
   return observer
