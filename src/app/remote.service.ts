@@ -209,7 +209,7 @@ function compareByDate(a: Date, b: Date): number {
 }
 
 function compareTime(t1: number, t2: number, category: EventCategory) {
-  switch(category) {
+  switch (category) {
     case 'past':
       return t1 < t2;
     case 'upcoming':

@@ -55,7 +55,7 @@ describe('EventsTabsComponent', () => {
   }));
 
   beforeEach(async () => {
-      const router: Router = TestBed.get(Router);
+      const router: Router = TestBed.inject(Router);
       fixture = TestBed.createComponent(EventsTabsComponent);
       fixture.detectChanges();
       return router.navigate(['/events/local']);

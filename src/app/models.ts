@@ -6,10 +6,10 @@ export type EventCategory = 'upcoming' | 'past' | 'local' | 'monthly' | 'video';
 export type EventId = string;
 export type RoundId = string;
 export type LocationId = string;
-export type Period = {
+export interface Period {
   from: string;
   to: string;
-};
+}
 export type GeoPosition = [number, number];
 
 export interface MarkerDialogData {

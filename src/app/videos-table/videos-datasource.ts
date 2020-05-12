@@ -50,7 +50,9 @@ export class VideosDataSource extends MatTableDataSource<VideoInfo> {
     }
     const results: VideoInfo[] = [];
     videos.forEach(video => {
-      video.title.toLowerCase().includes(this.keyword) ? results.push(video) : null;
+      if (video.title.toLowerCase().includes(this.keyword)) {
+        results.push(video);
+      }
     });
     return results;
   }

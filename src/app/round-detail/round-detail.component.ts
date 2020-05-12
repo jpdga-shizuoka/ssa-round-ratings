@@ -33,10 +33,10 @@ export class RoundDetailComponent implements OnInit, OnDestroy {
   score: number;
 
   private event: EventInfo;
-  private _miscInfo: MiscInfo[];
   private ssEvent: Subscription;
   private ssLocation: Subscription;
   location?: LocationInfo;
+  miscInfo: MiscInfo[];
 
   constructor(private readonly remote: RemoteService) { }
 
@@ -85,14 +85,6 @@ export class RoundDetailComponent implements OnInit, OnDestroy {
       return 'Category 4A (60-65.9)';
     }
     return 'Category 5A (over 66)';
-  }
-
-  get miscInfo(): MiscInfo[] {
-    // if (this._miscInfo) {
-    //   return this._miscInfo;
-    // }
-    // this.makeMiscInfo();
-    return this._miscInfo;
   }
 
   get equation(): string | undefined {
@@ -162,7 +154,7 @@ export class RoundDetailComponent implements OnInit, OnDestroy {
         });
       }
     }
-    this._miscInfo = info;
+    this.miscInfo = info;
   }
 
   onRatingChanged() {

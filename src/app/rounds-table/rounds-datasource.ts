@@ -84,10 +84,10 @@ export class RoundsDataSource extends MatTableDataSource<RoundInfo> {
 function updateMembers(rounds: RoundInfo[]) {
   for (const round of rounds) {
     if (round.ratings) {
-      round['weight'] = calcWeight(round.ratings.player1, round.ratings.player2);
-      round['offset'] = calcOffset(round);
-      round['ssa'] = calcSsa(round);
-      round['category'] = calcCategory(round['ssa']);
+      round.weight = calcWeight(round.ratings.player1, round.ratings.player2);
+      round.offset = calcOffset(round);
+      round.ssa = calcSsa(round);
+      round.category = calcCategory(round.ssa);
     }
   }
   return rounds;
@@ -98,13 +98,13 @@ function calcWeight(player1: { score: number, rating: number }, player2: { score
 }
 
 function calcOffset(round: RoundInfo) {
-  return round.ratings.player1.rating - round['weight'] * round.ratings.player1.score;
+  return round.ratings.player1.rating - round.weight * round.ratings.player1.score;
 }
 
 function calcSsa(round: RoundInfo) {
   const holes = round.holes || 18;
   const regulation = holes / 18;
-  return (1000 - round['offset']) / round['weight'] / regulation;
+  return (1000 - round.offset) / round.weight / regulation;
 }
 
 function calcCategory(ssa: number) {
