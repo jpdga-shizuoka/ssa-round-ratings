@@ -67,6 +67,9 @@ export class RemoteService {
   constructor(private readonly http: HttpClient) { }
 
   getEvents(category: EventCategory): Observable<EventInfo[]> {
+    if (!category) {
+      throw new TypeError('getEvents: no category specified');
+    }
     return this.http
     .get<EventInfo[]>(category2url(category), {responseType: 'json'})
     .pipe(
@@ -77,6 +80,9 @@ export class RemoteService {
   }
 
   getEvent(id: EventId, category: EventCategory) {
+    if (!id) {
+      throw new TypeError('getEvent: no id specified');
+    }
     return this.getEvents(category).pipe(
       map(events => events.find(event => event.id === id))
     );
@@ -108,6 +114,9 @@ export class RemoteService {
   }
 
   getLocation(id: LocationId): Observable<LocationInfo> {
+    if (!id) {
+      throw new TypeError('getLocation: no id specified');
+    }
     return this.getLocations().pipe(
       map(locations => locations.find(location => location.id === id))
     );

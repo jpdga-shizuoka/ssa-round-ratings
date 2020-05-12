@@ -46,9 +46,14 @@ export class EventsTabsComponent implements OnInit, AfterViewInit {
     this.selectedTab = 0;
 
     if (this.route.snapshot.url.length !== 2) {
-      return;
+      throw new TypeError(`unexpected path: ${this.route.snapshot.url}`);
     }
     this.category = this.route.snapshot.url[1].path;
+    if (this.category !== 'upcoming'
+    && this.category !== 'local'
+    && this.category !== 'monthly') {
+      throw new TypeError(`unexpected category: ${this.category}`);
+    }
   }
 
   ngOnInit() {
