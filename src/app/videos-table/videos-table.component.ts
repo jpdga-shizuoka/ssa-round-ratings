@@ -11,7 +11,7 @@ import { map } from 'rxjs/operators';
 
 import { VideoBottomsheetComponent } from '../dialogs/video-bottomsheet.component';
 import { VideoInfo } from '../models';
-import { isHandset } from '../utilities';
+import { isHandset } from '../ng-utilities';
 import { VideosDataSource } from './videos-datasource';
 import { RemoteService, EventCategory } from '../remote.service';
 

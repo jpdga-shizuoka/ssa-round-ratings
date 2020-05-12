@@ -7,7 +7,7 @@ import { Observable, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { GeoMarker } from '../models';
-import { isHandset } from '../utilities';
+import { isHandset } from '../ng-utilities';
 
 const DISPLAYED_COLUMNS = [['event', 'hla', 'ssa'], ['year', 'event', 'round', 'hla', 'ssa']];
 const TABS_TITLE = ['Rounds', 'Location map'];

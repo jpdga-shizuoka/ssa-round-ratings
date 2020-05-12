@@ -13,7 +13,7 @@ import {
   MetaDescription,
   Observable,
   Subscription,
-} from './utilities';
+} from './ng-utilities';
 
 interface MyMetaData {
   title: string;

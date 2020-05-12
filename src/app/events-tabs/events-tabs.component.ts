@@ -9,7 +9,7 @@ import { Observable, BehaviorSubject, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { EventInfo, GeoMarker } from '../models';
-import { isHandset } from '../utilities';
+import { isHandset } from '../ng-utilities';
 import { NoticeBottomsheetComponent } from '../dialogs/notice-bottomsheet.component';
 
 const DISPLAYED_COLUMNS = {

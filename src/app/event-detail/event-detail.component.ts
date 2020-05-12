@@ -3,7 +3,7 @@ import { Subscription } from 'rxjs';
 import { ICONS, MiscInfo } from '../models';
 import {
   BreakpointObserver, Observable, isHandset, of as observableOf
-} from '../utilities';
+} from '../ng-utilities';
 import { RemoteService, EventInfo, LocationInfo } from '../remote.service';
 import { getEventTitle, getPdgaResult, getJpdgaInfo } from '../app-libs';
 
