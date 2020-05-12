@@ -1,3 +1,20 @@
+export interface Environment {
+  production: boolean;
+  projectPathName: string;
+  title: string;
+  localize?: {
+    aliase2title?: string[];
+  };
+  MAP_API_KEY: string;
+  map: {
+    center: {
+      lat: number;
+      lng: number;
+    },
+    zoom: number;
+  };
+}
+
 export const environment = {
   production: true,
   projectPathName: '/ssa-round-ratings',

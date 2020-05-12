@@ -2,6 +2,23 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+export interface Environment {
+  production: boolean;
+  projectPathName: string;
+  title: string;
+  localize?: {
+    aliase2title?: string[];
+  };
+  MAP_API_KEY: string;
+  map: {
+    center: {
+      lat: number;
+      lng: number;
+    },
+    zoom: number;
+  };
+}
+
 export const environment = {
   production: false,
   projectPathName: '',
