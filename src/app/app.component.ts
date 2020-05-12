@@ -4,7 +4,7 @@ import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
 import { MatSidenav } from '@angular/material/sidenav';
 
-import { take } from 'rxjs/operators';
+import { take, filter } from 'rxjs/operators';
 
 import { LocalizeService, GLOBAL, LOCAL } from './localize.service';
 import {
@@ -33,7 +33,8 @@ export class AppComponent implements OnInit, OnDestroy, MetaDescription {
   @ViewChild('drawer') drawer: MatSidenav;
   title = 'DG Japan';
   isHandset$: Observable<boolean>;
-  metaSubscription: Subscription;
+  ssMeta: Subscription;
+  ssRouter: Subscription;
 
   constructor(
     private localize: LocalizeService,
@@ -44,19 +45,28 @@ export class AppComponent implements OnInit, OnDestroy, MetaDescription {
     breakpointObserver: BreakpointObserver,
   ) {
     this.isHandset$ = isHandset(breakpointObserver);
+    // https://medium.com/angular-in-depth/refresh-current-route-in-angular-512a19d58f6e
+    // https://medium.com/@rakshitshah/refresh-angular-component-without-navigation-148a87c2de3f
+    // https://stackoverflow.com/questions/58202702/angular-8-router-does-not-fire-any-events-with-onsameurlnavigation-reload-w
+    //
+    // refresh this component evenwhen url updated with same address
+    //
+    this.ngRouter.routeReuseStrategy.shouldReuseRoute = () => false;
+    this.ssRouter = this.ngRouter.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => this.ngRouter.navigated = false);
   }
 
   ngOnInit() {
     const language = window.navigator.language.split('-')[0];
     this.localize.language = language === 'ja' ? LOCAL : GLOBAL;
 
-    this.metaSubscription = subscribeMetaDescription(this);
+    this.ssMeta = subscribeMetaDescription(this);
   }
 
   ngOnDestroy() {
-    if (this.metaSubscription) {
-      this.metaSubscription.unsubscribe();
-    }
+    this.ssMeta?.unsubscribe();
+    this.ssRouter?.unsubscribe();
   }
 
   onClickLink() {
@@ -67,5 +77,6 @@ export class AppComponent implements OnInit, OnDestroy, MetaDescription {
 
   onClickLanguage() {
     this.localize.toggleLanguage();
+    this.ngRouter.navigate(['.'],  { skipLocationChange: true });
   }
 }
