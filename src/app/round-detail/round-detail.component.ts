@@ -1,6 +1,8 @@
 import { Component, Input, Output, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { CommonService } from '../common.service';
+import {
+  getEventTitle, getPdgaResult, getJpdgaResult, getJpdgaInfo, getJpdgaReport, getJpdgaPhoto
+} from '../app-libs';
 import { RemoteService, RoundInfo, EventInfo, LocationInfo, LocationId } from '../remote.service';
 
 const MIN_RATING = 700;
@@ -36,11 +38,7 @@ export class RoundDetailComponent implements OnInit, OnDestroy {
   private ssLocation: Subscription;
   location?: LocationInfo;
 
-  constructor(
-    private cs: CommonService,
-    private readonly remote: RemoteService,
-  ) {
-  }
+  constructor(private readonly remote: RemoteService) { }
 
   ngOnInit() {
     this.ssEvent = this.remote.getEvent(this.round.event, 'past')
@@ -105,7 +103,7 @@ export class RoundDetailComponent implements OnInit, OnDestroy {
   }
 
   get title() {
-    return this.cs.getEventTitle(this.event?.title);
+    return getEventTitle(this.event?.title);
   }
 
   private getLocation(id: LocationId) {
@@ -124,7 +122,7 @@ export class RoundDetailComponent implements OnInit, OnDestroy {
       info.push({
         icon: 'public',
         title: 'Results 🇺🇸',
-        url: this.cs.getPdgaResult(event.pdga.eventId)
+        url: getPdgaResult(event.pdga.eventId)
       });
     }
     if (event.jpdga) {
@@ -132,26 +130,26 @@ export class RoundDetailComponent implements OnInit, OnDestroy {
         info.push({
           icon: 'public',
           title: 'Results 🇯🇵',
-          url: this.cs.getJpdgaResult(event.jpdga.eventId)
+          url: getJpdgaResult(event.jpdga.eventId)
         });
         info.push({
           icon: 'public',
           title: 'Papers 🇯🇵',
-          url: this.cs.getJpdgaInfo(event.jpdga.eventId)
+          url: getJpdgaInfo(event.jpdga.eventId)
         });
       }
       if (event.jpdga.topicId) {
         info.push({
           icon: 'public',
           title: 'Report 🇯🇵',
-          url: this.cs.getJpdgaReport(event.jpdga.topicId)
+          url: getJpdgaReport(event.jpdga.topicId)
         });
       }
       if (event.jpdga.photoId) {
         info.push({
           icon: 'camera_alt',
           title: 'Photos',
-          url: this.cs.getJpdgaPhoto(event.jpdga.photoId)
+          url: getJpdgaPhoto(event.jpdga.photoId)
         });
       }
     }

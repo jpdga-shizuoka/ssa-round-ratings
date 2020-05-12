@@ -6,7 +6,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 
 import { filter, map, mergeMap } from 'rxjs/operators';
 
-import { CommonService } from './common.service';
+import { LocalizeService, GLOBAL, LOCAL } from './localize.service';
 import {
   isHandset,
   subscribeMetaDescription,
@@ -36,7 +36,7 @@ export class AppComponent implements OnInit, OnDestroy, MetaDescription {
   metaSubscription: Subscription;
 
   constructor(
-    private cs: CommonService,
+    private localize: LocalizeService,
     public ngActivatedRoute: ActivatedRoute,
     public ngTitle: Title,
     public ngMeta: Meta,
@@ -48,7 +48,7 @@ export class AppComponent implements OnInit, OnDestroy, MetaDescription {
 
   ngOnInit() {
     const language = window.navigator.language.split('-')[0];
-    this.cs.primaryLanguage = language === 'ja' ? false : true;
+    this.localize.language = language === 'ja' ? LOCAL : GLOBAL;
 
     this.metaSubscription = subscribeMetaDescription(this);
   }
@@ -66,6 +66,6 @@ export class AppComponent implements OnInit, OnDestroy, MetaDescription {
   }
 
   onClickLanguage() {
-    this.cs.toggleLanguage();
+    this.localize.toggleLanguage();
   }
 }

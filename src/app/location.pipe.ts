@@ -3,18 +3,21 @@ import { LocationInfo } from './models';
 import { LocalizeService } from './localize.service';
 
 @Pipe({
-  name: 'location'
+  name: 'locationPrint'
 })
 export class LocationPipe implements PipeTransform {
 
   constructor(private readonly localize: LocalizeService) {}
 
-  transform(location: LocationInfo): string {
+  transform(location: LocationInfo, format: string): string {
     if (!location) {
       return '';
     }
-    const title = this.localize.transform(location.title);
-    const region = this.localize.transform(location.prefecture);
-    return `${title}, ${region}`;
+    if (format === 'title-region') {
+      const title = this.localize.transform(location.title);
+      const region = this.localize.transform(location.prefecture);
+      return `${title}, ${region}`;
+    }
+    return '';
   }
 }

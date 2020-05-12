@@ -9,7 +9,6 @@ import { Observable, BehaviorSubject, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { EventInfo, GeoMarker } from '../models';
-import { CommonService } from '../common.service';
 import { isHandset } from '../utilities';
 import { NoticeBottomsheetComponent } from '../dialogs/notice-bottomsheet.component';
 
@@ -39,7 +38,6 @@ export class EventsTabsComponent implements OnInit, AfterViewInit {
   constructor(
     private route: ActivatedRoute,
     private location: Location,
-    private cs: CommonService,
     private bottomsheet: MatBottomSheet,
     breakpointObserver: BreakpointObserver,
   ) {
@@ -107,21 +105,4 @@ export class EventsTabsComponent implements OnInit, AfterViewInit {
 
     setTimeout(() => bottomsheetRef.dismiss(), 5000);
   }
-
-  // private makeMaerkersFromEvents(events: EventInfo[]) {
-  //   const markers: GeoMarker[] = [];
-  //   for (const event of events) {
-  //     const location = this.cs.getLocation(event.location);
-  //     const marker = {
-  //       position: {
-  //         lat: location.geolocation[0],
-  //         lng: location.geolocation[1]
-  //       },
-  //       location: event.location,
-  //       title: event.title,
-  //     };
-  //     markers.push(marker);
-  //   }
-  //   this.mapSource$.next(markers);
-  // }
 }

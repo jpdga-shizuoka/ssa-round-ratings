@@ -1,12 +1,11 @@
 import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
-import {
-  CommonService, ICONS, MiscInfo
-} from '../common.service';
+import { ICONS, MiscInfo } from '../models';
 import {
   BreakpointObserver, Observable, isHandset, of as observableOf
 } from '../utilities';
 import { RemoteService, EventInfo, LocationInfo } from '../remote.service';
+import { getEventTitle, getPdgaResult, getJpdgaInfo } from '../app-libs';
 
 @Component({
   selector: 'app-event-detail',
@@ -22,7 +21,6 @@ export class EventDetailComponent implements OnInit, OnDestroy {
 
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private cs: CommonService,
     private readonly remote: RemoteService,
   ) {
     this.isHandset$ = isHandset(breakpointObserver);
@@ -39,7 +37,7 @@ export class EventDetailComponent implements OnInit, OnDestroy {
   }
 
   get title(): string {
-    return this.event.title ? this.cs.getEventTitle(this.event.title) : '';
+    return this.event.title ? getEventTitle(this.event.title) : '';
   }
 
   get showPastRounds() {
@@ -61,7 +59,7 @@ export class EventDetailComponent implements OnInit, OnDestroy {
         info.push({
           icon: 'public',
           title: 'PDGA 🇺🇸',
-          url: this.cs.getPdgaResult(this.event.pdga.eventId)
+          url: getPdgaResult(this.event.pdga.eventId)
         });
       }
     }
@@ -70,7 +68,7 @@ export class EventDetailComponent implements OnInit, OnDestroy {
         info.push({
           icon: 'public',
           title: 'JPDGA 🇯🇵',
-          url: this.cs.getJpdgaInfo(this.event.jpdga.eventId)
+          url: getJpdgaInfo(this.event.jpdga.eventId)
         });
       }
     }

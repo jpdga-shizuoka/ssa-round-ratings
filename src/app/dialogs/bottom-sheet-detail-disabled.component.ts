@@ -5,7 +5,7 @@ import {
   MAT_BOTTOM_SHEET_DATA,
 } from '@angular/material/bottom-sheet';
 
-import { CommonService } from '../common.service';
+import { LocalizeService } from '../localize.service';
 
 export interface NoticeBottomsheetData {
   title: string;
@@ -28,7 +28,7 @@ export class BottomSheetDetailDisabledComponent {
   constructor(
     @Inject(MAT_BOTTOM_SHEET_DATA) public data: NoticeBottomsheetData,
     private bottomSheetRef: MatBottomSheetRef<BottomSheetDetailDisabledComponent>,
-    private cs: CommonService,
+    private localize: LocalizeService,
   ) {}
 
   openLink(event: MouseEvent): void {
@@ -37,10 +37,10 @@ export class BottomSheetDetailDisabledComponent {
   }
 
   get title() {
-    return DIALOG_TITLE[this.cs.primaryLanguage ? 0 : 1];
+    return DIALOG_TITLE[this.localize.isGlobal ? 0 : 1];
   }
 
   get description() {
-    return DIALOG_DESCRIPTION[this.cs.primaryLanguage ? 0 : 1];
+    return DIALOG_DESCRIPTION[this.localize.isGlobal ? 0 : 1];
   }
 }

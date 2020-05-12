@@ -8,12 +8,13 @@ import { MatBottomSheet } from '@angular/material/bottom-sheet';
 
 import { Observable, Subject, Subscription } from 'rxjs';
 
-import { CommonService, GeoMarker } from '../common.service';
+import { GeoMarker } from '../models';
 import { detailExpand } from '../animations';
 import { BottomSheetDetailDisabledComponent } from '../dialogs/bottom-sheet-detail-disabled.component';
 import { RemoteService, RoundInfo, EventInfo } from '../remote.service';
 import { RoundsDataSource } from './rounds-datasource';
 import { LocalizeService } from '../localize.service';
+import { getEventTitle } from '../app-libs';
 
 @Component({
   selector: 'app-rounds-table',
@@ -39,7 +40,6 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   private sorted = false;
 
   constructor(
-    private cs: CommonService,
     private route: ActivatedRoute,
     private bottomSheet: MatBottomSheet,
     private readonly localize: LocalizeService,
@@ -109,7 +109,7 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     if (!this.search) {
       return true;
     }
-    const title = this.cs.getEventTitle(this.expandedElement.event);
+    const title = getEventTitle(this.expandedElement.event);
     if (this.search.includes(title)
     ||  this.search.includes(this.localize.transform(title))) {
       return false;

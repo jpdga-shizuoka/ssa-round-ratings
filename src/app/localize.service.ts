@@ -70,6 +70,10 @@ export class LocalizeService {
       return LOCALIZE_TABLE.distanseFromMarkerToGoal(distanse, marker);
     }
   }
+
+  toggleLanguage() {
+    this.language = this.isGlobal ? LOCAL : GLOBAL;
+  }
 }
 
 function prepareLocals() {
