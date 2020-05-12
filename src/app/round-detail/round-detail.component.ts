@@ -1,5 +1,4 @@
-import { Component, Input, Output, OnInit, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Component, Input, Output, OnInit } from '@angular/core';
 import {
   getEventTitle, getPdgaResult, getJpdgaResult, getJpdgaInfo, getJpdgaReport, getJpdgaPhoto
 } from '../app-libs';
@@ -14,7 +13,7 @@ const MAX_RATING = 1200;
   templateUrl: './round-detail.component.html',
   styleUrls: ['./round-detail.component.css']
 })
-export class RoundDetailComponent implements OnInit, OnDestroy {
+export class RoundDetailComponent implements OnInit {
 
   @Input() round: RoundInfo;
   @Input() showHistory = true;
@@ -23,25 +22,18 @@ export class RoundDetailComponent implements OnInit, OnDestroy {
   score: number;
 
   private event: EventInfo;
-  private ssEvent: Subscription;
-  private ssLocation: Subscription;
   location?: LocationInfo;
   miscInfo: MiscInfo[];
 
   constructor(private readonly remote: RemoteService) { }
 
   ngOnInit() {
-    this.ssEvent = this.remote.getEvent(this.round.event, 'past')
+    this.remote.getEvent(this.round.event, 'past')
     .subscribe(
       event => this.event = event,
       err => console.log(err),
       () => this.getLocation(this.event.location)
     );
-  }
-
-  ngOnDestroy() {
-    this.ssEvent?.unsubscribe();
-    this.ssLocation?.unsubscribe();
   }
 
   get roundStatus(): string {
@@ -89,7 +81,7 @@ export class RoundDetailComponent implements OnInit, OnDestroy {
   }
 
   private getLocation(id: LocationId) {
-    this.ssLocation = this.remote.getLocation(id).subscribe(
+    this.remote.getLocation(id).subscribe(
       location => this.location = location,
       err => console.log(err),
       () => this.makeMiscInfo()

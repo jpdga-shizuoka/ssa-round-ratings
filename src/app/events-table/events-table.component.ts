@@ -34,9 +34,9 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   ngOnInit() {
     this.dataSource = new EventsDataSource(this.remote, this.category, this.limit);
     if (this.markerSelected$) {
-      this.subscription = this.markerSelected$.subscribe({
-        next: marker => this.onMarkerSelected(marker)
-      });
+      this.subscription = this.markerSelected$.subscribe(
+        marker => this.onMarkerSelected(marker)
+      );
     }
   }
 

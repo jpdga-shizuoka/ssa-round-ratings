@@ -1,5 +1,4 @@
 import { MatTableDataSource } from '@angular/material/table';
-import { Subscription } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { RemoteService, VideoInfo, EventCategory } from '../remote.service';
 
@@ -9,8 +8,6 @@ import { RemoteService, VideoInfo, EventCategory } from '../remote.service';
  * (including sorting, pagination, and filtering).
  */
 export class VideosDataSource extends MatTableDataSource<VideoInfo> {
-
-  private subscription?: Subscription;
 
   constructor(
     private readonly remote: RemoteService,
@@ -27,7 +24,7 @@ export class VideosDataSource extends MatTableDataSource<VideoInfo> {
    * @returns A stream of the items to be rendered.
    */
   connect() {
-    this.subscription = this.remote.getVideos(this.category)
+    this.remote.getVideos(this.category)
     .pipe(
       map(videos => this.filterWithKeyword(videos)),
       map(videos => this.limit ? videos.slice(0, this.limit) : videos)
@@ -41,7 +38,7 @@ export class VideosDataSource extends MatTableDataSource<VideoInfo> {
    * any open connections or free any held resources that were set up during connect.
    */
   disconnect() {
-    this.subscription?.unsubscribe();
+    super.disconnect();
   }
 
   private filterWithKeyword(videos: VideoInfo[]) {

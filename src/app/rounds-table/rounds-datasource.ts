@@ -1,7 +1,6 @@
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { Observable, Subscription } from 'rxjs';
 import { tap, map } from 'rxjs/operators';
 
 import { RemoteService, RoundInfo } from '../remote.service';
@@ -13,8 +12,6 @@ import { LocalizeService } from '../localize.service';
  * (including sorting, pagination, and filtering).
  */
 export class RoundsDataSource extends MatTableDataSource<RoundInfo> {
-
-  private subscription: Subscription;
 
   constructor(
     private readonly remote: RemoteService,
@@ -30,7 +27,7 @@ export class RoundsDataSource extends MatTableDataSource<RoundInfo> {
    * @returns A stream of the items to be rendered.
    */
   connect() {
-    this.subscription = this.remote.getRounds()
+    this.remote.getRounds()
       .pipe(
         map(rounds => this.limit ? rounds.slice(0, this.limit) : rounds),
         tap(rounds => updateMembers(rounds))
@@ -44,7 +41,6 @@ export class RoundsDataSource extends MatTableDataSource<RoundInfo> {
    * any open connections or free any held resources that were set up during connect.
    */
   disconnect() {
-    this.subscription?.unsubscribe();
     super.disconnect();
   }
 

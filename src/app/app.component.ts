@@ -4,7 +4,7 @@ import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
 import { MatSidenav } from '@angular/material/sidenav';
 
-import { filter, map, mergeMap } from 'rxjs/operators';
+import { take } from 'rxjs/operators';
 
 import { LocalizeService, GLOBAL, LOCAL } from './localize.service';
 import {
@@ -61,8 +61,8 @@ export class AppComponent implements OnInit, OnDestroy, MetaDescription {
 
   onClickLink() {
     this.isHandset$
-    .subscribe(result => result ? this.drawer.close() : '')
-    .unsubscribe();
+    .pipe(take(1))
+    .subscribe(result => result ? this.drawer.close() : '');
   }
 
   onClickLanguage() {
