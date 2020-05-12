@@ -4,6 +4,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -17,6 +18,12 @@ import { MatTableModule } from '@angular/material/table';
 
 import { DashBoardComponent } from './dash-board.component';
 import { VideosTableComponent } from '../videos-table/videos-table.component';
+import { LocalizePipe } from '../localize.pipe';
+import { LocationPipe } from '../location.pipe';
+import { GeolinkPipe } from '../geolink.pipe';
+import { SchedulePipe } from '../schedule.pipe';
+import { PeriodPipe } from '../period.pipe';
+import { EventPipe } from '../event.pipe';
 
 describe('DashBoardComponent', () => {
   let component: DashBoardComponent;
@@ -28,12 +35,19 @@ describe('DashBoardComponent', () => {
       declarations: [
         DashBoardComponent,
         VideosTableComponent,
+        LocalizePipe,
+        LocationPipe,
+        GeolinkPipe,
+        SchedulePipe,
+        PeriodPipe,
+        EventPipe,
       ],
       imports: [
         NoopAnimationsModule,
         LayoutModule,
         RouterTestingModule,
         FormsModule,
+        HttpClientModule,
         MatButtonModule,
         MatCardModule,
         MatGridListModule,
