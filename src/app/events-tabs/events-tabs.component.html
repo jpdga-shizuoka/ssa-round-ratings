@@ -15,11 +15,11 @@
   </mat-tab>
 
   <mat-tab label="{{mapTitle | localize}}">
-    <div>
+    <ng-template matTabContent>
       <app-events-map
         [category]="category"
         (markerSelected)="onMarkerSelected($event)">
       </app-events-map>
-    </div>
+    </ng-template>
   </mat-tab>
 </mat-tab-group>
