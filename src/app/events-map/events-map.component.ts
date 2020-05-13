@@ -84,6 +84,7 @@ export class EventsMapComponent implements OnInit {
       err => console.log(err),
       () => {
         this.mapSource$.next(markers);
+        this.mapSource$.complete();
         this.loading = false;
       }
     );
