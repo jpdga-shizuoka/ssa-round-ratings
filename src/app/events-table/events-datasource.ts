@@ -13,6 +13,7 @@ export { EventInfo };
 export class EventsDataSource extends MatTableDataSource<EventInfo> {
 
   private subscription?: Subscription;
+  loading = true;
 
   constructor(
     private readonly remote: RemoteService,
@@ -28,12 +29,17 @@ export class EventsDataSource extends MatTableDataSource<EventInfo> {
    * @returns A stream of the items to be rendered.
    */
   connect() {
+    this.loading = true;
     this.subscription = this.remote.getEvents(this.category)
       .pipe(
         map(events => this.limit ? events.slice(0, this.limit) : events),
         tap(events => events.forEach(
           event => event.location$ = this.remote.getLocation(event.location))))
-      .subscribe(events => this.data = events);
+      .subscribe(
+        events => this.data = events,
+        err => console.log(err),
+        () => this.loading = false
+      );
     return super.connect();
   }
 

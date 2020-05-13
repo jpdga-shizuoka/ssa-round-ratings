@@ -24,6 +24,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -108,8 +109,9 @@ import { environment } from '../environments/environment';
     MatTabsModule,
     MatDialogModule,
     MatBottomSheetModule,
-    AgmCoreModule.forRoot({ apiKey: environment.MAP_API_KEY }),
     MatMenuModule,
+    MatProgressSpinnerModule,
+    AgmCoreModule.forRoot({ apiKey: environment.MAP_API_KEY }),
     NgxChartsModule,
     DeviceDetectorModule.forRoot(),
   ],

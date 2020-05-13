@@ -8,6 +8,7 @@ import { RemoteService, VideoInfo, EventCategory } from '../remote.service';
  * (including sorting, pagination, and filtering).
  */
 export class VideosDataSource extends MatTableDataSource<VideoInfo> {
+  loading = true;
 
   constructor(
     private readonly remote: RemoteService,
@@ -24,11 +25,16 @@ export class VideosDataSource extends MatTableDataSource<VideoInfo> {
    * @returns A stream of the items to be rendered.
    */
   connect() {
+    this.loading = true;
     this.remote.getVideos(this.category)
     .pipe(
       map(videos => this.filterWithKeyword(videos)),
       map(videos => this.limit ? videos.slice(0, this.limit) : videos)
-    ).subscribe(videos => this.data = videos);
+    ).subscribe(
+      videos => this.data = videos,
+      err => console.log(err),
+      () => this.loading = false
+    );
 
     return super.connect();
   }

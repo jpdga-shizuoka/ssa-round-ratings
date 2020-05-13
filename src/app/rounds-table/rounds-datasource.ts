@@ -12,6 +12,7 @@ import { LocalizeService } from '../localize.service';
  * (including sorting, pagination, and filtering).
  */
 export class RoundsDataSource extends MatTableDataSource<RoundInfo> {
+  loading = true;
 
   constructor(
     private readonly remote: RemoteService,
@@ -27,11 +28,16 @@ export class RoundsDataSource extends MatTableDataSource<RoundInfo> {
    * @returns A stream of the items to be rendered.
    */
   connect() {
+    this.loading = true;
     this.remote.getRounds()
       .pipe(
         map(rounds => this.limit ? rounds.slice(0, this.limit) : rounds),
         tap(rounds => updateMembers(rounds))
-      ).subscribe(rounds => this.data = rounds);
+      ).subscribe(
+        rounds => this.data = rounds,
+        err => console.log(err),
+        () => this.loading = false
+      );
 
     return super.connect();
   }

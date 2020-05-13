@@ -13,3 +13,9 @@ body {
   margin-left: 5px;
   margin-right: 5px;
 }
+
+.mat-spinner {
+  position: fixed;
+  top: 0;
+  left: calc(50% - 50px);
+}
