@@ -21,6 +21,7 @@ export class EventsMapComponent implements OnInit {
   longitude = environment.map.center.lng;
   zoom = environment.map.zoom;
   mapSource$: BehaviorSubject<GeoMarker[]> = new BehaviorSubject<GeoMarker[]>([]);
+  loading = true;
 
   get height() {
     const height = getBodyHeight() - getHeaderHeight() - getFooterHeight() - getMatHeaderHeight();
@@ -81,7 +82,10 @@ export class EventsMapComponent implements OnInit {
         location => markers.push(makeMarker(event, location))
       ),
       err => console.log(err),
-      () => this.mapSource$.next(markers)
+      () => {
+        this.mapSource$.next(markers);
+        this.loading = false;
+      }
     );
   }
 }
