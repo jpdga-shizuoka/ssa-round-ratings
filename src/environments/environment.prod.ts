@@ -25,5 +25,11 @@ export const environment = {
       lng: 137.995148
     },
     zoom: 5,
+  },
+  localize: {
+    aliase2title: [
+      'a', 'b',
+      'if (a > 1960) {return a + "年 " + b;} return "第" + a + "回 " + b;'
+    ],
   }
 };
