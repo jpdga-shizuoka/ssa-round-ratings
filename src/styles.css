@@ -2,8 +2,10 @@
 
 html, body { height: 100%; }
 body {
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-    margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+  background: repeat url("./assets/img/background.png");
+  background-size: 30px 30px;
 }
 .my-align {
   display: inline-flex;
@@ -19,7 +21,12 @@ body {
   top: 0;
   left: calc(50% - 50px);
 }
-
 a {
   text-decoration: none;
+}
+.mat-drawer-container {
+  background-color: transparent;
+}
+.app-main {
+  background-color: #fafafa;
 }
