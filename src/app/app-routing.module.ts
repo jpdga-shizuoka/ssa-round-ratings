@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { ReloadComponent } from './app-reload';
 import { DashBoardComponent } from './dash-board/dash-board.component';
 import { RoundsTabsComponent } from './rounds-tabs/rounds-tabs.component';
 import { EventsTabsComponent } from './events-tabs/events-tabs.component';
@@ -48,6 +49,7 @@ const routes: Routes = [
     description: 'About Us, Privacy Policy, Terms, Open Source Software Project.',
     keywords: 'disc golf,ssa,scratch scoring averages,japan',
   }}},
+  { path: 'reload', component: ReloadComponent},
 ];
 
 @NgModule({

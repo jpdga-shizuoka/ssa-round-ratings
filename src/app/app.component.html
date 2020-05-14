@@ -11,7 +11,7 @@
       <a mat-list-item routerLink=""
         routerLinkActive="menu-active" [routerLinkActiveOptions]="{exact: true}"
         (click)="onClickLink()">
-        <mat-icon>home</mat-icon>{{'Home' | localize}}
+        <mat-icon>home</mat-icon>{{home}}
       </a>
 
       <mat-divider></mat-divider>
@@ -19,12 +19,12 @@
       <a mat-list-item routerLink="/events/upcoming"
         routerLinkActive="menu-active"
         (click)="onClickLink()">
-        <mat-icon>events</mat-icon>{{'Schedule' | localize}}
+        <mat-icon>events</mat-icon>{{schedule}}
       </a>
       <a mat-list-item routerLink="/past"
         routerLinkActive="menu-active"
         (click)="onClickLink()">
-        <mat-icon>table_chart</mat-icon>{{'Results' | localize}}
+        <mat-icon>table_chart</mat-icon>{{results}}
       </a>
 
       <mat-divider></mat-divider>
@@ -32,12 +32,12 @@
       <a mat-list-item routerLink="/events/local"
         routerLinkActive="menu-active"
         (click)="onClickLink()">
-        <mat-icon>terrain</mat-icon>{{'Local Events' | localize}}
+        <mat-icon>terrain</mat-icon>{{localEvents}}
       </a>
       <a mat-list-item routerLink="/events/monthly"
         routerLinkActive="menu-active"
         (click)="onClickLink()">
-        <mat-icon>sync</mat-icon>{{'Monthly Events' | localize}}
+        <mat-icon>sync</mat-icon>{{monthlyEvents}}
       </a>
     </mat-nav-list>
 
@@ -47,12 +47,12 @@
       <a mat-list-item routerLink="/stats"
         routerLinkActive="menu-active"
         (click)="onClickLink()">
-        <mat-icon>bar_chart</mat-icon>{{'Stats' | localize}}
+        <mat-icon>bar_chart</mat-icon>{{stats}}
       </a>
       <a mat-list-item routerLink="/about"
         routerLinkActive="menu-active"
         (click)="onClickLink()">
-        <mat-icon>info</mat-icon>{{'About this site' | localize}}
+        <mat-icon>info</mat-icon>{{aboutThisSite}}
       </a>
     </mat-nav-list>
   </mat-sidenav>

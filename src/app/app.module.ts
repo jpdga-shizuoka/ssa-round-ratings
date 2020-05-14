@@ -27,6 +27,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { AppComponent } from './app.component';
+import { ReloadComponent } from './app-reload';
 import { AppRoutingModule } from './app-routing.module';
 import { DashBoardComponent } from './dash-board/dash-board.component';
 import { RoundsTabsComponent } from './rounds-tabs/rounds-tabs.component';
@@ -60,6 +61,7 @@ import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
+    ReloadComponent,
     RoundsTabsComponent,
     RoundsTableComponent,
     RoundDetailComponent,

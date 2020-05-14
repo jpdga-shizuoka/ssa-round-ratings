@@ -1,10 +1,11 @@
 import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
+import { Location } from '@angular/common';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
 import { MatSidenav } from '@angular/material/sidenav';
 
-import { take, filter } from 'rxjs/operators';
+import { take } from 'rxjs/operators';
 
 import { LocalizeService, GLOBAL, LOCAL } from './localize.service';
 import {
@@ -15,15 +16,6 @@ import {
   Subscription,
 } from './ng-utilities';
 
-interface MyMetaData {
-  title: string;
-  type: string;
-  url: string;
-  image?: string;
-  description?: string;
-  keywords?: string;
-}
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -33,11 +25,18 @@ export class AppComponent implements OnInit, OnDestroy, MetaDescription {
   @ViewChild('drawer') drawer: MatSidenav;
   title = 'DG Japan';
   isHandset$: Observable<boolean>;
-  ssMeta: Subscription;
-  ssRouter: Subscription;
+  private ssMeta: Subscription;
+  get home() {return this.localize.transform('Home');}
+  get schedule() {return this.localize.transform('Schedule');}
+  get results() {return this.localize.transform('Results');}
+  get localEvents() {return this.localize.transform('Local Events');}
+  get monthlyEvents() {return this.localize.transform('Monthly Events');}
+  get stats() {return this.localize.transform('Stats');}
+  get aboutThisSite() {return this.localize.transform('About this site');}
 
   constructor(
     private localize: LocalizeService,
+    private location: Location,
     public ngActivatedRoute: ActivatedRoute,
     public ngTitle: Title,
     public ngMeta: Meta,
@@ -45,28 +44,16 @@ export class AppComponent implements OnInit, OnDestroy, MetaDescription {
     breakpointObserver: BreakpointObserver,
   ) {
     this.isHandset$ = isHandset(breakpointObserver);
-    // https://medium.com/angular-in-depth/refresh-current-route-in-angular-512a19d58f6e
-    // https://medium.com/@rakshitshah/refresh-angular-component-without-navigation-148a87c2de3f
-    // https://stackoverflow.com/questions/58202702/angular-8-router-does-not-fire-any-events-with-onsameurlnavigation-reload-w
-    //
-    // refresh this component evenwhen url updated with same address
-    //
-    this.ngRouter.routeReuseStrategy.shouldReuseRoute = () => false;
-    this.ssRouter = this.ngRouter.events.pipe(
-      filter(event => event instanceof NavigationEnd)
-    ).subscribe(() => this.ngRouter.navigated = false);
   }
 
   ngOnInit() {
     const language = window.navigator.language.split('-')[0];
     this.localize.language = language === 'ja' ? LOCAL : GLOBAL;
-
     this.ssMeta = subscribeMetaDescription(this);
   }
 
   ngOnDestroy() {
     this.ssMeta?.unsubscribe();
-    this.ssRouter?.unsubscribe();
   }
 
   onClickLink() {
@@ -77,6 +64,12 @@ export class AppComponent implements OnInit, OnDestroy, MetaDescription {
 
   onClickLanguage() {
     this.localize.toggleLanguage();
-    this.ngRouter.navigate(['.'],  { skipLocationChange: true });
+
+    // @see https://stackoverflow.com/questions/47813927/how-to-refresh-a-component-in-angular
+    // @note The following technique is working, but it affects routerLinkActive;
+    // https://medium.com/@rakshitshah/refresh-angular-component-without-navigation-148a87c2de3f
+    const currentPath = this.location.path().replace(/^\//, '');
+    this.ngRouter.navigate(['reload'])
+    .then(() => this.ngRouter.navigate([currentPath]));
   }
 }
