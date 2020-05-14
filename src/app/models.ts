@@ -68,10 +68,9 @@ export interface Schedule {
   byMonth?: number[];   // byMonth: [1, 2], // repeat only in january und february,
 }
 
-export interface RoundInfo {
+export interface RoundInfoBase {
   id: RoundId;
   event: EventId;       // Event Id
-  event$?: Observable<EventInfo>;
   round: string;        // Round Name
   date: string;         // Date of Round
   hla?: number;         // Hole Length Average (m)
@@ -86,6 +85,12 @@ export interface RoundInfo {
           rating: number; // PDGA Player Rating
       };
   };
+}
+
+export interface RoundInfo extends RoundInfoBase {
+  eventTitle: string;
+  locationTitle?: string;
+  event$?: Observable<EventInfo>;
   ssa?: number;         // Scratch Scoring Average
   category?: string;    // SSA Range Category
   weight?: number;

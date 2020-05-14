@@ -20,6 +20,7 @@ export class RoundsDataSource extends MatTableDataSource<RoundInfo> {
     private readonly limit?: number,
   ) {
     super();
+    this.setupFilter();
   }
 
   /**
@@ -54,20 +55,23 @@ export class RoundsDataSource extends MatTableDataSource<RoundInfo> {
     this.filterPredicate = (data: RoundInfo, filters: string): boolean => {
       const matchFilter = [];
       const filterArray = filters.split('&');
-      const eventAliase = this.localize.transform(data.event);
-      // const event = this.cs.getEvent(data.event);
-      // const locationName = this.cs.getLocationName(event.location);
-      const columns = [ eventAliase,
-                        // locationName,
-                        // event.location,
-                        data.event,
-                        data.round,
-                        data.date,
-                        data.hla,
-                        data.holes,
-                        data.ssa,
-                        data.category,
+      const columns = [
+        data.round,
+        data.date,
+        data.hla,
+        data.holes,
+        data.ssa,
+        data.category,
       ];
+      if (data.locationTitle) {
+        columns.push(data.locationTitle);
+        columns.push(this.localize.transform(data.locationTitle));
+      }
+      if (data.eventTitle) {
+        columns.push(data.eventTitle);
+        columns.push(this.localize.transform(data.eventTitle));
+      }
+
       filterArray.forEach(filter => {
         const customFilter = [];
         columns.forEach(column => {

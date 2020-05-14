@@ -2,15 +2,20 @@
 
 const fs = require('fs');
 const path = '../src/assets/model/';
-const filename = 'rounds.json';
-const filepath = path + filename;
-const rounds = JSON.parse(fs.readFileSync(filepath, 'utf8'));
+const roundsName = 'rounds.json';
+const rounds = JSON.parse(fs.readFileSync(path + roundsName, 'utf8'));
+const events = JSON.parse(fs.readFileSync(path + 'events.json', 'utf8'));
 const regexp = /[ \-\.\,\(\)]/g;
 rounds.forEach(round => {
-  eventId = round.event.toLowerCase().replace(regexp, '');
-  roundId = round.round.toLowerCase().replace(regexp, '');
-  round.id = eventId + '.' + roundId;
+  const event = events.find(event => event.title === round.event);
+  const eventId = round.event.toLowerCase().replace(regexp, '');
+  const roundId = round.round.toLowerCase().replace(regexp, '');
+  round.eventTitle = round.event;
   round.event = eventId;
+  if (event) {
+    round.locationTitle = event.location;
+  }
+  round.id = eventId + '.' + roundId;
 });
 
-fs.writeFileSync(filename, JSON.stringify(rounds, null, '  '));
+fs.writeFileSync(roundsName, JSON.stringify(rounds, null, '  '));
