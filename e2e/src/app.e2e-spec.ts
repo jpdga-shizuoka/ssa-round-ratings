@@ -20,7 +20,7 @@ describe('workspace-project App', () => {
 
   it('should display the footer title', () => {
     page.navigateTo();
-    expect(page.getFooterText()).toEqual('Copyright © 2019-2020 SHIZUOKA DISC GOLF ASSOCIATION');
+    expect(page.getFooterText()).toEqual('© SHIZUOKA DISC GOLF ASSOCIATION');
   });
 
   afterEach(async () => {
