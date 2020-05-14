@@ -1576,13 +1576,6 @@
       "topicId": "1269",
       "photoId": "72157666163702848"
     },
-    "urls": [
-      {
-        "type": "video",
-        "title": "FPO Final9",
-        "url": "https://youtu.be/RTERs8ypbJg"
-      }
-    ],
     "players": {
       "pro": 28,
       "ama": 10,
@@ -3456,7 +3449,7 @@
     "urls": [
       {
         "type": "video",
-        "title": "FPO Final9",
+        "title": "MPO Final9",
         "url": "https://youtu.be/6S0vTqC_LAU"
       }
     ],
