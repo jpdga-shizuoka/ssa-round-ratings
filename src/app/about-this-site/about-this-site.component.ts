@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { Location } from '@angular/common';
-
 import { LocalizeService } from '../localize.service';
 
 @Component({
@@ -14,13 +12,5 @@ export class AboutThisSiteComponent {
     return this.localize.isGlobal;
   }
 
-  constructor(
-    private localize: LocalizeService,
-    private location: Location,
-  ) {
-  }
-
-  back() {
-    this.location.back();
-  }
+  constructor(private localize: LocalizeService) { }
 }

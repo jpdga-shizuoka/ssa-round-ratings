@@ -58,15 +58,21 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary" [ngClass]="{'toolbar-back': isHandset$ | async}" id="header">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span id="toolbar-title" *ngIf="isHandset$ | async">{{title}}</span>
+      <span>
+        <div *ngIf="isHandset$ | async; else notHandset">
+          <button
+            type="button"
+            aria-label="Toggle sidenav"
+            mat-icon-button
+            (click)="drawer.toggle()">
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          </button>
+          <span id="toolbar-title">{{subtitle}}</span>
+        </div>
+        <ng-template #notHandset>
+          <span>{{subtitle}}</span>
+        </ng-template>
+      </span>
       <span class="title-spacer"></span>
       <span class="title-button-row">
         <button mat-icon-button aria-label="toggle language" (click)="onClickLanguage()">

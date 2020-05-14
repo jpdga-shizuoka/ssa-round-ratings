@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { ActivatedRoute } from '@angular/router';
 
@@ -24,7 +23,6 @@ export class RoundsTabsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private location: Location,
     breakpointObserver: BreakpointObserver,
   ) {
     this.isHandset$ = isHandset(breakpointObserver);
@@ -56,10 +54,6 @@ export class RoundsTabsComponent implements OnInit {
 
   get mapTitle() {
     return TABS_TITLE[1];
-  }
-
-  back() {
-    this.location.back();
   }
 
   onMarkerSelected(marker: GeoMarker) {

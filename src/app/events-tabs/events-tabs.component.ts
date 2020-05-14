@@ -1,6 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { MatDialog } from '@angular/material/dialog';
 import { MatBottomSheet, MatBottomSheetRef } from '@angular/material/bottom-sheet';
@@ -38,7 +37,6 @@ export class EventsTabsComponent implements OnInit, AfterViewInit {
 
   constructor(
     private route: ActivatedRoute,
-    private location: Location,
     private bottomsheet: MatBottomSheet,
     breakpointObserver: BreakpointObserver,
   ) {
@@ -92,10 +90,6 @@ export class EventsTabsComponent implements OnInit, AfterViewInit {
         break;
     }
     return schedule;
-  }
-
-  back() {
-    this.location.back();
   }
 
   onMarkerSelected(marker: GeoMarker) {

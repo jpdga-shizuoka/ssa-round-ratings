@@ -2,7 +2,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { NavigationEnd } from '@angular/router';
-import { Observable, Subscription, of } from 'rxjs';
+import { Observable, Subscription, BehaviorSubject, of } from 'rxjs';
 import { map, shareReplay, filter, mergeMap } from 'rxjs/operators';
 
 import { environment } from '../environments/environment';
@@ -18,6 +18,7 @@ const IMAGE_PATH = '/assets/img/DGJAPAN.png';
 
 export interface MetaData {
   title: string;
+  subtitle?: string;
   type?: string;
   url?: string;
   image?: string;
@@ -30,6 +31,7 @@ export interface MetaDescription {
   ngTitle: Title;
   ngMeta: Meta;
   ngRouter: Router;
+  subtitle$?: BehaviorSubject<string>;
 }
 
 export function isHandset(observer: BreakpointObserver): Observable<boolean> {
@@ -73,5 +75,8 @@ function updateDescription(mdo: MetaDescription, data?: any): void {
   mdo.ngMeta.updateTag({ property: 'og:image', content: md.image || image});
   if (md.keywords) {
     mdo.ngMeta.updateTag({ name: 'keywords', content: md.keywords });
+  }
+  if (md.subtitle) {
+    mdo.subtitle$?.next(md.subtitle);
   }
 }

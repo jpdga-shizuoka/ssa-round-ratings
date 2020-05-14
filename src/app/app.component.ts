@@ -4,7 +4,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
 import { MatSidenav } from '@angular/material/sidenav';
-
+import { BehaviorSubject } from 'rxjs';
 import { take } from 'rxjs/operators';
 
 import { LocalizeService, GLOBAL, LOCAL } from './localize.service';
@@ -25,7 +25,9 @@ export class AppComponent implements OnInit, OnDestroy, MetaDescription {
   @ViewChild('drawer') drawer: MatSidenav;
   title = 'DG Japan';
   isHandset$: Observable<boolean>;
+  subtitle$ = new BehaviorSubject<string>('');
   private ssMeta: Subscription;
+  get subtitle() {return this.localize.transform(this.subtitle$.value);}
   get home() {return this.localize.transform('Home');}
   get schedule() {return this.localize.transform('Schedule');}
   get results() {return this.localize.transform('Results');}
