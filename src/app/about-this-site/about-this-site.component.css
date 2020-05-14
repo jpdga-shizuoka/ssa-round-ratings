@@ -18,7 +18,7 @@ h4 a {
 .about-container {
   display: flex;
   flex-wrap: wrap;
-  margin: 10px;
+  margin: 6px 10px;
   justify-content: center;
 }
 .security-card,

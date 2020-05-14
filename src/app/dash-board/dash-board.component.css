@@ -19,3 +19,6 @@ h4 a:hover {
 h4 a:active {
   background-color: lightgray;
 }
+.app-container > div {
+  margin-top: 6px;
+}
