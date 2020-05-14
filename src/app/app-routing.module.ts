@@ -11,7 +11,6 @@ import { AboutThisSiteComponent } from './about-this-site/about-this-site.compon
 const routes: Routes = [
   { path: '', component: DashBoardComponent, data: { metaDescription: {
     title: 'DG Japan',
-    subtitle: 'Home',
     description: 'Information of the disc golf events held in Japan.',
     keywords: 'disc golf,events,japan,schedule,stats,results,videos',
   }}},

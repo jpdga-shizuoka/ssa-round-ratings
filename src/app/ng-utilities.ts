@@ -31,7 +31,7 @@ export interface MetaDescription {
   ngTitle: Title;
   ngMeta: Meta;
   ngRouter: Router;
-  subtitle$?: BehaviorSubject<string>;
+  subtitle$: BehaviorSubject<string>;
 }
 
 export function isHandset(observer: BreakpointObserver): Observable<boolean> {
@@ -76,7 +76,5 @@ function updateDescription(mdo: MetaDescription, data?: any): void {
   if (md.keywords) {
     mdo.ngMeta.updateTag({ name: 'keywords', content: md.keywords });
   }
-  if (md.subtitle) {
-    mdo.subtitle$?.next(md.subtitle);
-  }
+  mdo.subtitle$?.next(md.subtitle || '');
 }
