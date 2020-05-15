@@ -1,6 +1,7 @@
 import { MatTableDataSource } from '@angular/material/table';
 import { map } from 'rxjs/operators';
 import { RemoteService, VideoInfo, EventCategory } from '../remote.service';
+import { LocalizeService } from '../localize.service';
 
 /**
  * Data source for the TestTable view. This class should
@@ -12,11 +13,13 @@ export class VideosDataSource extends MatTableDataSource<VideoInfo> {
 
   constructor(
     private readonly remote: RemoteService,
+    private readonly localize: LocalizeService,
     private readonly category: EventCategory,
     private readonly limit?: number,
     private readonly keyword?: string,
   ) {
     super();
+    this.setupFilter();
   }
 
   /**
@@ -58,5 +61,25 @@ export class VideosDataSource extends MatTableDataSource<VideoInfo> {
       }
     });
     return results;
+  }
+
+  private setupFilter() {
+    this.filterPredicate = (data: VideoInfo, filters: string): boolean => {
+      const matchFilter = [];
+      const filterArray = filters.split('&');
+      const columns: string[] = [
+        data.title,
+        data.subttl,
+        data.date.toDateString(),
+        this.localize.transform(data.title)
+      ];
+      filterArray.forEach(filter => {
+        const customFilter = [];
+        columns.forEach(column =>
+          customFilter.push(column.toLowerCase().includes(filter)));
+        matchFilter.push(customFilter.some(Boolean)); // OR
+      });
+      return matchFilter.every(Boolean); // AND
+    };
   }
 }

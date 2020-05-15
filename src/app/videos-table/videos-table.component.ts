@@ -14,6 +14,7 @@ import { VideoInfo } from '../models';
 import { isHandset } from '../ng-utilities';
 import { VideosDataSource } from './videos-datasource';
 import { RemoteService, EventCategory } from '../remote.service';
+import { LocalizeService } from '../localize.service';
 
 const DISPLAYED_COLUMNS = [['title', 'subttl'], [ 'year', 'title', 'subttl']];
 
@@ -45,6 +46,7 @@ export class VideosTableComponent implements AfterViewInit, OnInit {
   constructor(
     private bottomSheet: MatBottomSheet,
     private readonly remote: RemoteService,
+    private readonly localize: LocalizeService,
     breakpointObserver: BreakpointObserver,
   ) {
     this.isHandset$ = isHandset(breakpointObserver);
@@ -57,7 +59,7 @@ export class VideosTableComponent implements AfterViewInit, OnInit {
 
   ngOnInit() {
     this.dataSource
-      = new VideosDataSource(this.remote, this.category, this.limit, this.keyword);
+      = new VideosDataSource(this.remote, this.localize, this.category, this.limit, this.keyword);
 
     // This code loads the IFrame Player API code asynchronously, according to the instructions at
     // https://developers.google.com/youtube/iframe_api_reference#Getting_Started
