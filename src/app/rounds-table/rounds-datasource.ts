@@ -55,14 +55,13 @@ export class RoundsDataSource extends MatTableDataSource<RoundInfo> {
     this.filterPredicate = (data: RoundInfo, filters: string): boolean => {
       const matchFilter = [];
       const filterArray = filters.split('&');
-      const columns = [
-        data.round,
-        data.date,
-        data.hla,
-        data.holes,
-        data.ssa,
-        data.category,
-      ];
+      const columns: string[] = [data.round, data.date];
+      if (data.ssa) {
+        columns.push(data.ssa.toString());
+      }
+      if (data.category) {
+        columns.push(data.category);
+      }
       if (data.locationTitle) {
         columns.push(data.locationTitle);
         columns.push(this.localize.transform(data.locationTitle));
@@ -74,12 +73,8 @@ export class RoundsDataSource extends MatTableDataSource<RoundInfo> {
 
       filterArray.forEach(filter => {
         const customFilter = [];
-        columns.forEach(column => {
-          if (column != null) {
-            const scolumn = typeof column === 'number' ? column.toString() : column;
-            customFilter.push(scolumn.toLowerCase().includes(filter));
-          }
-        });
+        columns.forEach(column =>
+          customFilter.push(column.toLowerCase().includes(filter)));
         matchFilter.push(customFilter.some(Boolean)); // OR
       });
       return matchFilter.every(Boolean); // AND
