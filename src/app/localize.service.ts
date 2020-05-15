@@ -17,6 +17,7 @@ const DICTIONARIES = [
   MENU,
   PREFECTURE,
 ];
+export type LocalizationCategory = 'event' | 'location' | 'menu' | 'prefecture';
 
 interface EventParts {
   count: number;
@@ -44,12 +45,12 @@ export class LocalizeService {
     prepareLocals();
   }
 
-  transform(value?: string): string {
+  transform(value?: string, lc?: LocalizationCategory): string {
     if (!value || this.isGlobal) {
       return value;
     }
     let result = value;
-    for (const dict of DICTIONARIES) {
+    for (const dict of getDictionaries(lc)) {
       const local = dict[name2key(value)];
       if (local) {
         result = local;
@@ -73,6 +74,21 @@ export class LocalizeService {
 
   toggleLanguage() {
     this.language = this.isGlobal ? LOCAL : GLOBAL;
+  }
+}
+
+function getDictionaries(lc?: LocalizationCategory) {
+  switch (lc) {
+    case 'event':
+      return [EVENT];
+    case 'location':
+      return [LOCATION];
+    case 'menu':
+      return [MENU];
+    case 'prefecture':
+      return [PREFECTURE];
+    default:
+      return DICTIONARIES;
   }
 }
 

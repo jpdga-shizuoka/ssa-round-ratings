@@ -64,11 +64,11 @@ export class RoundsDataSource extends MatTableDataSource<RoundInfo> {
       }
       if (data.locationTitle) {
         columns.push(data.locationTitle);
-        columns.push(this.localize.transform(data.locationTitle));
+        columns.push(this.localize.transform(data.locationTitle, 'location'));
       }
       if (data.eventTitle) {
         columns.push(data.eventTitle);
-        columns.push(this.localize.transform(data.eventTitle));
+        columns.push(this.localize.transform(data.eventTitle, 'event'));
       }
 
       filterArray.forEach(filter => {

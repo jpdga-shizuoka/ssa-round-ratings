@@ -71,7 +71,7 @@ export class VideosDataSource extends MatTableDataSource<VideoInfo> {
         data.title,
         data.subttl,
         data.date.toDateString(),
-        this.localize.transform(data.title)
+        this.localize.transform(data.title, 'event')
       ];
       filterArray.forEach(filter => {
         const customFilter = [];

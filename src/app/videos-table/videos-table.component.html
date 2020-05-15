@@ -20,7 +20,7 @@
 
     <ng-container matColumnDef="title">
       <th mat-header-cell *matHeaderCellDef>Event</th>
-      <td mat-cell *matCellDef="let row">{{row.title | localize}}</td>
+      <td mat-cell *matCellDef="let row">{{row.title | localize:'event'}}</td>
     </ng-container>
 
     <ng-container matColumnDef="subttl">
@@ -31,7 +31,7 @@
     <ng-container matColumnDef="more">
       <td mat-footer-cell *matFooterCellDef colspan="3">
         <p class="more">
-          <a mat-list-item routerLink="/past/video">{{'More' | localize}}...</a>
+          <a mat-list-item routerLink="/past/video">{{'More' | localize:'menu'}}...</a>
         </p>
       </td>
     </ng-container>

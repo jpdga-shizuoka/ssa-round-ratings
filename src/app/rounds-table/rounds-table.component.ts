@@ -55,7 +55,7 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     if (this.markerSelected$) {
       this.ssMarker = this.markerSelected$.subscribe({
         next: marker => {
-          const locationName = this.localize.transform(marker.location);
+          const locationName = this.localize.transform(marker.location, 'location');
           this.applyFilter(locationName);
         }
       });
