@@ -49,8 +49,6 @@ export class AppComponent implements OnInit, OnDestroy, MetaDescription {
   }
 
   ngOnInit() {
-    const language = window.navigator.language.split('-')[0];
-    this.localize.language = language === 'ja' ? LOCAL : GLOBAL;
     this.ssMeta = subscribeMetaDescription(this);
   }
 

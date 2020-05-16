@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 import { environment } from '../environments/environment';
 import EVENT from '../assets/local/event-aliase-dictionary.json';
@@ -41,7 +42,15 @@ export class LocalizeService {
     return this.language === GLOBAL;
   }
 
-  constructor() {
+  constructor(@Inject(DOCUMENT) document: any) {
+    const language = window.navigator.language.split('-')[0];
+    if (language === environment.language) {
+      document.documentElement.lang = environment.language;
+      this.language = LOCAL;
+    } else {
+      document.documentElement.lang = 'en';
+      this.language = GLOBAL;
+    }
     prepareLocals();
   }
 
