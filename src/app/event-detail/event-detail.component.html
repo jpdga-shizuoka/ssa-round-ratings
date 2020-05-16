@@ -1,38 +1,34 @@
 <table class='event-detail'>
   <tbody>
     <tr *ngIf="showMonthly$ | async">
-      <td>Month:</td>
+      <td>{{'Month' | localize}}:</td>
       <td>{{event.schedule | schedule:'month'}}</td>
     </tr>
     <tr>
-      <td>Location:</td>
-      <td class="flex-container">
-        <div>
-          <a href="{{location?.geolocation | geolink}}" target="_blank" rel="noopener">
-            <mat-icon>room</mat-icon>
-            {{location?.title | localize}}, {{location?.prefecture | localize}}
-            <mat-icon>launch</mat-icon>
-          </a>
-        </div>
+      <td>{{'Location' | localize}}:</td>
+      <td class="info-container">
+        <a href="{{location?.geolocation | geolink}}" target="_blank" rel="noopener">
+          {{location?.title | localize}}, {{location?.prefecture | localize}}
+        </a>
       </td>
     </tr>
 
     <tr *ngIf="showPastRounds">
-      <td>{{'Past Results' | localize}}:</td>
+      <td>{{'History' | localize}}:</td>
       <td>
         <a routerLink="/past" [queryParams]="{search: title}" class="detail-link">
-          <mat-icon>table_chart</mat-icon>{{'See the Past Results' | localize}}
+          {{'See the Past Results' | localize}}
         </a>
       </td>
     </tr>
 
     <tr>
-      <td>Info:</td>
+      <td>{{'Info' | localize}}:</td>
       <td>
-        <div class="flex-container">
+        <div class="info-container">
           <ng-template ngFor let-misc [ngForOf]="miscInfo">
             <a href="{{misc.url}}" class="detail-link" target="_blank" rel="noopener">
-              <mat-icon>{{misc.icon}}</mat-icon>{{misc.title}}
+              {{misc.title}}
             </a>
           </ng-template>
         </div>

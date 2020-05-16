@@ -1,55 +1,52 @@
 <table class='round-detail'>
   <tbody>
     <tr>
-      <td>Date:</td>
-      <td><mat-icon>calendar_today</mat-icon>{{round.date}}</td>
+      <td>{{'Date' | localize}}:</td>
+      <td>{{round.date | period}}</td>
     </tr>
     <tr>
-      <td>Location:</td>
+      <td>{{'Location' | localize}}:</td>
       <td>
         <a href="{{location?.geolocation | geolink}}" target="_blank" rel="noopener">
-          <mat-icon>room</mat-icon>
-          {{location?.title | localize}}, {{location?.prefecture | localize}}
-          <mat-icon>launch</mat-icon>
+          {{location?.title | localize}},{{location?.prefecture | localize}}
         </a>
       </td>
     </tr>
     <tr *ngIf="totalPlayers">
-      <td>Players:</td>
-      <td><mat-icon>emoji_people</mat-icon>{{totalPlayers}}</td>
+      <td>{{'Players' | localize}}:</td>
+      <td>{{totalPlayers}}</td>
     </tr>
     <tr>
-      <td>Round:</td>
-      <td><mat-icon>golf_course</mat-icon>{{roundStatus}}</td>
-    </tr>
-    <tr *ngIf="round.ssa">
-      <td>SSA Range:</td>
-      <td><mat-icon>format_list_numbered_rtl</mat-icon>{{src}}</td>
+      <td>{{'Round' | localize}}:</td>
+      <td>{{roundStatus}}</td>
     </tr>
     <tr *ngIf="showHistory">
-      <td>History:</td>
+      <td>{{'History' | localize}}:</td>
       <td>
-        <!-- <a class="history-link" (click)="onHistory()"> -->
-        <a routerLink="/past" [queryParams]="{search: title}" class="history-link">
-          <mat-icon>table_chart</mat-icon>{{'See the Past Results' | localize}}
+        <a routerLink="/past" [queryParams]="{search: title}">
+          {{'See the Past Results' | localize}}
         </a>
       </td>
     </tr>
     <tr>
-      <td>Info:</td>
+      <td>{{'Info' | localize}}:</td>
       <td>
-        <div class="flex-container">
+        <div class="info-container">
           <ng-template ngFor let-misc [ngForOf]="miscInfo">
             <a href="{{misc.url}}" class="detail-link" target="_blank" rel="noopener">
-              <mat-icon>{{misc.icon}}</mat-icon>{{misc.title}}
+              {{misc.title}}
             </a>
           </ng-template>
         </div>
       </td>
     </tr>
     <tr *ngIf="round.ssa">
-      <td>Equation:</td>
-      <td><mat-icon>trending_up</mat-icon>{{equation}}</td>
+      <td>SSA:</td>
+      <td>{{round.ssa|number:'1.1-1'}}, Category {{round.category}}</td>
+    </tr>
+    <tr *ngIf="round.ssa">
+      <td>{{'Equation' | localize}}:</td>
+      <td>{{equation}}</td>
     </tr>
     <tr *ngIf="round.ssa">
       <td></td>

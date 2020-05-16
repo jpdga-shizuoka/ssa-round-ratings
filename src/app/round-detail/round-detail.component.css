@@ -7,11 +7,6 @@
   font-weight: bold;
   min-width: 6rem;
 }
-.history-link {
-  color: -webkit-link;
-  text-decoration: underline;
-  cursor: pointer;
-}
 .detail-link {
   margin-bottom: 7px;
 }
@@ -25,6 +20,9 @@
   width: 16px;
   margin: 0 5px;
 }
+.info-container > a:not(:last-child) {
+  margin-right: 10px;
+}
 @media (max-width: 414px) {
   .round-detail {
     font-size: small;
@@ -37,11 +35,4 @@
   .round-detail td:first-child {
     min-width: 5rem;
   }
-}
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-.flex-container>* {
-  flex: auto;
 }

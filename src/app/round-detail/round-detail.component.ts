@@ -49,26 +49,6 @@ export class RoundDetailComponent implements OnInit {
     return 0;
   }
 
-  get src() {
-    const ssa = this.round.ssa;
-    if (!ssa) {
-      return '';
-    }
-    if (ssa < 48) {
-      return 'Category A (under 48)';
-    }
-    if (ssa < 54) {
-      return 'Category 2A (48-53.9)';
-    }
-    if (ssa < 60) {
-      return 'Category 3A (54-59.9)';
-    }
-    if (ssa < 66) {
-      return 'Category 4A (60-65.9)';
-    }
-    return 'Category 5A (over 66)';
-  }
-
   get equation(): string | undefined {
     if (!this.round.weight || !this.round.offset) {
       return undefined;
@@ -95,7 +75,7 @@ export class RoundDetailComponent implements OnInit {
     if (event.pdga && event.pdga.eventId) {
       info.push({
         icon: 'public',
-        title: 'Results 🇺🇸',
+        title: '🇺🇸Results',
         url: getPdgaResult(event.pdga.eventId)
       });
     }
@@ -103,19 +83,19 @@ export class RoundDetailComponent implements OnInit {
       if (event.jpdga.eventId) {
         info.push({
           icon: 'public',
-          title: 'Results 🇯🇵',
+          title: '🇯🇵Results',
           url: getJpdgaResult(event.jpdga.eventId)
         });
         info.push({
           icon: 'public',
-          title: 'Papers 🇯🇵',
+          title: '🇯🇵Papers',
           url: getJpdgaInfo(event.jpdga.eventId)
         });
       }
       if (event.jpdga.topicId) {
         info.push({
           icon: 'public',
-          title: 'Report 🇯🇵',
+          title: '🇯🇵Report',
           url: getJpdgaReport(event.jpdga.topicId)
         });
       }

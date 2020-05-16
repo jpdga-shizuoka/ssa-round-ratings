@@ -58,7 +58,7 @@ export class EventDetailComponent implements OnInit, OnDestroy {
       if (this.event.pdga.eventId) {
         info.push({
           icon: 'public',
-          title: 'PDGA 🇺🇸',
+          title: '🇺🇸PDGA',
           url: getPdgaResult(this.event.pdga.eventId)
         });
       }
@@ -67,7 +67,7 @@ export class EventDetailComponent implements OnInit, OnDestroy {
       if (this.event.jpdga.eventId) {
         info.push({
           icon: 'public',
-          title: 'JPDGA 🇯🇵',
+          title: '🇯🇵JPDGA',
           url: getJpdgaInfo(this.event.jpdga.eventId)
         });
       }
