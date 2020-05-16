@@ -48,7 +48,7 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     this.subscription?.unsubscribe();
   }
 
-  get loading() {return this.dataSource.loading;}
+  get loading() { return this.dataSource.loading; }
   get isMinimum(): boolean {
     return this.showMore && this.limit <= this.pageSizeOptions[0];
   }

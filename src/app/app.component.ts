@@ -27,14 +27,14 @@ export class AppComponent implements OnInit, OnDestroy, MetaDescription {
   isHandset$: Observable<boolean>;
   subtitle$ = new BehaviorSubject<string>('');
   private ssMeta: Subscription;
-  get subtitle() {return this.localize.transform(this.subtitle$.value);}
-  get home() {return this.localize.transform('Home');}
-  get schedule() {return this.localize.transform('Schedule');}
-  get results() {return this.localize.transform('Results');}
-  get localEvents() {return this.localize.transform('Local Events');}
-  get monthlyEvents() {return this.localize.transform('Monthly Events');}
-  get stats() {return this.localize.transform('Stats');}
-  get aboutThisSite() {return this.localize.transform('About this site');}
+  get subtitle() { return this.localize.transform(this.subtitle$.value); }
+  get home() { return this.localize.transform('Home'); }
+  get schedule() { return this.localize.transform('Schedule'); }
+  get results() { return this.localize.transform('Results'); }
+  get localEvents() { return this.localize.transform('Local Events'); }
+  get monthlyEvents() { return this.localize.transform('Monthly Events'); }
+  get stats() { return this.localize.transform('Stats'); }
+  get aboutThisSite() { return this.localize.transform('About this site'); }
 
   constructor(
     private localize: LocalizeService,

@@ -52,7 +52,7 @@ export class VideosTableComponent implements AfterViewInit, OnInit {
     this.isHandset$ = isHandset(breakpointObserver);
   }
 
-  get loading() {return this.dataSource.loading;}
+  get loading() { return this.dataSource.loading; }
   get isMinimum(): boolean {
     return this.showMore && this.limit <= this.pageSizeOptions[0];
   }

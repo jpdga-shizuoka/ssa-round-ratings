@@ -9,7 +9,7 @@ export class LocalizePipe implements PipeTransform {
   constructor(private readonly localize: LocalizeService) { }
 
   transform(value?: string, lc?: LocalizationCategory): string|undefined {
-    if (!value) {return undefined;}
+    if (!value) { return undefined; }
     return this.localize.transform(value, lc);
   }
 }

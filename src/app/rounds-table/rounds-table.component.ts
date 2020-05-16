@@ -98,8 +98,8 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     this.search = filterValue;
   }
 
-  get loading() {return this.dataSource.loading;}
-  get isMinimum() {return this.limit <= this.pageSizeOptions[0];}
+  get loading() { return this.dataSource.loading; }
+  get isMinimum() { return this.limit <= this.pageSizeOptions[0]; }
   get showHistory() {
     if (!this.expandedElement) {
       return false;
