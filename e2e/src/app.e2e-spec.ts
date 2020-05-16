@@ -15,7 +15,7 @@ describe('workspace-project App', () => {
 
   it('should display the toolbar title', () => {
     page.navigateTo();
-    expect(page.getToolbarTitleText()).toEqual('DG Japan');
+    expect(page.getToolbarTitleText()).toEqual('');
   });
 
   it('should display the footer title', () => {

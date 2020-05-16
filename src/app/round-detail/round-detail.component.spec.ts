@@ -13,6 +13,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { RoundDetailComponent } from './round-detail.component';
 import { GeolinkPipe } from '../geolink.pipe';
 import { LocalizePipe } from '../localize.pipe';
+import { PeriodPipe } from '../period.pipe';
 
 describe('RoundDetailComponent', () => {
   let component: RoundDetailComponent;
@@ -25,6 +26,7 @@ describe('RoundDetailComponent', () => {
         RoundDetailComponent,
         GeolinkPipe,
         LocalizePipe,
+        PeriodPipe,
       ],
       imports: [
         NoopAnimationsModule,
@@ -47,6 +49,8 @@ describe('RoundDetailComponent', () => {
       id: 'the18thchubuopen.rd1rd2rd3',
       event: 'the18thchubuopen',
       round: 'Rd1,Rd2,Rd3',
+      eventTitle: 'The 18th Chubu Open',
+      locationTitle: 'Mikawa Rinkai Ryokuchi',
       date: '2018-12-15',
       hla: 97,
       holes: 18,
