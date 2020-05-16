@@ -6,6 +6,7 @@ export interface Environment {
   production: boolean;
   projectPathName: string;
   title: string;
+  language?: string;  // default local language
   localize?: {
     aliase2title?: string[];
   };
@@ -30,6 +31,7 @@ export const environment = {
     },
     zoom: 5,
   },
+  language: 'ja',
   localize: {
     aliase2title: [
       'a', 'b',
