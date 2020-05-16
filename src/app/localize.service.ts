@@ -93,7 +93,7 @@ function getDictionaries(lc?: LocalizationCategory) {
 }
 
 function prepareLocals() {
-  Object.keys(environment?.localize)
+  Object.keys(environment.localize)
     .forEach(name => LOCALIZE_TABLE[name]
       = new Function(...environment.localize[name]));
 }
