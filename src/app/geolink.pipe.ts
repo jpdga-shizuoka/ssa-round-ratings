@@ -5,11 +5,11 @@ import { GeoPosition } from './models';
   name: 'geolink'
 })
 export class GeolinkPipe implements PipeTransform {
-  transform(value: GeoPosition): string {
-    if (!value) {
+  transform(ll: GeoPosition): string {
+    if (!ll) {
       return '';
     }
-    return getUrlForGeolocation() + `${location[0]},${location[1]}`;
+    return getUrlForGeolocation() + ll[0] + ',' + ll[1];
   }
 }
 
