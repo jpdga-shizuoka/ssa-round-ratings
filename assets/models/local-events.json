@@ -1,0 +1,371 @@
+[
+  {
+    "category": "local",
+    "title": "The Aichi Open Disc Golf Series",
+    "location": "mikawarinkairyokuchi",
+    "period": {
+      "from": "2021-03-07",
+      "to": "2021-03-07"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association 🇯🇵",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendiscgolfseries"
+  },
+  {
+    "category": "local",
+    "title": "The New Year Disc Golf Tournament",
+    "location": "shiminshikinomori",
+    "period": {
+      "from": "2021-01-10",
+      "to": "2021-01-10"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association 🇯🇵",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "thenewyeardiscgolftournament"
+  },
+  {
+    "category": "local",
+    "title": "The Aichi Open Disc Golf Series",
+    "location": "kasaharagreenheights",
+    "period": {
+      "from": "2020-11-29",
+      "to": "2020-11-29"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association 🇯🇵",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendiscgolfseries"
+  },
+  {
+    "category": "local",
+    "title": "The Aichi Open Disc Golf Series",
+    "location": "shinshiropark",
+    "period": {
+      "from": "2020-10-04",
+      "to": "2020-10-04"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association 🇯🇵",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendiscgolfseries"
+  },
+  {
+    "category": "local",
+    "title": "The 18th Minami Aizu Open",
+    "location": "okawafurusatopark",
+    "period": {
+      "from": "2020-08-30",
+      "to": "2020-08-30"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Facebook 🇯🇵",
+        "url": "https://www.facebook.com/aizuop/"
+      },
+      {
+        "type": "website",
+        "title": "Facebook Event 🇯🇵",
+        "url": "https://www.facebook.com/events/624679641650201/"
+      }
+    ],
+    "id": "the18thminamiaizuopen"
+  },
+  {
+    "category": "local",
+    "title": "The Aichi Open Doubles Tournament",
+    "location": "shinshiropark",
+    "period": {
+      "from": "2020-08-02",
+      "to": "2020-08-02"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association 🇯🇵",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendoublestournament"
+  },
+  {
+    "category": "local",
+    "title": "The Aichi Open Disc Golf Series",
+    "location": "shiminshikinomori",
+    "period": {
+      "from": "2020-07-05",
+      "to": "2020-07-05"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association 🇯🇵",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendiscgolfseries"
+  },
+  {
+    "category": "local",
+    "title": "The Aichi Open Disc Golf Series",
+    "location": "shiminshikinomori",
+    "status": "CANCELED",
+    "period": {
+      "from": "2020-05-24",
+      "to": "2020-05-24"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association 🇯🇵",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendiscgolfseries"
+  },
+  {
+    "category": "local",
+    "title": "The Aichi Open Disc Golf Series",
+    "location": "mikawarinkairyokuchi",
+    "status": "CANCELED",
+    "period": {
+      "from": "2020-04-12",
+      "to": "2020-04-12"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association 🇯🇵",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendiscgolfseries"
+  },
+  {
+    "category": "local",
+    "title": "The World Cup",
+    "location": "uminonakamichiseasidepark",
+    "period": {
+      "from": "2020-03-29",
+      "to": "2020-03-29"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Fukuoka Disc Golf Association 🇯🇵",
+        "url": "http://www.jpdgafukuoka.com"
+      }
+    ],
+    "id": "theworldcup"
+  },
+  {
+    "category": "local",
+    "title": "The Special Cup",
+    "location": "uminonakamichiseasidepark",
+    "period": {
+      "from": "2020-03-21",
+      "to": "2020-03-21"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Fukuoka Disc Golf Association 🇯🇵",
+        "url": "http://www.jpdgafukuoka.com"
+      }
+    ],
+    "id": "thespecialcup"
+  },
+  {
+    "category": "local",
+    "title": "The Special Cup",
+    "location": "uminonakamichiseasidepark",
+    "period": {
+      "from": "2020-03-08",
+      "to": "2020-03-08"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Fukuoka Disc Golf Association 🇯🇵",
+        "url": "http://www.jpdgafukuoka.com"
+      }
+    ],
+    "id": "thespecialcup"
+  },
+  {
+    "category": "local",
+    "title": "The Spring Cup",
+    "location": "uminonakamichiseasidepark",
+    "period": {
+      "from": "2020-03-01",
+      "to": "2020-03-01"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Fukuoka Disc Golf Association 🇯🇵",
+        "url": "http://www.jpdgafukuoka.com"
+      }
+    ],
+    "id": "thespringcup"
+  },
+  {
+    "category": "local",
+    "title": "The Special Cup",
+    "location": "uminonakamichiseasidepark",
+    "period": {
+      "from": "2020-02-24",
+      "to": "2020-02-24"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Fukuoka Disc Golf Association 🇯🇵",
+        "url": "http://www.jpdgafukuoka.com"
+      }
+    ],
+    "id": "thespecialcup"
+  },
+  {
+    "category": "local",
+    "title": "The Special Cup",
+    "location": "uminonakamichiseasidepark",
+    "period": {
+      "from": "2020-02-09",
+      "to": "2020-02-09"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Fukuoka Disc Golf Association 🇯🇵",
+        "url": "http://www.jpdgafukuoka.com"
+      }
+    ],
+    "id": "thespecialcup"
+  },
+  {
+    "category": "local",
+    "title": "The Winter Cup",
+    "location": "uminonakamichiseasidepark",
+    "period": {
+      "from": "2020-02-02",
+      "to": "2020-02-02"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Fukuoka Disc Golf Association 🇯🇵",
+        "url": "http://www.jpdgafukuoka.com"
+      }
+    ],
+    "id": "thewintercup"
+  },
+  {
+    "category": "local",
+    "title": "The 8th Ikeda Town Disc Golf Tournament",
+    "location": "ikedatowngeneralgymnasium",
+    "period": {
+      "from": "2020-01-26",
+      "to": "2020-01-26"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Facebook 🇯🇵",
+        "url": "https://www.facebook.com/gifuflyingdiscassociation/"
+      }
+    ],
+    "id": "the8thikedatowndiscgolftournament"
+  },
+  {
+    "category": "local",
+    "title": "The Special Cup",
+    "location": "uminonakamichiseasidepark",
+    "period": {
+      "from": "2020-01-18",
+      "to": "2020-01-18"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Fukuoka Disc Golf Association 🇯🇵",
+        "url": "http://www.jpdgafukuoka.com"
+      }
+    ],
+    "id": "thespecialcup"
+  },
+  {
+    "category": "local",
+    "title": "The 2020 New Year Tournament",
+    "location": "shiminshikinomori",
+    "period": {
+      "from": "2020-01-12",
+      "to": "2020-01-12"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association 🇯🇵",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "the2020newyeartournament"
+  },
+  {
+    "category": "local",
+    "title": "The 2020 Club Jr. Cup",
+    "location": "hitachiseasidepark",
+    "period": {
+      "from": "2020-01-11",
+      "to": "2020-01-11"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Club Jr. Website 🇯🇵",
+        "url": "http://www.clubjr.com/eventschedule.html"
+      }
+    ],
+    "id": "the2020clubjrcup"
+  },
+  {
+    "category": "local",
+    "title": "The 2019 Iwate Disc Golf Tournament",
+    "location": "hanamakikoikipark",
+    "period": {
+      "from": "2019-11-24",
+      "to": "2019-11-24"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Facebook 🇯🇵",
+        "url": "https://www.facebook.com/pg/大堤Disc-Golfers-1848600115381290/"
+      },
+      {
+        "type": "website",
+        "title": "Iwate, JPDGA 🇯🇵",
+        "url": "http://jpdgaiwate.com"
+      }
+    ],
+    "id": "the2019iwatediscgolftournament"
+  }
+]
