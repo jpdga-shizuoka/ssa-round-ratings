@@ -7,9 +7,9 @@
   font-size: 1.4em;
 }
 .video-view mat-icon {
-  font-size: 32px;
-  height: 32px;
-  width: 32px;
+  font-size: 20px;
+  height: 20px;
+  width: 20px;
   margin: 0 5px;
 }
 .yt-view {
@@ -25,6 +25,9 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+.fb-view span {
+  display: flex;
 }
 h1, h2, h3 {
   display: block;
