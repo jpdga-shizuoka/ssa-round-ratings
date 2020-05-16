@@ -1,5 +1,4 @@
-import { Component, Input, OnInit, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Component, Input, OnInit } from '@angular/core';
 import { ICONS, MiscInfo } from '../app-common';
 import {
   BreakpointObserver, Observable, isHandset, of as observableOf
@@ -12,9 +11,8 @@ import { getEventTitle, getPdgaResult, getJpdgaInfo } from '../app-libs';
   templateUrl: './event-detail.component.html',
   styleUrls: ['./event-detail.component.css']
 })
-export class EventDetailComponent implements OnInit, OnDestroy {
+export class EventDetailComponent implements OnInit {
   @Input() event: EventInfo;
-  private ssLocation: Subscription;
   location: LocationInfo;
   miscInfo: MiscInfo[];
   isHandset$: Observable<boolean>;
@@ -27,13 +25,9 @@ export class EventDetailComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.ssLocation = this.remote.getLocation(this.event.location)
+    this.remote.getLocation(this.event.location)
       .subscribe(location => this.location = location);
     this.makeMiscInfo();
-  }
-
-  ngOnDestroy() {
-    this.ssLocation?.unsubscribe();
   }
 
   get title(): string {
