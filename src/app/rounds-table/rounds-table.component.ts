@@ -47,11 +47,12 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   ) { }
 
   ngOnInit() {
+    this.dataSource = new RoundsDataSource(this.remote, this.localize, this.limit);
+
     if (this.route.snapshot.queryParamMap.has('search')) {
       const filter = this.route.snapshot.queryParamMap.get('search');
       this.updateSearch(filter);
     }
-
     if (this.markerSelected$) {
       this.ssMarker = this.markerSelected$.subscribe({
         next: marker => {
@@ -60,11 +61,8 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
         }
       });
     }
-
     this.ssQuery = this.route.queryParams
       .subscribe(query => this.updateSearch(query.search));
-
-    this.dataSource = new RoundsDataSource(this.remote, this.localize, this.limit);
   }
 
   ngAfterViewInit() {
