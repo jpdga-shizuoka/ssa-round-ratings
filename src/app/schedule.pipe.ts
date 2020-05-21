@@ -36,9 +36,15 @@ export class SchedulePipe implements PipeTransform {
   }
 
   private monthlyDay(schedule: Schedule): string {
-    return this.localize.isGlobal
-    ? `${NUMBER_OF_WEEK[0][schedule.bySetPos]} ${DAYS_OF_WEEK[0][schedule.byDay[0]]}`
-    : `${NUMBER_OF_WEEK[1][schedule.bySetPos]}${DAYS_OF_WEEK[1][schedule.byDay[0]]}`;
+    if (schedule.bySetPos) {
+      return this.localize.isGlobal
+      ? `${NUMBER_OF_WEEK[0][schedule.bySetPos]} ${DAYS_OF_WEEK[0][schedule.byDay[0]]}`
+      : `${NUMBER_OF_WEEK[1][schedule.bySetPos]}${DAYS_OF_WEEK[1][schedule.byDay[0]]}`;
+    } else {
+      return this.localize.isGlobal
+      ? `${DAYS_OF_WEEK[0][schedule.byDay[0]]}`
+      : `${DAYS_OF_WEEK[1][schedule.byDay[0]]}`;            
+    }
   }
 
   private month(schedule: Schedule): string {
