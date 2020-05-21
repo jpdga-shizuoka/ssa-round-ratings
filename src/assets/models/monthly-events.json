@@ -343,5 +343,22 @@
       }
     ],
     "id": "monthlymichinokupark"
+  },
+  {
+    "category": "monthly",
+    "location": "suzukaseishonennomori",
+    "schedule": {
+      "byDay": [
+        "su"
+      ]
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Japan Disc Golf Association MIE",
+        "url": "http://jpdgamie.org"
+      }
+    ],
+    "id": "monthlysuzukaseishonennomori"
   }
 ]
