@@ -324,6 +324,14 @@
     "title": "Shinshiro Park"
   },
   {
+    "prefecture": "Mie",
+    "geolocation": [
+      34.852223, 136.540640
+    ],
+    "id": "suzukaseishonennomori",
+    "title": "Suzuka Seishonen-no-mori"
+  },
+  {
     "prefecture": "Kyoto",
     "geolocation": [
       35.166536,
