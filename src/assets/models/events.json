@@ -228,18 +228,6 @@
     "id": "the24thkantoopen"
   },
   {
-    "title": "The 20th Niigata Open",
-    "location": "echigohillsidepark",
-    "period": {
-      "from": "2020-07-19",
-      "to": "2020-07-19"
-    },
-    "jpdga": {
-      "eventId": "540"
-    },
-    "id": "the20thniigataopen"
-  },
-  {
     "title": "The 9th Hokkaido Open",
     "location": "hunkawanpanolamapark",
     "period": {
@@ -262,6 +250,7 @@
       "from": "2020-06-27",
       "to": "2020-06-28"
     },
+    "status": "CANCELED",
     "pdga": {
       "eventId": "45281"
     },
@@ -277,6 +266,7 @@
       "from": "2020-06-27",
       "to": "2020-06-28"
     },
+    "status": "CANCELED",
     "jpdga": {
       "eventId": "534"
     },
