@@ -69,6 +69,23 @@
   },
   {
     "category": "local",
+    "title": "The 2020 Kibougaoka Disc Golf Tournament",
+    "location": "kibougaokaculturalpark",
+    "period": {
+      "from": "2020-09-27",
+      "to": "2020-09-27"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "希望が丘文化公園 🇯🇵",
+        "url": "https://www.kiboupark-shiga.or.jp/event/36850.html"
+      }
+    ],
+    "id": "the2020kibougaokadiscgolftournament"
+  },
+  {
+    "category": "local",
     "title": "The 18th Minami Aizu Open",
     "location": "okawafurusatopark",
     "period": {

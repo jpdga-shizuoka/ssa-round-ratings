@@ -72,6 +72,15 @@
     "title": "Echigo Hillside Park"
   },
   {
+    "prefecture": "Shiga",
+    "geolocation": [
+      35.046664,
+      136.082685
+    ],
+    "id": "kibougaokaculturalpark",
+    "title": "Kibougaoka Cultural Park"
+  },
+  {
     "prefecture": "Kyoto",
     "geolocation": [
       35.137323,
