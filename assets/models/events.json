@@ -31,6 +31,22 @@
     "id": "the2021japanopen"
   },
   {
+    "title": "The 2021 Japan Open",
+    "location": "seasidenaturepark",
+    "period": {
+      "from": "2021-05-15",
+      "to": "2021-05-16"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "http://japanopen.info"
+      }
+    ],
+    "id": "the2021japanopenlocal"
+  },
+  {
     "title": "The 20th Chubu Open",
     "location": "mikawarinkairyokuchi",
     "period": {
