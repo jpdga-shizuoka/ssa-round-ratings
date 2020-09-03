@@ -24,6 +24,11 @@
       },
       {
         "type": "video",
+        "title": "World Masters Games 2021 Kansai",
+        "url": "https://youtu.be/idqLqIEHGJ0"
+      },
+      {
+        "type": "video",
         "title": "Fukui Country Club",
         "url": "https://youtu.be/G69pnd2qsZQ"
       }
@@ -129,6 +134,7 @@
       "from": "2020-10-17",
       "to": "2020-10-18"
     },
+    "status": "CANCELED",
     "pdga": {
       "eventId": "45280"
     },
