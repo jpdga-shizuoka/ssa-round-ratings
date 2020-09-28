@@ -270,6 +270,12 @@
     "title": "Ikeda Town General Gymnasium"
   },
   {
+    "prefecture": "Gifu",
+    "geolocation": [35.420546, 137.128058],
+    "id": "mitakechonanzanpark",
+    "title": "Mitake-cho Nanzan Park"
+  },
+  {
     "prefecture": "Saga",
     "geolocation": [
       33.325602,
