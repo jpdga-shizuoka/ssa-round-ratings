@@ -248,6 +248,11 @@
     "jpdga": {
       "eventId": "545"
     },
+    "players": {
+      "pro": 54,
+      "ama": 8,
+      "misc": 0
+    },
     "urls": [
       {
         "type": "video",
@@ -274,6 +279,11 @@
     },
     "jpdga": {
       "eventId": "544"
+    },
+    "players": {
+      "pro": 28,
+      "ama": 15,
+      "misc": 0
     },
     "urls": [
       {
