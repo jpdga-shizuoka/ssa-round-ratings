@@ -52,6 +52,43 @@
     "id": "the2021japanopenlocal"
   },
   {
+    "title": "The 2021 National Doubles Championship",
+    "location": "hitachiseasidepark",
+    "period": {
+      "from": "2021-03-06",
+      "to": "2021-03-07"
+    },
+    "jpdga": {
+      "eventId": "555"
+    },
+    "id": "the2021nationaldoubleschampionship"
+  },
+  {
+    "title": "The 10th Okinawa Open",
+    "location": "nakijinsonsportpark",
+    "period": {
+      "from": "2021-02-20",
+      "to": "2021-02-21"
+    },
+    "jpdga": {
+      "eventId": "554"
+    },
+    "id": "the10thokinawaopen"
+  },
+  {
+    "title": "The 7th Kagoshima Open",
+    "location": "yoshinopark",
+    "period": {
+      "from": "2021-01-30",
+      "to": "2021-01-31"
+    },
+    "status": "CANCELED",
+    "jpdga": {
+      "eventId": "553"
+    },
+    "id": "the7thkagoshimaopen"
+  },
+  {
     "title": "The 20th Chubu Open",
     "location": "mikawarinkairyokuchi",
     "period": {
@@ -173,6 +210,18 @@
     "jpdga": {
       "eventId": "545"
     },
+    "urls": [
+      {
+        "type": "video",
+        "title": "MPO Semifinal9, Lead Card",
+        "url": "https://youtu.be/sh0K-uWEjfw"
+      },
+      {
+        "type": "video",
+        "title": "MPO Back9@Round#3, Lead Card",
+        "url": "https://youtu.be/ja-e7zKCWeo"
+      }
+    ],
     "id": "the32ndjapannationalchampionship"
   },
   {
@@ -193,6 +242,31 @@
         "type": "website",
         "title": "🇯🇵Official Site",
         "url": "https://www.facebook.com/kansaiopen.discgolf/"
+      },
+      {
+        "type": "video",
+        "title": "MPO Final9, Lead Card",
+        "url": "https://youtu.be/sMON_haPr5A"
+      },
+      {
+        "type": "video",
+        "title": "MPO Semifinal9, Lead Card",
+        "url": "https://youtu.be/rkNEJYPIX8s"
+      },
+      {
+        "type": "video",
+        "title": "MPO Back9@Round#3, Lead Card",
+        "url": "https://youtu.be/A8fE3jJdBG8"
+      },
+      {
+        "type": "video",
+        "title": "MPO Front9@Round#3, Lead Card",
+        "url": "https://youtu.be/uErY-KoGGS4"
+      },
+      {
+        "type": "video",
+        "title": "MPO Back9@Round#2, Lead Card",
+        "url": "https://youtu.be/6227GpMlgqo"
       }
     ],
     "id": "the23rdkansaiopen"
