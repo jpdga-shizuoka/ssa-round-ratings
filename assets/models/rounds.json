@@ -1,5 +1,45 @@
 [
   {
+    "event": "the32ndjapannationalchampionship",
+    "round": "Rd1Rd2Rd3",
+    "date": "2020-09-20",
+    "hla": 132,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 55,
+        "rating": 1031
+      },
+      "player2": {
+        "score": 74,
+        "rating": 877
+      }
+    },
+    "eventTitle": "The 32nd Japan National Championship",
+    "id": "the32ndjapannationalchampionship.rd1rd2rd3",
+    "locationTitle": "Maiko Disc Golf Park"
+  },
+  {
+    "event": "the23rdkansaiopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2020-09-06",
+    "hla": 109,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 55,
+        "rating": 1020
+      },
+      "player2": {
+        "score": 74,
+        "rating": 860
+      }
+    },
+    "eventTitle": "The 23rd Kansai Open",
+    "id": "the23rdkansaiopen.rd1rd2rd3",
+    "locationTitle": "Fumin-no-Mori Hiyoshi"
+  },
+  {
     "event": "the16thminamisomaopen",
     "date": "2020-05-03",
     "round": "CANCELED",
