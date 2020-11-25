@@ -19,7 +19,7 @@ export interface Environment {
 export const environment = {
   production: true,
   projectPathName: '/ssa-round-ratings',
-  MAP_API_KEY: 'AIzaSyDfyR-mHrebjYkaU5LCF1HxDO_XWN4IjzA',
+  MAP_API_KEY: 'AIzaSyAdTyqg908nbRCLCGIhmTu6IF0RLA3mJpg',
   map: {
     center: {
       lat: 36.306148,
