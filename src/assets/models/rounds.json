@@ -1,5 +1,14 @@
 [
   {
+    "event": "the16thkyotoclassic",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2020-11-21",
+    "holes": 18,
+    "eventTitle": "The 16th Kyoto Classic",
+    "id": "the16thkyotoclassic.rd1rd2rd3",
+    "locationTitle": "Kyoto Tamba Park"
+  },
+  {
     "event": "the32ndjapannationalchampionship",
     "round": "Rd1Rd2Rd3",
     "date": "2020-09-20",

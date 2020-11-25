@@ -127,6 +127,19 @@
     "id": "the7thkagoshimaopen"
   },
   {
+    "title": "The 2021 National Team Championship",
+    "location": "oyamaomoinomoripark",
+    "period": {
+      "from": "2021-01-10",
+      "to": "2021-01-11"
+    },
+    "status": "CANCELED",
+    "jpdga": {
+      "eventId": "552"
+    },
+    "id": "the2021nationalteamchampionship"
+  },
+  {
     "title": "The 20th Chubu Open",
     "location": "mikawarinkairyokuchi",
     "period": {
@@ -180,6 +193,11 @@
     },
     "jpdga": {
       "eventId": "549"
+    },
+    "players": {
+      "pro": 24,
+      "ama": 9,
+      "misc": 0
     },
     "id": "the16thkyotoclassic"
   },
@@ -2215,11 +2233,6 @@
       "photoId": "72157679184251340"
     },
     "urls": [
-      {
-        "type": "video",
-        "title": "Digest",
-        "url": "https://youtu.be/HNAjKZg2ZDY"
-      },
       {
         "type": "video",
         "title": "FPO Final9",
