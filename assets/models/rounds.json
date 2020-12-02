@@ -1,5 +1,15 @@
 [
   {
+    "event": "the34thkyushuopen",
+    "round": "Rd1,Rd2",
+    "date": "2020-11-28",
+    "hla": 97,
+    "holes": 27,
+    "eventTitle": "The 34th Kyushu Open",
+    "id": "the34thkyushuopen.rd1rd2",
+    "locationTitle": "Umino-Nakamichi Seaside Park"
+  },
+  {
     "event": "the16thkyotoclassic",
     "round": "Rd1,Rd2,Rd3",
     "date": "2020-11-21",

@@ -167,6 +167,11 @@
     "jpdga": {
       "eventId": "550"
     },
+    "players": {
+      "pro": 69,
+      "ama": 21,
+      "misc": 0
+    },
     "urls": [
       {
         "type": "website",
@@ -192,7 +197,8 @@
       "eventId": "45289"
     },
     "jpdga": {
-      "eventId": "549"
+      "eventId": "549",
+      "topicId": "1514"
     },
     "players": {
       "pro": 24,
