@@ -42,7 +42,12 @@
     </tr>
     <tr *ngIf="round.ssa">
       <td>SSA:</td>
-      <td>{{round.ssa|number:'1.1-1'}}, Category {{round.category}}</td>
+      <td>
+        {{round.ssa|number:'1.1-1'}}
+        <span *ngIf="round.holes != 18">
+          ({{round.ssa * round.holes / 18 | number:'1.1-1'}}@{{round.holes}})
+        </span>, Category {{round.category}}
+      </td>
     </tr>
     <tr *ngIf="round.ssa">
       <td>{{'Equation' | localize}}:</td>
