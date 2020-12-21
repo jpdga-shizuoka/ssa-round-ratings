@@ -1,5 +1,15 @@
 [
   {
+    "event": "the20thchubuopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2020-12-19",
+    "hla": 103,
+    "holes": 18,
+    "eventTitle": "The 20th Chubu Open",
+    "id": "the20thchubuopen.rd1rd2rd3",
+    "locationTitle": "Mikawa Rinkai Ryokuchi"
+  },
+  {
     "event": "the34thkyushuopen",
     "round": "Rd2",
     "date": "2020-11-29",
