@@ -152,6 +152,11 @@
     "jpdga": {
       "eventId": "551"
     },
+    "players": {
+      "pro": 47,
+      "ama": 18,
+      "misc": 0
+    },
     "urls": [
       {
         "type": "website",
@@ -285,6 +290,11 @@
       "misc": 0
     },
     "urls": [
+      {
+        "type": "video",
+        "title": "MPO Final9, Lead Card",
+        "url": "https://youtu.be/ozOzKB8pykE"
+      },
       {
         "type": "video",
         "title": "MPO Semifinal9, Lead Card",

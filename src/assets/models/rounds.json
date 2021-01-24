@@ -5,6 +5,16 @@
     "date": "2020-12-19",
     "hla": 103,
     "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 62,
+        "rating": 1015
+      },
+      "player2": {
+        "score": 83,
+        "rating": 870
+      }
+    },
     "eventTitle": "The 20th Chubu Open",
     "id": "the20thchubuopen.rd1rd2rd3",
     "locationTitle": "Mikawa Rinkai Ryokuchi"
