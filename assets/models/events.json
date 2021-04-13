@@ -35,60 +35,313 @@
     ],
     "id": "the2022japanopen"
   },
+
   {
-    "title": "The 2021 Japan Open",
-    "location": "fukuicountryclub",
+    "title": "The 21st Chubu Open",
+    "location": "mikawarinkairyokuchi",
     "period": {
-      "from": "2021-05-18",
-      "to": "2021-05-21"
+      "from": "2021-12-18",
+      "to": "2021-12-19"
     },
-    "status": "CANCELED",
+    "jpdga": {
+      "eventId": "581"
+    },
     "urls": [
       {
         "type": "website",
         "title": "🇯🇵Official Site",
-        "url": "https://www.jo-discgolf-fukui-sakai.jp"
+        "url": "https://aifda.or.jp/event"
+      }
+    ],
+    "id": "the21stchubuopen"
+  },
+  {
+    "title": "The 17th Kyoto Classic",
+    "location": "kyototambapark",
+    "period": {
+      "from": "2021-12-04",
+      "to": "2021-12-05"
+    },
+    "jpdga": {
+      "eventId": "579"
+    },
+    "id": "the17thkyotoclassic"
+  },
+  {
+    "title": "The 35th Kyushu Open",
+    "location": "uminonakamichiseasidepark",
+    "period": {
+      "from": "2021-11-27",
+      "to": "2021-11-28"
+    },
+    "jpdga": {
+      "eventId": "580"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "🇯🇵Official Site",
+        "url": "http://www.jpdgafukuoka.com/blog/?page_id=3478"
       },
       {
         "type": "website",
-        "title": "Official Site",
-        "url": "https://www.jo-discgolf-fukui-sakai.jp/en/"
-      },
-      {
-        "type": "video",
-        "title": "from Innova",
-        "url": "https://youtu.be/dPHDXwmx5tA"
-      },
-      {
-        "type": "video",
-        "title": "World Masters Games 2021 Kansai",
-        "url": "https://youtu.be/idqLqIEHGJ0"
-      },
-      {
-        "type": "video",
-        "title": "Fukui Country Club",
-        "url": "https://youtu.be/G69pnd2qsZQ"
+        "title": "🇯🇵Facebook",
+        "url": "https://www.facebook.com/discgolfkyushuopen/"
       }
     ],
-    "id": "the2021japanopen"
+    "id": "the35thkyushuopen"
   },
   {
-    "title": "The 2021 Japan Open",
+    "title": "The 33rd Showa Kinen Park Open",
+    "location": "showakinenpark",
+    "period": {
+      "from": "2021-10-30",
+      "to": "2021-10-31"
+    },
+    "jpdga": {
+      "eventId": "578"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "🇯🇵Official Site",
+        "url": "http://jpdga-tokyo.com/skpo/"
+      }
+    ],
+    "id": "the33rdshowakinenparkopen"
+  },
+  {
+    "title": "The 24th Kansai Open",
+    "location": "fuminnomorihiyoshi",
+    "period": {
+      "from": "2021-10-23",
+      "to": "2021-10-24"
+    },
+    "jpdga": {
+      "eventId": "577"
+    },
+    "id": "the24thkansaiopen"
+  },
+  {
+    "title": "The Amateur Japan National Championship",
+    "location": "fuminnomorihiyoshi",
+    "period": {
+      "from": "2021-10-23",
+      "to": "2021-10-24"
+    },
+    "jpdga": {
+      "eventId": "577"
+    },
+    "id": "theamateurjapannationalchampionship"
+  },
+  {
+    "title": "The 8th Fukui Open",
     "location": "seasidenaturepark",
+    "period": {
+      "from": "2021-10-16",
+      "to": "2021-10-17"
+    },
+    "jpdga": {
+      "eventId": "576"
+    },
+    "id": "the8thfukuiopen"
+  },
+  {
+    "title": "The 21st Tohoku Open",
+    "location": "mizubayashisportpark",
+    "period": {
+      "from": "2021-10-09",
+      "to": "2021-10-10"
+    },
+    "jpdga": {
+      "eventId": "575"
+    },
+    "id": "the21sttohokuopen"
+  },
+  {
+    "title": "The 33rd Japan National Championship",
+    "location": "maikodiscgolfpark",
+    "period": {
+      "from": "2021-09-19",
+      "to": "2021-09-20"
+    },
+    "jpdga": {
+      "eventId": "573"
+    },
+    "id": "the33rdjapannationalchampionship"
+  },
+  {
+    "title": "The 17th Minamisoma Open",
+    "location": "minamisomahoseridingpark",
+    "period": {
+      "from": "2021-09-18",
+      "to": "2021-09-19"
+    },
+    "jpdga": {
+      "eventId": "572"
+    },
+    "id": "the17thminamisomaopen"
+  },
+  {
+    "title": "The 16th Michinoku Open",
+    "location": "kitakamisportpark",
+    "period": {
+      "from": "2021-08-07",
+      "to": "2021-08-08"
+    },
+    "jpdga": {
+      "eventId": "569"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "🇯🇵Official Site",
+        "url": "http://jpdgaiwate.com"
+      }
+    ],
+    "id": "the15thmichinokuopen"
+  },
+  {
+    "title": "The 25th Kanto Open",
+    "location": "kiyoharakohgyodanchi",
+    "period": {
+      "from": "2021-07-23",
+      "to": "2021-07-25"
+    },
+    "jpdga": {
+      "eventId": "567"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "🇯🇵Official Site",
+        "url": "http://www.tochigiflyingdisc.com"
+      }
+    ],
+    "id": "the25thkantoopen"
+  },
+  {
+    "title": "The 10th Hokkaido Open",
+    "location": "hunkawanpanolamapark",
+    "period": {
+      "from": "2021-07-03",
+      "to": "2021-07-04"
+    },
+    "jpdga": {
+      "eventId": "564"
+    },
+    "id": "the10thhokkaidoopen"
+  },
+  {
+    "title": "The 16th Masters National Championship",
+    "location": "hikaritokazenookapark",
+    "period": {
+      "from": "2021-06-26",
+      "to": "2021-06-27"
+    },
+    "pdga": {
+      "eventId": "51377"
+    },
+    "jpdga": {
+      "eventId": "562"
+    },
+    "id": "the16thmastersnationalchampionship"
+  },
+  {
+    "title": "The 5th Miho Open",
+    "location": "hikaritokazenookapark",
+    "period": {
+      "from": "2021-06-26",
+      "to": "2021-06-27"
+    },
+    "jpdga": {
+      "eventId": "562"
+    },
+    "id": "the5thmihoopen"
+  },
+  {
+    "title": "The 23rd Nippon Open",
+    "location": "kibougaokaculturalpark",
+    "period": {
+      "from": "2021-06-12",
+      "to": "2021-06-13"
+    },
+    "pdga": {
+      "eventId": "50849"
+    },
+    "jpdga": {
+      "eventId": "561"
+    },
+    "id": "the23rdnipponopen"
+  },
+  {
+    "title": "The 16th Kiyosato-no-mori Open",
+    "location": "kiyosatonomori",
     "period": {
       "from": "2021-05-15",
       "to": "2021-05-16"
     },
-    "status": "CANCELED",
-    "urls": [
-      {
-        "type": "website",
-        "title": "Official Site",
-        "url": "http://japanopen.info"
-      }
-    ],
-    "id": "the2021japanopenlocal"
+    "pdga": {
+      "eventId": "51376"
+    },
+    "jpdga": {
+      "eventId": "560"
+    },
+    "id": "the16thkiyosatonomoriopen"
   },
+  {
+    "title": "The Woman of Showa Kinen 2021",
+    "location": "showakinenpark",
+    "period": {
+      "from": "2021-05-09",
+      "to": "2021-05-09"
+    },
+    "pdga": {
+      "eventId": "50786"
+    },
+    "id": "thewomanofshowakinen2021"
+  },
+  {
+    "title": "The 4th Gifu Hirugano Open",
+    "location": "hiruganokogen",
+    "period": {
+      "from": "2021-05-03",
+      "to": "2021-05-04"
+    },
+    "pdga": {
+      "eventId": "50980"
+    },
+    "jpdga": {
+      "eventId": "559"
+    },
+    "id": "the4thgifuhiruganoopen"
+  },
+  {
+    "title": "The 19th Saga Open",
+    "location": "yoshinogarihistoricalpark",
+    "period": {
+      "from": "2021-04-10",
+      "to": "2021-04-11"
+    },
+    "status": "CANCELED",
+    "jpdga": {
+      "eventId": "558"
+    },
+    "id": "the19thsagaopen"
+  },
+  {
+    "title": "The 2021 National Doubles Championship",
+    "location": "hitachiseasidepark",
+    "period": {
+      "from": "2021-03-06",
+      "to": "2021-03-07"
+    },
+    "jpdga": {
+      "eventId": "555"
+    },
+    "id": "the2021nationaldoubleschampionship"
+  },
+
   {
     "title": "The 2021 National Doubles Championship",
     "location": "hitachiseasidepark",
@@ -194,6 +447,16 @@
         "type": "website",
         "title": "🇯🇵Facebook",
         "url": "https://www.facebook.com/discgolfkyushuopen/"
+      },
+      {
+        "type": "video",
+        "title": "MPO Semifinal R#2",
+        "url": "https://youtu.be/UFrBgW9XgCY"
+      },
+      {
+        "type": "video",
+        "title": "MPO Semifinal R#3",
+        "url": "https://youtu.be/p7Hv7dae1pw"
       }
     ],
     "id": "the34thkyushuopen"
