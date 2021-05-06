@@ -1,5 +1,15 @@
 [
   {
+    "event": "the4thgifuhiruganoopen",
+    "round": "Rd1,Rd2,Rd3",
+    "date": "2021-05-03",
+    "hla": 96.5,
+    "holes": 18,
+    "eventTitle": "The 4th Gifu Hirugano Open",
+    "id": "the4thgifuhiruganoopen.rd1rd2rd3",
+    "locationTitle": "Hirugano Kogen"
+  },
+  {
     "event": "the20thchubuopen",
     "round": "Rd1,Rd2,Rd3",
     "date": "2020-12-19",

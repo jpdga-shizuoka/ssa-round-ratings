@@ -208,6 +208,7 @@
       "from": "2021-07-23",
       "to": "2021-07-25"
     },
+    "status": "CANCELED",
     "jpdga": {
       "eventId": "567"
     },
@@ -453,13 +454,33 @@
       },
       {
         "type": "video",
-        "title": "MPO Semifinal R#2",
+        "title": "MPO Semifinal R#1 Lead Card",
+        "url": "https://youtu.be/KCsb1Wd_mMU"
+      },
+      {
+        "type": "video",
+        "title": "MPO Semifinal R#2 Lead Card",
         "url": "https://youtu.be/UFrBgW9XgCY"
       },
       {
         "type": "video",
-        "title": "MPO Semifinal R#3",
+        "title": "MPO Semifinal R#3 Lead Card",
         "url": "https://youtu.be/p7Hv7dae1pw"
+      },
+      {
+        "type": "video",
+        "title": "MPO Final R#1 Lead Card",
+        "url": "https://youtu.be/9R56LbdjLE0"
+      },
+      {
+        "type": "video",
+        "title": "MPO Final R#2 Lead Card",
+        "url": "https://youtu.be/S-Z80EHJqDM"
+      },
+      {
+        "type": "video",
+        "title": "MPO Final R#3 Lead Card",
+        "url": "https://youtu.be/kiUYR3j-neE"
       }
     ],
     "id": "the34thkyushuopen"
