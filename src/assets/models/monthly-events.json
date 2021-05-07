@@ -100,6 +100,28 @@
   },
   {
     "category": "monthly",
+    "location": "greenparkmiyakoji",
+    "schedule": {
+      "byDay": [
+        "su"
+      ]
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Green Park Miyakoji",
+        "url": "https://hopjapan.com/park/"
+      },
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/greenparkmiyakoji"
+      }
+    ],
+    "id": "monthlyfurusatofureaipark"
+  },
+  {
+    "category": "monthly",
     "location": "aikawafureainomura",
     "schedule": {
       "byDay": [
