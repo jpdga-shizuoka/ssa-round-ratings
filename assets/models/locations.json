@@ -45,6 +45,12 @@
     "title": "Okawa Furusato Park"
   },
   {
+    "prefecture": "Fukushima",
+    "geolocation": [37.432948484816826, 140.7266743090934],
+    "id": "greenparkmiyakoji",
+    "title": "Green Park Miyakoji"
+  },
+  {
     "prefecture": "Niigata",
     "geolocation": [
       36.982452,
