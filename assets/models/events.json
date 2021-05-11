@@ -317,7 +317,8 @@
       "eventId": "50980"
     },
     "jpdga": {
-      "eventId": "559"
+      "eventId": "559",
+      "topicId": "1542"
     },
     "id": "the4thgifuhiruganoopen"
   },
@@ -408,7 +409,8 @@
       "eventId": "45291"
     },
     "jpdga": {
-      "eventId": "551"
+      "eventId": "551",
+      "topicId": "1521"
     },
     "players": {
       "pro": 47,
@@ -435,7 +437,8 @@
       "eventId": "45290"
     },
     "jpdga": {
-      "eventId": "550"
+      "eventId": "550",
+      "topicId": "1517"
     },
     "players": {
       "pro": 69,
