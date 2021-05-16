@@ -315,7 +315,8 @@
       "to": "2021-05-04"
     },
     "pdga": {
-      "eventId": "50980"
+      "eventId": "50980",
+      "liveScore": "50980"
     },
     "jpdga": {
       "eventId": "559",
@@ -407,7 +408,8 @@
       "to": "2020-12-20"
     },
     "pdga": {
-      "eventId": "45291"
+      "eventId": "45291",
+      "liveScore": "45291"
     },
     "jpdga": {
       "eventId": "551",
