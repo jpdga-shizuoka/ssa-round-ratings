@@ -43,7 +43,7 @@ export class SchedulePipe implements PipeTransform {
     } else {
       return this.localize.isGlobal
       ? `${DAYS_OF_WEEK[0][schedule.byDay[0]]}`
-      : `${DAYS_OF_WEEK[1][schedule.byDay[0]]}`;            
+      : `${DAYS_OF_WEEK[1][schedule.byDay[0]]}`;
     }
   }
 

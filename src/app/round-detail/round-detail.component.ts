@@ -1,6 +1,6 @@
 import { Component, Input, Output, OnInit } from '@angular/core';
 import {
-  getEventTitle, getPdgaResult, getJpdgaResult, getJpdgaInfo, getJpdgaReport, getJpdgaPhoto
+  getEventTitle, getPdgaResult, getJpdgaResult, getJpdgaInfo, getJpdgaReport, getJpdgaPhoto, getLiveScore
 } from '../app-libs';
 import { RemoteService, RoundInfo, EventInfo, LocationInfo, LocationId } from '../remote.service';
 import { MiscInfo, ICONS } from '../app-common';
@@ -58,6 +58,10 @@ export class RoundDetailComponent implements OnInit {
 
   get title() {
     return getEventTitle(this.event?.title);
+  }
+
+  get scoreCardUrl() {
+    return getLiveScore(this.event.pdga?.liveScore);
   }
 
   private getLocation(id: LocationId) {

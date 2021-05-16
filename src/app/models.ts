@@ -19,6 +19,7 @@ export interface LocationInfo {
 
 export interface PdgaInfo {
   eventId?: string;
+  liveScore?: string;
 }
 
 export interface JpdgaInfo {

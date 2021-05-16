@@ -28,6 +28,12 @@ export function getPdgaResult(eventId: string): string | undefined {
     : undefined;
 }
 
+export function getLiveScore(id: string): string | undefined {
+  return id
+    ? `https://www.pdga.com/apps/tournament/live/event?eventId=${id}`
+    : undefined;
+}
+
 export function getEventTitle(name?: string): string {
   if (!name) {
     return name;

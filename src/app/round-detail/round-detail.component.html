@@ -20,6 +20,12 @@
       <td>{{'Round' | localize}}:</td>
       <td>{{roundStatus}}</td>
     </tr>
+    <tr *ngIf="scoreCardUrl">
+      <td>{{'Score Cards' | localize}}:</td>
+      <td>
+        <a href="{{scoreCardUrl}}" target="_blank" rel="noopener">PDGA Live Score</a>
+      </td>
+    </tr>
     <tr *ngIf="showHistory">
       <td>{{'History' | localize}}:</td>
       <td>
