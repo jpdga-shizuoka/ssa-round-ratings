@@ -1,0 +1,166 @@
+[{
+  "category": "monthly",
+  "location": "Mizubayashi Sport Park",
+  "schedule": {
+    "byDay": ["su"],
+    "bySetPos": 1
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Facebook",
+    "url": "https://www.facebook.com/水林DiscGolfers-1108088165877772/"
+  }]
+}, {
+  "category": "monthly",
+  "location": "Minamisoma Baji Park",
+  "schedule": {
+    "byDay": ["su"],
+    "bySetPos": 1
+  },
+  "urls": [
+  ]
+}, {
+  "category": "monthly",
+  "location": "Showa Kinen Park",
+  "schedule": {
+    "byDay": ["su"],
+    "bySetPos": 1,
+    "byMonth": [2, 3, 6, 7, 8, 9, 10, 12]
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Tokyo Discgolf Association",
+    "url": "http://jpdga-tokyo.com/showamonthly/"
+  }, {
+    "type": "website",
+    "title": "Facebook",
+    "url": "https://www.facebook.com/jpdgatokyo/"
+  }]
+}, {
+  "category": "monthly",
+  "location": "Furusato Fureai Park",
+  "schedule": {
+    "byDay": ["su"],
+    "bySetPos": 1,
+    "byMonth": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Discgolf Ryugasaki",
+    "url": "https://discgolf.exblog.jp"
+  }, {
+    "type": "website",
+    "title": "Facebook",
+    "url": "https://www.facebook.com/groups/237882656402120/"
+  }]
+}, {
+  "category": "monthly",
+  "location": "Aikawa Fureai-no-Mura",
+  "schedule": {
+    "byDay": ["sa"],
+    "bySetPos": 2,
+    "byMonth": [1, 2, 3, 4, 5, 6, 7, 9, 10, 12]
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Kanawaga Discgolf Association",
+    "url": "https://kanagawa-discgolf-association.jimdofree.com"
+  }]
+}, {
+  "category": "monthly",
+  "location": "Oyama Omoino-Mori Park",
+  "schedule": {
+    "byDay": ["su"],
+    "bySetPos": 2,
+    "byMonth": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Facebook",
+    "url": "https://facebook.com/小山市ディスクゴルフ協会-1445376232379294/"
+  }]
+}, {
+  "category": "monthly",
+  "location": "Tatsumi-no-Mori Seaside Park",
+  "schedule": {
+    "byDay": ["sa"],
+    "bySetPos": 3,
+    "byMonth": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Tatsumi-no-Mori Discgolf Club",
+    "url": "http://tatsumidgc.com"
+  }]
+}, {
+  "category": "monthly",
+  "location": "Kitakami Sport Park",
+  "schedule": {
+    "byDay": ["su"],
+    "bySetPos": 3,
+    "byMonth": [4, 5, 6, 7, 8, 9, 10, 11]
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Facebook 🇯🇵",
+    "url": "https://www.facebook.com/pg/大堤Disc-Golfers-1848600115381290/"
+  }, {
+    "type": "website",
+    "title": "Iwate, JPDGA 🇯🇵",
+    "url": "http://jpdgaiwate.com"
+  }]
+}, {
+  "category": "monthly",
+  "location": "Hamanomiya Park",
+  "schedule": {
+    "byDay": ["su"],
+    "bySetPos": 3,
+    "byMonth": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Hyogo Flying Disc Association",
+    "url": "http://hyfda.jpn.org/bbs200/event.cgi"
+  }]
+
+}, {
+  "category": "monthly",
+  "location": "Umino-Nakamichi Seaside Park",
+  "schedule": {
+    "byDay": ["su"],
+    "bySetPos": 3,
+    "byMonth": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Fukuoka Disc Golf Association",
+    "url": "http://www.jpdgafukuoka.com/"
+  }]
+}, {
+  "category": "monthly",
+  "location": "Kiyohara Kohgyo Danchi",
+  "schedule": {
+    "byDay": ["su"],
+    "bySetPos": 4,
+    "byMonth": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Tochigi Discgolf Association",
+    "url": "http://www.tochigiflyingdisc.com"
+  }]
+
+}, {
+  "category": "monthly",
+  "location": "Michinoku Park",
+  "schedule": {
+    "byDay": ["su"],
+    "bySetPos": 4,
+    "byMonth": [5, 6, 9, 10, 11]
+  },
+  "urls": [{
+    "type": "website",
+    "title": "Michinoku Park",
+    "url": "https://michinoku-park.info/regular_events/diskgolfmonthlytaikai.html"
+  }]
+}]

@@ -1,173 +1,31 @@
 [
   {
-    "event": "the4thgifuhiruganoopen",
-    "round": "Rd1,Rd2,Rd3",
-    "date": "2021-05-03",
-    "hla": 96.5,
-    "holes": 18,
-    "eventTitle": "The 4th Gifu Hirugano Open",
-    "id": "the4thgifuhiruganoopen.rd1rd2rd3",
-    "locationTitle": "Hirugano Kogen"
-  },
-  {
-    "event": "the20thchubuopen",
-    "round": "Rd1,Rd2,Rd3",
-    "date": "2020-12-19",
-    "hla": 103,
-    "holes": 18,
-    "ratings": {
-      "player1": {
-        "score": 62,
-        "rating": 1015
-      },
-      "player2": {
-        "score": 83,
-        "rating": 870
-      }
-    },
-    "eventTitle": "The 20th Chubu Open",
-    "id": "the20thchubuopen.rd1rd2rd3",
-    "locationTitle": "Mikawa Rinkai Ryokuchi"
-  },
-  {
-    "event": "the34thkyushuopen",
-    "round": "Rd2",
-    "date": "2020-11-29",
-    "hla": 97,
-    "holes": 27,
-    "ratings": {
-      "player1": {
-        "score": 73,
-        "rating": 1055
-      },
-      "player2": {
-        "score": 105,
-        "rating": 862
-      }
-    },
-    "eventTitle": "The 34th Kyushu Open",
-    "id": "the34thkyushuopen.rd1rd2",
-    "locationTitle": "Umino-Nakamichi Seaside Park"
-  },
-  {
-    "event": "the34thkyushuopen",
-    "round": "Rd1",
-    "date": "2020-11-28",
-    "hla": 97,
-    "holes": 27,
-    "ratings": {
-      "player1": {
-        "score": 82,
-        "rating": 1017
-      },
-      "player2": {
-        "score": 105,
-        "rating": 885
-      }
-    },
-    "eventTitle": "The 34th Kyushu Open",
-    "id": "the34thkyushuopen.rd1rd2",
-    "locationTitle": "Umino-Nakamichi Seaside Park"
-  },
-  {
-    "event": "the16thkyotoclassic",
-    "round": "Rd1,Rd2,Rd3",
-    "date": "2020-11-21",
-    "hla": 97,
-    "holes": 18,
-    "ratings": {
-      "player1": {
-        "score": 50,
-        "rating": 1048
-      },
-      "player2": {
-        "score": 67,
-        "rating": 898
-      }
-    },
-    "eventTitle": "The 16th Kyoto Classic",
-    "id": "the16thkyotoclassic.rd1rd2rd3",
-    "locationTitle": "Kyoto Tamba Park"
-  },
-  {
-    "event": "the32ndjapannationalchampionship",
-    "round": "Rd1Rd2Rd3",
-    "date": "2020-09-20",
-    "hla": 132,
-    "holes": 18,
-    "ratings": {
-      "player1": {
-        "score": 55,
-        "rating": 1031
-      },
-      "player2": {
-        "score": 74,
-        "rating": 877
-      }
-    },
-    "eventTitle": "The 32nd Japan National Championship",
-    "id": "the32ndjapannationalchampionship.rd1rd2rd3",
-    "locationTitle": "Maiko Disc Golf Park"
-  },
-  {
-    "event": "the23rdkansaiopen",
-    "round": "Rd1,Rd2,Rd3",
-    "date": "2020-09-06",
-    "hla": 109,
-    "holes": 18,
-    "ratings": {
-      "player1": {
-        "score": 55,
-        "rating": 1020
-      },
-      "player2": {
-        "score": 74,
-        "rating": 860
-      }
-    },
-    "eventTitle": "The 23rd Kansai Open",
-    "id": "the23rdkansaiopen.rd1rd2rd3",
-    "locationTitle": "Fumin-no-Mori Hiyoshi"
-  },
-  {
-    "event": "the16thminamisomaopen",
+    "event": "The 16th Minamisoma Open",
     "date": "2020-05-03",
     "round": "CANCELED",
-    "holes": 18,
-    "eventTitle": "The 16th Minamisoma Open",
-    "id": "the16thminamisomaopen.canceled",
-    "locationTitle": "Minamisoma Hose Riding Park"
+    "holes": 18
   },
   {
-    "event": "the18thsagaopen",
+    "event": "The 18th Saga Open",
     "date": "2020-04-11",
     "round": "CANCELED",
-    "holes": 18,
-    "eventTitle": "The 18th Saga Open",
-    "id": "the18thsagaopen.canceled",
-    "locationTitle": "Yoshinogari Historical Park"
+    "holes": 18
   },
   {
-    "event": "the3rdmiyagimichinokuopen",
+    "event": "The 3rd Miyagi Michinoku Open",
     "round": "CANCELED",
     "date": "2020-03-21",
-    "holes": 18,
-    "eventTitle": "The 3rd Miyagi Michinoku Open",
-    "id": "the3rdmiyagimichinokuopen.canceled",
-    "locationTitle": "Michinoku Park"
+    "holes": 18
   },
   {
-    "event": "the2020nationaldoubleschampionship",
+    "event": "The 2020 National Doubles Championship",
     "round": "Rd1,Rd2,Rd3",
     "date": "2020-03-01",
     "hla": 83,
-    "holes": 18,
-    "eventTitle": "The 2020 National Doubles Championship",
-    "id": "the2020nationaldoubleschampionship.rd1rd2rd3",
-    "locationTitle": "Hitachi Seaside Park"
+    "holes": 18
   },
   {
-    "event": "the9thokinawaopen",
+    "event": "The 9th Okinawa Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2020-02-15",
     "hla": 99,
@@ -181,13 +39,10 @@
         "score": 78,
         "rating": 833
       }
-    },
-    "eventTitle": "The 9th Okinawa Open",
-    "id": "the9thokinawaopen.rd1rd2rd3",
-    "locationTitle": "Nakijinson Sport Park"
+    }
   },
   {
-    "event": "the6thkagoshimaopen",
+    "event": "The 6th Kagoshima Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2020-01-26",
     "hla": 100,
@@ -201,23 +56,17 @@
         "score": 71,
         "rating": 894
       }
-    },
-    "eventTitle": "The 6th Kagoshima Open",
-    "id": "the6thkagoshimaopen.rd1rd2rd3",
-    "locationTitle": "Yoshino Park"
+    }
   },
   {
-    "event": "the2020nationalteamchampionship",
+    "event": "The 2020 National Team Championship",
     "round": "Rd1,2,3,4,5",
     "date": "2020-01-12",
     "hla": 82,
-    "holes": 12,
-    "eventTitle": "The 2020 National Team Championship",
-    "id": "the2020nationalteamchampionship.rd12345",
-    "locationTitle": "Oyama Omoi-no-Mori Park"
+    "holes": 12
   },
   {
-    "event": "the19thchubuopen",
+    "event": "The 19th Chubu Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-12-14",
     "hla": 104,
@@ -231,13 +80,10 @@
         "score": 82,
         "rating": 876
       }
-    },
-    "eventTitle": "The 19th Chubu Open",
-    "id": "the19thchubuopen.rd1rd2rd3",
-    "locationTitle": "Mikawa Rinkai Ryokuchi"
+    }
   },
   {
-    "event": "the33rdkyushuopen",
+    "event": "The 33rd Kyushu Open",
     "round": "Rd1(B,C)",
     "date": "2019-11-30",
     "hla": 99,
@@ -251,13 +97,10 @@
         "score": 71,
         "rating": 851
       }
-    },
-    "eventTitle": "The 33rd Kyushu Open",
-    "id": "the33rdkyushuopen.rd1bc",
-    "locationTitle": "Umino-Nakamichi Seaside Park"
+    }
   },
   {
-    "event": "the33rdkyushuopen",
+    "event": "The 33rd Kyushu Open",
     "round": "Rd2,Rd3()",
     "date": "2019-11-30",
     "holes": 18,
@@ -270,13 +113,10 @@
         "score": 63,
         "rating": 878
       }
-    },
-    "eventTitle": "The 33rd Kyushu Open",
-    "id": "the33rdkyushuopen.rd2rd3",
-    "locationTitle": "Umino-Nakamichi Seaside Park"
+    }
   },
   {
-    "event": "the15thkyotoclassic",
+    "event": "The 15th Kyoto Classic",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-11-16",
     "holes": 18,
@@ -289,22 +129,16 @@
         "score": 68,
         "rating": 882
       }
-    },
-    "eventTitle": "The 15th Kyoto Classic",
-    "id": "the15thkyotoclassic.rd1rd2rd3",
-    "locationTitle": "Kyoto Tamba Park"
+    }
   },
   {
-    "event": "the31stshowakinenparkopen",
+    "event": "The 31st Showa Kinen Park Open",
     "round": "Rd1,Rd2",
     "date": "2019-11-02",
-    "holes": 27,
-    "eventTitle": "The 31st Showa Kinen Park Open",
-    "id": "the31stshowakinenparkopen.rd1rd2",
-    "locationTitle": "Showa Kinen Park"
+    "holes": 27
   },
   {
-    "event": "the19thtohokuopen",
+    "event": "The 19th Tohoku Open",
     "round": "Rd1",
     "date": "2019-10-13",
     "hla": 93,
@@ -318,13 +152,10 @@
         "score": 72,
         "rating": 893
       }
-    },
-    "eventTitle": "The 19th Tohoku Open",
-    "id": "the19thtohokuopen.rd1",
-    "locationTitle": "Mizubayashi Sport Park"
+    }
   },
   {
-    "event": "the19thtohokuopen",
+    "event": "The 19th Tohoku Open",
     "round": "Rd2,Rd3",
     "date": "2019-10-13",
     "hla": 93,
@@ -338,23 +169,17 @@
         "score": 70,
         "rating": 883
       }
-    },
-    "eventTitle": "The 19th Tohoku Open",
-    "id": "the19thtohokuopen.rd2rd3",
-    "locationTitle": "Mizubayashi Sport Park"
+    }
   },
   {
-    "event": "the4thmihoopen",
+    "event": "The 4th Miho Open",
     "round": "Rd1,Rd2",
     "date": "2019-09-28",
     "hla": 63,
-    "holes": 18,
-    "eventTitle": "The 4th Miho Open",
-    "id": "the4thmihoopen.rd1rd2",
-    "locationTitle": "Hikari-to-Kaze-no-Oka Park"
+    "holes": 18
   },
   {
-    "event": "the31stjapannationalchampionship",
+    "event": "The 31st Japan National Championship",
     "round": "Rd3",
     "date": "2019-09-23",
     "hla": 121,
@@ -368,13 +193,10 @@
         "score": 74,
         "rating": 884
       }
-    },
-    "eventTitle": "The 31st Japan National Championship",
-    "id": "the31stjapannationalchampionship.rd3",
-    "locationTitle": "Maiko Disc Golf Park"
+    }
   },
   {
-    "event": "the31stjapannationalchampionship",
+    "event": "The 31st Japan National Championship",
     "round": "Rd1,Rd2",
     "date": "2019-09-22",
     "hla": 121,
@@ -388,13 +210,10 @@
         "score": 69,
         "rating": 885
       }
-    },
-    "eventTitle": "The 31st Japan National Championship",
-    "id": "the31stjapannationalchampionship.rd1rd2",
-    "locationTitle": "Maiko Disc Golf Park"
+    }
   },
   {
-    "event": "the22ndkansaiopen",
+    "event": "The 22nd Kansai Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-08-31",
     "hla": 99,
@@ -408,23 +227,17 @@
         "score": 65,
         "rating": 862
       }
-    },
-    "eventTitle": "The 22nd Kansai Open",
-    "id": "the22ndkansaiopen.rd1rd2rd3",
-    "locationTitle": "Fumin-no-Mori Hiyoshi"
+    }
   },
   {
-    "event": "the8thhiruganokogentournament",
+    "event": "The 8th Hirugano Kogen tournament",
     "round": "Rd1,Rd2",
     "date": "2019-08-25",
     "hla": 90,
-    "holes": 18,
-    "eventTitle": "The 8th Hirugano Kogen tournament",
-    "locationTitle": "Hirugano Kogen",
-    "id": "the8thhiruganokogentournament.rd1rd2"
+    "holes": 18
   },
   {
-    "event": "the14thmichinokuopen",
+    "event": "The 14th Michinoku Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-08-11",
     "hla": 96,
@@ -438,13 +251,10 @@
         "score": 74,
         "rating": 877
       }
-    },
-    "eventTitle": "The 14th Michinoku Open",
-    "id": "the14thmichinokuopen.rd1rd2rd3",
-    "locationTitle": "Kitakami Sport Park"
+    }
   },
   {
-    "event": "the7thasiachampionship",
+    "event": "The 7th Asia Championship",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-08-03",
     "hla": 122,
@@ -458,13 +268,10 @@
         "score": 74,
         "rating": 904
       }
-    },
-    "eventTitle": "The 7th Asia Championship",
-    "id": "the7thasiachampionship.rd1rd2rd3",
-    "locationTitle": "Umino-Nakamichi Seaside Park"
+    }
   },
   {
-    "event": "the23rdkantoopen",
+    "event": "The 23rd Kanto Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-07-14",
     "hla": 109,
@@ -478,13 +285,10 @@
         "score": 68,
         "rating": 964
       }
-    },
-    "eventTitle": "The 23rd Kanto Open",
-    "id": "the23rdkantoopen.rd1rd2rd3",
-    "locationTitle": "Kiyohara Kohgyo Danchi"
+    }
   },
   {
-    "event": "the8thhokkaidoopen",
+    "event": "The 8th Hokkaido Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-06-29",
     "hla": 113,
@@ -498,13 +302,10 @@
         "score": 70,
         "rating": 900
       }
-    },
-    "eventTitle": "The 8th Hokkaido Open",
-    "id": "the8thhokkaidoopen.rd1rd2rd3",
-    "locationTitle": "Hunka-wan Panolama Park"
+    }
   },
   {
-    "event": "the14thmastersnationalchampionship",
+    "event": "The 14th Masters National Championship",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-06-22",
     "hla": 75,
@@ -518,13 +319,10 @@
         "score": 64,
         "rating": 869
       }
-    },
-    "eventTitle": "The 14th Masters National Championship",
-    "id": "the14thmastersnationalchampionship.rd1rd2rd3",
-    "locationTitle": "Hikari-to-Kaze-no-Oka Park"
+    }
   },
   {
-    "event": "the21stnipponopen",
+    "event": "The 21st Nippon Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-05-25",
     "hla": 96,
@@ -538,13 +336,10 @@
         "score": 74,
         "rating": 846
       }
-    },
-    "eventTitle": "The 21st Nippon Open",
-    "id": "the21stnipponopen.rd1rd2rd3",
-    "locationTitle": "Seaside Nature Park"
+    }
   },
   {
-    "event": "the14thkiyosatonomoriopen",
+    "event": "The 14th Kiyosato-no-mori Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-05-18",
     "hla": 81,
@@ -558,13 +353,10 @@
         "score": 68,
         "rating": 849
       }
-    },
-    "eventTitle": "The 14th Kiyosato-no-mori Open",
-    "id": "the14thkiyosatonomoriopen.rd1rd2rd3",
-    "locationTitle": "Kiyosato-no-mori"
+    }
   },
   {
-    "event": "the2ndgifuhiruganoopen",
+    "event": "The 2nd Gifu Hirugano Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-05-04",
     "hla": 121,
@@ -578,23 +370,17 @@
         "score": 74,
         "rating": 847
       }
-    },
-    "eventTitle": "The 2nd Gifu Hirugano Open",
-    "id": "the2ndgifuhiruganoopen.rd1rd2rd3",
-    "locationTitle": "Hirugano Kogen"
+    }
   },
   {
-    "event": "the15thminamisomaopen",
+    "event": "The 15th Minamisoma Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-05-04",
     "hla": 96,
-    "holes": 18,
-    "eventTitle": "The 15th Minamisoma Open",
-    "id": "the15thminamisomaopen.rd1rd2rd3",
-    "locationTitle": "Minamisoma Hose Riding Park"
+    "holes": 18
   },
   {
-    "event": "the17thsagaopen",
+    "event": "The 17th Saga Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-04-13",
     "hla": 91,
@@ -608,23 +394,17 @@
         "score": 70,
         "rating": 865
       }
-    },
-    "eventTitle": "The 17th Saga Open",
-    "id": "the17thsagaopen.rd1rd2rd3",
-    "locationTitle": "Yoshinogari Historical Park"
+    }
   },
   {
-    "event": "the1stpwbfcup",
+    "event": "The 1st PWBF Cup",
     "round": "CANCELED",
     "hla": 125,
     "date": "2019-04-13",
-    "holes": 18,
-    "eventTitle": "The 1st PWBF Cup",
-    "id": "the1stpwbfcup.canceled",
-    "locationTitle": "PICA Activity Park"
+    "holes": 18
   },
   {
-    "event": "the2ndmiyagimichinokuopen",
+    "event": "The 2nd Miyagi Michinoku Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-03-23",
     "holes": 18,
@@ -637,23 +417,17 @@
         "score": 68,
         "rating": 895
       }
-    },
-    "eventTitle": "The 2nd Miyagi Michinoku Open",
-    "id": "the2ndmiyagimichinokuopen.rd1rd2rd3",
-    "locationTitle": "Michinoku Park"
+    }
   },
   {
-    "event": "the2019nationaldoubleschampionship",
+    "event": "The 2019 National Doubles Championship",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-03-02",
     "hla": 83,
-    "holes": 18,
-    "eventTitle": "The 2019 National Doubles Championship",
-    "id": "the2019nationaldoubleschampionship.rd1rd2rd3",
-    "locationTitle": "Hitachi Seaside Park"
+    "holes": 18
   },
   {
-    "event": "the8thokinawaopen",
+    "event": "The 8th Okinawa Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-02-16",
     "hla": 92,
@@ -667,13 +441,10 @@
         "score": 73,
         "rating": 851
       }
-    },
-    "eventTitle": "The 8th Okinawa Open",
-    "id": "the8thokinawaopen.rd1rd2rd3",
-    "locationTitle": "Nakijinson Sport Park"
+    }
   },
   {
-    "event": "the5thkagoshimaopen",
+    "event": "The 5th Kagoshima Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2019-01-26",
     "hla": 101,
@@ -687,23 +458,17 @@
         "score": 80,
         "rating": 853
       }
-    },
-    "eventTitle": "The 5th Kagoshima Open",
-    "id": "the5thkagoshimaopen.rd1rd2rd3",
-    "locationTitle": "Yoshino Park"
+    }
   },
   {
-    "event": "the2019nationalteamchampionship",
+    "event": "The 2019 National Team Championship",
     "round": "Rd1,2,3,4,5",
     "date": "2019-01-13",
     "hla": 82,
-    "holes": 12,
-    "eventTitle": "The 2019 National Team Championship",
-    "id": "the2019nationalteamchampionship.rd12345",
-    "locationTitle": "Oyama Omoinomori Park"
+    "holes": 12
   },
   {
-    "event": "the18thchubuopen",
+    "event": "The 18th Chubu Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-12-15",
     "hla": 97,
@@ -717,13 +482,10 @@
         "score": 79,
         "rating": 886
       }
-    },
-    "eventTitle": "The 18th Chubu Open",
-    "id": "the18thchubuopen.rd1rd2rd3",
-    "locationTitle": "Mikawa Rinkai Ryokuchi"
+    }
   },
   {
-    "event": "the32ndkyushuopen",
+    "event": "The 32nd Kyushu Open",
     "round": "Rd3 (A,C)",
     "date": "2018-12-02",
     "hla": 83,
@@ -737,13 +499,10 @@
         "score": 64,
         "rating": 848
       }
-    },
-    "eventTitle": "The 32nd Kyushu Open",
-    "id": "the32ndkyushuopen.rd3ac",
-    "locationTitle": "Umino-Nakamichi Seaside Park"
+    }
   },
   {
-    "event": "the32ndkyushuopen",
+    "event": "The 32nd Kyushu Open",
     "round": "Rd1 (B,C)",
     "date": "2018-12-01",
     "hla": 97,
@@ -757,13 +516,10 @@
         "score": 71,
         "rating": 808
       }
-    },
-    "eventTitle": "The 32nd Kyushu Open",
-    "id": "the32ndkyushuopen.rd1bc",
-    "locationTitle": "Umino-Nakamichi Seaside Park"
+    }
   },
   {
-    "event": "the32ndkyushuopen",
+    "event": "The 32nd Kyushu Open",
     "round": "Rd2 (A,B)",
     "date": "2018-12-01",
     "hla": 82,
@@ -777,13 +533,10 @@
         "score": 66,
         "rating": 869
       }
-    },
-    "eventTitle": "The 32nd Kyushu Open",
-    "id": "the32ndkyushuopen.rd2ab",
-    "locationTitle": "Umino-Nakamichi Seaside Park"
+    }
   },
   {
-    "event": "the14thkyotoclassic",
+    "event": "The 14th Kyoto Classic",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-11-17",
     "hla": 88,
@@ -797,32 +550,23 @@
         "score": 66,
         "rating": 869
       }
-    },
-    "eventTitle": "The 14th Kyoto Classic",
-    "id": "the14thkyotoclassic.rd1rd2rd3",
-    "locationTitle": "Kyoto Tamba Park"
+    }
   },
   {
-    "event": "the2018showakinenparkopen",
+    "event": "The 2018 Showa Kinen Park Open",
     "round": "Rd1,Rd2",
     "date": "2018-11-03",
     "hla": 64,
-    "holes": 27,
-    "eventTitle": "The 2018 Showa Kinen Park Open",
-    "id": "the2018showakinenparkopen.rd1rd2",
-    "locationTitle": "Showa Kinen Park"
+    "holes": 27
   },
   {
-    "event": "the1stpicaactivitycup",
+    "event": "The 1st PICA Activity Cup",
     "round": "Rd1,Rd2",
     "date": "2018-10-14",
-    "holes": 18,
-    "eventTitle": "The 1st PICA Activity Cup",
-    "id": "the1stpicaactivitycup.rd1rd2",
-    "locationTitle": "PICA Activity Park"
+    "holes": 18
   },
   {
-    "event": "the18thtohokuopen",
+    "event": "The 18th Tohoku Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-10-07",
     "hla": 83,
@@ -836,13 +580,10 @@
         "score": 70,
         "rating": 853
       }
-    },
-    "eventTitle": "The 18th Tohoku Open",
-    "id": "the18thtohokuopen.rd1rd2rd3",
-    "locationTitle": "Mizubayashi Sport Park"
+    }
   },
   {
-    "event": "the30thjapannationalchampionship",
+    "event": "The 30th Japan National Championship",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-09-16",
     "hla": 114,
@@ -856,13 +597,10 @@
         "score": 72,
         "rating": 842
       }
-    },
-    "eventTitle": "The 30th Japan National Championship",
-    "id": "the30thjapannationalchampionship.rd1rd2rd3",
-    "locationTitle": "Maiko Disc Golf Park"
+    }
   },
   {
-    "event": "the21stkansaiopen",
+    "event": "The 21st Kansai Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-09-08",
     "hla": 106,
@@ -876,13 +614,10 @@
         "score": 71,
         "rating": 899
       }
-    },
-    "eventTitle": "The 21st Kansai Open",
-    "id": "the21stkansaiopen.rd1rd2rd3",
-    "locationTitle": "Fumin-no-Mori Hiyoshi"
+    }
   },
   {
-    "event": "the7thhiruganokogentournament",
+    "event": "The 7th Hirugano Kogen tournament",
     "round": "Rd1,Rd2",
     "date": "2018-08-26",
     "hla": 93,
@@ -896,13 +631,10 @@
         "score": 65,
         "rating": 859
       }
-    },
-    "eventTitle": "The 7th Hirugano Kogen tournament",
-    "locationTitle": "Hirugano Kogen",
-    "id": "the7thhiruganokogentournament.rd1rd2"
+    }
   },
   {
-    "event": "the13thmichinokuopen",
+    "event": "The 13th Michinoku Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-08-18",
     "hla": 104,
@@ -916,13 +648,10 @@
         "score": 72,
         "rating": 867
       }
-    },
-    "eventTitle": "The 13th Michinoku Open",
-    "id": "the13thmichinokuopen.rd1rd2rd3",
-    "locationTitle": "Kitakami Sport Park"
+    }
   },
   {
-    "event": "the22ndkantoopen",
+    "event": "The 22nd Kanto Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-07-14",
     "hla": 92,
@@ -936,13 +665,10 @@
         "score": 80,
         "rating": 869
       }
-    },
-    "eventTitle": "The 22nd Kanto Open",
-    "id": "the22ndkantoopen.rd1rd2rd3",
-    "locationTitle": "Kiyohara Kohgyo Danchi"
+    }
   },
   {
-    "event": "the7thhokkaidoopen",
+    "event": "The 7th Hokkaido Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-06-30",
     "hla": 115,
@@ -956,13 +682,10 @@
         "score": 69,
         "rating": 873
       }
-    },
-    "eventTitle": "The 7th Hokkaido Open",
-    "id": "the7thhokkaidoopen.rd1rd2rd3",
-    "locationTitle": "Hunka-wan Panolama Park"
+    }
   },
   {
-    "event": "the13thmastersnationalchampionship",
+    "event": "The 13th Masters National Championship",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-06-23",
     "hla": 75,
@@ -976,13 +699,10 @@
         "score": 65,
         "rating": 852
       }
-    },
-    "eventTitle": "The 13th Masters National Championship",
-    "id": "the13thmastersnationalchampionship.rd1rd2rd3",
-    "locationTitle": "Hikari-to-Kaze-no-Oka Park"
+    }
   },
   {
-    "event": "the20thnipponopen",
+    "event": "The 20th Nippon Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-05-26",
     "hla": 94,
@@ -996,13 +716,10 @@
         "score": 71,
         "rating": 851
       }
-    },
-    "eventTitle": "The 20th Nippon Open",
-    "id": "the20thnipponopen.rd1rd2rd3",
-    "locationTitle": "Seaside Nature Park"
+    }
   },
   {
-    "event": "the13thkiyosatonomoriopen",
+    "event": "The 13th Kiyosato-no-mori Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-05-19",
     "hla": 81,
@@ -1016,13 +733,10 @@
         "score": 65,
         "rating": 877
       }
-    },
-    "eventTitle": "The 13th Kiyosato-no-mori Open",
-    "id": "the13thkiyosatonomoriopen.rd1rd2rd3",
-    "locationTitle": "Kiyosato-no-mori"
+    }
   },
   {
-    "event": "the1stgifuhiruganoopen",
+    "event": "The 1st Gifu Hirugano Open",
     "round": "Rd1,Rd2",
     "date": "2018-05-04",
     "hla": 126,
@@ -1036,31 +750,22 @@
         "score": 72,
         "rating": 879
       }
-    },
-    "eventTitle": "The 1st Gifu Hirugano Open",
-    "id": "the1stgifuhiruganoopen.rd1rd2",
-    "locationTitle": "Hirugano Kogen"
+    }
   },
   {
-    "event": "the14thminamisomaopen",
+    "event": "The 14th Minamisoma Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-05-04",
-    "holes": 18,
-    "eventTitle": "The 14th Minamisoma Open",
-    "id": "the14thminamisomaopen.rd1rd2rd3",
-    "locationTitle": "Minamisoma Hose Riding Park"
+    "holes": 18
   },
   {
-    "event": "the29thtokyoopen",
+    "event": "The 29th Tokyo Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-04-21",
-    "holes": 18,
-    "eventTitle": "The 29th Tokyo Open",
-    "id": "the29thtokyoopen.rd1rd2rd3",
-    "locationTitle": "Tatsumi-no-Mori Seaside Park"
+    "holes": 18
   },
   {
-    "event": "the16thsagaopen",
+    "event": "The 16th Saga Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-04-14",
     "hla": 96,
@@ -1074,13 +779,10 @@
         "score": 78,
         "rating": 849
       }
-    },
-    "eventTitle": "The 16th Saga Open",
-    "id": "the16thsagaopen.rd1rd2rd3",
-    "locationTitle": "Yoshinogari Historical Park"
+    }
   },
   {
-    "event": "the1stmiyagimichinokuopen",
+    "event": "The 1st Miyagi Michinoku Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-03-24",
     "hla": 91,
@@ -1094,23 +796,17 @@
         "score": 64,
         "rating": 888
       }
-    },
-    "eventTitle": "The 1st Miyagi Michinoku Open",
-    "id": "the1stmiyagimichinokuopen.rd1rd2rd3",
-    "locationTitle": "Michinoku Park"
+    }
   },
   {
-    "event": "the2018nationaldoubleschampionship",
+    "event": "The 2018 National Doubles Championship",
     "round": "Rd1,Rd2,Rd3",
     "date": "2018-03-03",
     "hla": 86,
-    "holes": 18,
-    "eventTitle": "The 2018 National Doubles Championship",
-    "id": "the2018nationaldoubleschampionship.rd1rd2rd3",
-    "locationTitle": "Hitachi Seaside Park"
+    "holes": 18
   },
   {
-    "event": "the7thokinawaopen",
+    "event": "The 7th Okinawa Open",
     "round": "Rd3",
     "date": "2018-02-18",
     "hla": 92,
@@ -1124,13 +820,10 @@
         "score": 65,
         "rating": 874
       }
-    },
-    "eventTitle": "The 7th Okinawa Open",
-    "id": "the7thokinawaopen.rd3",
-    "locationTitle": "Nakijinson Sport Park"
+    }
   },
   {
-    "event": "the7thokinawaopen",
+    "event": "The 7th Okinawa Open",
     "round": "Rd1",
     "date": "2018-02-17",
     "hla": 92,
@@ -1144,13 +837,10 @@
         "score": 76,
         "rating": 844
       }
-    },
-    "eventTitle": "The 7th Okinawa Open",
-    "id": "the7thokinawaopen.rd1",
-    "locationTitle": "Nakijinson Sport Park"
+    }
   },
   {
-    "event": "the7thokinawaopen",
+    "event": "The 7th Okinawa Open",
     "round": "Rd2",
     "date": "2018-02-17",
     "hla": 92,
@@ -1164,23 +854,17 @@
         "score": 76,
         "rating": 823
       }
-    },
-    "eventTitle": "The 7th Okinawa Open",
-    "id": "the7thokinawaopen.rd2",
-    "locationTitle": "Nakijinson Sport Park"
+    }
   },
   {
-    "event": "the2018nationalteamchampionship",
+    "event": "The 2018 National Team Championship",
     "round": "Rd1,2,3,4,5",
     "date": "2018-01-07",
     "hla": 83,
-    "holes": 12,
-    "eventTitle": "The 2018 National Team Championship",
-    "id": "the2018nationalteamchampionship.rd12345",
-    "locationTitle": "Oyama Omoinomori Park"
+    "holes": 12
   },
   {
-    "event": "the17thchubuopen",
+    "event": "The 17th Chubu Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-12-16",
     "hla": 101,
@@ -1194,13 +878,10 @@
         "score": 82,
         "rating": 853
       }
-    },
-    "eventTitle": "The 17th Chubu Open",
-    "id": "the17thchubuopen.rd1rd2rd3",
-    "locationTitle": "Mikawa Rinkai Ryokuchi"
+    }
   },
   {
-    "event": "the31stkyushuopen",
+    "event": "The 31st Kyushu Open",
     "round": "Rd3",
     "date": "2017-12-03",
     "holes": 18,
@@ -1213,13 +894,10 @@
         "score": 67,
         "rating": 883
       }
-    },
-    "eventTitle": "The 31st Kyushu Open",
-    "id": "the31stkyushuopen.rd3",
-    "locationTitle": "Umino-Nakamichi Seaside Park"
+    }
   },
   {
-    "event": "the31stkyushuopen",
+    "event": "The 31st Kyushu Open",
     "round": "Rd1",
     "date": "2017-12-02",
     "holes": 18,
@@ -1232,13 +910,10 @@
         "score": 74,
         "rating": 817
       }
-    },
-    "eventTitle": "The 31st Kyushu Open",
-    "id": "the31stkyushuopen.rd1",
-    "locationTitle": "Umino-Nakamichi Seaside Park"
+    }
   },
   {
-    "event": "the31stkyushuopen",
+    "event": "The 31st Kyushu Open",
     "round": "Rd2",
     "date": "2017-12-02",
     "holes": 18,
@@ -1251,13 +926,10 @@
         "score": 63,
         "rating": 875
       }
-    },
-    "eventTitle": "The 31st Kyushu Open",
-    "id": "the31stkyushuopen.rd2",
-    "locationTitle": "Umino-Nakamichi Seaside Park"
+    }
   },
   {
-    "event": "the13thkyotoclassic",
+    "event": "The 13th Kyoto Classic",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-11-18",
     "holes": 18,
@@ -1270,22 +942,16 @@
         "score": 75,
         "rating": 814
       }
-    },
-    "eventTitle": "The 13th Kyoto Classic",
-    "id": "the13thkyotoclassic.rd1rd2rd3",
-    "locationTitle": "Kyoto Tamba Park"
+    }
   },
   {
-    "event": "the2017showakinenparkopen",
+    "event": "The 2017 Showa Kinen Park Open",
     "round": "Rd1,Rd2",
     "date": "2017-11-03",
-    "holes": 27,
-    "eventTitle": "The 2017 Showa Kinen Park Open",
-    "id": "the2017showakinenparkopen.rd1rd2",
-    "locationTitle": "Showa Kinen Park"
+    "holes": 27
   },
   {
-    "event": "the17thtohokuopen",
+    "event": "The 17th Tohoku Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-10-08",
     "hla": 84,
@@ -1299,13 +965,10 @@
         "score": 67,
         "rating": 839
       }
-    },
-    "eventTitle": "The 17th Tohoku Open",
-    "id": "the17thtohokuopen.rd1rd2rd3",
-    "locationTitle": "Mizubayashi Sport Park"
+    }
   },
   {
-    "event": "the29thjapannationalchampionship",
+    "event": "The 29th Japan National Championship",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-09-17",
     "hla": 128,
@@ -1319,13 +982,10 @@
         "score": 80,
         "rating": 816
       }
-    },
-    "eventTitle": "The 29th Japan National Championship",
-    "id": "the29thjapannationalchampionship.rd1rd2rd3",
-    "locationTitle": "Maiko Disc Golf Park"
+    }
   },
   {
-    "event": "the20thkansaiopen",
+    "event": "The 20th Kansai Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-09-02",
     "hla": 104,
@@ -1339,13 +999,10 @@
         "score": 74,
         "rating": 866
       }
-    },
-    "eventTitle": "The 20th Kansai Open",
-    "id": "the20thkansaiopen.rd1rd2rd3",
-    "locationTitle": "Fumin-no-Mori Hiyoshi"
+    }
   },
   {
-    "event": "the12thmichinokuopen",
+    "event": "The 12th Michinoku Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-08-05",
     "hla": 104,
@@ -1359,13 +1016,10 @@
         "score": 72,
         "rating": 871
       }
-    },
-    "eventTitle": "The 12th Michinoku Open",
-    "id": "the12thmichinokuopen.rd1rd2rd3",
-    "locationTitle": "Kitakami Sport Park"
+    }
   },
   {
-    "event": "the4thkagoshimaopen",
+    "event": "The 4th Kagoshima Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-07-29",
     "hla": 94,
@@ -1379,22 +1033,16 @@
         "score": 72,
         "rating": 839
       }
-    },
-    "eventTitle": "The 4th Kagoshima Open",
-    "id": "the4thkagoshimaopen.rd1rd2rd3",
-    "locationTitle": "Yoshino Park"
+    }
   },
   {
-    "event": "the17thniigataopen",
+    "event": "The 17th Niigata Open",
     "round": "Rd1",
     "date": "2017-07-17",
-    "holes": 9,
-    "eventTitle": "The 17th Niigata Open",
-    "id": "the17thniigataopen.rd1",
-    "locationTitle": "Kiyotsu-gawa Flesh Park"
+    "holes": 9
   },
   {
-    "event": "the21stkantoopen",
+    "event": "The 21st Kanto Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-07-15",
     "hla": 117,
@@ -1408,13 +1056,10 @@
         "score": 83,
         "rating": 855
       }
-    },
-    "eventTitle": "The 21st Kanto Open",
-    "id": "the21stkantoopen.rd1rd2rd3",
-    "locationTitle": "Kiyohara Kohgyo Danchi"
+    }
   },
   {
-    "event": "the6thhokkaidoopen",
+    "event": "The 6th Hokkaido Open",
     "round": "Rd1,Rd2,Rd3,Rd4",
     "date": "2017-07-01",
     "hla": 117,
@@ -1428,13 +1073,10 @@
         "score": 68,
         "rating": 843
       }
-    },
-    "eventTitle": "The 6th Hokkaido Open",
-    "id": "the6thhokkaidoopen.rd1rd2rd3rd4",
-    "locationTitle": "Hunka-wan Panolama Park"
+    }
   },
   {
-    "event": "the12thmastersnationalchampionship",
+    "event": "The 12th Masters National Championship",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-06-24",
     "hla": 73,
@@ -1448,13 +1090,10 @@
         "score": 63,
         "rating": 851
       }
-    },
-    "eventTitle": "The 12th Masters National Championship",
-    "id": "the12thmastersnationalchampionship.rd1rd2rd3",
-    "locationTitle": "Hikari-to-Kaze-no-Oka Park"
+    }
   },
   {
-    "event": "the6thfukuiopen",
+    "event": "The 6th Fukui Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-05-27",
     "holes": 18,
@@ -1467,13 +1106,10 @@
         "score": 66,
         "rating": 882
       }
-    },
-    "eventTitle": "The 6th Fukui Open",
-    "id": "the6thfukuiopen.rd1rd2rd3",
-    "locationTitle": "Seaside Nature Park"
+    }
   },
   {
-    "event": "the12thkiyosatonomoriopen",
+    "event": "The 12th Kiyosato-no-mori Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-05-21",
     "hla": 81,
@@ -1487,13 +1123,10 @@
         "score": 67,
         "rating": 843
       }
-    },
-    "eventTitle": "The 12th Kiyosato-no-mori Open",
-    "id": "the12thkiyosatonomoriopen.rd1rd2rd3",
-    "locationTitle": "Kiyosato-no-mori"
+    }
   },
   {
-    "event": "the19thnipponopen",
+    "event": "The 19th Nippon Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-05-05",
     "hla": 109,
@@ -1507,13 +1140,10 @@
         "score": 65,
         "rating": 891
       }
-    },
-    "eventTitle": "The 19th Nippon Open",
-    "id": "the19thnipponopen.rd1rd2rd3",
-    "locationTitle": "Hirugano Kogen"
+    }
   },
   {
-    "event": "the13thminamisomaopen",
+    "event": "The 13th Minamisoma Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-04-29",
     "hla": 101,
@@ -1527,23 +1157,17 @@
         "score": 72,
         "rating": 843
       }
-    },
-    "eventTitle": "The 13th Minamisoma Open",
-    "id": "the13thminamisomaopen.rd1rd2rd3",
-    "locationTitle": "Minamisoma Hose Riding Park"
+    }
   },
   {
-    "event": "the28thtokyoopen",
+    "event": "The 28th Tokyo Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-04-15",
     "hla": 84,
-    "holes": 18,
-    "eventTitle": "The 28th Tokyo Open",
-    "id": "the28thtokyoopen.rd1rd2rd3",
-    "locationTitle": "Tatsumi-no-Mori Seaside Park"
+    "holes": 18
   },
   {
-    "event": "the15thsagaopen",
+    "event": "The 15th Saga Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-04-08",
     "hla": 93,
@@ -1557,23 +1181,17 @@
         "score": 74,
         "rating": 835
       }
-    },
-    "eventTitle": "The 15th Saga Open",
-    "id": "the15thsagaopen.rd1rd2rd3",
-    "locationTitle": "Yoshinogari Historical Park"
+    }
   },
   {
-    "event": "the2017nationaldoubleschampionship",
+    "event": "The 2017 National Doubles Championship",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-03-04",
     "hla": 83,
-    "holes": 18,
-    "eventTitle": "The 2017 National Doubles Championship",
-    "id": "the2017nationaldoubleschampionship.rd1rd2rd3",
-    "locationTitle": "Hitachi Seaside Park"
+    "holes": 18
   },
   {
-    "event": "the6thokinawaopen",
+    "event": "The 6th Okinawa Open",
     "round": "Rd3",
     "date": "2017-02-19",
     "hla": 100,
@@ -1587,13 +1205,10 @@
         "score": 75,
         "rating": 824
       }
-    },
-    "eventTitle": "The 6th Okinawa Open",
-    "id": "the6thokinawaopen.rd3",
-    "locationTitle": "Nakijinson Sport Park"
+    }
   },
   {
-    "event": "the6thokinawaopen",
+    "event": "The 6th Okinawa Open",
     "round": "Rd1",
     "date": "2017-02-18",
     "hla": 100,
@@ -1607,13 +1222,10 @@
         "score": 75,
         "rating": 810
       }
-    },
-    "eventTitle": "The 6th Okinawa Open",
-    "id": "the6thokinawaopen.rd1",
-    "locationTitle": "Nakijinson Sport Park"
+    }
   },
   {
-    "event": "the6thokinawaopen",
+    "event": "The 6th Okinawa Open",
     "round": "Rd2",
     "date": "2017-02-18",
     "hla": 100,
@@ -1627,13 +1239,10 @@
         "score": 88,
         "rating": 813
       }
-    },
-    "eventTitle": "The 6th Okinawa Open",
-    "id": "the6thokinawaopen.rd2",
-    "locationTitle": "Nakijinson Sport Park"
+    }
   },
   {
-    "event": "the3rdkagoshimaopen",
+    "event": "The 3rd Kagoshima Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2017-01-28",
     "hla": 84,
@@ -1647,23 +1256,17 @@
         "score": 69,
         "rating": 821
       }
-    },
-    "eventTitle": "The 3rd Kagoshima Open",
-    "id": "the3rdkagoshimaopen.rd1rd2rd3",
-    "locationTitle": "Yoshino Park"
+    }
   },
   {
-    "event": "the2017nationalteamchampionship",
+    "event": "The 2017 National Team Championship",
     "round": "Rd1,2,3,4,5",
     "date": "2017-01-08",
     "hla": 75,
-    "holes": 12,
-    "eventTitle": "The 2017 National Team Championship",
-    "id": "the2017nationalteamchampionship.rd12345",
-    "locationTitle": "Oyama Omoinomori Park"
+    "holes": 12
   },
   {
-    "event": "the16thchubuopen",
+    "event": "The 16th Chubu Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2016-12-10",
     "hla": 98,
@@ -1677,13 +1280,10 @@
         "score": 81,
         "rating": 866
       }
-    },
-    "eventTitle": "The 16th Chubu Open",
-    "id": "the16thchubuopen.rd1rd2rd3",
-    "locationTitle": "Mikawa Rinkai Ryokuchi"
+    }
   },
   {
-    "event": "the30thkyushuopen",
+    "event": "The 30th Kyushu Open",
     "round": "Rd3",
     "date": "2016-12-04",
     "holes": 18,
@@ -1696,13 +1296,10 @@
         "score": 79,
         "rating": 821
       }
-    },
-    "eventTitle": "The 30th Kyushu Open",
-    "id": "the30thkyushuopen.rd3",
-    "locationTitle": "Umino-Nakamichi Seaside Park"
+    }
   },
   {
-    "event": "the30thkyushuopen",
+    "event": "The 30th Kyushu Open",
     "round": "Rd1",
     "date": "2016-12-03",
     "holes": 18,
@@ -1715,13 +1312,10 @@
         "score": 66,
         "rating": 871
       }
-    },
-    "eventTitle": "The 30th Kyushu Open",
-    "id": "the30thkyushuopen.rd1",
-    "locationTitle": "Umino-Nakamichi Seaside Park"
+    }
   },
   {
-    "event": "the30thkyushuopen",
+    "event": "The 30th Kyushu Open",
     "round": "Rd2",
     "date": "2016-12-03",
     "holes": 18,
@@ -1734,13 +1328,10 @@
         "score": 66,
         "rating": 801
       }
-    },
-    "eventTitle": "The 30th Kyushu Open",
-    "id": "the30thkyushuopen.rd2",
-    "locationTitle": "Umino-Nakamichi Seaside Park"
+    }
   },
   {
-    "event": "the12thkyotoclassic",
+    "event": "The 12th Kyoto Classic",
     "round": "Rd1,Rd2,Rd3",
     "date": "2016-11-12",
     "holes": 18,
@@ -1753,22 +1344,16 @@
         "score": 70,
         "rating": 863
       }
-    },
-    "eventTitle": "The 12th Kyoto Classic",
-    "id": "the12thkyotoclassic.rd1rd2rd3",
-    "locationTitle": "Kyoto Tamba Park"
+    }
   },
   {
-    "event": "the2016showakinenparkopen",
+    "event": "The 2016 Showa Kinen Park Open",
     "round": "Rd1,Rd2",
     "date": "2016-11-03",
-    "holes": 27,
-    "eventTitle": "The 2016 Showa Kinen Park Open",
-    "id": "the2016showakinenparkopen.rd1rd2",
-    "locationTitle": "Showa Kinen Park"
+    "holes": 27
   },
   {
-    "event": "the16thtohokuopen",
+    "event": "The 16th Tohoku Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2016-10-08",
     "hla": 75,
@@ -1782,13 +1367,10 @@
         "score": 73,
         "rating": 818
       }
-    },
-    "eventTitle": "The 16th Tohoku Open",
-    "id": "the16thtohokuopen.rd1rd2rd3",
-    "locationTitle": "Mizubayashi Sport Park"
+    }
   },
   {
-    "event": "the28thjapannationalchampionship",
+    "event": "The 28th Japan National Championship",
     "round": "Rd1,Rd2,Rd3",
     "date": "2016-09-18",
     "hla": 130,
@@ -1802,25 +1384,19 @@
         "score": 84,
         "rating": 798
       }
-    },
-    "eventTitle": "The 28th Japan National Championship",
-    "id": "the28thjapannationalchampionship.rd1rd2rd3",
-    "locationTitle": "Maiko Disc Golf Park"
+    }
   },
   {
-    "event": "the5thhiruganokogentournament",
+    "event": "The 5th Hirugano Kogen Tournament",
     "round": "Rd1",
     "date": "2016-08-28",
     "holes": 18,
     "jpdga": {
       "eventId": "416"
-    },
-    "eventTitle": "The 5th Hirugano Kogen Tournament",
-    "id": "the5thhiruganokogentournament.rd1",
-    "locationTitle": "Hirugano Kogen"
+    }
   },
   {
-    "event": "the11thmichinokuopen",
+    "event": "The 11th Michinoku Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2016-08-20",
     "hla": 101,
@@ -1834,13 +1410,10 @@
         "score": 68,
         "rating": 893
       }
-    },
-    "eventTitle": "The 11th Michinoku Open",
-    "id": "the11thmichinokuopen.rd1rd2rd3",
-    "locationTitle": "Kitakami Sport Park"
+    }
   },
   {
-    "event": "the20thkantoopen",
+    "event": "The 20th Kanto Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2016-07-15",
     "hla": 117,
@@ -1854,13 +1427,10 @@
         "score": 82,
         "rating": 869
       }
-    },
-    "eventTitle": "The 20th Kanto Open",
-    "id": "the20thkantoopen.rd1rd2rd3",
-    "locationTitle": "Kiyohara Kohgyo Danchi"
+    }
   },
   {
-    "event": "the5thhokkaidoopen",
+    "event": "The 5th Hokkaido Open",
     "round": "Rd1,Rd2,Rd3,Rd4",
     "date": "2016-07-01",
     "hla": 0,
@@ -1874,13 +1444,10 @@
         "score": 66,
         "rating": 894
       }
-    },
-    "eventTitle": "The 5th Hokkaido Open",
-    "id": "the5thhokkaidoopen.rd1rd2rd3rd4",
-    "locationTitle": "Hunka-wan Panolama Park"
+    }
   },
   {
-    "event": "the11thmastersnationalchampionship",
+    "event": "The 11th Masters National Championship",
     "round": "Rd1,Rd2,Rd3",
     "date": "2016-06-18",
     "hla": 94,
@@ -1894,13 +1461,10 @@
         "score": 67,
         "rating": 855
       }
-    },
-    "eventTitle": "The 11th Masters National Championship",
-    "id": "the11thmastersnationalchampionship.rd1rd2rd3",
-    "locationTitle": "Furusato Fureai Park"
+    }
   },
   {
-    "event": "the5thmaikoopen",
+    "event": "The 5th Maiko Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2016-06-11",
     "hla": 0,
@@ -1914,13 +1478,10 @@
         "score": 64,
         "rating": 881
       }
-    },
-    "eventTitle": "The 5th Maiko Open",
-    "id": "the5thmaikoopen.rd1rd2rd3",
-    "locationTitle": "Maiko Disc Golf Park"
+    }
   },
   {
-    "event": "the5thfukuiopen",
+    "event": "The 5th Fukui Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2016-05-28",
     "holes": 18,
@@ -1933,13 +1494,10 @@
         "score": 68,
         "rating": 857
       }
-    },
-    "eventTitle": "The 5th Fukui Open",
-    "id": "the5thfukuiopen.rd1rd2rd3",
-    "locationTitle": "Seaside Nature Park"
+    }
   },
   {
-    "event": "the11thkiyosatonomoriopen",
+    "event": "The 11th Kiyosato-no-mori Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2016-05-14",
     "hla": 81,
@@ -1953,13 +1511,10 @@
         "score": 61,
         "rating": 890
       }
-    },
-    "eventTitle": "The 11th Kiyosato-no-mori Open",
-    "id": "the11thkiyosatonomoriopen.rd1rd2rd3",
-    "locationTitle": "Kiyosato-no-mori"
+    }
   },
   {
-    "event": "the18thnipponopen",
+    "event": "The 18th Nippon Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2016-04-30",
     "hla": 0,
@@ -1973,13 +1528,10 @@
         "score": 69,
         "rating": 851
       }
-    },
-    "eventTitle": "The 18th Nippon Open",
-    "id": "the18thnipponopen.rd1rd2rd3",
-    "locationTitle": "Hirugano Kogen"
+    }
   },
   {
-    "event": "the27thtokyoopen",
+    "event": "The 27th Tokyo Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2016-04-16",
     "hla": 90,
@@ -1993,13 +1545,10 @@
         "score": 70,
         "rating": 878
       }
-    },
-    "eventTitle": "The 27th Tokyo Open",
-    "id": "the27thtokyoopen.rd1rd2rd3",
-    "locationTitle": "Tatsumi-no-Mori Seaside Park"
+    }
   },
   {
-    "event": "the14thsagaopen",
+    "event": "The 14th Saga Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2016-04-09",
     "hla": 91,
@@ -2013,13 +1562,10 @@
         "score": 73,
         "rating": 809
       }
-    },
-    "eventTitle": "The 14th Saga Open",
-    "id": "the14thsagaopen.rd1rd2rd3",
-    "locationTitle": "Yoshinogari Historical Park"
+    }
   },
   {
-    "event": "the12thminamisomaopen",
+    "event": "The 12th Minamisoma Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2016-03-20",
     "hla": 108,
@@ -2033,23 +1579,17 @@
         "score": 75,
         "rating": 879
       }
-    },
-    "eventTitle": "The 12th Minamisoma Open",
-    "id": "the12thminamisomaopen.rd1rd2rd3",
-    "locationTitle": "Minamisoma Hose Riding Park"
+    }
   },
   {
-    "event": "the2016nationaldoubleschampionship",
+    "event": "The 2016 National Doubles Championship",
     "round": "Rd1,Rd2,Rd3",
     "date": "2016-03-04",
     "hla": 83,
-    "holes": 18,
-    "eventTitle": "The 2016 National Doubles Championship",
-    "id": "the2016nationaldoubleschampionship.rd1rd2rd3",
-    "locationTitle": "Hitachi Seaside Park"
+    "holes": 18
   },
   {
-    "event": "the5thokinawaopen",
+    "event": "The 5th Okinawa Open",
     "round": "Rd3",
     "date": "2016-02-21",
     "holes": 18,
@@ -2062,13 +1602,10 @@
         "score": 78,
         "rating": 868
       }
-    },
-    "eventTitle": "The 5th Okinawa Open",
-    "id": "the5thokinawaopen.rd3",
-    "locationTitle": "Nakijinson Sport Park"
+    }
   },
   {
-    "event": "the5thokinawaopen",
+    "event": "The 5th Okinawa Open",
     "round": "Rd1",
     "date": "2016-02-20",
     "holes": 18,
@@ -2081,13 +1618,10 @@
         "score": 90,
         "rating": 858
       }
-    },
-    "eventTitle": "The 5th Okinawa Open",
-    "id": "the5thokinawaopen.rd1",
-    "locationTitle": "Nakijinson Sport Park"
+    }
   },
   {
-    "event": "the5thokinawaopen",
+    "event": "The 5th Okinawa Open",
     "round": "Rd2",
     "date": "2016-02-20",
     "holes": 18,
@@ -2100,13 +1634,10 @@
         "score": 87,
         "rating": 878
       }
-    },
-    "eventTitle": "The 5th Okinawa Open",
-    "id": "the5thokinawaopen.rd2",
-    "locationTitle": "Nakijinson Sport Park"
+    }
   },
   {
-    "event": "the2ndkagoshimaopen",
+    "event": "The 2nd Kagoshima Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2016-01-23",
     "hla": 83,
@@ -2120,23 +1651,17 @@
         "score": 66,
         "rating": 853
       }
-    },
-    "eventTitle": "The 2nd Kagoshima Open",
-    "id": "the2ndkagoshimaopen.rd1rd2rd3",
-    "locationTitle": "Yoshino Park"
+    }
   },
   {
-    "event": "the2016nationalteamchampionship",
+    "event": "The 2016 National Team Championship",
     "round": "Rd1,2,3,4,5",
     "date": "2016-01-08",
     "hla": 75,
-    "holes": 12,
-    "eventTitle": "The 2016 National Team Championship",
-    "id": "the2016nationalteamchampionship.rd12345",
-    "locationTitle": "Oyama Omoinomori Park"
+    "holes": 12
   },
   {
-    "event": "the29thkyushuopen",
+    "event": "The 29th Kyushu Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2015-12-19",
     "hla": 89,
@@ -2150,13 +1675,10 @@
         "score": 59,
         "rating": 890
       }
-    },
-    "eventTitle": "The 29th Kyushu Open",
-    "id": "the29thkyushuopen.rd1rd2rd3",
-    "locationTitle": "Umino-Nakamichi Seaside Park"
+    }
   },
   {
-    "event": "the15thchubuopen",
+    "event": "The 15th Chubu Open",
     "round": "Rd3",
     "date": "2015-12-06",
     "hla": 97,
@@ -2170,13 +1692,10 @@
         "score": 80,
         "rating": 828
       }
-    },
-    "eventTitle": "The 15th Chubu Open",
-    "id": "the15thchubuopen.rd3",
-    "locationTitle": "Mikawa Rinkai Ryokuchi"
+    }
   },
   {
-    "event": "the15thchubuopen",
+    "event": "The 15th Chubu Open",
     "round": "Rd1",
     "date": "2015-12-05",
     "hla": 97,
@@ -2190,13 +1709,10 @@
         "score": 80,
         "rating": 833
       }
-    },
-    "eventTitle": "The 15th Chubu Open",
-    "id": "the15thchubuopen.rd1",
-    "locationTitle": "Mikawa Rinkai Ryokuchi"
+    }
   },
   {
-    "event": "the15thchubuopen",
+    "event": "The 15th Chubu Open",
     "round": "Rd2",
     "date": "2015-12-05",
     "hla": 97,
@@ -2210,23 +1726,17 @@
         "score": 87,
         "rating": 803
       }
-    },
-    "eventTitle": "The 15th Chubu Open",
-    "id": "the15thchubuopen.rd2",
-    "locationTitle": "Mikawa Rinkai Ryokuchi"
+    }
   },
   {
-    "event": "the2ndoyamaopen",
+    "event": "The 2nd Oyama Open",
     "round": "Rd1",
     "date": "2015-11-23",
     "hla": 101,
-    "holes": 18,
-    "eventTitle": "The 2nd Oyama Open",
-    "id": "the2ndoyamaopen.rd1",
-    "locationTitle": "TBC Taiyo Club"
+    "holes": 18
   },
   {
-    "event": "the11thkyotoclassic",
+    "event": "The 11th Kyoto Classic",
     "round": "Rd1,Rd2,Rd3",
     "date": "2015-11-07",
     "holes": 18,
@@ -2239,22 +1749,16 @@
         "score": 69,
         "rating": 816
       }
-    },
-    "eventTitle": "The 11th Kyoto Classic",
-    "id": "the11thkyotoclassic.rd1rd2rd3",
-    "locationTitle": "Kyoto Tamba Park"
+    }
   },
   {
-    "event": "the2015showakinenparkopen",
+    "event": "The 2015 Showa Kinen Park Open",
     "round": "Rd1,Rd2",
     "date": "2015-11-03",
-    "holes": 27,
-    "eventTitle": "The 2015 Showa Kinen Park Open",
-    "id": "the2015showakinenparkopen.rd1rd2",
-    "locationTitle": "Showa Kinen Park"
+    "holes": 27
   },
   {
-    "event": "the15thtohokuopen",
+    "event": "The 15th Tohoku Open",
     "round": "Rd3",
     "date": "2015-10-12",
     "hla": 81,
@@ -2268,13 +1772,10 @@
         "score": 62,
         "rating": 899
       }
-    },
-    "eventTitle": "The 15th Tohoku Open",
-    "id": "the15thtohokuopen.rd3",
-    "locationTitle": "Mizubayashi Sport Park"
+    }
   },
   {
-    "event": "the15thtohokuopen",
+    "event": "The 15th Tohoku Open",
     "round": "Rd1",
     "date": "2015-10-11",
     "hla": 81,
@@ -2288,13 +1789,10 @@
         "score": 64,
         "rating": 849
       }
-    },
-    "eventTitle": "The 15th Tohoku Open",
-    "id": "the15thtohokuopen.rd1",
-    "locationTitle": "Mizubayashi Sport Park"
+    }
   },
   {
-    "event": "the15thtohokuopen",
+    "event": "The 15th Tohoku Open",
     "round": "Rd2",
     "date": "2015-10-11",
     "hla": 81,
@@ -2308,13 +1806,10 @@
         "score": 76,
         "rating": 787
       }
-    },
-    "eventTitle": "The 15th Tohoku Open",
-    "id": "the15thtohokuopen.rd2",
-    "locationTitle": "Mizubayashi Sport Park"
+    }
   },
   {
-    "event": "the27thjapannationalchampionship",
+    "event": "The 27th Japan National Championship",
     "round": "Rd1,Rd2,Rd3",
     "date": "2015-09-21",
     "hla": 126,
@@ -2328,13 +1823,10 @@
         "score": 71,
         "rating": 842
       }
-    },
-    "eventTitle": "The 27th Japan National Championship",
-    "id": "the27thjapannationalchampionship.rd1rd2rd3",
-    "locationTitle": "Maiko Disc Golf Park"
+    }
   },
   {
-    "event": "the19thkansaiopen",
+    "event": "The 19th Kansai Open",
     "round": "Rd3",
     "date": "2015-09-06",
     "hla": 106,
@@ -2348,13 +1840,10 @@
         "score": 69,
         "rating": 853
       }
-    },
-    "eventTitle": "The 19th Kansai Open",
-    "id": "the19thkansaiopen.rd3",
-    "locationTitle": "Fumin-no-Mori Hiyoshi"
+    }
   },
   {
-    "event": "the19thkansaiopen",
+    "event": "The 19th Kansai Open",
     "round": "Rd1,Rd2",
     "date": "2015-09-05",
     "hla": 106,
@@ -2368,13 +1857,10 @@
         "score": 69,
         "rating": 823
       }
-    },
-    "eventTitle": "The 19th Kansai Open",
-    "id": "the19thkansaiopen.rd1rd2",
-    "locationTitle": "Fumin-no-Mori Hiyoshi"
+    }
   },
   {
-    "event": "the10thmichinokuopen",
+    "event": "The 10th Michinoku Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2015-08-22",
     "hla": 110,
@@ -2388,13 +1874,10 @@
         "score": 71,
         "rating": 893
       }
-    },
-    "eventTitle": "The 10th Michinoku Open",
-    "id": "the10thmichinokuopen.rd1rd2rd3",
-    "locationTitle": "Kitakami Sport Park"
+    }
   },
   {
-    "event": "the15thasoopen",
+    "event": "The 15th Aso Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2015-07-25",
     "hla": 86,
@@ -2408,13 +1891,10 @@
         "score": 62,
         "rating": 885
       }
-    },
-    "eventTitle": "The 15th Aso Open",
-    "id": "the15thasoopen.rd1rd2rd3",
-    "locationTitle": "Aso Minnano Mori"
+    }
   },
   {
-    "event": "the19thkantoopen",
+    "event": "The 19th Kanto Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2015-07-11",
     "hla": 111,
@@ -2428,13 +1908,10 @@
         "score": 81,
         "rating": 831
       }
-    },
-    "eventTitle": "The 19th Kanto Open",
-    "id": "the19thkantoopen.rd1rd2rd3",
-    "locationTitle": "Kiyohara Kohgyo Danchi"
+    }
   },
   {
-    "event": "the4thhokkaidoopen",
+    "event": "The 4th Hokkaido Open",
     "round": "Rd1,Rd2",
     "date": "2015-06-27",
     "holes": 18,
@@ -2447,13 +1924,10 @@
         "score": 71,
         "rating": 840
       }
-    },
-    "eventTitle": "The 4th Hokkaido Open",
-    "id": "the4thhokkaidoopen.rd1rd2",
-    "locationTitle": "Hunka-wan Panolama Park"
+    }
   },
   {
-    "event": "the10thmastersnationalchampionship",
+    "event": "The 10th Masters National Championship",
     "round": "Rd1,Rd2,Rd3",
     "date": "2015-06-18",
     "hla": 105,
@@ -2467,13 +1941,10 @@
         "score": 64,
         "rating": 862
       }
-    },
-    "eventTitle": "The 10th Masters National Championship",
-    "id": "the10thmastersnationalchampionship.rd1rd2rd3",
-    "locationTitle": "Maiko Disc Golf Park"
+    }
   },
   {
-    "event": "the4thfukuiopen",
+    "event": "The 4th Fukui Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2015-05-30",
     "holes": 18,
@@ -2486,13 +1957,10 @@
         "score": 73,
         "rating": 819
       }
-    },
-    "eventTitle": "The 4th Fukui Open",
-    "id": "the4thfukuiopen.rd1rd2rd3",
-    "locationTitle": "Seaside Nature Park"
+    }
   },
   {
-    "event": "the10thkiyosatonomoriopen",
+    "event": "The 10th Kiyosato-no-mori Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2015-05-16",
     "hla": 81,
@@ -2506,13 +1974,10 @@
         "score": 66,
         "rating": 833
       }
-    },
-    "eventTitle": "The 10th Kiyosato-no-mori Open",
-    "id": "the10thkiyosatonomoriopen.rd1rd2rd3",
-    "locationTitle": "Kiyosato-no-mori"
+    }
   },
   {
-    "event": "the17thnipponopen",
+    "event": "The 17th Nippon Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2015-05-04",
     "hla": 0,
@@ -2526,13 +1991,10 @@
         "score": 73,
         "rating": 824
       }
-    },
-    "eventTitle": "The 17th Nippon Open",
-    "id": "the17thnipponopen.rd1rd2rd3",
-    "locationTitle": "Hirugano Kogen"
+    }
   },
   {
-    "event": "the26thtokyoopen",
+    "event": "The 26th Tokyo Open",
     "round": "Rd3",
     "date": "2015-04-19",
     "holes": 18,
@@ -2545,13 +2007,10 @@
         "score": 69,
         "rating": 837
       }
-    },
-    "eventTitle": "The 26th Tokyo Open",
-    "id": "the26thtokyoopen.rd3",
-    "locationTitle": "Tatsumi-no-Mori Seaside Park"
+    }
   },
   {
-    "event": "the26thtokyoopen",
+    "event": "The 26th Tokyo Open",
     "round": "Rd1",
     "date": "2015-04-18",
     "holes": 18,
@@ -2564,13 +2023,10 @@
         "score": 74,
         "rating": 858
       }
-    },
-    "eventTitle": "The 26th Tokyo Open",
-    "id": "the26thtokyoopen.rd1",
-    "locationTitle": "Tatsumi-no-Mori Seaside Park"
+    }
   },
   {
-    "event": "the26thtokyoopen",
+    "event": "The 26th Tokyo Open",
     "round": "Rd2",
     "date": "2015-04-18",
     "holes": 18,
@@ -2583,13 +2039,10 @@
         "score": 83,
         "rating": 812
       }
-    },
-    "eventTitle": "The 26th Tokyo Open",
-    "id": "the26thtokyoopen.rd2",
-    "locationTitle": "Tatsumi-no-Mori Seaside Park"
+    }
   },
   {
-    "event": "the13thsagaopen",
+    "event": "The 13th Saga Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2015-04-11",
     "hla": 91,
@@ -2603,23 +2056,17 @@
         "score": 75,
         "rating": 822
       }
-    },
-    "eventTitle": "The 13th Saga Open",
-    "id": "the13thsagaopen.rd1rd2rd3",
-    "locationTitle": "Yoshinogari Historical Park"
+    }
   },
   {
-    "event": "the2015nationaldoubleschampionship",
+    "event": "The 2015 National Doubles Championship",
     "round": "Rd1,Rd2,Rd3",
     "date": "2015-03-07",
     "hla": 90,
-    "holes": 18,
-    "eventTitle": "The 2015 National Doubles Championship",
-    "id": "the2015nationaldoubleschampionship.rd1rd2rd3",
-    "locationTitle": "Hitachi Seaside Park"
+    "holes": 18
   },
   {
-    "event": "the4thokinawaopen",
+    "event": "The 4th Okinawa Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2015-02-21",
     "holes": 18,
@@ -2632,13 +2079,10 @@
         "score": 75,
         "rating": 812
       }
-    },
-    "eventTitle": "The 4th Okinawa Open",
-    "id": "the4thokinawaopen.rd1rd2rd3",
-    "locationTitle": "Nakijinson Sport Park"
+    }
   },
   {
-    "event": "the1stkagoshimaopen",
+    "event": "The 1st Kagoshima Open",
     "round": "Rd1,Rd2,Rd3",
     "date": "2015-01-24",
     "hla": 85,
@@ -2652,23 +2096,17 @@
         "score": 72,
         "rating": 795
       }
-    },
-    "eventTitle": "The 1st Kagoshima Open",
-    "id": "the1stkagoshimaopen.rd1rd2rd3",
-    "locationTitle": "Yoshino Park"
+    }
   },
   {
-    "event": "the2015nationalteamchampionship",
+    "event": "The 2015 National Team Championship",
     "round": "Rd1,Rd2,Rd3",
     "date": "2015-01-11",
     "hla": 80,
-    "holes": 18,
-    "eventTitle": "The 2015 National Team Championship",
-    "id": "the2015nationalteamchampionship.rd1rd2rd3",
-    "locationTitle": "Oyama Sport Park"
+    "holes": 18
   },
   {
-    "event": "the2014japanopen",
+    "event": "The 2014 Japan Open",
     "round": "Rd1,Rd4,Rd5(Fujin)",
     "date": "2014-06-05",
     "hla": 146,
@@ -2682,13 +2120,10 @@
         "score": 76,
         "rating": 898
       }
-    },
-    "eventTitle": "The 2014 Japan Open",
-    "id": "the2014japanopen.rd1rd4rd5fujin",
-    "locationTitle": "Nasu Highland Golf Club"
+    }
   },
   {
-    "event": "the2014japanopen",
+    "event": "The 2014 Japan Open",
     "round": "Rd2,Rd3(Raijin)",
     "date": "2014-06-05",
     "hla": 131,
@@ -2702,13 +2137,10 @@
         "score": 77,
         "rating": 891
       }
-    },
-    "eventTitle": "The 2014 Japan Open",
-    "id": "the2014japanopen.rd2rd3raijin",
-    "locationTitle": "Nasu Highland Golf Club"
+    }
   },
   {
-    "event": "the2010japanopen",
+    "event": "The 2010 Japan Open",
     "round": "Rd1,Rd4,Semifinal",
     "date": "2010-06-10",
     "holes": 18,
@@ -2721,13 +2153,10 @@
         "score": 76,
         "rating": 848
       }
-    },
-    "eventTitle": "The 2010 Japan Open",
-    "id": "the2010japanopen.rd1rd4semifinal",
-    "locationTitle": "Nasu Highland Golf Club"
+    }
   },
   {
-    "event": "the2010japanopen",
+    "event": "The 2010 Japan Open",
     "round": "Rd2,Rd3",
     "date": "2010-06-10",
     "holes": 18,
@@ -2740,13 +2169,10 @@
         "score": 84,
         "rating": 812
       }
-    },
-    "eventTitle": "The 2010 Japan Open",
-    "id": "the2010japanopen.rd2rd3",
-    "locationTitle": "Nasu Highland Golf Club"
+    }
   },
   {
-    "event": "the2008japanopen",
+    "event": "The 2008 Japan Open",
     "round": "Rd2",
     "date": "2008-06-13",
     "holes": 27,
@@ -2759,13 +2185,10 @@
         "score": 114,
         "rating": 877
       }
-    },
-    "eventTitle": "The 2008 Japan Open",
-    "id": "the2008japanopen.rd2",
-    "locationTitle": "Nasu Highland Golf Club"
+    }
   },
   {
-    "event": "the2008japanopen",
+    "event": "The 2008 Japan Open",
     "round": "Rd1",
     "date": "2008-06-12",
     "holes": 27,
@@ -2778,13 +2201,10 @@
         "score": 112,
         "rating": 880
       }
-    },
-    "eventTitle": "The 2008 Japan Open",
-    "id": "the2008japanopen.rd1",
-    "locationTitle": "Nasu Highland Golf Club"
+    }
   },
   {
-    "event": "the2006japanopen",
+    "event": "The 2006 Japan Open",
     "round": "Rd2",
     "date": "2006-06-16",
     "holes": 27,
@@ -2797,13 +2217,10 @@
         "score": 113,
         "rating": 871
       }
-    },
-    "eventTitle": "The 2006 Japan Open",
-    "id": "the2006japanopen.rd2",
-    "locationTitle": "Nasu Highland Golf Club"
+    }
   },
   {
-    "event": "the2006japanopen",
+    "event": "The 2006 Japan Open",
     "round": "Semifinal",
     "date": "2006-06-16",
     "holes": 18,
@@ -2816,13 +2233,10 @@
         "score": 73,
         "rating": 898
       }
-    },
-    "eventTitle": "The 2006 Japan Open",
-    "id": "the2006japanopen.semifinal",
-    "locationTitle": "Nasu Highland Golf Club"
+    }
   },
   {
-    "event": "the2006japanopen",
+    "event": "The 2006 Japan Open",
     "round": "Rd1",
     "date": "2006-06-15",
     "holes": 27,
@@ -2835,9 +2249,6 @@
         "score": 132,
         "rating": 819
       }
-    },
-    "eventTitle": "The 2006 Japan Open",
-    "id": "the2006japanopen.rd1",
-    "locationTitle": "Nasu Highland Golf Club"
+    }
   }
 ]

@@ -1,21 +1,21 @@
 [
   {
-    "title": "The 2022 Japan Open",
-    "location": "fukuicountryclub",
+    "title": "The 2021 Japan Open",
+    "location": "Fukui Country Club",
     "period": {
-      "from": "2022-05-13",
-      "to": "2022-05-20"
+      "from": "2021-05-18",
+      "to": "2021-05-21"
     },
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
-        "url": "https://www.jo-discgolf-fukui-sakai.jp"
+        "title": "Official Site",
+        "url": "http://japanopen.info"
       },
       {
         "type": "website",
-        "title": "Official Site",
-        "url": "https://www.jo-discgolf-fukui-sakai.jp/en/"
+        "title": "Facebook",
+        "url": "https://www.facebook.com/Japan-Open-Disc-Golf-2021-108089080754300/"
       },
       {
         "type": "video",
@@ -24,414 +24,28 @@
       },
       {
         "type": "video",
-        "title": "World Masters Games 2021 Kansai",
-        "url": "https://youtu.be/idqLqIEHGJ0"
-      },
-      {
-        "type": "video",
         "title": "Fukui Country Club",
         "url": "https://youtu.be/G69pnd2qsZQ"
       }
-    ],
-    "id": "the2022japanopen"
-  },
-
-  {
-    "title": "The 21st Chubu Open",
-    "location": "mikawarinkairyokuchi",
-    "period": {
-      "from": "2021-12-18",
-      "to": "2021-12-19"
-    },
-    "jpdga": {
-      "eventId": "581"
-    },
-    "urls": [
-      {
-        "type": "website",
-        "title": "🇯🇵Official Site",
-        "url": "https://aifda.or.jp/event"
-      }
-    ],
-    "id": "the21stchubuopen"
-  },
-  {
-    "title": "The 17th Kyoto Classic",
-    "location": "kyototambapark",
-    "period": {
-      "from": "2021-12-04",
-      "to": "2021-12-05"
-    },
-    "jpdga": {
-      "eventId": "579"
-    },
-    "id": "the17thkyotoclassic"
-  },
-  {
-    "title": "The 35th Kyushu Open",
-    "location": "uminonakamichiseasidepark",
-    "period": {
-      "from": "2021-11-27",
-      "to": "2021-11-28"
-    },
-    "jpdga": {
-      "eventId": "580"
-    },
-    "urls": [
-      {
-        "type": "website",
-        "title": "🇯🇵Official Site",
-        "url": "http://www.jpdgafukuoka.com/blog/?page_id=3478"
-      },
-      {
-        "type": "website",
-        "title": "🇯🇵Facebook",
-        "url": "https://www.facebook.com/discgolfkyushuopen/"
-      }
-    ],
-    "id": "the35thkyushuopen"
-  },
-  {
-    "title": "The 33rd Showa Kinen Park Open",
-    "location": "showakinenpark",
-    "period": {
-      "from": "2021-10-30",
-      "to": "2021-10-31"
-    },
-    "jpdga": {
-      "eventId": "578"
-    },
-    "urls": [
-      {
-        "type": "website",
-        "title": "🇯🇵Official Site",
-        "url": "http://jpdga-tokyo.com/skpo/"
-      }
-    ],
-    "id": "the33rdshowakinenparkopen"
-  },
-  {
-    "title": "The 24th Kansai Open",
-    "location": "fuminnomorihiyoshi",
-    "period": {
-      "from": "2021-10-23",
-      "to": "2021-10-24"
-    },
-    "jpdga": {
-      "eventId": "577"
-    },
-    "id": "the24thkansaiopen"
-  },
-  {
-    "title": "The Amateur Japan National Championship",
-    "location": "fuminnomorihiyoshi",
-    "period": {
-      "from": "2021-10-23",
-      "to": "2021-10-24"
-    },
-    "jpdga": {
-      "eventId": "577"
-    },
-    "id": "theamateurjapannationalchampionship"
-  },
-  {
-    "title": "The 8th Fukui Open",
-    "location": "seasidenaturepark",
-    "period": {
-      "from": "2021-10-16",
-      "to": "2021-10-17"
-    },
-    "jpdga": {
-      "eventId": "576"
-    },
-    "id": "the8thfukuiopen"
-  },
-  {
-    "title": "The 21st Tohoku Open",
-    "location": "mizubayashisportpark",
-    "period": {
-      "from": "2021-10-09",
-      "to": "2021-10-10"
-    },
-    "jpdga": {
-      "eventId": "575"
-    },
-    "id": "the21sttohokuopen"
-  },
-  {
-    "title": "The 33rd Japan National Championship",
-    "location": "maikodiscgolfpark",
-    "period": {
-      "from": "2021-09-19",
-      "to": "2021-09-20"
-    },
-    "jpdga": {
-      "eventId": "573"
-    },
-    "id": "the33rdjapannationalchampionship"
-  },
-  {
-    "title": "The 17th Minamisoma Open",
-    "location": "minamisomahoseridingpark",
-    "period": {
-      "from": "2021-09-18",
-      "to": "2021-09-19"
-    },
-    "jpdga": {
-      "eventId": "572"
-    },
-    "id": "the17thminamisomaopen"
-  },
-  {
-    "title": "The 16th Michinoku Open",
-    "location": "kitakamisportpark",
-    "period": {
-      "from": "2021-08-07",
-      "to": "2021-08-08"
-    },
-    "jpdga": {
-      "eventId": "569"
-    },
-    "urls": [
-      {
-        "type": "website",
-        "title": "🇯🇵Official Site",
-        "url": "http://jpdgaiwate.com"
-      }
-    ],
-    "id": "the15thmichinokuopen"
-  },
-  {
-    "title": "The 25th Kanto Open",
-    "location": "kiyoharakohgyodanchi",
-    "period": {
-      "from": "2021-07-23",
-      "to": "2021-07-25"
-    },
-    "status": "CANCELED",
-    "jpdga": {
-      "eventId": "567"
-    },
-    "urls": [
-      {
-        "type": "website",
-        "title": "🇯🇵Official Site",
-        "url": "http://www.tochigiflyingdisc.com"
-      }
-    ],
-    "id": "the25thkantoopen"
-  },
-  {
-    "title": "The 10th Hokkaido Open",
-    "location": "hunkawanpanolamapark",
-    "period": {
-      "from": "2021-07-03",
-      "to": "2021-07-04"
-    },
-    "status": "CANCELED",
-    "jpdga": {
-      "eventId": "564"
-    },
-    "id": "the10thhokkaidoopen"
-  },
-  {
-    "title": "The 16th Masters National Championship",
-    "location": "hikaritokazenookapark",
-    "period": {
-      "from": "2021-06-26",
-      "to": "2021-06-27"
-    },
-    "status": "CANCELED",
-    "pdga": {
-      "eventId": "51377"
-    },
-    "jpdga": {
-      "eventId": "562"
-    },
-    "id": "the16thmastersnationalchampionship"
-  },
-  {
-    "title": "The 5th Miho Open",
-    "location": "hikaritokazenookapark",
-    "period": {
-      "from": "2021-06-26",
-      "to": "2021-06-27"
-    },
-    "status": "CANCELED",
-    "jpdga": {
-      "eventId": "562"
-    },
-    "id": "the5thmihoopen"
-  },
-  {
-    "title": "The 23rd Nippon Open",
-    "location": "kibougaokaculturalpark",
-    "period": {
-      "from": "2021-06-12",
-      "to": "2021-06-13"
-    },
-    "pdga": {
-      "eventId": "50849"
-    },
-    "jpdga": {
-      "eventId": "561"
-    },
-    "id": "the23rdnipponopen"
-  },
-  {
-    "title": "The 16th Kiyosato-no-mori Open",
-    "location": "kiyosatonomori",
-    "period": {
-      "from": "2021-05-15",
-      "to": "2021-05-16"
-    },
-    "status": "CANCELED",
-    "pdga": {
-      "eventId": "51376"
-    },
-    "jpdga": {
-      "eventId": "560"
-    },
-    "id": "the16thkiyosatonomoriopen"
-  },
-  {
-    "title": "The Woman of Showa Kinen 2021",
-    "location": "showakinenpark",
-    "period": {
-      "from": "2021-05-09",
-      "to": "2021-05-09"
-    },
-    "status": "CANCELED",
-    "pdga": {
-      "eventId": "50786"
-    },
-    "id": "thewomanofshowakinen2021"
-  },
-  {
-    "title": "The 4th Gifu Hirugano Open",
-    "location": "hiruganokogen",
-    "period": {
-      "from": "2021-05-03",
-      "to": "2021-05-04"
-    },
-    "pdga": {
-      "eventId": "50980",
-      "liveScore": "50980"
-    },
-    "jpdga": {
-      "eventId": "559",
-      "topicId": "1542"
-    },
-    "id": "the4thgifuhiruganoopen"
-  },
-  {
-    "title": "The 19th Saga Open",
-    "location": "yoshinogarihistoricalpark",
-    "period": {
-      "from": "2021-04-10",
-      "to": "2021-04-11"
-    },
-    "status": "CANCELED",
-    "jpdga": {
-      "eventId": "558"
-    },
-    "id": "the19thsagaopen"
-  },
-  {
-    "title": "The 2021 National Doubles Championship",
-    "location": "hitachiseasidepark",
-    "period": {
-      "from": "2021-03-06",
-      "to": "2021-03-07"
-    },
-    "jpdga": {
-      "eventId": "555"
-    },
-    "id": "the2021nationaldoubleschampionship"
-  },
-
-  {
-    "title": "The 2021 National Doubles Championship",
-    "location": "hitachiseasidepark",
-    "period": {
-      "from": "2021-03-06",
-      "to": "2021-03-07"
-    },
-    "jpdga": {
-      "eventId": "555"
-    },
-    "id": "the2021nationaldoubleschampionship"
-  },
-  {
-    "title": "The 10th Okinawa Open",
-    "location": "nakijinsonsportpark",
-    "period": {
-      "from": "2021-02-20",
-      "to": "2021-02-21"
-    },
-    "jpdga": {
-      "eventId": "554"
-    },
-    "id": "the10thokinawaopen"
-  },
-  {
-    "title": "The 7th Kagoshima Open",
-    "location": "yoshinopark",
-    "period": {
-      "from": "2021-01-30",
-      "to": "2021-01-31"
-    },
-    "status": "CANCELED",
-    "jpdga": {
-      "eventId": "553"
-    },
-    "id": "the7thkagoshimaopen"
-  },
-  {
-    "title": "The 2021 National Team Championship",
-    "location": "oyamaomoinomoripark",
-    "period": {
-      "from": "2021-01-10",
-      "to": "2021-01-11"
-    },
-    "status": "CANCELED",
-    "jpdga": {
-      "eventId": "552"
-    },
-    "id": "the2021nationalteamchampionship"
+    ]
   },
   {
     "title": "The 20th Chubu Open",
-    "location": "mikawarinkairyokuchi",
+    "location": "Mikawa Rinkai Ryokuchi",
     "period": {
-      "from": "2020-12-19",
-      "to": "2020-12-20"
+      "from": "2020-12-12",
+      "to": "2020-12-13"
     },
     "pdga": {
-      "eventId": "45291",
-      "liveScore": "45291"
+      "eventId": "45291"
     },
     "jpdga": {
-      "eventId": "551",
-      "topicId": "1521"
-    },
-    "players": {
-      "pro": 47,
-      "ama": 18,
-      "misc": 0
-    },
-    "urls": [
-      {
-        "type": "website",
-        "title": "🇯🇵Official Site",
-        "url": "https://aifda.or.jp/event/第20回中部オープンディスクゴルフトーナメント/"
-      }
-    ],
-    "id": "the20thchubuopen"
+      "eventId": "551"
+    }
   },
   {
     "title": "The 34th Kyushu Open",
-    "location": "uminonakamichiseasidepark",
+    "location": "Umino-Nakamichi Seaside Park",
     "period": {
       "from": "2020-11-28",
       "to": "2020-11-29"
@@ -440,61 +54,24 @@
       "eventId": "45290"
     },
     "jpdga": {
-      "eventId": "550",
-      "topicId": "1517"
-    },
-    "players": {
-      "pro": 69,
-      "ama": 21,
-      "misc": 0
+      "eventId": "550"
     },
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
-        "url": "http://www.jpdgafukuoka.com/blog/?page_id=3478"
+        "title": "Official Site 🇯🇵",
+        "url": "http://www.jpdgafukuoka.com/blog/?page_id=3059"
       },
       {
         "type": "website",
-        "title": "🇯🇵Facebook",
+        "title": "Facebook 🇯🇵",
         "url": "https://www.facebook.com/discgolfkyushuopen/"
-      },
-      {
-        "type": "video",
-        "title": "MPO Semifinal R#1 Lead Card",
-        "url": "https://youtu.be/KCsb1Wd_mMU"
-      },
-      {
-        "type": "video",
-        "title": "MPO Semifinal R#2 Lead Card",
-        "url": "https://youtu.be/UFrBgW9XgCY"
-      },
-      {
-        "type": "video",
-        "title": "MPO Semifinal R#3 Lead Card",
-        "url": "https://youtu.be/p7Hv7dae1pw"
-      },
-      {
-        "type": "video",
-        "title": "MPO Final R#1 Lead Card",
-        "url": "https://youtu.be/9R56LbdjLE0"
-      },
-      {
-        "type": "video",
-        "title": "MPO Final R#2 Lead Card",
-        "url": "https://youtu.be/S-Z80EHJqDM"
-      },
-      {
-        "type": "video",
-        "title": "MPO Final R#3 Lead Card",
-        "url": "https://youtu.be/kiUYR3j-neE"
       }
-    ],
-    "id": "the34thkyushuopen"
+    ]
   },
   {
     "title": "The 16th Kyoto Classic",
-    "location": "kyototambapark",
+    "location": "Kyoto Tamba Park",
     "period": {
       "from": "2020-11-21",
       "to": "2020-11-22"
@@ -503,71 +80,58 @@
       "eventId": "45289"
     },
     "jpdga": {
-      "eventId": "549",
-      "topicId": "1514"
-    },
-    "players": {
-      "pro": 24,
-      "ama": 9,
-      "misc": 0
-    },
-    "id": "the16thkyotoclassic"
+      "eventId": "549"
+    }
   },
   {
     "title": "The 2020 Showa Kinen Park Open",
-    "location": "showakinenpark",
+    "location": "Showa Kinen Park",
     "period": {
       "from": "2020-10-31",
       "to": "2020-11-03"
     },
-    "status": "CANCELED",
     "jpdga": {
       "eventId": "548"
     },
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site 🇯🇵",
         "url": "http://jpdga-tokyo.com/skpo/"
       }
-    ],
-    "id": "the2020showakinenparkopen"
+    ]
   },
   {
     "title": "The 7th Fukui Open",
-    "location": "seasidenaturepark",
+    "location": "Seaside Nature Park",
     "period": {
       "from": "2020-10-17",
       "to": "2020-10-18"
     },
-    "status": "CANCELED",
     "pdga": {
       "eventId": "45280"
     },
     "jpdga": {
       "eventId": "530"
-    },
-    "id": "the7thfukuiopen"
+    }
   },
   {
     "title": "The 20th Tohoku Open",
-    "location": "mizubayashisportpark",
+    "location": "Mizubayashi Sport Park",
     "period": {
       "from": "2020-10-10",
       "to": "2020-10-11"
     },
-    "status": "CANCELED",
     "pdga": {
       "eventId": "45288"
     },
     "jpdga": {
       "eventId": "547"
-    },
-    "id": "the20thtohokuopen"
+    }
   },
   {
     "title": "The 32nd Japan National Championship",
-    "location": "maikodiscgolfpark",
+    "location": "Maiko Disc Golf Park",
     "period": {
       "from": "2020-09-20",
       "to": "2020-09-21"
@@ -577,34 +141,11 @@
     },
     "jpdga": {
       "eventId": "545"
-    },
-    "players": {
-      "pro": 54,
-      "ama": 8,
-      "misc": 0
-    },
-    "urls": [
-      {
-        "type": "video",
-        "title": "MPO Final9, Lead Card",
-        "url": "https://youtu.be/ozOzKB8pykE"
-      },
-      {
-        "type": "video",
-        "title": "MPO Semifinal9, Lead Card",
-        "url": "https://youtu.be/sh0K-uWEjfw"
-      },
-      {
-        "type": "video",
-        "title": "MPO Back9@Round#3, Lead Card",
-        "url": "https://youtu.be/ja-e7zKCWeo"
-      }
-    ],
-    "id": "the32ndjapannationalchampionship"
+    }
   },
   {
     "title": "The 23rd Kansai Open",
-    "location": "fuminnomorihiyoshi",
+    "location": "Fumin-no-Mori Hiyoshi",
     "period": {
       "from": "2020-09-05",
       "to": "2020-09-06"
@@ -614,49 +155,11 @@
     },
     "jpdga": {
       "eventId": "544"
-    },
-    "players": {
-      "pro": 28,
-      "ama": 15,
-      "misc": 0
-    },
-    "urls": [
-      {
-        "type": "website",
-        "title": "🇯🇵Official Site",
-        "url": "https://www.facebook.com/kansaiopen.discgolf/"
-      },
-      {
-        "type": "video",
-        "title": "MPO Final9, Lead Card",
-        "url": "https://youtu.be/sMON_haPr5A"
-      },
-      {
-        "type": "video",
-        "title": "MPO Semifinal9, Lead Card",
-        "url": "https://youtu.be/rkNEJYPIX8s"
-      },
-      {
-        "type": "video",
-        "title": "MPO Back9@Round#3, Lead Card",
-        "url": "https://youtu.be/A8fE3jJdBG8"
-      },
-      {
-        "type": "video",
-        "title": "MPO Front9@Round#3, Lead Card",
-        "url": "https://youtu.be/uErY-KoGGS4"
-      },
-      {
-        "type": "video",
-        "title": "MPO Back9@Round#2, Lead Card",
-        "url": "https://youtu.be/6227GpMlgqo"
-      }
-    ],
-    "id": "the23rdkansaiopen"
+    }
   },
   {
     "title": "The 15th Michinoku Open",
-    "location": "kitakamisportpark",
+    "location": "Kitakami Sport Park",
     "period": {
       "from": "2020-08-09",
       "to": "2020-08-10"
@@ -671,31 +174,28 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site 🇯🇵",
         "url": "http://jpdgaiwate.com"
       }
-    ],
-    "id": "the15thmichinokuopen"
+    ]
   },
   {
     "title": "The 22nd Nippon Open",
-    "location": "uminonakamichiseasidepark",
+    "location": "Umino-Nakamichi Seaside Park",
     "period": {
       "from": "2020-08-01",
       "to": "2020-08-02"
     },
-    "status": "CANCELED",
     "pdga": {
       "eventId": "45284"
     },
     "jpdga": {
       "eventId": "541"
-    },
-    "id": "the22ndnipponopen"
+    }
   },
   {
     "title": "The 24th Kanto Open",
-    "location": "kiyoharakohgyodanchi",
+    "location": "Kiyohara Kohgyo Danchi",
     "period": {
       "from": "2020-07-24",
       "to": "2020-07-26"
@@ -710,73 +210,75 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site 🇯🇵",
         "url": "http://www.tochigiflyingdisc.com"
       }
-    ],
-    "id": "the24thkantoopen"
+    ]
+  },
+  {
+    "title": "The 20th Niigata Open",
+    "location": "Echigo Hillside Park",
+    "period": {
+      "from": "2020-07-19",
+      "to": "2020-07-19"
+    },
+    "jpdga": {
+      "eventId": "540"
+    }
   },
   {
     "title": "The 9th Hokkaido Open",
-    "location": "hunkawanpanolamapark",
+    "location": "Hunka-wan Panolama Park",
     "period": {
       "from": "2020-07-04",
       "to": "2020-07-05"
     },
-    "status": "CANCELED",
     "pdga": {
       "eventId": "45282"
     },
     "jpdga": {
       "eventId": "535"
-    },
-    "id": "the9thhokkaidoopen"
+    }
   },
   {
     "title": "The 15th Masters National Championship",
-    "location": "hikaritokazenookapark",
+    "location": "Hikari-to-Kaze-no-Oka Park",
     "period": {
       "from": "2020-06-27",
       "to": "2020-06-28"
     },
-    "status": "CANCELED",
     "pdga": {
       "eventId": "45281"
     },
     "jpdga": {
       "eventId": "534"
-    },
-    "id": "the15thmastersnationalchampionship"
+    }
   },
   {
     "title": "The 4th Miho Open",
-    "location": "hikaritokazenookapark",
+    "location": "Hikari-to-Kaze-no-Oka Park",
     "period": {
       "from": "2020-06-27",
       "to": "2020-06-28"
     },
-    "status": "CANCELED",
     "jpdga": {
       "eventId": "534"
-    },
-    "id": "the4thmihoopen"
+    }
   },
   {
     "title": "The 2nd PWBF Cup",
-    "location": "picaactivitypark",
+    "location": "PICA Activity Park",
     "period": {
       "from": "2020-06-13",
       "to": "2020-06-14"
     },
-    "status": "CANCELED",
     "jpdga": {
       "eventId": "532"
-    },
-    "id": "the2ndpwbfcup"
+    }
   },
   {
     "title": "The 15th Kiyosato-no-mori Open",
-    "location": "kiyosatonomori",
+    "location": "Kiyosato-no-mori",
     "period": {
       "from": "2020-05-16",
       "to": "2020-05-17"
@@ -787,12 +289,11 @@
     },
     "jpdga": {
       "eventId": "529"
-    },
-    "id": "the15thkiyosatonomoriopen"
+    }
   },
   {
     "title": "The 3rd Gifu Hirugano Open",
-    "location": "hiruganokogen",
+    "location": "Hirugano Kogen",
     "period": {
       "from": "2020-05-04",
       "to": "2020-05-05"
@@ -803,12 +304,11 @@
     },
     "jpdga": {
       "eventId": "527"
-    },
-    "id": "the3rdgifuhiruganoopen"
+    }
   },
   {
     "title": "The 16th Minamisoma Open",
-    "location": "minamisomahoseridingpark",
+    "location": "Minamisoma Hose Riding Park",
     "period": {
       "from": "2020-05-03",
       "to": "2020-05-04"
@@ -816,12 +316,11 @@
     "status": "CANCELED",
     "jpdga": {
       "eventId": "528"
-    },
-    "id": "the16thminamisomaopen"
+    }
   },
   {
     "title": "The 18th Saga Open",
-    "location": "yoshinogarihistoricalpark",
+    "location": "Yoshinogari Historical Park",
     "period": {
       "from": "2020-04-11",
       "to": "2020-04-12"
@@ -832,12 +331,11 @@
     },
     "jpdga": {
       "eventId": "526"
-    },
-    "id": "the18thsagaopen"
+    }
   },
   {
     "title": "The 3rd Miyagi Michinoku Open",
-    "location": "michinokupark",
+    "location": "Michinoku Park",
     "period": {
       "from": "2020-03-21",
       "to": "2020-03-22"
@@ -845,12 +343,11 @@
     "status": "CANCELED",
     "jpdga": {
       "eventId": "525"
-    },
-    "id": "the3rdmiyagimichinokuopen"
+    }
   },
   {
     "title": "The 2020 National Doubles Championship",
-    "location": "hitachiseasidepark",
+    "location": "Hitachi Seaside Park",
     "period": {
       "from": "2020-02-29",
       "to": "2020-03-01"
@@ -862,12 +359,11 @@
       "eventId": "522",
       "topicId": "1460",
       "photoId": "72157713382818823"
-    },
-    "id": "the2020nationaldoubleschampionship"
+    }
   },
   {
     "title": "The 9th Okinawa Open",
-    "location": "nakijinsonsportpark",
+    "location": "Nakijinson Sport Park",
     "period": {
       "from": "2020-02-15",
       "to": "2020-02-16"
@@ -884,12 +380,11 @@
       "pro": 35,
       "ama": 8,
       "misc": 17
-    },
-    "id": "the9thokinawaopen"
+    }
   },
   {
     "title": "The 6th Kagoshima Open",
-    "location": "yoshinopark",
+    "location": "Yoshino Park",
     "period": {
       "from": "2020-01-25",
       "to": "2020-01-26"
@@ -906,12 +401,11 @@
       "pro": 22,
       "ama": 26,
       "misc": 2
-    },
-    "id": "the6thkagoshimaopen"
+    }
   },
   {
     "title": "The 2020 National Team Championship",
-    "location": "oyamaomoinomoripark",
+    "location": "Oyama Omoi-no-Mori Park",
     "period": {
       "from": "2020-01-12",
       "to": "2020-01-13"
@@ -925,12 +419,11 @@
       "pro": 28,
       "ama": 36,
       "misc": 0
-    },
-    "id": "the2020nationalteamchampionship"
+    }
   },
   {
     "title": "The 19th Chubu Open",
-    "location": "mikawarinkairyokuchi",
+    "location": "Mikawa Rinkai Ryokuchi",
     "period": {
       "from": "2019-12-14",
       "to": "2019-12-15"
@@ -956,15 +449,14 @@
       },
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site 🇯🇵",
         "url": "https://aifda.or.jp/news/第19回-中部オープン-ディスクゴルフトーナメント/"
       }
-    ],
-    "id": "the19thchubuopen"
+    ]
   },
   {
     "title": "The 33rd Kyushu Open",
-    "location": "uminonakamichiseasidepark",
+    "location": "Umino-Nakamichi Seaside Park",
     "period": {
       "from": "2019-11-30",
       "to": "2019-12-01"
@@ -985,12 +477,12 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site 🇯🇵",
         "url": "http://www.jpdgafukuoka.com/blog/?page_id=3059"
       },
       {
         "type": "website",
-        "title": "🇯🇵Facebook",
+        "title": "Facebook 🇯🇵",
         "url": "https://www.facebook.com/discgolfkyushuopen/"
       },
       {
@@ -998,12 +490,11 @@
         "title": "Kyushu Open Digest",
         "url": "https://www.facebook.com/jpdgafukuoka/videos/2407132446205586/"
       }
-    ],
-    "id": "the33rdkyushuopen"
+    ]
   },
   {
     "title": "The 15th Kyoto Classic",
-    "location": "kyototambapark",
+    "location": "Kyoto Tamba Park",
     "period": {
       "from": "2019-11-16",
       "to": "2019-11-17"
@@ -1020,12 +511,11 @@
       "pro": 24,
       "ama": 17,
       "misc": 0
-    },
-    "id": "the15thkyotoclassic"
+    }
   },
   {
     "title": "The 31st Showa Kinen Park Open",
-    "location": "showakinenpark",
+    "location": "Showa Kinen Park",
     "period": {
       "from": "2019-11-02",
       "to": "2019-11-04"
@@ -1042,15 +532,14 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site 🇯🇵",
         "url": "http://jpdga-tokyo.com/skpo/"
       }
-    ],
-    "id": "the31stshowakinenparkopen"
+    ]
   },
   {
     "title": "The 19th Tohoku Open",
-    "location": "mizubayashisportpark",
+    "location": "Mizubayashi Sport Park",
     "period": {
       "from": "2019-10-13",
       "to": "2019-10-14"
@@ -1066,12 +555,11 @@
       "pro": 18,
       "ama": 13,
       "misc": 0
-    },
-    "id": "the19thtohokuopen"
+    }
   },
   {
     "title": "The 4th Miho Open",
-    "location": "hikaritokazenookapark",
+    "location": "Hikari-to-Kaze-no-Oka Park",
     "period": {
       "from": "2019-09-28",
       "to": "2019-09-29"
@@ -1085,12 +573,11 @@
       "pro": 14,
       "ama": 94,
       "misc": 11
-    },
-    "id": "the4thmihoopen"
+    }
   },
   {
     "title": "The 31st Japan National Championship",
-    "location": "maikodiscgolfpark",
+    "location": "Maiko Disc Golf Park",
     "period": {
       "from": "2019-09-22",
       "to": "2019-09-23"
@@ -1113,12 +600,11 @@
         "title": "MPO Final9 Lead Card",
         "url": "https://www.facebook.com/kinoshi.minoru.ta/videos/2473383436079193/"
       }
-    ],
-    "id": "the31stjapannationalchampionship"
+    ]
   },
   {
     "title": "The 22nd Kansai Open",
-    "location": "fuminnomorihiyoshi",
+    "location": "Fumin-no-Mori Hiyoshi",
     "period": {
       "from": "2019-08-31",
       "to": "2019-09-01"
@@ -1134,12 +620,11 @@
       "pro": 21,
       "ama": 20,
       "misc": 0
-    },
-    "id": "the22ndkansaiopen"
+    }
   },
   {
     "title": "The 8th Hirugano Kogen Tournament",
-    "location": "hiruganokogen",
+    "location": "Hirugano Kogen",
     "period": {
       "from": "2019-08-25",
       "to": "2019-08-26"
@@ -1153,12 +638,11 @@
       "pro": 15,
       "ama": 12,
       "misc": 0
-    },
-    "id": "the8thhiruganokogentournament"
+    }
   },
   {
     "title": "The 14th Michinoku Open",
-    "location": "kitakamisportpark",
+    "location": "Kitakami Sport Park",
     "period": {
       "from": "2019-08-11",
       "to": "2019-08-12"
@@ -1184,15 +668,14 @@
       },
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site 🇯🇵",
         "url": "http://jpdgaiwate.com"
       }
-    ],
-    "id": "the14thmichinokuopen"
+    ]
   },
   {
     "title": "The 7th Asia Championship",
-    "location": "uminonakamichiseasidepark",
+    "location": "Umino-Nakamichi Seaside Park",
     "period": {
       "from": "2019-08-03",
       "to": "2019-08-04"
@@ -1223,15 +706,14 @@
       },
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site 🇯🇵",
         "url": "http://www.jpdgafukuoka.com/blog/?page_id=2861"
       }
-    ],
-    "id": "the7thasiachampionship"
+    ]
   },
   {
     "title": "The 23rd Kanto Open",
-    "location": "kiyoharakohgyodanchi",
+    "location": "Kiyohara Kohgyo Danchi",
     "period": {
       "from": "2019-07-14",
       "to": "2019-07-15"
@@ -1257,15 +739,14 @@
       },
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site 🇯🇵",
         "url": "http://www.tochigiflyingdisc.com"
       }
-    ],
-    "id": "the23rdkantoopen"
+    ]
   },
   {
     "title": "The 8th Hokkaido Open",
-    "location": "hunkawanpanolamapark",
+    "location": "Hunka-wan Panolama Park",
     "period": {
       "from": "2019-06-29",
       "to": "2019-06-30"
@@ -1282,12 +763,11 @@
       "pro": 20,
       "ama": 7,
       "misc": 5
-    },
-    "id": "the8thhokkaidoopen"
+    }
   },
   {
     "title": "The 14th Masters National Championship",
-    "location": "hikaritokazenookapark",
+    "location": "Hikari-to-Kaze-no-Oka Park",
     "period": {
       "from": "2019-06-22",
       "to": "2019-06-23"
@@ -1311,12 +791,11 @@
         "title": "Final9 Lead Card",
         "url": "https://www.facebook.com/kinoshi.minoru.ta/videos/2307136169370588/"
       }
-    ],
-    "id": "the14thmastersnationalchampionship"
+    ]
   },
   {
     "title": "The 21st Nippon Open",
-    "location": "seasidenaturepark",
+    "location": "Seaside Nature Park",
     "period": {
       "from": "2019-05-25",
       "to": "2019-05-26"
@@ -1346,15 +825,14 @@
       },
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site 🇯🇵",
         "url": "http://www.sukima-labo.com/dg291/"
       }
-    ],
-    "id": "the21stnipponopen"
+    ]
   },
   {
     "title": "The 14th Kiyosato-no-mori Open",
-    "location": "kiyosatonomori",
+    "location": "Kiyosato-no-mori",
     "period": {
       "from": "2019-05-18",
       "to": "2019-05-19"
@@ -1371,12 +849,11 @@
       "pro": 33,
       "ama": 10,
       "misc": 2
-    },
-    "id": "the14thkiyosatonomoriopen"
+    }
   },
   {
     "title": "The 2nd Gifu Hirugano Open",
-    "location": "hiruganokogen",
+    "location": "Hirugano Kogen",
     "period": {
       "from": "2019-05-04",
       "to": "2019-05-05"
@@ -1393,12 +870,11 @@
       "pro": 22,
       "ama": 12,
       "misc": 9
-    },
-    "id": "the2ndgifuhiruganoopen"
+    }
   },
   {
     "title": "The 15th Minamisoma Open",
-    "location": "minamisomahoseridingpark",
+    "location": "Minamisoma Hose Riding Park",
     "period": {
       "from": "2019-05-04",
       "to": "2019-05-05"
@@ -1410,12 +886,11 @@
       "pro": 64,
       "ama": 0,
       "misc": 0
-    },
-    "id": "the15thminamisomaopen"
+    }
   },
   {
     "title": "The 17th Saga Open",
-    "location": "yoshinogarihistoricalpark",
+    "location": "Yoshinogari Historical Park",
     "period": {
       "from": "2019-04-13",
       "to": "2019-04-14"
@@ -1431,12 +906,11 @@
       "pro": 37,
       "ama": 18,
       "misc": 0
-    },
-    "id": "the17thsagaopen"
+    }
   },
   {
     "title": "The 1st PWBF Cup",
-    "location": "picaactivitypark",
+    "location": "PICA Activity Park",
     "period": {
       "from": "2019-04-13",
       "to": "2019-04-14"
@@ -1444,12 +918,11 @@
     "status": "CANCELED",
     "jpdga": {
       "eventId": "494"
-    },
-    "id": "the1stpwbfcup"
+    }
   },
   {
     "title": "The 2nd Miyagi Michinoku Open",
-    "location": "michinokupark",
+    "location": "Michinoku Park",
     "period": {
       "from": "2019-03-23",
       "to": "2019-03-24"
@@ -1464,12 +937,11 @@
       "pro": 27,
       "ama": 17,
       "misc": 0
-    },
-    "id": "the2ndmiyagimichinokuopen"
+    }
   },
   {
     "title": "The 2019 National Doubles Championship",
-    "location": "hitachiseasidepark",
+    "location": "Hitachi Seaside Park",
     "period": {
       "from": "2019-03-02",
       "to": "2019-03-03"
@@ -1486,12 +958,11 @@
       "pro": 28,
       "ama": 36,
       "misc": 0
-    },
-    "id": "the2019nationaldoubleschampionship"
+    }
   },
   {
     "title": "The 8th Okinawa Open",
-    "location": "nakijinsonsportpark",
+    "location": "Nakijinson Sport Park",
     "period": {
       "from": "2019-02-16",
       "to": "2019-02-17"
@@ -1507,19 +978,11 @@
       "pro": 36,
       "ama": 9,
       "misc": 18
-    },
-    "urls": [
-      {
-        "type": "video",
-        "title": "Okikatsu TV!!",
-        "url": "https://youtu.be/6VqXYBvMncY"
-      }
-    ],
-    "id": "the8thokinawaopen"
+    }
   },
   {
     "title": "The 5th Kagoshima Open",
-    "location": "yoshinopark",
+    "location": "Yoshino Park",
     "period": {
       "from": "2019-01-26",
       "to": "2019-01-27"
@@ -1539,15 +1002,14 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵KAZUO's Room",
+        "title": "KAZUO's Room 🇯🇵",
         "url": "http://tatsumidgc.com/2019/03/post-1369/"
       }
-    ],
-    "id": "the5thkagoshimaopen"
+    ]
   },
   {
     "title": "The 2019 National Team Championship",
-    "location": "oyamaomoinomoripark",
+    "location": "Oyama Omoinomori Park",
     "period": {
       "from": "2019-01-13",
       "to": "2019-01-14"
@@ -1564,12 +1026,11 @@
       "pro": 32,
       "ama": 24,
       "misc": 0
-    },
-    "id": "the2019nationalteamchampionship"
+    }
   },
   {
     "title": "The 18th Chubu Open",
-    "location": "mikawarinkairyokuchi",
+    "location": "Mikawa Rinkai Ryokuchi",
     "period": {
       "from": "2018-12-15",
       "to": "2018-12-16"
@@ -1586,12 +1047,11 @@
       "pro": 42,
       "ama": 20,
       "misc": 0
-    },
-    "id": "the18thchubuopen"
+    }
   },
   {
     "title": "The 32nd Kyushu Open",
-    "location": "uminonakamichiseasidepark",
+    "location": "Umino-Nakamichi Seaside Park",
     "period": {
       "from": "2018-12-01",
       "to": "2018-12-02"
@@ -1611,15 +1071,14 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site 🇯🇵",
         "url": "http://www.jpdgafukuoka.com/blog/?page_id=2146"
       }
-    ],
-    "id": "the32ndkyushuopen"
+    ]
   },
   {
     "title": "The 14th Kyoto Classic",
-    "location": "kyototambapark",
+    "location": "Kyoto Tamba Park",
     "period": {
       "from": "2018-11-17",
       "to": "2018-11-18"
@@ -1635,12 +1094,11 @@
       "pro": 18,
       "ama": 24,
       "misc": 0
-    },
-    "id": "the14thkyotoclassic"
+    }
   },
   {
     "title": "The 2018 Showa Kinen Park Open",
-    "location": "showakinenpark",
+    "location": "Showa Kinen Park",
     "period": {
       "from": "2018-11-17",
       "to": "2018-11-18"
@@ -1656,25 +1114,24 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site 🇯🇵",
         "url": "http://jpdga-tokyo.com/skpo/"
       },
       {
         "type": "website",
-        "title": "🇯🇵Results(2Days)",
+        "title": "Results(2Days) 🇯🇵",
         "url": "https://www.facebook.com/pg/showakinenparkopen/photos/?tab=album&album_id=683308612050143"
       },
       {
         "type": "website",
-        "title": "🇯🇵Results(1Days)",
+        "title": "Results(1Days) 🇯🇵",
         "url": "https://www.facebook.com/pg/showakinenparkopen/photos/?tab=album&album_id=683294415384896"
       }
-    ],
-    "id": "the2018showakinenparkopen"
+    ]
   },
   {
     "title": "The 1st PICA Activity Cup",
-    "location": "picaactivitypark",
+    "location": "PICA Activity Park",
     "period": {
       "from": "2018-10-14",
       "to": "2018-10-14"
@@ -1686,12 +1143,11 @@
       "pro": 14,
       "ama": 11,
       "misc": 0
-    },
-    "id": "the1stpicaactivitycup"
+    }
   },
   {
     "title": "The 18th Tohoku Open",
-    "location": "mizubayashisportpark",
+    "location": "Mizubayashi Sport Park",
     "period": {
       "from": "2018-10-07",
       "to": "2018-10-08"
@@ -1711,15 +1167,14 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵KAZUO's Room",
+        "title": "KAZUO's Room 🇯🇵",
         "url": "http://tatsumidgc.com/2019/01/post-1330/"
       }
-    ],
-    "id": "the18thtohokuopen"
+    ]
   },
   {
     "title": "The 30th Japan National Championship",
-    "location": "maikodiscgolfpark",
+    "location": "Maiko Disc Golf Park",
     "period": {
       "from": "2018-09-16",
       "to": "2018-09-17"
@@ -1742,12 +1197,11 @@
         "title": "MPO Final9",
         "url": "https://youtu.be/0sYuYTpk-Ss"
       }
-    ],
-    "id": "the30thjapannationalchampionship"
+    ]
   },
   {
     "title": "The 21st Kansai Open",
-    "location": "fuminnomorihiyoshi",
+    "location": "Fumin-no-Mori Hiyoshi",
     "period": {
       "from": "2018-09-08",
       "to": "2018-09-09"
@@ -1763,12 +1217,11 @@
       "pro": 19,
       "ama": 26,
       "misc": 0
-    },
-    "id": "the21stkansaiopen"
+    }
   },
   {
     "title": "The 7th Hirugano Kogen Tournament",
-    "location": "hiruganokogen",
+    "location": "Hirugano Kogen",
     "period": {
       "from": "2018-08-26",
       "to": "2018-08-26"
@@ -1783,12 +1236,11 @@
       "pro": 19,
       "ama": 7,
       "misc": 0
-    },
-    "id": "the7thhiruganokogentournament"
+    }
   },
   {
     "title": "The 13th Michinoku Open",
-    "location": "kitakamisportpark",
+    "location": "Kitakami Sport Park",
     "period": {
       "from": "2018-08-18",
       "to": "2018-08-19"
@@ -1805,12 +1257,11 @@
       "pro": 36,
       "ama": 26,
       "misc": 0
-    },
-    "id": "the13thmichinokuopen"
+    }
   },
   {
     "title": "The 22nd Kanto Open",
-    "location": "kiyoharakohgyodanchi",
+    "location": "Kiyohara Kohgyo Danchi",
     "period": {
       "from": "2018-07-14",
       "to": "2018-07-15"
@@ -1827,12 +1278,11 @@
       "pro": 51,
       "ama": 37,
       "misc": 2
-    },
-    "id": "the22ndkantoopen"
+    }
   },
   {
     "title": "The 7th Hokkaido Open",
-    "location": "hunkawanpanolamapark",
+    "location": "Hunka-wan Panolama Park",
     "period": {
       "from": "2018-06-30",
       "to": "2018-07-01"
@@ -1849,12 +1299,11 @@
       "pro": 15,
       "ama": 4,
       "misc": 7
-    },
-    "id": "the7thhokkaidoopen"
+    }
   },
   {
     "title": "The 13th Masters National Championship",
-    "location": "hikaritokazenookapark",
+    "location": "Hikari-to-Kaze-no-Oka Park",
     "period": {
       "from": "2018-06-23",
       "to": "2018-06-24"
@@ -1871,12 +1320,11 @@
       "pro": 33,
       "ama": 15,
       "misc": 0
-    },
-    "id": "the13thmastersnationalchampionship"
+    }
   },
   {
     "title": "The 20th Nippon Open",
-    "location": "seasidenaturepark",
+    "location": "Seaside Nature Park",
     "period": {
       "from": "2018-05-26",
       "to": "2018-05-27"
@@ -1899,12 +1347,11 @@
         "title": "Photos",
         "url": "https://www.facebook.com/pg/jpdga/photos/?tab=album&album_id=1749953598383774"
       }
-    ],
-    "id": "the20thnipponopen"
+    ]
   },
   {
     "title": "The 13th Kiyosato-no-mori Open",
-    "location": "kiyosatonomori",
+    "location": "Kiyosato-no-mori",
     "period": {
       "from": "2018-05-19",
       "to": "2018-05-20"
@@ -1921,12 +1368,11 @@
       "pro": 35,
       "ama": 13,
       "misc": 2
-    },
-    "id": "the13thkiyosatonomoriopen"
+    }
   },
   {
     "title": "The 1st Gifu Hirugano Open",
-    "location": "hiruganokogen",
+    "location": "Hirugano Kogen",
     "period": {
       "from": "2018-05-04",
       "to": "2018-05-05"
@@ -1943,12 +1389,11 @@
       "pro": 26,
       "ama": 15,
       "misc": 0
-    },
-    "id": "the1stgifuhiruganoopen"
+    }
   },
   {
     "title": "The 14th Minamisoma Open",
-    "location": "minamisomahoseridingpark",
+    "location": "Minamisoma Hose Riding Park",
     "period": {
       "from": "2018-05-04",
       "to": "2018-05-05"
@@ -1960,12 +1405,11 @@
       "pro": 0,
       "ama": 0,
       "misc": 64
-    },
-    "id": "the14thminamisomaopen"
+    }
   },
   {
     "title": "The 29th Tokyo Open",
-    "location": "tatsuminomoriseasidepark",
+    "location": "Tatsumi-no-Mori Seaside Park",
     "period": {
       "from": "2018-04-21",
       "to": "2018-04-22"
@@ -1982,12 +1426,11 @@
       "pro": 37,
       "ama": 29,
       "misc": 3
-    },
-    "id": "the29thtokyoopen"
+    }
   },
   {
     "title": "The 16th Saga Open",
-    "location": "yoshinogarihistoricalpark",
+    "location": "Yoshinogari Historical Park",
     "period": {
       "from": "2018-04-14",
       "to": "2018-04-15"
@@ -2003,12 +1446,11 @@
       "pro": 38,
       "ama": 18,
       "misc": 0
-    },
-    "id": "the16thsagaopen"
+    }
   },
   {
     "title": "The 1st Miyagi Michinoku Open",
-    "location": "michinokupark",
+    "location": "Michinoku Park",
     "period": {
       "from": "2018-03-24",
       "to": "2018-03-25"
@@ -2024,12 +1466,11 @@
       "pro": 26,
       "ama": 26,
       "misc": 0
-    },
-    "id": "the1stmiyagimichinokuopen"
+    }
   },
   {
     "title": "The 2018 National Doubles Championship",
-    "location": "hitachiseasidepark",
+    "location": "Hitachi Seaside Park",
     "period": {
       "from": "2018-03-03",
       "to": "2018-03-04"
@@ -2046,12 +1487,11 @@
       "pro": 30,
       "ama": 34,
       "misc": 2
-    },
-    "id": "the2018nationaldoubleschampionship"
+    }
   },
   {
     "title": "The 7th Okinawa Open",
-    "location": "nakijinsonsportpark",
+    "location": "Nakijinson Sport Park",
     "period": {
       "from": "2018-02-17",
       "to": "2018-02-18"
@@ -2068,12 +1508,11 @@
       "pro": 28,
       "ama": 10,
       "misc": 17
-    },
-    "id": "the7thokinawaopen"
+    }
   },
   {
     "title": "The 2018 National Team Championship",
-    "location": "oyamaomoinomoripark",
+    "location": "Oyama Omoinomori Park",
     "period": {
       "from": "2018-01-07",
       "to": "2018-01-08"
@@ -2090,12 +1529,11 @@
       "pro": 52,
       "ama": 40,
       "misc": 0
-    },
-    "id": "the2018nationalteamchampionship"
+    }
   },
   {
     "title": "The 17th Chubu Open",
-    "location": "mikawarinkairyokuchi",
+    "location": "Mikawa Rinkai Ryokuchi",
     "period": {
       "from": "2017-12-16",
       "to": "2017-12-17"
@@ -2112,12 +1550,11 @@
       "pro": 40,
       "ama": 27,
       "misc": 0
-    },
-    "id": "the17thchubuopen"
+    }
   },
   {
     "title": "The 31st Kyushu Open",
-    "location": "uminonakamichiseasidepark",
+    "location": "Umino-Nakamichi Seaside Park",
     "period": {
       "from": "2017-12-02",
       "to": "2017-12-03"
@@ -2132,12 +1569,11 @@
       "pro": 34,
       "ama": 22,
       "misc": 2
-    },
-    "id": "the31stkyushuopen"
+    }
   },
   {
     "title": "The 13th Kyoto Classic",
-    "location": "kyototambapark",
+    "location": "Kyoto Tamba Park",
     "period": {
       "from": "2017-11-18",
       "to": "2017-11-19"
@@ -2153,12 +1589,11 @@
       "pro": 23,
       "ama": 22,
       "misc": 0
-    },
-    "id": "the13thkyotoclassic"
+    }
   },
   {
     "title": "The 2017 Showa Kinen Park Open",
-    "location": "showakinenpark",
+    "location": "Showa Kinen Park",
     "period": {
       "from": "2017-11-03",
       "to": "2017-11-05"
@@ -2174,15 +1609,14 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site 🇯🇵",
         "url": "http://jpdga-tokyo.com/skpo/"
       }
-    ],
-    "id": "the2017showakinenparkopen"
+    ]
   },
   {
     "title": "The 17th Tohoku Open",
-    "location": "mizubayashisportpark",
+    "location": "Mizubayashi Sport Park",
     "period": {
       "from": "2017-10-08",
       "to": "2017-10-09"
@@ -2199,12 +1633,11 @@
       "eventId": "443",
       "topicId": "1244",
       "photoId": "72157686125720072"
-    },
-    "id": "the17thtohokuopen"
+    }
   },
   {
     "title": "The 29th Japan National Championship",
-    "location": "maikodiscgolfpark",
+    "location": "Maiko Disc Golf Park",
     "period": {
       "from": "2017-09-17",
       "to": "2017-09-18"
@@ -2221,12 +1654,11 @@
       "pro": 53,
       "ama": 32,
       "misc": 0
-    },
-    "id": "the29thjapannationalchampionship"
+    }
   },
   {
     "title": "The 20th Kansai Open",
-    "location": "fuminnomorihiyoshi",
+    "location": "Fumin-no-Mori Hiyoshi",
     "period": {
       "from": "2017-09-02",
       "to": "2017-09-03"
@@ -2242,12 +1674,11 @@
       "pro": 23,
       "ama": 37,
       "misc": 0
-    },
-    "id": "the20thkansaiopen"
+    }
   },
   {
     "title": "The 12th Michinoku Open",
-    "location": "kitakamisportpark",
+    "location": "Kitakami Sport Park",
     "period": {
       "from": "2017-08-05",
       "to": "2017-08-06"
@@ -2264,12 +1695,11 @@
       "pro": 42,
       "ama": 31,
       "misc": 0
-    },
-    "id": "the12thmichinokuopen"
+    }
   },
   {
     "title": "The 4th Kagoshima Open",
-    "location": "yoshinopark",
+    "location": "Yoshino Park",
     "period": {
       "from": "2017-07-29",
       "to": "2017-07-30"
@@ -2286,12 +1716,11 @@
       "pro": 30,
       "ama": 32,
       "misc": 0
-    },
-    "id": "the4thkagoshimaopen"
+    }
   },
   {
     "title": "The 17th Niigata Open",
-    "location": "kiyotsugawafleshpark",
+    "location": "Kiyotsu-gawa Flesh Park",
     "period": {
       "from": "2017-07-17",
       "to": "2017-07-17"
@@ -2305,12 +1734,11 @@
       "pro": 0,
       "ama": 0,
       "misc": 27
-    },
-    "id": "the17thniigataopen"
+    }
   },
   {
     "title": "The 21st Kanto Open",
-    "location": "kiyoharakohgyodanchi",
+    "location": "Kiyohara Kohgyo Danchi",
     "period": {
       "from": "2017-07-15",
       "to": "2017-07-16"
@@ -2327,12 +1755,11 @@
       "pro": 49,
       "ama": 53,
       "misc": 3
-    },
-    "id": "the21stkantoopen"
+    }
   },
   {
     "title": "The 6th Hokkaido Open",
-    "location": "hunkawanpanolamapark",
+    "location": "Hunka-wan Panolama Park",
     "period": {
       "from": "2017-07-01",
       "to": "2017-07-02"
@@ -2347,12 +1774,11 @@
       "pro": 10,
       "ama": 2,
       "misc": 1
-    },
-    "id": "the6thhokkaidoopen"
+    }
   },
   {
     "title": "The 12th Masters National Championship",
-    "location": "hikaritokazenookapark",
+    "location": "Hikari-to-Kaze-no-Oka Park",
     "period": {
       "from": "2017-06-24",
       "to": "2017-06-25"
@@ -2369,12 +1795,11 @@
       "pro": 37,
       "ama": 14,
       "misc": 0
-    },
-    "id": "the12thmastersnationalchampionship"
+    }
   },
   {
     "title": "The 6th Fukui Open",
-    "location": "seasidenaturepark",
+    "location": "Seaside Nature Park",
     "period": {
       "from": "2017-05-27",
       "to": "2017-05-28"
@@ -2390,12 +1815,11 @@
       "pro": 41,
       "ama": 28,
       "misc": 0
-    },
-    "id": "the6thfukuiopen"
+    }
   },
   {
     "title": "The 12th Kiyosato-no-mori Open",
-    "location": "kiyosatonomori",
+    "location": "Kiyosato-no-mori",
     "period": {
       "from": "2017-05-21",
       "to": "2017-05-22"
@@ -2412,12 +1836,11 @@
       "pro": 41,
       "ama": 13,
       "misc": 0
-    },
-    "id": "the12thkiyosatonomoriopen"
+    }
   },
   {
     "title": "The 19th Nippon Open",
-    "location": "hiruganokogen",
+    "location": "Hirugano Kogen",
     "period": {
       "from": "2017-05-05",
       "to": "2017-05-06"
@@ -2445,12 +1868,11 @@
         "title": "Photos Day#1",
         "url": "https://www.facebook.com/pg/jpdga/photos/?tab=album&album_id=1374656039246867"
       }
-    ],
-    "id": "the19thnipponopen"
+    ]
   },
   {
     "title": "The 13th Minamisoma Open",
-    "location": "minamisomahoseridingpark",
+    "location": "Minamisoma Hose Riding Park",
     "period": {
       "from": "2017-04-29",
       "to": "2017-04-30"
@@ -2465,12 +1887,11 @@
       "pro": 31,
       "ama": 41,
       "misc": 0
-    },
-    "id": "the13thminamisomaopen"
+    }
   },
   {
     "title": "The 28th Tokyo Open",
-    "location": "tatsuminomoriseasidepark",
+    "location": "Tatsumi-no-Mori Seaside Park",
     "period": {
       "from": "2017-04-15",
       "to": "2017-04-16"
@@ -2487,12 +1908,11 @@
       "pro": 29,
       "ama": 32,
       "misc": 3
-    },
-    "id": "the28thtokyoopen"
+    }
   },
   {
     "title": "The 15th Saga Open",
-    "location": "yoshinogarihistoricalpark",
+    "location": "Yoshinogari Historical Park",
     "period": {
       "from": "2017-04-08",
       "to": "2017-04-09"
@@ -2509,12 +1929,11 @@
       "pro": 42,
       "ama": 17,
       "misc": 0
-    },
-    "id": "the15thsagaopen"
+    }
   },
   {
     "title": "The 2017 National Doubles Championship",
-    "location": "hitachiseasidepark",
+    "location": "Hitachi Seaside Park",
     "period": {
       "from": "2017-03-04",
       "to": "2017-03-05"
@@ -2531,12 +1950,11 @@
       "pro": 28,
       "ama": 40,
       "misc": 0
-    },
-    "id": "the2017nationaldoubleschampionship"
+    }
   },
   {
     "title": "The 6th Okinawa Open",
-    "location": "nakijinsonsportpark",
+    "location": "Nakijinson Sport Park",
     "period": {
       "from": "2017-02-18",
       "to": "2017-02-19"
@@ -2552,6 +1970,11 @@
     "urls": [
       {
         "type": "video",
+        "title": "Digest",
+        "url": "https://youtu.be/HNAjKZg2ZDY"
+      },
+      {
+        "type": "video",
         "title": "FPO Final9",
         "url": "https://youtu.be/RTERs8ypbJg"
       }
@@ -2560,12 +1983,11 @@
       "pro": 35,
       "ama": 22,
       "misc": 15
-    },
-    "id": "the6thokinawaopen"
+    }
   },
   {
     "title": "The 3rd Kagoshima Open",
-    "location": "yoshinopark",
+    "location": "Yoshino Park",
     "period": {
       "from": "2017-01-28",
       "to": "2017-01-29"
@@ -2582,12 +2004,11 @@
       "pro": 26,
       "ama": 26,
       "misc": 0
-    },
-    "id": "the3rdkagoshimaopen"
+    }
   },
   {
     "title": "The 2017 National Team Championship",
-    "location": "oyamaomoinomoripark",
+    "location": "Oyama Omoinomori Park",
     "period": {
       "from": "2017-01-08",
       "to": "2017-01-09"
@@ -2602,12 +2023,11 @@
       "pro": 40,
       "ama": 24,
       "misc": 0
-    },
-    "id": "the2017nationalteamchampionship"
+    }
   },
   {
     "title": "The 16th Chubu Open",
-    "location": "mikawarinkairyokuchi",
+    "location": "Mikawa Rinkai Ryokuchi",
     "period": {
       "from": "2016-12-10",
       "to": "2016-12-11"
@@ -2622,12 +2042,11 @@
       "pro": 35,
       "ama": 31,
       "misc": 0
-    },
-    "id": "the16thchubuopen"
+    }
   },
   {
     "title": "The 30th Kyushu Open",
-    "location": "uminonakamichiseasidepark",
+    "location": "Umino-Nakamichi Seaside Park",
     "period": {
       "from": "2016-12-03",
       "to": "2016-12-04"
@@ -2642,12 +2061,11 @@
       "pro": 51,
       "ama": 25,
       "misc": 0
-    },
-    "id": "the30thkyushuopen"
+    }
   },
   {
     "title": "The 12th Kyoto Classic",
-    "location": "kyototambapark",
+    "location": "Kyoto Tamba Park",
     "period": {
       "from": "2016-11-12",
       "to": "2016-11-13"
@@ -2666,15 +2084,14 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵KAZUO's Room",
+        "title": "KAZUO's Room 🇯🇵",
         "url": "http://tatsumidgc.com/2016/11/post-973/"
       }
-    ],
-    "id": "the12thkyotoclassic"
+    ]
   },
   {
     "title": "The 2016 Showa Kinen Park Open",
-    "location": "showakinenpark",
+    "location": "Showa Kinen Park",
     "period": {
       "from": "2016-11-03",
       "to": "2016-11-06"
@@ -2690,20 +2107,19 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site 🇯🇵",
         "url": "http://jpdga-tokyo.com/skpo/"
       },
       {
         "type": "website",
-        "title": "🇯🇵KAZUO's Room",
+        "title": "KAZUO's Room 🇯🇵",
         "url": "http://tatsumidgc.com/2016/11/post-954/"
       }
-    ],
-    "id": "the2016showakinenparkopen"
+    ]
   },
   {
     "title": "The 16th Tohoku Open",
-    "location": "mizubayashisportpark",
+    "location": "Mizubayashi Sport Park",
     "period": {
       "from": "2016-10-08",
       "to": "2016-10-09"
@@ -2718,12 +2134,11 @@
       "pro": 32,
       "ama": 18,
       "misc": 0
-    },
-    "id": "the16thtohokuopen"
+    }
   },
   {
     "title": "The 28th Japan National Championship",
-    "location": "maikodiscgolfpark",
+    "location": "Maiko Disc Golf Park",
     "period": {
       "from": "2016-09-18",
       "to": "2016-09-19"
@@ -2738,12 +2153,11 @@
       "pro": 68,
       "ama": 34,
       "misc": 0
-    },
-    "id": "the28thjapannationalchampionship"
+    }
   },
   {
     "title": "The 5th Hirugano Kogen Tournament",
-    "location": "hiruganokogen",
+    "location": "Hirugano Kogen",
     "period": {
       "from": "2016-08-28",
       "to": "2016-08-28"
@@ -2755,12 +2169,11 @@
       "pro": 18,
       "ama": 7,
       "misc": 0
-    },
-    "id": "the5thhiruganokogentournament"
+    }
   },
   {
     "title": "The 11th Michinoku Open",
-    "location": "kitakamisportpark",
+    "location": "Kitakami Sport Park",
     "period": {
       "from": "2016-08-20",
       "to": "2016-08-21"
@@ -2775,12 +2188,11 @@
       "pro": 45,
       "ama": 33,
       "misc": 0
-    },
-    "id": "the11thmichinokuopen"
+    }
   },
   {
     "title": "The 20th Kanto Open",
-    "location": "kiyoharakohgyodanchi",
+    "location": "Kiyohara Kohgyo Danchi",
     "period": {
       "from": "2016-07-16",
       "to": "2016-07-18"
@@ -2795,12 +2207,11 @@
       "pro": 65,
       "ama": 68,
       "misc": 0
-    },
-    "id": "the20thkantoopen"
+    }
   },
   {
     "title": "The 5th Hokkaido Open",
-    "location": "hunkawanpanolamapark",
+    "location": "Hunka-wan Panolama Park",
     "period": {
       "from": "2016-07-02",
       "to": "2016-07-03"
@@ -2815,12 +2226,11 @@
       "pro": 7,
       "ama": 5,
       "misc": 1
-    },
-    "id": "the5thhokkaidoopen"
+    }
   },
   {
     "title": "The 11th Masters National Championship",
-    "location": "furusatofureaipark",
+    "location": "Furusato Fureai Park",
     "period": {
       "from": "2016-06-18",
       "to": "2016-06-19"
@@ -2835,12 +2245,11 @@
       "pro": 46,
       "ama": 22,
       "misc": 0
-    },
-    "id": "the11thmastersnationalchampionship"
+    }
   },
   {
     "title": "The 5th Maiko Open",
-    "location": "maikodiscgolfpark",
+    "location": "Maiko Disc Golf Park",
     "period": {
       "from": "2016-06-11",
       "to": "2016-06-12"
@@ -2855,12 +2264,11 @@
       "pro": 16,
       "ama": 18,
       "misc": 0
-    },
-    "id": "the5thmaikoopen"
+    }
   },
   {
     "title": "The 5th Fukui Open",
-    "location": "seasidenaturepark",
+    "location": "Seaside Nature Park",
     "period": {
       "from": "2016-05-28",
       "to": "2016-05-29"
@@ -2875,12 +2283,11 @@
       "pro": 36,
       "ama": 35,
       "misc": 0
-    },
-    "id": "the5thfukuiopen"
+    }
   },
   {
     "title": "The 11th Kiyosato-no-mori Open",
-    "location": "kiyosatonomori",
+    "location": "Kiyosato-no-mori",
     "period": {
       "from": "2016-05-14",
       "to": "2016-05-15"
@@ -2895,12 +2302,11 @@
       "pro": 33,
       "ama": 27,
       "misc": 2
-    },
-    "id": "the11thkiyosatonomoriopen"
+    }
   },
   {
     "title": "The 18th Nippon Open",
-    "location": "hiruganokogen",
+    "location": "Hirugano Kogen",
     "period": {
       "from": "2016-04-30",
       "to": "2016-05-01"
@@ -2915,12 +2321,11 @@
       "pro": 39,
       "ama": 26,
       "misc": 0
-    },
-    "id": "the18thnipponopen"
+    }
   },
   {
     "title": "The 27th Tokyo Open",
-    "location": "tatsuminomoriseasidepark",
+    "location": "Tatsumi-no-Mori Seaside Park",
     "period": {
       "from": "2016-04-16",
       "to": "2016-04-17"
@@ -2935,12 +2340,11 @@
       "pro": 56,
       "ama": 46,
       "misc": 1
-    },
-    "id": "the27thtokyoopen"
+    }
   },
   {
     "title": "The 14th Saga Open",
-    "location": "yoshinogarihistoricalpark",
+    "location": "Yoshinogari Historical Park",
     "period": {
       "from": "2016-04-09",
       "to": "2016-04-10"
@@ -2955,12 +2359,11 @@
       "pro": 35,
       "ama": 21,
       "misc": 0
-    },
-    "id": "the14thsagaopen"
+    }
   },
   {
     "title": "The 12th Minamisoma Open",
-    "location": "minamisomahoseridingpark",
+    "location": "Minamisoma Hose Riding Park",
     "period": {
       "from": "2016-03-20",
       "to": "2016-03-21"
@@ -2975,12 +2378,11 @@
       "pro": 23,
       "ama": 24,
       "misc": 0
-    },
-    "id": "the12thminamisomaopen"
+    }
   },
   {
     "title": "The 2016 National Doubles Championship",
-    "location": "hitachiseasidepark",
+    "location": "Hitachi Seaside Park",
     "period": {
       "from": "2016-03-05",
       "to": "2016-03-06"
@@ -2995,12 +2397,11 @@
       "pro": 42,
       "ama": 24,
       "misc": 0
-    },
-    "id": "the2016nationaldoubleschampionship"
+    }
   },
   {
     "title": "The 5th Okinawa Open",
-    "location": "nakijinsonsportpark",
+    "location": "Nakijinson Sport Park",
     "period": {
       "from": "2016-02-20",
       "to": "2016-02-21"
@@ -3022,12 +2423,11 @@
       "pro": 22,
       "ama": 15,
       "misc": 15
-    },
-    "id": "the5thokinawaopen"
+    }
   },
   {
     "title": "The 2nd Kagoshima Open",
-    "location": "yoshinopark",
+    "location": "Yoshino Park",
     "period": {
       "from": "2016-01-23",
       "to": "2016-01-24"
@@ -3042,12 +2442,11 @@
       "pro": 36,
       "ama": 29,
       "misc": 3
-    },
-    "id": "the2ndkagoshimaopen"
+    }
   },
   {
     "title": "The 2016 National Team Championship",
-    "location": "oyamaomoinomoripark",
+    "location": "Oyama Omoinomori Park",
     "period": {
       "from": "2016-01-10",
       "to": "2016-01-11"
@@ -3062,12 +2461,11 @@
       "pro": 24,
       "ama": 8,
       "misc": 0
-    },
-    "id": "the2016nationalteamchampionship"
+    }
   },
   {
     "title": "The 29th Kyushu Open",
-    "location": "uminonakamichiseasidepark",
+    "location": "Umino-Nakamichi Seaside Park",
     "period": {
       "from": "2015-12-19",
       "to": "2015-12-20"
@@ -3086,15 +2484,14 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵KAZUO's Room",
+        "title": "KAZUO's Room 🇯🇵",
         "url": "http://tatsumidgc.com/2016/01/post-787/"
       }
-    ],
-    "id": "the29thkyushuopen"
+    ]
   },
   {
     "title": "The 15th Chubu Open",
-    "location": "mikawarinkairyokuchi",
+    "location": "Mikawa Rinkai Ryokuchi",
     "period": {
       "from": "2015-12-05",
       "to": "2015-12-06"
@@ -3113,15 +2510,14 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵KAZUO's Room",
+        "title": "KAZUO's Room 🇯🇵",
         "url": "http://tatsumidgc.com/2015/12/post-745/"
       }
-    ],
-    "id": "the15thchubuopen"
+    ]
   },
   {
     "title": "The 2nd Oyama Open",
-    "location": "tbctaiyoclub",
+    "location": "TBC Taiyo Club",
     "period": {
       "from": "2015-11-23",
       "to": "2015-11-23"
@@ -3133,12 +2529,11 @@
       "pro": 30,
       "ama": 31,
       "misc": 0
-    },
-    "id": "the2ndoyamaopen"
+    }
   },
   {
     "title": "The 11th Kyoto Classic",
-    "location": "kyototambapark",
+    "location": "Kyoto Tamba Park",
     "period": {
       "from": "2015-11-07",
       "to": "2015-11-08"
@@ -3157,15 +2552,14 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵KAZUO's Room",
+        "title": "KAZUO's Room 🇯🇵",
         "url": "http://tatsumidgc.com/2015/12/post-732/"
       }
-    ],
-    "id": "the11thkyotoclassic"
+    ]
   },
   {
     "title": "The 2015 Showa Kinen Park Open",
-    "location": "showakinenpark",
+    "location": "Showa Kinen Park",
     "period": {
       "from": "2015-10-31",
       "to": "2015-11-01"
@@ -3181,20 +2575,19 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site 🇯🇵",
         "url": "http://jpdga-tokyo.com/skpo/"
       },
       {
         "type": "website",
-        "title": "🇯🇵KAZUO's Room",
+        "title": "KAZUO's Room 🇯🇵",
         "url": "http://tatsumidgc.com/2015/11/post-709/"
       }
-    ],
-    "id": "the2015showakinenparkopen"
+    ]
   },
   {
     "title": "The 15th Tohoku Open",
-    "location": "mizubayashisportpark",
+    "location": "Mizubayashi Sport Park",
     "period": {
       "from": "2015-10-11",
       "to": "2015-10-12"
@@ -3213,15 +2606,14 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵KAZUO's Room",
+        "title": "KAZUO's Room 🇯🇵",
         "url": "http://tatsumidgc.com/2015/10/post-699/"
       }
-    ],
-    "id": "the15thtohokuopen"
+    ]
   },
   {
     "title": "The 27th Japan National Championship",
-    "location": "maikodiscgolfpark",
+    "location": "Maiko Disc Golf Park",
     "period": {
       "from": "2015-09-21",
       "to": "2015-09-22"
@@ -3240,15 +2632,14 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵KAZUO's Room",
+        "title": "KAZUO's Room 🇯🇵",
         "url": "http://tatsumidgc.com/2015/10/post-639/"
       }
-    ],
-    "id": "the27thjapannationalchampionship"
+    ]
   },
   {
     "title": "The 19th Kansai Open",
-    "location": "fuminnomorihiyoshi",
+    "location": "Fumin-no-Mori Hiyoshi",
     "period": {
       "from": "2015-09-05",
       "to": "2015-09-06"
@@ -3263,12 +2654,11 @@
       "pro": 31,
       "ama": 33,
       "misc": 0
-    },
-    "id": "the19thkansaiopen"
+    }
   },
   {
     "title": "The 10th Michinoku Open",
-    "location": "kitakamisportpark",
+    "location": "Kitakami Sport Park",
     "period": {
       "from": "2015-08-22",
       "to": "2015-08-23"
@@ -3287,15 +2677,14 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵KAZUO's Room",
+        "title": "KAZUO's Room 🇯🇵",
         "url": "http://tatsumidgc.com/2015/09/post-565/"
       }
-    ],
-    "id": "the10thmichinokuopen"
+    ]
   },
   {
     "title": "The 15th Aso Open",
-    "location": "asominnanomori",
+    "location": "Aso Minnano Mori",
     "period": {
       "from": "2015-07-25",
       "to": "2015-07-26"
@@ -3310,12 +2699,11 @@
       "pro": 41,
       "ama": 17,
       "misc": 22
-    },
-    "id": "the15thasoopen"
+    }
   },
   {
     "title": "The 19th Kanto Open",
-    "location": "kiyoharakohgyodanchi",
+    "location": "Kiyohara Kohgyo Danchi",
     "period": {
       "from": "2015-07-11",
       "to": "2015-07-12"
@@ -3334,15 +2722,14 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵KAZUO's Room",
+        "title": "KAZUO's Room 🇯🇵",
         "url": "http://tatsumidgc.com/2015/09/post-565/"
       }
-    ],
-    "id": "the19thkantoopen"
+    ]
   },
   {
     "title": "The 4th Hokkaido Open",
-    "location": "hunkawanpanolamapark",
+    "location": "Hunka-wan Panolama Park",
     "period": {
       "from": "2015-06-27",
       "to": "2015-06-28"
@@ -3357,12 +2744,11 @@
       "pro": 11,
       "ama": 10,
       "misc": 5
-    },
-    "id": "the4thhokkaidoopen"
+    }
   },
   {
     "title": "The 4th Maiko Open",
-    "location": "maikodiscgolfpark",
+    "location": "Maiko Disc Golf Park",
     "period": {
       "from": "2015-06-14",
       "to": "2015-06-14"
@@ -3374,12 +2760,11 @@
       "pro": 6,
       "ama": 2,
       "misc": 0
-    },
-    "id": "the4thmaikoopen"
+    }
   },
   {
     "title": "The 10th Masters National Championship",
-    "location": "maikodiscgolfpark",
+    "location": "Maiko Disc Golf Park",
     "period": {
       "from": "2015-06-13",
       "to": "2015-06-14"
@@ -3394,12 +2779,11 @@
       "pro": 34,
       "ama": 17,
       "misc": 0
-    },
-    "id": "the10thmastersnationalchampionship"
+    }
   },
   {
     "title": "The 4th Fukui Open",
-    "location": "seasidenaturepark",
+    "location": "Seaside Nature Park",
     "period": {
       "from": "2015-05-30",
       "to": "2015-05-31"
@@ -3414,12 +2798,11 @@
       "pro": 22,
       "ama": 29,
       "misc": 0
-    },
-    "id": "the4thfukuiopen"
+    }
   },
   {
     "title": "The 10th Kiyosato-no-mori Open",
-    "location": "kiyosatonomori",
+    "location": "Kiyosato-no-mori",
     "period": {
       "from": "2015-05-16",
       "to": "2015-05-17"
@@ -3434,12 +2817,11 @@
       "pro": 35,
       "ama": 37,
       "misc": 0
-    },
-    "id": "the10thkiyosatonomoriopen"
+    }
   },
   {
     "title": "The 17th Nippon Open",
-    "location": "hiruganokogen",
+    "location": "Hirugano Kogen",
     "period": {
       "from": "2015-05-04",
       "to": "2015-05-05"
@@ -3454,12 +2836,11 @@
       "pro": 35,
       "ama": 21,
       "misc": 0
-    },
-    "id": "the17thnipponopen"
+    }
   },
   {
     "title": "The 26th Tokyo Open",
-    "location": "tatsuminomoriseasidepark",
+    "location": "Tatsumi-no-Mori Seaside Park",
     "period": {
       "from": "2015-04-18",
       "to": "2015-04-19"
@@ -3478,15 +2859,14 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵KAZUO's Room",
+        "title": "KAZUO's Room 🇯🇵",
         "url": "http://tatsumidgc.com/2015/04/第26回東京オープン（2015-4-18-19東京都江東区・辰巳の森/"
       }
-    ],
-    "id": "the26thtokyoopen"
+    ]
   },
   {
     "title": "The 13th Saga Open",
-    "location": "yoshinogarihistoricalpark",
+    "location": "Yoshinogari Historical Park",
     "period": {
       "from": "2015-04-11",
       "to": "2015-04-12"
@@ -3501,12 +2881,11 @@
       "pro": 35,
       "ama": 22,
       "misc": 0
-    },
-    "id": "the13thsagaopen"
+    }
   },
   {
     "title": "The 2015 National Doubles Championship",
-    "location": "hitachiseasidepark",
+    "location": "Hitachi Seaside Park",
     "period": {
       "from": "2015-03-07",
       "to": "2015-03-08"
@@ -3521,12 +2900,11 @@
       "pro": 28,
       "ama": 38,
       "misc": 0
-    },
-    "id": "the2015nationaldoubleschampionship"
+    }
   },
   {
     "title": "The 4th Okinawa Open",
-    "location": "nakijinsonsportpark",
+    "location": "Nakijinson Sport Park",
     "period": {
       "from": "2015-02-21",
       "to": "2015-02-22"
@@ -3558,12 +2936,11 @@
         "title": "FPO Final9",
         "url": "https://youtu.be/eKDjRkdgsHc"
       }
-    ],
-    "id": "the4thokinawaopen"
+    ]
   },
   {
     "title": "The 1st Kagoshima Open",
-    "location": "yoshinopark",
+    "location": "Yoshino Park",
     "period": {
       "from": "2015-01-24",
       "to": "2015-01-25"
@@ -3585,12 +2962,11 @@
         "title": "MPO Final9",
         "url": "https://youtu.be/u_cHtPzYvnA"
       }
-    ],
-    "id": "the1stkagoshimaopen"
+    ]
   },
   {
     "title": "The 2015 National Team Championship",
-    "location": "oyamasportpark",
+    "location": "Oyama Sport Park",
     "period": {
       "from": "2015-01-11",
       "to": "2015-01-12"
@@ -3605,12 +2981,11 @@
       "pro": 28,
       "ama": 20,
       "misc": 0
-    },
-    "id": "the2015nationalteamchampionship"
+    }
   },
   {
     "title": "The 28th Kyushu Open",
-    "location": "uminonakamichiseasidepark",
+    "location": "Umino-Nakamichi Seaside Park",
     "period": {
       "from": "2014-12-06",
       "to": "2014-12-07"
@@ -3624,12 +2999,11 @@
         "title": "MPO Final9",
         "url": "https://youtu.be/t8N6GnLpua4"
       }
-    ],
-    "id": "the28thkyushuopen"
+    ]
   },
   {
     "title": "The 1st Oyama Open",
-    "location": "tbctaiyoclub",
+    "location": "TBC Taiyo Club",
     "period": {
       "from": "2014-11-24",
       "to": "2014-11-24"
@@ -3643,12 +3017,11 @@
         "title": "Digest",
         "url": "https://youtu.be/Fdy7XPTssSE"
       }
-    ],
-    "id": "the1stoyamaopen"
+    ]
   },
   {
     "title": "The 4th Hokkaido Open",
-    "location": "hunkawanpanolamapark",
+    "location": "Hunka-wan Panolama Park",
     "period": {
       "from": "2014-06-28",
       "to": "2014-06-29"
@@ -3662,12 +3035,11 @@
         "title": "Final Digest",
         "url": "https://youtu.be/uqXRbIhdWhs"
       }
-    ],
-    "id": "the4thhokkaidoopen"
+    ]
   },
   {
     "title": "The 2014 Japan Open",
-    "location": "nasuhighlandgolfclub",
+    "location": "Nasu Highland Golf Club",
     "period": {
       "from": "2014-06-05",
       "to": "2014-06-07"
@@ -3718,15 +3090,14 @@
       },
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site 🇯🇵",
         "url": "http://www.herodisc.com/japanopen/"
       }
-    ],
-    "id": "the2014japanopen"
+    ]
   },
   {
     "title": "The 25th Tokyo Open",
-    "location": "tatsuminomoriseasidepark",
+    "location": "Tatsumi-no-Mori Seaside Park",
     "period": {
       "from": "2014-04-19",
       "to": "2014-04-20"
@@ -3740,12 +3111,11 @@
         "title": "MPO Final9",
         "url": "https://youtu.be/YUmZV2lgND0"
       }
-    ],
-    "id": "the25thtokyoopen"
+    ]
   },
   {
     "title": "The 3rd Okinawa Open",
-    "location": "nakijinsonsportpark",
+    "location": "Nakijinson Sport Park",
     "period": {
       "from": "2014-02-22",
       "to": "2014-02-23"
@@ -3759,12 +3129,11 @@
         "title": "FPO Final9",
         "url": "https://youtu.be/75fLJuw_Rn8"
       }
-    ],
-    "id": "the3rdokinawaopen"
+    ]
   },
   {
     "title": "The 27th Kyushu Open",
-    "location": "uminonakamichiseasidepark",
+    "location": "Umino-Nakamichi Seaside Park",
     "period": {
       "from": "2013-11-30",
       "to": "2013-12-01"
@@ -3778,12 +3147,11 @@
         "title": "MPO Final9",
         "url": "https://youtu.be/rvTaY6-_QHE"
       }
-    ],
-    "id": "the27thkyushuopen"
+    ]
   },
   {
     "title": "The 25th Japan National Championship",
-    "location": "maikodiscgolfpark",
+    "location": "Maiko Disc Golf Park",
     "period": {
       "from": "2013-09-22",
       "to": "2013-09-23"
@@ -3797,12 +3165,11 @@
         "title": "MPO Final9",
         "url": "https://youtu.be/5-MnPsCzjCs"
       }
-    ],
-    "id": "the25thjapannationalchampionship"
+    ]
   },
   {
     "title": "The 17th Kanto Open",
-    "location": "kiyoharakohgyodanchi",
+    "location": "Kiyohara Kohgyo Danchi",
     "period": {
       "from": "2013-07-06",
       "to": "2013-07-07"
@@ -3816,12 +3183,11 @@
         "title": "MPO Final9",
         "url": "https://youtu.be/rjY60OQu4s0"
       }
-    ],
-    "id": "the17thkantoopen"
+    ]
   },
   {
     "title": "The 12th Aso Open",
-    "location": "asominnanomori",
+    "location": "Aso Minnano Mori",
     "period": {
       "from": "2012-07-28",
       "to": "2012-07-29"
@@ -3835,12 +3201,11 @@
         "title": "MPO Final Digest",
         "url": "https://youtu.be/fSRe323MITI"
       }
-    ],
-    "id": "the12thasoopen"
+    ]
   },
   {
     "title": "The 1st Hokkaido Open",
-    "location": "hunkawanpanolamapark",
+    "location": "Hunka-wan Panolama Park",
     "period": {
       "from": "2012-06-23",
       "to": "2012-06-24"
@@ -3859,12 +3224,11 @@
         "title": "MPO Final9 #2",
         "url": "https://youtu.be/lz9oOoz-jXk"
       }
-    ],
-    "id": "the1sthokkaidoopen"
+    ]
   },
   {
     "title": "The 24th Tokyo Open",
-    "location": "tatsuminomoriseasidepark",
+    "location": "Tatsumi-no-Mori Seaside Park",
     "period": {
       "from": "2013-04-20",
       "to": "2013-04-21"
@@ -3878,12 +3242,11 @@
         "title": "MPO Final9",
         "url": "https://youtu.be/dkOphFlmLLc"
       }
-    ],
-    "id": "the24thtokyoopen"
+    ]
   },
   {
     "title": "The 7th Kiyosato-no-mori Open",
-    "location": "kiyosatonomori",
+    "location": "Kiyosato-no-mori",
     "period": {
       "from": "2012-05-19",
       "to": "2012-05-20"
@@ -3897,12 +3260,11 @@
         "title": "MPO Final9",
         "url": "https://youtu.be/EEZqkNT7k2E"
       }
-    ],
-    "id": "the7thkiyosatonomoriopen"
+    ]
   },
   {
     "title": "The 24th Tokyo Open",
-    "location": "tatsuminomoriseasidepark",
+    "location": "Tatsumi-no-Mori Seaside Park",
     "period": {
       "from": "2012-04-21",
       "to": "2012-04-22"
@@ -3916,12 +3278,11 @@
         "title": "MPO Final9",
         "url": "https://youtu.be/uqd0lv7GJBo"
       }
-    ],
-    "id": "the24thtokyoopen"
+    ]
   },
   {
     "title": "The 1st Okinawa Open",
-    "location": "nakijinsonsportpark",
+    "location": "Nakijinson Sport Park",
     "period": {
       "from": "2012-02-11",
       "to": "2012-02-12"
@@ -3935,12 +3296,11 @@
         "title": "MPO Final9",
         "url": "https://youtu.be/6S0vTqC_LAU"
       }
-    ],
-    "id": "the1stokinawaopen"
+    ]
   },
   {
     "title": "The 2010 Japan Open",
-    "location": "nasuhighlandgolfclub",
+    "location": "Nasu Highland Golf Club",
     "period": {
       "from": "2010-06-10",
       "to": "2010-06-12"
@@ -3967,31 +3327,28 @@
         "title": "MPO Final #1/3",
         "url": "https://youtu.be/CZpKT6aeqQ4"
       }
-    ],
-    "id": "the2010japanopen"
+    ]
   },
   {
     "title": "The 2008 Japan Open",
-    "location": "nasuhighlandgolfclub",
+    "location": "Nasu Highland Golf Club",
     "period": {
       "from": "2008-06-12",
       "to": "2008-06-14"
     },
     "pdga": {
       "eventId": "7272"
-    },
-    "id": "the2008japanopen"
+    }
   },
   {
     "title": "The 2006 Japan Open",
-    "location": "nasuhighlandgolfclub",
+    "location": "Nasu Highland Golf Club",
     "period": {
       "from": "2006-06-15",
       "to": "2006-06-17"
     },
     "pdga": {
       "eventId": "5506"
-    },
-    "id": "the2006japanopen"
+    }
   }
 ]
