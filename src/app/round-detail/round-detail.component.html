@@ -20,10 +20,52 @@
       <td>{{'Round' | localize}}:</td>
       <td>{{roundStatus}}</td>
     </tr>
-    <tr *ngIf="scoreCardUrl">
-      <td>{{'Score Cards' | localize}}:</td>
+    <tr *ngIf="isPdga">
+      <td>PDGA:</td>
       <td>
-        <a href="{{scoreCardUrl}}" target="_blank" rel="noopener">PDGA Live Score</a>
+        <div class="info-container">
+          <ng-template ngFor let-info [ngForOf]="pdgaInfo">
+            <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
+              {{info.title | localize}}
+            </a>
+          </ng-template>
+        </div>
+      </td>
+    </tr>
+    <tr *ngIf="jpdgaInfo.length">
+      <td>JPDGA:</td>
+      <td>
+        <div class="info-container">
+          <ng-template ngFor let-info [ngForOf]="jpdgaInfo">
+            <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
+              {{info.title | localize}}
+            </a>
+          </ng-template>
+        </div>
+      </td>
+    </tr>
+    <tr *ngIf="miscInfo.length">
+      <td>{{'Info' | localize}}:</td>
+      <td>
+        <div class="info-container">
+          <ng-template ngFor let-info [ngForOf]="miscInfo">
+            <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
+              {{info.title | localize}}
+            </a>
+          </ng-template>
+        </div>
+      </td>
+    </tr>
+    <tr *ngIf="videoInfo.length">
+      <td>{{'Videos' | localize}}:</td>
+      <td>
+        <div class="info-container">
+          <ng-template ngFor let-info [ngForOf]="videoInfo">
+            <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
+              {{info.title}}
+            </a>
+          </ng-template>
+        </div>
       </td>
     </tr>
     <tr *ngIf="showHistory">
@@ -32,18 +74,6 @@
         <a routerLink="/past" [queryParams]="{search: title}">
           {{'See the Past Results' | localize}}
         </a>
-      </td>
-    </tr>
-    <tr>
-      <td>{{'Info' | localize}}:</td>
-      <td>
-        <div class="info-container">
-          <ng-template ngFor let-misc [ngForOf]="miscInfo">
-            <a href="{{misc.url}}" class="detail-link" target="_blank" rel="noopener">
-              {{misc.title}}
-            </a>
-          </ng-template>
-        </div>
       </td>
     </tr>
     <tr *ngIf="round.ssa">

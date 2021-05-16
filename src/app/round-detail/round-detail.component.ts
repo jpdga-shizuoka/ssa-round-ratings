@@ -23,7 +23,10 @@ export class RoundDetailComponent implements OnInit {
 
   private event: EventInfo;
   location?: LocationInfo;
-  miscInfo: MiscInfo[];
+  pdgaInfo: MiscInfo[] = [];
+  jpdgaInfo: MiscInfo[] = [];
+  miscInfo: MiscInfo[] = [];
+  videoInfo: MiscInfo[] = [];
 
   constructor(private readonly remote: RemoteService) { }
 
@@ -60,67 +63,97 @@ export class RoundDetailComponent implements OnInit {
     return getEventTitle(this.event?.title);
   }
 
-  get scoreCardUrl() {
-    return getLiveScore(this.event.pdga?.liveScore);
+  get isPdga(): boolean {
+    return this.event?.status !== 'CANCELED' || this.pdgaInfo.length > 0;
   }
 
   private getLocation(id: LocationId) {
     this.remote.getLocation(id).subscribe(
       location => this.location = location,
       err => console.log(err),
-      () => this.makeMiscInfo()
+      () => {
+        this.makePdgaInfo();
+        this.makeJpdgaInfo();
+        this.makeMiscInfo();
+        this.makeVideoInfo();
+      }
     );
   }
 
-  private makeMiscInfo() {
-    const info: MiscInfo[] = [];
-    const event = this.event;
-
-    if (event.pdga && event.pdga.eventId) {
-      info.push({
+  private makePdgaInfo() {
+    if (this.event.pdga?.eventId) {
+      this.pdgaInfo.push({
         icon: 'public',
-        title: '🇺🇸Results',
-        url: getPdgaResult(event.pdga.eventId)
+        title: 'Results',
+        url: getPdgaResult(this.event.pdga.eventId)
       });
     }
-    if (event.jpdga) {
-      if (event.jpdga.eventId) {
-        info.push({
-          icon: 'public',
-          title: '🇯🇵Results',
-          url: getJpdgaResult(event.jpdga.eventId)
-        });
-        info.push({
-          icon: 'public',
-          title: '🇯🇵Papers',
-          url: getJpdgaInfo(event.jpdga.eventId)
-        });
-      }
-      if (event.jpdga.topicId) {
-        info.push({
-          icon: 'public',
-          title: '🇯🇵Report',
-          url: getJpdgaReport(event.jpdga.topicId)
-        });
-      }
-      if (event.jpdga.photoId) {
-        info.push({
-          icon: 'camera_alt',
-          title: 'Photos',
-          url: getJpdgaPhoto(event.jpdga.photoId)
-        });
-      }
+    if (this.event.pdga?.liveScore) {
+      this.pdgaInfo.push({
+        icon: 'public',
+        title: 'Score Cards',
+        url: getLiveScore(this.event.pdga.liveScore)
+      });
     }
-    if (event.urls) {
-      for (const urlInfo of event.urls) {
-        info.push({
+  }
+
+  private makeJpdgaInfo() {
+    if (this.event.jpdga?.eventId) {
+      this.jpdgaInfo.push({
+        icon: 'public',
+        title: 'Results',
+        url: getJpdgaResult(this.event.jpdga.eventId)
+      });
+      this.jpdgaInfo.push({
+        icon: 'public',
+        title: 'Papers',
+        url: getJpdgaInfo(this.event.jpdga.eventId)
+      });
+    }
+    if (this.event.jpdga?.topicId) {
+      this.jpdgaInfo.push({
+        icon: 'public',
+        title: 'Report',
+        url: getJpdgaReport(this.event.jpdga.topicId)
+      });
+    }
+    if (this.event.jpdga?.photoId) {
+      this.jpdgaInfo.push({
+        icon: 'camera_alt',
+        title: 'Photos',
+        url: getJpdgaPhoto(this.event.jpdga.photoId)
+      });
+    }
+  }
+
+  private makeMiscInfo() {
+    if (this.event.urls) {
+      for (const urlInfo of this.event.urls) {
+        if (urlInfo.type === 'video') {
+          continue;
+        }
+        this.miscInfo.push({
           icon: ICONS[urlInfo.type],
           title: urlInfo.title,
           url: urlInfo.url
         });
       }
     }
-    this.miscInfo = info;
+  }
+
+  private makeVideoInfo() {
+    if (this.event.urls) {
+      for (const urlInfo of this.event.urls) {
+        if (urlInfo.type !== 'video') {
+          continue;
+        }
+        this.videoInfo.push({
+          icon: ICONS[urlInfo.type],
+          title: urlInfo.title,
+          url: urlInfo.url
+        });
+      }
+    }
   }
 
   onRatingChanged() {
