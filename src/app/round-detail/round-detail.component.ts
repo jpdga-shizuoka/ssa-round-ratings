@@ -64,7 +64,7 @@ export class RoundDetailComponent implements OnInit {
   }
 
   get isPdga(): boolean {
-    return this.event?.status !== 'CANCELED' || this.pdgaInfo.length > 0;
+    return (this.event?.status !== 'CANCELED') && (this.pdgaInfo.length > 0);
   }
 
   private getLocation(id: LocationId) {

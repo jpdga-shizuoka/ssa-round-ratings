@@ -25,7 +25,7 @@
       <td>
         <div class="info-container">
           <ng-template ngFor let-info [ngForOf]="pdgaInfo">
-            <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
+            <a href="{{info.url}}" target="_blank" rel="noopener">
               {{info.title | localize}}
             </a>
           </ng-template>
@@ -37,7 +37,7 @@
       <td>
         <div class="info-container">
           <ng-template ngFor let-info [ngForOf]="jpdgaInfo">
-            <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
+            <a href="{{info.url}}" target="_blank" rel="noopener">
               {{info.title | localize}}
             </a>
           </ng-template>
@@ -49,7 +49,7 @@
       <td>
         <div class="info-container">
           <ng-template ngFor let-info [ngForOf]="miscInfo">
-            <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
+            <a href="{{info.url}}" target="_blank" rel="noopener">
               {{info.title | localize}}
             </a>
           </ng-template>
@@ -61,7 +61,7 @@
       <td>
         <div class="info-container">
           <ng-template ngFor let-info [ngForOf]="videoInfo">
-            <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
+            <a href="{{info.url}}" target="_blank" rel="noopener">
               {{info.title}}
             </a>
           </ng-template>
