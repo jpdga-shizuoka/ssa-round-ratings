@@ -264,6 +264,7 @@
     "id": "the5thmihoopen"
   },
   {
+    "id": "the23rdnipponopen",
     "title": "The 23rd Nippon Open",
     "location": "kibougaokaculturalpark",
     "period": {
@@ -271,12 +272,12 @@
       "to": "2021-06-13"
     },
     "pdga": {
-      "eventId": "50849"
+      "eventId": "50849",
+      "scoreId": "50849"
     },
     "jpdga": {
       "eventId": "561"
-    },
-    "id": "the23rdnipponopen"
+    }
   },
   {
     "title": "The 16th Kiyosato-no-mori Open",

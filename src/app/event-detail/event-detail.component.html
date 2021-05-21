@@ -5,11 +5,53 @@
       <td>{{event.schedule | schedule:'month'}}</td>
     </tr>
     <tr>
-      <td>{{'Location' | localize}}:</td>
+      <td>{{'Course' | localize}}:</td>
       <td class="info-container">
         <a href="{{location?.geolocation | geolink}}" target="_blank" rel="noopener">
           {{location?.title | localize}}, {{location?.prefecture | localize}}
         </a>
+        <a href="{{layout}}" target="_blank" rel="noopener" *ngIf="layout">
+          {{"Layout" | localize}}
+        </a>
+      </td>
+    </tr>
+
+    <tr *ngIf="pdgaInfo.length">
+      <td>PDGA:</td>
+      <td>
+        <div class="info-container">
+          <ng-template ngFor let-info [ngForOf]="pdgaInfo">
+            <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
+              {{info.title | localize}}
+            </a>
+          </ng-template>
+        </div>
+      </td>
+    </tr>
+
+    <tr *ngIf="jpdgaInfo.length">
+      <td>JPDGA:</td>
+      <td>
+        <div class="info-container">
+          <ng-template ngFor let-info [ngForOf]="jpdgaInfo">
+            <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
+              {{info.title | localize}}
+            </a>
+          </ng-template>
+        </div>
+      </td>
+    </tr>
+
+    <tr *ngIf="miscInfo.length">
+      <td>{{'Info' | localize}}:</td>
+      <td>
+        <div class="info-container">
+          <ng-template ngFor let-info [ngForOf]="miscInfo">
+            <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
+              {{info.title | localize}}
+            </a>
+          </ng-template>
+        </div>
       </td>
     </tr>
 
@@ -19,19 +61,6 @@
         <a routerLink="/past" [queryParams]="{search: title}" class="detail-link">
           {{'See the Past Results' | localize}}
         </a>
-      </td>
-    </tr>
-
-    <tr>
-      <td>{{'Info' | localize}}:</td>
-      <td>
-        <div class="info-container">
-          <ng-template ngFor let-misc [ngForOf]="miscInfo">
-            <a href="{{misc.url}}" class="detail-link" target="_blank" rel="noopener">
-              {{misc.title}}
-            </a>
-          </ng-template>
-        </div>
       </td>
     </tr>
   </tbody>

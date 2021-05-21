@@ -4,7 +4,7 @@ import {
   BreakpointObserver, Observable, isHandset, of as observableOf
 } from '../ng-utilities';
 import { RemoteService, EventInfo, LocationInfo } from '../remote.service';
-import { getEventTitle, getPdgaResult, getJpdgaInfo } from '../app-libs';
+import { getEventTitle, getPdgaResult, getJpdgaInfo, getLayout, getLiveScore } from '../app-libs';
 
 @Component({
   selector: 'app-event-detail',
@@ -14,7 +14,9 @@ import { getEventTitle, getPdgaResult, getJpdgaInfo } from '../app-libs';
 export class EventDetailComponent implements OnInit {
   @Input() event: EventInfo;
   location: LocationInfo;
-  miscInfo: MiscInfo[];
+  miscInfo: MiscInfo[] = [];
+  pdgaInfo: MiscInfo[] = [];
+  jpdgaInfo: MiscInfo[] = [];
   isHandset$: Observable<boolean>;
 
   constructor(
@@ -27,6 +29,8 @@ export class EventDetailComponent implements OnInit {
   ngOnInit() {
     this.remote.getLocation(this.event.location)
       .subscribe(location => this.location = location);
+    this.makePdgaInfo();
+    this.makeJpdgaInfo();
     this.makeMiscInfo();
   }
 
@@ -46,35 +50,50 @@ export class EventDetailComponent implements OnInit {
     return this.isHandset$;
   }
 
+  get layout(): string {
+    return getLayout(this.event?.layout);
+  }
+
   private makeMiscInfo() {
-    const info: MiscInfo[] = [];
-    if (this.event.pdga) {
-      if (this.event.pdga.eventId) {
-        info.push({
-          icon: 'public',
-          title: '🇺🇸PDGA',
-          url: getPdgaResult(this.event.pdga.eventId)
-        });
-      }
-    }
-    if (this.event.jpdga) {
-      if (this.event.jpdga.eventId) {
-        info.push({
-          icon: 'public',
-          title: '🇯🇵JPDGA',
-          url: getJpdgaInfo(this.event.jpdga.eventId)
-        });
-      }
-    }
     if (this.event.urls) {
       for (const urlInfo of this.event.urls) {
-        info.push({
+        this.miscInfo.push({
           icon: ICONS[urlInfo.type],
           title: urlInfo.title,
           url: urlInfo.url
         });
       }
     }
-    this.miscInfo = info;
+  }
+
+  private makePdgaInfo() {
+    if (this.event.pdga) {
+      if (this.event.pdga.eventId) {
+        this.pdgaInfo.push({
+          icon: 'public',
+          title: 'Current Registration',
+          url: getPdgaResult(this.event.pdga.eventId)
+        });
+      }
+      if (this.event.pdga?.scoreId) {
+        this.pdgaInfo.push({
+          icon: 'public',
+          title: 'Live Score',
+          url: getLiveScore(this.event.pdga.scoreId)
+        });
+      }
+    }
+  }
+
+  private makeJpdgaInfo() {
+    if (this.event.jpdga) {
+      if (this.event.jpdga.eventId) {
+        this.jpdgaInfo.push({
+          icon: 'public',
+          title: 'Paper',
+          url: getJpdgaInfo(this.event.jpdga.eventId)
+        });
+      }
+    }
   }
 }
