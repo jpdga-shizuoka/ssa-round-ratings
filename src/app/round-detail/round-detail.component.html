@@ -5,16 +5,17 @@
       <td>{{round.date | period}}</td>
     </tr>
     <tr>
-      <td>{{'Location' | localize}}:</td>
+      <td>{{'Course' | localize}}:</td>
       <td>
-        <a href="{{location?.geolocation | geolink}}" target="_blank" rel="noopener">
-          {{location?.title | localize}},{{location?.prefecture | localize}}
-        </a>
+        <div class="info-container">
+          <a href="{{location?.geolocation | geolink}}" target="_blank" rel="noopener">
+            {{location?.title | localize}},{{location?.prefecture | localize}}
+          </a>
+          <a href="{{layout}}" target="_blank" rel="noopener" *ngIf="layout">
+            {{"Layout" | localize}}
+          </a>
+        </div>
       </td>
-    </tr>
-    <tr *ngIf="totalPlayers">
-      <td>{{'Players' | localize}}:</td>
-      <td>{{totalPlayers}}</td>
     </tr>
     <tr>
       <td>{{'Round' | localize}}:</td>
@@ -67,6 +68,10 @@
           </ng-template>
         </div>
       </td>
+    </tr>
+    <tr *ngIf="totalPlayers">
+      <td>{{'Players' | localize}}:</td>
+      <td>{{totalPlayers}}</td>
     </tr>
     <tr *ngIf="showHistory">
       <td>{{'History' | localize}}:</td>

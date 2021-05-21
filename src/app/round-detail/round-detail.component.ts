@@ -1,6 +1,6 @@
 import { Component, Input, Output, OnInit } from '@angular/core';
 import {
-  getEventTitle, getPdgaResult, getJpdgaResult, getJpdgaInfo, getJpdgaReport, getJpdgaPhoto, getLiveScore
+  getEventTitle, getPdgaResult, getJpdgaResult, getJpdgaReport, getJpdgaPhoto, getLiveScore, getLayout
 } from '../app-libs';
 import { RemoteService, RoundInfo, EventInfo, LocationInfo, LocationId } from '../remote.service';
 import { MiscInfo, ICONS } from '../app-common';
@@ -67,6 +67,10 @@ export class RoundDetailComponent implements OnInit {
     return (this.event?.status !== 'CANCELED') && (this.pdgaInfo.length > 0);
   }
 
+  get layout(): string {
+    return getLayout(this.event?.layout);
+  }
+
   private getLocation(id: LocationId) {
     this.remote.getLocation(id).subscribe(
       location => this.location = location,
@@ -88,11 +92,11 @@ export class RoundDetailComponent implements OnInit {
         url: getPdgaResult(this.event.pdga.eventId)
       });
     }
-    if (this.event.pdga?.liveScore) {
+    if (this.event.pdga?.scoreId) {
       this.pdgaInfo.push({
         icon: 'public',
-        title: 'Score Cards',
-        url: getLiveScore(this.event.pdga.liveScore)
+        title: 'Hole Scores',
+        url: getLiveScore(this.event.pdga.scoreId)
       });
     }
   }
@@ -103,11 +107,6 @@ export class RoundDetailComponent implements OnInit {
         icon: 'public',
         title: 'Results',
         url: getJpdgaResult(this.event.jpdga.eventId)
-      });
-      this.jpdgaInfo.push({
-        icon: 'public',
-        title: 'Papers',
-        url: getJpdgaInfo(this.event.jpdga.eventId)
       });
     }
     if (this.event.jpdga?.topicId) {

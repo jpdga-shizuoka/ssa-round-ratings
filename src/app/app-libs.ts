@@ -34,6 +34,12 @@ export function getLiveScore(id: string): string | undefined {
     : undefined;
 }
 
+export function getLayout(id: string): string | undefined {
+  return id
+    ? `https://jpdga-shizuoka.github.io/maps/event/${id}`
+    : undefined;
+}
+
 export function getEventTitle(name?: string): string {
   if (!name) {
     return name;

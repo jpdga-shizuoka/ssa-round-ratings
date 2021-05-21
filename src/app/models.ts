@@ -19,7 +19,7 @@ export interface LocationInfo {
 
 export interface PdgaInfo {
   eventId?: string;
-  liveScore?: string;
+  scoreId?: string;
 }
 
 export interface JpdgaInfo {
@@ -54,6 +54,7 @@ export interface EventInfo {
   category?: string;
   schedule?: Schedule;
   players?: Players;
+  layout?: string;
 }
 
 export interface VideoInfo {
