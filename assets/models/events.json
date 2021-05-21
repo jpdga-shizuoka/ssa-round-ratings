@@ -9,7 +9,7 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site",
         "url": "https://www.jo-discgolf-fukui-sakai.jp"
       },
       {
@@ -49,7 +49,7 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site",
         "url": "https://aifda.or.jp/event"
       }
     ],
@@ -80,12 +80,12 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site",
         "url": "http://www.jpdgafukuoka.com/blog/?page_id=3478"
       },
       {
         "type": "website",
-        "title": "🇯🇵Facebook",
+        "title": "Facebook",
         "url": "https://www.facebook.com/discgolfkyushuopen/"
       }
     ],
@@ -104,7 +104,7 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site",
         "url": "http://jpdga-tokyo.com/skpo/"
       }
     ],
@@ -195,7 +195,7 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site",
         "url": "http://jpdgaiwate.com"
       }
     ],
@@ -215,7 +215,7 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site",
         "url": "http://www.tochigiflyingdisc.com"
       }
     ],
@@ -264,6 +264,7 @@
     "id": "the5thmihoopen"
   },
   {
+    "id": "the23rdnipponopen",
     "title": "The 23rd Nippon Open",
     "location": "kibougaokaculturalpark",
     "period": {
@@ -271,12 +272,12 @@
       "to": "2021-06-13"
     },
     "pdga": {
-      "eventId": "50849"
+      "eventId": "50849",
+      "scoreId": "50849"
     },
     "jpdga": {
       "eventId": "561"
-    },
-    "id": "the23rdnipponopen"
+    }
   },
   {
     "title": "The 16th Kiyosato-no-mori Open",
@@ -314,9 +315,14 @@
       "from": "2021-05-03",
       "to": "2021-05-04"
     },
+    "players": {
+      "pro": 21,
+      "ama": 6,
+      "misc": 3
+    },
     "pdga": {
       "eventId": "50980",
-      "liveScore": "50980"
+      "scoreId": "50980"
     },
     "jpdga": {
       "eventId": "559",
@@ -403,13 +409,14 @@
   {
     "title": "The 20th Chubu Open",
     "location": "mikawarinkairyokuchi",
+    "layout": "the20thchubuopen",
     "period": {
       "from": "2020-12-19",
       "to": "2020-12-20"
     },
     "pdga": {
       "eventId": "45291",
-      "liveScore": "45291"
+      "scoreId": "45291"
     },
     "jpdga": {
       "eventId": "551",
@@ -423,15 +430,17 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site",
         "url": "https://aifda.or.jp/event/第20回中部オープンディスクゴルフトーナメント/"
       }
     ],
     "id": "the20thchubuopen"
   },
   {
+    "id": "the34thkyushuopen",
     "title": "The 34th Kyushu Open",
     "location": "uminonakamichiseasidepark",
+    "layout": "the34thkyushuopen",
     "period": {
       "from": "2020-11-28",
       "to": "2020-11-29"
@@ -451,12 +460,12 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site",
         "url": "http://www.jpdgafukuoka.com/blog/?page_id=3478"
       },
       {
         "type": "website",
-        "title": "🇯🇵Facebook",
+        "title": "Facebook",
         "url": "https://www.facebook.com/discgolfkyushuopen/"
       },
       {
@@ -489,8 +498,7 @@
         "title": "MPO Final R#3 Lead Card",
         "url": "https://youtu.be/kiUYR3j-neE"
       }
-    ],
-    "id": "the34thkyushuopen"
+    ]
   },
   {
     "title": "The 16th Kyoto Classic",
@@ -527,7 +535,7 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site",
         "url": "http://jpdga-tokyo.com/skpo/"
       }
     ],
@@ -566,8 +574,10 @@
     "id": "the20thtohokuopen"
   },
   {
+    "id": "the32ndjapannationalchampionship",
     "title": "The 32nd Japan National Championship",
     "location": "maikodiscgolfpark",
+    "layout": "the32ndjapannationalchampionship",
     "period": {
       "from": "2020-09-20",
       "to": "2020-09-21"
@@ -599,12 +609,13 @@
         "title": "MPO Back9@Round#3, Lead Card",
         "url": "https://youtu.be/ja-e7zKCWeo"
       }
-    ],
-    "id": "the32ndjapannationalchampionship"
+    ]
   },
   {
+    "id": "the23rdkansaiopen",
     "title": "The 23rd Kansai Open",
     "location": "fuminnomorihiyoshi",
+    "layout": "the23rdkansaiopen",
     "period": {
       "from": "2020-09-05",
       "to": "2020-09-06"
@@ -623,7 +634,7 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site",
         "url": "https://www.facebook.com/kansaiopen.discgolf/"
       },
       {
@@ -651,8 +662,7 @@
         "title": "MPO Back9@Round#2, Lead Card",
         "url": "https://youtu.be/6227GpMlgqo"
       }
-    ],
-    "id": "the23rdkansaiopen"
+    ]
   },
   {
     "title": "The 15th Michinoku Open",
@@ -671,7 +681,7 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site",
         "url": "http://jpdgaiwate.com"
       }
     ],
@@ -710,7 +720,7 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site",
         "url": "http://www.tochigiflyingdisc.com"
       }
     ],
@@ -956,7 +966,7 @@
       },
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site",
         "url": "https://aifda.or.jp/news/第19回-中部オープン-ディスクゴルフトーナメント/"
       }
     ],
@@ -985,12 +995,12 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site",
         "url": "http://www.jpdgafukuoka.com/blog/?page_id=3059"
       },
       {
         "type": "website",
-        "title": "🇯🇵Facebook",
+        "title": "Facebook",
         "url": "https://www.facebook.com/discgolfkyushuopen/"
       },
       {
@@ -1042,7 +1052,7 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site",
         "url": "http://jpdga-tokyo.com/skpo/"
       }
     ],
@@ -1184,7 +1194,7 @@
       },
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site",
         "url": "http://jpdgaiwate.com"
       }
     ],
@@ -1223,7 +1233,7 @@
       },
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site",
         "url": "http://www.jpdgafukuoka.com/blog/?page_id=2861"
       }
     ],
@@ -1257,7 +1267,7 @@
       },
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site",
         "url": "http://www.tochigiflyingdisc.com"
       }
     ],
@@ -1346,7 +1356,7 @@
       },
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site",
         "url": "http://www.sukima-labo.com/dg291/"
       }
     ],
@@ -1539,7 +1549,7 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵KAZUO's Room",
+        "title": "KAZUO's Room",
         "url": "http://tatsumidgc.com/2019/03/post-1369/"
       }
     ],
@@ -1611,7 +1621,7 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site",
         "url": "http://www.jpdgafukuoka.com/blog/?page_id=2146"
       }
     ],
@@ -1656,17 +1666,17 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site",
         "url": "http://jpdga-tokyo.com/skpo/"
       },
       {
         "type": "website",
-        "title": "🇯🇵Results(2Days)",
+        "title": "Results(2Days)",
         "url": "https://www.facebook.com/pg/showakinenparkopen/photos/?tab=album&album_id=683308612050143"
       },
       {
         "type": "website",
-        "title": "🇯🇵Results(1Days)",
+        "title": "Results(1Days)",
         "url": "https://www.facebook.com/pg/showakinenparkopen/photos/?tab=album&album_id=683294415384896"
       }
     ],
@@ -1711,7 +1721,7 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵KAZUO's Room",
+        "title": "KAZUO's Room",
         "url": "http://tatsumidgc.com/2019/01/post-1330/"
       }
     ],
@@ -2174,7 +2184,7 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site",
         "url": "http://jpdga-tokyo.com/skpo/"
       }
     ],
@@ -2666,7 +2676,7 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵KAZUO's Room",
+        "title": "KAZUO's Room",
         "url": "http://tatsumidgc.com/2016/11/post-973/"
       }
     ],
@@ -2690,12 +2700,12 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site",
         "url": "http://jpdga-tokyo.com/skpo/"
       },
       {
         "type": "website",
-        "title": "🇯🇵KAZUO's Room",
+        "title": "KAZUO's Room",
         "url": "http://tatsumidgc.com/2016/11/post-954/"
       }
     ],
@@ -3086,7 +3096,7 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵KAZUO's Room",
+        "title": "KAZUO's Room",
         "url": "http://tatsumidgc.com/2016/01/post-787/"
       }
     ],
@@ -3113,7 +3123,7 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵KAZUO's Room",
+        "title": "KAZUO's Room",
         "url": "http://tatsumidgc.com/2015/12/post-745/"
       }
     ],
@@ -3157,7 +3167,7 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵KAZUO's Room",
+        "title": "KAZUO's Room",
         "url": "http://tatsumidgc.com/2015/12/post-732/"
       }
     ],
@@ -3181,12 +3191,12 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site",
         "url": "http://jpdga-tokyo.com/skpo/"
       },
       {
         "type": "website",
-        "title": "🇯🇵KAZUO's Room",
+        "title": "KAZUO's Room",
         "url": "http://tatsumidgc.com/2015/11/post-709/"
       }
     ],
@@ -3213,7 +3223,7 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵KAZUO's Room",
+        "title": "KAZUO's Room",
         "url": "http://tatsumidgc.com/2015/10/post-699/"
       }
     ],
@@ -3240,7 +3250,7 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵KAZUO's Room",
+        "title": "KAZUO's Room",
         "url": "http://tatsumidgc.com/2015/10/post-639/"
       }
     ],
@@ -3287,7 +3297,7 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵KAZUO's Room",
+        "title": "KAZUO's Room",
         "url": "http://tatsumidgc.com/2015/09/post-565/"
       }
     ],
@@ -3334,7 +3344,7 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵KAZUO's Room",
+        "title": "KAZUO's Room",
         "url": "http://tatsumidgc.com/2015/09/post-565/"
       }
     ],
@@ -3478,7 +3488,7 @@
     "urls": [
       {
         "type": "website",
-        "title": "🇯🇵KAZUO's Room",
+        "title": "KAZUO's Room",
         "url": "http://tatsumidgc.com/2015/04/第26回東京オープン（2015-4-18-19東京都江東区・辰巳の森/"
       }
     ],
@@ -3718,7 +3728,7 @@
       },
       {
         "type": "website",
-        "title": "🇯🇵Official Site",
+        "title": "Official Site",
         "url": "http://www.herodisc.com/japanopen/"
       }
     ],
