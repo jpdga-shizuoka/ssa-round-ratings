@@ -166,9 +166,8 @@ export class RemoteService {
     //   return events;
     // }
     const result: EventInfo[] = [];
-    const now = Date.now();
     events.forEach(event => {
-      if (compareTime(new Date(event.period.to).getTime(), now, category)) {
+      if (compareTime(new Date(event.period.to), category)) {
         result.push(event);
       }
     });
@@ -220,14 +219,24 @@ function compareByDate(a: Date, b: Date): number {
   return 0;
 }
 
-function compareTime(t1: number, t2: number, category: EventCategory) {
+function compareTime(t1: Date, category: EventCategory) {
+  const t2 = new Date;
   switch (category) {
-    case 'past':
-      return t1 < t2;
-    case 'upcoming':
-    case 'local':
-    case 'monthly':
-      return t1 > t2;
+    case 'past': {
+      t2.setDate(t2.getDate() + 1);
+      return t1.getTime() < t2.getTime();
+    }
+    case 'upcoming': {
+      t2.setDate(t2.getDate() - 7);
+      return t1.getTime() > t2.getTime();
+    }
+    case 'local': {
+      t2.setDate(t2.getDate() - 1);
+      return t1.getTime() > t2.getTime();
+    }
+    case 'monthly': {
+      return t1.getTime() > t2.getTime();
+    }
     default:
       return true;
   }
