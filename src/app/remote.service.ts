@@ -1,4 +1,3 @@
-import { DataSource } from '@angular/cdk/collections';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -65,6 +64,10 @@ class CTotalYearPlayers {
 export class RemoteService {
 
   constructor(private readonly http: HttpClient) { }
+
+  getText(path: string): Observable<string> {
+    return this.http.get('assets/local/' + path, { responseType: 'text' });
+  }
 
   getEvents(category: EventCategory): Observable<EventInfo[]> {
     if (!category) {

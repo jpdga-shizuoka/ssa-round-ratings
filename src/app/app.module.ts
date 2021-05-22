@@ -25,6 +25,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 import { AppComponent } from './app.component';
 import { ReloadComponent } from './app-reload';
@@ -57,6 +58,7 @@ import { AgmCoreModule } from '@agm/core';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { DeviceDetectorModule } from 'ngx-device-detector';
 import { environment } from '../environments/environment';
+import { PrefaceComponent } from './preface/preface.component';
 
 @NgModule({
   declarations: [
@@ -85,6 +87,7 @@ import { environment } from '../environments/environment';
     PeriodPipe,
     LocationPipe,
     EventPipe,
+    PrefaceComponent,
   ],
   imports: [
     BrowserModule,
@@ -113,6 +116,7 @@ import { environment } from '../environments/environment';
     MatBottomSheetModule,
     MatMenuModule,
     MatProgressSpinnerModule,
+    MatExpansionModule,
     AgmCoreModule.forRoot({ apiKey: environment.MAP_API_KEY }),
     NgxChartsModule,
     DeviceDetectorModule.forRoot(),

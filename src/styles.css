@@ -21,6 +21,21 @@ body {
   top: 0;
   left: calc(50% - 50px);
 }
+app-preface h1 {
+  font-size: 15px;
+}
+.img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-container img {
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+  margin-bottom: 1rem;
+}
+app-preface .footer {
+  text-align: right;
+}
 a {
   text-decoration: none;
 }
