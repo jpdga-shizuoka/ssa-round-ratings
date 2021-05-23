@@ -55,6 +55,13 @@
       </td>
     </tr>
 
+    <tr *ngIf="event">
+      <td>iCalendar:</td>
+      <td>
+        <app-icalendar [event]="event"></app-icalendar>
+      </td>
+    </tr>
+
     <tr *ngIf="showPastRounds">
       <td>{{'History' | localize}}:</td>
       <td>

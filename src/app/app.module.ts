@@ -59,6 +59,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { DeviceDetectorModule } from 'ngx-device-detector';
 import { environment } from '../environments/environment';
 import { PrefaceComponent } from './preface/preface.component';
+import { IcalenderComponent } from './icalendar/icalendar.component';
 
 @NgModule({
   declarations: [
@@ -88,6 +89,7 @@ import { PrefaceComponent } from './preface/preface.component';
     LocationPipe,
     EventPipe,
     PrefaceComponent,
+    IcalenderComponent
   ],
   imports: [
     BrowserModule,
