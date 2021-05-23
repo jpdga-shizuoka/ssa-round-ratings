@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { LocalizeService } from '../localize.service';
 import { EventInfo } from '../models';
 
 function date2string(date: Date): string {
@@ -8,11 +9,20 @@ function date2string(date: Date): string {
 }
 
 class Calendar {
+  private title: string;
+  private start: Date;
+  private end: Date;
+
   constructor(
-    private title: string,
-    private start: Date,
-    private end: Date
+    private localize: LocalizeService,
+    private event: EventInfo
   ) {
+    if (!event) {
+      return;
+    }
+    this.title = localize.transform(event.title);
+    this.start = new Date(event.period.from);
+    this.end = new Date(event.period.to);
     this.start.setHours(9);
     this.start.setMinutes(0);
     this.start.setSeconds(0);
@@ -49,19 +59,17 @@ export class IcalenderComponent implements OnInit {
   url?: SafeResourceUrl;
   filename?: string;
 
-  constructor(private sanitizer: DomSanitizer) { }
+  constructor(
+    private sanitizer: DomSanitizer,
+    private localize: LocalizeService
+    ) { }
 
   ngOnInit(): void {
-    if (!this.event) {
-      return;
+    if (this.event) {
+      const calendar = new Calendar(this.localize, this.event);
+      const blob = new Blob([calendar.toString()], { type: 'text/calendar' });
+      this.url = this.sanitizer.bypassSecurityTrustResourceUrl(window.URL.createObjectURL(blob));
+      this.filename = `${this.event.id}.ics`;
     }
-    const calendar = new Calendar(
-      this.event.title,
-      new Date(this.event.period.from),
-      new Date(this.event.period.to)
-    );
-    const blob = new Blob([calendar.toString()], { type: 'text/calendar' });
-    this.url = this.sanitizer.bypassSecurityTrustResourceUrl(window.URL.createObjectURL(blob));
-    this.filename = `${this.event.id}.ics`;
   }
 }

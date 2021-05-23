@@ -10,7 +10,7 @@
     "urls": [
       {
         "type": "website",
-        "title": "Aichi Flying Disc Association 🇯🇵",
+        "title": "Aichi Flying Disc Association",
         "url": "https://aifda.or.jp/category/discgolf/"
       }
     ],
@@ -27,7 +27,7 @@
     "urls": [
       {
         "type": "website",
-        "title": "Aichi Flying Disc Association 🇯🇵",
+        "title": "Aichi Flying Disc Association",
         "url": "https://aifda.or.jp/category/discgolf/"
       }
     ],
@@ -44,7 +44,7 @@
     "urls": [
       {
         "type": "website",
-        "title": "Aichi Flying Disc Association 🇯🇵",
+        "title": "Aichi Flying Disc Association",
         "url": "https://aifda.or.jp/category/discgolf/"
       }
     ],
@@ -71,7 +71,7 @@
     "urls": [
       {
         "type": "website",
-        "title": "Aichi Flying Disc Association 🇯🇵",
+        "title": "Aichi Flying Disc Association",
         "url": "https://aifda.or.jp/category/discgolf/"
       }
     ],
@@ -88,7 +88,7 @@
     "urls": [
       {
         "type": "website",
-        "title": "Aichi Flying Disc Association 🇯🇵",
+        "title": "Aichi Flying Disc Association",
         "url": "https://aifda.or.jp/category/discgolf/"
       }
     ],
@@ -105,13 +105,14 @@
     "urls": [
       {
         "type": "website",
-        "title": "Aichi Flying Disc Association 🇯🇵",
+        "title": "Aichi Flying Disc Association",
         "url": "https://aifda.or.jp/category/discgolf/"
       }
     ],
     "id": "theaichiopendiscgolfseries"
   },
   {
+    "id": "thegifupresidentcup",
     "category": "local",
     "title": "The Gifu President Cup",
     "location": "kasaharagreenheights",
@@ -119,7 +120,13 @@
       "from": "2021-06-06",
       "to": "2021-06-06"
     },
-    "id": "thegifupresidentcup"
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ]
   },
   {
     "category": "local",
@@ -133,7 +140,7 @@
     "urls": [
       {
         "type": "website",
-        "title": "Aichi Flying Disc Association 🇯🇵",
+        "title": "Aichi Flying Disc Association",
         "url": "https://aifda.or.jp/category/discgolf/"
       }
     ],
