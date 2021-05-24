@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { LocalizeService } from '../localize.service';
-import { EventInfo } from '../models';
+import { RemoteService } from '../remote.service';
+import { EventInfo, LocationInfo } from '../models';
 
 function date2string(date: Date): string {
   const iso = date.toISOString().replace(/[\-:.]/g, '');
@@ -12,11 +13,9 @@ class Calendar {
   private title: string;
   private start: Date;
   private end: Date;
+  private location: string;
 
-  constructor(
-    private localize: LocalizeService,
-    private event: EventInfo
-  ) {
+  constructor(localize: LocalizeService, event: EventInfo, location: LocationInfo) {
     if (!event) {
       return;
     }
@@ -31,6 +30,7 @@ class Calendar {
     this.end.setMinutes(0);
     this.end.setSeconds(0);
     this.end.setMilliseconds(0);
+    this.location = localize.transform(localize.transform(location.title));
   }
 
   toString(): string {
@@ -41,11 +41,16 @@ class Calendar {
     data.push('BEGIN:VEVENT');
     data.push(`DTSTART:${date2string(this.start)}`);
     data.push(`DTEND:${date2string(this.end)}`);
+    data.push(`LOCATION:${this.location}`);
     data.push(`SUMMARY:${this.title}`);
     data.push('END:VEVENT');
     data.push('END:VCALENDAR');
     data.push('');
     return data.join('\r\n');
+  }
+
+  toBlob(): Blob {
+    return new Blob([this.toString()], { type: 'text/calendar' });
   }
 }
 
@@ -60,16 +65,22 @@ export class IcalenderComponent implements OnInit {
   filename?: string;
 
   constructor(
+    private remote: RemoteService,
     private sanitizer: DomSanitizer,
     private localize: LocalizeService
-    ) { }
+  ) { }
 
   ngOnInit(): void {
     if (this.event) {
-      const calendar = new Calendar(this.localize, this.event);
-      const blob = new Blob([calendar.toString()], { type: 'text/calendar' });
-      this.url = this.sanitizer.bypassSecurityTrustResourceUrl(window.URL.createObjectURL(blob));
-      this.filename = `${this.event.id}.ics`;
+      this.remote
+        .getLocation(this.event.location)
+        .subscribe(location => {
+          const calendar = new Calendar(this.localize, this.event, location);
+          this.url = this.sanitizer.bypassSecurityTrustResourceUrl(
+            window.URL.createObjectURL(calendar.toBlob())
+          );
+          this.filename = `${this.event.id}.ics`;
+        });
     }
   }
 }
