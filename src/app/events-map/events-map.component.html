@@ -1,9 +1,10 @@
+<mat-spinner *ngIf="loading"></mat-spinner>
 <agm-map
   [ngStyle]="{'height': height}"
   [latitude]="latitude"
   [longitude]="longitude"
   [zoom]="zoom">
-    <ng-template ngFor let-m [ngForOf]="mapSource$ | async">
+  <ng-template ngFor let-m [ngForOf]="mapSource$ | async">
     <agm-marker
       [latitude]="m.position.lat"
       [longitude]="m.position.lng"

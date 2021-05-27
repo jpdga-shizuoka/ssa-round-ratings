@@ -4,16 +4,17 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
-import { MatTableDataSource } from '@angular/material/table';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { CommonService } from '../common.service';
 import { VideoBottomsheetComponent } from '../dialogs/video-bottomsheet.component';
 import { VideoInfo } from '../models';
-import { isHandset } from '../utilities';
+import { isHandset } from '../ng-utilities';
+import { VideosDataSource } from './videos-datasource';
+import { RemoteService, EventCategory } from '../remote.service';
+import { LocalizeService } from '../localize.service';
 
 const DISPLAYED_COLUMNS = [['title', 'subttl'], [ 'year', 'title', 'subttl']];
 
@@ -23,15 +24,18 @@ const DISPLAYED_COLUMNS = [['title', 'subttl'], [ 'year', 'title', 'subttl']];
   styleUrls: ['./videos-table.component.css'],
 })
 export class VideosTableComponent implements AfterViewInit, OnInit {
-  @Input() dataSource: MatTableDataSource<VideoInfo>;
   @Input() pageSizeOptions = [10, 20, 50, 100];
   @Input() showSearch = true;
   @Input() showMore = false;
   @Input() search = '';
+  @Input() category = 'video' as EventCategory;
+  @Input() limit?: number;
+  @Input() keyword?: string;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  isHandset$: Observable<boolean>;
+  readonly isHandset$: Observable<boolean>;
+  dataSource: VideosDataSource;
 
   get displayedColumns$(): Observable<string[]> {
     return this.isHandset$.pipe(
@@ -40,23 +44,23 @@ export class VideosTableComponent implements AfterViewInit, OnInit {
   }
 
   constructor(
-    private cs: CommonService,
     private bottomSheet: MatBottomSheet,
+    private readonly remote: RemoteService,
+    private readonly localize: LocalizeService,
     breakpointObserver: BreakpointObserver,
   ) {
     this.isHandset$ = isHandset(breakpointObserver);
   }
 
+  get loading() { return this.dataSource.loading; }
   get isMinimum(): boolean {
-    return this.showMore
-      && this.dataSource.data.length <= this.pageSizeOptions[0];
-  }
-
-  get more(): string {
-    return this.cs.getMenuAliase('More');
+    return this.showMore && this.limit <= this.pageSizeOptions[0];
   }
 
   ngOnInit() {
+    this.dataSource
+      = new VideosDataSource(this.remote, this.localize, this.category, this.limit, this.keyword);
+
     // This code loads the IFrame Player API code asynchronously, according to the instructions at
     // https://developers.google.com/youtube/iframe_api_reference#Getting_Started
     const tag = document.createElement('script');
@@ -71,10 +75,6 @@ export class VideosTableComponent implements AfterViewInit, OnInit {
 
   onRawClicked(video: VideoInfo) {
     this.openVideoSheet(video);
-  }
-
-  getTitle(video: VideoInfo): string {
-    return this.cs.getEventAliase(video.title);
   }
 
   applyFilter(filterValue: string) {

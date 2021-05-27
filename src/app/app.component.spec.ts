@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 import { YouTubePlayerModule } from '@angular/youtube-player';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -26,6 +27,7 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { AppComponent } from './app.component';
+import { ReloadComponent } from './app-reload';
 import { DashBoardComponent } from './dash-board/dash-board.component';
 import { RoundsTabsComponent } from './rounds-tabs/rounds-tabs.component';
 import { RoundsTableComponent } from './rounds-table/rounds-table.component';
@@ -41,6 +43,12 @@ import { TotalPlayersComponent } from './total-players/total-players.component';
 import { MarkerDialogComponent } from './dialogs/marker-dialog.component';
 import { NoticeBottomsheetComponent } from './dialogs/notice-bottomsheet.component';
 import { BottomSheetDetailDisabledComponent } from './dialogs/bottom-sheet-detail-disabled.component';
+import { SchedulePipe } from './schedule.pipe';
+import { GeolinkPipe } from './geolink.pipe';
+import { LocalizePipe } from './localize.pipe';
+import { PeriodPipe } from './period.pipe';
+import { LocationPipe } from './location.pipe';
+import { EventPipe } from './event.pipe';
 
 import { AgmCoreModule } from '@agm/core';
 import { DeviceDetectorModule } from 'ngx-device-detector';
@@ -52,6 +60,7 @@ describe('AppComponent', () => {
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
       declarations: [
         AppComponent,
+        ReloadComponent,
         DashBoardComponent,
         RoundsTabsComponent,
         RoundsTableComponent,
@@ -67,6 +76,12 @@ describe('AppComponent', () => {
         MarkerDialogComponent,
         NoticeBottomsheetComponent,
         BottomSheetDetailDisabledComponent,
+        SchedulePipe,
+        GeolinkPipe,
+        LocalizePipe,
+        PeriodPipe,
+        LocationPipe,
+        EventPipe,
       ],
       imports: [
         RouterTestingModule,
@@ -104,16 +119,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  xit(`should have as title 'DG Japan'`, () => {
+  it(`should have as title 'DG Japan'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('DG Japan');
   });
 
-  xit('should render title in a h1 tag', () => {
+  it('should render title in toolbar', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to ratings!');
+    expect(compiled.querySelector('.mat-toolbar span').textContent).toContain('DG Japan');
   });
 });

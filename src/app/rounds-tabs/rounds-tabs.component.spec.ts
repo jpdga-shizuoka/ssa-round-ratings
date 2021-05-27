@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
@@ -21,6 +22,12 @@ import { RoundsTableComponent } from '../rounds-table/rounds-table.component';
 import { VideosTableComponent } from '../videos-table/videos-table.component';
 import { BottomSheetDetailDisabledComponent } from '../dialogs/bottom-sheet-detail-disabled.component';
 import { RoundsTabsComponent } from './rounds-tabs.component';
+import { LocalizePipe } from '../localize.pipe';
+import { EventPipe } from '../event.pipe';
+import { LocationPipe } from '../location.pipe';
+import { GeolinkPipe } from '../geolink.pipe';
+import { SchedulePipe } from '../schedule.pipe';
+import { PeriodPipe } from '../period.pipe';
 
 import { AgmCoreModule } from '@agm/core';
 
@@ -38,11 +45,18 @@ describe('RoundsTabsComponent', () => {
         VideosTableComponent,
         RoundDetailComponent,
         BottomSheetDetailDisabledComponent,
+        LocalizePipe,
+        EventPipe,
+        LocationPipe,
+        GeolinkPipe,
+        SchedulePipe,
+        PeriodPipe,
       ],
       imports: [
         FormsModule,
         RouterTestingModule,
         NoopAnimationsModule,
+        HttpClientModule,
         MatIconModule,
         MatPaginatorModule,
         MatSortModule,

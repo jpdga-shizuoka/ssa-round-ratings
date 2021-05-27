@@ -1,0 +1,149 @@
+[
+  {
+    "category": "local",
+    "title": "The Aichi Open Disc Golf Series",
+    "location": "mikawarinkairyokuchi",
+    "period": {
+      "from": "2022-03-06",
+      "to": "2022-03-06"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendiscgolfseries"
+  },
+  {
+    "category": "local",
+    "title": "The New Year Disc Golf Tournament",
+    "location": "shiminshikinomori",
+    "period": {
+      "from": "2022-01-09",
+      "to": "2022-01-09"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "thenewyeardiscgolftournament"
+  },
+  {
+    "category": "local",
+    "title": "The Aichi Open Disc Golf Series",
+    "location": "shinshiropark",
+    "period": {
+      "from": "2021-12-05",
+      "to": "2021-12-05"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendiscgolfseries"
+  },
+  {
+    "category": "local",
+    "title": "The Nenrin Pic Gifu",
+    "location": "mitakechonanzanpark",
+    "period": {
+      "from": "2021-10-31",
+      "to": "2021-10-31"
+    },
+    "id": "thenenrinpicgifu"
+  },
+  {
+    "category": "local",
+    "title": "The Aichi Open Disc Golf Series",
+    "location": "shinshiropark",
+    "period": {
+      "from": "2021-09-26",
+      "to": "2021-09-26"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendiscgolfseries"
+  },
+  {
+    "category": "local",
+    "title": "The Aichi Open Doubles Tournament",
+    "location": "shinshiropark",
+    "period": {
+      "from": "2021-08-01",
+      "to": "2021-08-01"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "aichiopendoublestournament"
+  },
+  {
+    "category": "local",
+    "title": "The Aichi Open Disc Golf Series",
+    "location": "shiminshikinomori",
+    "period": {
+      "from": "2021-07-04",
+      "to": "2021-07-04"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendiscgolfseries"
+  },
+  {
+    "id": "thegifupresidentcup",
+    "category": "local",
+    "title": "The Gifu President Cup",
+    "location": "kasaharagreenheights",
+    "period": {
+      "from": "2021-06-06",
+      "to": "2021-06-06"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ]
+  },
+  {
+    "category": "local",
+    "title": "The Aichi Open Disc Golf Series",
+    "location": "shiminshikinomori",
+    "period": {
+      "from": "2021-05-23",
+      "to": "2021-05-23"
+    },
+    "status": "CANCELED",
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendiscgolfseries"
+  }
+]

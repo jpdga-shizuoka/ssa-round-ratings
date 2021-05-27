@@ -1,7 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { MatBottomSheetRef, MAT_BOTTOM_SHEET_DATA} from '@angular/material/bottom-sheet';
 
-import { CommonService } from '../common.service';
+import { LocalizeService } from '../localize.service';
 
 export interface NoticeBottomsheetData {
   title: string;
@@ -27,15 +27,15 @@ export class NoticeBottomsheetComponent {
   constructor(
     @Inject(MAT_BOTTOM_SHEET_DATA) public data: NoticeBottomsheetData,
     private bottomSheetRef: MatBottomSheetRef<NoticeBottomsheetComponent>,
-    private cs: CommonService,
+    private localize: LocalizeService,
   ) {
   }
 
   get title() {
-    return MONTHLY_DIALOG_TITLE[this.cs.primaryLanguage ? 0 : 1];
+    return MONTHLY_DIALOG_TITLE[this.localize.isGlobal ? 0 : 1];
   }
 
   get content() {
-    return MONTHLY_DIALOG_CONTENT[this.cs.primaryLanguage ? 0 : 1];
+    return MONTHLY_DIALOG_CONTENT[this.localize.isGlobal ? 0 : 1];
   }
 }

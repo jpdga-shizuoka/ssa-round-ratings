@@ -19,7 +19,7 @@
       <a mat-list-item routerLink="/events/upcoming"
         routerLinkActive="menu-active"
         (click)="onClickLink()">
-        <mat-icon>events</mat-icon>{{upcomingEvents}}
+        <mat-icon>events</mat-icon>{{schedule}}
       </a>
       <a mat-list-item routerLink="/past"
         routerLinkActive="menu-active"
@@ -58,15 +58,21 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary" [ngClass]="{'toolbar-back': isHandset$ | async}" id="header">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span id="toolbar-title" *ngIf="isHandset$ | async">{{title}}</span>
+      <span>
+        <div *ngIf="isHandset$ | async; else notHandset">
+          <button
+            type="button"
+            aria-label="Toggle sidenav"
+            mat-icon-button
+            (click)="drawer.toggle()">
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          </button>
+          <span id="toolbar-title">{{subtitle}}</span>
+        </div>
+        <ng-template #notHandset>
+          <span>{{subtitle}}</span>
+        </ng-template>
+      </span>
       <span class="title-spacer"></span>
       <span class="title-button-row">
         <button mat-icon-button aria-label="toggle language" (click)="onClickLanguage()">
@@ -81,8 +87,8 @@
 
     <mat-toolbar class="footer" id="footer">
       <span class="footer-title">
-        Copyright © 2019-2020 <a href="https://jpdga-shizuoka.github.io/home/" target="_blank" rel="noopener">
-          SHIZUOKA DISC GOLF ASSOCIATION
+        <a href="https://jpdga-shizuoka.github.io/home/">
+          © SHIZUOKA DISC GOLF ASSOCIATION
         </a>
       </span>
     </mat-toolbar>

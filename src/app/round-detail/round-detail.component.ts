@@ -1,28 +1,19 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component, Input, Output, OnInit } from '@angular/core';
 import {
-  CommonService, RoundInfo, EventInfo, LocationInfo
-} from '../common.service';
+  getEventTitle, getPdgaResult, getJpdgaResult, getJpdgaReport, getJpdgaPhoto, getLiveScore, getLayout
+} from '../app-libs';
+import { RemoteService, RoundInfo, EventInfo, LocationInfo, LocationId } from '../remote.service';
+import { MiscInfo, ICONS } from '../app-common';
 
 const MIN_RATING = 700;
 const MAX_RATING = 1200;
-const ICONS = {
-  video: 'ondemand_video',
-  photo: 'camera_alt',
-  website: 'public'
-};
-
-interface MiscInfo {
-  icon: string;
-  title: string;
-  url: string;
-}
 
 @Component({
   selector: 'app-round-detail',
   templateUrl: './round-detail.component.html',
   styleUrls: ['./round-detail.component.css']
 })
-export class RoundDetailComponent {
+export class RoundDetailComponent implements OnInit {
 
   @Input() round: RoundInfo;
   @Input() showHistory = true;
@@ -31,32 +22,21 @@ export class RoundDetailComponent {
   score: number;
 
   private event: EventInfo;
-  private _location: LocationInfo;
-  private _miscInfo: MiscInfo[];
+  location?: LocationInfo;
+  pdgaInfo: MiscInfo[] = [];
+  jpdgaInfo: MiscInfo[] = [];
+  miscInfo: MiscInfo[] = [];
+  videoInfo: MiscInfo[] = [];
 
-  constructor(private cs: CommonService) {
-  }
+  constructor(private readonly remote: RemoteService) { }
 
-  get seeThePastResults() {
-    return this.cs.getMenuAliase('See the Past Results');
-  }
-
-  get location(): string | undefined {
-    const event = this.getEvent();
-    if (!event) {
-      return undefined;
-    }
-    const location = this.cs.getLocationName(event.location);
-    const region = this.getPrefecture();
-    return `${location}, ${region}`;
-  }
-
-  get geolocation(): string | undefined {
-    const location = this.getLocation();
-    if (!location || !location.geolocation) {
-      return undefined;
-    }
-    return this.cs.getGeolocation(location.geolocation);
+  ngOnInit() {
+    this.remote.getEvent(this.round.event, 'past')
+    .subscribe(
+      event => this.event = event,
+      err => console.log(err),
+      () => this.getLocation(this.event.location)
+    );
   }
 
   get roundStatus(): string {
@@ -64,40 +44,12 @@ export class RoundDetailComponent {
   }
 
   get totalPlayers() {
-    if (this.event.players) {
+    if (this.event?.players) {
       return this.event.players.pro
       + this.event.players.ama
       + this.event.players.misc;
     }
     return 0;
-  }
-
-  get src() {
-    const ssa = this.round.ssa;
-    if (!ssa) {
-      return '';
-    }
-    if (ssa < 48) {
-      return 'Category A (under 48)';
-    }
-    if (ssa < 54) {
-      return 'Category 2A (48-53.9)';
-    }
-    if (ssa < 60) {
-      return 'Category 3A (54-59.9)';
-    }
-    if (ssa < 66) {
-      return 'Category 4A (60-65.9)';
-    }
-    return 'Category 5A (over 66)';
-  }
-
-  get miscInfo(): MiscInfo[] {
-    if (this._miscInfo) {
-      return this._miscInfo;
-    }
-    this.makeMiscInfo();
-    return this._miscInfo;
   }
 
   get equation(): string | undefined {
@@ -107,97 +59,100 @@ export class RoundDetailComponent {
     return `Rating = ${this.round.weight.toFixed(1)} * Score + ${this.round.offset.toFixed(0)}`;
   }
 
-  get date(): string | undefined {
-    return this.cs.getDate(this.getEvent());
-  }
-
   get title() {
-    return this.cs.getEventTitle(this.getEvent().title);
+    return getEventTitle(this.event?.title);
   }
 
-  private getEvent(): EventInfo | undefined {
-    if (this.event) {
-      return this.event;
-    }
-    this.event = this.cs.getEvent(this.round.event);
-    return this.event;
+  get isPdga(): boolean {
+    return (this.event?.status !== 'CANCELED') && (this.pdgaInfo.length > 0);
   }
 
-  private getLocation(): LocationInfo | undefined {
-    if (this._location) {
-      return this._location;
+  get layout(): string {
+    return getLayout(this.event?.layout);
+  }
+
+  private getLocation(id: LocationId) {
+    this.remote.getLocation(id).subscribe(
+      location => this.location = location,
+      err => console.log(err),
+      () => {
+        this.makePdgaInfo();
+        this.makeJpdgaInfo();
+        this.makeMiscInfo();
+        this.makeVideoInfo();
+      }
+    );
+  }
+
+  private makePdgaInfo() {
+    if (this.event.pdga?.eventId) {
+      this.pdgaInfo.push({
+        icon: 'public',
+        title: 'Results',
+        url: getPdgaResult(this.event.pdga.eventId)
+      });
     }
-    const event = this.getEvent();
-    if (!event.location) {
-      return undefined;
+    if (this.event.pdga?.scoreId) {
+      this.pdgaInfo.push({
+        icon: 'public',
+        title: 'Hole Scores',
+        url: getLiveScore(this.event.pdga.scoreId)
+      });
     }
-    this._location = this.cs.getLocation(event.location);
-    return this._location;
+  }
+
+  private makeJpdgaInfo() {
+    if (this.event.jpdga?.eventId) {
+      this.jpdgaInfo.push({
+        icon: 'public',
+        title: 'Results',
+        url: getJpdgaResult(this.event.jpdga.eventId)
+      });
+    }
+    if (this.event.jpdga?.topicId) {
+      this.jpdgaInfo.push({
+        icon: 'public',
+        title: 'Report',
+        url: getJpdgaReport(this.event.jpdga.topicId)
+      });
+    }
+    if (this.event.jpdga?.photoId) {
+      this.jpdgaInfo.push({
+        icon: 'camera_alt',
+        title: 'Photos',
+        url: getJpdgaPhoto(this.event.jpdga.photoId)
+      });
+    }
   }
 
   private makeMiscInfo() {
-    const info: MiscInfo[] = [];
-    if (!this.round.event) {
-      return info;
-    }
-    const event = this.getEvent();
-    if (!event) {
-      return info;
-    }
-
-    if (event.pdga && event.pdga.eventId) {
-      info.push({
-        icon: 'public',
-        title: 'Results 🇺🇸',
-        url: this.cs.getPdgaResult(event.pdga.eventId)
-      });
-    }
-    if (event.jpdga) {
-      if (event.jpdga.eventId) {
-        info.push({
-          icon: 'public',
-          title: 'Results 🇯🇵',
-          url: this.cs.getJpdgaResult(event.jpdga.eventId)
-        });
-        info.push({
-          icon: 'public',
-          title: 'Papers 🇯🇵',
-          url: this.cs.getJpdgaInfo(event.jpdga.eventId)
-        });
-      }
-      if (event.jpdga.topicId) {
-        info.push({
-          icon: 'public',
-          title: 'Report 🇯🇵',
-          url: this.cs.getJpdgaReport(event.jpdga.topicId)
-        });
-      }
-      if (event.jpdga.photoId) {
-        info.push({
-          icon: 'camera_alt',
-          title: 'Photos',
-          url: this.cs.getJpdgaPhoto(event.jpdga.photoId)
-        });
-      }
-    }
-    if (event.urls) {
-      for (const urlInfo of event.urls) {
-        info.push({
+    if (this.event.urls) {
+      for (const urlInfo of this.event.urls) {
+        if (urlInfo.type === 'video') {
+          continue;
+        }
+        this.miscInfo.push({
           icon: ICONS[urlInfo.type],
           title: urlInfo.title,
           url: urlInfo.url
         });
       }
     }
-    this._miscInfo = info;
   }
 
-  private getPrefecture(): string | undefined {
-    const location = this.getLocation();
-    if (!location || !location.prefecture) {
-      return undefined;
+  private makeVideoInfo() {
+    if (this.event.urls) {
+      for (const urlInfo of this.event.urls) {
+        if (urlInfo.type !== 'video') {
+          continue;
+        }
+        this.videoInfo.push({
+          icon: ICONS[urlInfo.type],
+          title: urlInfo.title,
+          url: urlInfo.url
+        });
+      }
     }
-    return this.cs.getPrefecture(location.prefecture);
   }
 
   onRatingChanged() {

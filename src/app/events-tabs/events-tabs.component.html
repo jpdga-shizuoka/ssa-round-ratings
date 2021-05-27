@@ -1,26 +1,22 @@
-<h4>
-  <a (click)="back()"><mat-icon>arrow_back</mat-icon>{{title}}</a>
-</h4>
-<mat-tab-group class="mat-elevation-z2" dynamicHeight
+<mat-tab-group class="mat-elevation-z2 app-container" dynamicHeight
   [(selectedIndex)]="selectedTab">
 
-  <mat-tab label="{{tableTitle}}">
+  <mat-tab label="{{tableTitle | localize}}">
     <div>
       <app-events-table
-        [dataSource]="tableSource"
+        [category]="category"
         [displayedColumns$]="displayedColumns$"
         [markerSelected$]="markerSelected">
-      </app-events-table>      
+      </app-events-table>
     </div>
   </mat-tab>
 
-  <mat-tab label="{{mapTitle}}">
-    <div>
+  <mat-tab label="{{mapTitle | localize}}">
+    <ng-template matTabContent>
       <app-events-map
         [category]="category"
-        [mapSource$]="mapSource$"
         (markerSelected)="onMarkerSelected($event)">
       </app-events-map>
-    </div>
+    </ng-template>
   </mat-tab>
 </mat-tab-group>

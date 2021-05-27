@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { YouTubePlayerModule } from '@angular/youtube-player';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -23,8 +24,11 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 import { AppComponent } from './app.component';
+import { ReloadComponent } from './app-reload';
 import { AppRoutingModule } from './app-routing.module';
 import { DashBoardComponent } from './dash-board/dash-board.component';
 import { RoundsTabsComponent } from './rounds-tabs/rounds-tabs.component';
@@ -43,15 +47,24 @@ import { MarkerDialogComponent } from './dialogs/marker-dialog.component';
 import { NoticeBottomsheetComponent } from './dialogs/notice-bottomsheet.component';
 import { VideoBottomsheetComponent } from './dialogs/video-bottomsheet.component';
 import { BottomSheetDetailDisabledComponent } from './dialogs/bottom-sheet-detail-disabled.component';
+import { SchedulePipe } from './schedule.pipe';
+import { GeolinkPipe } from './geolink.pipe';
+import { LocalizePipe } from './localize.pipe';
+import { PeriodPipe } from './period.pipe';
+import { LocationPipe } from './location.pipe';
+import { EventPipe } from './event.pipe';
 
 import { AgmCoreModule } from '@agm/core';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { DeviceDetectorModule } from 'ngx-device-detector';
 import { environment } from '../environments/environment';
+import { PrefaceComponent } from './preface/preface.component';
+import { IcalenderComponent } from './icalendar/icalendar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ReloadComponent,
     RoundsTabsComponent,
     RoundsTableComponent,
     RoundDetailComponent,
@@ -69,6 +82,14 @@ import { environment } from '../environments/environment';
     VideosTableComponent,
     JapanOpenComponent,
     StatsTabsComponent,
+    SchedulePipe,
+    GeolinkPipe,
+    LocalizePipe,
+    PeriodPipe,
+    LocationPipe,
+    EventPipe,
+    PrefaceComponent,
+    IcalenderComponent
   ],
   imports: [
     BrowserModule,
@@ -77,6 +98,7 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     LayoutModule,
     YouTubePlayerModule,
+    HttpClientModule,
     MatToolbarModule,
     MatIconModule,
     MatTooltipModule,
@@ -94,8 +116,10 @@ import { environment } from '../environments/environment';
     MatTabsModule,
     MatDialogModule,
     MatBottomSheetModule,
-    AgmCoreModule.forRoot({ apiKey: environment.MAP_API_KEY }),
     MatMenuModule,
+    MatProgressSpinnerModule,
+    MatExpansionModule,
+    AgmCoreModule.forRoot({ apiKey: environment.MAP_API_KEY }),
     NgxChartsModule,
     DeviceDetectorModule.forRoot(),
   ],

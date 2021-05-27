@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+
+const SOURCES = [
+  'events.json',
+  'local-events.json',
+  'monthly-events.json',
+];
+
+const fs = require('fs');
+const path = '../src/assets/model/';
+
+SOURCES.forEach(filename => {
+  const filepath = path + filename;
+  const events = JSON.parse(fs.readFileSync(filepath, 'utf8'));
+  events.forEach(event => {
+    event.location = event.location.toLowerCase().replace(/[ \-\.\,\(\)]/g, '');
+    if (event.title) {
+      event.id = event.title.toLowerCase().replace(/[ \-\.\,\(\)]/g, '');
+    } else {
+      event.id = 'monthly' + event.location;
+    }
+  });
+  fs.writeFileSync(filename, JSON.stringify(events, null, '  '));
+});

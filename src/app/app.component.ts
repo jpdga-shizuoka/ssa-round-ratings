@@ -1,28 +1,20 @@
 import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
+import { Location } from '@angular/common';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
 import { MatSidenav } from '@angular/material/sidenav';
+import { BehaviorSubject } from 'rxjs';
+import { take } from 'rxjs/operators';
 
-import { filter, map, mergeMap } from 'rxjs/operators';
-
-import { CommonService } from './common.service';
+import { LocalizeService, GLOBAL, LOCAL } from './localize.service';
 import {
   isHandset,
   subscribeMetaDescription,
   MetaDescription,
   Observable,
   Subscription,
-} from './utilities';
-
-interface MyMetaData {
-  title: string;
-  type: string;
-  url: string;
-  image?: string;
-  description?: string;
-  keywords?: string;
-}
+} from './ng-utilities';
 
 @Component({
   selector: 'app-root',
@@ -33,10 +25,20 @@ export class AppComponent implements OnInit, OnDestroy, MetaDescription {
   @ViewChild('drawer') drawer: MatSidenav;
   title = 'DG Japan';
   isHandset$: Observable<boolean>;
-  metaSubscription: Subscription;
+  subtitle$ = new BehaviorSubject<string>('');
+  private ssMeta: Subscription;
+  get subtitle() { return this.localize.transform(this.subtitle$.value); }
+  get home() { return this.localize.transform('Home'); }
+  get schedule() { return this.localize.transform('Schedule'); }
+  get results() { return this.localize.transform('Results'); }
+  get localEvents() { return this.localize.transform('Local Events'); }
+  get monthlyEvents() { return this.localize.transform('Monthly Events'); }
+  get stats() { return this.localize.transform('Stats'); }
+  get aboutThisSite() { return this.localize.transform('About this site'); }
 
   constructor(
-    private cs: CommonService,
+    private localize: LocalizeService,
+    private location: Location,
     public ngActivatedRoute: ActivatedRoute,
     public ngTitle: Title,
     public ngMeta: Meta,
@@ -46,54 +48,28 @@ export class AppComponent implements OnInit, OnDestroy, MetaDescription {
     this.isHandset$ = isHandset(breakpointObserver);
   }
 
-  get home() {
-    return this.cs.getMenuAliase('Home');
-  }
-
-  get upcomingEvents() {
-    return this.cs.getMenuAliase('Schedule');
-  }
-
-  get results() {
-    return this.cs.getMenuAliase('Results');
-  }
-
-  get localEvents() {
-    return this.cs.getMenuAliase('Local Events');
-  }
-
-  get monthlyEvents() {
-    return this.cs.getMenuAliase('Monthly Events');
-  }
-
-  get stats() {
-    return this.cs.getMenuAliase('Stats');
-  }
-
-  get aboutThisSite() {
-    return this.cs.getMenuAliase('About this site');
-  }
-
   ngOnInit() {
-    const language = window.navigator.language.split('-')[0];
-    this.cs.primaryLanguage = language === 'ja' ? false : true;
-
-    this.metaSubscription = subscribeMetaDescription(this);
+    this.ssMeta = subscribeMetaDescription(this);
   }
 
   ngOnDestroy() {
-    if (this.metaSubscription) {
-      this.metaSubscription.unsubscribe();
-    }
+    this.ssMeta?.unsubscribe();
   }
 
   onClickLink() {
     this.isHandset$
-    .subscribe(result => result ? this.drawer.close() : '')
-    .unsubscribe();
+    .pipe(take(1))
+    .subscribe(result => result ? this.drawer.close() : '');
   }
 
   onClickLanguage() {
-    this.cs.toggleLanguage();
+    this.localize.toggleLanguage();
+
+    // @see https://stackoverflow.com/questions/47813927/how-to-refresh-a-component-in-angular
+    // @note The following technique is working, but it affects routerLinkActive;
+    // https://medium.com/@rakshitshah/refresh-angular-component-without-navigation-148a87c2de3f
+    const currentPath = this.location.path().replace(/^\//, '');
+    this.ngRouter.navigate(['reload'], { skipLocationChange: true })
+    .then(() => this.ngRouter.navigate([currentPath], { skipLocationChange: true }));
   }
 }

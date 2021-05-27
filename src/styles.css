@@ -2,8 +2,10 @@
 
 html, body { height: 100%; }
 body {
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-    margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+  background: repeat url("./assets/img/background.png");
+  background-size: 30px 30px;
 }
 .my-align {
   display: inline-flex;
@@ -12,4 +14,50 @@ body {
 .my-align mat-icon {
   margin-left: 5px;
   margin-right: 5px;
+}
+
+.mat-spinner {
+  position: fixed;
+  top: 0;
+  left: calc(50% - 50px);
+}
+app-preface h1 {
+  font-size: 15px;
+}
+.img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-container img {
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+  margin-bottom: 1rem;
+}
+app-preface .footer {
+  text-align: right;
+}
+a {
+  text-decoration: none;
+}
+a[target="_blank"] {
+  display: inline-block;
+  background: url("assets/img/open_in_new-24px.svg") no-repeat right center;
+  background-size: 1.2rem 1.2rem;
+  padding-right: 1.3rem;
+}
+a[href^="https://maps.google"],
+a[href^="http://maps.apple"] {
+  display: inline-block;
+  background: url("assets/img/room-24px.svg") no-repeat right center;
+  background-size: 1.2rem 1.2rem;
+  padding-right: 1.3rem;
+}
+.mat-drawer-container {
+  background-color: transparent;
+}
+.app-container > * {
+  background-color: #fafafa;
+}
+.app-container {
+  margin-top: 6px;
 }

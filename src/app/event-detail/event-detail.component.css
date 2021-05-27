@@ -16,6 +16,9 @@
   width: 16px;
   margin: 0 5px;
 }
+.info-container > a:not(:last-child) {
+  margin-right: 10px;
+}
 @media (max-width: 414px) {
   .event-detail {
     font-size: small;
@@ -28,11 +31,4 @@
   .event-detail td:first-child {
     min-width: 5rem;
   }
-}
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-.flex-container>* {
-  flex: auto;
 }

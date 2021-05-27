@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
-
-import { CommonService } from '../common.service';
-import { VideoInfo } from '../models';
+import { RemoteService, LocationInfo } from '../remote.service';
 
 @Component({
   selector: 'app-japan-open',
@@ -10,22 +7,12 @@ import { VideoInfo } from '../models';
   styleUrls: ['./japan-open.component.css']
 })
 export class JapanOpenComponent implements OnInit {
+  location: LocationInfo;
 
-  videosSource: MatTableDataSource<VideoInfo>;
+  constructor(private readonly remote: RemoteService) { }
 
-  constructor(
-    private cs: CommonService,
-  ) { }
-
-  get geolocation(): string {
-    return this.cs.getGeolocation('fukui country club');
-  }
-
-  ngOnInit(): void {
-    this.videosSource = new MatTableDataSource<VideoInfo>();
-    setTimeout(() => {
-      const list = this.cs.getVideoList('japan open');
-      this.videosSource.data = list;
-    });
+  ngOnInit() {
+    this.remote.getLocation('fukuicountryclub')
+      .subscribe(location => this.location = location);
   }
 }

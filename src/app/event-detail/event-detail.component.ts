@@ -1,38 +1,41 @@
-import { Component, Input } from '@angular/core';
-
-import {
-  CommonService, EventInfo, LocationInfo, ICONS, MiscInfo
-} from '../common.service';
+import { Component, Input, OnInit } from '@angular/core';
+import { ICONS, MiscInfo } from '../app-common';
 import {
   BreakpointObserver, Observable, isHandset, of as observableOf
-} from '../utilities';
+} from '../ng-utilities';
+import { RemoteService, EventInfo, LocationInfo } from '../remote.service';
+import { getEventTitle, getPdgaResult, getJpdgaInfo, getLayout, getLiveScore } from '../app-libs';
 
 @Component({
   selector: 'app-event-detail',
   templateUrl: './event-detail.component.html',
   styleUrls: ['./event-detail.component.css']
 })
-export class EventDetailComponent {
-
+export class EventDetailComponent implements OnInit {
   @Input() event: EventInfo;
-
-  private _location: LocationInfo;
-  private _miscInfo: MiscInfo[];
+  location: LocationInfo;
+  miscInfo: MiscInfo[] = [];
+  pdgaInfo: MiscInfo[] = [];
+  jpdgaInfo: MiscInfo[] = [];
   isHandset$: Observable<boolean>;
 
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private cs: CommonService,
+    private readonly remote: RemoteService,
   ) {
     this.isHandset$ = isHandset(breakpointObserver);
   }
 
-  get title(): string {
-    return this.event.title ? this.cs.getEventTitle(this.event.title) : '';
+  ngOnInit() {
+    this.remote.getLocation(this.event.location)
+      .subscribe(location => this.location = location);
+    this.makePdgaInfo();
+    this.makeJpdgaInfo();
+    this.makeMiscInfo();
   }
 
-  get monthlySchedule() {
-    return this.cs.getMonth(this.event.schedule);
+  get title(): string {
+    return this.event.title ? getEventTitle(this.event.title) : '';
   }
 
   get showPastRounds() {
@@ -47,81 +50,50 @@ export class EventDetailComponent {
     return this.isHandset$;
   }
 
-  get miscInfo(): MiscInfo[] {
-    if (this._miscInfo) {
-      return this._miscInfo;
-    }
-    this.makeMiscInfo();
-    return this._miscInfo;
-  }
-
-  get location(): string | undefined {
-    const name = this.cs.getLocationName(this.event.location);
-    const region = this.getRegion();
-    return `${name}, ${region}`;
-  }
-
-  get geolocation(): string | undefined {
-    const location = this.getLocation();
-    if (!location || !location.geolocation) {
-      return undefined;
-    }
-    return this.cs.getGeolocation(location.geolocation);
-  }
-
-  get pastResults() {
-    return this.cs.getMenuAliase('Past Results');
-  }
-
-  get seeThePastResults() {
-    return this.cs.getMenuAliase('See the Past Results');
-  }
-
-  private getRegion(): string | undefined {
-    const location = this.getLocation();
-    if (!location || !location.prefecture) {
-      return undefined;
-    }
-    return this.cs.getPrefecture(location.prefecture);
-  }
-
-  private getLocation(): LocationInfo | undefined {
-    if (this._location) {
-      return this._location;
-    }
-    this._location = this.cs.getLocation(this.event.location);
-    return this._location;
+  get layout(): string {
+    return getLayout(this.event?.layout);
   }
 
   private makeMiscInfo() {
-    const info: MiscInfo[] = [];
-    if (this.event.pdga) {
-      if (this.event.pdga.eventId) {
-        info.push({
-          icon: 'public',
-          title: 'PDGA 🇺🇸',
-          url: this.cs.getPdgaResult(this.event.pdga.eventId)
-        });
-      }
-    }
-    if (this.event.jpdga) {
-      if (this.event.jpdga.eventId) {
-        info.push({
-          icon: 'public',
-          title: 'JPDGA 🇯🇵',
-          url: this.cs.getJpdgaInfo(this.event.jpdga.eventId)
-        });
-      }
-    }
     if (this.event.urls) {
       for (const urlInfo of this.event.urls) {
-        info.push({
+        this.miscInfo.push({
           icon: ICONS[urlInfo.type],
           title: urlInfo.title,
           url: urlInfo.url
         });
       }
     }
-    this._miscInfo = info;
+  }
+
+  private makePdgaInfo() {
+    if (this.event.pdga) {
+      if (this.event.pdga.eventId) {
+        this.pdgaInfo.push({
+          icon: 'public',
+          title: 'Current Registration',
+          url: getPdgaResult(this.event.pdga.eventId)
+        });
+      }
+      if (this.event.pdga?.scoreId) {
+        this.pdgaInfo.push({
+          icon: 'public',
+          title: 'Live Score',
+          url: getLiveScore(this.event.pdga.scoreId)
+        });
+      }
+    }
+  }
+
+  private makeJpdgaInfo() {
+    if (this.event.jpdga) {
+      if (this.event.jpdga.eventId) {
+        this.jpdgaInfo.push({
+          icon: 'public',
+          title: 'Paper',
+          url: getJpdgaInfo(this.event.jpdga.eventId)
+        });
+      }
+    }
   }
 }

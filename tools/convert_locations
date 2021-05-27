@@ -1,0 +1,42 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = '../src/assets/model/';
+const filename = 'locations.json';
+const filepath = path + filename;
+const locations = JSON.parse(fs.readFileSync(filepath, 'utf8'));
+const events = JSON.parse(fs.readFileSync(path + 'events.json', 'utf8'));
+const locals = JSON.parse(fs.readFileSync(path + 'local-events.json', 'utf8'));
+const monthly = JSON.parse(fs.readFileSync(path + 'monthly-events.json', 'utf8'));
+
+const result = [];
+Object.keys(locations).forEach(key => {
+  location = Object.assign(locations[key]);
+  location.id = key;
+  location.title = title(key);
+  if (location.title) {
+    result.push(location);
+  }
+});
+
+fs.writeFileSync(filename, JSON.stringify(result, null, '  '));
+
+function title(key) {
+  let event = events.find(event =>
+    event.location.toLowerCase().replace(/[ \-\.\,\(\)]/g, '') === key
+  );
+  if (!event) {
+    event = locals.find(event =>
+      event.location.toLowerCase().replace(/[ \-\.\,\(\)]/g, '') === key
+    );
+  }
+  if (!event) {
+    event = monthly.find(event =>
+      event.location.toLowerCase().replace(/[ \-\.\,\(\)]/g, '') === key
+    );
+  }
+  if (!event) {
+    return;
+  }
+  return event.location;
+}

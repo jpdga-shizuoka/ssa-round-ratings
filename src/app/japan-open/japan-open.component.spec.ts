@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
@@ -11,6 +12,8 @@ import { MatInputModule } from '@angular/material/input';
 
 import { JapanOpenComponent } from './japan-open.component';
 import { VideosTableComponent } from '../videos-table/videos-table.component';
+import { GeolinkPipe } from '../geolink.pipe';
+import { LocalizePipe } from '../localize.pipe';
 
 describe('JapanOpenComponent', () => {
   let component: JapanOpenComponent;
@@ -21,9 +24,12 @@ describe('JapanOpenComponent', () => {
       declarations: [
         JapanOpenComponent,
         VideosTableComponent,
+        GeolinkPipe,
+        LocalizePipe,
       ],
       imports: [
         NoopAnimationsModule,
+        HttpClientModule,
         MatCardModule,
         MatBottomSheetModule,
         MatPaginatorModule,

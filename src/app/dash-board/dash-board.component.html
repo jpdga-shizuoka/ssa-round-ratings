@@ -1,53 +1,59 @@
-<h4>
-  <a routerLink="/events/upcoming"><mat-icon>events</mat-icon>{{schedule}}</a>
-</h4>
-<mat-tab-group class="mat-elevation-z2"
-  (selectedTabChange)="onEventsTabChange($event)">
-  <mat-tab label="{{upcomingEvents}}">
-    <div>
-      <app-events-table
-        [showMore]="true"
-        [category]="'upcoming'"
-        [dataSource]="tableSourceUpcoming"
-        [displayedColumns$]="displayedColumnsUpcoming$">
-      </app-events-table>
-    </div>
-  </mat-tab>
-  <mat-tab label="{{localEvents}}">
-    <div>
-      <app-events-table
-        [showMore]="true"
-        [category]="'local'"
-        [dataSource]="tableSourceLocal"
-        [displayedColumns$]="displayedColumnsUpcoming$">
-      </app-events-table>
-    </div>
-  </mat-tab>
-  <mat-tab label="Japan Open">
-    <app-japan-open>
-    </app-japan-open>
-  </mat-tab>
-</mat-tab-group>
+<div class="app-container">
+  <div>
+    <app-preface>
+    </app-preface>
+  </div>
+  <div>
+    <h4>
+      <a routerLink="/events/upcoming"><mat-icon>events</mat-icon>{{'Schedule' | localize}}</a>
+    </h4>
+    <mat-tab-group class="mat-elevation-z2">
+      <mat-tab label="{{'Official' | localize}}">
+        <div>
+          <app-events-table
+            [showMore]="true"
+            [limit]="3"
+            [category]="'upcoming'"
+            [displayedColumns$]="displayedColumnsUpcoming$">
+          </app-events-table>
+        </div>
+      </mat-tab>
+      <mat-tab label="{{'Local' | localize}}">
+        <div>
+          <app-events-table
+            [showMore]="true"
+            [limit]="3"
+            [category]="'local'"
+            [displayedColumns$]="displayedColumnsUpcoming$">
+          </app-events-table>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
 
-<h4>
-  <a routerLink="/past"><mat-icon>table_chart</mat-icon>{{results}}</a>
-</h4>
-<mat-tab-group class="mat-elevation-z2">
-  <mat-tab label="{{results}}">
-    <div>
-      <app-rounds-table
-        [showMore]="true"
-        [dataSource]="tableSourcePast"
-        [displayedColumns$]="displayedColumnsPast$">
-      </app-rounds-table>
-    </div>
-  </mat-tab>
-  <mat-tab label="{{videos}}">
-    <div>
-      <app-videos-table
-        [showMore]="true"
-        [dataSource]="videosSource">
-      </app-videos-table>
-    </div>
-  </mat-tab>
-</mat-tab-group>
+  <div>
+    <h4>
+      <a routerLink="/past"><mat-icon>table_chart</mat-icon>{{'Results' | localize}}</a>
+    </h4>
+    <mat-tab-group class="mat-elevation-z2">
+      <mat-tab label="{{'Results' | localize}}">
+        <div>
+          <app-rounds-table
+            [showMore]="true"
+            [limit]="5"
+            [displayedColumns$]="displayedColumnsPast$">
+          </app-rounds-table>
+        </div>
+      </mat-tab>
+      <mat-tab label="{{'Videos' | localize}}">
+        <div>
+          <app-videos-table
+            [limit]="5"
+            [category]="'past'"
+            [showMore]="true">
+          </app-videos-table>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>

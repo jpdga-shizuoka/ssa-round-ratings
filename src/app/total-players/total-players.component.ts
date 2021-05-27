@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-import { CommonService } from '../common.service';
+import { first } from 'rxjs/operators';
+import { RemoteService } from '../remote.service';
 
 interface ChartValue {
   name: string;
@@ -18,8 +18,7 @@ interface ChartData {
   styleUrls: ['./total-players.component.css']
 })
 export class TotalPlayersComponent implements OnInit {
-
-  chartSource: ChartData[] = [];
+  chartSource: ChartData[];
   xAxis = true;
   yAxis = true;
   showXAxisLabel = true;
@@ -35,13 +34,18 @@ export class TotalPlayersComponent implements OnInit {
     domain: ['#aaf255', '#61d800', '#008b00']
   };
 
-  constructor(private cs: CommonService) {
-  }
+  constructor(private readonly remote: RemoteService) {}
 
   ngOnInit(): void {
-    const tatalPlayers = this.cs.getTotalPlayers();
-    tatalPlayers.forEach(yearTotal => {
-      this.chartSource.push({
+    this.remote.getPlayers()
+    .pipe(first())
+    .subscribe(players => this.countPlayers(players));
+  }
+
+  private countPlayers(players) {
+    const data: ChartData[] = [];
+    players.forEach(yearTotal => {
+      data.push({
         name: yearTotal.year.toString().slice(-2),
         series: [{
           name: 'Pro',
@@ -55,5 +59,6 @@ export class TotalPlayersComponent implements OnInit {
         }]
       });
     });
+    this.chartSource = data;
   }
 }

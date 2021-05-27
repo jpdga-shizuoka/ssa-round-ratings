@@ -1,8 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientModule } from '@angular/common/http';
 
 import { EventDetailComponent } from './event-detail.component';
+import { GeolinkPipe } from '../geolink.pipe';
+import { LocalizePipe } from '../localize.pipe';
+import { SchedulePipe } from '../schedule.pipe';
 
 describe('EventDetailComponent', () => {
   let component: EventDetailComponent;
@@ -10,10 +14,16 @@ describe('EventDetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EventDetailComponent ],
+      declarations: [
+        EventDetailComponent,
+        GeolinkPipe,
+        LocalizePipe,
+        SchedulePipe,
+      ],
       imports: [
         RouterTestingModule,
         MatIconModule,
+        HttpClientModule,
       ]
     })
     .compileComponents();
@@ -23,8 +33,9 @@ describe('EventDetailComponent', () => {
     fixture = TestBed.createComponent(EventDetailComponent);
     component = fixture.componentInstance;
     component.event = {
+      id: 'the9thokinawaopen',
       title: 'The 9th Okinawa Open',
-      location: 'Nakijinson Sport Park',
+      location: 'nakijinsonsportpark',
       period: {
         from: '2020-02-15',
         to: '2020-02-16'

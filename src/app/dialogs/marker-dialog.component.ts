@@ -1,30 +1,35 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { EventCategory } from '../models';
+import { RemoteService, LocationInfo } from '../remote.service';
 
-import { CommonService } from '../common.service';
-import { EventCategory, MarkerDialogData } from '../models';
+export interface MarkerDialogData {
+  category: EventCategory;
+  position: {
+    lat: number;
+    lng: number;
+  };
+  location: string;
+  events: string[];
+}
 
 @Component({
   selector: 'app-marker-dialog',
   templateUrl: './marker-dialog.component.html',
   styleUrls: ['./marker-dialog.component.css']
 })
-export class MarkerDialogComponent {
+export class MarkerDialogComponent implements OnInit {
   public dialogRef: MatDialogRef<MarkerDialogComponent>;
+  location: LocationInfo;
+
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: MarkerDialogData,
-    private cs: CommonService,
+    private readonly remote: RemoteService,
   ) {}
 
-  get title() {
-    const locationInfo = this.cs.getLocation(this.data.location);
-    const locationName = this.cs.getLocationName(this.data.location);
-    const region = this.cs.getPrefecture(locationInfo.prefecture);
-    return `${locationName}, ${region}`;
-  }
-
-  get detail() {
-    return this.cs.getMenuAliase('Detail');
+  ngOnInit() {
+    this.remote.getLocation(this.data.location)
+      .subscribe(location => this.location = location);
   }
 
   get showEventBotton() {
@@ -37,9 +42,5 @@ export class MarkerDialogComponent {
 
   get showList() {
     return this.data.category !== 'monthly';
-  }
-
-  eventTitle(name: string) {
-    return this.cs.getEventAliase(name);
   }
 }

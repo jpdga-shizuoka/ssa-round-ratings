@@ -3,7 +3,6 @@ import { YouTubePlayer } from '@angular/youtube-player';
 import { MatBottomSheetRef, MAT_BOTTOM_SHEET_DATA} from '@angular/material/bottom-sheet';
 import { DeviceDetectorService } from 'ngx-device-detector';
 
-import { CommonService } from '../common.service';
 import { VideoInfo } from '../models';
 
 const FACEBOOK = /https:\/\/www.facebook.com\/.+\/videos\/(\d+)\//;
@@ -29,7 +28,6 @@ export class VideoBottomsheetComponent {
     @Inject(MAT_BOTTOM_SHEET_DATA) public video: VideoInfo,
     private deviceService: DeviceDetectorService,
     private bottomSheetRef: MatBottomSheetRef<VideoBottomsheetComponent>,
-    private cs: CommonService,
   ) {
     const width = window.innerWidth - VIDEO_SIDE_PADDING * 2;
     this.width = Math.min(MAX_VIDEO_WIDTH, width);
@@ -64,12 +62,6 @@ export class VideoBottomsheetComponent {
     }
   }
 
-  get facebookLink(): string {
-    return this.cs.primaryLanguage
-      ? 'Playback by Facebook'
-      : 'Facebookで再生';
-  }
-
   get year(): number {
     return this.video.date.getFullYear();
   }
@@ -84,10 +76,6 @@ export class VideoBottomsheetComponent {
 
   get isYoutubeVideo(): boolean {
     return this.videoType === 'YT';
-  }
-
-  eventTitle(name: string) {
-    return this.cs.getEventAliase(name);
   }
 
   //

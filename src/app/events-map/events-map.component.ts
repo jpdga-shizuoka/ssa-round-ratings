@@ -1,24 +1,27 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { BehaviorSubject, from } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
 
-import { GeoMarker, EventCategory } from '../models';
-import { CommonService } from '../common.service';
+import { GeoMarker } from '../map-common';
+import { EventCategory } from '../models';
 import { MarkerDialogComponent } from '../dialogs/marker-dialog.component';
 import { environment } from '../../environments/environment';
+import { RemoteService, EventInfo, LocationInfo } from '../remote.service';
 
 @Component({
   selector: 'app-events-map',
   templateUrl: './events-map.component.html',
   styleUrls: ['./events-map.component.css']
 })
-export class EventsMapComponent {
+export class EventsMapComponent implements OnInit {
   @Input() category: EventCategory;
-  @Input() mapSource$: BehaviorSubject<GeoMarker[]>;
   @Output() markerSelected = new EventEmitter<GeoMarker>();
+  private events: EventInfo[];
   latitude = environment.map.center.lat;
   longitude = environment.map.center.lng;
   zoom = environment.map.zoom;
+  mapSource$: BehaviorSubject<GeoMarker[]> = new BehaviorSubject<GeoMarker[]>([]);
+  loading = true;
 
   get height() {
     const height = getBodyHeight() - getHeaderHeight() - getFooterHeight() - getMatHeaderHeight();
@@ -26,9 +29,17 @@ export class EventsMapComponent {
   }
 
   constructor(
-    private cs: CommonService,
+    private remote: RemoteService,
     public dialog: MatDialog,
   ) {
+  }
+
+  ngOnInit() {
+    this.remote.getEvents(this.category).subscribe(
+      events => this.events = events,
+      err => console.log(err),
+      () => this.loadMarkers()
+    );
   }
 
   onMarkerClick(event) {
@@ -63,6 +74,32 @@ export class EventsMapComponent {
       this.markerSelected.emit(mk);
     });
   }
+
+  private loadMarkers() {
+    const markers: GeoMarker[] = [];
+    from(this.events).subscribe(
+      event => this.remote.getLocation(event.location).subscribe(
+        location => markers.push(makeMarker(event, location))
+      ),
+      err => console.log(err),
+      () => {
+        this.mapSource$.next(markers);
+        this.mapSource$.complete();
+        this.loading = false;
+      }
+    );
+  }
+}
+
+function makeMarker(event: EventInfo, location: LocationInfo) {
+  return {
+    position: {
+      lat: location.geolocation[0],
+      lng: location.geolocation[1]
+    },
+    location: location.id,
+    title: event.title,
+  };
 }
 
 function getBodyHeight() {

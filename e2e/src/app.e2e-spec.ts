@@ -15,12 +15,12 @@ describe('workspace-project App', () => {
 
   it('should display the toolbar title', () => {
     page.navigateTo();
-    expect(page.getToolbarTitleText()).toEqual('DG Japan');
+    expect(page.getToolbarTitleText()).toEqual('');
   });
 
   it('should display the footer title', () => {
     page.navigateTo();
-    expect(page.getFooterText()).toEqual('Copyright © 2019-2020 SHIZUOKA@JPDGA');
+    expect(page.getFooterText()).toEqual('© SHIZUOKA DISC GOLF ASSOCIATION');
   });
 
   afterEach(async () => {

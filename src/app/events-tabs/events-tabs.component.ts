@@ -1,18 +1,15 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-
-import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 import { MatBottomSheet, MatBottomSheetRef } from '@angular/material/bottom-sheet';
 
 import { Observable, BehaviorSubject, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { EventInfo, GeoMarker } from '../models';
-import { CommonService } from '../common.service';
-import { isHandset } from '../utilities';
+import { GeoMarker } from '../map-common';
+import { EventInfo } from '../models';
+import { isHandset } from '../ng-utilities';
 import { NoticeBottomsheetComponent } from '../dialogs/notice-bottomsheet.component';
 
 const DISPLAYED_COLUMNS = {
@@ -34,36 +31,31 @@ const TABS_TITLE = {
 export class EventsTabsComponent implements OnInit, AfterViewInit {
 
   category: string;
-  tableSource: MatTableDataSource<EventInfo>;
-  mapSource$: BehaviorSubject<GeoMarker[]>;
   isHandset$: Observable<boolean>;
   markerSelected: Subject<GeoMarker>;
   selectedTab: number;
 
   constructor(
     private route: ActivatedRoute,
-    private location: Location,
-    private cs: CommonService,
     private bottomsheet: MatBottomSheet,
     breakpointObserver: BreakpointObserver,
   ) {
     this.isHandset$ = isHandset(breakpointObserver);
     this.markerSelected = new Subject<GeoMarker>();
     this.selectedTab = 0;
+
+    if (this.route.snapshot.url.length !== 2) {
+      throw new TypeError(`unexpected path: ${this.route.snapshot.url}`);
+    }
+    this.category = this.route.snapshot.url[1].path;
+    if (this.category !== 'upcoming'
+    && this.category !== 'local'
+    && this.category !== 'monthly') {
+      throw new TypeError(`unexpected category: ${this.category}`);
+    }
   }
 
   ngOnInit() {
-    if (this.route.snapshot.url.length !== 2) {
-      return;
-    }
-    this.category = this.route.snapshot.url[1].path;
-    const events = this.cs.getEvents(this.category);
-    if (!events) {
-      return;
-    }
-    this.tableSource = new MatTableDataSource(events);
-    this.mapSource$ = new BehaviorSubject<GeoMarker[]>([]);
-    this.makeMaerkersFromEvents(events);
   }
 
   ngAfterViewInit() {
@@ -80,11 +72,11 @@ export class EventsTabsComponent implements OnInit, AfterViewInit {
   }
 
   get tableTitle() {
-    return this.cs.getMenuAliase(TABS_TITLE[this.category][0]);
+    return TABS_TITLE[this.category][0];
   }
 
   get mapTitle() {
-    return this.cs.getMenuAliase(TABS_TITLE[this.category][1]);
+    return TABS_TITLE[this.category][1];
   }
 
   get title() {
@@ -97,11 +89,7 @@ export class EventsTabsComponent implements OnInit, AfterViewInit {
         schedule = 'Monthly Events';
         break;
     }
-    return this.cs.getMenuAliase(schedule);
-  }
-
-  back() {
-    this.location.back();
+    return schedule;
   }
 
   onMarkerSelected(marker: GeoMarker) {
@@ -116,22 +104,5 @@ export class EventsTabsComponent implements OnInit, AfterViewInit {
     .subscribe(() => sessionStorage.setItem('monthlyConfirmed', 'true'));
 
     setTimeout(() => bottomsheetRef.dismiss(), 5000);
-  }
-
-  private makeMaerkersFromEvents(events: EventInfo[]) {
-    const markers: GeoMarker[] = [];
-    for (const event of events) {
-      const location = this.cs.getLocation(event.location);
-      const marker = {
-        position: {
-          lat: location.geolocation[0],
-          lng: location.geolocation[1]
-        },
-        location: event.location,
-        title: event.title,
-      };
-      markers.push(marker);
-    }
-    this.mapSource$.next(markers);
   }
 }
