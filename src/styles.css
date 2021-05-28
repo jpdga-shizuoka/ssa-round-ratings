@@ -61,3 +61,11 @@ a[href^="http://maps.apple"] {
 .app-container {
   margin-top: 6px;
 }
+.spinner {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: calc(100vh / 2);
+  left: 0;
+  z-index: 100;
+}

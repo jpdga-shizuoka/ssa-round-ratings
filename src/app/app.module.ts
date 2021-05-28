@@ -4,7 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { YouTubePlayerModule } from '@angular/youtube-player';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -54,10 +55,8 @@ import { PeriodPipe } from './period.pipe';
 import { LocationPipe } from './location.pipe';
 import { EventPipe } from './event.pipe';
 
-import { AgmCoreModule } from '@agm/core';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { DeviceDetectorModule } from 'ngx-device-detector';
-import { environment } from '../environments/environment';
 import { PrefaceComponent } from './preface/preface.component';
 import { IcalenderComponent } from './icalendar/icalendar.component';
 
@@ -98,7 +97,9 @@ import { IcalenderComponent } from './icalendar/icalendar.component';
     AppRoutingModule,
     LayoutModule,
     YouTubePlayerModule,
+    GoogleMapsModule,
     HttpClientModule,
+    HttpClientJsonpModule,
     MatToolbarModule,
     MatIconModule,
     MatTooltipModule,
@@ -119,7 +120,6 @@ import { IcalenderComponent } from './icalendar/icalendar.component';
     MatMenuModule,
     MatProgressSpinnerModule,
     MatExpansionModule,
-    AgmCoreModule.forRoot({ apiKey: environment.MAP_API_KEY }),
     NgxChartsModule,
     DeviceDetectorModule.forRoot(),
   ],
