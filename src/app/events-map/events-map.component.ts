@@ -1,5 +1,6 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
-import { BehaviorSubject, from } from 'rxjs';
+import { Component, Input, Output, EventEmitter, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Observable, BehaviorSubject, from } from 'rxjs';
+import { tap } from 'rxjs/operators';
 import { MatDialog } from '@angular/material/dialog';
 
 import { GeoMarker } from '../map-common';
@@ -7,6 +8,7 @@ import { EventCategory } from '../models';
 import { MarkerDialogComponent } from '../dialogs/marker-dialog.component';
 import { environment } from '../../environments/environment';
 import { RemoteService, EventInfo, LocationInfo } from '../remote.service';
+import { GoogleMapsApiService } from '../googlemapsapi.service';
 
 @Component({
   selector: 'app-events-map',
@@ -17,34 +19,48 @@ export class EventsMapComponent implements OnInit {
   @Input() category: EventCategory;
   @Output() markerSelected = new EventEmitter<GeoMarker>();
   private events: EventInfo[];
-  latitude = environment.map.center.lat;
-  longitude = environment.map.center.lng;
-  zoom = environment.map.zoom;
+  apiLoaded$: Observable<boolean>;
   mapSource$: BehaviorSubject<GeoMarker[]> = new BehaviorSubject<GeoMarker[]>([]);
   loading = true;
+  zoom = environment.googlemaps.zoom;
+  center = environment.googlemaps.center;
+  mapOptions = {
+    minZoom: 4,
+    disableDefaultUI: true
+  };
 
   get height() {
     const height = getBodyHeight() - getHeaderHeight() - getFooterHeight() - getMatHeaderHeight();
-    return height + 'px';
+    return `${height}px`;
+  }
+
+  get width() {
+    const element = this.el.nativeElement.querySelector('#googlemap');
+    const width = element.getBoundingClientRect().width;
+    return `${width}px`;
   }
 
   constructor(
+    private el: ElementRef<Element>,
     private remote: RemoteService,
     public dialog: MatDialog,
+    private googleMapsApi: GoogleMapsApiService
   ) {
   }
 
-  ngOnInit() {
-    this.remote.getEvents(this.category).subscribe(
-      events => this.events = events,
-      err => console.log(err),
-      () => this.loadMarkers()
+  ngOnInit(): void {
+    this.apiLoaded$ = this.googleMapsApi.load$().pipe(
+      tap(() => this.loadEvents())
     );
   }
 
-  onMarkerClick(event) {
+  onTilesloaded(): void {
+    this.loading = false;
+  }
+
+  onMarkerClick(event: google.maps.MapMouseEvent): void {
     const markers = this.mapSource$.getValue();
-    const marker = markers.find(m => m.position.lat === event.latitude && m.position.lng === event.longitude);
+    const marker = markers.find(m => event.latLng.equals(new google.maps.LatLng(m.position.lat, m.position.lng)));
     const location = marker.location;
     const eventsName: string[] = [];
     for (const m of markers) {
@@ -55,7 +71,7 @@ export class EventsMapComponent implements OnInit {
     this.openDialog(this.category, marker, eventsName);
   }
 
-  openDialog(cat: EventCategory, marker: GeoMarker, eventNames: string[]) {
+  openDialog(cat: EventCategory, marker: GeoMarker, eventNames: string[]): void {
     this.dialog.open(MarkerDialogComponent, {
       width: '400px',
       data: {
@@ -75,6 +91,14 @@ export class EventsMapComponent implements OnInit {
     });
   }
 
+  private loadEvents() {
+    this.remote.getEvents(this.category).subscribe(
+      events => this.events = events,
+      err => console.log(err),
+      () => this.loadMarkers()
+    );
+  }
+
   private loadMarkers() {
     const markers: GeoMarker[] = [];
     from(this.events).subscribe(
@@ -85,13 +109,12 @@ export class EventsMapComponent implements OnInit {
       () => {
         this.mapSource$.next(markers);
         this.mapSource$.complete();
-        this.loading = false;
       }
     );
   }
 }
 
-function makeMarker(event: EventInfo, location: LocationInfo) {
+function makeMarker(event: EventInfo, location: LocationInfo): GeoMarker {
   return {
     position: {
       lat: location.geolocation[0],
@@ -102,26 +125,30 @@ function makeMarker(event: EventInfo, location: LocationInfo) {
   };
 }
 
-function getBodyHeight() {
-    const element = document.documentElement;
-    const body = document.getElementsByTagName('body')[0];
-    const height = window.innerHeight
+function getBodyHeight(): number {
+  const element = document.documentElement;
+  const body = document.getElementsByTagName('body')[0];
+  const height = window.innerHeight
     || (element != null ? element.clientHeight : null)
     || (body != null ? body.clientHeight : null);
-    return height != null ? height : 0;
+  const result = height != null ? height : 0;
+  return result;
 }
 
-function getHeaderHeight() {
+function getHeaderHeight(): number {
   const element = document.getElementById('header');
-  return element != null ? element.clientHeight : 0;
+  const height = element != null ? element.clientHeight : 0;
+  return height;
 }
 
-function getMatHeaderHeight() {
-    const element = document.getElementsByTagName('mat-tab-header')[0];
-    return element != null ? element.clientHeight : 0;
+function getMatHeaderHeight(): number {
+  const element = document.getElementsByTagName('mat-tab-header')[0];
+  const height = element != null ? element.clientHeight : 0;
+  return height;
 }
 
-function getFooterHeight() {
+function getFooterHeight(): number {
   const element = document.getElementById('footer');
-  return element != null ? element.clientHeight : 0;
+  const height = element != null ? element.clientHeight : 0;
+  return height;
 }
