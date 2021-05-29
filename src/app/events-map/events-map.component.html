@@ -1,5 +1,5 @@
-<div class="spinner">
-  <mat-spinner *ngIf="loading"></mat-spinner>
+<div class="spinner" *ngIf="loading">
+  <mat-spinner></mat-spinner>
 </div>
 
 <div *ngIf="apiLoaded$ | async">

@@ -56,7 +56,6 @@ import { LocationPipe } from './location.pipe';
 import { EventPipe } from './event.pipe';
 
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { DeviceDetectorModule } from 'ngx-device-detector';
 import { PrefaceComponent } from './preface/preface.component';
 import { IcalenderComponent } from './icalendar/icalendar.component';
 
@@ -81,14 +80,14 @@ import { IcalenderComponent } from './icalendar/icalendar.component';
     VideosTableComponent,
     JapanOpenComponent,
     StatsTabsComponent,
+    PrefaceComponent,
+    IcalenderComponent,
     SchedulePipe,
     GeolinkPipe,
     LocalizePipe,
     PeriodPipe,
     LocationPipe,
-    EventPipe,
-    PrefaceComponent,
-    IcalenderComponent
+    EventPipe
   ],
   imports: [
     BrowserModule,
@@ -120,13 +119,12 @@ import { IcalenderComponent } from './icalendar/icalendar.component';
     MatMenuModule,
     MatProgressSpinnerModule,
     MatExpansionModule,
-    NgxChartsModule,
-    DeviceDetectorModule.forRoot(),
+    NgxChartsModule
   ],
   entryComponents: [
     NoticeBottomsheetComponent,
     BottomSheetDetailDisabledComponent,
-    MarkerDialogComponent,
+    MarkerDialogComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
