@@ -1,4 +1,7 @@
-<mat-spinner *ngIf="loading"></mat-spinner>
+<div class="spinner" *ngIf="loading">
+  <mat-spinner></mat-spinner>
+</div>
+
 <div class="app-videos-table">
   <div class="search" *ngIf="!isMinimum && showSearch">
     <mat-form-field class="search-box">
