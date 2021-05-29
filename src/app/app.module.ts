@@ -80,14 +80,14 @@ import { IcalenderComponent } from './icalendar/icalendar.component';
     VideosTableComponent,
     JapanOpenComponent,
     StatsTabsComponent,
+    PrefaceComponent,
+    IcalenderComponent,
     SchedulePipe,
     GeolinkPipe,
     LocalizePipe,
     PeriodPipe,
     LocationPipe,
-    EventPipe,
-    PrefaceComponent,
-    IcalenderComponent
+    EventPipe
   ],
   imports: [
     BrowserModule,
