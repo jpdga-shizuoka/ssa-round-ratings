@@ -1,6 +1,7 @@
 {
   "root": true,
   "ignorePatterns": [
+    "test.ts",
     "projects/**/*"
   ],
   "overrides": [
@@ -35,12 +36,8 @@
         ],
         "no-useless-constructor": "off",
         "no-use-before-define": "off",
-        "accessor-pairs": [
-          "error",
-          {
-            "setWithoutGet": false
-          }
-        ],
+        "no-multi-spaces": ["error", { "ignoreEOLComments": true }],
+        "accessor-pairs": ["error", { "setWithoutGet": false }],
         "space-before-function-paren": [
           "error",
           {

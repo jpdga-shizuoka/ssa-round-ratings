@@ -95,17 +95,20 @@ function getDictionaries(lc?: LocalizationCategory) {
 
 function prepareLocals() {
   Object.keys(environment.localize).forEach(name => {
+    // @todo 
+    // eslint-disable-next-line no-new-func, @typescript-eslint/no-implied-eval
     LOCALIZE_TABLE[name] = new Function(...environment.localize[name]);
   });
 }
 
 function event2local(eventName: string): string {
+  const Event = EVENT as Dictionary;
   const parts = event2key(eventName);
   if (!parts) {
-    const title = EVENT[name2key(eventName)];
-    return title ? title : eventName;
+    const title = Event[name2key(eventName)];
+    return !title ? eventName : title;
   }
-  const aliase = EVENT[parts.key];
+  const aliase = Event[parts.key];
   if (!aliase) {
     return eventName;
   }
