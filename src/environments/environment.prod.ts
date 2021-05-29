@@ -5,7 +5,7 @@
 export interface Environment {
   production: boolean;
   projectPathName: string;
-  language?: string;  // default local language
+  language?: string; // default local language
   localize?: {
     aliase2title?: string[];
   };
@@ -28,13 +28,13 @@ export const environment: Environment = {
       lat: 36.306148,
       lng: 137.995148
     },
-    zoom: 5,
+    zoom: 5
   },
   language: 'ja',
   localize: {
     aliase2title: [
       'a', 'b',
       'if (a > 1960) {return a + "年 " + b;} return "第" + a + "回 " + b;'
-    ],
+    ]
   }
 };

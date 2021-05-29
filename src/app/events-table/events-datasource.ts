@@ -1,5 +1,5 @@
 import { MatTableDataSource } from '@angular/material/table';
-import { Subscription, Observable } from 'rxjs';
+import { Subscription, BehaviorSubject } from 'rxjs';
 import { tap, map } from 'rxjs/operators';
 import { RemoteService, EventCategory, EventInfo } from '../remote.service';
 
@@ -11,14 +11,13 @@ export { EventInfo };
  * (including sorting, pagination, and filtering).
  */
 export class EventsDataSource extends MatTableDataSource<EventInfo> {
-
   private subscription?: Subscription;
   loading = true;
 
   constructor(
     private readonly remote: RemoteService,
     private readonly category: EventCategory,
-    private readonly limit?: number,
+    private readonly limit?: number
   ) {
     super();
   }
@@ -28,17 +27,18 @@ export class EventsDataSource extends MatTableDataSource<EventInfo> {
    * the returned stream emits new items.
    * @returns A stream of the items to be rendered.
    */
-  connect() {
+  connect(): BehaviorSubject<EventInfo[]> {
     this.loading = true;
     this.subscription = this.remote.getEvents(this.category)
       .pipe(
         map(events => this.limit ? events.slice(0, this.limit) : events),
         tap(events => events.forEach(
-          event => event.location$ = this.remote.getLocation(event.location))))
+          event => { event.location$ = this.remote.getLocation(event.location); }
+        )))
       .subscribe(
-        events => this.data = events,
+        events => { this.data = events; },
         err => console.log(err),
-        () => this.loading = false
+        () => { this.loading = false; }
       );
     return super.connect();
   }
@@ -47,7 +47,7 @@ export class EventsDataSource extends MatTableDataSource<EventInfo> {
    *  Called when the table is being destroyed. Use this function, to clean up
    * any open connections or free any held resources that were set up during connect.
    */
-  disconnect() {
+  disconnect(): void {
     this.subscription?.unsubscribe();
   }
 }

@@ -21,12 +21,12 @@ describe('StatsTabsComponent', () => {
   let fixture: ComponentFixture<StatsTabsComponent>;
 
   beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+    return TestBed.configureTestingModule({
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
       declarations: [
         StatsTabsComponent,
         TotalPlayersComponent,
-        LocalizePipe,
+        LocalizePipe
       ],
       imports: [
         RouterTestingModule,
@@ -37,10 +37,9 @@ describe('StatsTabsComponent', () => {
         MatTabsModule,
         MatFormFieldModule,
         MatInputModule,
-        NgxChartsModule,
+        NgxChartsModule
       ]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -50,6 +49,6 @@ describe('StatsTabsComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    return expect(component).toBeTruthy();
   });
 });

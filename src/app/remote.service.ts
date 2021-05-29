@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Observable, of as observableOf, throwError, Subscription } from 'rxjs';
+import { Observable, of as observableOf, Subscription } from 'rxjs';
 import { catchError, tap, map } from 'rxjs/operators';
 
 import {
@@ -21,6 +21,10 @@ const CATEGORY2FILE = {
   monthly: 'monthly-events'
 };
 
+type AnualPlayers = {
+  [year: number]: Players;
+}
+
 class CEventInfo {
   constructor(private event: EventInfo) {}
   get year(): number {
@@ -30,7 +34,7 @@ class CEventInfo {
 }
 
 class CTotalYearPlayers {
-  private annualPlayers = {};
+  private annualPlayers: AnualPlayers = {};
 
   add(year: number, players: Players) {
     if (!this.annualPlayers[year]) {
@@ -49,9 +53,10 @@ class CTotalYearPlayers {
     const result: TotalYearPlayers[] = [];
 
     Object.keys(this.annualPlayers).forEach(key => {
+      const year = parseInt(key, 10);
       result.push({
-        year: parseInt(key, 10),
-        players: this.annualPlayers[key]
+        year: year,
+        players: this.annualPlayers[year]
       });
     });
     return result;
@@ -62,7 +67,6 @@ class CTotalYearPlayers {
   providedIn: 'root'
 })
 export class RemoteService {
-
   constructor(private readonly http: HttpClient) { }
 
   getText(path: string): Observable<string> {
@@ -74,15 +78,15 @@ export class RemoteService {
       throw new TypeError('getEvents: no category specified');
     }
     return this.http
-    .get<EventInfo[]>(category2url(category), {responseType: 'json'})
-    .pipe(
-      map(events => this.upcomingFilter(events, category)),
-      map(events => this.sortEvents(events, category)),
-      catchError(this.handleError<EventInfo[]>('getEvents', []))
-    );
+      .get<EventInfo[]>(category2url(category), { responseType: 'json' })
+      .pipe(
+        map(events => this.upcomingFilter(events, category)),
+        map(events => this.sortEvents(events, category)),
+        catchError(this.handleError<EventInfo[]>('getEvents', []))
+      );
   }
 
-  getEvent(id: EventId, category: EventCategory) {
+  getEvent(id: EventId, category: EventCategory): Observable<EventInfo> {
     if (!id) {
       throw new TypeError('getEvent: no id specified');
     }
@@ -93,27 +97,27 @@ export class RemoteService {
 
   getRounds(): Observable<RoundInfo[]> {
     return this.http
-    .get<RoundInfo[]>('assets/models/rounds.json', {responseType: 'json'})
-    .pipe(
-      tap(rounds => rounds.forEach(
-        round => round.event$ = this.getEvent(round.event, 'past'))),
-      map(rounds => {
-        const result: RoundInfo[] = [];
-        const now = Date.now();
-        rounds.forEach(round => {
-          if (new Date(round.date).getTime() < now) {
-            result.push(round);
-          }
-        });
-        return result;
-      }),
-      catchError(this.handleError<RoundInfo[]>('getRounds', []))
-    );
+      .get<RoundInfo[]>('assets/models/rounds.json', { responseType: 'json' })
+      .pipe(
+        tap(rounds => rounds.forEach(
+          round => { round.event$ = this.getEvent(round.event, 'past'); })),
+        map(rounds => {
+          const result: RoundInfo[] = [];
+          const now = Date.now();
+          rounds.forEach(round => {
+            if (new Date(round.date).getTime() < now) {
+              result.push(round);
+            }
+          });
+          return result;
+        }),
+        catchError(this.handleError<RoundInfo[]>('getRounds', []))
+      );
   }
 
   getLocations(): Observable<LocationInfo[]> {
     return this.http
-    .get<LocationInfo[]>('assets/models/locations.json', {responseType: 'json'});
+      .get<LocationInfo[]>('assets/models/locations.json', { responseType: 'json' });
   }
 
   getLocation(id: LocationId): Observable<LocationInfo> {
@@ -137,7 +141,7 @@ export class RemoteService {
     );
   }
 
-  private filterVideos(events: EventInfo[]) {
+  private filterVideos(events: EventInfo[]): VideoInfo[] {
     const videos: VideoInfo[] = [];
     events.forEach(event => {
       if (event.urls) {
@@ -149,7 +153,7 @@ export class RemoteService {
             title: event.title,
             subttl: url.title,
             date: new Date(event.period.from),
-            url: url.url,
+            url: url.url
           });
         });
         videos.sort((a, b) => compareByDate(a.date, b.date));
@@ -158,7 +162,7 @@ export class RemoteService {
     return videos;
   }
 
-  private upcomingFilter(events: EventInfo[], category: EventCategory) {
+  private upcomingFilter(events: EventInfo[], category: EventCategory): EventInfo[] {
     if (category === 'monthly') {
       return events;
     }
@@ -174,7 +178,7 @@ export class RemoteService {
     return result;
   }
 
-  private sortEvents(events: EventInfo[], category: EventCategory) {
+  private sortEvents(events: EventInfo[], category: EventCategory): EventInfo[] {
     if (category === 'monthly') {
       return events;
     }
@@ -197,10 +201,10 @@ export class RemoteService {
     return total.result;
   }
 
-  private handleError<T>(operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
+  private handleError<T>(operation = 'operation', result?: T): (error: Error) => Observable<T> {
+    return (error: Error): Observable<T> => {
       console.log(`${operation} failed: ${error.message}`);
-      return observableOf(result as T);
+      return observableOf(result);
     };
   }
 }
@@ -220,7 +224,7 @@ function compareByDate(a: Date, b: Date): number {
 }
 
 function compareTime(t1: Date, category: EventCategory) {
-  const t2 = new Date;
+  const t2 = new Date();
   switch (category) {
     case 'past': {
       t2.setDate(t2.getDate() + 1);

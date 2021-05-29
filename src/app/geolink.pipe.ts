@@ -9,7 +9,7 @@ export class GeolinkPipe implements PipeTransform {
     if (!ll) {
       return '';
     }
-    return getUrlForGeolocation() + ll[0] + ',' + ll[1];
+    return `${getUrlForGeolocation()}${ll[0]},${ll[1]}`;
   }
 }
 

@@ -45,7 +45,7 @@ export function getEventTitle(name?: string): string {
     return name;
   }
   const eventName = /the (\d+)(st|nd|rd|th|) (.+)/;
-  const results = name.trim().toLowerCase().match(eventName);
+  const results = eventName.exec(name.trim().toLowerCase());
   return (!results || results.length !== 4)
     ? name
     : results[3];

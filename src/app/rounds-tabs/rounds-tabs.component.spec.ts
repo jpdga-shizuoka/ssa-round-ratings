@@ -29,15 +29,13 @@ import { GeolinkPipe } from '../geolink.pipe';
 import { SchedulePipe } from '../schedule.pipe';
 import { PeriodPipe } from '../period.pipe';
 
-import { AgmCoreModule } from '@agm/core';
-
 describe('RoundsTabsComponent', () => {
   let component: RoundsTabsComponent;
   let fixture: ComponentFixture<RoundsTabsComponent>;
 
   beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+    return TestBed.configureTestingModule({
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
       declarations: [
         RoundsTabsComponent,
         RoundsTableComponent,
@@ -50,7 +48,7 @@ describe('RoundsTabsComponent', () => {
         LocationPipe,
         GeolinkPipe,
         SchedulePipe,
-        PeriodPipe,
+        PeriodPipe
       ],
       imports: [
         FormsModule,
@@ -66,11 +64,9 @@ describe('RoundsTabsComponent', () => {
         MatDialogModule,
         MatInputModule,
         MatListModule,
-        MatBottomSheetModule,
-        AgmCoreModule.forRoot(),
+        MatBottomSheetModule
       ]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -80,6 +76,6 @@ describe('RoundsTabsComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    return expect(component).toBeTruthy();
   });
 });

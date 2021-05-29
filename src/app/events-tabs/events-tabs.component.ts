@@ -1,26 +1,28 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { MatDialog } from '@angular/material/dialog';
-import { MatBottomSheet, MatBottomSheetRef } from '@angular/material/bottom-sheet';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
 
-import { Observable, BehaviorSubject, Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { GeoMarker } from '../map-common';
-import { EventInfo } from '../models';
 import { isHandset } from '../ng-utilities';
 import { NoticeBottomsheetComponent } from '../dialogs/notice-bottomsheet.component';
 
-const DISPLAYED_COLUMNS = {
-  upcoming: [['date', 'title'],   ['date', 'title', 'location']],
-  local:    [['date', 'title'],   ['date', 'title', 'location']],
-  monthly:  [['location', 'day'], ['location', 'day', 'month']]
+const DISPLAYED_COLUMNS: {
+  [string: string]: string[][];
+} = {
+  upcoming: [['date', 'title'], ['date', 'title', 'location']],
+  local: [['date', 'title'], ['date', 'title', 'location']],
+  monthly: [['location', 'day'], ['location', 'day', 'month']]
 };
-const TABS_TITLE = {
+const TABS_TITLE: {
+  [string: string]: string[];
+} = {
   upcoming: ['Official', 'Location map'],
-  local:    ['Local', 'Location Map'],
-  monthly:  ['Monthly', 'Location Map']
+  local: ['Local', 'Location Map'],
+  monthly: ['Monthly', 'Location Map']
 };
 
 @Component({
@@ -28,8 +30,7 @@ const TABS_TITLE = {
   templateUrl: './events-tabs.component.html',
   styleUrls: ['./events-tabs.component.css']
 })
-export class EventsTabsComponent implements OnInit, AfterViewInit {
-
+export class EventsTabsComponent implements AfterViewInit {
   category: string;
   isHandset$: Observable<boolean>;
   markerSelected: Subject<GeoMarker>;
@@ -38,14 +39,14 @@ export class EventsTabsComponent implements OnInit, AfterViewInit {
   constructor(
     private route: ActivatedRoute,
     private bottomsheet: MatBottomSheet,
-    breakpointObserver: BreakpointObserver,
+    breakpointObserver: BreakpointObserver
   ) {
     this.isHandset$ = isHandset(breakpointObserver);
     this.markerSelected = new Subject<GeoMarker>();
     this.selectedTab = 0;
 
     if (this.route.snapshot.url.length !== 2) {
-      throw new TypeError(`unexpected path: ${this.route.snapshot.url}`);
+      throw new TypeError(`unexpected path: ${this.route.snapshot.url.toString()}`);
     }
     this.category = this.route.snapshot.url[1].path;
     if (this.category !== 'upcoming'
@@ -55,10 +56,7 @@ export class EventsTabsComponent implements OnInit, AfterViewInit {
     }
   }
 
-  ngOnInit() {
-  }
-
-  ngAfterViewInit() {
+  ngAfterViewInit(): void {
     if (this.category === 'monthly'
     && sessionStorage.getItem('monthlyConfirmed') !== 'true') {
       this.openNoticeBottomsheet();
@@ -71,15 +69,15 @@ export class EventsTabsComponent implements OnInit, AfterViewInit {
     );
   }
 
-  get tableTitle() {
+  get tableTitle(): string {
     return TABS_TITLE[this.category][0];
   }
 
-  get mapTitle() {
+  get mapTitle(): string {
     return TABS_TITLE[this.category][1];
   }
 
-  get title() {
+  get title(): string {
     let schedule = 'Schedule';
     switch (this.category) {
       case 'local':
@@ -92,16 +90,16 @@ export class EventsTabsComponent implements OnInit, AfterViewInit {
     return schedule;
   }
 
-  onMarkerSelected(marker: GeoMarker) {
+  onMarkerSelected(marker: GeoMarker): void {
     this.markerSelected.next(marker);
     this.selectedTab = 0;
   }
 
-  private openNoticeBottomsheet() {
+  private openNoticeBottomsheet(): void {
     const bottomsheetRef = this.bottomsheet.open(NoticeBottomsheetComponent);
 
     bottomsheetRef.afterDismissed()
-    .subscribe(() => sessionStorage.setItem('monthlyConfirmed', 'true'));
+      .subscribe(() => sessionStorage.setItem('monthlyConfirmed', 'true'));
 
     setTimeout(() => bottomsheetRef.dismiss(), 5000);
   }

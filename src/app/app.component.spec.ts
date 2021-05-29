@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 import { YouTubePlayerModule } from '@angular/youtube-player';
-import { HttpClientModule } from '@angular/common/http';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -22,7 +21,6 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatDialogModule } from '@angular/material/dialog';
-import { MatMenuModule } from '@angular/material/menu';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
@@ -50,14 +48,12 @@ import { PeriodPipe } from './period.pipe';
 import { LocationPipe } from './location.pipe';
 import { EventPipe } from './event.pipe';
 
-import { AgmCoreModule } from '@agm/core';
-import { DeviceDetectorModule } from 'ngx-device-detector';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 describe('AppComponent', () => {
   beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+    return TestBed.configureTestingModule({
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
       declarations: [
         AppComponent,
         ReloadComponent,
@@ -81,7 +77,7 @@ describe('AppComponent', () => {
         LocalizePipe,
         PeriodPipe,
         LocationPipe,
-        EventPipe,
+        EventPipe
       ],
       imports: [
         RouterTestingModule,
@@ -106,29 +102,27 @@ describe('AppComponent', () => {
         MatDialogModule,
         MatBottomSheetModule,
         MatFormFieldModule,
-        AgmCoreModule,
-        DeviceDetectorModule,
-        NgxChartsModule,
-      ],
+        NgxChartsModule
+      ]
     }).compileComponents();
   }));
 
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
+    const app = fixture.debugElement.componentInstance as AppComponent;
+    return expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'DG Japan'`, () => {
+  it('should have as title "DG Japan"', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('DG Japan');
+    const app = fixture.debugElement.componentInstance as AppComponent;
+    return expect(app.title).toEqual('DG Japan');
   });
 
   it('should render title in toolbar', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.mat-toolbar span').textContent).toContain('DG Japan');
+    const compiled = fixture.debugElement.nativeElement as Element;
+    return expect(compiled.querySelector('.mat-toolbar span').textContent).toContain('DG Japan');
   });
 });

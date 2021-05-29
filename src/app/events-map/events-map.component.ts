@@ -28,12 +28,12 @@ export class EventsMapComponent implements OnInit {
     disableDefaultUI: true
   };
 
-  get height() {
+  get height(): string {
     const height = getBodyHeight() - getHeaderHeight() - getFooterHeight() - getMatHeaderHeight();
     return `${height}px`;
   }
 
-  get width() {
+  get width(): string {
     const element = this.el.nativeElement.querySelector('#googlemap');
     const width = element.getBoundingClientRect().width;
     return `${width}px`;
@@ -77,8 +77,7 @@ export class EventsMapComponent implements OnInit {
         location: marker.location,
         events: eventNames
       }
-    })
-    .afterClosed().subscribe(result => {
+    }).afterClosed().subscribe(result => {
       if (!result) {
         return;
       }
@@ -90,7 +89,7 @@ export class EventsMapComponent implements OnInit {
 
   private loadEvents() {
     this.remote.getEvents(this.category).subscribe(
-      events => this.events = events,
+      events => { this.events = events; },
       err => console.log(err),
       () => this.loadMarkers()
     );

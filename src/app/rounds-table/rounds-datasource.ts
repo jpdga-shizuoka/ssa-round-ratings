@@ -1,6 +1,5 @@
 import { MatTableDataSource } from '@angular/material/table';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
+import { BehaviorSubject } from 'rxjs';
 import { tap, map } from 'rxjs/operators';
 
 import { RemoteService, RoundInfo } from '../remote.service';
@@ -17,7 +16,7 @@ export class RoundsDataSource extends MatTableDataSource<RoundInfo> {
   constructor(
     private readonly remote: RemoteService,
     private readonly localize: LocalizeService,
-    private readonly limit?: number,
+    private readonly limit?: number
   ) {
     super();
     this.setupFilter();
@@ -28,16 +27,16 @@ export class RoundsDataSource extends MatTableDataSource<RoundInfo> {
    * the returned stream emits new items.
    * @returns A stream of the items to be rendered.
    */
-  connect() {
+  connect(): BehaviorSubject<RoundInfo[]> {
     this.loading = true;
     this.remote.getRounds()
       .pipe(
         map(rounds => this.limit ? rounds.slice(0, this.limit) : rounds),
         tap(rounds => updateMembers(rounds))
       ).subscribe(
-        rounds => this.data = rounds,
+        rounds => { this.data = rounds; },
         err => console.log(err),
-        () => this.loading = false
+        () => { this.loading = false; }
       );
 
     return super.connect();
@@ -47,7 +46,7 @@ export class RoundsDataSource extends MatTableDataSource<RoundInfo> {
    *  Called when the table is being destroyed. Use this function, to clean up
    * any open connections or free any held resources that were set up during connect.
    */
-  disconnect() {
+  disconnect(): void {
     super.disconnect();
   }
 

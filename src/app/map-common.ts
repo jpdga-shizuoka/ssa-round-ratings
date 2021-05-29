@@ -3,6 +3,7 @@ export class GeoMarker {
     lat: number;
     lng: number;
   };
+
   location: string;
   title: string;
 }

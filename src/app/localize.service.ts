@@ -10,12 +10,13 @@ export type Language = 'global' | 'local';
 export const GLOBAL = 'global' as Language;
 export const LOCAL = 'local' as Language;
 
-const REMOVE_PATERN = /[ \-\.\,\(\)]/g;
+const REMOVE_PATERN = /[ \-.,()]/g;
+type Dictionary = { [string: string]: string; };
 const DICTIONARIES = [
-  EVENT,
-  LOCATION,
-  MENU,
-  PREFECTURE,
+  EVENT as Dictionary,
+  LOCATION as Dictionary,
+  MENU as Dictionary,
+  PREFECTURE as Dictionary
 ];
 export type LocalizationCategory = 'event' | 'location' | 'menu' | 'prefecture';
 
@@ -34,10 +35,9 @@ const LOCALIZE_TABLE = {} as LocalizeTable;
   providedIn: 'root'
 })
 export class LocalizeService {
-
   language = LOCAL;
 
-  get isGlobal() {
+  get isGlobal(): boolean {
     return this.language === GLOBAL;
   }
 
@@ -64,7 +64,7 @@ export class LocalizeService {
     }
   }
 
-  distanseFromMarkerToGoal(distanse: string, marker: string) {
+  distanseFromMarkerToGoal(distanse: string, marker: string): string {
     if (this.isGlobal || !LOCALIZE_TABLE.distanseFromMarkerToGoal) {
       return `${distanse} to goal from the ${marker.toLowerCase()}`;
     } else {
@@ -72,7 +72,7 @@ export class LocalizeService {
     }
   }
 
-  toggleLanguage() {
+  toggleLanguage(): void {
     this.language = this.isGlobal ? LOCAL : GLOBAL;
     document.documentElement.lang = this.language === GLOBAL ? 'en' : environment.language;
   }
@@ -94,9 +94,9 @@ function getDictionaries(lc?: LocalizationCategory) {
 }
 
 function prepareLocals() {
-  Object.keys(environment.localize)
-    .forEach(name => LOCALIZE_TABLE[name]
-      = new Function(...environment.localize[name]));
+  Object.keys(environment.localize).forEach(name => {
+    LOCALIZE_TABLE[name] = new Function(...environment.localize[name]);
+  });
 }
 
 function event2local(eventName: string): string {
@@ -127,9 +127,9 @@ function event2key(name?: string): EventParts | undefined {
   const eventName = /the (\d+)(st|nd|rd|th|) (.+)/;
   const altEventName = /the (.+)/;
 
-  let results = n.match(eventName);
+  let results = eventName.exec(n);
   if (results == null) {
-    results = n.match(altEventName);
+    results = altEventName.exec(n);
     if (results == null) {
       return undefined;
     }

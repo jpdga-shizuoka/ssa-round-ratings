@@ -1,4 +1,5 @@
 import { MatTableDataSource } from '@angular/material/table';
+import { BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { RemoteService, VideoInfo, EventCategory } from '../remote.service';
 import { LocalizeService } from '../localize.service';
@@ -16,7 +17,7 @@ export class VideosDataSource extends MatTableDataSource<VideoInfo> {
     private readonly localize: LocalizeService,
     private readonly category: EventCategory,
     private readonly limit?: number,
-    private readonly keyword?: string,
+    private readonly keyword?: string
   ) {
     super();
     this.setupFilter();
@@ -27,17 +28,17 @@ export class VideosDataSource extends MatTableDataSource<VideoInfo> {
    * the returned stream emits new items.
    * @returns A stream of the items to be rendered.
    */
-  connect() {
+  connect(): BehaviorSubject<VideoInfo[]> {
     this.loading = true;
     this.remote.getVideos(this.category)
-    .pipe(
-      map(videos => this.filterWithKeyword(videos)),
-      map(videos => this.limit ? videos.slice(0, this.limit) : videos)
-    ).subscribe(
-      videos => this.data = videos,
-      err => console.log(err),
-      () => this.loading = false
-    );
+      .pipe(
+        map(videos => this.filterWithKeyword(videos)),
+        map(videos => this.limit ? videos.slice(0, this.limit) : videos)
+      ).subscribe(
+        videos => { this.data = videos; },
+        err => console.log(err),
+        () => { this.loading = false; }
+      );
 
     return super.connect();
   }
@@ -46,7 +47,7 @@ export class VideosDataSource extends MatTableDataSource<VideoInfo> {
    *  Called when the table is being destroyed. Use this function, to clean up
    * any open connections or free any held resources that were set up during connect.
    */
-  disconnect() {
+  disconnect(): void {
     super.disconnect();
   }
 

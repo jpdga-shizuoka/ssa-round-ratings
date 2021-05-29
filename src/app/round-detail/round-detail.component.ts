@@ -1,4 +1,4 @@
-import { Component, Input, Output, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {
   getEventTitle, getPdgaResult, getJpdgaResult, getJpdgaReport, getJpdgaPhoto, getLiveScore, getLayout
 } from '../app-libs';
@@ -14,7 +14,6 @@ const MAX_RATING = 1200;
   styleUrls: ['./round-detail.component.css']
 })
 export class RoundDetailComponent implements OnInit {
-
   @Input() round: RoundInfo;
   @Input() showHistory = true;
 
@@ -30,20 +29,20 @@ export class RoundDetailComponent implements OnInit {
 
   constructor(private readonly remote: RemoteService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.remote.getEvent(this.round.event, 'past')
-    .subscribe(
-      event => this.event = event,
-      err => console.log(err),
-      () => this.getLocation(this.event.location)
-    );
+      .subscribe(
+        event => { this.event = event; },
+        err => console.log(err),
+        () => this.getLocation(this.event.location)
+      );
   }
 
   get roundStatus(): string {
     return `${this.round.holes} holes @ ${this.round.round}`;
   }
 
-  get totalPlayers() {
+  get totalPlayers(): number {
     if (this.event?.players) {
       return this.event.players.pro
       + this.event.players.ama
@@ -59,7 +58,7 @@ export class RoundDetailComponent implements OnInit {
     return `Rating = ${this.round.weight.toFixed(1)} * Score + ${this.round.offset.toFixed(0)}`;
   }
 
-  get title() {
+  get title(): string {
     return getEventTitle(this.event?.title);
   }
 
@@ -73,7 +72,7 @@ export class RoundDetailComponent implements OnInit {
 
   private getLocation(id: LocationId) {
     this.remote.getLocation(id).subscribe(
-      location => this.location = location,
+      location => { this.location = location; },
       err => console.log(err),
       () => {
         this.makePdgaInfo();
@@ -155,7 +154,7 @@ export class RoundDetailComponent implements OnInit {
     }
   }
 
-  onRatingChanged() {
+  onRatingChanged(): void {
     if (typeof this.rating !== 'number') {
       this.score = NaN;
       return;
@@ -172,7 +171,7 @@ export class RoundDetailComponent implements OnInit {
     this.score = this.rating2score(this.rating);
   }
 
-  onScoreChanged() {
+  onScoreChanged(): void {
     if (typeof this.score !== 'number') {
       this.rating = NaN;
       return;

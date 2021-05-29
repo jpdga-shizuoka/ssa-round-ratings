@@ -30,8 +30,8 @@ describe('DashBoardComponent', () => {
   let fixture: ComponentFixture<DashBoardComponent>;
 
   beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+    return TestBed.configureTestingModule({
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
       declarations: [
         DashBoardComponent,
         VideosTableComponent,
@@ -40,7 +40,7 @@ describe('DashBoardComponent', () => {
         GeolinkPipe,
         SchedulePipe,
         PeriodPipe,
-        EventPipe,
+        EventPipe
       ],
       imports: [
         NoopAnimationsModule,
@@ -56,7 +56,7 @@ describe('DashBoardComponent', () => {
         MatBottomSheetModule,
         MatFormFieldModule,
         MatInputModule,
-        MatTableModule,
+        MatTableModule
       ]
     }).compileComponents();
   }));
@@ -68,6 +68,6 @@ describe('DashBoardComponent', () => {
   });
 
   it('should compile', () => {
-    expect(component).toBeTruthy();
+    return expect(component).toBeTruthy();
   });
 });

@@ -1,4 +1,6 @@
-export const ICONS = {
+export const ICONS: {
+  [string: string]: string
+} = {
   video: 'ondemand_video',
   photo: 'camera_alt',
   website: 'public'

@@ -8,13 +8,12 @@ const SHORT_FORMAT = { day: 'numeric' } as Intl.DateTimeFormatOptions;
   name: 'period'
 })
 export class PeriodPipe implements PipeTransform {
-
   transform(value: Period|string): string {
     if (isDate(value)) {
       return new Date(value as string).toLocaleDateString(undefined, LONG_FORMAT);
     }
     if (isPeriod(value)) {
-      const period = value as Period;
+      const period = value;
       try {
         const from = new Date(period.from).toLocaleDateString(undefined, LONG_FORMAT);
         if (period.from === period.to) {
@@ -35,11 +34,14 @@ export class PeriodPipe implements PipeTransform {
   }
 }
 
-function isPeriod(x: any): x is Period {
+function isPeriod(x: Period | string): x is Period {
+  if (typeof x === 'string') {
+    return false;
+  }
   return 'from' in x && 'to' in x;
 }
 
-function isDate(x: any) {
+function isDate(x: Period | string): boolean {
   if (typeof x !== 'string') {
     return false;
   }

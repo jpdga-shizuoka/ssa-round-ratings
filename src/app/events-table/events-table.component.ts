@@ -10,11 +10,17 @@ import { detailExpand } from '../animations';
 import { RemoteService } from '../remote.service';
 import { EventsDataSource, EventInfo } from './events-datasource';
 
+interface ExpandedRow {
+  canceled: boolean;
+  'event-element-row': boolean;
+  'event-expanded-row': boolean;
+}
+
 @Component({
   selector: 'app-events-table',
   templateUrl: './events-table.component.html',
   styleUrls: ['./events-table.component.css'],
-  animations: [detailExpand],
+  animations: [detailExpand]
 })
 export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() displayedColumns$: Observable<string[]>;
@@ -31,7 +37,7 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
 
   constructor(private readonly remote: RemoteService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.dataSource = new EventsDataSource(this.remote, this.category, this.limit);
     if (this.markerSelected$) {
       this.subscription = this.markerSelected$.subscribe(
@@ -40,20 +46,20 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     }
   }
 
-  ngAfterViewInit() {
+  ngAfterViewInit(): void {
     this.dataSource.paginator = this.paginator;
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.subscription?.unsubscribe();
   }
 
-  get loading() { return this.dataSource.loading; }
+  get loading(): boolean { return this.dataSource.loading; }
   get isMinimum(): boolean {
     return this.showMore && this.limit <= this.pageSizeOptions[0];
   }
 
-  getRawClass(event: EventInfo) {
+  getRawClass(event: EventInfo): ExpandedRow {
     return {
       canceled: this.isCanceled(event),
       'event-element-row': true,
@@ -61,11 +67,11 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     };
   }
 
-  isCanceled(event: EventInfo) {
+  isCanceled(event: EventInfo): boolean {
     return event.status === 'CANCELED';
   }
 
-  isDetailExpand(event: EventInfo) {
+  isDetailExpand(event: EventInfo): boolean {
     if (!this.expandedElement) {
       return false;
     }
@@ -81,11 +87,11 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     return true;
   }
 
-  onRawClicked(event: EventInfo) {
+  onRawClicked(event: EventInfo): void {
     this.expandedElement = this.isDetailExpand(event) ? null : event;
   }
 
-  private onMarkerSelected(marker: GeoMarker) {
+  private onMarkerSelected(marker: GeoMarker): void {
     const found = this.dataSource.data.find(e => {
       return e.location === marker.location
       && (e.title ? e.title === marker.title : true);
@@ -96,7 +102,7 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     this.expandEvent(found);
   }
 
-  private expandEvent(event: EventInfo) {
+  private expandEvent(event: EventInfo): void {
     const position = this.dataSource.data.indexOf(event);
     if (position < 0) {
       return;
@@ -109,12 +115,12 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   /**
    * https://github.com/angular/components/issues/7615#issuecomment-358620095
    */
-  private goToPage(pageNumber) {
+  private goToPage(pageNumber: number): void {
     this.paginator.pageIndex = pageNumber;
     this.paginator.page.next({
-         pageIndex: pageNumber,
-         pageSize: this.paginator.pageSize,
-         length: this.paginator.length
+      pageIndex: pageNumber,
+      pageSize: this.paginator.pageSize,
+      length: this.paginator.length
     });
   }
 }

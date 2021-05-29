@@ -1,13 +1,13 @@
-import { Component, Inject, ViewChild, ElementRef } from '@angular/core';
+import { Component, Inject, ViewChild } from '@angular/core';
 import { YouTubePlayer } from '@angular/youtube-player';
-import { MatBottomSheetRef, MAT_BOTTOM_SHEET_DATA} from '@angular/material/bottom-sheet';
+import { MatBottomSheetRef, MAT_BOTTOM_SHEET_DATA } from '@angular/material/bottom-sheet';
 import { DeviceDetectorService } from 'ngx-device-detector';
 
 import { VideoInfo } from '../models';
 
 const FACEBOOK = /https:\/\/www.facebook.com\/.+\/videos\/(\d+)\//;
-const YOUTUBE = /https:\/\/www.youtube.com\/watch?v=([0-9a-zA-Z_\-]+)/;
-const YOUTUBE_SHORT = /https:\/\/youtu.be\/([0-9a-zA-Z_\-]+)/;
+const YOUTUBE = /https:\/\/www.youtube.com\/watch?v=([0-9a-zA-Z_-]+)/;
+const YOUTUBE_SHORT = /https:\/\/youtu.be\/([0-9a-zA-Z_-]+)/;
 const MAX_VIDEO_WIDTH = 640;
 const VIDEO_SIDE_PADDING = 16;
 
@@ -27,7 +27,7 @@ export class VideoBottomsheetComponent {
   constructor(
     @Inject(MAT_BOTTOM_SHEET_DATA) public video: VideoInfo,
     private deviceService: DeviceDetectorService,
-    private bottomSheetRef: MatBottomSheetRef<VideoBottomsheetComponent>,
+    private bottomSheetRef: MatBottomSheetRef<VideoBottomsheetComponent>
   ) {
     const width = window.innerWidth - VIDEO_SIDE_PADDING * 2;
     this.width = Math.min(MAX_VIDEO_WIDTH, width);
@@ -42,23 +42,22 @@ export class VideoBottomsheetComponent {
     }
 
     let result: string[] | null;
-    result = this.video.url.match(FACEBOOK);
+    result = FACEBOOK.exec(this.video.url);
     if (result != null) {
       this.videoType = 'FB';
       this.videoId = result[0];
       return;
     }
-    result = this.video.url.match(YOUTUBE);
+    result = YOUTUBE.exec(this.video.url);
     if (result != null) {
       this.videoType = 'YT';
       this.videoId = result[1];
       return;
     }
-    result = this.video.url.match(YOUTUBE_SHORT);
+    result = YOUTUBE_SHORT.exec(this.video.url);
     if (result != null) {
       this.videoType = 'YT';
       this.videoId = result[1];
-      return;
     }
   }
 
@@ -81,15 +80,16 @@ export class VideoBottomsheetComponent {
   //
   // https://developers.google.com/youtube/iframe_api_reference#Playback_status
   //
-  onStateChange(event: any) {
+  onStateChange(event: { data?: number; }): void {
     if (event?.data === 0) {
       this.bottomSheetRef.dismiss();
     }
   }
+
   //
   //  @see https://developers.google.com/youtube/iframe_api_reference#Events
   //
-  onReady(event: any) {
+  onReady(): void {
     this.player.playVideo();
   }
 }

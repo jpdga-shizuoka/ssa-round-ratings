@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { first } from 'rxjs/operators';
 import { RemoteService } from '../remote.service';
+import { TotalYearPlayers } from '../models';
 
 interface ChartValue {
   name: string;
@@ -38,11 +39,11 @@ export class TotalPlayersComponent implements OnInit {
 
   ngOnInit(): void {
     this.remote.getPlayers()
-    .pipe(first())
-    .subscribe(players => this.countPlayers(players));
+      .pipe(first())
+      .subscribe(players => this.countPlayers(players));
   }
 
-  private countPlayers(players) {
+  private countPlayers(players: TotalYearPlayers[]) {
     const data: ChartData[] = [];
     players.forEach(yearTotal => {
       data.push({

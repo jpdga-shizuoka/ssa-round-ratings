@@ -13,20 +13,19 @@ describe('EventDetailComponent', () => {
   let fixture: ComponentFixture<EventDetailComponent>;
 
   beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
+    return TestBed.configureTestingModule({
       declarations: [
         EventDetailComponent,
         GeolinkPipe,
         LocalizePipe,
-        SchedulePipe,
+        SchedulePipe
       ],
       imports: [
         RouterTestingModule,
         MatIconModule,
-        HttpClientModule,
+        HttpClientModule
       ]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -48,6 +47,6 @@ describe('EventDetailComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    return expect(component).toBeTruthy();
   });
 });

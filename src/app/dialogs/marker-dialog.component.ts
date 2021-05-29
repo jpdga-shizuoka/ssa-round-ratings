@@ -24,23 +24,23 @@ export class MarkerDialogComponent implements OnInit {
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: MarkerDialogData,
-    private readonly remote: RemoteService,
+    private readonly remote: RemoteService
   ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.remote.getLocation(this.data.location)
-      .subscribe(location => this.location = location);
+      .subscribe(location => { this.location = location; });
   }
 
-  get showEventBotton() {
+  get showEventBotton(): boolean {
     return this.data.category === 'upcoming' || this.data.category === 'local';
   }
 
-  get showDialogBotton() {
+  get showDialogBotton(): boolean {
     return this.data.category === 'past' || this.data.category === 'monthly';
   }
 
-  get showList() {
+  get showList(): boolean {
     return this.data.category !== 'monthly';
   }
 }

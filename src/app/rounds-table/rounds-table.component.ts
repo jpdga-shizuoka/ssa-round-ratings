@@ -1,26 +1,29 @@
-import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
-import { Input, ViewChild } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
-
+import { Component, OnInit, AfterViewInit, OnDestroy, Input, ViewChild } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { MatPaginator } from '@angular/material/paginator';
-import { MatSort, MatSortable } from '@angular/material/sort';
+import { MatSort } from '@angular/material/sort';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
-
 import { Observable, Subject, Subscription } from 'rxjs';
 
 import { GeoMarker } from '../map-common';
 import { detailExpand } from '../animations';
 import { BottomSheetDetailDisabledComponent } from '../dialogs/bottom-sheet-detail-disabled.component';
-import { RemoteService, RoundInfo, EventInfo } from '../remote.service';
+import { RemoteService, RoundInfo } from '../remote.service';
 import { RoundsDataSource } from './rounds-datasource';
 import { LocalizeService } from '../localize.service';
 import { getEventTitle } from '../app-libs';
+
+interface ExpandedRow {
+  canceled: boolean;
+  'round-element-row': boolean;
+  'round-expanded-row': boolean;
+}
 
 @Component({
   selector: 'app-rounds-table',
   templateUrl: './rounds-table.component.html',
   styleUrls: ['./rounds-table.component.css'],
-  animations: [detailExpand],
+  animations: [detailExpand]
 })
 export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() displayedColumns$: Observable<string[]>;
@@ -43,10 +46,10 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     private route: ActivatedRoute,
     private bottomSheet: MatBottomSheet,
     private readonly localize: LocalizeService,
-    private readonly remote: RemoteService,
+    private readonly remote: RemoteService
   ) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.dataSource = new RoundsDataSource(this.remote, this.localize, this.limit);
 
     if (this.route.snapshot.queryParamMap.has('search')) {
@@ -65,21 +68,21 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
       .subscribe(query => this.updateSearch(query.search));
   }
 
-  ngAfterViewInit() {
+  ngAfterViewInit(): void {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.ssQuery?.unsubscribe();
     this.ssMarker?.unsubscribe();
   }
 
-  onEventSlected(location: string) {
+  onEventSlected(location: string): void {
     this.applyFilter(location);
   }
 
-  onRawClicked(round: RoundInfo) {
+  onRawClicked(round: RoundInfo): void {
     if (this.detailDisabled) {
       this.bottomSheet.open(BottomSheetDetailDisabledComponent);
       return;
@@ -87,7 +90,7 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     this.expandedElement = this.isDetailExpand(round) ? null : round;
   }
 
-  applyFilter(filterValue: string) {
+  applyFilter(filterValue: string): void {
     this.dataSource.filter = filterValue.trim().toLowerCase();
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
@@ -96,9 +99,9 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     this.search = filterValue;
   }
 
-  get loading() { return this.dataSource.loading; }
-  get isMinimum() { return this.limit <= this.pageSizeOptions[0]; }
-  get showHistory() {
+  get loading(): boolean { return this.dataSource.loading; }
+  get isMinimum(): boolean { return this.limit <= this.pageSizeOptions[0]; }
+  get showHistory(): boolean {
     if (!this.expandedElement) {
       return false;
     }
@@ -107,17 +110,17 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     }
     const title = getEventTitle(this.expandedElement.event);
     if (this.search.includes(title)
-    ||  this.search.includes(this.localize.transform(title))) {
+    || this.search.includes(this.localize.transform(title))) {
       return false;
     }
     return true;
   }
 
-  isCanceled(round: RoundInfo) {
+  isCanceled(round: RoundInfo): boolean {
     return round.round === 'CANCELED';
   }
 
-  isDetailExpand(round: RoundInfo) {
+  isDetailExpand(round: RoundInfo): boolean {
     if (!this.expandedElement) {
       return false;
     }
@@ -130,7 +133,7 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     return true;
   }
 
-  getRawClass(round: RoundInfo) {
+  getRawClass(round: RoundInfo): ExpandedRow {
     return {
       canceled: this.isCanceled(round),
       'round-element-row': true,
@@ -138,11 +141,11 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     };
   }
 
-  getLength(round: RoundInfo) {
-    return round.hla ? round.hla + 'm' : '';
+  getLength(round: RoundInfo): string {
+    return round.hla ? `${round.hla}m` : '';
   }
 
-  getYear(time: string) {
+  getYear(time: string): number {
     const date = new Date(time);
     return date.getFullYear();
   }

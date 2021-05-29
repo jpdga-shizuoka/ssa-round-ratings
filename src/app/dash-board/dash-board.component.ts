@@ -6,7 +6,6 @@ import { isHandset } from '../ng-utilities';
 
 const DISPLAYED_COLUMNS_UPCOMING = [['date', 'title'], ['date', 'title', 'location']];
 const DISPLAYED_COLUMNS_PAST = [['event', 'hla', 'ssa'], ['year', 'event', 'round', 'hla', 'ssa']];
-const LOCAL_EVENT_ID = 1;
 
 @Component({
   selector: 'app-dash-board',

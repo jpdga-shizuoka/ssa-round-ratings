@@ -20,13 +20,13 @@ describe('RoundDetailComponent', () => {
   let fixture: ComponentFixture<RoundDetailComponent>;
 
   beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+    return TestBed.configureTestingModule({
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
       declarations: [
         RoundDetailComponent,
         GeolinkPipe,
         LocalizePipe,
-        PeriodPipe,
+        PeriodPipe
       ],
       imports: [
         NoopAnimationsModule,
@@ -36,10 +36,9 @@ describe('RoundDetailComponent', () => {
         MatIconModule,
         MatInputModule,
         MatButtonModule,
-        MatFormFieldModule,
-      ],
-    })
-    .compileComponents();
+        MatFormFieldModule
+      ]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -55,23 +54,23 @@ describe('RoundDetailComponent', () => {
       hla: 97,
       holes: 18,
       ratings: {
-          player1: {
-              score: 62,
-              rating: 1008
-          },
-          player2: {
-              score: 79,
-              rating: 886
-          }
+        player1: {
+          score: 62,
+          rating: 1008
+        },
+        player2: {
+          score: 79,
+          rating: 886
+        }
       },
       ssa: 56,
       weight: -10,
-      offset: 1500,
+      offset: 1500
     };
     fixture.detectChanges();
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    return expect(component).toBeTruthy();
   });
 });

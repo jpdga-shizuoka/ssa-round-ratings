@@ -3,7 +3,6 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { MatTable } from '@angular/material/table';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 
 import { Observable } from 'rxjs';
@@ -16,12 +15,12 @@ import { VideosDataSource } from './videos-datasource';
 import { RemoteService, EventCategory } from '../remote.service';
 import { LocalizeService } from '../localize.service';
 
-const DISPLAYED_COLUMNS = [['title', 'subttl'], [ 'year', 'title', 'subttl']];
+const DISPLAYED_COLUMNS = [['title', 'subttl'], ['year', 'title', 'subttl']];
 
 @Component({
   selector: 'app-videos-table',
   templateUrl: './videos-table.component.html',
-  styleUrls: ['./videos-table.component.css'],
+  styleUrls: ['./videos-table.component.css']
 })
 export class VideosTableComponent implements AfterViewInit, OnInit {
   @Input() pageSizeOptions = [10, 20, 50, 100];
@@ -47,17 +46,17 @@ export class VideosTableComponent implements AfterViewInit, OnInit {
     private bottomSheet: MatBottomSheet,
     private readonly remote: RemoteService,
     private readonly localize: LocalizeService,
-    breakpointObserver: BreakpointObserver,
+    breakpointObserver: BreakpointObserver
   ) {
     this.isHandset$ = isHandset(breakpointObserver);
   }
 
-  get loading() { return this.dataSource.loading; }
+  get loading(): boolean { return this.dataSource.loading; }
   get isMinimum(): boolean {
     return this.showMore && this.limit <= this.pageSizeOptions[0];
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.dataSource
       = new VideosDataSource(this.remote, this.localize, this.category, this.limit, this.keyword);
 
@@ -68,16 +67,16 @@ export class VideosTableComponent implements AfterViewInit, OnInit {
     document.body.appendChild(tag);
   }
 
-  ngAfterViewInit() {
+  ngAfterViewInit(): void {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
   }
 
-  onRawClicked(video: VideoInfo) {
+  onRawClicked(video: VideoInfo): void {
     this.openVideoSheet(video);
   }
 
-  applyFilter(filterValue: string) {
+  applyFilter(filterValue: string): void {
     this.dataSource.filter = filterValue.trim().toLowerCase();
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
@@ -86,8 +85,8 @@ export class VideosTableComponent implements AfterViewInit, OnInit {
   }
 
   private openVideoSheet(video: VideoInfo) {
-    const bottomSheetRef = this.bottomSheet.open(VideoBottomsheetComponent, {
-      data: video,
+    this.bottomSheet.open(VideoBottomsheetComponent, {
+      data: video
     });
   }
 }

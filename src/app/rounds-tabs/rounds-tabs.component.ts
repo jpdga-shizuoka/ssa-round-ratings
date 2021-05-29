@@ -23,12 +23,12 @@ export class RoundsTabsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    breakpointObserver: BreakpointObserver,
+    breakpointObserver: BreakpointObserver
   ) {
     this.isHandset$ = isHandset(breakpointObserver);
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.markerSelected = new Subject<GeoMarker>();
     switch (this.route.snapshot.url[1]?.path) {
       case 'video':
@@ -48,15 +48,15 @@ export class RoundsTabsComponent implements OnInit {
     );
   }
 
-  get tableTitle() {
+  get tableTitle(): string {
     return TABS_TITLE[0];
   }
 
-  get mapTitle() {
+  get mapTitle(): string {
     return TABS_TITLE[1];
   }
 
-  onMarkerSelected(marker: GeoMarker) {
+  onMarkerSelected(marker: GeoMarker): void {
     this.markerSelected.next(marker);
     this.selectedTab = 0;
   }

@@ -21,14 +21,14 @@ export class EventDetailComponent implements OnInit {
 
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private readonly remote: RemoteService,
+    private readonly remote: RemoteService
   ) {
     this.isHandset$ = isHandset(breakpointObserver);
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.remote.getLocation(this.event.location)
-      .subscribe(location => this.location = location);
+      .subscribe(location => { this.location = location; });
     this.makePdgaInfo();
     this.makeJpdgaInfo();
     this.makeMiscInfo();
@@ -38,12 +38,12 @@ export class EventDetailComponent implements OnInit {
     return this.event.title ? getEventTitle(this.event.title) : '';
   }
 
-  get showPastRounds() {
+  get showPastRounds(): boolean {
     return this.event.category !== 'local'
         && this.event.category !== 'monthly';
   }
 
-  get showMonthly$() {
+  get showMonthly$(): Observable<boolean> {
     if (this.event.category !== 'monthly') {
       return observableOf(false);
     }
