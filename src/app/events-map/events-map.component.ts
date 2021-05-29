@@ -1,6 +1,5 @@
-import { Component, Input, Output, EventEmitter, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit, ElementRef } from '@angular/core';
 import { Observable, BehaviorSubject, from } from 'rxjs';
-import { tap } from 'rxjs/operators';
 import { MatDialog } from '@angular/material/dialog';
 
 import { GeoMarker } from '../map-common';
@@ -49,13 +48,11 @@ export class EventsMapComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.apiLoaded$ = this.googleMapsApi.load$().pipe(
-      tap(() => this.loadEvents())
-    );
+    this.apiLoaded$ = this.googleMapsApi.load$();
   }
 
   onTilesloaded(): void {
-    this.loading = false;
+    this.loadEvents();
   }
 
   onMarkerClick(event: google.maps.MapMouseEvent): void {
@@ -109,6 +106,7 @@ export class EventsMapComponent implements OnInit {
       () => {
         this.mapSource$.next(markers);
         this.mapSource$.complete();
+        this.loading = false;
       }
     );
   }
@@ -121,7 +119,7 @@ function makeMarker(event: EventInfo, location: LocationInfo): GeoMarker {
       lng: location.geolocation[1]
     },
     location: location.id,
-    title: event.title,
+    title: event.title
   };
 }
 
