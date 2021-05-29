@@ -1,13 +1,16 @@
+// This file can be replaced during build by using the `fileReplacements` array.
+// `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
+// The list of file replacements can be found in `angular.json`.
+
 export interface Environment {
   production: boolean;
   projectPathName: string;
-  title: string;
   language?: string;  // default local language
   localize?: {
     aliase2title?: string[];
   };
-  MAP_API_KEY: string;
-  map: {
+  googlemaps: {
+    apikey: string;
     center: {
       lat: number;
       lng: number;
@@ -16,11 +19,11 @@ export interface Environment {
   };
 }
 
-export const environment = {
+export const environment: Environment = {
   production: true,
   projectPathName: '/ssa-round-ratings',
-  MAP_API_KEY: 'AIzaSyAdTyqg908nbRCLCGIhmTu6IF0RLA3mJpg',
-  map: {
+  googlemaps: {
+    apikey: 'AIzaSyAdTyqg908nbRCLCGIhmTu6IF0RLA3mJpg',
     center: {
       lat: 36.306148,
       lng: 137.995148

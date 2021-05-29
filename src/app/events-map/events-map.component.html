@@ -1,14 +1,19 @@
-<mat-spinner *ngIf="loading"></mat-spinner>
-<agm-map
-  [ngStyle]="{'height': height}"
-  [latitude]="latitude"
-  [longitude]="longitude"
-  [zoom]="zoom">
-  <ng-template ngFor let-m [ngForOf]="mapSource$ | async">
-    <agm-marker
-      [latitude]="m.position.lat"
-      [longitude]="m.position.lng"
-      (markerClick)="onMarkerClick($event)">
-    </agm-marker>
-  </ng-template>
-</agm-map>
+<div class="spinner" *ngIf="loading">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="apiLoaded$ | async">
+  <google-map id="googlemap"
+              [height]="height"
+              [width]="width"
+              [center]="center"
+              [zoom]="zoom"
+              [options]="mapOptions"
+              (tilesloaded)="onTilesloaded()">
+    <map-marker *ngFor="let location of mapSource$ | async"
+              [title]="location.title"
+              [position]="location.position"
+              (mapClick)="onMarkerClick($event)">
+    </map-marker>
+  </google-map>
+</div>

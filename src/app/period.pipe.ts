@@ -1,8 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { Period } from './models';
 
-const LONG_FORMAT = {year: 'numeric', month: 'short', day: 'numeric'};
-const SHORT_FORMAT = {day: 'numeric'};
+const LONG_FORMAT = { year: 'numeric', month: 'short', day: 'numeric' } as Intl.DateTimeFormatOptions;
+const SHORT_FORMAT = { day: 'numeric' } as Intl.DateTimeFormatOptions;
+
 @Pipe({
   name: 'period'
 })

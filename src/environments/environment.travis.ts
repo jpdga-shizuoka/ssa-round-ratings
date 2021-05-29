@@ -5,13 +5,12 @@
 export interface Environment {
   production: boolean;
   projectPathName: string;
-  title: string;
   language?: string;  // default local language
   localize?: {
     aliase2title?: string[];
   };
-  MAP_API_KEY: string;
-  map: {
+  googlemaps: {
+    apikey: string;
     center: {
       lat: number;
       lng: number;
@@ -20,11 +19,11 @@ export interface Environment {
   };
 }
 
-export const environment = {
+export const environment: Environment = {
   production: false,
   projectPathName: '',
-  MAP_API_KEY: 'xxxx',
-  map: {
+  googlemaps: {
+    apikey: 'xxxx',
     center: {
       lat: 36.306148,
       lng: 137.995148
@@ -47,4 +46,4 @@ export const environment = {
  * This import should be commented out in production mode because it will have a negative impact
  * on performance if an error is thrown.
  */
-// import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+// import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
