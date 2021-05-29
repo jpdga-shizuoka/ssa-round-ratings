@@ -222,6 +222,18 @@
     "id": "the25thkantoopen"
   },
   {
+    "title": "The 1st Hitach Seaside Park Open",
+    "location": "hitachiseasidepark",
+    "period": {
+      "from": "2021-07-11",
+      "to": "2021-07-11"
+    },
+    "jpdga": {
+      "eventId": "582"
+    },
+    "id": "the1sthitachseasideparkopen"
+  },
+  {
     "title": "The 10th Hokkaido Open",
     "location": "hunkawanpanolamapark",
     "period": {
@@ -271,6 +283,7 @@
       "from": "2021-06-12",
       "to": "2021-06-13"
     },
+    "status": "CANCELED",
     "pdga": {
       "eventId": "50849",
       "scoreId": "50849"
