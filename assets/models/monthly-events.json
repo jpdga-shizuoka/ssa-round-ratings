@@ -1,6 +1,24 @@
 [
   {
     "category": "monthly",
+    "location": "okawafurusatopark",
+    "schedule": {
+      "byDay": [
+        "sa"
+      ],
+      "bySetPos": 1
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/fsfdapage/"
+      }
+    ],
+    "id": "monthlyokawafurusatopark"
+  },
+  {
+    "category": "monthly",
     "location": "mizubayashisportpark",
     "schedule": {
       "byDay": [
