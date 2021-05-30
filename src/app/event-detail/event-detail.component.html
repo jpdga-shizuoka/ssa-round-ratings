@@ -55,7 +55,7 @@
       </td>
     </tr>
 
-    <tr *ngIf="event">
+    <tr *ngIf="!isMonthly">
       <td>iCalendar:</td>
       <td>
         <app-icalendar [event]="event"></app-icalendar>

@@ -43,11 +43,12 @@ export class EventDetailComponent implements OnInit {
         && this.event.category !== 'monthly';
   }
 
+  get isMonthly(): boolean {
+    return this.event.category === 'monthly';
+  }
+
   get showMonthly$(): Observable<boolean> {
-    if (this.event.category !== 'monthly') {
-      return observableOf(false);
-    }
-    return this.isHandset$;
+    return this.isMonthly ? this.isHandset$ : observableOf(false);
   }
 
   get layout(): string {
