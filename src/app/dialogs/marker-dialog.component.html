@@ -1,5 +1,5 @@
 <h1 mat-dialog-title>
-  {{location?.title | localize}}, {{location?.prefecture | localize}}
+  {{(location$ | async)?.title | localize}}, {{(location$ | async)?.prefecture | localize}}
 </h1>
 <div mat-dialog-content *ngIf="showList">
   <mat-nav-list>
