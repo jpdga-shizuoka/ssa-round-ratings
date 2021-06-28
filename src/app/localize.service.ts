@@ -21,15 +21,15 @@ const DICTIONARIES = [
 export type LocalizationCategory = 'event' | 'location' | 'menu' | 'prefecture';
 
 interface EventParts {
-  count: number;
+  count?: number;
   key: string;
 }
 
 interface LocalizeTable {
-  distanseFromMarkerToGoal?: (distanse: string, marker: string) => string;
   aliase2title?: (count: number, aliase: string) => string;
 }
 const LOCALIZE_TABLE = {} as LocalizeTable;
+const defaultLang = environment.language ?? 'en';
 
 @Injectable({
   providedIn: 'root'
@@ -46,7 +46,10 @@ export class LocalizeService {
   }
 
   transform(value?: string, lc?: LocalizationCategory): string {
-    if (!value || this.isGlobal) {
+    if (!value) {
+      return '';
+    }
+    if (this.isGlobal) {
       return value;
     }
     let result = value;
@@ -64,17 +67,9 @@ export class LocalizeService {
     }
   }
 
-  distanseFromMarkerToGoal(distanse: string, marker: string): string {
-    if (this.isGlobal || !LOCALIZE_TABLE.distanseFromMarkerToGoal) {
-      return `${distanse} to goal from the ${marker.toLowerCase()}`;
-    } else {
-      return LOCALIZE_TABLE.distanseFromMarkerToGoal(distanse, marker);
-    }
-  }
-
   toggleLanguage(): void {
     this.language = this.isGlobal ? LOCAL : GLOBAL;
-    document.documentElement.lang = this.language === GLOBAL ? 'en' : environment.language;
+    document.documentElement.lang = this.language === GLOBAL ? 'en' : defaultLang;
   }
 }
 
@@ -94,10 +89,20 @@ function getDictionaries(lc?: LocalizationCategory) {
 }
 
 function prepareLocals() {
-  Object.keys(environment.localize).forEach(name => {
+  if (!environment.localize) {
+    return;
+  }
+  const localize = environment.localize;
+  Object.keys(localize).forEach(key => {
     // @todo
     // eslint-disable-next-line no-new-func, @typescript-eslint/no-implied-eval
-    LOCALIZE_TABLE[name] = new Function(...environment.localize[name]);
+    switch (key) {
+      case 'aliase2title':
+        const aliase2title = localize.aliase2title;
+        if (aliase2title) {
+          LOCALIZE_TABLE.aliase2title = new Function(...aliase2title) as (count: number, aliase: string) => string;
+        }
+    }
   });
 }
 
@@ -114,6 +119,9 @@ function event2local(eventName: string): string {
   }
   if (parts.count == null) {
     return aliase;
+  }
+  if (!LOCALIZE_TABLE.aliase2title) {
+    return eventName;
   }
   return LOCALIZE_TABLE.aliase2title(parts.count, aliase);
 }
