@@ -17,7 +17,7 @@ const VIDEO_SIDE_PADDING = 16;
   styleUrls: ['./video-bottomsheet.component.css']
 })
 export class VideoBottomsheetComponent {
-  @ViewChild('player') player: YouTubePlayer;
+  @ViewChild('player') player!: YouTubePlayer;
   videoId: string | undefined = undefined;
   videoType: 'YT' | 'FB' | undefined = undefined;
   width: number;
