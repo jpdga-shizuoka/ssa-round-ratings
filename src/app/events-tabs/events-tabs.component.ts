@@ -6,6 +6,7 @@ import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { Observable, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+import { EventCategory } from '../models';
 import { GeoMarker } from '../map-common';
 import { isHandset } from '../ng-utilities';
 import { NoticeBottomsheetComponent } from '../dialogs/notice-bottomsheet.component';
@@ -31,7 +32,7 @@ const TABS_TITLE: {
   styleUrls: ['./events-tabs.component.css']
 })
 export class EventsTabsComponent implements AfterViewInit {
-  category: string;
+  category: EventCategory;
   isHandset$: Observable<boolean>;
   markerSelected: Subject<GeoMarker>;
   selectedTab: number;
@@ -48,7 +49,7 @@ export class EventsTabsComponent implements AfterViewInit {
     if (this.route.snapshot.url.length !== 2) {
       throw new TypeError(`unexpected path: ${this.route.snapshot.url.toString()}`);
     }
-    this.category = this.route.snapshot.url[1].path;
+    this.category = this.route.snapshot.url[1].path as EventCategory;
     if (this.category !== 'upcoming'
     && this.category !== 'local'
     && this.category !== 'monthly') {
