@@ -1,48 +1,34 @@
-export function getJpdgaInfo(eventId: string): string | undefined {
-  return eventId
-    ? `http://www.jpdga.jp/event.php?tno=${eventId}`
-    : undefined;
+export function getJpdgaInfo(eventId?: string): string {
+  return `http://www.jpdga.jp/event.php?tno=${eventId}`;
 }
 
-export function getJpdgaResult(eventId: string): string | undefined {
-  return eventId
-    ? `http://www.jpdga.jp/result.php?tno=${eventId}`
-    : undefined;
+export function getJpdgaResult(eventId?: string): string {
+  return `http://www.jpdga.jp/result.php?tno=${eventId}`;
 }
 
-export function getJpdgaReport(topicId: string): string | undefined {
-  return topicId
-    ? `http://www.jpdga.jp/main/index.php?itemid=${topicId}`
-    : undefined;
+export function getJpdgaReport(topicId?: string): string {
+  return `http://www.jpdga.jp/main/index.php?itemid=${topicId}`;
 }
 
-export function getJpdgaPhoto(photoId: string): string | undefined {
-  return photoId
-    ? `https://www.flickr.com/photos/jpdga/albums/${photoId}`
-    : undefined;
+export function getJpdgaPhoto(photoId?: string): string {
+  return `https://www.flickr.com/photos/jpdga/albums/${photoId}`;
 }
 
-export function getPdgaResult(eventId: string): string | undefined {
-  return eventId
-    ? `https://www.pdga.com/tour/event/${eventId}`
-    : undefined;
+export function getPdgaResult(eventId?: string): string {
+  return `https://www.pdga.com/tour/event/${eventId}`;
 }
 
-export function getLiveScore(id: string): string | undefined {
-  return id
-    ? `https://www.pdga.com/apps/tournament/live/event?eventId=${id}`
-    : undefined;
+export function getLiveScore(id?: string): string {
+  return `https://www.pdga.com/apps/tournament/live/event?eventId=${id}`;
 }
 
-export function getLayout(id: string): string | undefined {
-  return id
-    ? `https://jpdga-shizuoka.github.io/maps/event/${id}`
-    : undefined;
+export function getLayout(id?: string): string {
+  return `https://jpdga-shizuoka.github.io/maps/event/${id}`;
 }
 
 export function getEventTitle(name?: string): string {
   if (!name) {
-    return name;
+    return '';
   }
   const eventName = /the (\d+)(st|nd|rd|th|) (.+)/;
   const results = eventName.exec(name.trim().toLowerCase());

@@ -28,7 +28,7 @@ type AnualPlayers = {
 class CEventInfo {
   constructor(private event: EventInfo) {}
   get year(): number {
-    const date = new Date(this.event.period.from);
+    const date = new Date(this.event.period?.from ?? 0);
     return date.getFullYear();
   }
 }
@@ -91,7 +91,13 @@ export class RemoteService {
       throw new TypeError('getEvent: no id specified');
     }
     return this.getEvents(category).pipe(
-      map(events => events.find(event => event.id === id))
+      map(events => {
+        const event = events.find(event => event.id === id);
+        if (!event) {
+          throw new Error(`no event found: id=${id}`);
+        }
+        return event;
+      })
     );
   }
 
@@ -120,12 +126,18 @@ export class RemoteService {
       .get<LocationInfo[]>('assets/models/locations.json', { responseType: 'json' });
   }
 
-  getLocation(id: LocationId): Observable<LocationInfo> {
+  getLocation(id?: LocationId): Observable<LocationInfo> {
     if (!id) {
       throw new TypeError('getLocation: no id specified');
     }
     return this.getLocations().pipe(
-      map(locations => locations.find(location => location.id === id))
+      map(locations => {
+        const location = locations.find(location => location.id === id);
+        if (!location) {
+          throw new Error(`no location found, id=${id}`);
+        }
+        return location;
+      })
     );
   }
 
@@ -150,9 +162,9 @@ export class RemoteService {
             return;
           }
           videos.push({
-            title: event.title,
+            title: event.title ?? '',
             subttl: url.title,
-            date: new Date(event.period.from),
+            date: new Date(event.period?.from ?? 0),
             url: url.url
           });
         });
@@ -171,7 +183,7 @@ export class RemoteService {
     // }
     const result: EventInfo[] = [];
     events.forEach(event => {
-      if (compareTime(new Date(event.period.to), category)) {
+      if (compareTime(new Date(event.period?.to ?? 0), category)) {
         result.push(event);
       }
     });
@@ -183,6 +195,9 @@ export class RemoteService {
       return events;
     }
     events.sort((a, b) => {
+      if (!a.period || !b.period) {
+        return 0;
+      }
       const t1 = new Date(a.period.from);
       const t2 = new Date(b.period.to);
       return t1.getTime() - t2.getTime();
@@ -201,7 +216,7 @@ export class RemoteService {
     return total.result;
   }
 
-  private handleError<T>(operation = 'operation', result?: T): (error: Error) => Observable<T> {
+  private handleError<T>(operation = 'operation', result: T): (error: Error) => Observable<T> {
     return (error: Error): Observable<T> => {
       console.log(`${operation} failed: ${error.message}`);
       return observableOf(result);

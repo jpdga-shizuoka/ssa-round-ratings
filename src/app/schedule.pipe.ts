@@ -28,7 +28,10 @@ const MONTH_DEFAULTS: number[] = [];
 export class SchedulePipe implements PipeTransform {
   constructor(private readonly localize: LocalizeService) {}
 
-  transform(value: Schedule, type: ScheduleType): string {
+  transform(value?: Schedule, type?: ScheduleType): string {
+    if (!value || !type) {
+      return '';
+    }
     switch (type) {
       case 'day':
         return this.monthlyDay(value);

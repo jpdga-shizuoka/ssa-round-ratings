@@ -1,5 +1,5 @@
 import {
-  Component, OnInit, AfterViewInit, OnDestroy, Input, ViewChild
+  Component, OnInit, OnDestroy, Input, ViewChild
 } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { Observable, Subject, Subscription } from 'rxjs';
@@ -22,18 +22,18 @@ interface ExpandedRow {
   styleUrls: ['./events-table.component.css'],
   animations: [detailExpand]
 })
-export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
+export class EventsTableComponent implements OnInit, OnDestroy {
   @Input() displayedColumns$!: Observable<string[]>;
   @Input() markerSelected$!: Subject<GeoMarker>;
   @Input() category!: EventCategory;
   @Input() showMore = false;
   @Input() limit!: number;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-  dataSource: EventsDataSource;
-  expandedElement: EventInfo | null;
+  dataSource?: EventsDataSource;
+  expandedElement?: EventInfo;
   showDetail = false;
   pageSizeOptions = [10, 20, 50, 100];
-  private subscription: Subscription;
+  private subscription?: Subscription;
 
   constructor(private readonly remote: RemoteService) { }
 
@@ -50,19 +50,17 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     if (!this.limit) {
       throw new Error('[limit] is required');
     }
-    this.dataSource = new EventsDataSource(this.remote, this.category, this.limit);
-    if (this.markerSelected$) {
-      this.subscription = this.markerSelected$.subscribe(
-        marker => this.onMarkerSelected(marker)
-      );
-    }
-  }
-
-  ngAfterViewInit(): void {
     if (!this.paginator) {
       throw new Error('[paginator] is required');
     }
+    const dataSource = new EventsDataSource(this.remote, this.category, this.limit);
+    this.dataSource = dataSource;
     this.dataSource.paginator = this.paginator;
+    if (this.markerSelected$) {
+      this.subscription = this.markerSelected$.subscribe(
+        marker => this.onMarkerSelected(dataSource, marker)
+      );
+    }
   }
 
   ngOnDestroy(): void {
@@ -73,7 +71,7 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     return this.category === 'monthly' ? this.pageSizeOptions[1] : this.pageSizeOptions[0];
   }
 
-  get loading(): boolean { return this.dataSource.loading; }
+  get loading(): boolean { return this.dataSource?.loading ?? false; }
   get isMinimum(): boolean {
     return this.showMore && this.limit <= this.pageSizeOptions[0];
   }
@@ -107,22 +105,22 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   onRawClicked(event: EventInfo): void {
-    this.expandedElement = this.isDetailExpand(event) ? null : event;
+    this.expandedElement = this.isDetailExpand(event) ? undefined : event;
   }
 
-  private onMarkerSelected(marker: GeoMarker): void {
-    const found = this.dataSource.data.find(e => {
+  private onMarkerSelected(dataSource: EventsDataSource, marker: GeoMarker): void {
+    const found = dataSource.data.find(e => {
       return e.location === marker.location
       && (e.title ? e.title === marker.title : true);
     });
     if (!found) {
       return;
     }
-    this.expandEvent(found);
+    this.expandEvent(dataSource, found);
   }
 
-  private expandEvent(event: EventInfo): void {
-    const position = this.dataSource.data.indexOf(event);
+  private expandEvent(dataSource: EventsDataSource, event: EventInfo): void {
+    const position = dataSource.data.indexOf(event);
     if (position < 0) {
       return;
     }

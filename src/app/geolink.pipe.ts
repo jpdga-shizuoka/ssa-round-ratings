@@ -5,7 +5,7 @@ import { GeoPosition } from './models';
   name: 'geolink'
 })
 export class GeolinkPipe implements PipeTransform {
-  transform(ll: GeoPosition): string {
+  transform(ll?: GeoPosition): string {
     if (!ll) {
       return '';
     }

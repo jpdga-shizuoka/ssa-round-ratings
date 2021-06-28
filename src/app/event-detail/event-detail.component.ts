@@ -13,7 +13,7 @@ import { getEventTitle, getPdgaResult, getJpdgaInfo, getLayout, getLiveScore } f
 })
 export class EventDetailComponent implements OnInit {
   @Input() event!: EventInfo;
-  location: LocationInfo;
+  location?: LocationInfo;
   miscInfo: MiscInfo[] = [];
   pdgaInfo: MiscInfo[] = [];
   jpdgaInfo: MiscInfo[] = [];

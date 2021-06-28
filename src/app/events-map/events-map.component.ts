@@ -17,7 +17,6 @@ import { GoogleMapsApiService } from '../googlemapsapi.service';
 export class EventsMapComponent implements OnInit {
   @Input() category!: EventCategory;
   @Output() markerSelected = new EventEmitter<GeoMarker>();
-  private events: EventInfo[];
   apiLoaded$: Observable<boolean>;
   mapSource$: BehaviorSubject<GeoMarker[]> = new BehaviorSubject<GeoMarker[]>([]);
   loading = true;
@@ -35,6 +34,9 @@ export class EventsMapComponent implements OnInit {
 
   get width(): string {
     const element = this.el.nativeElement.querySelector('#googlemap');
+    if (!element) {
+      return '';
+    }
     const width = element.getBoundingClientRect().width;
     return `${width}px`;
   }
@@ -45,13 +47,13 @@ export class EventsMapComponent implements OnInit {
     public dialog: MatDialog,
     private googleMapsApi: GoogleMapsApiService
   ) {
+    this.apiLoaded$ = this.googleMapsApi.load$();
   }
 
   ngOnInit(): void {
     if (!this.category) {
       throw new Error('[category] is required');
     }
-    this.apiLoaded$ = this.googleMapsApi.load$();
   }
 
   onTilesloaded(): void {
@@ -61,6 +63,9 @@ export class EventsMapComponent implements OnInit {
   onMarkerClick(event: google.maps.MapMouseEvent): void {
     const markers = this.mapSource$.getValue();
     const marker = markers.find(m => event.latLng.equals(new google.maps.LatLng(m.position.lat, m.position.lng)));
+    if (!marker) {
+      return;
+    }
     const location = marker.location;
     const eventsName: string[] = [];
     for (const m of markers) {
@@ -92,15 +97,15 @@ export class EventsMapComponent implements OnInit {
 
   private loadEvents() {
     this.remote.getEvents(this.category).subscribe(
-      events => { this.events = events; },
-      err => console.log(err),
-      () => this.loadMarkers()
+      events => {
+        this.loadMarkers(events);
+      }
     );
   }
 
-  private loadMarkers() {
+  private loadMarkers(events: EventInfo[]) {
     const markers: GeoMarker[] = [];
-    from(this.events).subscribe(
+    from(events).subscribe(
       event => this.remote.getLocation(event.location).subscribe(
         location => markers.push(makeMarker(event, location))
       ),
@@ -121,7 +126,7 @@ function makeMarker(event: EventInfo, location: LocationInfo): GeoMarker {
       lng: location.geolocation[1]
     },
     location: location.id,
-    title: event.title
+    title: event.title ?? ''
   };
 }
 
