@@ -22,11 +22,11 @@ import {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit, OnDestroy, MetaDescription {
-  @ViewChild('drawer') drawer: MatSidenav;
+  @ViewChild('drawer') drawer!: MatSidenav;
   title = 'DG Japan';
   isHandset$: Observable<boolean>;
   subtitle$ = new BehaviorSubject<string>('');
-  private ssMeta: Subscription;
+  private ssMeta?: Subscription;
   get subtitle(): string { return this.localize.transform(this.subtitle$.value); }
   get home(): string { return this.localize.transform('Home'); }
   get schedule(): string { return this.localize.transform('Schedule'); }
