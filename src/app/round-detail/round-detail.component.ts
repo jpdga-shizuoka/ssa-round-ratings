@@ -17,10 +17,10 @@ export class RoundDetailComponent implements OnInit {
   @Input() round!: RoundInfo;
   @Input() showHistory = true;
 
-  rating: number;
-  score: number;
+  rating?: number;
+  score?: number;
 
-  private event: EventInfo;
+  private event?: EventInfo;
   location?: LocationInfo;
   pdgaInfo: MiscInfo[] = [];
   jpdgaInfo: MiscInfo[] = [];
@@ -35,9 +35,10 @@ export class RoundDetailComponent implements OnInit {
     }
     this.remote.getEvent(this.round.event, 'past')
       .subscribe(
-        event => { this.event = event; },
-        err => console.log(err),
-        () => this.getLocation(this.event.location)
+        event => {
+          this.event = event;
+          this.getLocation(event.location);
+        },
       );
   }
 
@@ -87,14 +88,14 @@ export class RoundDetailComponent implements OnInit {
   }
 
   private makePdgaInfo() {
-    if (this.event.pdga?.eventId) {
+    if (this.event?.pdga?.eventId) {
       this.pdgaInfo.push({
         icon: 'public',
         title: 'Results',
         url: getPdgaResult(this.event.pdga.eventId)
       });
     }
-    if (this.event.pdga?.scoreId) {
+    if (this.event?.pdga?.scoreId) {
       this.pdgaInfo.push({
         icon: 'public',
         title: 'Hole Scores',
@@ -104,21 +105,21 @@ export class RoundDetailComponent implements OnInit {
   }
 
   private makeJpdgaInfo() {
-    if (this.event.jpdga?.eventId) {
+    if (this.event?.jpdga?.eventId) {
       this.jpdgaInfo.push({
         icon: 'public',
         title: 'Results',
         url: getJpdgaResult(this.event.jpdga.eventId)
       });
     }
-    if (this.event.jpdga?.topicId) {
+    if (this.event?.jpdga?.topicId) {
       this.jpdgaInfo.push({
         icon: 'public',
         title: 'Report',
         url: getJpdgaReport(this.event.jpdga.topicId)
       });
     }
-    if (this.event.jpdga?.photoId) {
+    if (this.event?.jpdga?.photoId) {
       this.jpdgaInfo.push({
         icon: 'camera_alt',
         title: 'Photos',
@@ -128,7 +129,7 @@ export class RoundDetailComponent implements OnInit {
   }
 
   private makeMiscInfo() {
-    if (this.event.urls) {
+    if (this.event?.urls) {
       for (const urlInfo of this.event.urls) {
         if (urlInfo.type === 'video') {
           continue;
@@ -143,7 +144,7 @@ export class RoundDetailComponent implements OnInit {
   }
 
   private makeVideoInfo() {
-    if (this.event.urls) {
+    if (this.event?.urls) {
       for (const urlInfo of this.event.urls) {
         if (urlInfo.type !== 'video') {
           continue;
@@ -192,12 +193,18 @@ export class RoundDetailComponent implements OnInit {
   }
 
   private rating2score(rating: number) {
+    if (!this.round?.offset || !this.round?.weight) {
+      return NaN;
+    }
     let score = (rating - this.round.offset) / this.round.weight;
     score = Math.round(score * 10) / 10;
     return score;
   }
 
   private score2rating(score: number) {
+    if (!this.round?.offset || !this.round?.weight) {
+      return NaN;
+    }
     return Math.round(score * this.round.weight + this.round.offset);
   }
 
