@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, ViewChild, Input } from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 
 import { MatPaginator } from '@angular/material/paginator';
@@ -22,19 +22,19 @@ const DISPLAYED_COLUMNS = [['title', 'subttl'], ['year', 'title', 'subttl']];
   templateUrl: './videos-table.component.html',
   styleUrls: ['./videos-table.component.css']
 })
-export class VideosTableComponent implements AfterViewInit, OnInit {
+export class VideosTableComponent implements OnInit {
   @Input() pageSizeOptions = [10, 20, 50, 100];
   @Input() showSearch = true;
   @Input() showMore = false;
   @Input() search = '';
   @Input() category = 'video' as EventCategory;
-  @Input() limit?: number;
+  @Input() limit = 0;
   @Input() keyword?: string;
   @ViewChild(MatPaginator) paginator?: MatPaginator;
   @ViewChild(MatSort) sort?: MatSort;
 
   readonly isHandset$: Observable<boolean>;
-  dataSource: VideosDataSource;
+  dataSource!: VideosDataSource;
 
   get displayedColumns$(): Observable<string[]> {
     return this.isHandset$.pipe(
@@ -51,7 +51,7 @@ export class VideosTableComponent implements AfterViewInit, OnInit {
     this.isHandset$ = isHandset(breakpointObserver);
   }
 
-  get loading(): boolean { return this.dataSource.loading; }
+  get loading(): boolean { return this.dataSource?.loading ?? true; }
   get isMinimum(): boolean {
     return this.showMore && this.limit <= this.pageSizeOptions[0];
   }
@@ -59,20 +59,16 @@ export class VideosTableComponent implements AfterViewInit, OnInit {
   ngOnInit(): void {
     this.dataSource
       = new VideosDataSource(this.remote, this.localize, this.category, this.limit, this.keyword);
+    if (this.sort && this.paginator) {
+      this.dataSource.sort = this.sort;
+      this.dataSource.paginator = this.paginator;
+    }
 
     // This code loads the IFrame Player API code asynchronously, according to the instructions at
     // https://developers.google.com/youtube/iframe_api_reference#Getting_Started
     const tag = document.createElement('script');
     tag.src = 'https://www.youtube.com/iframe_api';
     document.body.appendChild(tag);
-  }
-
-  ngAfterViewInit(): void {
-    if (!this.sort || !this.paginator) {
-      return;
-    }
-    this.dataSource.sort = this.sort;
-    this.dataSource.paginator = this.paginator;
   }
 
   onRawClicked(video: VideoInfo): void {
