@@ -57,7 +57,7 @@ export class VideosDataSource extends MatTableDataSource<VideoInfo> {
     }
     const results: VideoInfo[] = [];
     videos.forEach(video => {
-      if (video.title.toLowerCase().includes(this.keyword)) {
+      if (this.keyword && video.title.toLowerCase().includes(this.keyword)) {
         results.push(video);
       }
     });
@@ -66,7 +66,7 @@ export class VideosDataSource extends MatTableDataSource<VideoInfo> {
 
   private setupFilter() {
     this.filterPredicate = (data: VideoInfo, filters: string): boolean => {
-      const matchFilter = [];
+      const matchFilter: boolean[] = [];
       const filterArray = filters.split('&');
       const columns: string[] = [
         data.title,
@@ -75,7 +75,7 @@ export class VideosDataSource extends MatTableDataSource<VideoInfo> {
         this.localize.transform(data.title, 'event')
       ];
       filterArray.forEach(filter => {
-        const customFilter = [];
+        const customFilter: boolean[] = [];
         columns.forEach(column =>
           customFilter.push(column.toLowerCase().includes(filter)));
         matchFilter.push(customFilter.some(Boolean)); // OR
