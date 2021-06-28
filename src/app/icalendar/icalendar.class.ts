@@ -9,12 +9,9 @@ export class Calendar {
   private location: string;
 
   constructor(localize: LocalizeService, event: EventInfo, location: LocationInfo) {
-    if (!event) {
-      return;
-    }
     this.title = localize.transform(event.title);
-    this.start = dayOfStart(new Date(event.period.from));
-    this.end = dayOfEnd(new Date(event.period.to));
+    this.start = dayOfStart(new Date(event.period?.from ?? 0));
+    this.end = dayOfEnd(new Date(event.period?.to ?? 0));
     this.location = localize.transform(
       localize.transform(escape(location.title))
     );
