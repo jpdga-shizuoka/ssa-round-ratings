@@ -56,7 +56,7 @@
     </ng-container>
 
     <ng-container matColumnDef="expandedDetail">
-      <td mat-cell *matCellDef="let element" [attr.colspan]="(displayedColumns$ | async).length">
+      <td mat-cell *matCellDef="let element" [attr.colspan]="(displayedColumns$ | async)?.length">
         <div class="round-element-detail"
              [@detailExpand]="isDetailExpand(element) ? 'expanded' : 'collapsed'"
              (@detailExpand.done)="showDetail = isDetailExpand(element)">
@@ -81,7 +81,7 @@
   </table>
 
   <mat-paginator #paginator *ngIf="!isMinimum"
-      [length]="dataSource?.data.length"
+      [length]="dataSource?.data?.length"
       [pageIndex]="0"
       [pageSize]="pageSizeOptions[0]"
       [pageSizeOptions]="pageSizeOptions">

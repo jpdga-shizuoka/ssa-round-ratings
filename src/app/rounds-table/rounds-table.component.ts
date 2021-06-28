@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, OnDestroy, Input, ViewChild } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
@@ -25,7 +25,7 @@ interface ExpandedRow {
   styleUrls: ['./rounds-table.component.css'],
   animations: [detailExpand]
 })
-export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
+export class RoundsTableComponent implements OnInit, OnDestroy {
   @Input() displayedColumns$!: Observable<string[]>;
   @Input() markerSelected$!: Subject<GeoMarker>;
   @Input() search = '';
@@ -33,12 +33,12 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() limit!: number;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-  dataSource: RoundsDataSource;
-  expandedElement: RoundInfo | null;
+  dataSource!: RoundsDataSource;
+  expandedElement?: RoundInfo;
   showDetail = false;
   pageSizeOptions = [10, 20, 50, 100];
-  private ssMarker: Subscription;
-  private ssQuery: Subscription;
+  private ssMarker?: Subscription;
+  private ssQuery?: Subscription;
   private detailDisabled = false;
   private sorted = false;
 
@@ -59,7 +59,15 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     if (!this.limit) {
       throw new Error('[limit] is required');
     }
+    if (!this.sort) {
+      throw new Error('[sort$] is required');
+    }
+    if (!this.paginator) {
+      throw new Error('[paginator] is required');
+    }
     this.dataSource = new RoundsDataSource(this.remote, this.localize, this.limit);
+    this.dataSource.sort = this.sort;
+    this.dataSource.paginator = this.paginator;
 
     if (this.route.snapshot.queryParamMap.has('search')) {
       const filter = this.route.snapshot.queryParamMap.get('search');
@@ -77,17 +85,6 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
       .subscribe(query => this.updateSearch(query.search));
   }
 
-  ngAfterViewInit(): void {
-    if (!this.sort) {
-      throw new Error('[sort$] is required');
-    }
-    if (!this.paginator) {
-      throw new Error('[paginator] is required');
-    }
-    this.dataSource.sort = this.sort;
-    this.dataSource.paginator = this.paginator;
-  }
-
   ngOnDestroy(): void {
     this.ssQuery?.unsubscribe();
     this.ssMarker?.unsubscribe();
@@ -102,7 +99,7 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
       this.bottomSheet.open(BottomSheetDetailDisabledComponent);
       return;
     }
-    this.expandedElement = this.isDetailExpand(round) ? null : round;
+    this.expandedElement = this.isDetailExpand(round) ? undefined : round;
   }
 
   applyFilter(filterValue: string): void {
@@ -165,13 +162,13 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     return date.getFullYear();
   }
 
-  private updateSearch(query?: string) {
+  private updateSearch(query?: string | null) {
     if (!query) {
       return;
     }
     this.dataSource.filter = query;
     this.search = query;
-    this.expandedElement = null;
+    this.expandedElement = undefined;
     this.showDetail = false;
   }
 }
