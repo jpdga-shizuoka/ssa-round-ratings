@@ -15,7 +15,7 @@ import { GoogleMapsApiService } from '../googlemapsapi.service';
   styleUrls: ['./events-map.component.css']
 })
 export class EventsMapComponent implements OnInit {
-  @Input() category: EventCategory;
+  @Input() category!: EventCategory;
   @Output() markerSelected = new EventEmitter<GeoMarker>();
   private events: EventInfo[];
   apiLoaded$: Observable<boolean>;
@@ -48,6 +48,9 @@ export class EventsMapComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if (!this.category) {
+      throw new Error('[category] is required');
+    }
     this.apiLoaded$ = this.googleMapsApi.load$();
   }
 

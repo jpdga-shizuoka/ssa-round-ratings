@@ -23,12 +23,12 @@ interface ExpandedRow {
   animations: [detailExpand]
 })
 export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
-  @Input() displayedColumns$: Observable<string[]>;
-  @Input() markerSelected$: Subject<GeoMarker>;
-  @Input() category: EventCategory;
+  @Input() displayedColumns$!: Observable<string[]>;
+  @Input() markerSelected$!: Subject<GeoMarker>;
+  @Input() category!: EventCategory;
   @Input() showMore = false;
-  @Input() limit: number;
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @Input() limit!: number;
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
   dataSource: EventsDataSource;
   expandedElement: EventInfo | null;
   showDetail = false;
@@ -38,6 +38,18 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(private readonly remote: RemoteService) { }
 
   ngOnInit(): void {
+    if (!this.displayedColumns$) {
+      throw new Error('[event] is required');
+    }
+    if (!this.markerSelected$) {
+      throw new Error('[markerSelected$] is required');
+    }
+    if (!this.category) {
+      throw new Error('[category] is required');
+    }
+    if (!this.limit) {
+      throw new Error('[limit] is required');
+    }
     this.dataSource = new EventsDataSource(this.remote, this.category, this.limit);
     if (this.markerSelected$) {
       this.subscription = this.markerSelected$.subscribe(
@@ -47,6 +59,9 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
+    if (!this.paginator) {
+      throw new Error('[paginator] is required');
+    }
     this.dataSource.paginator = this.paginator;
   }
 

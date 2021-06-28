@@ -30,8 +30,8 @@ export class VideosTableComponent implements AfterViewInit, OnInit {
   @Input() category = 'video' as EventCategory;
   @Input() limit?: number;
   @Input() keyword?: string;
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator) paginator?: MatPaginator;
+  @ViewChild(MatSort) sort?: MatSort;
 
   readonly isHandset$: Observable<boolean>;
   dataSource: VideosDataSource;
@@ -68,6 +68,9 @@ export class VideosTableComponent implements AfterViewInit, OnInit {
   }
 
   ngAfterViewInit(): void {
+    if (!this.sort || !this.paginator) {
+      return;
+    }
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
   }

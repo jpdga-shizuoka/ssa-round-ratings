@@ -12,7 +12,7 @@ import { getEventTitle, getPdgaResult, getJpdgaInfo, getLayout, getLiveScore } f
   styleUrls: ['./event-detail.component.css']
 })
 export class EventDetailComponent implements OnInit {
-  @Input() event: EventInfo;
+  @Input() event!: EventInfo;
   location: LocationInfo;
   miscInfo: MiscInfo[] = [];
   pdgaInfo: MiscInfo[] = [];
@@ -27,6 +27,9 @@ export class EventDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if (!this.event) {
+      throw new Error('[event] is required');
+    }
     this.remote.getLocation(this.event.location)
       .subscribe(location => { this.location = location; });
     this.makePdgaInfo();
@@ -52,7 +55,7 @@ export class EventDetailComponent implements OnInit {
   }
 
   get layout(): string {
-    return getLayout(this.event?.layout);
+    return getLayout(this.event.layout);
   }
 
   private makeMiscInfo() {

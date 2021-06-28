@@ -14,7 +14,7 @@ const MAX_RATING = 1200;
   styleUrls: ['./round-detail.component.css']
 })
 export class RoundDetailComponent implements OnInit {
-  @Input() round: RoundInfo;
+  @Input() round!: RoundInfo;
   @Input() showHistory = true;
 
   rating: number;
@@ -30,6 +30,9 @@ export class RoundDetailComponent implements OnInit {
   constructor(private readonly remote: RemoteService) { }
 
   ngOnInit(): void {
+    if (!this.round) {
+      throw new Error('[round] is required');
+    }
     this.remote.getEvent(this.round.event, 'past')
       .subscribe(
         event => { this.event = event; },

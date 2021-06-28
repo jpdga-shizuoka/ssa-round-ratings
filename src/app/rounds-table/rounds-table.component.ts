@@ -26,13 +26,13 @@ interface ExpandedRow {
   animations: [detailExpand]
 })
 export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
-  @Input() displayedColumns$: Observable<string[]>;
-  @Input() markerSelected$: Subject<GeoMarker>;
+  @Input() displayedColumns$!: Observable<string[]>;
+  @Input() markerSelected$!: Subject<GeoMarker>;
   @Input() search = '';
   @Input() showMore = false;
-  @Input() limit: number;
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+  @Input() limit!: number;
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
   dataSource: RoundsDataSource;
   expandedElement: RoundInfo | null;
   showDetail = false;
@@ -50,6 +50,15 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
+    if (!this.displayedColumns$) {
+      throw new Error('[event] is required');
+    }
+    if (!this.markerSelected$) {
+      throw new Error('[markerSelected$] is required');
+    }
+    if (!this.limit) {
+      throw new Error('[limit] is required');
+    }
     this.dataSource = new RoundsDataSource(this.remote, this.localize, this.limit);
 
     if (this.route.snapshot.queryParamMap.has('search')) {
@@ -69,6 +78,12 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
+    if (!this.sort) {
+      throw new Error('[sort$] is required');
+    }
+    if (!this.paginator) {
+      throw new Error('[paginator] is required');
+    }
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
   }
