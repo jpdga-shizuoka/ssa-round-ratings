@@ -1,4 +1,4 @@
-export class GeoMarker {
+export interface GeoMarker {
   position: {
     lat: number;
     lng: number;
