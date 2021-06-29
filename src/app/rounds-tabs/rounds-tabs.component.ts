@@ -26,10 +26,10 @@ export class RoundsTabsComponent implements OnInit {
     breakpointObserver: BreakpointObserver
   ) {
     this.isHandset$ = isHandset(breakpointObserver);
+    this.markerSelected = new Subject<GeoMarker>();
   }
 
   ngOnInit(): void {
-    this.markerSelected = new Subject<GeoMarker>();
     switch (this.route.snapshot.url[1]?.path) {
       case 'video':
         this.selectedTab = 1;
