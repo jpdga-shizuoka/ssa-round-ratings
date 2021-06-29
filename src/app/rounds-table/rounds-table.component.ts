@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, Input, ViewChild } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input, ViewChild, AfterViewInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
@@ -26,12 +26,12 @@ interface ExpandedRow {
   styleUrls: ['./rounds-table.component.css'],
   animations: [detailExpand]
 })
-export class RoundsTableComponent implements OnInit, OnDestroy {
+export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() displayedColumns$!: Observable<string[]>;
   @Input() markerSelected$!: Subject<GeoMarker>;
   @Input() search = '';
   @Input() showMore = false;
-  @Input() limit!: number;
+  @Input() limit?: number;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   dataSource!: RoundsDataSource;
@@ -52,24 +52,8 @@ export class RoundsTableComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     if (!this.displayedColumns$) {
-      throw new Error('[event] is required');
+      throw new Error('[displayedColumns$] is required');
     }
-    if (!this.markerSelected$) {
-      throw new Error('[markerSelected$] is required');
-    }
-    if (!this.limit) {
-      throw new Error('[limit] is required');
-    }
-    if (!this.sort) {
-      throw new Error('[sort$] is required');
-    }
-    if (!this.paginator) {
-      throw new Error('[paginator] is required');
-    }
-    this.dataSource = new RoundsDataSource(this.remote, this.localize, this.limit);
-    this.dataSource.sort = this.sort;
-    this.dataSource.paginator = this.paginator;
-
     if (this.route.snapshot.queryParamMap.has('search')) {
       const filter = this.route.snapshot.queryParamMap.get('search');
       this.updateSearch(filter);
@@ -84,6 +68,12 @@ export class RoundsTableComponent implements OnInit, OnDestroy {
     }
     this.ssQuery = this.route.queryParams
       .subscribe(query => this.updateSearch(query.search));
+  }
+
+  ngAfterViewInit(): void {
+    this.dataSource = new RoundsDataSource(this.remote, this.localize, this.limit);
+    this.dataSource.sort = this.sort;
+    this.dataSource.paginator = this.paginator;
   }
 
   ngOnDestroy(): void {
@@ -113,7 +103,7 @@ export class RoundsTableComponent implements OnInit, OnDestroy {
   }
 
   get loading(): boolean { return this.dataSource.loading; }
-  get isMinimum(): boolean { return this.limit <= this.pageSizeOptions[0]; }
+  get isMinimum(): boolean { return !!this.limit && this.limit <= this.pageSizeOptions[0]; }
   get showHistory(): boolean {
     if (!this.expandedElement) {
       return false;

@@ -1,5 +1,5 @@
 import {
-  Component, OnInit, OnDestroy, Input, ViewChild
+  Component, OnInit, OnDestroy, Input, ViewChild, AfterViewInit
 } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { Observable, Subject, Subscription } from 'rxjs';
@@ -24,12 +24,12 @@ interface ExpandedRow {
   styleUrls: ['./events-table.component.css'],
   animations: [detailExpand]
 })
-export class EventsTableComponent implements OnInit, OnDestroy {
+export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() displayedColumns$!: Observable<string[]>;
   @Input() markerSelected$!: Subject<GeoMarker>;
   @Input() category!: EventCategory;
   @Input() showMore = false;
-  @Input() limit!: number;
+  @Input() limit?: number;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   dataSource?: EventsDataSource;
   expandedElement?: EventInfo;
@@ -44,20 +44,14 @@ export class EventsTableComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     if (!this.displayedColumns$) {
-      throw new Error('[event] is required');
-    }
-    if (!this.markerSelected$) {
-      throw new Error('[markerSelected$] is required');
+      throw new Error('[displayedColumns$] is required');
     }
     if (!this.category) {
       throw new Error('[category] is required');
     }
-    if (!this.limit) {
-      throw new Error('[limit] is required');
-    }
-    if (!this.paginator) {
-      throw new Error('[paginator] is required');
-    }
+  }
+
+  ngAfterViewInit(): void {
     const dataSource = new EventsDataSource(this.remote, this.category, this.limit);
     this.dataSource = dataSource;
     this.dataSource.paginator = this.paginator;
@@ -78,7 +72,7 @@ export class EventsTableComponent implements OnInit, OnDestroy {
 
   get loading(): boolean { return this.dataSource?.loading ?? true; }
   get isMinimum(): boolean {
-    return this.showMore && this.limit <= this.pageSizeOptions[0];
+    return this.showMore && !!this.limit && this.limit <= this.pageSizeOptions[0];
   }
 
   getRawClass(event: EventInfo): ExpandedRow {
