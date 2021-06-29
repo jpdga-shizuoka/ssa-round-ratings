@@ -52,7 +52,7 @@ export class RoundsDataSource extends MatTableDataSource<RoundInfo> {
 
   private setupFilter() {
     this.filterPredicate = (data: RoundInfo, filters: string): boolean => {
-      const matchFilter = [];
+      const matchFilter: boolean[] = [];
       const filterArray = filters.split('&');
       const columns: string[] = [data.round, data.date];
       if (data.ssa) {
@@ -71,7 +71,7 @@ export class RoundsDataSource extends MatTableDataSource<RoundInfo> {
       }
 
       filterArray.forEach(filter => {
-        const customFilter = [];
+        const customFilter: boolean[] = [];
         columns.forEach(column =>
           customFilter.push(column.toLowerCase().includes(filter)));
         matchFilter.push(customFilter.some(Boolean)); // OR
@@ -98,10 +98,16 @@ function calcWeight(player1: { score: number, rating: number }, player2: { score
 }
 
 function calcOffset(round: RoundInfo) {
+  if (!round.ratings || !round.weight) {
+    return 0;
+  }
   return round.ratings.player1.rating - round.weight * round.ratings.player1.score;
 }
 
 function calcSsa(round: RoundInfo) {
+  if (!round.offset || !round.weight) {
+    return 0;
+  }
   const holes = round.holes || 18;
   const regulation = holes / 18;
   return (1000 - round.offset) / round.weight / regulation;
