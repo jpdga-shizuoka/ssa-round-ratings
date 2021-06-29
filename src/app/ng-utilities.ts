@@ -53,12 +53,14 @@ export function subscribeMetaDescription(mdo: MetaDescription): Subscription {
       return route;
     }),
     filter(route => route.outlet === 'primary'),
-    mergeMap(route => route.data)
-  ).subscribe((data: UserData) => updateDescription(mdo, data));
+    mergeMap(route => route.data as Observable<UserData>)
+  ).subscribe(data => {
+    updateDescription(mdo, data);
+  });
 }
 
 function updateDescription(mdo: MetaDescription, data?: UserData): void {
-  if (!data.metaDescription) {
+  if (!data?.metaDescription) {
     return;
   }
   const md = data.metaDescription as MetaData;
@@ -66,8 +68,8 @@ function updateDescription(mdo: MetaDescription, data?: UserData): void {
   const image = url + environment.projectPathName + IMAGE_PATH;
   const href = url + window.location.pathname;
   mdo.ngTitle.setTitle(md.title);
-  mdo.ngMeta.updateTag({ name: 'description', content: md.description });
-  mdo.ngMeta.updateTag({ property: 'og:description', content: md.description });
+  mdo.ngMeta.updateTag({ name: 'description', content: md.description ?? ''});
+  mdo.ngMeta.updateTag({ property: 'og:description', content: md.description ?? ''});
   mdo.ngMeta.updateTag({ property: 'og:title', content: md.title });
   mdo.ngMeta.updateTag({ property: 'og:type', content: md.type || 'website' });
   mdo.ngMeta.updateTag({ property: 'og:url', content: md.url || href });
