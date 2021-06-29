@@ -4,6 +4,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { Observable, Subject, Subscription } from 'rxjs';
+import { map, tap } from 'rxjs/operators';
 
 import { GeoMarker } from '../map-common';
 import { detailExpand } from '../animations';
@@ -160,6 +161,13 @@ export class RoundsTableComponent implements OnInit, OnDestroy {
   getYear(time: string): number {
     const date = new Date(time);
     return date.getFullYear();
+  }
+
+  round2title$(round: RoundInfo) {
+    return round.event$?.pipe(
+      map(event => event.title),
+      tap(title => this.localize.transform(title, 'event'))
+    );
   }
 
   private updateSearch(query?: string | null) {

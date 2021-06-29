@@ -3,11 +3,13 @@ import {
 } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { Observable, Subject, Subscription } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 import { GeoMarker } from '../map-common';
 import { EventCategory } from '../models';
 import { detailExpand } from '../animations';
 import { RemoteService } from '../remote.service';
+import { LocationService } from '../location.service';
 import { EventsDataSource, EventInfo } from './events-datasource';
 
 interface ExpandedRow {
@@ -35,7 +37,10 @@ export class EventsTableComponent implements OnInit, OnDestroy {
   pageSizeOptions = [10, 20, 50, 100];
   private subscription?: Subscription;
 
-  constructor(private readonly remote: RemoteService) { }
+  constructor(
+    private readonly remote: RemoteService,
+    private location: LocationService
+  ) { }
 
   ngOnInit(): void {
     if (!this.displayedColumns$) {
@@ -71,7 +76,7 @@ export class EventsTableComponent implements OnInit, OnDestroy {
     return this.category === 'monthly' ? this.pageSizeOptions[1] : this.pageSizeOptions[0];
   }
 
-  get loading(): boolean { return this.dataSource?.loading ?? false; }
+  get loading(): boolean { return this.dataSource?.loading ?? true; }
   get isMinimum(): boolean {
     return this.showMore && this.limit <= this.pageSizeOptions[0];
   }
@@ -117,6 +122,12 @@ export class EventsTableComponent implements OnInit, OnDestroy {
       return;
     }
     this.expandEvent(dataSource, found);
+  }
+
+  event2location$(event: EventInfo): Observable<string> | undefined {
+    return event.location$?.pipe(
+      map(location => this.location.transform(location, 'title-rgion'))
+    );
   }
 
   private expandEvent(dataSource: EventsDataSource, event: EventInfo): void {
