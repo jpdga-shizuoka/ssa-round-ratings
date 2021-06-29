@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { first } from 'rxjs/operators';
+import { LegendPosition } from '@swimlane/ngx-charts';
 import { RemoteService } from '../remote.service';
 import { TotalYearPlayers } from '../models';
 
@@ -19,7 +20,7 @@ interface ChartData {
   styleUrls: ['./total-players.component.css']
 })
 export class TotalPlayersComponent implements OnInit {
-  chartSource: ChartData[];
+  chartSource?: ChartData[];
   xAxis = true;
   yAxis = true;
   showXAxisLabel = true;
@@ -28,7 +29,7 @@ export class TotalPlayersComponent implements OnInit {
   yAxisLabel = 'Players';
   gradient = false;
   legend = false;
-  legendPosition = 'below';
+  legendPosition = LegendPosition.Below;
   showDataLabel = true;
   animations = true;
   colorScheme = {
