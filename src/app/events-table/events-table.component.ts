@@ -3,7 +3,6 @@ import {
 } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { Observable, Subject, Subscription } from 'rxjs';
-import { map } from 'rxjs/operators';
 
 import { GeoMarker } from '../map-common';
 import { EventCategory } from '../models';
@@ -43,6 +42,8 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
+    this.dataSource = new EventsDataSource(this.remote, this.category, this.limit);
+
     if (!this.displayedColumns$) {
       throw new Error('[displayedColumns$] is required');
     }
@@ -52,12 +53,10 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
-    const dataSource = new EventsDataSource(this.remote, this.category, this.limit);
-    this.dataSource = dataSource;
     this.dataSource.paginator = this.paginator;
     if (this.markerSelected$) {
       this.subscription = this.markerSelected$.subscribe(
-        marker => this.onMarkerSelected(dataSource, marker)
+        marker => this.onMarkerSelected(this.dataSource, marker)
       );
     }
   }
@@ -116,12 +115,6 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
       return;
     }
     this.expandEvent(dataSource, found);
-  }
-
-  event2location$(event: EventInfo): Observable<string> | undefined {
-    return event.location$?.pipe(
-      map(location => this.location.transform(location, 'title-rgion'))
-    );
   }
 
   private expandEvent(dataSource: EventsDataSource, event: EventInfo): void {

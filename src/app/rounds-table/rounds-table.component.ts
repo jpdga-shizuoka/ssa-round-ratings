@@ -4,7 +4,6 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { Observable, Subject, Subscription } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
 
 import { GeoMarker } from '../map-common';
 import { detailExpand } from '../animations';
@@ -51,6 +50,8 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
+    this.dataSource = new RoundsDataSource(this.remote, this.localize, this.limit);
+
     if (!this.displayedColumns$) {
       throw new Error('[displayedColumns$] is required');
     }
@@ -71,7 +72,6 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
-    this.dataSource = new RoundsDataSource(this.remote, this.localize, this.limit);
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
   }
@@ -151,13 +151,6 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   getYear(time: string): number {
     const date = new Date(time);
     return date.getFullYear();
-  }
-
-  round2title$(round: RoundInfo) {
-    return round.event$?.pipe(
-      map(event => event.title),
-      tap(title => this.localize.transform(title, 'event'))
-    );
   }
 
   private updateSearch(query?: string | null) {
