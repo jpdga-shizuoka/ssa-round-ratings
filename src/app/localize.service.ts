@@ -94,14 +94,15 @@ function prepareLocals() {
   }
   const localize = environment.localize;
   Object.keys(localize).forEach(key => {
-    // @todo
-    // eslint-disable-next-line no-new-func, @typescript-eslint/no-implied-eval
     switch (key) {
-      case 'aliase2title':
+      case 'aliase2title': {
         const aliase2title = localize.aliase2title;
         if (aliase2title) {
+          // @todo
+          // eslint-disable-next-line no-new-func, @typescript-eslint/no-implied-eval
           LOCALIZE_TABLE.aliase2title = new Function(...aliase2title) as (count: number, aliase: string) => string;
         }
+      }
     }
   });
 }

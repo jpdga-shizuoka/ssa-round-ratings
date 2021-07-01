@@ -38,7 +38,7 @@ export class RoundDetailComponent implements OnInit {
         event => {
           this.event = event;
           this.getLocation(event.location);
-        },
+        }
       );
   }
 

@@ -6,7 +6,6 @@ import { LocationInfo } from './models';
   providedIn: 'root'
 })
 export class LocationService {
-
   constructor(private localize: LocalizeService) { }
 
   transform(location?: LocationInfo, format?: string): string {
