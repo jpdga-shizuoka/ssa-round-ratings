@@ -22,8 +22,8 @@ export function getLiveScore(id?: string): string {
   return `https://www.pdga.com/apps/tournament/live/event?eventId=${id ?? ''}`;
 }
 
-export function getLayout(id?: string): string {
-  return `https://jpdga-shizuoka.github.io/maps/event/${id ?? ''}`;
+export function getLayout(id?: string): string | undefined {
+  return id ? `https://jpdga-shizuoka.github.io/maps/event/${id}` : undefined;
 }
 
 export function getEventTitle(name?: string): string {

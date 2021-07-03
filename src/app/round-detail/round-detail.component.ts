@@ -70,7 +70,7 @@ export class RoundDetailComponent implements OnInit {
     return (this.event?.status !== 'CANCELED') && (this.pdgaInfo.length > 0);
   }
 
-  get layout(): string {
+  get layout(): string | undefined {
     return getLayout(this.event?.layout);
   }
 

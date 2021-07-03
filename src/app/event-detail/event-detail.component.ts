@@ -54,7 +54,7 @@ export class EventDetailComponent implements OnInit {
     return this.isMonthly ? this.isHandset$ : observableOf(false);
   }
 
-  get layout(): string {
+  get layout(): string | undefined {
     return getLayout(this.event.layout);
   }
 
