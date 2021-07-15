@@ -79,6 +79,23 @@
   },
   {
     "category": "local",
+    "title": "The 2021 Michinoku Challenge",
+    "location": "kitakamisportpark",
+    "period": {
+      "from": "2021-08-07",
+      "to": "2021-08-07"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Iwate Disc Golf Association",
+        "url": "https://jpdgaiwate.com"
+      }
+    ],
+    "id": "the2021michinokuchallenge"
+  },
+  {
+    "category": "local",
     "title": "The Aichi Open Doubles Tournament",
     "location": "shinshiropark",
     "period": {

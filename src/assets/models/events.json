@@ -189,6 +189,7 @@
       "from": "2021-08-07",
       "to": "2021-08-08"
     },
+    "status": "CANCELED",
     "jpdga": {
       "eventId": "569"
     },
@@ -199,7 +200,7 @@
         "url": "http://jpdgaiwate.com"
       }
     ],
-    "id": "the15thmichinokuopen"
+    "id": "the16thmichinokuopen"
   },
   {
     "title": "The 25th Kanto Open",
@@ -445,6 +446,36 @@
         "type": "website",
         "title": "Official Site",
         "url": "https://aifda.or.jp/event/第20回中部オープンディスクゴルフトーナメント/"
+      },
+      {
+        "type": "video",
+        "title": "MPO Round#2 Front9 Lead Card",
+        "url": "https://youtu.be/B89sMiSY07o"
+      },
+      {
+        "type": "video",
+        "title": "MPO Round#2 Back9 Lead Card",
+        "url": "https://youtu.be/TG9GqKbTjUY"
+      },
+      {
+        "type": "video",
+        "title": "MPO Round#3 Front9 Lead Card",
+        "url": "https://youtu.be/WwGPOFdJuo8"
+      },
+      {
+        "type": "video",
+        "title": "MPO Round#3 Back9 Lead Card",
+        "url": "https://youtu.be/jnHS8tt__8k"
+      },
+      {
+        "type": "video",
+        "title": "MPO Semifinal9 Lead Card",
+        "url": "https://youtu.be/T4SZlc5nvC8"
+      },
+      {
+        "type": "video",
+        "title": "MPO Final9",
+        "url": "https://youtu.be/Ll3z8cKFpJ4"
       }
     ],
     "id": "the20thchubuopen"
