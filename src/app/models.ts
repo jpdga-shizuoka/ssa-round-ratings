@@ -94,6 +94,7 @@ export interface RoundInfo extends RoundInfoBase {
   locationTitle?: string;
   event$?: Observable<EventInfo>;
   ssa?: number;         // Scratch Scoring Average
+  difficulty?: number;
   category?: string;    // SSA Range Category
   weight?: number;
   offset?: number;

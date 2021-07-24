@@ -1,3 +1,5 @@
+import { RoundInfo } from './models';
+
 export function getJpdgaInfo(eventId?: string): string {
   return `http://www.jpdga.jp/event.php?tno=${eventId ?? ''}`;
 }
@@ -35,4 +37,58 @@ export function getEventTitle(name?: string): string {
   return (!results || results.length !== 4)
     ? name
     : results[3];
+}
+
+export function calcRoundStat(rounds: RoundInfo[]): RoundInfo[] {
+  for (const round of rounds) {
+    if (round.ratings) {
+      round.weight = calcWeight(round.ratings.player1, round.ratings.player2);
+      round.offset = calcOffset(round);
+      round.ssa = calcSsa(round);
+      round.category = calcCategory(round.ssa);
+      round.difficulty = calcDifficulty(round);
+    }
+  }
+  return rounds;
+}
+
+function calcDifficulty(round: RoundInfo): number | undefined {
+  if (!round.hla || !round.ssa) {
+    return;
+  }
+  return round.ssa / round.hla * 10
+}
+
+function calcWeight(player1: { score: number, rating: number }, player2: { score: number, rating: number }) {
+  return (player1.rating - player2.rating) / (player1.score - player2.score);
+}
+
+function calcOffset(round: RoundInfo) {
+  if (!round.ratings || !round.weight) {
+    return 0;
+  }
+  return round.ratings.player1.rating - round.weight * round.ratings.player1.score;
+}
+
+function calcSsa(round: RoundInfo) {
+  if (!round.offset || !round.weight) {
+    return 0;
+  }
+  const holes = round.holes || 18;
+  const regulation = holes / 18;
+  return (1000 - round.offset) / round.weight / regulation;
+}
+
+function calcCategory(ssa: number) {
+  if (ssa < 48) {
+    return 'A';
+  } else if (ssa < 54) {
+    return '2A';
+  } else if (ssa < 60) {
+    return '3A';
+  } else if (ssa < 66) {
+    return '4A';
+  } else {
+    return '5A';
+  }
 }

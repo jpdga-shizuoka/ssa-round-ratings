@@ -4,6 +4,7 @@ import { tap, map } from 'rxjs/operators';
 
 import { RemoteService, RoundInfo } from '../remote.service';
 import { LocalizeService } from '../localize.service';
+import { calcRoundStat } from '../app-libs';
 
 /**
  * Data source for the TestTable view. This class should
@@ -32,7 +33,7 @@ export class RoundsDataSource extends MatTableDataSource<RoundInfo> {
     this.remote.getRounds()
       .pipe(
         map(rounds => this.limit ? rounds.slice(0, this.limit) : rounds),
-        tap(rounds => updateMembers(rounds))
+        tap(rounds => calcRoundStat(rounds))
       ).subscribe(
         rounds => { this.data = rounds; },
         err => console.log(err),
@@ -78,51 +79,5 @@ export class RoundsDataSource extends MatTableDataSource<RoundInfo> {
       });
       return matchFilter.every(Boolean); // AND
     };
-  }
-}
-
-function updateMembers(rounds: RoundInfo[]) {
-  for (const round of rounds) {
-    if (round.ratings) {
-      round.weight = calcWeight(round.ratings.player1, round.ratings.player2);
-      round.offset = calcOffset(round);
-      round.ssa = calcSsa(round);
-      round.category = calcCategory(round.ssa);
-    }
-  }
-  return rounds;
-}
-
-function calcWeight(player1: { score: number, rating: number }, player2: { score: number, rating: number }) {
-  return (player1.rating - player2.rating) / (player1.score - player2.score);
-}
-
-function calcOffset(round: RoundInfo) {
-  if (!round.ratings || !round.weight) {
-    return 0;
-  }
-  return round.ratings.player1.rating - round.weight * round.ratings.player1.score;
-}
-
-function calcSsa(round: RoundInfo) {
-  if (!round.offset || !round.weight) {
-    return 0;
-  }
-  const holes = round.holes || 18;
-  const regulation = holes / 18;
-  return (1000 - round.offset) / round.weight / regulation;
-}
-
-function calcCategory(ssa: number) {
-  if (ssa < 48) {
-    return 'A';
-  } else if (ssa < 54) {
-    return '2A';
-  } else if (ssa < 60) {
-    return '3A';
-  } else if (ssa < 66) {
-    return '4A';
-  } else {
-    return '5A';
   }
 }
