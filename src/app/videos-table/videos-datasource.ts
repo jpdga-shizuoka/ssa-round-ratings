@@ -1,7 +1,8 @@
 import { MatTableDataSource } from '@angular/material/table';
 import { BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { RemoteService, VideoInfo, EventCategory } from '../remote.service';
+
+import { RemoteService, VideoInfo } from '../remote.service';
 import { LocalizeService } from '../localize.service';
 
 /**
@@ -15,7 +16,6 @@ export class VideosDataSource extends MatTableDataSource<VideoInfo> {
   constructor(
     private readonly remote: RemoteService,
     private readonly localize: LocalizeService,
-    private readonly category: EventCategory,
     private readonly limit?: number,
     private readonly keyword?: string
   ) {
@@ -30,7 +30,7 @@ export class VideosDataSource extends MatTableDataSource<VideoInfo> {
    */
   connect(): BehaviorSubject<VideoInfo[]> {
     this.loading = true;
-    this.remote.getVideos(this.category)
+    this.remote.getVideos()
       .pipe(
         map(videos => this.filterWithKeyword(videos)),
         map(videos => this.limit ? videos.slice(0, this.limit) : videos)

@@ -141,7 +141,8 @@ export class RemoteService {
     );
   }
 
-  getVideos(category: EventCategory): Observable<VideoInfo[]> {
+  getVideos(): Observable<VideoInfo[]> {
+    const category = 'video' as EventCategory;
     return this.getEvents(category).pipe(
       map(events => this.filterVideos(events))
     );

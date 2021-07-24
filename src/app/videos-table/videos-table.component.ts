@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, Input } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, Input } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 
 import { MatPaginator } from '@angular/material/paginator';
@@ -22,16 +22,15 @@ const DISPLAYED_COLUMNS = [['title', 'subttl'], ['year', 'title', 'subttl']];
   templateUrl: './videos-table.component.html',
   styleUrls: ['./videos-table.component.css']
 })
-export class VideosTableComponent implements OnInit {
+export class VideosTableComponent implements OnInit, AfterViewInit {
   @Input() pageSizeOptions = [10, 20, 50, 100];
   @Input() showSearch = true;
   @Input() showMore = false;
   @Input() search = '';
-  @Input() category = 'video' as EventCategory;
   @Input() limit = 0;
   @Input() keyword?: string;
-  @ViewChild(MatPaginator) paginator?: MatPaginator;
-  @ViewChild(MatSort) sort?: MatSort;
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
 
   readonly isHandset$: Observable<boolean>;
   dataSource!: VideosDataSource;
@@ -58,17 +57,18 @@ export class VideosTableComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataSource
-      = new VideosDataSource(this.remote, this.localize, this.category, this.limit, this.keyword);
-    if (this.sort && this.paginator) {
-      this.dataSource.sort = this.sort;
-      this.dataSource.paginator = this.paginator;
-    }
+      = new VideosDataSource(this.remote, this.localize, this.limit, this.keyword);
 
     // This code loads the IFrame Player API code asynchronously, according to the instructions at
     // https://developers.google.com/youtube/iframe_api_reference#Getting_Started
     const tag = document.createElement('script');
     tag.src = 'https://www.youtube.com/iframe_api';
     document.body.appendChild(tag);
+  }
+
+  ngAfterViewInit(): void {
+    this.dataSource.sort = this.sort;
+    this.dataSource.paginator = this.paginator;
   }
 
   onRawClicked(video: VideoInfo): void {
