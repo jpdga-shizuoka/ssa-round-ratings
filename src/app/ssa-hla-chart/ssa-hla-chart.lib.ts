@@ -44,7 +44,7 @@ function rounds2data(rounds: RoundInfo[]): BubbleData[] {
           r: round.difficulty!
         }
       ]
-    }
+    };
   });
 }
 

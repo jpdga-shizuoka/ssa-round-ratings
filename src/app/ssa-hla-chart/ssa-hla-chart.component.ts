@@ -4,7 +4,7 @@ import { map, first } from 'rxjs/operators';
 import { RemoteService } from '../remote.service';
 import { LocalizeService } from '../localize.service';
 import { calcRoundStat } from '../app-libs';
-import { BubbleDataResult, BubbleData, rounds2result } from './ssa-hla-chart.lib';
+import { BubbleData, rounds2result } from './ssa-hla-chart.lib';
 
 @Component({
   selector: 'app-ssa-hla-chart',
@@ -32,7 +32,6 @@ export class SsaHlaChartComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    let result: BubbleDataResult;
     this.remote.getRounds().pipe(
       first(),
       map(rounds => rounds.filter(round => round.hla != null && round.hla)),
@@ -45,6 +44,6 @@ export class SsaHlaChartComponent implements OnInit {
       this.yScaleMin = result.ssa.min;
       this.yScaleMax = result.ssa.max;
       this.rounds = result.data;
-    })
+    });
   }
 }
