@@ -20,10 +20,10 @@ export class SsaHlaChartComponent implements OnInit {
   showYAxisLabel = true;
   xAxisLabel = 'HLA (meter)';
   yAxisLabel = 'SSA';
-  xScaleMin = 70;
-  xScaleMax = 150;
-  yScaleMin = 45;
-  yScaleMax = 70;
+  xScaleMin?: number;
+  xScaleMax?: number;
+  yScaleMin?: number;
+  yScaleMax?: number;
 
   constructor(
     private readonly localize: LocalizeService,

@@ -1,15 +1,15 @@
-<mat-tab-group class="mat-elevation-z2 app-container">
+<mat-tab-group class="mat-elevation-z2 app-container" [(selectedIndex)]="selectedTab">
+    <mat-tab label="{{'Difficulty' | localize}}">
+      <ng-template matTabContent>
+        <app-ssa-hla-chart>
+        </app-ssa-hla-chart>
+      </ng-template>
+    </mat-tab>
+
   <mat-tab label="{{'Anual Total Players' | localize}}">
     <ng-template matTabContent>
       <app-total-players>
       </app-total-players>
-    </ng-template>
-  </mat-tab>
-
-  <mat-tab label="SSA-HLA">
-    <ng-template matTabContent>
-      <app-ssa-hla-chart>
-      </app-ssa-hla-chart>
     </ng-template>
   </mat-tab>
 </mat-tab-group>

@@ -90,12 +90,28 @@ const routes: Routes = [
   },
   {
     path: 'stats',
+    redirectTo: 'stats/difficulty'
+  },
+  {
+    path: 'stats/players',
     component: StatsTabsComponent,
     data: {
       metaDescription: {
-        title: 'DG Japan - Stats',
-        subtitle: 'Stats',
-        description: 'Stats of the official disc golf events held in Japan.',
+        title: 'DG Japan - Players Chart',
+        subtitle: 'Players',
+        description: 'A graph of the number of participating players by year',
+        keywords: 'disc golf,events,stats,japan'
+      }
+    }
+  },
+  {
+    path: 'stats/difficulty',
+    component: StatsTabsComponent,
+    data: {
+      metaDescription: {
+        title: 'DG Japan - Difficulty Chart',
+        subtitle: 'Difficulty',
+        description: 'A graph of the difficulty of course rounds',
         keywords: 'disc golf,events,stats,japan'
       }
     }
