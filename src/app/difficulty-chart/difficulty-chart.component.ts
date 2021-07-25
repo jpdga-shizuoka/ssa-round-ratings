@@ -4,14 +4,14 @@ import { map, first } from 'rxjs/operators';
 import { RemoteService } from '../remote.service';
 import { LocalizeService } from '../localize.service';
 import { calcRoundStat } from '../app-libs';
-import { BubbleData, rounds2result } from './ssa-hla-chart.lib';
+import { BubbleData, rounds2result } from './difficulty-chart.lib';
 
 @Component({
-  selector: 'app-ssa-hla-chart',
-  templateUrl: './ssa-hla-chart.component.html',
-  styleUrls: ['./ssa-hla-chart.component.css']
+  selector: 'app-difficulty-chart',
+  templateUrl: './difficulty-chart.component.html',
+  styleUrls: ['./difficulty-chart.component.css']
 })
-export class SsaHlaChartComponent implements OnInit {
+export class DifficultyChartComponent implements OnInit {
   rounds?: BubbleData[];
   showXAxis = true;
   showYAxis = true;

@@ -49,7 +49,7 @@ import { VideoBottomsheetComponent } from './dialogs/video-bottomsheet.component
 import { BottomSheetDetailDisabledComponent } from './dialogs/bottom-sheet-detail-disabled.component';
 import { PrefaceComponent } from './preface/preface.component';
 import { IcalenderComponent } from './icalendar/icalendar.component';
-import { SsaHlaChartComponent } from './ssa-hla-chart/ssa-hla-chart.component';
+import { DifficultyChartComponent } from './difficulty-chart/difficulty-chart.component';
 import { SchedulePipe } from './schedule.pipe';
 import { GeolinkPipe } from './geolink.pipe';
 import { LocalizePipe } from './localize.pipe';
@@ -81,7 +81,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     StatsTabsComponent,
     PrefaceComponent,
     IcalenderComponent,
-    SsaHlaChartComponent,
+    DifficultyChartComponent,
     SchedulePipe,
     GeolinkPipe,
     LocalizePipe,
