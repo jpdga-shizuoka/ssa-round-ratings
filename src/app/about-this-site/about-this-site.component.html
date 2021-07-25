@@ -17,47 +17,7 @@
       <mat-card-title>Terms</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <table class="terms-table">
-        <tbody>
-          <tr>
-            <td>SSA</td>
-            <td *ngIf="primaryLanguage">
-              Scratch Scoring Averages
-              - Your PDGA Player Rating (PR) is a number that shows how close your
-              average round scores are compared to the course rating,
-              called the Scratch Scoring Averages (SSA),
-              of the courses you’ve played in competition.
-              Players who average the SSA on courses played will have a rating of
-              1000 and are considered “scratch players”.
-              A player who averages scores lower than SSAs on course they’ve
-              played will have a rating over 1000.
-              <a href="https://www.pdga.com/tags/ssa">Excerpt from the PDGA</a>
-            </td>
-            <td *ngIf="!primaryLanguage">
-              Scratch Scoring Averages
-              - PDGA公式戦のラウンド毎にPDGAによって算出されるラウンドスコアで,
-              ラウンドレイティング算出の基準となる値.
-              コースにはコースディレクターが設定するパーもあるが,
-              SSAは気象条件にも左右される別の指標である.
-              SSAは、プレーヤーレイティング1000を持つ仮想プレーヤがラウンドしたら
-              記録されるであろうラウンドスコアになる.
-              よってSSAを下回るスコアでラウンドしたプレーヤーのラウンドスコアは,
-              1000点を超える.
-              <a href="https://www.pdga.com/tags/ssa">PDGAの説明参照</a>
-            </td>
-          </tr>
-          <tr>
-            <td>HLA</td>
-            <td *ngIf="primaryLanguage">
-              Hole Length Average
-            </td>
-            <td *ngIf="!primaryLanguage">
-              Hole Length Average
-              - コース総ホールの平均的長さ
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <app-terms></app-terms>
     </mat-card-content>
   </mat-card>
 

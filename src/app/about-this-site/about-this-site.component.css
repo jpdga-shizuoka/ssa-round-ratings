@@ -48,19 +48,6 @@ h4 a {
 .github-card-img h3 {
   text-align: center;
 }
-.terms-table {
-  width: 100%;
-}
-.terms-table td {
-  padding: 10px;
-  border-color: collapse;
-  border-bottom: 1px lightgray solid;
-}
-.terms-table td:first-child {
-  font-weight: bold;
-  min-width: 4rem;
-  text-align: center;
-}
 .oss-table td:first-child {
   text-align: right;
 }

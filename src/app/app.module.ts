@@ -50,6 +50,7 @@ import { BottomSheetDetailDisabledComponent } from './dialogs/bottom-sheet-detai
 import { PrefaceComponent } from './preface/preface.component';
 import { IcalenderComponent } from './icalendar/icalendar.component';
 import { DifficultyChartComponent } from './difficulty-chart/difficulty-chart.component';
+import { TermsComponent } from './terms/terms.component';
 import { SchedulePipe } from './schedule.pipe';
 import { GeolinkPipe } from './geolink.pipe';
 import { LocalizePipe } from './localize.pipe';
@@ -87,7 +88,8 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     LocalizePipe,
     PeriodPipe,
     LocationPipe,
-    EventPipe
+    EventPipe,
+    TermsComponent
   ],
   imports: [
     BrowserModule,
