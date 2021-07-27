@@ -81,6 +81,10 @@
         </a>
       </td>
     </tr>
+    <tr *ngIf="round.difficulty">
+      <td>{{'Difficulty' | localize}}:</td>
+      <td>{{round.difficulty}}</td>
+    </tr>
     <tr *ngIf="round.ssa">
       <td>SSA:</td>
       <td>

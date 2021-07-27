@@ -56,7 +56,7 @@ function calcDifficulty(round: RoundInfo): number | undefined {
   if (!round.hla || !round.ssa) {
     return;
   }
-  return round.ssa / round.hla * 10;
+  return Math.round(round.ssa / round.hla * 100) / 10;
 }
 
 function calcWeight(player1: { score: number, rating: number }, player2: { score: number, rating: number }) {
