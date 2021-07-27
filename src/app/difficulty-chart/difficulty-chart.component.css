@@ -1,6 +1,7 @@
 .chart {
   margin: 10px 5px;
   overflow-x: auto;
+  touch-action: manipulation;
 }
 app-terms {
   margin: 20px;
