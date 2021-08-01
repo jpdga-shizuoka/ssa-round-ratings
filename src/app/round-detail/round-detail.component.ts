@@ -1,9 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {
-  getEventTitle, getPdgaResult, getJpdgaResult, getJpdgaReport, getJpdgaPhoto, getLiveScore, getLayout
-} from '../app-libs';
+import { first } from 'rxjs/operators';
+import { getEventTitle, getLayout, makePdgaInfo, makeJpdgaInfo, makeMiscInfo, makeVideoInfo } from '../app-libs';
 import { RemoteService, RoundInfo, EventInfo, LocationInfo, LocationId } from '../remote.service';
-import { MiscInfo, ICONS } from '../app-common';
+import { MiscInfo } from '../app-common';
 
 const MIN_RATING = 700;
 const MAX_RATING = 1200;
@@ -34,12 +33,15 @@ export class RoundDetailComponent implements OnInit {
       throw new Error('[round] is required');
     }
     this.remote.getEvent(this.round.event, 'past')
-      .subscribe(
-        event => {
-          this.event = event;
-          this.getLocation(event.location);
-        }
-      );
+      .pipe(first())
+      .subscribe(event => {
+        this.event = event;
+        this.getLocation(event.location);
+        this.pdgaInfo = makePdgaInfo(event);
+        this.jpdgaInfo = makeJpdgaInfo(event);
+        this.miscInfo = makeMiscInfo(event);
+        this.videoInfo = makeVideoInfo(event);
+      });
   }
 
   get roundStatus(): string {
@@ -75,87 +77,9 @@ export class RoundDetailComponent implements OnInit {
   }
 
   private getLocation(id: LocationId) {
-    this.remote.getLocation(id).subscribe(
-      location => { this.location = location; },
-      err => console.log(err),
-      () => {
-        this.makePdgaInfo();
-        this.makeJpdgaInfo();
-        this.makeMiscInfo();
-        this.makeVideoInfo();
-      }
-    );
-  }
-
-  private makePdgaInfo() {
-    if (this.event?.pdga?.eventId) {
-      this.pdgaInfo.push({
-        icon: 'public',
-        title: 'Results',
-        url: getPdgaResult(this.event.pdga.eventId)
-      });
-    }
-    if (this.event?.pdga?.scoreId) {
-      this.pdgaInfo.push({
-        icon: 'public',
-        title: 'Hole Scores',
-        url: getLiveScore(this.event.pdga.scoreId)
-      });
-    }
-  }
-
-  private makeJpdgaInfo() {
-    if (this.event?.jpdga?.eventId) {
-      this.jpdgaInfo.push({
-        icon: 'public',
-        title: 'Results',
-        url: getJpdgaResult(this.event.jpdga.eventId)
-      });
-    }
-    if (this.event?.jpdga?.topicId) {
-      this.jpdgaInfo.push({
-        icon: 'public',
-        title: 'Report',
-        url: getJpdgaReport(this.event.jpdga.topicId)
-      });
-    }
-    if (this.event?.jpdga?.photoId) {
-      this.jpdgaInfo.push({
-        icon: 'camera_alt',
-        title: 'Photos',
-        url: getJpdgaPhoto(this.event.jpdga.photoId)
-      });
-    }
-  }
-
-  private makeMiscInfo() {
-    if (this.event?.urls) {
-      for (const urlInfo of this.event.urls) {
-        if (urlInfo.type === 'video') {
-          continue;
-        }
-        this.miscInfo.push({
-          icon: ICONS[urlInfo.type],
-          title: urlInfo.title,
-          url: urlInfo.url
-        });
-      }
-    }
-  }
-
-  private makeVideoInfo() {
-    if (this.event?.urls) {
-      for (const urlInfo of this.event.urls) {
-        if (urlInfo.type !== 'video') {
-          continue;
-        }
-        this.videoInfo.push({
-          icon: ICONS[urlInfo.type],
-          title: urlInfo.title,
-          url: urlInfo.url
-        });
-      }
-    }
+    this.remote.getLocation(id)
+      .pipe(first())
+      .subscribe(location => { this.location = location; });
   }
 
   onRatingChanged(): void {

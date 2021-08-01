@@ -52,6 +52,19 @@
         </td>
       </tr>
 
+      <tr *ngIf="videoInfo.length">
+        <td>{{'Videos' | localize}}:</td>
+        <td>
+          <div class="info-container">
+            <ng-template ngFor let-info [ngForOf]="videoInfo">
+              <a href="{{info.url}}" target="_blank" rel="noopener">
+                {{info.title}}
+              </a>
+            </ng-template>
+          </div>
+        </td>
+      </tr>
+
       <tr>
         <td>{{'History' | localize}}:</td>
         <td>

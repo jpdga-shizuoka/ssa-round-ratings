@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { first, tap } from 'rxjs/operators';
 
 import { RemoteService, EventId, EventInfo, LocationInfo } from '../remote.service';
-import { getEventTitle, getLayout, makePdgaInfo, makeJpdgaInfo, makeMiscInfo } from '../app-libs';
+import { getEventTitle, getLayout, makePdgaInfo, makeJpdgaInfo, makeMiscInfo, makeVideoInfo } from '../app-libs';
 import { MiscInfo } from '../app-common';
 
 @Component({
@@ -16,9 +16,10 @@ export class EventComponent {
   eventId?: EventId;
   event?: EventInfo;
   location$?: Observable<LocationInfo>;
-  miscInfo: MiscInfo[] = [];
   pdgaInfo: MiscInfo[] = [];
   jpdgaInfo: MiscInfo[] = [];
+  miscInfo: MiscInfo[] = [];
+  videoInfo: MiscInfo[] = [];
 
   constructor(
     route: ActivatedRoute,
@@ -34,6 +35,7 @@ export class EventComponent {
             this.pdgaInfo = makePdgaInfo(event);
             this.jpdgaInfo = makeJpdgaInfo(event);
             this.miscInfo = makeMiscInfo(event);
+            this.videoInfo = makeVideoInfo(event);
           })
         ).subscribe(event => { this.event = event; });
       }

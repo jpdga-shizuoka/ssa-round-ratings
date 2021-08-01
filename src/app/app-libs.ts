@@ -98,6 +98,26 @@ export function makeMiscInfo(event: EventInfo): MiscInfo[] {
   const info: MiscInfo[] = [];
   if (event.urls) {
     for (const urlInfo of event.urls) {
+      if (urlInfo.type === 'video') {
+        continue;
+      }
+      info.push({
+        icon: ICONS[urlInfo.type],
+        title: urlInfo.title,
+        url: urlInfo.url
+      });
+    }
+  }
+  return info;
+}
+
+export function makeVideoInfo(event: EventInfo): MiscInfo[] {
+  const info: MiscInfo[] = [];
+  if (event?.urls) {
+    for (const urlInfo of event.urls) {
+      if (urlInfo.type !== 'video') {
+        continue;
+      }
       info.push({
         icon: ICONS[urlInfo.type],
         title: urlInfo.title,
