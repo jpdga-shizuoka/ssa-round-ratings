@@ -39,6 +39,7 @@ import { VideosTableComponent } from './videos-table/videos-table.component';
 import { RoundDetailComponent } from './round-detail/round-detail.component';
 import { StatsTabsComponent } from './stats-tabs/stats-tabs.component';
 import { AboutThisSiteComponent } from './about-this-site/about-this-site.component';
+import { EventComponent } from './event/event.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
 import { EventsTabsComponent } from './events-tabs/events-tabs.component';
 import { EventsTableComponent } from './events-table/events-table.component';
@@ -68,6 +69,8 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     RoundsTableComponent,
     RoundDetailComponent,
     AboutThisSiteComponent,
+    TermsComponent,
+    EventComponent,
     EventDetailComponent,
     EventsTabsComponent,
     EventsTableComponent,
@@ -88,8 +91,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     LocalizePipe,
     PeriodPipe,
     LocationPipe,
-    EventPipe,
-    TermsComponent
+    EventPipe
   ],
   imports: [
     BrowserModule,

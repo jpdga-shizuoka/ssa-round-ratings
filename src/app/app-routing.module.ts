@@ -7,6 +7,7 @@ import { RoundsTabsComponent } from './rounds-tabs/rounds-tabs.component';
 import { EventsTabsComponent } from './events-tabs/events-tabs.component';
 import { StatsTabsComponent } from './stats-tabs/stats-tabs.component';
 import { AboutThisSiteComponent } from './about-this-site/about-this-site.component';
+import { EventComponent } from './event/event.component';
 
 export type UserData = {
   metaDescription: {
@@ -28,6 +29,20 @@ const routes: Routes = [
       }
     }
   },
+
+  {
+    path: 'event/:eventId',
+    component: EventComponent,
+    data: {
+      metaDescription: {
+        title: 'DG Japan - Disc Golf Event',
+        subtitle: 'Disc Golf Event',
+        description: '',
+        keywords: 'disc golf,official events,japan'
+      }
+    }
+  },
+
   {
     path: 'events/upcoming',
     component: EventsTabsComponent,

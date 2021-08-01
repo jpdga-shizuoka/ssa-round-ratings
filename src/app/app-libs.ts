@@ -1,4 +1,5 @@
-import { RoundInfo } from './models';
+import { RoundInfo, EventInfo } from './models';
+import { ICONS, MiscInfo } from './app-common';
 
 export function getJpdgaInfo(eventId?: string): string {
   return `http://www.jpdga.jp/event.php?tno=${eventId ?? ''}`;
@@ -91,4 +92,49 @@ function calcCategory(ssa: number) {
   } else {
     return '5A';
   }
+}
+
+export function makeMiscInfo(event: EventInfo): MiscInfo[] {
+  const info: MiscInfo[] = [];
+  if (event.urls) {
+    for (const urlInfo of event.urls) {
+      info.push({
+        icon: ICONS[urlInfo.type],
+        title: urlInfo.title,
+        url: urlInfo.url
+      });
+    }
+  }
+  return info;
+}
+
+export function makePdgaInfo(event: EventInfo): MiscInfo[] {
+  const info: MiscInfo[] = [];
+  if (event.pdga?.eventId) {
+    info.push({
+      icon: 'public',
+      title: 'Results',
+      url: getPdgaResult(event.pdga.eventId)
+    });
+  }
+  if (event.pdga?.scoreId) {
+    info.push({
+      icon: 'public',
+      title: 'Live Score',
+      url: getLiveScore(event.pdga.scoreId)
+    });
+  }
+  return info;
+}
+
+export function makeJpdgaInfo(event: EventInfo): MiscInfo[] {
+  const info: MiscInfo[] = [];
+  if (event.jpdga?.eventId) {
+    info.push({
+      icon: 'public',
+      title: 'Paper',
+      url: getJpdgaInfo(event.jpdga.eventId)
+    });
+  }
+  return info;
 }
