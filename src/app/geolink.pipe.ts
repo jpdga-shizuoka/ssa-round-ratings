@@ -1,15 +1,18 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { GeoPosition } from './models';
+import { GeoPosition, LocationInfo } from './models';
 
 @Pipe({
   name: 'geolink'
 })
 export class GeolinkPipe implements PipeTransform {
-  transform(ll?: GeoPosition): string {
-    if (!ll) {
+  transform(geoPosition?: GeoPosition | LocationInfo): string {
+    if (!geoPosition) {
       return '';
     }
-    return `${getUrlForGeolocation()}${ll[0]},${ll[1]}`;
+    const geolocation = ('geolocation' in geoPosition === true)
+      ? (geoPosition as LocationInfo).geolocation
+      : geoPosition as GeoPosition;
+    return `${getUrlForGeolocation()}${geolocation[0]},${geolocation[1]}`;
   }
 }
 

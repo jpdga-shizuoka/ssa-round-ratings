@@ -12,7 +12,7 @@ import { VideoBottomsheetComponent } from '../dialogs/video-bottomsheet.componen
 import { VideoInfo } from '../models';
 import { isHandset } from '../ng-utilities';
 import { VideosDataSource } from './videos-datasource';
-import { RemoteService, EventCategory } from '../remote.service';
+import { RemoteService } from '../remote.service';
 import { LocalizeService } from '../localize.service';
 
 const DISPLAYED_COLUMNS = [['title', 'subttl'], ['year', 'title', 'subttl']];
