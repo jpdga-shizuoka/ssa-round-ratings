@@ -18,7 +18,7 @@ export class DifficultyChartComponent implements OnInit {
   showLegend = false;
   showXAxisLabel = true;
   showYAxisLabel = true;
-  xAxisLabel = 'HLA (meter)';
+  xAxisLabel = 'HLA';
   yAxisLabel = 'SSA';
   xScaleMin?: number;
   xScaleMax?: number;

@@ -15,3 +15,6 @@ h4 a {
   display: inline-flex;
   vertical-align: middle;
 }
+app-terms {
+  margin: 20px;
+}

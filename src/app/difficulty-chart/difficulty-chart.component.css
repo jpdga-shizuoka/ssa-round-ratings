@@ -3,9 +3,6 @@
   overflow-x: auto;
   touch-action: manipulation;
 }
-app-terms {
-  margin: 20px;
-}
 ngx-charts-bubble-chart {
   width: 630px;
   height: 480px;
