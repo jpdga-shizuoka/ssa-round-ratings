@@ -55,7 +55,7 @@ a[href^="http://maps.apple"] {
 .mat-drawer-container {
   background-color: transparent;
 }
-.app-container > * {
+.app-container {
   background-color: #fafafa;
 }
 .app-container {
