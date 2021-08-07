@@ -9,8 +9,9 @@ import {
   TemplateRef
 } from '@angular/core';
 import { trigger, style, animate, transition } from '@angular/animations';
-
-import { formatLabel, PlacementTypes, StyleTypes } from 'node_modules/@swimlane/ngx-charts/public-api';
+import { formatLabel } from '@swimlane/ngx-charts/lib/common/label.helper';
+import { PlacementTypes } from '@swimlane/ngx-charts/lib/common/tooltip/position';
+import { StyleTypes } from '@swimlane/ngx-charts/lib/common/tooltip/style.type';
 
 @Component({
   // tslint:disable-next-line: component-selector
@@ -138,6 +139,8 @@ export class BubbleSeriesInteractiveComponent implements OnChanges {
             isActive,
             transform: `translate(${cx},${cy})`
           };
+        } else {
+          return undefined;
         }
       })
       .filter(circle => circle !== undefined);
@@ -166,7 +169,7 @@ export class BubbleSeriesInteractiveComponent implements OnChanges {
         <label>${yAxisLabel}</label> ${y}
       </span>
       <span class="tooltip-val">
-        ${radiusValue}
+        ${radiusValue} mkmk
       </span>
     `;
   }

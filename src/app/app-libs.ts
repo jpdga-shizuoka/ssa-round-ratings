@@ -55,7 +55,7 @@ export function calcRoundStat(rounds: RoundInfo[]): RoundInfo[] {
 
 function calcDifficulty(round: RoundInfo): number | undefined {
   if (!round.hla || !round.ssa) {
-    return;
+    return undefined;
   }
   return Math.round(round.ssa / round.hla * 100) / 10;
 }
