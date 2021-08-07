@@ -1,28 +1,6 @@
 import { RoundInfo } from '../remote.service';
-
-export interface BuubleDataItem {
-  name: string;
-  x: number;
-  y: number;
-  r: number;
-}
-
-export interface BubbleData {
-  name: string;
-  series: BuubleDataItem[];
-}
-
-export interface BubbleDataResult {
-  hla: {
-    min: number;
-    max: number;
-  },
-  ssa: {
-    min: number;
-    max: number;
-  },
-  data: BubbleData[];
-}
+import { LocalizeService } from '../localize.service';
+import { ChartData, ChartDataResult } from './ngx-charts.interfaces';
 
 function floor(value: number, offset: number) {
   return Math.floor(value / offset) * offset;
@@ -32,10 +10,10 @@ function ceil(value: number, offset: number) {
   return Math.ceil(value / offset) * offset;
 }
 
-function rounds2data(rounds: RoundInfo[]): BubbleData[] {
+function rounds2data(rounds: RoundInfo[], localize: LocalizeService): ChartData[] {
   return rounds.map(round => {
     return {
-      name: round.eventTitle,
+      name: localize.transform(round.eventTitle),
       series: [
         {
           name: round.round,
@@ -48,7 +26,7 @@ function rounds2data(rounds: RoundInfo[]): BubbleData[] {
   });
 }
 
-export function rounds2result(rounds: RoundInfo[]): BubbleDataResult {
+export function rounds2result(rounds: RoundInfo[], localize: LocalizeService): ChartDataResult {
   const hla = {
     min: Number.MAX_VALUE,
     max: Number.MIN_VALUE
@@ -57,12 +35,14 @@ export function rounds2result(rounds: RoundInfo[]): BubbleDataResult {
     min: Number.MAX_VALUE,
     max: Number.MIN_VALUE
   };
-  const data = rounds2data(rounds);
+  const data = rounds2data(rounds, localize);
   data.forEach(element => {
-    hla.min = Math.min(hla.min, element.series[0].x);
-    hla.max = Math.max(hla.max, element.series[0].x);
-    ssa.min = Math.min(ssa.min, element.series[0].y);
-    ssa.max = Math.max(ssa.max, element.series[0].y);
+    if (typeof element.series !== 'string') {
+      hla.min = Math.min(hla.min, element.series[0].x);
+      hla.max = Math.max(hla.max, element.series[0].x);
+      ssa.min = Math.min(ssa.min, element.series[0].y);
+      ssa.max = Math.max(ssa.max, element.series[0].y);
+    }
   });
   return {
     hla: {

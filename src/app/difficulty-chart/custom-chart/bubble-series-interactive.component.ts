@@ -9,7 +9,8 @@ import {
   TemplateRef
 } from '@angular/core';
 import { trigger, style, animate, transition } from '@angular/animations';
-import { formatLabel, PlacementTypes, StyleTypes } from '@swimlane/ngx-charts';
+import { formatLabel, PlacementTypes, StyleTypes, ColorHelper } from '@swimlane/ngx-charts';
+import { Circle, ChartData, ChartDataItem } from '../ngx-charts.interfaces';
 
 @Component({
   // tslint:disable-next-line: component-selector
@@ -58,13 +59,13 @@ import { formatLabel, PlacementTypes, StyleTypes } from '@swimlane/ngx-charts';
   ]
 })
 export class BubbleSeriesInteractiveComponent implements OnChanges {
-  @Input() data;
+  @Input() data: ChartData;
   @Input() xScale;
   @Input() yScale;
   @Input() rScale;
   @Input() xScaleType;
   @Input() yScaleType;
-  @Input() colors;
+  @Input() colors: ColorHelper;
   @Input() visibleValue;
   @Input() activeEntries: any[];
   @Input() xAxisLabel: string;
@@ -77,7 +78,7 @@ export class BubbleSeriesInteractiveComponent implements OnChanges {
   @Output() deactivate = new EventEmitter();
 
   areaPath: any;
-  circles: any[];
+  circles: Circle[];
 
   placementTypes = PlacementTypes;
   styleTypes = StyleTypes;
@@ -90,94 +91,35 @@ export class BubbleSeriesInteractiveComponent implements OnChanges {
     this.circles = this.getCircles();
   }
 
-  getCircles(): any[] {
-    const seriesName = this.data.name;
-
+  getCircles(): Circle[] {
+    if (typeof this.data.series === 'string') {
+      return [];
+    }
     return this.data.series
-      .map((d, i) => {
-        if (typeof d.y !== 'undefined' && typeof d.x !== 'undefined') {
-          const y = d.y;
-          const x = d.x;
-          const r = d.r;
-
-          const radius = this.rScale(r || 1);
-          const tooltipLabel = formatLabel(d.name);
-
-          const cx = this.xScaleType === 'linear' ? this.xScale(Number(x)) : this.xScale(x);
-          const cy = this.yScaleType === 'linear' ? this.yScale(Number(y)) : this.yScale(y);
-
-          const color = this.colors.scaleType === 'linear' ? this.colors.getColor(r) : this.colors.getColor(seriesName);
-
-          const isActive = !this.activeEntries.length ? true : this.isActive({ name: seriesName });
-          const opacity = isActive ? 1 : 0.3;
-
-          const data = {
-            series: seriesName,
-            name: d.name,
-            value: d.y,
-            x: d.x,
-            radius: d.r
-          };
-
-          return {
-            data,
-            x,
-            y,
-            r,
-            classNames: [`circle-data-${i}`],
-            value: y,
-            label: x,
-            cx,
-            cy,
-            radius,
-            tooltipLabel,
-            color,
-            opacity,
-            seriesName,
-            isActive,
-            transform: `translate(${cx},${cy})`
-          };
-        } else {
-          return undefined;
-        }
-      })
-      .filter(circle => circle !== undefined);
+      .filter(item => item.x != null   && item.y != null)
+      .map((d, i) => this.items2circles(d, i));
   }
 
-  getTooltipText(circle): string {
-    const hasRadius = typeof circle.r !== 'undefined';
-    const hasTooltipLabel = circle.tooltipLabel && circle.tooltipLabel.length;
-    const hasSeriesName = circle.seriesName && circle.seriesName.length;
-
-    const radiusValue = hasRadius ? formatLabel(circle.r) : '';
-    const xAxisLabel = this.xAxisLabel && this.xAxisLabel !== '' ? `${this.xAxisLabel}:` : '';
-    const yAxisLabel = this.yAxisLabel && this.yAxisLabel !== '' ? `${this.yAxisLabel}:` : '';
-    const x = formatLabel(circle.x);
-    const y = formatLabel(circle.y);
-    const name =
-      hasSeriesName && hasTooltipLabel
-        ? `${circle.seriesName} • ${circle.tooltipLabel}`
-        : circle.seriesName + circle.tooltipLabel;
-    const tooltipTitle = hasSeriesName || hasTooltipLabel ? `<span class="tooltip-label">${name}</span>` : '';
-
+  getTooltipText(circle: Circle): string {
     return `
-      ${tooltipTitle}
       <span class="tooltip-label">
-        <label>${xAxisLabel}</label> ${x}<br />
-        <label>${yAxisLabel}</label> ${y}
+        <label>${circle.seriesName}</label><br />
+        <label>${circle.tooltipLabel}</label>
       </span>
-      <span class="tooltip-val">
-        ${radiusValue}
+      <span class="tooltip-label">
+        <label>${this.xAxisLabel}:</label> ${circle.x}<br />
+        <label>${this.yAxisLabel}:</label> ${circle.y.toFixed(1)}<br />
+        <label>TD:</label> ${circle.r.toFixed(2)}
       </span>
     `;
   }
 
-  onClickBubble(eventOnSeriesCircleSelect, circleObj): void {
+  onClickBubble(value: string, circleObj: Circle): void {
     const event = circleObj.data;
     this.select.emit(event);
   }
 
-  isActive(entry): boolean {
+  isActive(entry: {name: string}): boolean {
     if (!this.activeEntries) return false;
     const item = this.activeEntries.find(d => {
       return entry.name === d.name;
@@ -185,7 +127,7 @@ export class BubbleSeriesInteractiveComponent implements OnChanges {
     return item !== undefined;
   }
 
-  isVisible(circle): boolean {
+  isVisible(circle: Circle): boolean {
     if (this.activeEntries.length > 0) {
       return this.isActive({ name: circle.seriesName });
     }
@@ -193,17 +135,62 @@ export class BubbleSeriesInteractiveComponent implements OnChanges {
     return circle.opacity !== 0;
   }
 
-  activateCircle(circle): void {
+  activateCircle(circle: Circle): void {
     circle.barVisible = true;
     this.activate.emit({ name: this.data.name });
   }
 
-  deactivateCircle(circle): void {
+  deactivateCircle(circle: Circle): void {
     circle.barVisible = false;
     this.deactivate.emit({ name: this.data.name });
   }
 
-  trackBy(index, circle): string {
+  trackBy(index: number, circle: Circle): string {
     return `${circle.data.series} ${circle.data.name}`;
+  }
+
+  private items2circles(d: ChartDataItem, i: number): Circle {
+    const seriesName = this.data.name;
+    const y = d.y;
+    const x = d.x;
+    const r = d.r;
+
+    const radius = this.rScale(r || 1);
+    const tooltipLabel = formatLabel(d.name);
+
+    const cx = this.xScaleType === 'linear' ? this.xScale(Number(x)) : this.xScale(x);
+    const cy = this.yScaleType === 'linear' ? this.yScale(Number(y)) : this.yScale(y);
+
+    const color = this.colors.scaleType === 'linear' ? this.colors.getColor(r) : this.colors.getColor(seriesName);
+
+    const isActive = !this.activeEntries.length ? true : this.isActive({ name: seriesName });
+    const opacity = isActive ? 1 : 0.3;
+
+    const data: ChartData = {
+      series: seriesName,
+      name: d.name,
+      value: d.y,
+      x: d.x,
+      radius: d.r
+    };
+
+    return {
+      data,
+      x,
+      y,
+      r,
+      classNames: [`circle-data-${i}`],
+      value: y,
+      label: x,
+      cx,
+      cy,
+      radius,
+      tooltipLabel,
+      color,
+      opacity,
+      seriesName,
+      isActive,
+      transform: `translate(${cx},${cy})`
+    };
   }
 }

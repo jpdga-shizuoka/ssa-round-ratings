@@ -22,6 +22,7 @@ import {
   calculateViewDimensions,
   ScaleType
 } from '@swimlane/ngx-charts';
+import { Circle, ChartData, ChartDataItem } from '../ngx-charts.interfaces';
 
 @Component({
   // tslint:disable-next-line: component-selector
@@ -242,7 +243,10 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
     this.legendLabelClick.emit(eventOnLegendLabelSelect);
   }
 
-  onClickSeries(eventOnBubbleSeriesCircleSelect, seriesObj) {
+  onClickSeries(eventOnBubbleSeriesCircleSelect: ChartData, seriesObj: ChartData) {
+    if (typeof seriesObj.series === 'string') {
+      return;
+    }
     // bubbles up from the series circle item select event
     const bubbleObj = seriesObj.series.find(b => b.name === eventOnBubbleSeriesCircleSelect.name);
     const eventOnBubbleSeriesSelect = {

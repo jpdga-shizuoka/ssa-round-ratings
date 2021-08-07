@@ -4,7 +4,8 @@ import { map, first } from 'rxjs/operators';
 import { RemoteService } from '../remote.service';
 import { LocalizeService } from '../localize.service';
 import { calcRoundStat } from '../app-libs';
-import { BubbleData, rounds2result } from './difficulty-chart.lib';
+import { rounds2result } from './difficulty-chart.lib';
+import { ChartData } from './ngx-charts.interfaces';
 
 @Component({
   selector: 'app-difficulty-chart',
@@ -12,7 +13,7 @@ import { BubbleData, rounds2result } from './difficulty-chart.lib';
   styleUrls: ['./difficulty-chart.component.css']
 })
 export class DifficultyChartComponent implements OnInit {
-  rounds?: BubbleData[];
+  rounds?: ChartData[];
   showXAxis = true;
   showYAxis = true;
   showLegend = false;
@@ -37,7 +38,7 @@ export class DifficultyChartComponent implements OnInit {
       map(rounds => rounds.filter(round => round.hla != null && round.hla)),
       map(rounds => calcRoundStat(rounds)),
       map(rounds => rounds.filter(round => round.ssa != null)),
-      map(rounds => rounds2result(rounds))
+      map(rounds => rounds2result(rounds, this.localize))
     ).subscribe(result => {
       this.xScaleMin = result.hla.min;
       this.xScaleMax = result.hla.max;
