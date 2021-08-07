@@ -27,6 +27,7 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { AppComponent } from './app.component';
 import { ReloadComponent } from './app-reload';
@@ -52,14 +53,15 @@ import { PrefaceComponent } from './preface/preface.component';
 import { IcalenderComponent } from './icalendar/icalendar.component';
 import { DifficultyChartComponent } from './difficulty-chart/difficulty-chart.component';
 import { TermsComponent } from './terms/terms.component';
+import { BubbleChartInteractiveComponent } from './difficulty-chart/custom-chart/bubble-chart-interactive.component';
+import { BubbleSeriesInteractiveComponent } from './difficulty-chart/custom-chart/bubble-series-interactive.component';
+
 import { SchedulePipe } from './schedule.pipe';
 import { GeolinkPipe } from './geolink.pipe';
 import { LocalizePipe } from './localize.pipe';
 import { PeriodPipe } from './period.pipe';
 import { LocationPipe } from './location.pipe';
 import { EventPipe } from './event.pipe';
-
-import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [
@@ -86,6 +88,8 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     PrefaceComponent,
     IcalenderComponent,
     DifficultyChartComponent,
+    BubbleChartInteractiveComponent,
+    BubbleSeriesInteractiveComponent,
     SchedulePipe,
     GeolinkPipe,
     LocalizePipe,
