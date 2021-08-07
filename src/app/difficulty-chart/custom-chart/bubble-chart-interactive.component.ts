@@ -11,16 +11,17 @@ import {
 } from '@angular/core';
 import { trigger, style, animate, transition } from '@angular/animations';
 import { scaleLinear } from 'd3-scale';
-import { getDomain, getScale } from '@swimlane/ngx-charts/lib/bubble-chart/bubble-chart.utils';
-import { getScaleType } from '@swimlane/ngx-charts/lib/common/domain.helper';
-import { id } from '@swimlane/ngx-charts/lib/utils/id';
 import {
+  getDomain,
+  getScale,
+  getScaleType,
+  id,
   ViewDimensions,
   ColorHelper,
   BaseChartComponent,
   calculateViewDimensions,
   ScaleType
-} from '@swimlane/ngx-charts/public-api';
+} from '@swimlane/ngx-charts';
 
 @Component({
   // tslint:disable-next-line: component-selector
