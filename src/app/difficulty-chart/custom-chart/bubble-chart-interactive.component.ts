@@ -22,7 +22,7 @@ import {
   calculateViewDimensions,
   ScaleType
 } from '@swimlane/ngx-charts';
-import { ChartDataExt } from '../ngx-charts.interfaces';
+import { ChartDataExt, EventId, Entry } from '../ngx-charts.interfaces';
 
 @Component({
   // tslint:disable-next-line: component-selector
@@ -95,6 +95,7 @@ import { ChartDataExt } from '../ngx-charts.interfaces';
               [colors]="colors"
               [data]="series"
               [activeEntries]="activeEntries"
+              [eventId]="eventId"
               [tooltipDisabled]="tooltipDisabled"
               [tooltipTemplate]="tooltipTemplate"
               (select)="onClickSeries($event, series)"
@@ -150,6 +151,7 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
   @Input() xScaleMax: any;
   @Input() yScaleMin: any;
   @Input() yScaleMax: any;
+  @Input() eventId?: EventId;
 
   @Output() legendLabelClick: EventEmitter<any> = new EventEmitter();
   @Output() activate: EventEmitter<any> = new EventEmitter();
@@ -185,7 +187,7 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
   xAxisHeight: number = 0;
   yAxisWidth: number = 0;
 
-  activeEntries: any[] = [];
+  activeEntries: Entry[] = [];
 
   update(): void {
     const results = this.results;
@@ -207,7 +209,7 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
       legendType: this.schemeType
     });
 
-    this.seriesDomain = this.data.map(d => d.name);
+    this.seriesDomain = this.data?.map(d => d.name);
     this.rDomain = this.getRDomain();
     this.xDomain = this.getXDomain();
     this.yDomain = this.getYDomain();
@@ -390,7 +392,7 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
     this.update();
   }
 
-  onActivate(item): void {
+  onActivate(item: Entry): void {
     const idx = this.activeEntries.findIndex(d => {
       return d.name === item.name;
     });
@@ -402,7 +404,7 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
     this.activate.emit({ value: item, entries: this.activeEntries });
   }
 
-  onDeactivate(item): void {
+  onDeactivate(item: Entry): void {
     const idx = this.activeEntries.findIndex(d => {
       return d.name === item.name;
     });
@@ -421,7 +423,7 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
     this.activeEntries = [];
   }
 
-  trackBy(index, item): string {
+  trackBy(index: number, item: Entry): string {
     return `${item.name}`;
   }
 }

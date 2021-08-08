@@ -10,7 +10,7 @@ import {
 } from '@angular/core';
 import { trigger, style, animate, transition } from '@angular/animations';
 import { formatLabel, PlacementTypes, StyleTypes, ColorHelper } from '@swimlane/ngx-charts';
-import { Circle, ChartDataExt, ChartDataItem, EventId } from '../ngx-charts.interfaces';
+import { Circle, ChartDataExt, ChartDataItem, EventId, Entry } from '../ngx-charts.interfaces';
 
 @Component({
   // tslint:disable-next-line: component-selector
@@ -67,11 +67,12 @@ export class BubbleSeriesInteractiveComponent implements OnChanges {
   @Input() yScaleType;
   @Input() colors: ColorHelper;
   @Input() visibleValue;
-  @Input() activeEntries: any[];
+  @Input() activeEntries: Entry[];
   @Input() xAxisLabel: string;
   @Input() yAxisLabel: string;
   @Input() tooltipDisabled: boolean = false;
   @Input() tooltipTemplate?: TemplateRef<any>;
+  @Input() eventId?: EventId;
 
   @Output() select = new EventEmitter();
   @Output() activate = new EventEmitter();
@@ -119,8 +120,10 @@ export class BubbleSeriesInteractiveComponent implements OnChanges {
     this.select.emit(event);
   }
 
-  isActive(entry: {name: string}): boolean {
-    if (!this.activeEntries) return false;
+  isActive(entry: Entry): boolean {
+    if (!this.activeEntries) {
+      return false;
+    }
     const item = this.activeEntries.find(d => {
       return entry.name === d.name;
     });
@@ -131,7 +134,6 @@ export class BubbleSeriesInteractiveComponent implements OnChanges {
     if (this.activeEntries.length > 0) {
       return this.isActive({ name: circle.seriesName });
     }
-
     return circle.opacity !== 0;
   }
 
@@ -161,10 +163,9 @@ export class BubbleSeriesInteractiveComponent implements OnChanges {
     const cx = this.xScaleType === 'linear' ? this.xScale(Number(x)) : this.xScale(x);
     const cy = this.yScaleType === 'linear' ? this.yScale(Number(y)) : this.yScale(y);
 
-    const color = this.colors.scaleType === 'linear' ? this.colors.getColor(r) : this.colors.getColor(seriesName);
-
+    const color = this.getColor(r, seriesName, eventId);
     const isActive = !this.activeEntries.length ? true : this.isActive({ name: seriesName });
-    const opacity = isActive ? 1 : 0.3;
+    const opacity = this.getOpacity(isActive);
 
     const data: ChartDataExt = {
       eventId,
@@ -193,5 +194,23 @@ export class BubbleSeriesInteractiveComponent implements OnChanges {
       isActive,
       transform: `translate(${cx},${cy})`
     };
+  }
+
+  private getOpacity(active: boolean) {
+    if (this.eventId) {
+      return 1;
+    } else {
+      return active ? 1 : 0.3;
+    }
+  }
+
+  private getColor(r: number, name: string, eventId: EventId): string {
+    if (this.eventId) {
+      return this.eventId === eventId ? 'red' : 'gray';      
+    } else if (this.colors.scaleType === 'linear') {
+      return this.colors.getColor(r);
+    } else {
+      return this.colors.getColor(name);
+    }
   }
 }

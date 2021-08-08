@@ -58,3 +58,7 @@ export interface Circle {
   isActive: boolean;
   transform: string;
 }
+
+export interface Entry {
+  name: string;
+}
