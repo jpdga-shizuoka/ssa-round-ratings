@@ -1,6 +1,6 @@
 import { RoundInfo } from '../remote.service';
 import { LocalizeService } from '../localize.service';
-import { ChartData, ChartDataResult } from './ngx-charts.interfaces';
+import { ChartDataExt, ChartDataResult } from './ngx-charts.interfaces';
 
 function floor(value: number, offset: number) {
   return Math.floor(value / offset) * offset;
@@ -10,7 +10,7 @@ function ceil(value: number, offset: number) {
   return Math.ceil(value / offset) * offset;
 }
 
-function rounds2data(rounds: RoundInfo[], localize: LocalizeService): ChartData[] {
+function rounds2data(rounds: RoundInfo[], localize: LocalizeService): ChartDataExt[] {
   return rounds.map(round => {
     return {
       name: localize.transform(round.eventTitle),
@@ -21,7 +21,8 @@ function rounds2data(rounds: RoundInfo[], localize: LocalizeService): ChartData[
           y: round.ssa!,
           r: round.difficulty!
         }
-      ]
+      ],
+      eventId: round.event
     };
   });
 }

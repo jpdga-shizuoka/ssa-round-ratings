@@ -6,7 +6,7 @@
         <td>{{'Course' | localize}}:</td>
         <td class="info-container">
           <a href="{{location$ | async | geolink}}" target="_blank" rel="noopener">
-            {{(location$ | async).title | localize}}, {{(location$ | async).prefecture | localize}}
+            {{(location$ | async)?.title | localize}}, {{(location$ | async)?.prefecture | localize}}
           </a>
           <a href="{{layout}}" target="_blank" rel="noopener" *ngIf="layout">
             {{"Caddie book" | localize}}

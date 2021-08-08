@@ -1,3 +1,7 @@
+import { EventId } from '../models';
+
+export { EventId };
+
 export interface ChartDataItem {
   name: string;
   x: number;
@@ -13,6 +17,15 @@ export interface ChartData {
   radius?: number;
 }
 
+export interface ChartDataExt extends ChartData {
+  eventId?: EventId;
+}
+
+export interface BubbleData {
+  bubble: ChartDataItem;
+  series: ChartDataExt;
+}
+
 export interface ChartDataResult {
   hla: {
     min: number;
@@ -22,7 +35,7 @@ export interface ChartDataResult {
     min: number;
     max: number;
   },
-  data: ChartData[];
+  data: ChartDataExt[];
 }
 
 export interface Circle {
@@ -31,7 +44,7 @@ export interface Circle {
   x: number;
   y: number;
   r: number;
-  data: ChartData;
+  data: ChartDataExt;
   opacity: number;
   barVisible?: boolean;
   classNames: string[];

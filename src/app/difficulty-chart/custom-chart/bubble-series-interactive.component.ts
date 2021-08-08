@@ -10,7 +10,7 @@ import {
 } from '@angular/core';
 import { trigger, style, animate, transition } from '@angular/animations';
 import { formatLabel, PlacementTypes, StyleTypes, ColorHelper } from '@swimlane/ngx-charts';
-import { Circle, ChartData, ChartDataItem } from '../ngx-charts.interfaces';
+import { Circle, ChartDataExt, ChartDataItem, EventId } from '../ngx-charts.interfaces';
 
 @Component({
   // tslint:disable-next-line: component-selector
@@ -59,7 +59,7 @@ import { Circle, ChartData, ChartDataItem } from '../ngx-charts.interfaces';
   ]
 })
 export class BubbleSeriesInteractiveComponent implements OnChanges {
-  @Input() data: ChartData;
+  @Input() data: ChartDataExt;
   @Input() xScale;
   @Input() yScale;
   @Input() rScale;
@@ -97,7 +97,7 @@ export class BubbleSeriesInteractiveComponent implements OnChanges {
     }
     return this.data.series
       .filter(item => item.x != null   && item.y != null)
-      .map((d, i) => this.items2circles(d, i));
+      .map((d, i) => this.items2circles(d, i, this.data.eventId));
   }
 
   getTooltipText(circle: Circle): string {
@@ -149,7 +149,7 @@ export class BubbleSeriesInteractiveComponent implements OnChanges {
     return `${circle.data.series} ${circle.data.name}`;
   }
 
-  private items2circles(d: ChartDataItem, i: number): Circle {
+  private items2circles(d: ChartDataItem, i: number, eventId: EventId): Circle {
     const seriesName = this.data.name;
     const y = d.y;
     const x = d.x;
@@ -166,7 +166,8 @@ export class BubbleSeriesInteractiveComponent implements OnChanges {
     const isActive = !this.activeEntries.length ? true : this.isActive({ name: seriesName });
     const opacity = isActive ? 1 : 0.3;
 
-    const data: ChartData = {
+    const data: ChartDataExt = {
+      eventId,
       series: seriesName,
       name: d.name,
       value: d.y,

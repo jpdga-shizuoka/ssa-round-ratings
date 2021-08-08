@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { map, first } from 'rxjs/operators';
 
 import { RemoteService } from '../remote.service';
 import { LocalizeService } from '../localize.service';
 import { calcRoundStat } from '../app-libs';
 import { rounds2result } from './difficulty-chart.lib';
-import { ChartData } from './ngx-charts.interfaces';
+import { ChartDataExt, BubbleData } from './ngx-charts.interfaces';
 
 @Component({
   selector: 'app-difficulty-chart',
@@ -13,7 +14,7 @@ import { ChartData } from './ngx-charts.interfaces';
   styleUrls: ['./difficulty-chart.component.css']
 })
 export class DifficultyChartComponent implements OnInit {
-  rounds?: ChartData[];
+  rounds?: ChartDataExt[];
   showXAxis = true;
   showYAxis = true;
   showLegend = false;
@@ -27,8 +28,9 @@ export class DifficultyChartComponent implements OnInit {
   yScaleMax?: number;
 
   constructor(
-    private readonly localize: LocalizeService,
-    private readonly remote: RemoteService
+    private router: Router,
+    private localize: LocalizeService,
+    private remote: RemoteService
   ) {
   }
 
@@ -46,5 +48,10 @@ export class DifficultyChartComponent implements OnInit {
       this.yScaleMax = result.ssa.max;
       this.rounds = result.data;
     });
+  }
+
+  onClickItem(event: BubbleData): void {
+    console.log('onClickItem', event);
+    this.router.navigate(['/event', event.series.eventId]);
   }
 }

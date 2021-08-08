@@ -22,7 +22,7 @@ import {
   calculateViewDimensions,
   ScaleType
 } from '@swimlane/ngx-charts';
-import { Circle, ChartData, ChartDataItem } from '../ngx-charts.interfaces';
+import { ChartDataExt } from '../ngx-charts.interfaces';
 
 @Component({
   // tslint:disable-next-line: component-selector
@@ -162,7 +162,7 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
   scaleType = 'linear';
   margin = [10, 20, 10, 20];
   bubblePadding = [0, 0, 0, 0];
-  data: any;
+  data: ChartDataExt[];
 
   legendOptions: any;
   transform: string;
@@ -170,7 +170,7 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
   clipPath: string;
   clipPathId: string;
 
-  seriesDomain: any[];
+  seriesDomain: string[];
   xDomain: any[];
   yDomain: any[];
   rDomain: number[];
@@ -188,7 +188,10 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
   activeEntries: any[] = [];
 
   update(): void {
+    const results = this.results;
     super.update();
+    this.results = results;
+    this.data = this.results;
 
     this.dims = calculateViewDimensions({
       width: this.width,
@@ -204,7 +207,7 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
       legendType: this.schemeType
     });
 
-    this.seriesDomain = this.results.map(d => d.name);
+    this.seriesDomain = this.data.map(d => d.name);
     this.rDomain = this.getRDomain();
     this.xDomain = this.getXDomain();
     this.yDomain = this.getYDomain();
@@ -213,8 +216,6 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
 
     const colorDomain = this.schemeType === ScaleType.Ordinal ? this.seriesDomain : this.rDomain;
     this.colors = new ColorHelper(this.scheme, this.schemeType, colorDomain, this.customColors);
-
-    this.data = this.results;
 
     this.minRadius = Math.max(this.minRadius, 1);
     this.maxRadius = Math.max(this.maxRadius, 1);
@@ -243,7 +244,7 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
     this.legendLabelClick.emit(eventOnLegendLabelSelect);
   }
 
-  onClickSeries(eventOnBubbleSeriesCircleSelect: ChartData, seriesObj: ChartData) {
+  onClickSeries(eventOnBubbleSeriesCircleSelect: ChartDataExt, seriesObj: ChartDataExt) {
     if (typeof seriesObj.series === 'string') {
       return;
     }
@@ -263,6 +264,9 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
     let xMax = this.dims.width;
 
     for (const s of this.data) {
+      if (typeof s.series === 'string') {
+        continue;
+      }
       for (const d of s.series) {
         const r = this.rScale(d.r);
         const cx = this.xScaleType === ScaleType.Linear ? this.xScale(Number(d.x)) : this.xScale(d.x);
