@@ -2,11 +2,11 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { Observable, of as observableOf, Subscription } from 'rxjs';
-import { catchError, tap, map } from 'rxjs/operators';
+import { catchError, tap, map, first } from 'rxjs/operators';
 
 import {
   EventInfo, RoundInfo, LocationInfo, EventCategory, VideoInfo, TotalYearPlayers, Players,
-  EventId, LocationId
+  EventId, LocationId, RoundId
 } from './models';
 export {
   EventInfo, RoundInfo, LocationInfo, EventCategory, VideoInfo, TotalYearPlayers,
@@ -63,6 +63,11 @@ class CTotalYearPlayers {
   }
 }
 
+function filterByList(rounds: RoundInfo[], list?: RoundId[]): RoundInfo[] {
+  console.log(list)
+  return list ? rounds.filter(round => list.includes(round.id)) : rounds;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -101,10 +106,12 @@ export class RemoteService {
     );
   }
 
-  getRounds(): Observable<RoundInfo[]> {
+  getRounds(roundList?: RoundId[]): Observable<RoundInfo[]> {
     return this.http
       .get<RoundInfo[]>('assets/models/rounds.json', { responseType: 'json' })
       .pipe(
+        first(),
+        map(rounds => filterByList(rounds, roundList)),
         tap(rounds => rounds.forEach(
           round => { round.event$ = this.getEvent(round.event, 'past'); })),
         map(rounds => {

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { first, tap } from 'rxjs/operators';
 
 import { RemoteService, EventId, EventInfo, LocationInfo } from '../remote.service';
 import { getEventTitle, getLayout, makePdgaInfo, makeJpdgaInfo, makeMiscInfo, makeVideoInfo } from '../app-libs';
 import { MiscInfo } from '../app-common';
+import { RoundId } from '../models';
 
 @Component({
   selector: 'app-event',
@@ -15,6 +16,7 @@ import { MiscInfo } from '../app-common';
 export class EventComponent {
   eventId?: EventId;
   event?: EventInfo;
+  roundList$ = new Subject<RoundId[]>();
   location$?: Observable<LocationInfo>;
   pdgaInfo: MiscInfo[] = [];
   jpdgaInfo: MiscInfo[] = [];
@@ -37,7 +39,11 @@ export class EventComponent {
             this.miscInfo = makeMiscInfo(event);
             this.videoInfo = makeVideoInfo(event);
           })
-        ).subscribe(event => { this.event = event; });
+        ).subscribe(event => {
+          this.event = event;
+          this.roundList$.next(event.rounds);
+          this.roundList$.complete();
+        });
       }
     });
   }

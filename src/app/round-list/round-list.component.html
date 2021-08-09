@@ -1,0 +1,27 @@
+<div class="mat-elevation-z1">
+  <table mat-table class="full-width-table" matSort aria-label="Elements">
+
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Round</th>
+      <td mat-cell *matCellDef="let row">{{row.round}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="hla">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>HLA</th>
+      <td mat-cell *matCellDef="let row">{{row.hla}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="ssa">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>SSA</th>
+      <td mat-cell *matCellDef="let row">{{row.ssa | number: '1.1-1'}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="td">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>TD</th>
+      <td mat-cell *matCellDef="let row">{{row.difficulty}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
