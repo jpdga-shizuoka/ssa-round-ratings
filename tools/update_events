@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = './src/assets/models/';
+const roundsName = 'rounds.json';
+const eventsName = 'events.json';
+
+const rounds = JSON.parse(fs.readFileSync(path + roundsName, 'utf8'));
+const events = JSON.parse(fs.readFileSync(path + eventsName, 'utf8'));
+
+function lookup(eventId) {
+  return rounds.filter(round => round.event === eventId).map(round => round.id);
+}
+
+events.forEach(event => {
+  const ids = lookup(event.id);
+  if (ids.length) {
+    event.rounds = ids;
+  }
+});
+
+fs.writeFileSync(path + eventsName, JSON.stringify(events, null, '  '));

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
-const path = '../src/assets/model/';
+const path = '../src/assets/models/';
 const roundsName = 'rounds.json';
 const rounds = JSON.parse(fs.readFileSync(path + roundsName, 'utf8'));
 const events = JSON.parse(fs.readFileSync(path + 'events.json', 'utf8'));

@@ -55,6 +55,7 @@ export interface EventInfo {
   schedule?: Schedule;
   players?: Players;
   layout?: string;
+  rounds?: RoundId[];
 }
 
 export interface VideoInfo {
