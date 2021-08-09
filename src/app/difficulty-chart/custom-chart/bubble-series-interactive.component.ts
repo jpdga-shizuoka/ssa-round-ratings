@@ -9,7 +9,8 @@ import {
   TemplateRef
 } from '@angular/core';
 import { trigger, style, animate, transition } from '@angular/animations';
-import { formatLabel, PlacementTypes, StyleTypes, ColorHelper } from '@swimlane/ngx-charts';
+import { formatLabel, PlacementTypes, StyleTypes, ColorHelper, ScaleType } from '@swimlane/ngx-charts';
+import { ScaleLinear } from 'd3-scale';
 import { Circle, ChartDataExt, ChartDataItem, EventId, Entry } from '../ngx-charts.interfaces';
 
 @Component({
@@ -59,17 +60,17 @@ import { Circle, ChartDataExt, ChartDataItem, EventId, Entry } from '../ngx-char
   ]
 })
 export class BubbleSeriesInteractiveComponent implements OnChanges {
-  @Input() data: ChartDataExt;
-  @Input() xScale;
-  @Input() yScale;
-  @Input() rScale;
-  @Input() xScaleType;
-  @Input() yScaleType;
-  @Input() colors: ColorHelper;
-  @Input() visibleValue;
-  @Input() activeEntries: Entry[];
-  @Input() xAxisLabel: string;
-  @Input() yAxisLabel: string;
+  @Input() data!: ChartDataExt;
+  @Input() xScale!: ScaleLinear<number, number, never>;
+  @Input() yScale!: ScaleLinear<number, number, never>;
+  @Input() rScale!: ScaleLinear<number, number, never>;
+  @Input() xScaleType = ScaleType.Linear;
+  @Input() yScaleType = ScaleType.Linear;
+  @Input() colors!: ColorHelper;
+  @Input() visibleValue?: number;
+  @Input() activeEntries: Entry[] = [];
+  @Input() xAxisLabel?: string;
+  @Input() yAxisLabel?: string;
   @Input() tooltipDisabled: boolean = false;
   @Input() tooltipTemplate?: TemplateRef<any>;
   @Input() eventId?: EventId;
@@ -79,7 +80,7 @@ export class BubbleSeriesInteractiveComponent implements OnChanges {
   @Output() deactivate = new EventEmitter();
 
   areaPath: any;
-  circles: Circle[];
+  circles: Circle[] = [];
 
   placementTypes = PlacementTypes;
   styleTypes = StyleTypes;
@@ -93,9 +94,6 @@ export class BubbleSeriesInteractiveComponent implements OnChanges {
   }
 
   getCircles(): Circle[] {
-    if (typeof this.data.series === 'string') {
-      return [];
-    }
     return this.data.series
       .filter(item => item.x != null   && item.y != null)
       .map((d, i) => this.items2circles(d, i, this.data.eventId));
@@ -121,9 +119,6 @@ export class BubbleSeriesInteractiveComponent implements OnChanges {
   }
 
   isActive(entry: Entry): boolean {
-    if (!this.activeEntries) {
-      return false;
-    }
     const item = this.activeEntries.find(d => {
       return entry.name === d.name;
     });
@@ -151,7 +146,7 @@ export class BubbleSeriesInteractiveComponent implements OnChanges {
     return `${circle.data.series} ${circle.data.name}`;
   }
 
-  private items2circles(d: ChartDataItem, i: number, eventId: EventId): Circle {
+  private items2circles(d: ChartDataItem, i: number, eventId?: EventId): Circle {
     const seriesName = this.data.name;
     const y = d.y;
     const x = d.x;
@@ -160,16 +155,22 @@ export class BubbleSeriesInteractiveComponent implements OnChanges {
     const radius = this.rScale(r || 1);
     const tooltipLabel = formatLabel(d.name);
 
-    const cx = this.xScaleType === 'linear' ? this.xScale(Number(x)) : this.xScale(x);
-    const cy = this.yScaleType === 'linear' ? this.yScale(Number(y)) : this.yScale(y);
+    const cx = this.xScaleType === ScaleType.Linear ? this.xScale(Number(x)) : this.xScale(x);
+    const cy = this.yScaleType === ScaleType.Linear ? this.yScale(Number(y)) : this.yScale(y);
 
     const color = this.getColor(r, seriesName, eventId);
     const isActive = !this.activeEntries.length ? true : this.isActive({ name: seriesName });
     const opacity = this.getOpacity(isActive);
+    const series = [{
+      name: seriesName,
+      x,
+      y,
+      r
+    }];
 
     const data: ChartDataExt = {
       eventId,
-      series: seriesName,
+      series,
       name: d.name,
       value: d.y,
       x: d.x,
@@ -204,10 +205,10 @@ export class BubbleSeriesInteractiveComponent implements OnChanges {
     }
   }
 
-  private getColor(r: number, name: string, eventId: EventId): string {
+  private getColor(r: number, name: string, eventId?: EventId): string {
     if (this.eventId) {
-      return this.eventId === eventId ? 'red' : 'gray';      
-    } else if (this.colors.scaleType === 'linear') {
+      return this.eventId === eventId ? 'red' : 'gray';
+    } else if (this.colors.scaleType === ScaleType.Linear) {
       return this.colors.getColor(r);
     } else {
       return this.colors.getColor(name);

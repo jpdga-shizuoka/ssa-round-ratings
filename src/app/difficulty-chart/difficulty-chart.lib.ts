@@ -38,12 +38,10 @@ export function rounds2result(rounds: RoundInfo[], localize: LocalizeService): C
   };
   const data = rounds2data(rounds, localize);
   data.forEach(element => {
-    if (typeof element.series !== 'string') {
-      hla.min = Math.min(hla.min, element.series[0].x);
-      hla.max = Math.max(hla.max, element.series[0].x);
-      ssa.min = Math.min(ssa.min, element.series[0].y);
-      ssa.max = Math.max(ssa.max, element.series[0].y);
-    }
+    hla.min = Math.min(hla.min, element.series[0].x);
+    hla.max = Math.max(hla.max, element.series[0].x);
+    ssa.min = Math.min(ssa.min, element.series[0].y);
+    ssa.max = Math.max(ssa.max, element.series[0].y);
   });
   return {
     hla: {

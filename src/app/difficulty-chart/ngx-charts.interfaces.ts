@@ -11,7 +11,7 @@ export interface ChartDataItem {
 
 export interface ChartData {
   name: string;
-  series: ChartDataItem[] | string;
+  series: ChartDataItem[];
   value?: number;
   x?: number;
   radius?: number;

@@ -10,12 +10,14 @@ import {
   TemplateRef
 } from '@angular/core';
 import { trigger, style, animate, transition } from '@angular/animations';
-import { scaleLinear } from 'd3-scale';
+import { scaleLinear, ScaleLinear } from 'd3-scale';
 import {
   getDomain,
   getScale,
   getScaleType,
   id,
+  LegendOptions,
+  LegendPosition,
   ViewDimensions,
   ColorHelper,
   BaseChartComponent,
@@ -145,7 +147,7 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
   @Input() minRadius = 3;
   @Input() autoScale: boolean = true;
   @Input() schemeType: ScaleType = ScaleType.Ordinal;
-  @Input() legendPosition: string = 'right';
+  @Input() legendPosition = LegendPosition.Right;
   @Input() tooltipDisabled: boolean = false;
   @Input() xScaleMin: any;
   @Input() xScaleMax: any;
@@ -159,30 +161,30 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
 
   @ContentChild('tooltipTemplate') tooltipTemplate?: TemplateRef<any>;
 
-  dims?: ViewDimensions;
-  colors: ColorHelper;
+  dims: ViewDimensions = { width: 0, height: 0};
+  colors?: ColorHelper;
   scaleType = 'linear';
   margin = [10, 20, 10, 20];
   bubblePadding = [0, 0, 0, 0];
-  data: ChartDataExt[];
+  data?: ChartDataExt[];
 
-  legendOptions: any;
-  transform: string;
+  legendOptions?: LegendOptions;
+  transform?: string;
 
-  clipPath: string;
-  clipPathId: string;
+  clipPath?: string;
+  clipPathId?: string;
 
-  seriesDomain: string[];
-  xDomain: any[];
-  yDomain: any[];
-  rDomain: number[];
+  seriesDomain: string[] = [];
+  xDomain: number[] = [];
+  yDomain: number[] = [];
+  rDomain: number[] = [];
 
-  xScaleType: ScaleType;
-  yScaleType: ScaleType;
+  xScaleType: ScaleType = ScaleType.Linear;
+  yScaleType: ScaleType = ScaleType.Linear;
 
-  yScale: any;
-  xScale: any;
-  rScale: any;
+  yScale?: ScaleLinear<number, number, never>;
+  xScale?: ScaleLinear<number, number, never>;
+  rScale?: ScaleLinear<number, number, never>;
 
   xAxisHeight: number = 0;
   yAxisWidth: number = 0;
@@ -209,7 +211,7 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
       legendType: this.schemeType
     });
 
-    this.seriesDomain = this.data?.map(d => d.name);
+    this.seriesDomain = this.data?.length ? this.data.map(d => d.name) : this.seriesDomain;
     this.rDomain = this.getRDomain();
     this.xDomain = this.getXDomain();
     this.yDomain = this.getYDomain();
@@ -241,15 +243,12 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
     this.deactivateAll();
   }
 
-  onClickLabel(eventOnLegendSeriesLabelSelect) {
+  onClickLabel(eventOnLegendSeriesLabelSelect: string) {
     const eventOnLegendLabelSelect = { name: eventOnLegendSeriesLabelSelect };
     this.legendLabelClick.emit(eventOnLegendLabelSelect);
   }
 
   onClickSeries(eventOnBubbleSeriesCircleSelect: ChartDataExt, seriesObj: ChartDataExt) {
-    if (typeof seriesObj.series === 'string') {
-      return;
-    }
     // bubbles up from the series circle item select event
     const bubbleObj = seriesObj.series.find(b => b.name === eventOnBubbleSeriesCircleSelect.name);
     const eventOnBubbleSeriesSelect = {
@@ -265,10 +264,10 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
     let yMax = this.dims.height;
     let xMax = this.dims.width;
 
+    if(!this.data || !this.rScale || !this.xScale || !this.yScale) {
+      return [0, 0, 0, 0];
+    }
     for (const s of this.data) {
-      if (typeof s.series === 'string') {
-        continue;
-      }
       for (const d of s.series) {
         const r = this.rScale(d.r);
         const cx = this.xScaleType === ScaleType.Linear ? this.xScale(Number(d.x)) : this.xScale(d.x);
@@ -302,43 +301,38 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
     this.yScale = this.getYScale(this.yDomain, height);
   }
 
-  getYScale(domain, height: number): any {
+  getYScale(domain: number[], height: number): any {
     return getScale(domain, [height, this.bubblePadding[0]], this.yScaleType, this.roundDomains);
   }
 
-  getXScale(domain, width: number): any {
+  getXScale(domain: number[], width: number): any {
     return getScale(domain, [this.bubblePadding[3], width], this.xScaleType, this.roundDomains);
   }
 
-  getRScale(domain, range): any {
+  getRScale(domain: number[], range: number[]): any {
     const scale = scaleLinear().range(range).domain(domain);
 
     return this.roundDomains ? scale.nice() : scale;
   }
 
-  getLegendOptions(): any {
-    const opts = {
-      scaleType: this.schemeType as any,
-      colors: undefined,
-      domain: [],
-      position: this.legendPosition,
-      title: undefined
-    };
-
-    if (opts.scaleType === ScaleType.Ordinal) {
-      opts.domain = this.seriesDomain;
-      opts.colors = this.colors;
-      opts.title = this.legendTitle;
-    } else {
-      opts.domain = this.rDomain;
-      opts.colors = this.colors.scale;
-    }
-
-    return opts;
+  getLegendOptions(): LegendOptions {
+    return this.schemeType === ScaleType.Ordinal ? {
+        scaleType: this.schemeType,
+        colors: this.colors,
+        domain: this.seriesDomain ?? [],
+        position: this.legendPosition,
+        title: this.legendTitle
+      } : {
+        scaleType: this.schemeType,
+        colors: this.colors?.scale,
+        domain: this.rDomain ?? [],
+        position: this.legendPosition,
+        title: ''
+      };
   }
 
-  getXDomain(): any[] {
-    const values = [];
+  getXDomain(): number[] {
+    const values: number[] = [];
 
     for (const results of this.results) {
       for (const d of results.series) {
@@ -352,11 +346,11 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
     return getDomain(values, this.xScaleType, this.autoScale, this.xScaleMin, this.xScaleMax);
   }
 
-  getYDomain(): any[] {
-    const values = [];
+  getYDomain(): number[] {
+    const values: number[] = [];
 
-    for (const results of this.results) {
-      for (const d of results.series) {
+    for (const result of this.results) {
+      for (const d of result.series) {
         if (!values.includes(d.y)) {
           values.push(d.y);
         }
@@ -382,13 +376,13 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
     return [min, max];
   }
 
-  updateYAxisWidth({ width }): void {
-    this.yAxisWidth = width;
+  updateYAxisWidth(event: { width: number }): void {
+    this.yAxisWidth = event.width;
     this.update();
   }
 
-  updateXAxisHeight({ height }): void {
-    this.xAxisHeight = height;
+  updateXAxisHeight(event: { height: number }): void {
+    this.xAxisHeight = event.height;
     this.update();
   }
 
