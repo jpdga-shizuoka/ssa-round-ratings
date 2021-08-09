@@ -78,8 +78,10 @@
       </tr>
     </tbody>
   </table>
+  <h2>{{'Round Stat:' | localize}}</h2>
   <app-round-list [list$]="roundList$">
   </app-round-list>
+  <h2>{{'Difficulty Chart:' | localize}}</h2>
   <app-difficulty-chart
     [tooltipDisabled]="true"
     [eventId]="eventId">
