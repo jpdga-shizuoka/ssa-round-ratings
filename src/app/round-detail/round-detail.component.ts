@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { first } from 'rxjs/operators';
 import { getEventTitle, getLayout, makePdgaInfo, makeJpdgaInfo, makeMiscInfo, makeVideoInfo } from '../app-libs';
 import { RemoteService, RoundInfo, EventInfo, LocationInfo, LocationId } from '../remote.service';
@@ -20,7 +21,7 @@ export class RoundDetailComponent implements OnInit {
   score?: number;
 
   private event?: EventInfo;
-  location?: LocationInfo;
+  location$?: Observable<LocationInfo>;
   pdgaInfo: MiscInfo[] = [];
   jpdgaInfo: MiscInfo[] = [];
   miscInfo: MiscInfo[] = [];
@@ -36,7 +37,7 @@ export class RoundDetailComponent implements OnInit {
       .pipe(first())
       .subscribe(event => {
         this.event = event;
-        this.getLocation(event.location);
+        this.location$ = this.remote.getLocation(event.location);
         this.pdgaInfo = makePdgaInfo(event);
         this.jpdgaInfo = makeJpdgaInfo(event);
         this.miscInfo = makeMiscInfo(event);
@@ -74,12 +75,6 @@ export class RoundDetailComponent implements OnInit {
 
   get layout(): string | undefined {
     return getLayout(this.event?.layout);
-  }
-
-  private getLocation(id: LocationId) {
-    this.remote.getLocation(id)
-      .pipe(first())
-      .subscribe(location => { this.location = location; });
   }
 
   onRatingChanged(): void {

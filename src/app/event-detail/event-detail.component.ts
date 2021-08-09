@@ -13,7 +13,7 @@ import { getEventTitle, getLayout, makePdgaInfo, makeJpdgaInfo, makeMiscInfo } f
 })
 export class EventDetailComponent implements OnInit {
   @Input() event!: EventInfo;
-  location?: LocationInfo;
+  location$?: Observable<LocationInfo>;
   miscInfo: MiscInfo[] = [];
   pdgaInfo: MiscInfo[] = [];
   jpdgaInfo: MiscInfo[] = [];
@@ -30,8 +30,7 @@ export class EventDetailComponent implements OnInit {
     if (!this.event) {
       throw new Error('[event] is required');
     }
-    this.remote.getLocation(this.event.location)
-      .subscribe(location => { this.location = location; });
+    this.location$ = this.remote.getLocation(this.event.location);
     this.pdgaInfo = makePdgaInfo(this.event);
     this.jpdgaInfo = makeJpdgaInfo(this.event);
     this.miscInfo = makeMiscInfo(this.event);

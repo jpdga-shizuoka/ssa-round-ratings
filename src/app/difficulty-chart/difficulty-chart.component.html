@@ -1,5 +1,5 @@
 <div class="chart">
-  <ngx-charts-bubble-chart
+  <ngx-charts-bubble-chart-interactive
     [view]="[630, 480]"
     [results]="rounds"
     [xAxis]="showXAxis"
@@ -12,6 +12,9 @@
     [xScaleMin]="xScaleMin"
     [xScaleMax]="xScaleMax"
     [yScaleMin]="yScaleMin"
-    [yScaleMax]="yScaleMax">
-  </ngx-charts-bubble-chart>
+    [yScaleMax]="yScaleMax"
+    [eventId]="eventId"
+    [tooltipDisabled]="tooltipDisabled"
+    (select)="onClickItem($event)">
+  </ngx-charts-bubble-chart-interactive>
 </div>

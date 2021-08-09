@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { map, first } from 'rxjs/operators';
 
 import { RemoteService } from '../remote.service';
 import { LocalizeService } from '../localize.service';
 import { calcRoundStat } from '../app-libs';
-import { BubbleData, rounds2result } from './difficulty-chart.lib';
+import { rounds2result } from './difficulty-chart.lib';
+import { ChartDataExt, BubbleData, EventId } from './ngx-charts.interfaces';
 
 @Component({
   selector: 'app-difficulty-chart',
@@ -12,7 +14,10 @@ import { BubbleData, rounds2result } from './difficulty-chart.lib';
   styleUrls: ['./difficulty-chart.component.css']
 })
 export class DifficultyChartComponent implements OnInit {
-  rounds?: BubbleData[];
+  @Input() eventId?: EventId;
+  @Input() tooltipDisabled = false;
+
+  rounds?: ChartDataExt[];
   showXAxis = true;
   showYAxis = true;
   showLegend = false;
@@ -26,8 +31,9 @@ export class DifficultyChartComponent implements OnInit {
   yScaleMax?: number;
 
   constructor(
-    private readonly localize: LocalizeService,
-    private readonly remote: RemoteService
+    private router: Router,
+    private localize: LocalizeService,
+    private remote: RemoteService
   ) {
   }
 
@@ -37,7 +43,7 @@ export class DifficultyChartComponent implements OnInit {
       map(rounds => rounds.filter(round => round.hla != null && round.hla)),
       map(rounds => calcRoundStat(rounds)),
       map(rounds => rounds.filter(round => round.ssa != null)),
-      map(rounds => rounds2result(rounds))
+      map(rounds => rounds2result(rounds, this.localize))
     ).subscribe(result => {
       this.xScaleMin = result.hla.min;
       this.xScaleMax = result.hla.max;
@@ -45,5 +51,11 @@ export class DifficultyChartComponent implements OnInit {
       this.yScaleMax = result.ssa.max;
       this.rounds = result.data;
     });
+  }
+
+  onClickItem(event: BubbleData): void {
+    if (!this.eventId) {
+      this.router.navigate(['/event', event.series.eventId]);
+    }
   }
 }
