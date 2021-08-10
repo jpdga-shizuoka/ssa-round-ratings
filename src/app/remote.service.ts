@@ -64,7 +64,6 @@ class CTotalYearPlayers {
 }
 
 function filterByList(rounds: RoundInfo[], list?: RoundId[]): RoundInfo[] {
-  console.log(list)
   return list ? rounds.filter(round => list.includes(round.id)) : rounds;
 }
 

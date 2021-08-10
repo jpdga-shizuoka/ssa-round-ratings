@@ -8,6 +8,7 @@ import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+import { ScriptLoaderService } from '../script-loader.service';
 import { VideoBottomsheetComponent } from '../dialogs/video-bottomsheet.component';
 import { VideoInfo } from '../models';
 import { isHandset } from '../ng-utilities';
@@ -42,6 +43,7 @@ export class VideosTableComponent implements OnInit, AfterViewInit {
   }
 
   constructor(
+    private scriptLoader: ScriptLoaderService,
     private bottomSheet: MatBottomSheet,
     private readonly remote: RemoteService,
     private readonly localize: LocalizeService,
@@ -58,12 +60,7 @@ export class VideosTableComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.dataSource
       = new VideosDataSource(this.remote, this.localize, this.limit, this.keyword);
-
-    // This code loads the IFrame Player API code asynchronously, according to the instructions at
-    // https://developers.google.com/youtube/iframe_api_reference#Getting_Started
-    const tag = document.createElement('script');
-    tag.src = 'https://www.youtube.com/iframe_api';
-    document.body.appendChild(tag);
+    this.scriptLoader.youtube();
   }
 
   ngAfterViewInit(): void {

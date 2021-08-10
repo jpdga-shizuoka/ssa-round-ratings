@@ -10,4 +10,5 @@ export interface MiscInfo {
   icon: string;
   title: string;
   url: string;
+  date?: Date;
 }

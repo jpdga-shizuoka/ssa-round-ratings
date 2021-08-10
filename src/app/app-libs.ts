@@ -121,6 +121,7 @@ export function makeVideoInfo(event: EventInfo): MiscInfo[] {
       info.push({
         icon: ICONS[urlInfo.type],
         title: urlInfo.title,
+        date: new Date(event.period?.from ?? 0),
         url: urlInfo.url
       });
     }
