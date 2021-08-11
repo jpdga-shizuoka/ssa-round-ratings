@@ -11,7 +11,7 @@ import { BottomSheetDetailDisabledComponent } from '../dialogs/bottom-sheet-deta
 import { RemoteService, RoundInfo } from '../remote.service';
 import { RoundsDataSource } from './rounds-datasource';
 import { LocalizeService } from '../localize.service';
-import { getEventTitle } from '../app-libs';
+import { getEventTitle } from '../libs';
 
 interface ExpandedRow {
   canceled: boolean;

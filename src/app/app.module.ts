@@ -57,6 +57,7 @@ import { BubbleChartInteractiveComponent } from './difficulty-chart/custom-chart
 import { BubbleSeriesInteractiveComponent } from './difficulty-chart/custom-chart/bubble-series-interactive.component';
 import { RoundListComponent } from './round-list/round-list.component';
 import { VideoListComponent } from './video-list/video-list.component';
+import { EventListComponent } from './event-list/event-list.component';
 
 import { SchedulePipe } from './schedule.pipe';
 import { GeolinkPipe } from './geolink.pipe';
@@ -94,12 +95,13 @@ import { EventPipe } from './event.pipe';
     BubbleSeriesInteractiveComponent,
     RoundListComponent,
     VideoListComponent,
+    EventListComponent,
     SchedulePipe,
     GeolinkPipe,
     LocalizePipe,
     PeriodPipe,
     LocationPipe,
-    EventPipe,
+    EventPipe
   ],
   imports: [
     BrowserModule,

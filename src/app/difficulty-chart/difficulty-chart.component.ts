@@ -4,7 +4,7 @@ import { map, first } from 'rxjs/operators';
 
 import { RemoteService } from '../remote.service';
 import { LocalizeService } from '../localize.service';
-import { calcRoundStat } from '../app-libs';
+import { calcRoundStat } from '../libs';
 import { rounds2result } from './difficulty-chart.lib';
 import { ChartDataExt, BubbleData, EventId } from './ngx-charts.interfaces';
 

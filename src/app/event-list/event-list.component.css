@@ -1,0 +1,9 @@
+table {
+  width: 100%;
+}
+tr:hover {
+  background: whitesmoke;
+}
+tr:active {
+  background: #efefef;
+}

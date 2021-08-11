@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { name2key, event2key } from './libs/event.lib';
 
 import { environment } from '../environments/environment';
 import EVENT from '../assets/local/event-aliase-dictionary.json';
@@ -10,7 +11,6 @@ export type Language = 'global' | 'local';
 export const GLOBAL = 'global' as Language;
 export const LOCAL = 'local' as Language;
 
-const REMOVE_PATERN = /[ \-.,()]/g;
 type Dictionary = { [string: string]: string; };
 const DICTIONARIES = [
   EVENT as Dictionary,
@@ -19,11 +19,6 @@ const DICTIONARIES = [
   PREFECTURE as Dictionary
 ];
 export type LocalizationCategory = 'event' | 'location' | 'menu' | 'prefecture';
-
-interface EventParts {
-  count?: number;
-  key: string;
-}
 
 interface LocalizeTable {
   aliase2title?: (count: number, aliase: string) => string;
@@ -125,38 +120,4 @@ function event2local(eventName: string): string {
     return eventName;
   }
   return LOCALIZE_TABLE.aliase2title(parts.count, aliase);
-}
-
-function name2key(name: string): string {
-  return name.trim().toLowerCase().replace(REMOVE_PATERN, '');
-}
-
-function event2key(name?: string): EventParts | undefined {
-  if (!name) {
-    return undefined;
-  }
-  const n = name.trim().toLowerCase();
-  const eventName = /the (\d+)(st|nd|rd|th|) (.+)/;
-  const altEventName = /the (.+)/;
-
-  let results = eventName.exec(n);
-  if (results == null) {
-    results = altEventName.exec(n);
-    if (results == null) {
-      return undefined;
-    }
-    if (results.length !== 2) {
-      return undefined;
-    }
-    return {
-      count: undefined,
-      key: results[1].replace(REMOVE_PATERN, '')
-    };
-  } else if (results.length !== 4) {
-    return undefined;
-  }
-  return {
-    count: parseInt(results[1], 10),
-    key: results[3].replace(REMOVE_PATERN, '')
-  };
 }

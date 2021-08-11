@@ -54,15 +54,6 @@
           </div>
         </td>
       </tr>
-
-      <tr>
-        <td>{{'History' | localize}}:</td>
-        <td>
-          <a routerLink="/past" [queryParams]="{search: title}" class="detail-link">
-            {{'See the Past Results' | localize}}
-          </a>
-        </td>
-      </tr>
     </tbody>
   </table>
 
@@ -75,6 +66,9 @@
     <app-video-list [list]="videoInfo">
     </app-video-list>
   </div>
+
+  <h2>{{'History' | localize}}</h2>
+  <app-event-list [key$]="event$"></app-event-list>
 
   <h2>{{'Difficulty Chart:' | localize}}</h2>
     <app-difficulty-chart [tooltipDisabled]="true" [eventId]="eventId">

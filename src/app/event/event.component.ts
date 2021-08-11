@@ -4,7 +4,7 @@ import { Observable, Subject } from 'rxjs';
 import { first, tap } from 'rxjs/operators';
 
 import { RemoteService, EventId, EventInfo, LocationInfo } from '../remote.service';
-import { getEventTitle, getLayout, makePdgaInfo, makeJpdgaInfo, makeMiscInfo, makeVideoInfo } from '../app-libs';
+import { getLayout, makePdgaInfo, makeJpdgaInfo, makeMiscInfo, makeVideoInfo } from '../libs';
 import { MiscInfo } from '../app-common';
 import { RoundId } from '../models';
 
@@ -16,6 +16,7 @@ import { RoundId } from '../models';
 export class EventComponent {
   eventId?: EventId;
   event?: EventInfo;
+  event$ = new Subject<EventInfo>();
   roundList$ = new Subject<RoundId[]>();
   location$?: Observable<LocationInfo>;
   pdgaInfo: MiscInfo[] = [];
@@ -41,15 +42,13 @@ export class EventComponent {
           })
         ).subscribe(event => {
           this.event = event;
+          this.event$.next(event);
+          // this.event$.complete();
           this.roundList$.next(event.rounds);
-          this.roundList$.complete();
+          // this.roundList$.complete();
         });
       }
     });
-  }
-
-  get title(): string {
-    return this.event?.title ? getEventTitle(this.event.title) : '';
   }
 
   get layout(): string | undefined {

@@ -4,7 +4,7 @@ import { map } from 'rxjs/operators';
 
 import { RoundId, RoundInfo } from '../models';
 import { RemoteService } from '../remote.service';
-import { calcRoundStat } from '../app-libs';
+import { calcRoundStat } from '../libs';
 
 /**
  * Data source for the RoundList view. This class should
