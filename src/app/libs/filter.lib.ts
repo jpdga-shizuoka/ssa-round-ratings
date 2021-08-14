@@ -3,6 +3,7 @@ import {
 } from '../models';
 
 const CATEGORY2FILE = {
+  alltime: 'events',
   upcoming: 'events',
   past: 'events',
   video: 'events',
@@ -48,7 +49,7 @@ export function compareTime(t1: Date, category: EventCategory) {
 }
 
 export function upcomingFilter(events: EventInfo[], category: EventCategory): EventInfo[] {
-  if (category === 'monthly') {
+  if (category === 'monthly' || category === 'alltime') {
     return events;
   }
   // if (category !== 'upcoming' && category !== 'local') {

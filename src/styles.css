@@ -58,9 +58,6 @@ a[href^="http://maps.apple"] {
 .app-container {
   background-color: #fafafa;
 }
-.app-container {
-  margin-top: 6px;
-}
 .spinner {
   width: 100vw;
   height: 100vh;

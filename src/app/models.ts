@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
 
-export type EventCategory = 'upcoming' | 'past' | 'local' | 'monthly' | 'video';
+export type EventCategory = 'alltime' | 'upcoming' | 'past' | 'local' | 'monthly' | 'video';
 export type EventId = string;
 export type RoundId = string;
 export type LocationId = string;

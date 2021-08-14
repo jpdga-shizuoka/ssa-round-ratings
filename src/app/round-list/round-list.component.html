@@ -6,6 +6,11 @@
       <td mat-cell *matCellDef="let row">{{row.round}}</td>
     </ng-container>
 
+    <ng-container matColumnDef="holes">
+      <th mat-header-cell *matHeaderCellDef>Holes</th>
+      <td mat-cell *matCellDef="let row">{{row.holes}}</td>
+    </ng-container>
+
     <ng-container matColumnDef="hla">
       <th mat-header-cell *matHeaderCellDef>HLA</th>
       <td mat-cell *matCellDef="let row">{{row.hla}}</td>

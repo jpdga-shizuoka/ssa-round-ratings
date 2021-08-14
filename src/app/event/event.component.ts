@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
-import { first, tap } from 'rxjs/operators';
+import { first, tap, map } from 'rxjs/operators';
 
 import { RemoteService, EventId, EventInfo, LocationInfo } from '../remote.service';
 import { getLayout, makePdgaInfo, makeJpdgaInfo, makeMiscInfo, makeVideoInfo } from '../libs';
@@ -13,7 +13,7 @@ import { RoundId } from '../models';
   templateUrl: './event.component.html',
   styleUrls: ['./event.component.css']
 })
-export class EventComponent {
+export class EventComponent implements OnInit {
   eventId?: EventId;
   event?: EventInfo;
   event$ = new Subject<EventInfo>();
@@ -25,13 +25,16 @@ export class EventComponent {
   videoInfo: MiscInfo[] = [];
 
   constructor(
-    route: ActivatedRoute,
+    private route: ActivatedRoute,
     private remote: RemoteService
   ) {
-    route.params.subscribe(params => {
+  }
+
+  ngOnInit(): void {
+    this.route.params.subscribe(params => {
       this.eventId = params.eventId as EventId;
       if (this.eventId) {
-        remote.getEvent(this.eventId, 'past').pipe(
+        this.remote.getEvent(this.eventId, 'alltime').pipe(
           first(),
           tap(event => {
             this.location$ = this.remote.getLocation(event.location).pipe(first());
@@ -53,5 +56,24 @@ export class EventComponent {
 
   get layout(): string | undefined {
     return getLayout(this.event?.layout);
+  }
+
+  get totalPlayers(): number {
+    if (this.event?.players) {
+      return this.event.players.pro
+        + this.event.players.ama
+        + this.event.players.misc;
+    }
+    return 0;
+  }
+
+  get showRoundsStat(): number | undefined {
+    return this.event?.rounds?.length;
+  }
+
+  get showDifficultyChart$(): Observable<boolean> {
+    return this.roundList$.pipe(
+      map(list => list?.length > 0)
+    )
   }
 }

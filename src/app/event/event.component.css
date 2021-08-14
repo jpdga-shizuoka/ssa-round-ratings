@@ -4,3 +4,16 @@ h1 {
 h2 {
   font-size: 0.9rem;
 }
+h1, h2 {
+  padding: 1rem 1.5rem;
+  margin: 0;
+}
+table {
+  width: 100%;
+}
+tr.element-row:hover {
+  background: whitesmoke;
+}
+tr.element-row:active {
+  background: #efefef;
+}

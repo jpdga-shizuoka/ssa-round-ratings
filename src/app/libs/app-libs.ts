@@ -150,6 +150,22 @@ export function makePdgaInfo(event: EventInfo): MiscInfo[] {
 
 export function makeJpdgaInfo(event: EventInfo): MiscInfo[] {
   const info: MiscInfo[] = [];
+  if (isPastEvent(event)) {
+    if (event.jpdga?.eventId) {
+      info.push({
+        icon: 'public',
+        title: 'Results',
+        url: getJpdgaResult(event.jpdga.eventId)
+      });
+    }
+    if (event.jpdga?.topicId) {
+      info.push({
+        icon: 'public',
+        title: 'Report',
+        url: getJpdgaReport(event.jpdga.topicId)
+      });
+    }
+  }
   if (event.jpdga?.eventId) {
     info.push({
       icon: 'public',
@@ -158,4 +174,10 @@ export function makeJpdgaInfo(event: EventInfo): MiscInfo[] {
     });
   }
   return info;
+}
+
+export function isPastEvent(event: EventInfo): boolean {
+  const eventDate = new Date(event.period?.to ?? 0);
+  const nowDate = new Date();
+  return eventDate.getTime() < nowDate.getTime();
 }

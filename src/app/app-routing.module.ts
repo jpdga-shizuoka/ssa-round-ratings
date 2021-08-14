@@ -36,8 +36,8 @@ const routes: Routes = [
     data: {
       metaDescription: {
         title: 'DG Japan - Disc Golf Event',
-        subtitle: 'Disc Golf Event',
-        description: '',
+        subtitle: 'Event',
+        description: 'event information',
         keywords: 'disc golf,official events,japan'
       }
     }

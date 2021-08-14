@@ -63,7 +63,7 @@ export class RemoteService {
       .get<RoundInfo[]>('assets/models/rounds.json', { responseType: 'json' })
       .pipe(
         first(),
-        map(rounds => filterByList(rounds, roundList)),
+        map(rounds => roundList ? filterByList(rounds, roundList) : rounds),
         tap(rounds => rounds.forEach(
           round => { round.event$ = this.getEvent(round.event, 'past'); })),
         map(rounds => {

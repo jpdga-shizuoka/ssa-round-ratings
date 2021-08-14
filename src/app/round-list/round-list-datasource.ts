@@ -1,5 +1,5 @@
 import { DataSource } from '@angular/cdk/collections';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { RoundId, RoundInfo } from '../models';
@@ -26,9 +26,14 @@ export class RoundListDataSource extends DataSource<RoundInfo> {
    * @returns A stream of the items to be rendered.
    */
   connect(): Observable<RoundInfo[]> {
-    return this.remote.getRounds(this.list).pipe(
-      map(rounds => calcRoundStat(rounds))
-    );
+    if (this.list) {
+      return this.remote.getRounds(this.list).pipe(
+        map(rounds => calcRoundStat(rounds))
+      );
+    } else {
+      const list: RoundInfo[] = [];
+      return of(list);
+    }
   }
 
   /**

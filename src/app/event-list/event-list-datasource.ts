@@ -25,7 +25,7 @@ export class EventListDataSource extends DataSource<EventInfo> {
    * @returns A stream of the items to be rendered.
    */
   connect(): Observable<EventInfo[]> {
-    return this.remote.getEvents('past', this.filter());
+    return this.remote.getEvents('alltime', this.filter());
   }
 
   /**

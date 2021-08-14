@@ -38,6 +38,9 @@ function isPeriod(x: Period | string): x is Period {
   if (typeof x === 'string') {
     return false;
   }
+  if (x == null || typeof x !== 'object') {
+    return false;
+  }
   return 'from' in x && 'to' in x;
 }
 
