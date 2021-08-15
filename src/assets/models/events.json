@@ -4109,14 +4109,19 @@
     "id": "the1stoyamaopen"
   },
   {
-    "title": "The 4th Hokkaido Open",
+    "title": "The 3rd Hokkaido Open",
     "location": "hunkawanpanolamapark",
     "period": {
       "from": "2014-06-28",
       "to": "2014-06-29"
     },
+    "players": {
+      "pro": 6,
+      "ama": 26,
+      "misc": 0
+    },
     "jpdga": {
-      "eventId": "322"
+      "eventId": "300"
     },
     "urls": [
       {
@@ -4125,9 +4130,9 @@
         "url": "https://youtu.be/uqXRbIhdWhs"
       }
     ],
-    "id": "the4thhokkaidoopen",
+    "id": "the3rdhokkaidoopen",
     "rounds": [
-      "the4thhokkaidoopen.rd1rd2"
+      "the3rdhokkaidoopen.rd1rd2"
     ]
   },
   {
