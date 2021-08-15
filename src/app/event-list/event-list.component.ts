@@ -33,4 +33,8 @@ export class EventListComponent implements OnInit {
   onRawClicked(event: EventInfo): void {
     this.router.navigate(['/event', event.id]);
   }
+
+  isCanceled(event: EventInfo): boolean {
+    return event.status === 'CANCELED';
+  }
 }

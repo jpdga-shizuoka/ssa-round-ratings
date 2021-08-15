@@ -54,8 +54,6 @@ export class DifficultyChartComponent implements OnInit {
   }
 
   onClickItem(event: BubbleData): void {
-    if (!this.eventId) {
-      this.router.navigate(['/event', event.series.eventId]);
-    }
+    this.router.navigate(['/event', event.series.eventId]);
   }
 }

@@ -3,8 +3,10 @@
     <table class="mat-table mat-elevation-z1">
       <tbody>
         <tr class="element-row mat-row">
-          <td class="mat-cell">{{'Date' | localize}}:</td>
-          <td class="mat-cell">{{event?.period | period}}</td>
+          <td class="mat-cell">{{'Date' | localize}}</td>
+          <td class="mat-cell">{{event?.period | period}}
+            <span *ngIf="isCanceled" class="canceled">CANCELED</span>
+          </td>
         </tr>
 
         <tr class="element-row mat-row">
@@ -21,12 +23,12 @@
           </td>
         </tr>
 
-        <tr class="element-row mat-row" *ngIf="totalPlayers">
+        <tr class="element-row mat-row" *ngIf="totalPlayers && !isCanceled">
           <td class="mat-cell">{{'Partícipant' | localize}}</td>
           <td class="mat-cell">{{totalPlayers}}</td>
         </tr>
 
-        <tr class="element-row mat-row" *ngIf="pdgaInfo.length">
+        <tr class="element-row mat-row" *ngIf="pdgaInfo.length && !isCanceled">
           <td class="mat-cell">PDGA</td>
           <td class="mat-cell">
               <ng-template ngFor let-info [ngForOf]="pdgaInfo">
@@ -37,7 +39,7 @@
           </td>
         </tr>
     
-        <tr class="element-row mat-row" *ngIf="jpdgaInfo.length">
+        <tr class="element-row mat-row" *ngIf="jpdgaInfo.length && !isCanceled">
           <td class="mat-cell">JPDGA</td>
           <td class="mat-cell">
               <ng-template ngFor let-info [ngForOf]="jpdgaInfo">
@@ -61,7 +63,7 @@
       </tbody>
     </table>
 
-  <div>
+  <div *ngIf="!isCanceled">
     <h2>{{'Round Stat' | localize}}</h2>
     <app-round-list [list$]="roundList$">
     </app-round-list>
@@ -76,9 +78,9 @@
   <h2>{{'History' | localize}}</h2>
   <app-event-list [key$]="event$"></app-event-list>
 
-  <div *ngIf="showDifficultyChart$ | async">
+  <div *ngIf="!isCanceled">
     <h2>{{'Difficulty Chart' | localize}}</h2>
-    <app-difficulty-chart [tooltipDisabled]="true" [eventId]="eventId">
+    <app-difficulty-chart [eventId]="eventId">
     </app-difficulty-chart>
   </div>
 </div>

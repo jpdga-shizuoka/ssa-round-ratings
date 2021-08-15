@@ -7,3 +7,7 @@ tr:hover {
 tr:active {
   background: #efefef;
 }
+.canceled td {
+  color: red;
+  text-decoration: line-through;
+}

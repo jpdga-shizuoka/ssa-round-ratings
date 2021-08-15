@@ -17,3 +17,7 @@ tr.element-row:hover {
 tr.element-row:active {
   background: #efefef;
 }
+.canceled {
+  color: red;
+  font-weight: bolder;
+}

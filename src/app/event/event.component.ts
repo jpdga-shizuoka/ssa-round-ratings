@@ -76,4 +76,8 @@ export class EventComponent implements OnInit {
       map(list => list?.length > 0)
     )
   }
+
+  get isCanceled(): boolean {
+    return this.event?.status === 'CANCELED';
+  }
 }
