@@ -140,33 +140,6 @@
     "locationTitle": "Fumin-no-Mori Hiyoshi"
   },
   {
-    "event": "the16thminamisomaopen",
-    "date": "2020-05-03",
-    "round": "CANCELED",
-    "holes": 18,
-    "eventTitle": "The 16th Minamisoma Open",
-    "id": "the16thminamisomaopen.canceled",
-    "locationTitle": "Minamisoma Hose Riding Park"
-  },
-  {
-    "event": "the18thsagaopen",
-    "date": "2020-04-11",
-    "round": "CANCELED",
-    "holes": 18,
-    "eventTitle": "The 18th Saga Open",
-    "id": "the18thsagaopen.canceled",
-    "locationTitle": "Yoshinogari Historical Park"
-  },
-  {
-    "event": "the3rdmiyagimichinokuopen",
-    "round": "CANCELED",
-    "date": "2020-03-21",
-    "holes": 18,
-    "eventTitle": "The 3rd Miyagi Michinoku Open",
-    "id": "the3rdmiyagimichinokuopen.canceled",
-    "locationTitle": "Michinoku Park"
-  },
-  {
     "event": "the2020nationaldoubleschampionship",
     "round": "Rd1,Rd2,Rd3",
     "date": "2020-03-01",
@@ -622,16 +595,6 @@
     "eventTitle": "The 17th Saga Open",
     "id": "the17thsagaopen.rd1rd2rd3",
     "locationTitle": "Yoshinogari Historical Park"
-  },
-  {
-    "event": "the1stpwbfcup",
-    "round": "CANCELED",
-    "hla": 125,
-    "date": "2019-04-13",
-    "holes": 18,
-    "eventTitle": "The 1st PWBF Cup",
-    "id": "the1stpwbfcup.canceled",
-    "locationTitle": "PICA Activity Park"
   },
   {
     "event": "the2ndmiyagimichinokuopen",
