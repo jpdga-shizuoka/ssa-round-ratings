@@ -9,7 +9,7 @@ import { GeoMarker } from '../map-common';
 import { isHandset } from '../ng-utilities';
 
 const DISPLAYED_COLUMNS = [['event', 'hla', 'ssa'], ['year', 'event', 'round', 'hla', 'ssa']];
-const TABS_TITLE = ['Rounds', 'Location map'];
+const TABS_TITLE = ['Rounds', 'Location'];
 
 @Component({
   selector: 'app-rounds-tabs',
