@@ -38,6 +38,7 @@
   {
     "title": "The 21st Chubu Open",
     "location": "mikawarinkairyokuchi",
+    "status": "CANCELED",
     "period": {
       "from": "2021-12-18",
       "to": "2021-12-19"
@@ -148,6 +149,7 @@
   {
     "title": "The 21st Tohoku Open",
     "location": "mizubayashisportpark",
+    "status": "CANCELED",
     "period": {
       "from": "2021-10-09",
       "to": "2021-10-10"
@@ -159,10 +161,10 @@
   },
   {
     "title": "The 33rd Japan National Championship",
-    "location": "maikodiscgolfpark",
+    "location": "mikawarinkairyokuchi",
     "period": {
-      "from": "2021-09-19",
-      "to": "2021-09-20"
+      "from": "2021-12-18",
+      "to": "2021-12-19"
     },
     "jpdga": {
       "eventId": "573"
@@ -172,6 +174,7 @@
   {
     "title": "The 17th Minamisoma Open",
     "location": "minamisomahoseridingpark",
+    "status": "CANCELED",
     "period": {
       "from": "2021-09-18",
       "to": "2021-09-19"
@@ -227,6 +230,11 @@
     "period": {
       "from": "2021-07-11",
       "to": "2021-07-11"
+    },
+    "players": {
+      "pro": 30,
+      "ama": 57,
+      "misc": 0
     },
     "jpdga": {
       "eventId": "582"
