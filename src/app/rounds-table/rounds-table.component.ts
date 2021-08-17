@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy, Input, ViewChild, AfterViewInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { MatTable } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
@@ -11,7 +12,7 @@ import { BottomSheetDetailDisabledComponent } from '../dialogs/bottom-sheet-deta
 import { RemoteService, RoundInfo } from '../remote.service';
 import { RoundsDataSource } from './rounds-datasource';
 import { LocalizeService } from '../localize.service';
-import { getEventTitle } from '../libs';
+import { getEventTitle, title2name } from '../libs';
 
 interface ExpandedRow {
   canceled: boolean;
@@ -31,6 +32,7 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() search = '';
   @Input() showMore = false;
   @Input() limit?: number;
+  @ViewChild(MatTable) table!: MatTable<RoundInfo>;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   dataSource!: RoundsDataSource;
@@ -74,6 +76,19 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   ngAfterViewInit(): void {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
+    this.dataSource.sortingDataAccessor = (item, property) => {
+      switch(property) {
+        case 'year':
+          return item.date;
+        case 'event':
+          return title2name(item.eventTitle);
+        default: {
+          const t = item as unknown as {[ property: string ]: string | number};
+          return t[property];
+        }
+      }
+    };
+    this.table.dataSource = this.dataSource;
   }
 
   ngOnDestroy(): void {

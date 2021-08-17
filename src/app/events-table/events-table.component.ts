@@ -1,7 +1,9 @@
 import {
   Component, OnInit, OnDestroy, Input, ViewChild, AfterViewInit
 } from '@angular/core';
+import { MatTable } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 import { Observable, Subject, Subscription } from 'rxjs';
 
 import { GeoMarker } from '../map-common';
@@ -10,6 +12,7 @@ import { detailExpand } from '../animations';
 import { RemoteService } from '../remote.service';
 import { LocationService } from '../location.service';
 import { EventsDataSource, EventInfo } from './events-datasource';
+import { title2name } from '../libs';
 
 interface ExpandedRow {
   canceled: boolean;
@@ -29,7 +32,9 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() category!: EventCategory;
   @Input() showMore = false;
   @Input() limit?: number;
+  @ViewChild(MatTable) table!: MatTable<EventInfo>;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
   dataSource!: EventsDataSource;
   expandedElement?: EventInfo;
   showDetail = false;
@@ -53,7 +58,21 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
+    this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
+    this.dataSource.sortingDataAccessor = (item, property) => {
+      switch (property) {
+        case 'title':
+          return title2name(item.title);
+        case 'date':
+          return item.period?.from ?? '';
+        default: {
+          const t = item as unknown as { [property: string]: string | number };
+          return t[property];
+        }
+      }
+    };
+    this.table.dataSource = this.dataSource;
     if (this.markerSelected$) {
       this.subscription = this.markerSelected$.subscribe(
         marker => this.onMarkerSelected(this.dataSource, marker)

@@ -73,8 +73,12 @@ export function sortEvents(events: EventInfo[], category: EventCategory): EventI
       return 0;
     }
     const t1 = new Date(a.period.from);
-    const t2 = new Date(b.period.to);
-    return t1.getTime() - t2.getTime();
+    const t2 = new Date(b.period.from);
+    if (category === 'past') {
+      return t2.getTime() - t1.getTime();
+    } else {
+      return t1.getTime() - t2.getTime();
+    }
   });
   return events;
 }

@@ -1,25 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { ActivatedRoute } from '@angular/router';
 
-import { Observable, Subject } from 'rxjs';
+import { Observable, Subject, Subscription } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { GeoMarker } from '../map-common';
 import { isHandset } from '../ng-utilities';
 
-const DISPLAYED_COLUMNS = [['event', 'hla', 'ssa'], ['year', 'event', 'round', 'hla', 'ssa']];
-const TABS_TITLE = ['Rounds', 'Location'];
+const EVENT_COLUMNS = [['date', 'title'], ['date', 'title', 'location']];
+const ROUND_COLUMNS = [['event', 'hla', 'ssa'], ['year', 'event', 'round', 'hla', 'ssa']];
 
 @Component({
   selector: 'app-rounds-tabs',
   templateUrl: './rounds-tabs.component.html',
   styleUrls: ['./rounds-tabs.component.css']
 })
-export class RoundsTabsComponent implements OnInit {
+export class RoundsTabsComponent implements OnInit, OnDestroy {
   isHandset$: Observable<boolean>;
   markerSelected: Subject<GeoMarker>;
   selectedTab = 0;
+  private subscription?: Subscription;
 
   constructor(
     private route: ActivatedRoute,
@@ -30,30 +31,40 @@ export class RoundsTabsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    switch (this.route.snapshot.url[1]?.path) {
-      case 'video':
-        this.selectedTab = 1;
-        break;
-      case 'map':
-        this.selectedTab = 2;
-        break;
-      default:
-        this.selectedTab = 0;
-    }
+    this.subscription = this.route.url.subscribe(url => {
+      switch (url[1]?.path) {
+        case 'events':
+          this.selectedTab = 0;
+          break;
+        case 'rounds':
+          this.selectedTab = 1;
+          break;
+        case 'videos':
+          this.selectedTab = 2;
+          break;
+        case 'locations':
+          this.selectedTab = 3;
+          break;
+        default:
+          this.selectedTab = 0;
+      }
+    });
   }
 
-  get displayedColumns$(): Observable<string[]> {
+  ngOnDestroy(): void {
+    this.subscription?.unsubscribe();
+  }
+
+  get eventsColumns$(): Observable<string[]> {
     return this.isHandset$.pipe(
-      map(hs => DISPLAYED_COLUMNS[hs ? 0 : 1])
+      map(hs => EVENT_COLUMNS[hs ? 0 : 1])
     );
   }
 
-  get tableTitle(): string {
-    return TABS_TITLE[0];
-  }
-
-  get mapTitle(): string {
-    return TABS_TITLE[1];
+  get roundsColumns$(): Observable<string[]> {
+    return this.isHandset$.pipe(
+      map(hs => ROUND_COLUMNS[hs ? 0 : 1])
+    );
   }
 
   onMarkerSelected(marker: GeoMarker): void {

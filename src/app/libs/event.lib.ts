@@ -38,3 +38,8 @@ export function event2key(name?: string): EventParts | undefined {
     key: results[3].replace(REMOVE_PATERN, '')
   };
 }
+
+export function title2name(name?: string): string {
+  const keys = event2key(name);
+  return keys == null ? '' : keys.key;
+}

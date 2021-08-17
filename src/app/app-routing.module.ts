@@ -80,25 +80,52 @@ const routes: Routes = [
     }
   },
   {
-    path: 'past',
+    path: 'past', redirectTo: '/past/events', pathMatch: 'full'
+  },
+  {
+    path: 'past/events',
     component: RoundsTabsComponent,
     data: {
       metaDescription: {
-        title: 'DG Japan - Results',
-        subtitle: 'Results',
+        title: 'DG Japan - Event Detail',
+        subtitle: 'Event',
         description: 'Results of the official disc golf events held in Japan.',
-        keywords: 'disc golf,events,results,japan'
+        keywords: 'disc golf,events,results,japan,video'
       }
     }
   },
   {
-    path: 'past/video',
+    path: 'past/rounds',
+    component: RoundsTabsComponent,
+    data: {
+      metaDescription: {
+        title: 'DG Japan - Round Stat',
+        subtitle: 'Round Stat',
+        description: 'Results of the official disc golf events held in Japan.',
+        keywords: 'disc golf,events,results,japan,video'
+      }
+    }
+  },
+  {
+    path: 'past/videos',
     component: RoundsTabsComponent,
     data: {
       metaDescription: {
         title: 'DG Japan - Video',
-        subtitle: 'Results',
-        description: 'Video library of the official disc golf events held in Japan.',
+        subtitle: 'Video',
+        description: 'Results of the official disc golf events held in Japan.',
+        keywords: 'disc golf,events,results,japan,video'
+      }
+    }
+  },
+  {
+    path: 'past/locations',
+    component: RoundsTabsComponent,
+    data: {
+      metaDescription: {
+        title: 'DG Japan - Event Location',
+        subtitle: 'Location',
+        description: 'Results of the official disc golf events held in Japan.',
         keywords: 'disc golf,events,results,japan,video'
       }
     }
