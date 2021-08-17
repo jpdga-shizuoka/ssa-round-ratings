@@ -21,9 +21,9 @@ const DISPLAYED_COLUMNS: {
 const TABS_TITLE: {
   [string: string]: string[];
 } = {
-  upcoming: ['Official', 'Location map'],
-  local: ['Local', 'Location Map'],
-  monthly: ['Monthly', 'Location Map']
+  upcoming: ['Official', 'Location'],
+  local: ['Local', 'Location'],
+  monthly: ['Monthly', 'Location']
 };
 
 @Component({
