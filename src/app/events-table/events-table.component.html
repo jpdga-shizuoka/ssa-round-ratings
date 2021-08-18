@@ -33,7 +33,7 @@
     <ng-container matColumnDef="seemore">
       <td mat-footer-cell *matFooterCellDef colspan="3">
         <p class="more">
-          <a mat-list-item routerLink="/events/{{category}}">{{'More' | localize}}...</a>
+          <a mat-list-item routerLink="{{link}}">{{'More' | localize}}...</a>
         </p>
       </td>
     </ng-container>
@@ -41,6 +41,7 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns$ | async"></tr>
     <tr mat-row *matRowDef="let element; columns: displayedColumns$ | async;"
         class="event-element-row"
+        [ngClass]="{'canceled': isCanceled(element)}"
         (click)="onRawClicked(element)">
     </tr>
     <div *ngIf="showMore">

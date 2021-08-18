@@ -36,12 +36,23 @@
       <a routerLink="/past"><mat-icon>table_chart</mat-icon>{{'Results' | localize}}</a>
     </h4>
     <mat-tab-group class="mat-elevation-z2">
-      <mat-tab label="{{'Results' | localize}}">
+      <mat-tab label="{{'Events' | localize}}">
+        <div>
+          <app-events-table
+            [category]="'past'"
+            [showMore]="true"
+            [limit]="5"
+            [displayedColumns$]="eventsColumnsPast$">
+          </app-events-table>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="{{'Round Stats' | localize}}">
         <div>
           <app-rounds-table
             [showMore]="true"
             [limit]="5"
-            [displayedColumns$]="displayedColumnsPast$">
+            [displayedColumns$]="roundsColumnsPast$">
           </app-rounds-table>
         </div>
       </mat-tab>

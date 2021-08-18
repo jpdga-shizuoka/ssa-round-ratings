@@ -77,8 +77,18 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   get loading(): boolean { return this.dataSource?.loading ?? true; }
+
   get isMinimum(): boolean {
     return this.showMore && !!this.limit && this.limit <= this.pageSizeOptions[0];
+  }
+
+  get link(): string {
+    switch (this.category) {
+      case 'upcoming':
+        return '/events/upcoming';
+      default:
+        return '/past/events';
+    }
   }
 
   isCanceled(event: EventInfo): boolean {

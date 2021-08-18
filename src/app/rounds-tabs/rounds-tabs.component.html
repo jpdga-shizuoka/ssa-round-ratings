@@ -1,7 +1,7 @@
 <mat-tab-group class="mat-elevation-z2 app-container" dynamicHeight
   [(selectedIndex)]="selectedTab">
 
-  <mat-tab label="{{'Event' | localize}}">
+  <mat-tab label="{{'Events' | localize}}">
     <div>
       <app-events-table 
         [category]="'past'"
@@ -10,7 +10,7 @@
     </div>
   </mat-tab>
 
-  <mat-tab label="{{'Rounds' | localize}}">
+  <mat-tab label="{{'Round Stats' | localize}}">
     <div>
       <app-rounds-table
         [displayedColumns$]="roundsColumns$"
@@ -26,7 +26,7 @@
     </div>
   </mat-tab>
 
-  <mat-tab label="{{'Location' | localize}}">
+  <mat-tab label="{{'Locations' | localize}}">
     <ng-template matTabContent>
       <app-events-map category="past"
         (markerSelected)="onMarkerSelected($event)">
