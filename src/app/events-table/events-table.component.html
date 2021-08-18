@@ -38,23 +38,11 @@
       </td>
     </ng-container>
 
-    <ng-container matColumnDef="expandedDetail">
-      <td mat-cell *matCellDef="let element" [attr.colspan]="(displayedColumns$ | async)?.length">
-        <div class="event-element-detail"
-             [@detailExpand]="isDetailExpand(element) ? 'expanded' : 'collapsed'"
-             (@detailExpand.done)="showDetail = isDetailExpand(element)">
-          <app-event-detail [event]="element" *ngIf="showDetail || expandedElement">
-          </app-event-detail>
-        </div>
-      </td>
-    </ng-container>
-
     <tr mat-header-row *matHeaderRowDef="displayedColumns$ | async"></tr>
     <tr mat-row *matRowDef="let element; columns: displayedColumns$ | async;"
-        [ngClass]="getRawClass(element)"
+        class="event-element-row"
         (click)="onRawClicked(element)">
     </tr>
-    <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="event-detail-row"></tr>
     <div *ngIf="showMore">
       <tr mat-footer-row *matFooterRowDef="['seemore']">
     </div>

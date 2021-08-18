@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy, Input, ViewChild, AfterViewInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { MatTable } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
@@ -45,6 +45,7 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   private sorted = false;
 
   constructor(
+    private router: Router,
     private route: ActivatedRoute,
     private bottomSheet: MatBottomSheet,
     private readonly localize: LocalizeService,
@@ -105,7 +106,7 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
       this.bottomSheet.open(BottomSheetDetailDisabledComponent);
       return;
     }
-    this.expandedElement = this.isDetailExpand(round) ? undefined : round;
+    this.router.navigate(['/event', round.event]);
   }
 
   applyFilter(filterValue: string): void {
@@ -136,27 +137,6 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
 
   isCanceled(round: RoundInfo): boolean {
     return round.round === 'CANCELED';
-  }
-
-  isDetailExpand(round: RoundInfo): boolean {
-    if (!this.expandedElement) {
-      return false;
-    }
-    if (this.expandedElement.event !== round.event) {
-      return false;
-    }
-    if (this.expandedElement.round !== round.round) {
-      return false;
-    }
-    return true;
-  }
-
-  getRawClass(round: RoundInfo): ExpandedRow {
-    return {
-      canceled: this.isCanceled(round),
-      'round-element-row': true,
-      'round-expanded-row': this.isDetailExpand(round)
-    };
   }
 
   getLength(round: RoundInfo): string {
