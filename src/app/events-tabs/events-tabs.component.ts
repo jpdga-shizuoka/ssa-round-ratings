@@ -1,107 +1,61 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { MatBottomSheet } from '@angular/material/bottom-sheet';
-
-import { Observable, Subject } from 'rxjs';
+import { MatTabChangeEvent } from '@angular/material/tabs';
+import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { EventCategory } from '../models';
-import { GeoMarker } from '../map-common';
 import { isHandset } from '../ng-utilities';
-import { NoticeBottomsheetComponent } from '../dialogs/notice-bottomsheet.component';
-
-const DISPLAYED_COLUMNS: {
-  [string: string]: string[][];
-} = {
-  upcoming: [['date', 'title'], ['date', 'title', 'location']],
-  local: [['date', 'title'], ['date', 'title', 'location']],
-  monthly: [['location', 'day'], ['location', 'day', 'month']]
-};
-const TABS_TITLE: {
-  [string: string]: string[];
-} = {
-  upcoming: ['Official', 'Location'],
-  local: ['Local', 'Location'],
-  monthly: ['Monthly', 'Location']
-};
+import { EventCategory } from '../models';
 
 @Component({
-  selector: 'app-events-tabs',
-  templateUrl: './events-tabs.component.html',
-  styleUrls: ['./events-tabs.component.css']
+  template: ''
 })
-export class EventsTabsComponent implements AfterViewInit {
-  category: EventCategory;
+export class EventsTabsComponent implements OnInit {
   isHandset$: Observable<boolean>;
-  markerSelected: Subject<GeoMarker>;
   selectedTab: number;
+  category!: EventCategory;
+  displayedColumns!: string[][];
+  titles!: string[];
+  tabs!: string[];
 
   constructor(
     private route: ActivatedRoute,
-    private bottomsheet: MatBottomSheet,
-    breakpointObserver: BreakpointObserver
+    private location: Location,
+    private breakpointObserver: BreakpointObserver
   ) {
-    this.isHandset$ = isHandset(breakpointObserver);
-    this.markerSelected = new Subject<GeoMarker>();
+    this.isHandset$ = isHandset(this.breakpointObserver);
     this.selectedTab = 0;
-
-    if (this.route.snapshot.url.length !== 2) {
-      throw new TypeError(`unexpected path: ${this.route.snapshot.url.toString()}`);
-    }
-    this.category = this.route.snapshot.url[1].path as EventCategory;
-    if (this.category !== 'upcoming'
-    && this.category !== 'local'
-    && this.category !== 'monthly') {
-      throw new TypeError(`unexpected category: ${this.category}`);
-    }
-  }
-
-  ngAfterViewInit(): void {
-    if (this.category === 'monthly'
-    && sessionStorage.getItem('monthlyConfirmed') !== 'true') {
-      this.openNoticeBottomsheet();
-    }
   }
 
   get displayedColumns$(): Observable<string[]> {
     return this.isHandset$.pipe(
-      map(hs => DISPLAYED_COLUMNS[this.category][hs ? 0 : 1])
+      map(hs => this.displayedColumns[hs ? 0 : 1])
     );
   }
 
   get tableTitle(): string {
-    return TABS_TITLE[this.category][0];
+    return this.titles[0];
   }
 
   get mapTitle(): string {
-    return TABS_TITLE[this.category][1];
+    return this.titles[1];
   }
 
-  get title(): string {
-    let schedule = 'Schedule';
-    switch (this.category) {
-      case 'local':
-        schedule = 'Local Events';
-        break;
-      case 'monthly':
-        schedule = 'Monthly Events';
-        break;
-    }
-    return schedule;
+  ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      const tag = params.tagname as string;
+      const index = this.tabs.findIndex((value => value === tag));
+      if (index >= 0 && index < this.tabs.length) {
+        this.selectedTab = index;
+      }
+    });
   }
 
-  onMarkerSelected(marker: GeoMarker): void {
-    this.markerSelected.next(marker);
-    this.selectedTab = 0;
-  }
-
-  private openNoticeBottomsheet(): void {
-    const bottomsheetRef = this.bottomsheet.open(NoticeBottomsheetComponent);
-
-    bottomsheetRef.afterDismissed()
-      .subscribe(() => sessionStorage.setItem('monthlyConfirmed', 'true'));
-
-    setTimeout(() => bottomsheetRef.dismiss(), 5000);
+  onSelectedTabChange(event: MatTabChangeEvent): void {
+    const path = this.location.path().split('/');
+    path[path.length - 1] = this.tabs[this.selectedTab];
+    this.location.replaceState(path.join('/'));
   }
 }

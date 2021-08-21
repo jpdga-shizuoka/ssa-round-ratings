@@ -1,4 +1,13 @@
-<div class="app-events-table">
+<div class="search" *ngIf="!isMinimum">
+  <mat-form-field class="search-box">
+    <input matInput #filter [(ngModel)]="search" (keyup)="applyFilter(filter.value)" placeholder="Search...">
+    <button mat-button *ngIf="search" matSuffix mat-icon-button aria-label="Clear" (click)="applyFilter('')">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+  <div class='search-spacer'></div>
+</div>
+
   <table mat-table matSort class="full-width-table" aria-label="Elements"
     multiTemplateDataRows
     [dataSource]="dataSource">
@@ -55,4 +64,3 @@
       [pageSize]="pageSize"
       [pageSizeOptions]="pageSizeOptions">
   </mat-paginator>
-</div>

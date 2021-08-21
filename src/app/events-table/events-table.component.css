@@ -31,6 +31,15 @@ tr.event-expanded-row {
 .more {
   text-align: right;
 }
+.search {
+  display: flex;
+}
+.search-box {
+  padding: 10px 0 0 25px;
+}
+.search-spacer {
+  flex: 1 1 auto;
+}
 @media (max-width: 414px) {
   .full-width-table td {
     font-size: 12px;

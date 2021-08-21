@@ -1,13 +1,12 @@
 import {
   Component, OnInit, OnDestroy, Input, ViewChild, AfterViewInit
 } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { MatTable } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { Observable, Subject, Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 
-import { GeoMarker } from '../map-common';
 import { EventCategory } from '../models';
 import { detailExpand } from '../animations';
 import { RemoteService } from '../remote.service';
@@ -22,19 +21,19 @@ import { title2name } from '../libs';
 })
 export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() displayedColumns$!: Observable<string[]>;
-  @Input() markerSelected$!: Subject<GeoMarker>;
   @Input() category!: EventCategory;
   @Input() showMore = false;
   @Input() limit?: number;
   @ViewChild(MatTable) table!: MatTable<EventInfo>;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
+  search = '';
   dataSource!: EventsDataSource;
-  showDetail = false;
   pageSizeOptions = [10, 20, 50, 100];
   private subscription?: Subscription;
 
   constructor(
+    private route: ActivatedRoute,
     private router: Router,
     private readonly remote: RemoteService
   ) { }
@@ -48,6 +47,9 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     if (!this.category) {
       throw new Error('[category] is required');
     }
+    this.route.queryParams.subscribe(params => {
+      this.updateSearch(params.location);
+    });
   }
 
   ngAfterViewInit(): void {
@@ -85,7 +87,9 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   get link(): string {
     switch (this.category) {
       case 'upcoming':
-        return '/events/upcoming';
+        return '/schedule/events';
+      case 'local':
+        return '/local/events';
       default:
         return '/past/events';
     }
@@ -97,5 +101,21 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
 
   onRawClicked(event: EventInfo): void {
     this.router.navigate(['/event', event.id]);
+  }
+
+  applyFilter(filterValue: string): void {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
+    this.search = filterValue;
+  }
+
+  private updateSearch(query?: string) {
+    if (!query) {
+      return;
+    }
+    this.dataSource.filter = query;
+    this.search = query;
   }
 }

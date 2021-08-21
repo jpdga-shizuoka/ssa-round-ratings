@@ -1,21 +1,19 @@
-<mat-tab-group class="mat-elevation-z2 app-container" dynamicHeight
-  [(selectedIndex)]="selectedTab">
+<mat-tab-group class="mat-elevation-z1 app-container" dynamicHeight
+  [(selectedIndex)]="selectedTab"
+  (selectedTabChange)=onSelectedTabChange($event)>
 
   <mat-tab label="{{tableTitle | localize}}">
     <div>
       <app-events-table
         [category]="category"
-        [displayedColumns$]="displayedColumns$"
-        [markerSelected$]="markerSelected">
+        [displayedColumns$]="displayedColumns$">
       </app-events-table>
     </div>
   </mat-tab>
 
   <mat-tab label="{{mapTitle | localize}}">
     <ng-template matTabContent>
-      <app-events-map
-        [category]="category"
-        (markerSelected)="onMarkerSelected($event)">
+      <app-events-map [category]="category">
       </app-events-map>
     </ng-template>
   </mat-tab>
