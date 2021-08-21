@@ -13,9 +13,7 @@
 
   <mat-tab label="{{'Round Stats' | localize}}">
     <div>
-      <app-rounds-table
-        [displayedColumns$]="roundsColumns$"
-        [markerSelected$]="markerSelected">
+      <app-rounds-table [displayedColumns$]="roundsColumns$">
       </app-rounds-table>
     </div>
   </mat-tab>
