@@ -101,9 +101,9 @@ const routes: Routes = [
     component: RoundsTabsComponent,
     data: {
       metaDescription: {
-        title: 'DG Japan - Event Detail',
-        subtitle: 'Event',
-        description: 'Results of the official disc golf events held in Japan.',
+        title: 'DG Japan - Event Results',
+        subtitle: 'Results',
+        description: 'Results of the official events.',
         keywords: 'disc golf,events,results,japan,video'
       }
     }

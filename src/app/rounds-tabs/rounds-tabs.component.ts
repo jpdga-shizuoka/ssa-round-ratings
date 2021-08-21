@@ -1,7 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Location } from '@angular/common';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { ActivatedRoute } from '@angular/router';
-
+import { MatTabChangeEvent } from '@angular/material/tabs';
 import { Observable, Subject, Subscription } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -10,6 +11,7 @@ import { isHandset } from '../ng-utilities';
 
 const EVENT_COLUMNS = [['date', 'title'], ['date', 'title', 'location']];
 const ROUND_COLUMNS = [['event', 'hla', 'ssa'], ['year', 'event', 'round', 'hla', 'ssa']];
+const TABS = ['events', 'rounds', 'videos', 'locations'];
 
 @Component({
   selector: 'app-rounds-tabs',
@@ -23,6 +25,7 @@ export class RoundsTabsComponent implements OnInit, OnDestroy {
   private subscription?: Subscription;
 
   constructor(
+    private location: Location,
     private route: ActivatedRoute,
     breakpointObserver: BreakpointObserver
   ) {
@@ -31,22 +34,11 @@ export class RoundsTabsComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.subscription = this.route.url.subscribe(url => {
-      switch (url[1]?.path) {
-        case 'events':
-          this.selectedTab = 0;
-          break;
-        case 'rounds':
-          this.selectedTab = 1;
-          break;
-        case 'videos':
-          this.selectedTab = 2;
-          break;
-        case 'locations':
-          this.selectedTab = 3;
-          break;
-        default:
-          this.selectedTab = 0;
+    this.route.params.subscribe(params => {
+      const tag = params.tagname as string;
+      const index = TABS.findIndex((value => value === tag));
+      if (index >= 0 && index < TABS.length) {
+        this.selectedTab = index;
       }
     });
   }
@@ -67,8 +59,9 @@ export class RoundsTabsComponent implements OnInit, OnDestroy {
     );
   }
 
-  onMarkerSelected(marker: GeoMarker): void {
-    this.markerSelected.next(marker);
-    this.selectedTab = 0;
+  onSelectedTabChange(event: MatTabChangeEvent): void {
+    const path = this.location.path().split('/');
+    path[path.length - 1] = TABS[this.selectedTab];
+    this.location.replaceState(path.join('/'));
   }
 }
