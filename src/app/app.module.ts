@@ -42,7 +42,9 @@ import { StatsTabsComponent } from './stats-tabs/stats-tabs.component';
 import { AboutThisSiteComponent } from './about-this-site/about-this-site.component';
 import { EventComponent } from './event/event.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
-import { EventsTabsComponent } from './events-tabs/events-tabs.component';
+import { LocalTabsComponent } from './events-tabs/local-tabs.component';
+import { MonthlyTabsComponent } from './events-tabs/monthly-tabs.component';
+import { UpcomingTabsComponent } from './events-tabs/upcoming-tabs.component';
 import { EventsTableComponent } from './events-table/events-table.component';
 import { EventsMapComponent } from './events-map/events-map.component';
 import { MarkerDialogComponent } from './dialogs/marker-dialog.component';
@@ -77,7 +79,9 @@ import { EventPipe } from './event.pipe';
     TermsComponent,
     EventComponent,
     EventDetailComponent,
-    EventsTabsComponent,
+    LocalTabsComponent,
+    MonthlyTabsComponent,
+    UpcomingTabsComponent,
     EventsTableComponent,
     EventsMapComponent,
     NoticeBottomsheetComponent,

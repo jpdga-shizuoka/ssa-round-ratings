@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnInit, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable, BehaviorSubject, from } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
 
@@ -42,6 +43,7 @@ export class EventsMapComponent implements OnInit {
   }
 
   constructor(
+    private router: Router,
     private el: ElementRef<Element>,
     private remote: RemoteService,
     public dialog: MatDialog,
@@ -67,31 +69,47 @@ export class EventsMapComponent implements OnInit {
       return;
     }
     const location = marker.location;
-    const eventsName: string[] = [];
+    const events: EventInfo[] = [];
     for (const m of markers) {
       if (m.location === location) {
-        eventsName.push(m.title);
+        events.push({
+          id: m.eventId,
+          location: m.location,
+          title: m.title
+        });
       }
     }
-    this.openDialog(this.category, marker, eventsName);
+    this.openDialog(this.category, marker, events);
   }
 
-  openDialog(cat: EventCategory, marker: GeoMarker, eventNames: string[]): void {
+  openDialog(cat: EventCategory, marker: GeoMarker, events: EventInfo[]): void {
     this.dialog.open(MarkerDialogComponent, {
       width: '400px',
       data: {
         category: cat,
         position: marker.position,
         location: marker.location,
-        events: eventNames
+        events
       }
-    }).afterClosed().subscribe(result => {
-      if (!result) {
+    }).afterClosed().subscribe(event => {
+      if (!event) {
         return;
       }
-      const markers = this.mapSource$.getValue();
-      const mk = markers.find(m => (m.title === result || m.location === result));
-      this.markerSelected.emit(mk);
+      if ('id' in event) {
+        this.router.navigate(['/event', event.id]);
+      } else if ('category' in event) {
+        let commands: string[] = [];
+        if (event.category === 'upcoming') {
+          commands = ['/events', 'upcoming'];
+        } else if (event.category === 'past') {
+          commands = ['/past', 'events'];
+        }
+        this.router.navigate(commands, {
+          queryParams: {
+            location: event.location
+          }
+        });
+      }
     });
   }
 
@@ -125,6 +143,7 @@ function makeMarker(event: EventInfo, location: LocationInfo): GeoMarker {
       lat: location.geolocation[0],
       lng: location.geolocation[1]
     },
+    eventId: event.id,
     location: location.id,
     title: event.title ?? ''
   };
