@@ -30,11 +30,11 @@ export class MarkerDialogComponent {
   }
 
   get showEventBotton(): boolean {
-    return this.data.category === 'upcoming' || this.data.category === 'local';
+    return this.data.category === 'upcoming' || this.data.category === 'past';
   }
 
   get showDialogBotton(): boolean {
-    return this.data.category === 'past' || this.data.category === 'monthly';
+    return this.data.category === 'local' || this.data.category === 'monthly';
   }
 
   get showList(): boolean {

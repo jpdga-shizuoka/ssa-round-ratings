@@ -95,7 +95,7 @@ export class EventsMapComponent implements OnInit {
       if (!event) {
         return;
       }
-      if ('id' in event) {
+      if ((this.category === 'upcoming' || this.category === 'past') && 'id' in event) {
         this.router.navigate(['/event', event.id]);
       } else if ('category' in event) {
         let commands: string[] = [];

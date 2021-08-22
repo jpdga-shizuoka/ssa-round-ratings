@@ -38,6 +38,6 @@ export class RoutingTabsComponent implements OnInit, OnDestroy {
   onSelectedTabChange(event: MatTabChangeEvent): void {
     const path = this.location.path().split('/');
     path[path.length - 1] = this.tabs[event.index];
-    this.location.replaceState(path.join('/'));
+    this.location.go(path.join('/'));
   }
 }
