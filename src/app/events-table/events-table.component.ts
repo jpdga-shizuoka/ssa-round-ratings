@@ -8,7 +8,6 @@ import { MatSort } from '@angular/material/sort';
 import { Observable, Subscription } from 'rxjs';
 
 import { EventCategory } from '../models';
-import { detailExpand } from '../animations';
 import { RemoteService } from '../remote.service';
 import { EventsDataSource, EventInfo } from './events-datasource';
 import { title2name } from '../libs';
@@ -16,8 +15,7 @@ import { title2name } from '../libs';
 @Component({
   selector: 'app-events-table',
   templateUrl: './events-table.component.html',
-  styleUrls: ['./events-table.component.css'],
-  animations: [detailExpand]
+  styleUrls: ['./events-table.component.css']
 })
 export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() displayedColumns$!: Observable<string[]>;
@@ -29,6 +27,7 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild(MatSort) sort!: MatSort;
   search = '';
   dataSource!: EventsDataSource;
+  expandedElement?: EventInfo;
   pageSizeOptions = [10, 20, 50, 100];
   private subscription?: Subscription;
 
@@ -97,6 +96,22 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
 
   isCanceled(event: EventInfo): boolean {
     return event.status === 'CANCELED';
+  }
+
+  isDetailExpand(event: EventInfo) {
+    if (!this.expandedElement) {
+      return false;
+    }
+    if (this.expandedElement.title !== event.title) {
+      return false;
+    }
+    if (this.expandedElement.period !== event.period) {
+      return false;
+    }
+    if (event.schedule && (this.expandedElement.schedule !== event.schedule)) {
+      return false;
+    }
+    return true;
   }
 
   onRawClicked(event: EventInfo): void {

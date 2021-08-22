@@ -8,12 +8,12 @@ import { NoticeBottomsheetComponent } from '../dialogs/notice-bottomsheet.compon
 import { EventsTabsComponent } from './events-tabs.component';
 
 const DISPLAYED_COLUMNS = [['location', 'day'], ['location', 'day', 'month']];
-const TITLES = ['Local', 'Location'];
+const TITLES = ['Monthly', 'Location'];
 const TABS = ['events', 'locations'];
 
 @Component({
   selector: 'app-monthly-tabs',
-  templateUrl: './events-tabs.component.html',
+  templateUrl: './monthly-tabs.component.html',
   styleUrls: ['./events-tabs.component.css']
 })
 export class MonthlyTabsComponent extends EventsTabsComponent {

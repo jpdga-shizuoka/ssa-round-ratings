@@ -46,6 +46,8 @@ import { LocalTabsComponent } from './events-tabs/local-tabs.component';
 import { MonthlyTabsComponent } from './events-tabs/monthly-tabs.component';
 import { UpcomingTabsComponent } from './events-tabs/upcoming-tabs.component';
 import { EventsTableComponent } from './events-table/events-table.component';
+import { LocalTableComponent } from './events-table/local-table.component';
+import { MonthlyTableComponent } from './events-table/monthly-table.component';
 import { EventsMapComponent } from './events-map/events-map.component';
 import { MarkerDialogComponent } from './dialogs/marker-dialog.component';
 import { NoticeBottomsheetComponent } from './dialogs/notice-bottomsheet.component';
@@ -83,6 +85,8 @@ import { EventPipe } from './event.pipe';
     MonthlyTabsComponent,
     UpcomingTabsComponent,
     EventsTableComponent,
+    LocalTableComponent,
+    MonthlyTableComponent,
     EventsMapComponent,
     NoticeBottomsheetComponent,
     VideoBottomsheetComponent,

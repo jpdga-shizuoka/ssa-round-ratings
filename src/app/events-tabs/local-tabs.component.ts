@@ -11,7 +11,7 @@ const TABS = ['events', 'locations'];
 
 @Component({
   selector: 'app-local-tabs',
-  templateUrl: './events-tabs.component.html',
+  templateUrl: './local-tabs.component.html',
   styleUrls: ['./events-tabs.component.css']
 })
 export class LocalTabsComponent extends EventsTabsComponent {
