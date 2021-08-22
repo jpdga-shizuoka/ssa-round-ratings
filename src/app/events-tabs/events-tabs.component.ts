@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -19,11 +19,12 @@ export class EventsTabsComponent extends RoutingTabsComponent implements OnInit 
   titles!: string[];
 
   constructor(
+    router: Router,
     route: ActivatedRoute,
     location: Location,
     breakpointObserver: BreakpointObserver
   ) {
-    super(route, location);
+    super(router, route, location);
     this.isHandset$ = isHandset(breakpointObserver);
   }
 

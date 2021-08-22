@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Location } from '@angular/common';
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -21,11 +21,12 @@ export class RoundsTabsComponent extends RoutingTabsComponent {
   isHandset$: Observable<boolean>;
 
   constructor(
+    router: Router,
     location: Location,
     route: ActivatedRoute,
     breakpointObserver: BreakpointObserver
   ) {
-    super(route, location);
+    super(router, route, location);
     this.tabs = TABS;
     this.isHandset$ = isHandset(breakpointObserver);
   }

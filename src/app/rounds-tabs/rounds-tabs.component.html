@@ -1,5 +1,4 @@
 <mat-tab-group class="mat-elevation-z2 app-container" dynamicHeight
-  [(selectedIndex)]="selectedTab"
   (selectedTabChange)=onSelectedTabChange($event)>
 
   <mat-tab label="{{'Events' | localize}}">
@@ -27,8 +26,7 @@
 
   <mat-tab label="{{'Locations' | localize}}">
     <ng-template matTabContent>
-      <app-events-map category="past"
-        (markerSelected)="onMarkerSelected($event)">
+      <app-events-map category="past" (eventGo)="onEventGo($event)">
       </app-events-map>
     </ng-template>
   </mat-tab>

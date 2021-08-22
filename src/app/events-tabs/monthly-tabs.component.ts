@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Location } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 
@@ -19,11 +19,12 @@ const TABS = ['events', 'locations'];
 export class MonthlyTabsComponent extends EventsTabsComponent {
   constructor(
     private bottomsheet: MatBottomSheet,
+    router: Router,
     route: ActivatedRoute,
     location: Location,
     breakpointObserver: BreakpointObserver
   ) {
-    super(route, location, breakpointObserver);
+    super(router, route, location, breakpointObserver);
     this.displayedColumns = DISPLAYED_COLUMNS;
     this.titles = TITLES;
     this.tabs = TABS;

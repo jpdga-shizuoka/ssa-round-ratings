@@ -4,7 +4,7 @@ import { Observable, BehaviorSubject, from } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
 
 import { GeoMarker } from '../map-common';
-import { EventCategory } from '../models';
+import { EventCategory, LocationSearch, EventGo } from '../models';
 import { MarkerDialogComponent } from '../dialogs/marker-dialog.component';
 import { environment } from '../../environments/environment';
 import { RemoteService, EventInfo, LocationInfo } from '../remote.service';
@@ -17,7 +17,8 @@ import { GoogleMapsApiService } from '../googlemapsapi.service';
 })
 export class EventsMapComponent implements OnInit {
   @Input() category!: EventCategory;
-  @Output() markerSelected = new EventEmitter<GeoMarker>();
+  @Output() eventGo = new EventEmitter<EventGo>();
+  @Output() locationSearch = new EventEmitter<LocationSearch>();
   apiLoaded$: Observable<boolean>;
   mapSource$: BehaviorSubject<GeoMarker[]> = new BehaviorSubject<GeoMarker[]>([]);
   loading = true;
@@ -96,27 +97,13 @@ export class EventsMapComponent implements OnInit {
         return;
       }
       if ((this.category === 'upcoming' || this.category === 'past') && 'id' in event) {
-        this.router.navigate(['/event', event.id]);
+        this.eventGo.emit({
+          id: event.id
+        });
       } else if ('category' in event) {
-        let commands: string[] = [];
-        switch (event.category) {
-          case 'upcoming':
-            commands = ['/events', 'upcoming'];
-            break;
-          case 'past':
-            commands = ['/past', 'events'];
-            break;
-          case 'local':
-            commands = ['/local', 'events'];
-            break;
-          case 'monthly':
-            commands = ['/monthly', 'events'];
-            break;
-        }
-        this.router.navigate(commands, {
-          queryParams: {
-            location: event.location
-          }
+        this.locationSearch.emit({
+          category: this.category,
+          key: event.location
         });
       }
     });

@@ -13,7 +13,7 @@
 
   <mat-tab label="{{mapTitle | localize}}">
     <ng-template matTabContent>
-      <app-events-map [category]="category">
+      <app-events-map [category]="category" (eventGo)=onEventGo($event)>
       </app-events-map>
     </ng-template>
   </mat-tab>

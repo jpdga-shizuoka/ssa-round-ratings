@@ -10,6 +10,15 @@ export interface Period {
 }
 export type GeoPosition = [number, number];
 
+export interface LocationSearch {
+  category: EventCategory;
+  key: string;
+}
+
+export interface EventGo {
+  id: EventId;
+}
+
 export interface LocationInfo {
   id: LocationId;
   title: string;
