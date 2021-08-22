@@ -16,7 +16,7 @@
 
       <mat-divider></mat-divider>
 
-      <a mat-list-item routerLink="/schedule/events"
+      <a mat-list-item routerLink="/schedule"
         routerLinkActive="menu-active"
         (click)="onClickLink()">
         <mat-icon>events</mat-icon>{{schedule}}
@@ -29,12 +29,12 @@
 
       <mat-divider></mat-divider>
 
-      <a mat-list-item routerLink="/local/events"
+      <a mat-list-item routerLink="/local"
         routerLinkActive="menu-active"
         (click)="onClickLink()">
         <mat-icon>terrain</mat-icon>{{localEvents}}
       </a>
-      <a mat-list-item routerLink="/monthly/events"
+      <a mat-list-item routerLink="/monthly"
         routerLinkActive="menu-active"
         (click)="onClickLink()">
         <mat-icon>sync</mat-icon>{{monthlyEvents}}

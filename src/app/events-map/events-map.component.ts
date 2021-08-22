@@ -99,10 +99,19 @@ export class EventsMapComponent implements OnInit {
         this.router.navigate(['/event', event.id]);
       } else if ('category' in event) {
         let commands: string[] = [];
-        if (event.category === 'upcoming') {
-          commands = ['/events', 'upcoming'];
-        } else if (event.category === 'past') {
-          commands = ['/past', 'events'];
+        switch (event.category) {
+          case 'upcoming':
+            commands = ['/events', 'upcoming'];
+            break;
+          case 'past':
+            commands = ['/past', 'events'];
+            break;
+          case 'local':
+            commands = ['/local', 'events'];
+            break;
+          case 'monthly':
+            commands = ['/monthly', 'events'];
+            break;
         }
         this.router.navigate(commands, {
           queryParams: {
