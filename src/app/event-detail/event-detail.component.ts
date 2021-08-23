@@ -4,7 +4,7 @@ import {
   BreakpointObserver, Observable, isHandset, of as observableOf
 } from '../ng-utilities';
 import { RemoteService, EventInfo, LocationInfo } from '../remote.service';
-import { getEventTitle, getLayout, makePdgaInfo, makeJpdgaInfo, makeMiscInfo } from '../app-libs';
+import { getEventTitle, getLayout, makePdgaInfo, makeJpdgaInfo, makeMiscInfo } from '../libs';
 
 @Component({
   selector: 'app-event-detail',

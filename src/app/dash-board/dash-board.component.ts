@@ -5,7 +5,8 @@ import { map } from 'rxjs/operators';
 import { isHandset } from '../ng-utilities';
 
 const DISPLAYED_COLUMNS_UPCOMING = [['date', 'title'], ['date', 'title', 'location']];
-const DISPLAYED_COLUMNS_PAST = [['event', 'hla', 'ssa'], ['year', 'event', 'round', 'hla', 'ssa']];
+const EVENT_COLUMNS = [['date', 'title'], ['date', 'title', 'location']];
+const ROUND_COLUMNS_PAST = [['event', 'hla', 'ssa'], ['year', 'event', 'round', 'hla', 'ssa']];
 
 @Component({
   selector: 'app-dash-board',
@@ -25,9 +26,15 @@ export class DashBoardComponent {
     );
   }
 
-  get displayedColumnsPast$(): Observable<string[]> {
+  get eventsColumnsPast$(): Observable<string[]> {
     return this.isHandset$.pipe(
-      map(hs => DISPLAYED_COLUMNS_PAST[hs ? 0 : 1])
+      map(hs => EVENT_COLUMNS[hs ? 0 : 1])
+    );
+  }
+
+  get roundsColumnsPast$(): Observable<string[]> {
+    return this.isHandset$.pipe(
+      map(hs => ROUND_COLUMNS_PAST[hs ? 0 : 1])
     );
   }
 }

@@ -4,7 +4,7 @@ import { tap, map } from 'rxjs/operators';
 
 import { RemoteService, RoundInfo } from '../remote.service';
 import { LocalizeService } from '../localize.service';
-import { calcRoundStat } from '../app-libs';
+import { calcRoundStat } from '../libs';
 
 /**
  * Data source for the TestTable view. This class should

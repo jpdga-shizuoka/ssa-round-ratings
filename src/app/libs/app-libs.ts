@@ -1,5 +1,5 @@
-import { RoundInfo, EventInfo } from './models';
-import { ICONS, MiscInfo } from './app-common';
+import { RoundInfo, EventInfo } from '../models';
+import { ICONS, MiscInfo } from '../app-common';
 
 export function getJpdgaInfo(eventId?: string): string {
   return `http://www.jpdga.jp/event.php?tno=${eventId ?? ''}`;
@@ -53,25 +53,25 @@ export function calcRoundStat(rounds: RoundInfo[]): RoundInfo[] {
   return rounds;
 }
 
-function calcDifficulty(round: RoundInfo): number | undefined {
+export function calcDifficulty(round: RoundInfo): number | undefined {
   if (!round.hla || !round.ssa) {
     return undefined;
   }
   return Math.round(round.ssa / round.hla * 100) / 10;
 }
 
-function calcWeight(player1: { score: number, rating: number }, player2: { score: number, rating: number }) {
+export function calcWeight(player1: { score: number, rating: number }, player2: { score: number, rating: number }) {
   return (player1.rating - player2.rating) / (player1.score - player2.score);
 }
 
-function calcOffset(round: RoundInfo) {
+export function calcOffset(round: RoundInfo) {
   if (!round.ratings || !round.weight) {
     return 0;
   }
   return round.ratings.player1.rating - round.weight * round.ratings.player1.score;
 }
 
-function calcSsa(round: RoundInfo) {
+export function calcSsa(round: RoundInfo) {
   if (!round.offset || !round.weight) {
     return 0;
   }
@@ -80,7 +80,7 @@ function calcSsa(round: RoundInfo) {
   return (1000 - round.offset) / round.weight / regulation;
 }
 
-function calcCategory(ssa: number) {
+export function calcCategory(ssa: number) {
   if (ssa < 48) {
     return 'A';
   } else if (ssa < 54) {
@@ -121,6 +121,7 @@ export function makeVideoInfo(event: EventInfo): MiscInfo[] {
       info.push({
         icon: ICONS[urlInfo.type],
         title: urlInfo.title,
+        date: new Date(event.period?.from ?? 0),
         url: urlInfo.url
       });
     }
@@ -149,6 +150,22 @@ export function makePdgaInfo(event: EventInfo): MiscInfo[] {
 
 export function makeJpdgaInfo(event: EventInfo): MiscInfo[] {
   const info: MiscInfo[] = [];
+  if (isPastEvent(event)) {
+    if (event.jpdga?.eventId) {
+      info.push({
+        icon: 'public',
+        title: 'Results',
+        url: getJpdgaResult(event.jpdga.eventId)
+      });
+    }
+    if (event.jpdga?.topicId) {
+      info.push({
+        icon: 'public',
+        title: 'Report',
+        url: getJpdgaReport(event.jpdga.topicId)
+      });
+    }
+  }
   if (event.jpdga?.eventId) {
     info.push({
       icon: 'public',
@@ -157,4 +174,10 @@ export function makeJpdgaInfo(event: EventInfo): MiscInfo[] {
     });
   }
   return info;
+}
+
+export function isPastEvent(event: EventInfo): boolean {
+  const eventDate = new Date(event.period?.to ?? 0);
+  const nowDate = new Date();
+  return eventDate.getTime() < nowDate.getTime();
 }

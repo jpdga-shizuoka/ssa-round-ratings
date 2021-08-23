@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
 
-export type EventCategory = 'upcoming' | 'past' | 'local' | 'monthly' | 'video';
+export type EventCategory = 'alltime' | 'upcoming' | 'past' | 'local' | 'monthly' | 'video';
 export type EventId = string;
 export type RoundId = string;
 export type LocationId = string;
@@ -9,6 +9,15 @@ export interface Period {
   to: string;
 }
 export type GeoPosition = [number, number];
+
+export interface LocationSearch {
+  category: EventCategory;
+  key: string;
+}
+
+export interface EventGo {
+  id: EventId;
+}
 
 export interface LocationInfo {
   id: LocationId;
@@ -55,6 +64,7 @@ export interface EventInfo {
   schedule?: Schedule;
   players?: Players;
   layout?: string;
+  rounds?: RoundId[];
 }
 
 export interface VideoInfo {

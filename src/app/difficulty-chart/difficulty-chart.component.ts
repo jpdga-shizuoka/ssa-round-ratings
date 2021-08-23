@@ -4,7 +4,7 @@ import { map, first } from 'rxjs/operators';
 
 import { RemoteService } from '../remote.service';
 import { LocalizeService } from '../localize.service';
-import { calcRoundStat } from '../app-libs';
+import { calcRoundStat } from '../libs';
 import { rounds2result } from './difficulty-chart.lib';
 import { ChartDataExt, BubbleData, EventId } from './ngx-charts.interfaces';
 
@@ -54,8 +54,6 @@ export class DifficultyChartComponent implements OnInit {
   }
 
   onClickItem(event: BubbleData): void {
-    if (!this.eventId) {
-      this.router.navigate(['/event', event.series.eventId]);
-    }
+    this.router.navigate(['/event', event.series.eventId]);
   }
 }

@@ -4,7 +4,7 @@
 <div mat-dialog-content *ngIf="showList">
   <mat-nav-list>
     <mat-list-item *ngFor="let event of data.events">
-      <span>{{event | localize | titlecase}}</span>
+      <span>{{event.title | localize | titlecase}}</span>
       <span class="spacer"></span>
       <button mat-stroked-button [mat-dialog-close]="event" *ngIf="showEventBotton">
         {{'Detail' | localize}}
@@ -14,7 +14,7 @@
 </div>
 <div mat-dialog-actions *ngIf="showDialogBotton">
   <span class="spacer"></span>
-  <button mat-button [mat-dialog-close]="data.location">
-    {{'Detail' | localize}}
+  <button mat-button [mat-dialog-close]="data">
+    {{'Search' | localize}}
   </button>
 </div>

@@ -1,85 +1,86 @@
 <div class="app-container">
   <h1>{{event?.title | localize}}</h1>
-  <table>
-    <tbody>
-      <tr>
-        <td>{{'Course' | localize}}:</td>
-        <td class="info-container">
-          <div *ngIf="location$ | async as location">
-            <a href="{{location | geolink}}" target="_blank" rel="noopener">
-              {{location.title | localize}}, {{location.prefecture | localize}}
-            </a>            
-            <a href="{{layout}}" target="_blank" rel="noopener" *ngIf="layout">
-              {{"Caddie book" | localize}}
-            </a>
-          </div>
-        </td>
-      </tr>
+    <table class="mat-table mat-elevation-z1">
+      <tbody>
+        <tr class="element-row mat-row">
+          <td class="mat-cell">{{'Date' | localize}}</td>
+          <td class="mat-cell">{{event?.period | period}}
+            <span *ngIf="isCanceled" class="canceled">CANCELED</span>
+          </td>
+        </tr>
 
-      <tr *ngIf="pdgaInfo.length">
-        <td>PDGA:</td>
-        <td>
-          <div class="info-container">
-            <ng-template ngFor let-info [ngForOf]="pdgaInfo">
-              <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
-                {{info.title | localize}}
+        <tr class="element-row mat-row">
+          <td class="mat-cell">{{'Course' | localize}}</td>
+          <td class="mat-cell">
+            <div *ngIf="location$ | async as location">
+              <a href="{{location | geolink}}" target="_blank" rel="noopener">
+                {{location.title | localize}}, {{location.prefecture | localize}}
               </a>
-            </ng-template>
-          </div>
-        </td>
-      </tr>
-
-      <tr *ngIf="jpdgaInfo.length">
-        <td>JPDGA:</td>
-        <td>
-          <div class="info-container">
-            <ng-template ngFor let-info [ngForOf]="jpdgaInfo">
-              <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
-                {{info.title | localize}}
+              <a href="{{layout}}" target="_blank" rel="noopener" *ngIf="layout">
+                {{"Caddie book" | localize}}
               </a>
-            </ng-template>
-          </div>
-        </td>
-      </tr>
+            </div>
+          </td>
+        </tr>
 
-      <tr *ngIf="miscInfo.length">
-        <td>{{'Info' | localize}}:</td>
-        <td>
-          <div class="info-container">
-            <ng-template ngFor let-info [ngForOf]="miscInfo">
-              <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
-                {{info.title | localize}}
-              </a>
-            </ng-template>
-          </div>
-        </td>
-      </tr>
+        <tr class="element-row mat-row" *ngIf="totalPlayers && !isCanceled">
+          <td class="mat-cell">{{'Partícipant' | localize}}</td>
+          <td class="mat-cell">{{totalPlayers}}</td>
+        </tr>
 
-      <tr *ngIf="videoInfo.length">
-        <td>{{'Videos' | localize}}:</td>
-        <td>
-          <div class="info-container">
-            <ng-template ngFor let-info [ngForOf]="videoInfo">
-              <a href="{{info.url}}" target="_blank" rel="noopener">
-                {{info.title}}
-              </a>
-            </ng-template>
-          </div>
-        </td>
-      </tr>
+        <tr class="element-row mat-row" *ngIf="pdgaInfo.length && !isCanceled">
+          <td class="mat-cell">PDGA</td>
+          <td class="mat-cell">
+              <ng-template ngFor let-info [ngForOf]="pdgaInfo">
+                <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
+                  {{info.title | localize}}
+                </a>
+              </ng-template>
+          </td>
+        </tr>
+    
+        <tr class="element-row mat-row" *ngIf="jpdgaInfo.length && !isCanceled">
+          <td class="mat-cell">JPDGA</td>
+          <td class="mat-cell">
+              <ng-template ngFor let-info [ngForOf]="jpdgaInfo">
+                <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
+                  {{info.title | localize}}
+                </a>
+              </ng-template>
+          </td>
+        </tr>
+    
+        <tr class="element-row mat-row" *ngIf="miscInfo.length">
+          <td class="mat-cell">{{'Info' | localize}}</td>
+          <td class="mat-cell">
+              <ng-template ngFor let-info [ngForOf]="miscInfo">
+                <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
+                  {{info.title | localize}}
+                </a>
+              </ng-template>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
-      <tr>
-        <td>{{'History' | localize}}:</td>
-        <td>
-          <a routerLink="/past" [queryParams]="{search: title}" class="detail-link">
-            {{'See the Past Results' | localize}}
-          </a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <app-difficulty-chart
-    [tooltipDisabled]="true"
-    [eventId]="eventId">
-  </app-difficulty-chart>
+  <div *ngIf="!isCanceled">
+    <h2>{{'Round Stat' | localize}}</h2>
+    <app-round-list [list$]="roundList$">
+    </app-round-list>
+  </div>
+
+  <div *ngIf="videoInfo.length">
+    <h2>{{'Video' | localize}}</h2>
+    <app-video-list [list]="videoInfo">
+    </app-video-list>
+  </div>
+
+  <h2>{{'History' | localize}}</h2>
+  <app-event-list [key$]="event$"></app-event-list>
+
+  <div *ngIf="!isCanceled">
+    <h2>{{'Difficulty Chart' | localize}}</h2>
+    <app-difficulty-chart [eventId]="eventId">
+    </app-difficulty-chart>
+  </div>
 </div>

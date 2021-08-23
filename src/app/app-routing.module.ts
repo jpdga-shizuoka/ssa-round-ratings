@@ -4,7 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { ReloadComponent } from './app-reload';
 import { DashBoardComponent } from './dash-board/dash-board.component';
 import { RoundsTabsComponent } from './rounds-tabs/rounds-tabs.component';
-import { EventsTabsComponent } from './events-tabs/events-tabs.component';
+import { LocalTabsComponent } from './events-tabs/local-tabs.component';
+import { MonthlyTabsComponent } from './events-tabs/monthly-tabs.component';
+import { UpcomingTabsComponent } from './events-tabs/upcoming-tabs.component';
 import { StatsTabsComponent } from './stats-tabs/stats-tabs.component';
 import { AboutThisSiteComponent } from './about-this-site/about-this-site.component';
 import { EventComponent } from './event/event.component';
@@ -36,16 +38,19 @@ const routes: Routes = [
     data: {
       metaDescription: {
         title: 'DG Japan - Disc Golf Event',
-        subtitle: 'Disc Golf Event',
-        description: '',
+        subtitle: 'Event',
+        description: 'event information',
         keywords: 'disc golf,official events,japan'
       }
     }
   },
 
   {
-    path: 'events/upcoming',
-    component: EventsTabsComponent,
+    path: 'schedule', redirectTo: '/schedule/events', pathMatch: 'full'
+  },
+  {
+    path: 'schedule/:tabname',
+    component: UpcomingTabsComponent,
     data: {
       metaDescription: {
         title: 'DG Japan - Disc Golf Events',
@@ -55,9 +60,13 @@ const routes: Routes = [
       }
     }
   },
+
   {
-    path: 'events/local',
-    component: EventsTabsComponent,
+    path: 'local', redirectTo: '/local/events', pathMatch: 'full'
+  },
+  {
+    path: 'local/:tagname',
+    component: LocalTabsComponent,
     data: {
       metaDescription: {
         title: 'DG Japan - Local Events',
@@ -67,9 +76,13 @@ const routes: Routes = [
       }
     }
   },
+
   {
-    path: 'events/monthly',
-    component: EventsTabsComponent,
+    path: 'monthly', redirectTo: '/monthly/events', pathMatch: 'full'
+  },
+  {
+    path: 'monthly/:tagname',
+    component: MonthlyTabsComponent,
     data: {
       metaDescription: {
         title: 'DG Japan - Monthly Events',
@@ -79,32 +92,28 @@ const routes: Routes = [
       }
     }
   },
+
   {
-    path: 'past',
-    component: RoundsTabsComponent,
-    data: {
-      metaDescription: {
-        title: 'DG Japan - Results',
-        subtitle: 'Results',
-        description: 'Results of the official disc golf events held in Japan.',
-        keywords: 'disc golf,events,results,japan'
-      }
-    }
+    path: 'past', redirectTo: '/past/events', pathMatch: 'full'
   },
   {
-    path: 'past/video',
+    path: 'past/:tagname',
     component: RoundsTabsComponent,
     data: {
       metaDescription: {
-        title: 'DG Japan - Video',
+        title: 'DG Japan - Event Results',
         subtitle: 'Results',
-        description: 'Video library of the official disc golf events held in Japan.',
+        description: 'Results of the official events.',
         keywords: 'disc golf,events,results,japan,video'
       }
     }
   },
+
   {
-    path: 'stats',
+    path: 'stats', redirectTo: '/stats/difficulty', pathMatch: 'full'
+  },
+  {
+    path: 'stats/:tagname',
     component: StatsTabsComponent,
     data: {
       metaDescription: {
@@ -115,6 +124,7 @@ const routes: Routes = [
       }
     }
   },
+
   {
     path: 'about',
     component: AboutThisSiteComponent,

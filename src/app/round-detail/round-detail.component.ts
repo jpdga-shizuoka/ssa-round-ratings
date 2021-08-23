@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { first } from 'rxjs/operators';
-import { getEventTitle, getLayout, makePdgaInfo, makeJpdgaInfo, makeMiscInfo, makeVideoInfo } from '../app-libs';
+import { getEventTitle, getLayout, makePdgaInfo, makeJpdgaInfo, makeMiscInfo, makeVideoInfo } from '../libs';
 import { RemoteService, RoundInfo, EventInfo, LocationInfo, LocationId } from '../remote.service';
 import { MiscInfo } from '../app-common';
 

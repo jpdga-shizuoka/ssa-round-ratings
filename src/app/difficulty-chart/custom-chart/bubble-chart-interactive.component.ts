@@ -333,6 +333,9 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
 
   getXDomain(): number[] {
     const values: number[] = [];
+    if (!this.results) {
+      return values;
+    }
 
     for (const results of this.results) {
       for (const d of results.series) {
@@ -348,6 +351,9 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
 
   getYDomain(): number[] {
     const values: number[] = [];
+    if (!this.results) {
+      return values;
+    }
 
     for (const result of this.results) {
       for (const d of result.series) {
@@ -364,6 +370,9 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
   getRDomain(): number[] {
     let min = Infinity;
     let max = -Infinity;
+    if (!this.results) {
+      return [] as number[];
+    }
 
     for (const results of this.results) {
       for (const d of results.series) {

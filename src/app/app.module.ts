@@ -42,8 +42,12 @@ import { StatsTabsComponent } from './stats-tabs/stats-tabs.component';
 import { AboutThisSiteComponent } from './about-this-site/about-this-site.component';
 import { EventComponent } from './event/event.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
-import { EventsTabsComponent } from './events-tabs/events-tabs.component';
+import { LocalTabsComponent } from './events-tabs/local-tabs.component';
+import { MonthlyTabsComponent } from './events-tabs/monthly-tabs.component';
+import { UpcomingTabsComponent } from './events-tabs/upcoming-tabs.component';
 import { EventsTableComponent } from './events-table/events-table.component';
+import { LocalTableComponent } from './events-table/local-table.component';
+import { MonthlyTableComponent } from './events-table/monthly-table.component';
 import { EventsMapComponent } from './events-map/events-map.component';
 import { MarkerDialogComponent } from './dialogs/marker-dialog.component';
 import { NoticeBottomsheetComponent } from './dialogs/notice-bottomsheet.component';
@@ -55,6 +59,9 @@ import { DifficultyChartComponent } from './difficulty-chart/difficulty-chart.co
 import { TermsComponent } from './terms/terms.component';
 import { BubbleChartInteractiveComponent } from './difficulty-chart/custom-chart/bubble-chart-interactive.component';
 import { BubbleSeriesInteractiveComponent } from './difficulty-chart/custom-chart/bubble-series-interactive.component';
+import { RoundListComponent } from './round-list/round-list.component';
+import { VideoListComponent } from './video-list/video-list.component';
+import { EventListComponent } from './event-list/event-list.component';
 
 import { SchedulePipe } from './schedule.pipe';
 import { GeolinkPipe } from './geolink.pipe';
@@ -74,8 +81,12 @@ import { EventPipe } from './event.pipe';
     TermsComponent,
     EventComponent,
     EventDetailComponent,
-    EventsTabsComponent,
+    LocalTabsComponent,
+    MonthlyTabsComponent,
+    UpcomingTabsComponent,
     EventsTableComponent,
+    LocalTableComponent,
+    MonthlyTableComponent,
     EventsMapComponent,
     NoticeBottomsheetComponent,
     VideoBottomsheetComponent,
@@ -90,6 +101,9 @@ import { EventPipe } from './event.pipe';
     DifficultyChartComponent,
     BubbleChartInteractiveComponent,
     BubbleSeriesInteractiveComponent,
+    RoundListComponent,
+    VideoListComponent,
+    EventListComponent,
     SchedulePipe,
     GeolinkPipe,
     LocalizePipe,
