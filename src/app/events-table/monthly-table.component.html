@@ -2,28 +2,20 @@
   [dataSource]="dataSource">
 
   <ng-container matColumnDef="location">
-    <th mat-header-cell *matHeaderCellDef>Location</th>
+    <th mat-header-cell *matHeaderCellDef>{{'Locations' | localize}}</th>
     <td mat-cell *matCellDef="let row">
       {{row.location$ | async | locationPrint:'title-region'}}
     </td>
   </ng-container>
 
   <ng-container matColumnDef="day">
-    <th mat-header-cell *matHeaderCellDef>Day</th>
+    <th mat-header-cell *matHeaderCellDef>{{'Day' | localize}}</th>
     <td mat-cell *matCellDef="let row">{{row.schedule | schedule:'day'}}</td>
   </ng-container>
 
   <ng-container matColumnDef="month">
-    <th mat-header-cell *matHeaderCellDef>Month</th>
+    <th mat-header-cell *matHeaderCellDef>{{'Month' | localize}}</th>
     <td mat-cell *matCellDef="let row">{{row.schedule | schedule:'month'}}</td>
-  </ng-container>
-
-  <ng-container matColumnDef="seemore">
-    <td mat-footer-cell *matFooterCellDef colspan="3">
-      <p class="more">
-        <a mat-list-item routerLink="/past/{{category}}">{{'More' | localize}}...</a>
-      </p>
-    </td>
   </ng-container>
 
   <ng-container matColumnDef="expandedDetail">
@@ -43,9 +35,6 @@
     (click)="onRawClicked(element)">
   </tr>
   <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="event-detail-row"></tr>
-  <div *ngIf="showMore">
-    <tr mat-footer-row *matFooterRowDef="['seemore']">
-  </div>
 </table>
 
 <mat-paginator #paginator *ngIf="!isMinimum" [length]="dataSource?.data.length" [pageIndex]="0"
