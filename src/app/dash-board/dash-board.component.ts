@@ -6,7 +6,7 @@ import { isHandset } from '../ng-utilities';
 
 const DISPLAYED_COLUMNS_UPCOMING = [['date', 'title'], ['date', 'title', 'location']];
 const EVENT_COLUMNS = [['date', 'title'], ['date', 'title', 'location']];
-const ROUND_COLUMNS_PAST = [['event', 'hla', 'ssa'], ['year', 'event', 'round', 'hla', 'ssa']];
+const ROUND_COLUMNS_PAST = [['event', 'hla', 'ssa', 'td'], ['year', 'event', 'round', 'hla', 'ssa', 'td']];
 
 @Component({
   selector: 'app-dash-board',
