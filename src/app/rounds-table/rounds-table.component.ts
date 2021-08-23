@@ -83,6 +83,8 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
           return item.date;
         case 'event':
           return title2name(item.eventTitle);
+        case 'td':
+          return item.difficulty ?? 0;
         default: {
           const t = item as unknown as {[ property: string ]: string | number};
           return t[property];

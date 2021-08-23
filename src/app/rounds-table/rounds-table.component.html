@@ -47,6 +47,15 @@
       <td mat-cell *matCellDef="let row">{{row.ssa | number:'1.1-1'}}</td>
     </ng-container>
 
+    <ng-container matColumnDef="td">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header
+          matTooltip="Technical Difficulty"
+          matTooltipPosition="above">
+        TD
+      </th>
+      <td mat-cell *matCellDef="let row">{{row.difficulty | number:'1.1-1'}}</td>
+    </ng-container>
+
     <ng-container matColumnDef="seemore">
       <td mat-footer-cell *matFooterCellDef colspan="5">
         <p class="more">

@@ -9,7 +9,7 @@ import { isHandset } from '../ng-utilities';
 import { RoutingTabsComponent } from '../routing-tabs/routing-tabs.component';
 
 const EVENT_COLUMNS = [['date', 'title'], ['date', 'title', 'location']];
-const ROUND_COLUMNS = [['event', 'hla', 'ssa'], ['year', 'event', 'round', 'hla', 'ssa']];
+const ROUND_COLUMNS = [['event', 'hla', 'ssa', 'td'], ['year', 'event', 'round', 'hla', 'ssa', 'td']];
 const TABS = ['events', 'rounds', 'videos', 'locations'];
 
 @Component({
