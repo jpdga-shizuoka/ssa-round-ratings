@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { first } from 'rxjs/operators';
+import { Component, Input, OnInit, OnDestroy } from '@angular/core';
+import { Observable, Subscription } from 'rxjs';
 import { getEventTitle, getLayout, makePdgaInfo, makeJpdgaInfo, makeMiscInfo, makeVideoInfo } from '../libs';
 import { RemoteService, RoundInfo, EventInfo, LocationInfo, LocationId } from '../remote.service';
 import { MiscInfo } from '../app-common';
@@ -13,7 +12,7 @@ const MAX_RATING = 1200;
   templateUrl: './round-detail.component.html',
   styleUrls: ['./round-detail.component.css']
 })
-export class RoundDetailComponent implements OnInit {
+export class RoundDetailComponent implements OnInit, OnDestroy {
   @Input() round!: RoundInfo;
   @Input() showHistory = true;
 
@@ -21,6 +20,7 @@ export class RoundDetailComponent implements OnInit {
   score?: number;
 
   private event?: EventInfo;
+  private subscription?: Subscription;
   location$?: Observable<LocationInfo>;
   pdgaInfo: MiscInfo[] = [];
   jpdgaInfo: MiscInfo[] = [];
@@ -33,8 +33,7 @@ export class RoundDetailComponent implements OnInit {
     if (!this.round) {
       throw new Error('[round] is required');
     }
-    this.remote.getEvent(this.round.event, 'past')
-      .pipe(first())
+    this.subscription = this.remote.getEvent(this.round.event, 'past')
       .subscribe(event => {
         this.event = event;
         this.location$ = this.remote.getLocation(event.location);
@@ -43,6 +42,10 @@ export class RoundDetailComponent implements OnInit {
         this.miscInfo = makeMiscInfo(event);
         this.videoInfo = makeVideoInfo(event);
       });
+  }
+
+  ngOnDestroy(): void {
+    this.subscription?.unsubscribe();
   }
 
   get roundStatus(): string {

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { first } from 'rxjs/operators';
 import { LegendPosition } from '@swimlane/ngx-charts';
 import { RemoteService } from '../remote.service';
 import { TotalYearPlayers } from '../models';
@@ -40,7 +39,6 @@ export class TotalPlayersComponent implements OnInit {
 
   ngOnInit(): void {
     this.remote.getPlayers()
-      .pipe(first())
       .subscribe(players => this.countPlayers(players));
   }
 

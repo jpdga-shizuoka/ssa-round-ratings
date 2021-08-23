@@ -3,6 +3,7 @@ import { Location } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { Subscription } from 'rxjs';
 
 import { NoticeBottomsheetComponent } from '../dialogs/notice-bottomsheet.component';
 import { EventsTabsComponent } from './events-tabs.component';
@@ -17,6 +18,8 @@ const TABS = ['events', 'locations'];
   styleUrls: ['./events-tabs.component.css']
 })
 export class MonthlyTabsComponent extends EventsTabsComponent {
+  private ss?: Subscription;
+
   constructor(
     private bottomsheet: MatBottomSheet,
     router: Router,
@@ -33,17 +36,20 @@ export class MonthlyTabsComponent extends EventsTabsComponent {
 
   ngAfterViewInit(): void {
     if (sessionStorage.getItem('monthlyConfirmed') !== 'true') {
-      this.openNoticeBottomsheet();
+      this.ss = this.openNoticeBottomsheet();
     }
   }
 
-  private openNoticeBottomsheet(): void {
-    const bottomsheetRef = this.bottomsheet.open(NoticeBottomsheetComponent);
+  ngOnDestroy(): void {
+    this.ss?.unsubscribe();
+    super.ngOnDestroy();
+  }
 
-    bottomsheetRef
+  private openNoticeBottomsheet() {
+    const bottomsheetRef = this.bottomsheet.open(NoticeBottomsheetComponent);
+    setTimeout(() => bottomsheetRef.dismiss(), 5000);
+    return bottomsheetRef
       .afterDismissed()
       .subscribe(() => sessionStorage.setItem('monthlyConfirmed', 'true'));
-
-    setTimeout(() => bottomsheetRef.dismiss(), 5000);
   }
 }

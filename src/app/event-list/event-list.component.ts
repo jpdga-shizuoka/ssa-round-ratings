@@ -1,7 +1,7 @@
-import { Component, OnInit, Input, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, AfterViewInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatTable } from '@angular/material/table';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 
 import { EventInfo } from '../models';
 import { RemoteService } from '../remote.service';
@@ -12,12 +12,13 @@ import { EventListDataSource } from './event-list-datasource';
   templateUrl: './event-list.component.html',
   styleUrls: ['./event-list.component.css']
 })
-export class EventListComponent implements OnInit, AfterViewInit {
+export class EventListComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() key$!: Observable<EventInfo>;
   @ViewChild(MatTable) table!: MatTable<EventInfo>;
   dataSource?: EventListDataSource;
   displayedColumns = ['date', 'title'];
   private pendingViewInit = false;
+  private subscription?: Subscription;
 
   constructor(
     private router: Router,
@@ -25,7 +26,7 @@ export class EventListComponent implements OnInit, AfterViewInit {
   ) { }
 
   ngOnInit(): void {
-    this.key$.subscribe(event => {
+    this.subscription = this.key$.subscribe(event => {
       this.dataSource = new EventListDataSource(event, this.remote);
       if (this.pendingViewInit) {
         this.table.dataSource = this.dataSource!;
@@ -39,6 +40,10 @@ export class EventListComponent implements OnInit, AfterViewInit {
     } else {
       this.pendingViewInit = true;
     }
+  }
+
+  ngOnDestroy(): void {
+    this.subscription?.unsubscribe();
   }
 
   onRawClicked(event: EventInfo): void {

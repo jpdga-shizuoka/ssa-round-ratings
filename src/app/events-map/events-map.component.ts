@@ -1,6 +1,6 @@
-import { Component, Input, Output, EventEmitter, OnInit, ElementRef } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit, ElementRef, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable, BehaviorSubject, from } from 'rxjs';
+import { Observable, BehaviorSubject, from, Subscription } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
 
 import { GeoMarker } from '../map-common';
@@ -15,7 +15,7 @@ import { GoogleMapsApiService } from '../googlemapsapi.service';
   templateUrl: './events-map.component.html',
   styleUrls: ['./events-map.component.css']
 })
-export class EventsMapComponent implements OnInit {
+export class EventsMapComponent implements OnInit, OnDestroy {
   @Input() category!: EventCategory;
   @Output() eventGo = new EventEmitter<EventGo>();
   @Output() locationSearch = new EventEmitter<LocationSearch>();
@@ -28,6 +28,7 @@ export class EventsMapComponent implements OnInit {
     minZoom: 4,
     disableDefaultUI: true
   };
+  private subscription?: Subscription;
 
   get height(): string {
     const height = getBodyHeight() - getHeaderHeight() - getFooterHeight() - getMatHeaderHeight();
@@ -59,6 +60,10 @@ export class EventsMapComponent implements OnInit {
     }
   }
 
+  ngOnDestroy(): void {
+    this.subscription?.unsubscribe();
+  }
+
   onTilesloaded(): void {
     this.loadEvents();
   }
@@ -80,11 +85,11 @@ export class EventsMapComponent implements OnInit {
         });
       }
     }
-    this.openDialog(this.category, marker, events);
+    this.subscription = this.openDialog(this.category, marker, events);
   }
 
-  openDialog(cat: EventCategory, marker: GeoMarker, events: EventInfo[]): void {
-    this.dialog.open(MarkerDialogComponent, {
+  private openDialog(cat: EventCategory, marker: GeoMarker, events: EventInfo[]) {
+    return this.dialog.open(MarkerDialogComponent, {
       width: '400px',
       data: {
         category: cat,

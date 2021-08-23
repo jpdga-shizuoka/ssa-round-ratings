@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { Observable, of as observableOf, Subscription } from 'rxjs';
-import { catchError, tap, map, first } from 'rxjs/operators';
+import { catchError, tap, map } from 'rxjs/operators';
 
 import {
   category2url, upcomingFilter, sortEvents, countPlayers, compareByDate, filterByList
@@ -35,7 +35,6 @@ export class RemoteService {
     return this.http
       .get<EventInfo[]>(category2url(category), { responseType: 'json' })
       .pipe(
-        first(),
         map(events => upcomingFilter(events, category)),
         map(events => filter ? filter(events, category) : events),
         map(events => sortEvents(events, category)),
@@ -62,7 +61,6 @@ export class RemoteService {
     return this.http
       .get<RoundInfo[]>('assets/models/rounds.json', { responseType: 'json' })
       .pipe(
-        first(),
         map(rounds => roundList ? filterByList(rounds, roundList) : rounds),
         tap(rounds => rounds.forEach(
           round => { round.event$ = this.getEvent(round.event, 'past'); })),

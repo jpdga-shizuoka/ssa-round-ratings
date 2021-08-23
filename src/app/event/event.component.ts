@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable, Subject } from 'rxjs';
+import { Observable, Subject, Subscription } from 'rxjs';
 import { first, tap, map } from 'rxjs/operators';
 
 import { RemoteService, EventId, EventInfo, LocationInfo } from '../remote.service';
@@ -13,7 +13,7 @@ import { RoundId } from '../models';
   templateUrl: './event.component.html',
   styleUrls: ['./event.component.css']
 })
-export class EventComponent implements OnInit {
+export class EventComponent implements OnInit, OnDestroy {
   eventId?: EventId;
   event?: EventInfo;
   event$ = new Subject<EventInfo>();
@@ -23,6 +23,7 @@ export class EventComponent implements OnInit {
   jpdgaInfo: MiscInfo[] = [];
   miscInfo: MiscInfo[] = [];
   videoInfo: MiscInfo[] = [];
+  private subscription?: Subscription;
 
   constructor(
     private route: ActivatedRoute,
@@ -31,11 +32,10 @@ export class EventComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.route.params.subscribe(params => {
+    this.subscription = this.route.params.subscribe(params => {
       this.eventId = params.eventId as EventId;
       if (this.eventId) {
         this.remote.getEvent(this.eventId, 'alltime').pipe(
-          first(),
           tap(event => {
             this.location$ = this.remote.getLocation(event.location).pipe(first());
             this.pdgaInfo = makePdgaInfo(event);
@@ -52,6 +52,10 @@ export class EventComponent implements OnInit {
         });
       }
     });
+  }
+
+  ngOnDestroy(): void {
+    this.subscription?.unsubscribe();
   }
 
   get layout(): string | undefined {
