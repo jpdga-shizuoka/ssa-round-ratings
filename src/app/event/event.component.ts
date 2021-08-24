@@ -4,9 +4,9 @@ import { Observable, Subject, Subscription } from 'rxjs';
 import { first, tap } from 'rxjs/operators';
 
 import { RemoteService, EventId, EventInfo, LocationInfo } from '../remote.service';
-import { getLayout, makePdgaInfo, makeJpdgaInfo, makeMiscInfo, makeVideoInfo } from '../libs';
+import { getCbjUrl, makePdgaInfo, makeJpdgaInfo, makeMiscInfo, makeVideoInfo } from '../libs';
 import { MiscInfo } from '../app-common';
-import { RoundId } from '../models';
+import { RoundId, Layouts } from '../models';
 
 function getTotalPlayers(event: EventInfo): number {
   if (event.players) {
@@ -15,6 +15,28 @@ function getTotalPlayers(event: EventInfo): number {
       + event.players.misc;
   }
   return 0;
+}
+
+interface LayoutUrl {
+  title: string;
+  url: string;
+}
+
+function layout2layouts(layout?: Layouts) {
+  const urls: LayoutUrl[] = [];
+  if (layout?.official) {
+    urls.push({
+      title: 'Official Map',
+      url: layout.official
+    });
+  }
+  if (layout?.cbj) {
+    urls.push({
+      title: 'Caddie Book Japan',
+      url: getCbjUrl(layout.cbj)
+    });
+  }
+  return urls;
 }
 
 @Component({
@@ -31,8 +53,8 @@ export class EventComponent implements OnInit, OnDestroy {
   jpdgaInfo: MiscInfo[] = [];
   miscInfo: MiscInfo[] = [];
   videoInfo: MiscInfo[] = [];
+  layouts: LayoutUrl[] = [];
   totalPlayers?: number;
-  layout?: string;
   canceled = false;
   private subscription?: Subscription;
 
@@ -56,7 +78,7 @@ export class EventComponent implements OnInit, OnDestroy {
             this.miscInfo = makeMiscInfo(event);
             this.videoInfo = makeVideoInfo(event);
             this.totalPlayers = getTotalPlayers(event);
-            this.layout = getLayout(event.layout);
+            this.layouts = layout2layouts(event.layout);
             this.canceled = event.status === 'CANCELED';
           })
         ).subscribe(event => {

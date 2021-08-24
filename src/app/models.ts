@@ -49,6 +49,11 @@ export interface Players {
   misc: number;
 }
 
+export interface Layouts {
+  official?: string;
+  cbj?: string;
+}
+
 export interface EventInfo {
   id: EventId;
   title?: string;
@@ -63,7 +68,7 @@ export interface EventInfo {
   category?: string;
   schedule?: Schedule;
   players?: Players;
-  layout?: string;
+  layout?: Layouts;
   rounds?: RoundId[];
 }
 

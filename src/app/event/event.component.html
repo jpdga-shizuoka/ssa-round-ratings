@@ -24,13 +24,21 @@
               <a href="{{location | geolink}}" target="_blank" rel="noopener">
                 {{location.title | localize}}, {{location.prefecture | localize}}
               </a>
-              <a href="{{layout}}" target="_blank" rel="noopener" *ngIf="layout">
-                {{"Caddie book" | localize}}
-              </a>
             </div>
           </td>
         </tr>
-    
+
+        <tr class="element-row mat-row" *ngIf="layouts.length">
+          <td class="mat-cell">{{'Layouts' | localize}}</td>
+          <td class="mat-cell">
+            <ng-template ngFor let-info [ngForOf]="layouts">
+              <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
+                {{info.title | localize}}
+              </a>
+            </ng-template>
+          </td>
+        </tr>
+        
         <tr class="element-row mat-row" *ngIf="totalPlayers && !canceled">
           <td class="mat-cell">{{'Partícipant' | localize}}</td>
           <td class="mat-cell">{{totalPlayers}}</td>

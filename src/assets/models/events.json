@@ -56,6 +56,18 @@
     "id": "the21stchubuopen"
   },
   {
+    "title": "The 33rd Japan National Championship",
+    "location": "mikawarinkairyokuchi",
+    "period": {
+      "from": "2021-12-18",
+      "to": "2021-12-19"
+    },
+    "jpdga": {
+      "eventId": "573"
+    },
+    "id": "the33rdjapannationalchampionship"
+  },
+  {
     "title": "The 17th Kyoto Classic",
     "location": "kyototambapark",
     "period": {
@@ -160,18 +172,6 @@
     "id": "the21sttohokuopen"
   },
   {
-    "title": "The 33rd Japan National Championship",
-    "location": "mikawarinkairyokuchi",
-    "period": {
-      "from": "2021-12-18",
-      "to": "2021-12-19"
-    },
-    "jpdga": {
-      "eventId": "573"
-    },
-    "id": "the33rdjapannationalchampionship"
-  },
-  {
     "title": "The 17th Minamisoma Open",
     "location": "minamisomahoseridingpark",
     "status": "CANCELED",
@@ -227,6 +227,9 @@
   {
     "title": "The 1st Hitach Seaside Park Open",
     "location": "hitachiseasidepark",
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2021/582_map.pdf"
+    },
     "period": {
       "from": "2021-07-11",
       "to": "2021-07-11"
@@ -332,6 +335,9 @@
   {
     "title": "The 4th Gifu Hirugano Open",
     "location": "hiruganokogen",
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2021/559_map.pdf"
+    },
     "period": {
       "from": "2021-05-03",
       "to": "2021-05-04"
@@ -422,7 +428,10 @@
   {
     "title": "The 20th Chubu Open",
     "location": "mikawarinkairyokuchi",
-    "layout": "the20thchubuopen",
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2020/551_map.pdf",
+      "cbj": "the20thchubuopen"
+    },
     "period": {
       "from": "2020-12-19",
       "to": "2020-12-20"
@@ -486,7 +495,10 @@
     "id": "the34thkyushuopen",
     "title": "The 34th Kyushu Open",
     "location": "uminonakamichiseasidepark",
-    "layout": "the34thkyushuopen",
+    "layout": {
+      "official": "https://www.jpdgafukuoka.com/data/34KO2020map.jpg",
+      "cbj": "the34thkyushuopen"
+    },
     "period": {
       "from": "2020-11-28",
       "to": "2020-11-29"
@@ -630,7 +642,10 @@
     "id": "the32ndjapannationalchampionship",
     "title": "The 32nd Japan National Championship",
     "location": "maikodiscgolfpark",
-    "layout": "the32ndjapannationalchampionship",
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2020/545_map.pdf",
+      "cbj": "the32ndjapannationalchampionship"
+    },
     "period": {
       "from": "2020-09-20",
       "to": "2020-09-21"
@@ -671,7 +686,10 @@
     "id": "the23rdkansaiopen",
     "title": "The 23rd Kansai Open",
     "location": "fuminnomorihiyoshi",
-    "layout": "the23rdkansaiopen",
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2020/544_map.pdf",
+      "cbj": "the23rdkansaiopen"
+    },
     "period": {
       "from": "2020-09-05",
       "to": "2020-09-06"
@@ -4292,6 +4310,25 @@
     "id": "the17thkantoopen"
   },
   {
+    "title": "The 24th Tokyo Open",
+    "location": "tatsuminomoriseasidepark",
+    "period": {
+      "from": "2013-04-20",
+      "to": "2013-04-21"
+    },
+    "jpdga": {
+      "eventId": "245"
+    },
+    "urls": [
+      {
+        "type": "video",
+        "title": "MPO Final9",
+        "url": "https://youtu.be/dkOphFlmLLc"
+      }
+    ],
+    "id": "the24thtokyoopen"
+  },
+  {
     "title": "The 12th Aso Open",
     "location": "asominnanomori",
     "period": {
@@ -4333,25 +4370,6 @@
       }
     ],
     "id": "the1sthokkaidoopen"
-  },
-  {
-    "title": "The 24th Tokyo Open",
-    "location": "tatsuminomoriseasidepark",
-    "period": {
-      "from": "2013-04-20",
-      "to": "2013-04-21"
-    },
-    "jpdga": {
-      "eventId": "245"
-    },
-    "urls": [
-      {
-        "type": "video",
-        "title": "MPO Final9",
-        "url": "https://youtu.be/dkOphFlmLLc"
-      }
-    ],
-    "id": "the24thtokyoopen"
   },
   {
     "title": "The 7th Kiyosato-no-mori Open",
