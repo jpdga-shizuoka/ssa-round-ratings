@@ -72,4 +72,11 @@ export class EventComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.subscription?.unsubscribe();
   }
+
+  showCalendar(event: EventInfo): boolean {
+    if (!event.period?.from) {
+      return false;
+    }
+    return new Date().getTime() < new Date(event.period.from).getTime();
+  }
 }

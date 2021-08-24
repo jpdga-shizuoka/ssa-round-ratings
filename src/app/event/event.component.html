@@ -9,7 +9,14 @@
             <span *ngIf="canceled" class="canceled">CANCELED</span>
           </td>
         </tr>
-    
+
+        <tr class="element-row mat-row" *ngIf="showCalendar(event)">
+          <td class="mat-cell">iCalendar</td>
+          <td class="mat-cell">
+            <app-icalendar [event]="event"></app-icalendar>
+          </td>
+        </tr>
+        
         <tr class="element-row mat-row">
           <td class="mat-cell">{{'Course' | localize}}</td>
           <td class="mat-cell">
@@ -67,13 +74,13 @@
   </div>
 
   <div *ngIf="roundList$ | async as list">
-    <h2>{{'Round Stat' | localize}}</h2>
+    <h2>{{'Stats' | localize}}</h2>
     <app-round-list [list]="list">
     </app-round-list>
   </div>
 
   <div *ngIf="videoInfo.length">
-    <h2>{{'Video' | localize}}</h2>
+    <h2>{{'Videos' | localize}}</h2>
     <app-video-list [list]="videoInfo">
     </app-video-list>
   </div>
@@ -84,7 +91,7 @@
   </div>
 
   <div *ngIf="roundList$ | async">
-    <h2>{{'Difficulty Chart' | localize}}</h2>
+    <h2>{{'Difficulty' | localize}}</h2>
     <app-difficulty-chart [eventId]="eventId">
     </app-difficulty-chart>
   </div>
