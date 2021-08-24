@@ -4,7 +4,7 @@ import {
   BreakpointObserver, Observable, isHandset, of as observableOf
 } from '../ng-utilities';
 import { RemoteService, EventInfo, LocationInfo } from '../remote.service';
-import { getEventTitle, getLayout, makePdgaInfo, makeJpdgaInfo, makeMiscInfo } from '../libs';
+import { getEventTitle, makeMiscInfo } from '../libs';
 
 @Component({
   selector: 'app-event-detail',
@@ -15,15 +15,13 @@ export class EventDetailComponent implements OnInit {
   @Input() event!: EventInfo;
   location$?: Observable<LocationInfo>;
   miscInfo: MiscInfo[] = [];
-  pdgaInfo: MiscInfo[] = [];
-  jpdgaInfo: MiscInfo[] = [];
   isHandset$: Observable<boolean>;
 
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private readonly remote: RemoteService
+    private remote: RemoteService
   ) {
-    this.isHandset$ = isHandset(breakpointObserver);
+    this.isHandset$ = isHandset(this.breakpointObserver);
   }
 
   ngOnInit(): void {
@@ -31,18 +29,11 @@ export class EventDetailComponent implements OnInit {
       throw new Error('[event] is required');
     }
     this.location$ = this.remote.getLocation(this.event.location);
-    this.pdgaInfo = makePdgaInfo(this.event);
-    this.jpdgaInfo = makeJpdgaInfo(this.event);
     this.miscInfo = makeMiscInfo(this.event);
   }
 
   get title(): string {
     return this.event.title ? getEventTitle(this.event.title) : '';
-  }
-
-  get showPastRounds(): boolean {
-    return this.event.category !== 'local'
-        && this.event.category !== 'monthly';
   }
 
   get isMonthly(): boolean {
@@ -51,9 +42,5 @@ export class EventDetailComponent implements OnInit {
 
   get showMonthly$(): Observable<boolean> {
     return this.isMonthly ? this.isHandset$ : observableOf(false);
-  }
-
-  get layout(): string | undefined {
-    return getLayout(this.event.layout);
   }
 }

@@ -1,52 +1,22 @@
-<table class='event-detail'>
+<table class='event-detail mat-table'>
   <tbody>
-    <tr *ngIf="showMonthly$ | async">
-      <td>{{'Month' | localize}}:</td>
-      <td>{{event.schedule | schedule:'month'}}</td>
+    <tr class="element-row mat-row" *ngIf="showMonthly$ | async">
+      <td class="mat-cell">{{'Month' | localize}}</td>
+      <td class="mat-cell">{{event.schedule | schedule:'month'}}</td>
     </tr>
-    <tr>
-      <td>{{'Course' | localize}}:</td>
-      <td class="info-container">
+    <tr class="element-row mat-row">
+      <td class="mat-cell">{{'Course' | localize}}</td>
+      <td class="mat-cell info-container">
         <div *ngIf="location$ | async as location">
           <a href="{{location?.geolocation | geolink}}" target="_blank" rel="noopener">
             {{location.title | localize}}, {{location.prefecture | localize}}
           </a>
-          <a href="{{layout}}" target="_blank" rel="noopener" *ngIf="layout">
-            {{"Caddie book" | localize}}
-          </a>
         </div>
       </td>
     </tr>
-
-    <tr *ngIf="pdgaInfo.length">
-      <td>PDGA:</td>
-      <td>
-        <div class="info-container">
-          <ng-template ngFor let-info [ngForOf]="pdgaInfo">
-            <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
-              {{info.title | localize}}
-            </a>
-          </ng-template>
-        </div>
-      </td>
-    </tr>
-
-    <tr *ngIf="jpdgaInfo.length">
-      <td>JPDGA:</td>
-      <td>
-        <div class="info-container">
-          <ng-template ngFor let-info [ngForOf]="jpdgaInfo">
-            <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
-              {{info.title | localize}}
-            </a>
-          </ng-template>
-        </div>
-      </td>
-    </tr>
-
-    <tr *ngIf="miscInfo.length">
-      <td>{{'Info' | localize}}:</td>
-      <td>
+    <tr class="element-row mat-row" *ngIf="miscInfo.length">
+      <td class="mat-cell">{{'Info' | localize}}</td>
+      <td class="mat-cell">
         <div class="info-container">
           <ng-template ngFor let-info [ngForOf]="miscInfo">
             <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
@@ -56,20 +26,10 @@
         </div>
       </td>
     </tr>
-
-    <tr *ngIf="!isMonthly">
-      <td>iCalendar:</td>
-      <td>
+    <tr class="element-row mat-row" *ngIf="!isMonthly">
+      <td class="mat-cell">iCalendar</td>
+      <td class="mat-cell">
         <app-icalendar [event]="event"></app-icalendar>
-      </td>
-    </tr>
-
-    <tr *ngIf="showPastRounds">
-      <td>{{'History' | localize}}:</td>
-      <td>
-        <a routerLink="/past" [queryParams]="{search: title}" class="detail-link">
-          {{'See the Past Results' | localize}}
-        </a>
       </td>
     </tr>
   </tbody>
