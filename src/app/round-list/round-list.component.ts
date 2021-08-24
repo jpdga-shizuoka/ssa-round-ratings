@@ -1,7 +1,5 @@
-import { Component, ViewChild, Input, OnDestroy, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, Input, OnInit, AfterViewInit } from '@angular/core';
 import { MatTable } from '@angular/material/table';
-import { Observable, Subscription } from 'rxjs';
-
 import { RoundId, RoundInfo } from '../models';
 import { RemoteService } from '../remote.service';
 import { RoundListDataSource } from './round-list-datasource';
@@ -11,23 +9,22 @@ import { RoundListDataSource } from './round-list-datasource';
   templateUrl: './round-list.component.html',
   styleUrls: ['./round-list.component.css']
 })
-export class RoundListComponent implements OnDestroy, AfterViewInit {
-  @Input() list$!: Observable<RoundId[]>;
+export class RoundListComponent implements OnInit, AfterViewInit {
+  @Input() list!: RoundId[];
   @ViewChild(MatTable) table!: MatTable<RoundInfo>;
   dataSource?: RoundListDataSource;
   displayedColumns = ['title', 'holes', 'hla', 'ssa', 'td'];
-  private subscription?: Subscription;
 
   constructor(private remote: RemoteService) {}
 
-  ngAfterViewInit() {
-    this.subscription = this.list$.subscribe(list => {
-      this.dataSource = new RoundListDataSource(list, this.remote);
-      this.table.dataSource = this.dataSource!;
-    });
+  ngOnInit(): void {
+    if (!this.list) {
+      throw new Error('[list] is required');
+    }
+    this.dataSource = new RoundListDataSource(this.list, this.remote);
   }
 
-  ngOnDestroy(): void {
-    this.subscription?.unsubscribe();
+  ngAfterViewInit() {
+    this.table.dataSource = this.dataSource!;
   }
 }

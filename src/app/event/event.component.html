@@ -1,14 +1,15 @@
 <div class="app-container">
-  <h1>{{event?.title | localize}}</h1>
+  <div *ngIf="event$ | async as event">
+    <h1>{{event?.title | localize}}</h1>
     <table class="mat-table mat-elevation-z1">
       <tbody>
         <tr class="element-row mat-row">
           <td class="mat-cell">{{'Date' | localize}}</td>
           <td class="mat-cell">{{event?.period | period}}
-            <span *ngIf="isCanceled" class="canceled">CANCELED</span>
+            <span *ngIf="canceled" class="canceled">CANCELED</span>
           </td>
         </tr>
-
+    
         <tr class="element-row mat-row">
           <td class="mat-cell">{{'Course' | localize}}</td>
           <td class="mat-cell">
@@ -22,50 +23,52 @@
             </div>
           </td>
         </tr>
-
-        <tr class="element-row mat-row" *ngIf="totalPlayers && !isCanceled">
+    
+        <tr class="element-row mat-row" *ngIf="totalPlayers && !canceled">
           <td class="mat-cell">{{'Partícipant' | localize}}</td>
           <td class="mat-cell">{{totalPlayers}}</td>
         </tr>
-
-        <tr class="element-row mat-row" *ngIf="pdgaInfo.length && !isCanceled">
+    
+        <tr class="element-row mat-row" *ngIf="pdgaInfo.length && !canceled">
           <td class="mat-cell">PDGA</td>
           <td class="mat-cell">
-              <ng-template ngFor let-info [ngForOf]="pdgaInfo">
-                <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
-                  {{info.title | localize}}
-                </a>
-              </ng-template>
+            <ng-template ngFor let-info [ngForOf]="pdgaInfo">
+              <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
+                {{info.title | localize}}
+              </a>
+            </ng-template>
           </td>
         </tr>
     
-        <tr class="element-row mat-row" *ngIf="jpdgaInfo.length && !isCanceled">
+        <tr class="element-row mat-row" *ngIf="jpdgaInfo.length && !canceled">
           <td class="mat-cell">JPDGA</td>
           <td class="mat-cell">
-              <ng-template ngFor let-info [ngForOf]="jpdgaInfo">
-                <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
-                  {{info.title | localize}}
-                </a>
-              </ng-template>
+            <ng-template ngFor let-info [ngForOf]="jpdgaInfo">
+              <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
+                {{info.title | localize}}
+              </a>
+            </ng-template>
           </td>
         </tr>
     
         <tr class="element-row mat-row" *ngIf="miscInfo.length">
           <td class="mat-cell">{{'Info' | localize}}</td>
           <td class="mat-cell">
-              <ng-template ngFor let-info [ngForOf]="miscInfo">
-                <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
-                  {{info.title | localize}}
-                </a>
-              </ng-template>
+            <ng-template ngFor let-info [ngForOf]="miscInfo">
+              <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
+                {{info.title | localize}}
+              </a>
+            </ng-template>
           </td>
         </tr>
       </tbody>
-    </table>
+  </table>
 
-  <div *ngIf="!isCanceled">
+  </div>
+
+  <div *ngIf="roundList$ | async as list">
     <h2>{{'Round Stat' | localize}}</h2>
-    <app-round-list [list$]="roundList$">
+    <app-round-list [list]="list">
     </app-round-list>
   </div>
 
@@ -75,10 +78,12 @@
     </app-video-list>
   </div>
 
-  <h2>{{'History' | localize}}</h2>
-  <app-event-list [key$]="event$"></app-event-list>
+  <div *ngIf="event$ | async as event">
+    <h2>{{'History' | localize}}</h2>
+    <app-event-list [keyEvent]="event"></app-event-list>
+  </div>
 
-  <div *ngIf="!isCanceled">
+  <div *ngIf="roundList$ | async">
     <h2>{{'Difficulty Chart' | localize}}</h2>
     <app-difficulty-chart [eventId]="eventId">
     </app-difficulty-chart>

@@ -1,12 +1,21 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, Subject, Subscription } from 'rxjs';
-import { first, tap, map } from 'rxjs/operators';
+import { first, tap } from 'rxjs/operators';
 
 import { RemoteService, EventId, EventInfo, LocationInfo } from '../remote.service';
 import { getLayout, makePdgaInfo, makeJpdgaInfo, makeMiscInfo, makeVideoInfo } from '../libs';
 import { MiscInfo } from '../app-common';
 import { RoundId } from '../models';
+
+function getTotalPlayers(event: EventInfo): number {
+  if (event.players) {
+    return event.players.pro
+      + event.players.ama
+      + event.players.misc;
+  }
+  return 0;
+}
 
 @Component({
   selector: 'app-event',
@@ -15,14 +24,16 @@ import { RoundId } from '../models';
 })
 export class EventComponent implements OnInit, OnDestroy {
   eventId?: EventId;
-  event?: EventInfo;
-  event$ = new Subject<EventInfo>();
-  roundList$ = new Subject<RoundId[]>();
+  event$?: Subject<EventInfo>;
+  roundList$?: Subject<RoundId[]>;
   location$?: Observable<LocationInfo>;
   pdgaInfo: MiscInfo[] = [];
   jpdgaInfo: MiscInfo[] = [];
   miscInfo: MiscInfo[] = [];
   videoInfo: MiscInfo[] = [];
+  totalPlayers?: number;
+  layout?: string;
+  canceled = false;
   private subscription?: Subscription;
 
   constructor(
@@ -35,6 +46,8 @@ export class EventComponent implements OnInit, OnDestroy {
     this.subscription = this.route.params.subscribe(params => {
       this.eventId = params.eventId as EventId;
       if (this.eventId) {
+        this.event$ = new Subject<EventInfo>();
+        this.roundList$ = new Subject<RoundId[]>();
         this.remote.getEvent(this.eventId, 'alltime').pipe(
           tap(event => {
             this.location$ = this.remote.getLocation(event.location).pipe(first());
@@ -42,13 +55,15 @@ export class EventComponent implements OnInit, OnDestroy {
             this.jpdgaInfo = makeJpdgaInfo(event);
             this.miscInfo = makeMiscInfo(event);
             this.videoInfo = makeVideoInfo(event);
+            this.totalPlayers = getTotalPlayers(event);
+            this.layout = getLayout(event.layout);
+            this.canceled = event.status === 'CANCELED';
           })
         ).subscribe(event => {
-          this.event = event;
-          this.event$.next(event);
-          // this.event$.complete();
-          this.roundList$.next(event.rounds);
-          // this.roundList$.complete();
+          this.event$?.next(event);
+          this.event$?.complete();
+          this.roundList$?.next(event.rounds);
+          this.roundList$?.complete();
         });
       }
     });
@@ -56,32 +71,5 @@ export class EventComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.subscription?.unsubscribe();
-  }
-
-  get layout(): string | undefined {
-    return getLayout(this.event?.layout);
-  }
-
-  get totalPlayers(): number {
-    if (this.event?.players) {
-      return this.event.players.pro
-        + this.event.players.ama
-        + this.event.players.misc;
-    }
-    return 0;
-  }
-
-  get showRoundsStat(): number | undefined {
-    return this.event?.rounds?.length;
-  }
-
-  get showDifficultyChart$(): Observable<boolean> {
-    return this.roundList$.pipe(
-      map(list => list?.length > 0)
-    )
-  }
-
-  get isCanceled(): boolean {
-    return this.event?.status === 'CANCELED';
   }
 }
