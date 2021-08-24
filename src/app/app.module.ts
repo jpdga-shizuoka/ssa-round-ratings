@@ -37,7 +37,6 @@ import { RoundsTabsComponent } from './rounds-tabs/rounds-tabs.component';
 import { RoundsTableComponent } from './rounds-table/rounds-table.component';
 import { TotalPlayersComponent } from './total-players/total-players.component';
 import { VideosTableComponent } from './videos-table/videos-table.component';
-import { RoundDetailComponent } from './round-detail/round-detail.component';
 import { StatsTabsComponent } from './stats-tabs/stats-tabs.component';
 import { AboutThisSiteComponent } from './about-this-site/about-this-site.component';
 import { EventComponent } from './event/event.component';
@@ -76,7 +75,6 @@ import { EventPipe } from './event.pipe';
     ReloadComponent,
     RoundsTabsComponent,
     RoundsTableComponent,
-    RoundDetailComponent,
     AboutThisSiteComponent,
     TermsComponent,
     EventComponent,
