@@ -80,7 +80,7 @@
 
   <div *ngIf="event$ | async as event">
     <h2>{{'History' | localize}}</h2>
-    <app-event-list [keyEvent]="event"></app-event-list>
+    <app-event-list [event]="event"></app-event-list>
   </div>
 
   <div *ngIf="roundList$ | async">
