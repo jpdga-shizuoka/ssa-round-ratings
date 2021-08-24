@@ -12,7 +12,7 @@
         <div>
           <app-events-table
             [showMore]="true"
-            [limit]="3"
+            [limit]="5"
             [category]="'upcoming'"
             [displayedColumns$]="displayedColumnsUpcoming$">
           </app-events-table>
@@ -20,12 +20,12 @@
       </mat-tab>
       <mat-tab label="{{'Local' | localize}}">
         <div>
-          <app-events-table
+          <app-local-table
             [showMore]="true"
-            [limit]="3"
+            [limit]="5"
             [category]="'local'"
             [displayedColumns$]="displayedColumnsUpcoming$">
-          </app-events-table>
+          </app-local-table>
         </div>
       </mat-tab>
     </mat-tab-group>
