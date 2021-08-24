@@ -6,12 +6,17 @@
 }
 .terms-table td {
   padding: 10px;
-  border-bottom: 1px lightgray solid;
 }
 .terms-table td:first-child {
   font-weight: bold;
   min-width: 4rem;
   text-align: center;
+}
+tr.element-row:hover {
+  background: whitesmoke;
+}
+tr.element-row:active {
+  background: #efefef;
 }
 td span {
   font-weight: bold;

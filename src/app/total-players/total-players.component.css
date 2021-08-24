@@ -1,5 +1,6 @@
 .chart {
   height: 500px;
+  user-select: none;
 }
 .legend {
   padding: 8px 8px;
