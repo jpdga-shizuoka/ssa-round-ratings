@@ -1,5 +1,7 @@
+.full-width-table,
 table {
   width: 100%;
+  table-layout: fixed;
 }
 tr.element-row:hover {
   background: whitesmoke;
@@ -9,16 +11,27 @@ tr.element-row:active {
 }
 .event-detail td:first-child {
   font-weight: bold;
-  min-width: 6rem;
-}
-.detail-link {
-  margin-bottom: 7px;
+  width: 5rem;
 }
 .info-container > a:not(:last-child) {
   margin-right: 10px;
 }
+.mat-cell {
+  font-size: 13px;
+}
 @media (max-width: 414px) {
   .event-detail td:first-child {
-    min-width: 5rem;
+    width: 4rem;
+  }
+  .mat-cell {
+    font-size: 12px;
+  }
+}
+@media (max-width: 320px) {
+  .event-detail td:first-child {
+    width: 3.5rem;
+  }
+  .mat-cell {
+    font-size: 11px;
   }
 }
