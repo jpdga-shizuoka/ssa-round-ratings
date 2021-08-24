@@ -172,6 +172,18 @@
     "id": "the21sttohokuopen"
   },
   {
+    "title": "The 2nd Hitach Seaside Park Open",
+    "location": "hitachiseasidepark",
+    "period": {
+      "from": "2021-09-26",
+      "to": "2021-09-26"
+    },
+    "jpdga": {
+      "eventId": "583"
+    },
+    "id": "the2ndhitachseasideparkopen"
+  },
+  {
     "title": "The 17th Minamisoma Open",
     "location": "minamisomahoseridingpark",
     "status": "CANCELED",
