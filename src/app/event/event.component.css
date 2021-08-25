@@ -21,3 +21,6 @@ tr.element-row:active {
   color: red;
   font-weight: bolder;
 }
+.info-container > a:not(:last-child) {
+  margin-right: 10px;
+}

@@ -165,6 +165,13 @@ export function makeJpdgaInfo(event: EventInfo): MiscInfo[] {
         url: getJpdgaReport(event.jpdga.topicId)
       });
     }
+    if (event.jpdga?.photoId) {
+      info.push({
+        icon: 'camera_alt',
+        title: 'Photos',
+        url: getJpdgaPhoto(event.jpdga.photoId)
+      });
+    }
   }
   if (event.jpdga?.eventId) {
     info.push({

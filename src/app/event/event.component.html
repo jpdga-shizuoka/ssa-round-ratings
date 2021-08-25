@@ -46,7 +46,7 @@
     
         <tr class="element-row mat-row" *ngIf="pdgaInfo.length && !canceled">
           <td class="mat-cell">PDGA</td>
-          <td class="mat-cell">
+          <td class="mat-cell info-container">
             <ng-template ngFor let-info [ngForOf]="pdgaInfo">
               <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
                 {{info.title | localize}}
@@ -57,7 +57,7 @@
     
         <tr class="element-row mat-row" *ngIf="jpdgaInfo.length && !canceled">
           <td class="mat-cell">JPDGA</td>
-          <td class="mat-cell">
+          <td class="mat-cell info-container">
             <ng-template ngFor let-info [ngForOf]="jpdgaInfo">
               <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
                 {{info.title | localize}}
@@ -68,7 +68,7 @@
     
         <tr class="element-row mat-row" *ngIf="miscInfo.length">
           <td class="mat-cell">{{'Info' | localize}}</td>
-          <td class="mat-cell">
+          <td class="mat-cell info-container">
             <ng-template ngFor let-info [ngForOf]="miscInfo">
               <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
                 {{info.title | localize}}
