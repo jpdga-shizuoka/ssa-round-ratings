@@ -61,17 +61,17 @@ export function reorder(data: ChartDataExt[], id?: EventId): ChartDataExt[] {
   if (!id) {
     return data;
   }
-  let found: ChartDataExt | undefined = undefined;
+  let founds: ChartDataExt[] = [];
   const r = data.filter(item => {
     if (item.eventId === id) {
-      found = item;
+      founds.push(item);
       return false;
     } else {
       return true;
     }
   });
-  if (found != null) {
-    r.push(found);
+  if (!founds.length) {
+    return r;
   }
-  return r;
+  return r.concat(founds);
 }
