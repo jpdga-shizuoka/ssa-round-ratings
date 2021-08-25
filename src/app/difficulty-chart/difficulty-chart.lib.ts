@@ -1,6 +1,7 @@
 import { RoundInfo } from '../remote.service';
 import { LocalizeService } from '../localize.service';
 import { ChartDataExt, ChartDataResult } from './ngx-charts.interfaces';
+import { EventId } from '../models';
 
 function floor(value: number, offset: number) {
   return Math.floor(value / offset) * offset;
@@ -54,4 +55,23 @@ export function rounds2result(rounds: RoundInfo[], localize: LocalizeService): C
     },
     data
   };
+}
+
+export function reorder(data: ChartDataExt[], id?: EventId): ChartDataExt[] {
+  if (!id) {
+    return data;
+  }
+  let found: ChartDataExt | undefined = undefined;
+  const r = data.filter(item => {
+    if (item.eventId === id) {
+      found = item;
+      return false;
+    } else {
+      return true;
+    }
+  });
+  if (found != null) {
+    r.push(found);
+  }
+  return r;
 }

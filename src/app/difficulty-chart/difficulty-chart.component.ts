@@ -1,11 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { map, first } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 
 import { RemoteService } from '../remote.service';
 import { LocalizeService } from '../localize.service';
 import { calcRoundStat } from '../libs';
-import { rounds2result } from './difficulty-chart.lib';
+import { rounds2result, reorder } from './difficulty-chart.lib';
 import { ChartDataExt, BubbleData, EventId } from './ngx-charts.interfaces';
 
 @Component({
@@ -39,7 +39,6 @@ export class DifficultyChartComponent implements OnInit {
 
   ngOnInit(): void {
     this.remote.getRounds().pipe(
-      first(),
       map(rounds => rounds.filter(round => round.hla != null && round.hla)),
       map(rounds => calcRoundStat(rounds)),
       map(rounds => rounds.filter(round => round.ssa != null)),
@@ -49,7 +48,7 @@ export class DifficultyChartComponent implements OnInit {
       this.xScaleMax = result.hla.max;
       this.yScaleMin = result.ssa.min;
       this.yScaleMax = result.ssa.max;
-      this.rounds = result.data;
+      this.rounds = reorder(result.data, this.eventId);
     });
   }
 
