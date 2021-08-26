@@ -1,5 +1,6 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { Component, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Observable } from 'rxjs';
 import { EventCategory } from '../models';
 import { RemoteService, LocationInfo } from '../remote.service';
 
@@ -18,29 +19,25 @@ export interface MarkerDialogData {
   templateUrl: './marker-dialog.component.html',
   styleUrls: ['./marker-dialog.component.css']
 })
-export class MarkerDialogComponent implements OnInit {
-  public dialogRef: MatDialogRef<MarkerDialogComponent>;
-  location: LocationInfo;
+export class MarkerDialogComponent {
+  location$: Observable<LocationInfo>;
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: MarkerDialogData,
-    private readonly remote: RemoteService,
-  ) {}
-
-  ngOnInit() {
-    this.remote.getLocation(this.data.location)
-      .subscribe(location => this.location = location);
+    private readonly remote: RemoteService
+  ) {
+    this.location$ = this.remote.getLocation(this.data.location);
   }
 
-  get showEventBotton() {
-    return this.data.category === 'upcoming' || this.data.category === 'local';
+  get showEventBotton(): boolean {
+    return this.data.category === 'upcoming' || this.data.category === 'past';
   }
 
-  get showDialogBotton() {
-    return this.data.category === 'past' || this.data.category === 'monthly';
+  get showDialogBotton(): boolean {
+    return this.data.category === 'local' || this.data.category === 'monthly';
   }
 
-  get showList() {
+  get showList(): boolean {
     return this.data.category !== 'monthly';
   }
 }

@@ -2,7 +2,6 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatListModule } from '@angular/material/list';
-import { AgmCoreModule } from '@agm/core';
 
 import { EventsMapComponent } from './events-map.component';
 import { MarkerDialogComponent } from '../dialogs/marker-dialog.component';
@@ -13,20 +12,18 @@ describe('EventsMapComponent', () => {
   let fixture: ComponentFixture<EventsMapComponent>;
 
   beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
+    return TestBed.configureTestingModule({
       declarations: [
         EventsMapComponent,
         MarkerDialogComponent,
-        LocalizePipe,
-     ],
+        LocalizePipe
+      ],
       imports: [
         HttpClientModule,
         MatDialogModule,
-        MatListModule,
-        AgmCoreModule.forRoot(),
+        MatListModule
       ]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -37,6 +34,6 @@ describe('EventsMapComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    return expect(component).toBeTruthy();
   });
 });

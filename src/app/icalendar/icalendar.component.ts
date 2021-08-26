@@ -11,7 +11,7 @@ import { Calendar } from './icalendar.class';
   styleUrls: ['./icalendar.component.css']
 })
 export class IcalenderComponent implements OnInit {
-  @Input() event: EventInfo;
+  @Input() event!: EventInfo;
   url?: SafeResourceUrl;
   filename?: string;
 
@@ -22,16 +22,17 @@ export class IcalenderComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    if (this.event) {
-      this.remote
-        .getLocation(this.event.location)
-        .subscribe(location => {
-          const calendar = new Calendar(this.localize, this.event, location);
-          this.url = this.sanitizer.bypassSecurityTrustResourceUrl(
-            window.URL.createObjectURL(calendar.toBlob())
-          );
-          this.filename = `${this.event.id}.ics`;
-        });
+    if (!this.event) {
+      throw new Error('[event] is required');
     }
+    this.remote
+      .getLocation(this.event.location)
+      .subscribe(location => {
+        const calendar = new Calendar(this.localize, this.event, location);
+        this.url = this.sanitizer.bypassSecurityTrustResourceUrl(
+          window.URL.createObjectURL(calendar.toBlob())
+        );
+        this.filename = `${this.event.id}.ics`;
+      });
   }
 }

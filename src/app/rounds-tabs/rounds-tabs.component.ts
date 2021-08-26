@@ -1,63 +1,45 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Location } from '@angular/common';
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { ActivatedRoute } from '@angular/router';
-
-import { Observable, Subject } from 'rxjs';
+import { Router, ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { GeoMarker } from '../map-common';
 import { isHandset } from '../ng-utilities';
+import { RoutingTabsComponent } from '../routing-tabs/routing-tabs.component';
 
-const DISPLAYED_COLUMNS = [['event', 'hla', 'ssa'], ['year', 'event', 'round', 'hla', 'ssa']];
-const TABS_TITLE = ['Rounds', 'Location map'];
+const EVENT_COLUMNS = [['date', 'title'], ['date', 'title', 'location']];
+const ROUND_COLUMNS = [['event', 'hla', 'ssa', 'td'], ['year', 'event', 'round', 'hla', 'ssa', 'td']];
+const TABS = ['events', 'rounds', 'videos', 'locations'];
 
 @Component({
   selector: 'app-rounds-tabs',
   templateUrl: './rounds-tabs.component.html',
   styleUrls: ['./rounds-tabs.component.css']
 })
-export class RoundsTabsComponent implements OnInit {
+export class RoundsTabsComponent extends RoutingTabsComponent {
   isHandset$: Observable<boolean>;
-  markerSelected: Subject<GeoMarker>;
-  selectedTab = 0;
 
   constructor(
-    private route: ActivatedRoute,
-    breakpointObserver: BreakpointObserver,
+    router: Router,
+    location: Location,
+    route: ActivatedRoute,
+    breakpointObserver: BreakpointObserver
   ) {
+    super(router, route, location);
+    this.tabs = TABS;
     this.isHandset$ = isHandset(breakpointObserver);
   }
 
-  ngOnInit() {
-    this.markerSelected = new Subject<GeoMarker>();
-    switch (this.route.snapshot.url[1]?.path) {
-      case 'video':
-        this.selectedTab = 1;
-        break;
-      case 'map':
-        this.selectedTab = 2;
-        break;
-      default:
-        this.selectedTab = 0;
-    }
-  }
-
-  get displayedColumns$(): Observable<string[]> {
+  get eventsColumns$(): Observable<string[]> {
     return this.isHandset$.pipe(
-      map(hs => DISPLAYED_COLUMNS[hs ? 0 : 1])
+      map(hs => EVENT_COLUMNS[hs ? 0 : 1])
     );
   }
 
-  get tableTitle() {
-    return TABS_TITLE[0];
-  }
-
-  get mapTitle() {
-    return TABS_TITLE[1];
-  }
-
-  onMarkerSelected(marker: GeoMarker) {
-    this.markerSelected.next(marker);
-    this.selectedTab = 0;
+  get roundsColumns$(): Observable<string[]> {
+    return this.isHandset$.pipe(
+      map(hs => ROUND_COLUMNS[hs ? 0 : 1])
+    );
   }
 }

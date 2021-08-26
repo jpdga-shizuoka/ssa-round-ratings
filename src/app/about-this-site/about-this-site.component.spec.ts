@@ -10,17 +10,16 @@ describe('AboutThisSiteComponent', () => {
   let fixture: ComponentFixture<AboutThisSiteComponent>;
 
   beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
+    return TestBed.configureTestingModule({
       declarations: [
         AboutThisSiteComponent,
-        LocalizePipe,
+        LocalizePipe
       ],
       imports: [
         MatIconModule,
-        MatCardModule,
+        MatCardModule
       ]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -30,6 +29,6 @@ describe('AboutThisSiteComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    return expect(component).toBeTruthy();
   });
 });

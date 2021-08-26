@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
 
-export type EventCategory = 'upcoming' | 'past' | 'local' | 'monthly' | 'video';
+export type EventCategory = 'alltime' | 'upcoming' | 'past' | 'local' | 'monthly' | 'video';
 export type EventId = string;
 export type RoundId = string;
 export type LocationId = string;
@@ -9,6 +9,15 @@ export interface Period {
   to: string;
 }
 export type GeoPosition = [number, number];
+
+export interface LocationSearch {
+  category: EventCategory;
+  key: string;
+}
+
+export interface EventGo {
+  id: EventId;
+}
 
 export interface LocationInfo {
   id: LocationId;
@@ -40,6 +49,11 @@ export interface Players {
   misc: number;
 }
 
+export interface Layouts {
+  official?: string;
+  cbj?: string;
+}
+
 export interface EventInfo {
   id: EventId;
   title?: string;
@@ -54,7 +68,8 @@ export interface EventInfo {
   category?: string;
   schedule?: Schedule;
   players?: Players;
-  layout?: string;
+  layout?: Layouts;
+  rounds?: RoundId[];
 }
 
 export interface VideoInfo {
@@ -94,6 +109,7 @@ export interface RoundInfo extends RoundInfoBase {
   locationTitle?: string;
   event$?: Observable<EventInfo>;
   ssa?: number;         // Scratch Scoring Average
+  difficulty?: number;
   category?: string;    // SSA Range Category
   weight?: number;
   offset?: number;

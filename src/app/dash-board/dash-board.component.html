@@ -1,18 +1,18 @@
 <div class="app-container">
-  <div>
+  <section>
     <app-preface>
     </app-preface>
-  </div>
+  </section>
   <div>
     <h4>
       <a routerLink="/events/upcoming"><mat-icon>events</mat-icon>{{'Schedule' | localize}}</a>
     </h4>
-    <mat-tab-group class="mat-elevation-z2">
+    <mat-tab-group class="mat-elevation-z1">
       <mat-tab label="{{'Official' | localize}}">
         <div>
           <app-events-table
             [showMore]="true"
-            [limit]="3"
+            [limit]="5"
             [category]="'upcoming'"
             [displayedColumns$]="displayedColumnsUpcoming$">
           </app-events-table>
@@ -20,12 +20,12 @@
       </mat-tab>
       <mat-tab label="{{'Local' | localize}}">
         <div>
-          <app-events-table
+          <app-local-table
             [showMore]="true"
-            [limit]="3"
+            [limit]="5"
             [category]="'local'"
             [displayedColumns$]="displayedColumnsUpcoming$">
-          </app-events-table>
+          </app-local-table>
         </div>
       </mat-tab>
     </mat-tab-group>
@@ -35,13 +35,24 @@
     <h4>
       <a routerLink="/past"><mat-icon>table_chart</mat-icon>{{'Results' | localize}}</a>
     </h4>
-    <mat-tab-group class="mat-elevation-z2">
-      <mat-tab label="{{'Results' | localize}}">
+    <mat-tab-group class="mat-elevation-z1">
+      <mat-tab label="{{'Events' | localize}}">
+        <div>
+          <app-events-table
+            [category]="'past'"
+            [showMore]="true"
+            [limit]="5"
+            [displayedColumns$]="eventsColumnsPast$">
+          </app-events-table>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="{{'Stats' | localize}}">
         <div>
           <app-rounds-table
             [showMore]="true"
             [limit]="5"
-            [displayedColumns$]="displayedColumnsPast$">
+            [displayedColumns$]="roundsColumnsPast$">
           </app-rounds-table>
         </div>
       </mat-tab>
@@ -49,7 +60,6 @@
         <div>
           <app-videos-table
             [limit]="5"
-            [category]="'past'"
             [showMore]="true">
           </app-videos-table>
         </div>

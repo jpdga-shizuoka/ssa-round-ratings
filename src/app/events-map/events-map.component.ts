@@ -1,9 +1,10 @@
-import { Component, Input, Output, EventEmitter, OnInit, ElementRef } from '@angular/core';
-import { Observable, BehaviorSubject, from } from 'rxjs';
+import { Component, Input, Output, EventEmitter, OnInit, ElementRef, OnDestroy } from '@angular/core';
+import { Router } from '@angular/router';
+import { Observable, BehaviorSubject, from, Subscription } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
 
 import { GeoMarker } from '../map-common';
-import { EventCategory } from '../models';
+import { EventCategory, LocationSearch, EventGo } from '../models';
 import { MarkerDialogComponent } from '../dialogs/marker-dialog.component';
 import { environment } from '../../environments/environment';
 import { RemoteService, EventInfo, LocationInfo } from '../remote.service';
@@ -14,10 +15,10 @@ import { GoogleMapsApiService } from '../googlemapsapi.service';
   templateUrl: './events-map.component.html',
   styleUrls: ['./events-map.component.css']
 })
-export class EventsMapComponent implements OnInit {
-  @Input() category: EventCategory;
-  @Output() markerSelected = new EventEmitter<GeoMarker>();
-  private events: EventInfo[];
+export class EventsMapComponent implements OnInit, OnDestroy {
+  @Input() category!: EventCategory;
+  @Output() eventGo = new EventEmitter<EventGo>();
+  @Output() locationSearch = new EventEmitter<LocationSearch>();
   apiLoaded$: Observable<boolean>;
   mapSource$: BehaviorSubject<GeoMarker[]> = new BehaviorSubject<GeoMarker[]>([]);
   loading = true;
@@ -27,28 +28,40 @@ export class EventsMapComponent implements OnInit {
     minZoom: 4,
     disableDefaultUI: true
   };
+  private subscription?: Subscription;
 
-  get height() {
+  get height(): string {
     const height = getBodyHeight() - getHeaderHeight() - getFooterHeight() - getMatHeaderHeight();
     return `${height}px`;
   }
 
-  get width() {
+  get width(): string {
     const element = this.el.nativeElement.querySelector('#googlemap');
+    if (!element) {
+      return '';
+    }
     const width = element.getBoundingClientRect().width;
     return `${width}px`;
   }
 
   constructor(
+    private router: Router,
     private el: ElementRef<Element>,
     private remote: RemoteService,
     public dialog: MatDialog,
     private googleMapsApi: GoogleMapsApiService
   ) {
+    this.apiLoaded$ = this.googleMapsApi.load$();
   }
 
   ngOnInit(): void {
-    this.apiLoaded$ = this.googleMapsApi.load$();
+    if (!this.category) {
+      throw new Error('[category] is required');
+    }
+  }
+
+  ngOnDestroy(): void {
+    this.subscription?.unsubscribe();
   }
 
   onTilesloaded(): void {
@@ -58,47 +71,60 @@ export class EventsMapComponent implements OnInit {
   onMarkerClick(event: google.maps.MapMouseEvent): void {
     const markers = this.mapSource$.getValue();
     const marker = markers.find(m => event.latLng.equals(new google.maps.LatLng(m.position.lat, m.position.lng)));
+    if (!marker) {
+      return;
+    }
     const location = marker.location;
-    const eventsName: string[] = [];
+    const events: EventInfo[] = [];
     for (const m of markers) {
       if (m.location === location) {
-        eventsName.push(m.title);
+        events.push({
+          id: m.eventId,
+          location: m.location,
+          title: m.title
+        });
       }
     }
-    this.openDialog(this.category, marker, eventsName);
+    this.subscription = this.openDialog(this.category, marker, events);
   }
 
-  openDialog(cat: EventCategory, marker: GeoMarker, eventNames: string[]): void {
-    this.dialog.open(MarkerDialogComponent, {
+  private openDialog(cat: EventCategory, marker: GeoMarker, events: EventInfo[]) {
+    return this.dialog.open(MarkerDialogComponent, {
       width: '400px',
       data: {
         category: cat,
         position: marker.position,
         location: marker.location,
-        events: eventNames
+        events
       }
-    })
-    .afterClosed().subscribe(result => {
-      if (!result) {
+    }).afterClosed().subscribe(event => {
+      if (!event) {
         return;
       }
-      const markers = this.mapSource$.getValue();
-      const mk = markers.find(m => (m.title === result || m.location === result));
-      this.markerSelected.emit(mk);
+      if ((this.category === 'upcoming' || this.category === 'past') && 'id' in event) {
+        this.eventGo.emit({
+          id: event.id
+        });
+      } else if ('category' in event) {
+        this.locationSearch.emit({
+          category: this.category,
+          key: event.location
+        });
+      }
     });
   }
 
   private loadEvents() {
     this.remote.getEvents(this.category).subscribe(
-      events => this.events = events,
-      err => console.log(err),
-      () => this.loadMarkers()
+      events => {
+        this.loadMarkers(events);
+      }
     );
   }
 
-  private loadMarkers() {
+  private loadMarkers(events: EventInfo[]) {
     const markers: GeoMarker[] = [];
-    from(this.events).subscribe(
+    from(events).subscribe(
       event => this.remote.getLocation(event.location).subscribe(
         location => markers.push(makeMarker(event, location))
       ),
@@ -118,8 +144,9 @@ function makeMarker(event: EventInfo, location: LocationInfo): GeoMarker {
       lat: location.geolocation[0],
       lng: location.geolocation[1]
     },
+    eventId: event.id,
     location: location.id,
-    title: event.title
+    title: event.title ?? ''
   };
 }
 

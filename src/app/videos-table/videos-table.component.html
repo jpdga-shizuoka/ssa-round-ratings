@@ -30,7 +30,7 @@
     <ng-container matColumnDef="more">
       <td mat-footer-cell *matFooterCellDef colspan="3">
         <p class="more">
-          <a mat-list-item routerLink="/past/video">{{'More' | localize:'menu'}}...</a>
+          <a mat-list-item routerLink="/past/videos">{{'More' | localize:'menu'}}...</a>
         </p>
       </td>
     </ng-container>
@@ -47,7 +47,7 @@
   </table>
 
   <mat-paginator #paginator *ngIf="!isMinimum"
-      [length]="dataSource?.data.length"
+      [length]="dataSource?.data?.length"
       [pageIndex]="0"
       [pageSize]="pageSizeOptions[0]"
       [pageSizeOptions]="pageSizeOptions">

@@ -12,19 +12,18 @@ describe('TotalPlayersComponent', () => {
   let fixture: ComponentFixture<TotalPlayersComponent>;
 
   beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+    return TestBed.configureTestingModule({
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
       declarations: [
         TotalPlayersComponent,
-        LocalizePipe,
+        LocalizePipe
       ],
       imports: [
         NoopAnimationsModule,
         NgxChartsModule,
-        HttpClientModule,
+        HttpClientModule
       ]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -34,6 +33,6 @@ describe('TotalPlayersComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    return expect(component).toBeTruthy();
   });
 });

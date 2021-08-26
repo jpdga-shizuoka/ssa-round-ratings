@@ -1,67 +1,100 @@
 import {
-  Component, OnInit, AfterViewInit, OnDestroy, Input, ViewChild
+  Component, OnInit, OnDestroy, Input, ViewChild, AfterViewInit
 } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { MatTable } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
-import { Observable, Subject, Subscription } from 'rxjs';
+import { MatSort } from '@angular/material/sort';
+import { Observable, Subscription } from 'rxjs';
 
-import { GeoMarker } from '../map-common';
 import { EventCategory } from '../models';
-import { detailExpand } from '../animations';
 import { RemoteService } from '../remote.service';
 import { EventsDataSource, EventInfo } from './events-datasource';
+import { title2name } from '../libs';
 
 @Component({
   selector: 'app-events-table',
   templateUrl: './events-table.component.html',
-  styleUrls: ['./events-table.component.css'],
-  animations: [detailExpand],
+  styleUrls: ['./events-table.component.css']
 })
 export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
-  @Input() displayedColumns$: Observable<string[]>;
-  @Input() markerSelected$: Subject<GeoMarker>;
-  @Input() category: EventCategory;
+  @Input() displayedColumns$!: Observable<string[]>;
+  @Input() category!: EventCategory;
   @Input() showMore = false;
-  @Input() limit: number;
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  dataSource: EventsDataSource;
-  expandedElement: EventInfo | null;
-  showDetail = false;
+  @Input() limit?: number;
+  @ViewChild(MatTable) table!: MatTable<EventInfo>;
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
+  search = '';
+  dataSource!: EventsDataSource;
+  expandedElement?: EventInfo;
   pageSizeOptions = [10, 20, 50, 100];
-  private subscription: Subscription;
+  private subscription?: Subscription;
 
-  constructor(private readonly remote: RemoteService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private readonly remote: RemoteService
+  ) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.dataSource = new EventsDataSource(this.remote, this.category, this.limit);
-    if (this.markerSelected$) {
-      this.subscription = this.markerSelected$.subscribe(
-        marker => this.onMarkerSelected(marker)
-      );
+
+    if (!this.displayedColumns$) {
+      throw new Error('[displayedColumns$] is required');
     }
+    if (!this.category) {
+      throw new Error('[category] is required');
+    }
+    this.subscription = this.route.queryParams.subscribe(params => {
+      this.updateSearch(params.location);
+    });
   }
 
-  ngAfterViewInit() {
+  ngAfterViewInit(): void {
+    this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
+    this.dataSource.sortingDataAccessor = (item, property) => {
+      switch (property) {
+        case 'title':
+          return title2name(item.title);
+        case 'date':
+          return item.period?.from ?? '';
+        default: {
+          const t = item as unknown as { [property: string]: string | number };
+          return t[property];
+        }
+      }
+    };
+    this.table.dataSource = this.dataSource;
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.subscription?.unsubscribe();
   }
 
-  get loading() { return this.dataSource.loading; }
+  get pageSize(): number {
+    return this.category === 'monthly' ? this.pageSizeOptions[1] : this.pageSizeOptions[0];
+  }
+
+  get loading(): boolean { return this.dataSource?.loading ?? true; }
+
   get isMinimum(): boolean {
-    return this.showMore && this.limit <= this.pageSizeOptions[0];
+    return this.showMore && !!this.limit && this.limit <= this.pageSizeOptions[0];
   }
 
-  getRawClass(event: EventInfo) {
-    return {
-      canceled: this.isCanceled(event),
-      'event-element-row': true,
-      'event-expanded-row': this.isDetailExpand(event)
-    };
+  get link(): string {
+    switch (this.category) {
+      case 'upcoming':
+        return '/schedule/events';
+      case 'local':
+        return '/local/events';
+      default:
+        return '/past/events';
+    }
   }
 
-  isCanceled(event: EventInfo) {
+  isCanceled(event: EventInfo): boolean {
     return event.status === 'CANCELED';
   }
 
@@ -81,40 +114,23 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
     return true;
   }
 
-  onRawClicked(event: EventInfo) {
-    this.expandedElement = this.isDetailExpand(event) ? null : event;
+  onRawClicked(event: EventInfo): void {
+    this.router.navigate(['/event', event.id]);
   }
 
-  private onMarkerSelected(marker: GeoMarker) {
-    const found = this.dataSource.data.find(e => {
-      return e.location === marker.location
-      && (e.title ? e.title === marker.title : true);
-    });
-    if (!found) {
+  applyFilter(filterValue: string): void {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
+    this.search = filterValue;
+  }
+
+  private updateSearch(query?: string) {
+    if (!query) {
       return;
     }
-    this.expandEvent(found);
-  }
-
-  private expandEvent(event: EventInfo) {
-    const position = this.dataSource.data.indexOf(event);
-    if (position < 0) {
-      return;
-    }
-    const pageNumber = Math.floor(position / this.paginator.pageSize);
-    this.goToPage(pageNumber);
-    this.expandedElement = event;
-  }
-
-  /**
-   * https://github.com/angular/components/issues/7615#issuecomment-358620095
-   */
-  private goToPage(pageNumber) {
-    this.paginator.pageIndex = pageNumber;
-    this.paginator.page.next({
-         pageIndex: pageNumber,
-         pageSize: this.paginator.pageSize,
-         length: this.paginator.length
-    });
+    this.dataSource.filter = query;
+    this.search = query;
   }
 }

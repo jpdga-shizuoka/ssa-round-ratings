@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { name2key, event2key } from './libs/event.lib';
 
 import { environment } from '../environments/environment';
 import EVENT from '../assets/local/event-aliase-dictionary.json';
@@ -10,34 +11,28 @@ export type Language = 'global' | 'local';
 export const GLOBAL = 'global' as Language;
 export const LOCAL = 'local' as Language;
 
-const REMOVE_PATERN = /[ \-\.\,\(\)]/g;
+type Dictionary = { [string: string]: string; };
 const DICTIONARIES = [
-  EVENT,
-  LOCATION,
-  MENU,
-  PREFECTURE,
+  EVENT as Dictionary,
+  LOCATION as Dictionary,
+  MENU as Dictionary,
+  PREFECTURE as Dictionary
 ];
 export type LocalizationCategory = 'event' | 'location' | 'menu' | 'prefecture';
 
-interface EventParts {
-  count: number;
-  key: string;
-}
-
 interface LocalizeTable {
-  distanseFromMarkerToGoal?: (distanse: string, marker: string) => string;
   aliase2title?: (count: number, aliase: string) => string;
 }
 const LOCALIZE_TABLE = {} as LocalizeTable;
+const defaultLang = environment.language ?? 'en';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LocalizeService {
-
   language = LOCAL;
 
-  get isGlobal() {
+  get isGlobal(): boolean {
     return this.language === GLOBAL;
   }
 
@@ -46,7 +41,10 @@ export class LocalizeService {
   }
 
   transform(value?: string, lc?: LocalizationCategory): string {
-    if (!value || this.isGlobal) {
+    if (!value) {
+      return '';
+    }
+    if (this.isGlobal) {
       return value;
     }
     let result = value;
@@ -64,17 +62,9 @@ export class LocalizeService {
     }
   }
 
-  distanseFromMarkerToGoal(distanse: string, marker: string) {
-    if (this.isGlobal || !LOCALIZE_TABLE.distanseFromMarkerToGoal) {
-      return `${distanse} to goal from the ${marker.toLowerCase()}`;
-    } else {
-      return LOCALIZE_TABLE.distanseFromMarkerToGoal(distanse, marker);
-    }
-  }
-
-  toggleLanguage() {
+  toggleLanguage(): void {
     this.language = this.isGlobal ? LOCAL : GLOBAL;
-    document.documentElement.lang = this.language === GLOBAL ? 'en' : environment.language;
+    document.documentElement.lang = this.language === GLOBAL ? 'en' : defaultLang;
   }
 }
 
@@ -94,57 +84,40 @@ function getDictionaries(lc?: LocalizationCategory) {
 }
 
 function prepareLocals() {
-  Object.keys(environment.localize)
-    .forEach(name => LOCALIZE_TABLE[name]
-      = new Function(...environment.localize[name]));
+  if (!environment.localize) {
+    return;
+  }
+  const localize = environment.localize;
+  Object.keys(localize).forEach(key => {
+    switch (key) {
+      case 'aliase2title': {
+        const aliase2title = localize.aliase2title;
+        if (aliase2title) {
+          // @todo
+          // eslint-disable-next-line no-new-func, @typescript-eslint/no-implied-eval
+          LOCALIZE_TABLE.aliase2title = new Function(...aliase2title) as (count: number, aliase: string) => string;
+        }
+      }
+    }
+  });
 }
 
 function event2local(eventName: string): string {
+  const Event = EVENT as Dictionary;
   const parts = event2key(eventName);
   if (!parts) {
-    const title = EVENT[name2key(eventName)];
-    return title ? title : eventName;
+    const title = Event[name2key(eventName)];
+    return !title ? eventName : title;
   }
-  const aliase = EVENT[parts.key];
+  const aliase = Event[parts.key];
   if (!aliase) {
     return eventName;
   }
   if (parts.count == null) {
     return aliase;
   }
+  if (!LOCALIZE_TABLE.aliase2title) {
+    return eventName;
+  }
   return LOCALIZE_TABLE.aliase2title(parts.count, aliase);
-}
-
-function name2key(name: string): string {
-  return name.trim().toLowerCase().replace(REMOVE_PATERN, '');
-}
-
-function event2key(name?: string): EventParts | undefined {
-  if (!name) {
-    return undefined;
-  }
-  const n = name.trim().toLowerCase();
-  const eventName = /the (\d+)(st|nd|rd|th|) (.+)/;
-  const altEventName = /the (.+)/;
-
-  let results = n.match(eventName);
-  if (results == null) {
-    results = n.match(altEventName);
-    if (results == null) {
-      return undefined;
-    }
-    if (results.length !== 2) {
-      return undefined;
-    }
-    return {
-      count: undefined,
-      key: results[1].replace(REMOVE_PATERN, '')
-    };
-  } else if (results.length !== 4) {
-    return undefined;
-  }
-  return {
-    count: parseInt(results[1], 10),
-    key: results[3].replace(REMOVE_PATERN, '')
-  };
 }

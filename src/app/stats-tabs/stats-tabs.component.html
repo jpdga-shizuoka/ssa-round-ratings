@@ -1,6 +1,18 @@
-<mat-tab-group class="mat-elevation-z2 app-container">
+<mat-tab-group class="mat-elevation-z1 app-container" dynamicHeight
+  [(selectedIndex)]="selectedTab"
+  (selectedTabChange)=onSelectedTabChange($event)>
+    <mat-tab label="{{'Difficulty' | localize}}">
+      <ng-template matTabContent>
+        <app-difficulty-chart>
+        </app-difficulty-chart>
+        <app-terms></app-terms>
+      </ng-template>
+    </mat-tab>
+
   <mat-tab label="{{'Anual Total Players' | localize}}">
-    <app-total-players>
-    </app-total-players>
+    <ng-template matTabContent>
+      <app-total-players>
+      </app-total-players>
+    </ng-template>
   </mat-tab>
 </mat-tab-group>

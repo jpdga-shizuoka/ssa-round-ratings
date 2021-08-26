@@ -1,0 +1,10 @@
+.chart {
+  margin: 10px 5px;
+  overflow-x: auto;
+  touch-action: manipulation;
+  user-select: none;
+}
+ngx-charts-bubble-chart {
+  width: 630px;
+  height: 480px;
+}

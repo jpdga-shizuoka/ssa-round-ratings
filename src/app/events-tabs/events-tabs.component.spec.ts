@@ -2,9 +2,8 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { Router } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
@@ -28,15 +27,13 @@ import { SchedulePipe } from '../schedule.pipe';
 import { PeriodPipe } from '../period.pipe';
 import { EventPipe } from '../event.pipe';
 
-import { AgmCoreModule } from '@agm/core';
-
 describe('EventsTabsComponent', () => {
   let component: EventsTabsComponent;
   let fixture: ComponentFixture<EventsTabsComponent>;
 
-  beforeEach(waitForAsync (() => {
-    TestBed.configureTestingModule({
-      schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+  beforeEach(waitForAsync(() => {
+    return TestBed.configureTestingModule({
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
       declarations: [
         EventsTabsComponent,
         EventsTableComponent,
@@ -48,11 +45,11 @@ describe('EventsTabsComponent', () => {
         GeolinkPipe,
         SchedulePipe,
         PeriodPipe,
-        EventPipe,
+        EventPipe
       ],
       imports: [
         RouterTestingModule.withRoutes(
-          [{path: 'events/local', component: EventsTabsComponent}]
+          [{ path: 'events/local', component: EventsTabsComponent }]
         ),
         NoopAnimationsModule,
         HttpClientModule,
@@ -64,30 +61,27 @@ describe('EventsTabsComponent', () => {
         MatBottomSheetModule,
         MatFormFieldModule,
         MatInputModule,
-        MatDialogModule,
-        AgmCoreModule.forRoot(),
+        MatDialogModule
       ],
       // https://gist.github.com/benjamincharity/3d25cd2c95b6ecffadb18c3d4dbbd80b
       providers: [{
         provide: ActivatedRoute,
         useValue: {
           snapshot: {
-            url: [{path: 'events'}, {path: 'local'}]
+            url: [{ path: 'events' }, { path: 'local' }]
           }
         }
       }]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
-  beforeEach(async () => {
-      const router: Router = TestBed.inject(Router);
-      fixture = TestBed.createComponent(EventsTabsComponent);
-      fixture.detectChanges();
+  beforeEach(() => {
+    fixture = TestBed.createComponent(EventsTabsComponent);
+    fixture.detectChanges();
   });
 
   it('should create', () => {
     component = fixture.componentInstance;
-    expect(component).toBeTruthy();
+    return expect(component).toBeTruthy();
   });
 });

@@ -6,11 +6,10 @@ import { LocalizeService } from './localize.service';
   name: 'locationPrint'
 })
 export class LocationPipe implements PipeTransform {
-
   constructor(private readonly localize: LocalizeService) {}
 
-  transform(location: LocationInfo, format: string): string {
-    if (!location) {
+  transform(location?: LocationInfo, format?: string): string {
+    if (!location || !format) {
       return '';
     }
     if (format === 'title-region') {

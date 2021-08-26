@@ -1,17 +1,27 @@
 [
   {
     "event": "the4thgifuhiruganoopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2021-05-03",
-    "hla": 96.5,
+    "hla": 97,
     "holes": 18,
     "eventTitle": "The 4th Gifu Hirugano Open",
     "id": "the4thgifuhiruganoopen.rd1rd2rd3",
-    "locationTitle": "Hirugano Kogen"
+    "locationTitle": "Hirugano Kogen",
+    "ratings": {
+      "player1": {
+        "score": 45,
+        "rating": 1062
+      },
+      "player2": {
+        "score": 64,
+        "rating": 876
+      }
+    }
   },
   {
     "event": "the20thchubuopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2020-12-19",
     "hla": 103,
     "holes": 18,
@@ -46,7 +56,7 @@
       }
     },
     "eventTitle": "The 34th Kyushu Open",
-    "id": "the34thkyushuopen.rd1rd2",
+    "id": "the34thkyushuopen.rd2",
     "locationTitle": "Umino-Nakamichi Seaside Park"
   },
   {
@@ -66,12 +76,12 @@
       }
     },
     "eventTitle": "The 34th Kyushu Open",
-    "id": "the34thkyushuopen.rd1rd2",
+    "id": "the34thkyushuopen.rd1",
     "locationTitle": "Umino-Nakamichi Seaside Park"
   },
   {
     "event": "the16thkyotoclassic",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2020-11-21",
     "hla": 97,
     "holes": 18,
@@ -91,7 +101,7 @@
   },
   {
     "event": "the32ndjapannationalchampionship",
-    "round": "Rd1Rd2Rd3",
+    "round": "Rd1,2,3",
     "date": "2020-09-20",
     "hla": 132,
     "holes": 18,
@@ -111,7 +121,7 @@
   },
   {
     "event": "the23rdkansaiopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2020-09-06",
     "hla": 109,
     "holes": 18,
@@ -130,35 +140,8 @@
     "locationTitle": "Fumin-no-Mori Hiyoshi"
   },
   {
-    "event": "the16thminamisomaopen",
-    "date": "2020-05-03",
-    "round": "CANCELED",
-    "holes": 18,
-    "eventTitle": "The 16th Minamisoma Open",
-    "id": "the16thminamisomaopen.canceled",
-    "locationTitle": "Minamisoma Hose Riding Park"
-  },
-  {
-    "event": "the18thsagaopen",
-    "date": "2020-04-11",
-    "round": "CANCELED",
-    "holes": 18,
-    "eventTitle": "The 18th Saga Open",
-    "id": "the18thsagaopen.canceled",
-    "locationTitle": "Yoshinogari Historical Park"
-  },
-  {
-    "event": "the3rdmiyagimichinokuopen",
-    "round": "CANCELED",
-    "date": "2020-03-21",
-    "holes": 18,
-    "eventTitle": "The 3rd Miyagi Michinoku Open",
-    "id": "the3rdmiyagimichinokuopen.canceled",
-    "locationTitle": "Michinoku Park"
-  },
-  {
     "event": "the2020nationaldoubleschampionship",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2020-03-01",
     "hla": 83,
     "holes": 18,
@@ -168,7 +151,7 @@
   },
   {
     "event": "the9thokinawaopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2020-02-15",
     "hla": 99,
     "holes": 18,
@@ -188,7 +171,7 @@
   },
   {
     "event": "the6thkagoshimaopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2020-01-26",
     "hla": 100,
     "holes": 18,
@@ -208,7 +191,7 @@
   },
   {
     "event": "the2020nationalteamchampionship",
-    "round": "Rd1,2,3,4,5",
+    "round": "1,2,3,4,5",
     "date": "2020-01-12",
     "hla": 82,
     "holes": 12,
@@ -218,7 +201,7 @@
   },
   {
     "event": "the19thchubuopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2019-12-14",
     "hla": 104,
     "holes": 18,
@@ -258,7 +241,7 @@
   },
   {
     "event": "the33rdkyushuopen",
-    "round": "Rd2,Rd3()",
+    "round": "Rd2,3()",
     "date": "2019-11-30",
     "holes": 18,
     "ratings": {
@@ -277,7 +260,7 @@
   },
   {
     "event": "the15thkyotoclassic",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2019-11-16",
     "holes": 18,
     "ratings": {
@@ -296,7 +279,7 @@
   },
   {
     "event": "the31stshowakinenparkopen",
-    "round": "Rd1,Rd2",
+    "round": "Rd1,2",
     "date": "2019-11-02",
     "holes": 27,
     "eventTitle": "The 31st Showa Kinen Park Open",
@@ -325,7 +308,7 @@
   },
   {
     "event": "the19thtohokuopen",
-    "round": "Rd2,Rd3",
+    "round": "Rd2,3",
     "date": "2019-10-13",
     "hla": 93,
     "holes": 18,
@@ -345,7 +328,7 @@
   },
   {
     "event": "the4thmihoopen",
-    "round": "Rd1,Rd2",
+    "round": "Rd1,2",
     "date": "2019-09-28",
     "hla": 63,
     "holes": 18,
@@ -375,7 +358,7 @@
   },
   {
     "event": "the31stjapannationalchampionship",
-    "round": "Rd1,Rd2",
+    "round": "Rd1,2",
     "date": "2019-09-22",
     "hla": 121,
     "holes": 18,
@@ -395,7 +378,7 @@
   },
   {
     "event": "the22ndkansaiopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2019-08-31",
     "hla": 99,
     "holes": 18,
@@ -415,7 +398,7 @@
   },
   {
     "event": "the8thhiruganokogentournament",
-    "round": "Rd1,Rd2",
+    "round": "Rd1,2",
     "date": "2019-08-25",
     "hla": 90,
     "holes": 18,
@@ -425,7 +408,7 @@
   },
   {
     "event": "the14thmichinokuopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2019-08-11",
     "hla": 96,
     "holes": 18,
@@ -445,7 +428,7 @@
   },
   {
     "event": "the7thasiachampionship",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2019-08-03",
     "hla": 122,
     "holes": 18,
@@ -465,7 +448,7 @@
   },
   {
     "event": "the23rdkantoopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2019-07-14",
     "hla": 109,
     "holes": 18,
@@ -485,7 +468,7 @@
   },
   {
     "event": "the8thhokkaidoopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2019-06-29",
     "hla": 113,
     "holes": 18,
@@ -505,7 +488,7 @@
   },
   {
     "event": "the14thmastersnationalchampionship",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2019-06-22",
     "hla": 75,
     "holes": 18,
@@ -525,7 +508,7 @@
   },
   {
     "event": "the21stnipponopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2019-05-25",
     "hla": 96,
     "holes": 18,
@@ -545,7 +528,7 @@
   },
   {
     "event": "the14thkiyosatonomoriopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2019-05-18",
     "hla": 81,
     "holes": 18,
@@ -565,7 +548,7 @@
   },
   {
     "event": "the2ndgifuhiruganoopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2019-05-04",
     "hla": 121,
     "holes": 18,
@@ -585,7 +568,7 @@
   },
   {
     "event": "the15thminamisomaopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2019-05-04",
     "hla": 96,
     "holes": 18,
@@ -595,7 +578,7 @@
   },
   {
     "event": "the17thsagaopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2019-04-13",
     "hla": 91,
     "holes": 18,
@@ -614,18 +597,8 @@
     "locationTitle": "Yoshinogari Historical Park"
   },
   {
-    "event": "the1stpwbfcup",
-    "round": "CANCELED",
-    "hla": 125,
-    "date": "2019-04-13",
-    "holes": 18,
-    "eventTitle": "The 1st PWBF Cup",
-    "id": "the1stpwbfcup.canceled",
-    "locationTitle": "PICA Activity Park"
-  },
-  {
     "event": "the2ndmiyagimichinokuopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2019-03-23",
     "holes": 18,
     "ratings": {
@@ -644,7 +617,7 @@
   },
   {
     "event": "the2019nationaldoubleschampionship",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2019-03-02",
     "hla": 83,
     "holes": 18,
@@ -654,7 +627,7 @@
   },
   {
     "event": "the8thokinawaopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2019-02-16",
     "hla": 92,
     "holes": 18,
@@ -674,7 +647,7 @@
   },
   {
     "event": "the5thkagoshimaopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2019-01-26",
     "hla": 101,
     "holes": 18,
@@ -704,7 +677,7 @@
   },
   {
     "event": "the18thchubuopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2018-12-15",
     "hla": 97,
     "holes": 18,
@@ -784,7 +757,7 @@
   },
   {
     "event": "the14thkyotoclassic",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2018-11-17",
     "hla": 88,
     "holes": 18,
@@ -804,7 +777,7 @@
   },
   {
     "event": "the2018showakinenparkopen",
-    "round": "Rd1,Rd2",
+    "round": "Rd1,2",
     "date": "2018-11-03",
     "hla": 64,
     "holes": 27,
@@ -814,7 +787,7 @@
   },
   {
     "event": "the1stpicaactivitycup",
-    "round": "Rd1,Rd2",
+    "round": "Rd1,2",
     "date": "2018-10-14",
     "holes": 18,
     "eventTitle": "The 1st PICA Activity Cup",
@@ -823,7 +796,7 @@
   },
   {
     "event": "the18thtohokuopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2018-10-07",
     "hla": 83,
     "holes": 18,
@@ -843,7 +816,7 @@
   },
   {
     "event": "the30thjapannationalchampionship",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2018-09-16",
     "hla": 114,
     "holes": 18,
@@ -863,7 +836,7 @@
   },
   {
     "event": "the21stkansaiopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2018-09-08",
     "hla": 106,
     "holes": 18,
@@ -883,7 +856,7 @@
   },
   {
     "event": "the7thhiruganokogentournament",
-    "round": "Rd1,Rd2",
+    "round": "Rd1,2",
     "date": "2018-08-26",
     "hla": 93,
     "holes": 18,
@@ -903,7 +876,7 @@
   },
   {
     "event": "the13thmichinokuopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2018-08-18",
     "hla": 104,
     "holes": 18,
@@ -923,7 +896,7 @@
   },
   {
     "event": "the22ndkantoopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2018-07-14",
     "hla": 92,
     "holes": 18,
@@ -943,7 +916,7 @@
   },
   {
     "event": "the7thhokkaidoopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2018-06-30",
     "hla": 115,
     "holes": 18,
@@ -963,7 +936,7 @@
   },
   {
     "event": "the13thmastersnationalchampionship",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2018-06-23",
     "hla": 75,
     "holes": 18,
@@ -983,7 +956,7 @@
   },
   {
     "event": "the20thnipponopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2018-05-26",
     "hla": 94,
     "holes": 18,
@@ -1003,7 +976,7 @@
   },
   {
     "event": "the13thkiyosatonomoriopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2018-05-19",
     "hla": 81,
     "holes": 18,
@@ -1023,7 +996,7 @@
   },
   {
     "event": "the1stgifuhiruganoopen",
-    "round": "Rd1,Rd2",
+    "round": "Rd1,2",
     "date": "2018-05-04",
     "hla": 126,
     "holes": 18,
@@ -1043,7 +1016,7 @@
   },
   {
     "event": "the14thminamisomaopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2018-05-04",
     "holes": 18,
     "eventTitle": "The 14th Minamisoma Open",
@@ -1052,7 +1025,7 @@
   },
   {
     "event": "the29thtokyoopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2018-04-21",
     "holes": 18,
     "eventTitle": "The 29th Tokyo Open",
@@ -1061,7 +1034,7 @@
   },
   {
     "event": "the16thsagaopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2018-04-14",
     "hla": 96,
     "holes": 18,
@@ -1081,7 +1054,7 @@
   },
   {
     "event": "the1stmiyagimichinokuopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2018-03-24",
     "hla": 91,
     "holes": 18,
@@ -1101,7 +1074,7 @@
   },
   {
     "event": "the2018nationaldoubleschampionship",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2018-03-03",
     "hla": 86,
     "holes": 18,
@@ -1181,7 +1154,7 @@
   },
   {
     "event": "the17thchubuopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2017-12-16",
     "hla": 101,
     "holes": 18,
@@ -1258,7 +1231,7 @@
   },
   {
     "event": "the13thkyotoclassic",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2017-11-18",
     "holes": 18,
     "ratings": {
@@ -1277,7 +1250,7 @@
   },
   {
     "event": "the2017showakinenparkopen",
-    "round": "Rd1,Rd2",
+    "round": "Rd1,2",
     "date": "2017-11-03",
     "holes": 27,
     "eventTitle": "The 2017 Showa Kinen Park Open",
@@ -1286,7 +1259,7 @@
   },
   {
     "event": "the17thtohokuopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2017-10-08",
     "hla": 84,
     "holes": 18,
@@ -1306,7 +1279,7 @@
   },
   {
     "event": "the29thjapannationalchampionship",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2017-09-17",
     "hla": 128,
     "holes": 18,
@@ -1326,7 +1299,7 @@
   },
   {
     "event": "the20thkansaiopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2017-09-02",
     "hla": 104,
     "holes": 18,
@@ -1346,7 +1319,7 @@
   },
   {
     "event": "the12thmichinokuopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2017-08-05",
     "hla": 104,
     "holes": 18,
@@ -1366,7 +1339,7 @@
   },
   {
     "event": "the4thkagoshimaopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2017-07-29",
     "hla": 94,
     "holes": 18,
@@ -1395,7 +1368,7 @@
   },
   {
     "event": "the21stkantoopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2017-07-15",
     "hla": 117,
     "holes": 18,
@@ -1415,7 +1388,7 @@
   },
   {
     "event": "the6thhokkaidoopen",
-    "round": "Rd1,Rd2,Rd3,Rd4",
+    "round": "Rd1,2,3,4",
     "date": "2017-07-01",
     "hla": 117,
     "holes": 18,
@@ -1435,7 +1408,7 @@
   },
   {
     "event": "the12thmastersnationalchampionship",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2017-06-24",
     "hla": 73,
     "holes": 18,
@@ -1455,7 +1428,7 @@
   },
   {
     "event": "the6thfukuiopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2017-05-27",
     "holes": 18,
     "ratings": {
@@ -1474,7 +1447,7 @@
   },
   {
     "event": "the12thkiyosatonomoriopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2017-05-21",
     "hla": 81,
     "holes": 18,
@@ -1494,7 +1467,7 @@
   },
   {
     "event": "the19thnipponopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2017-05-05",
     "hla": 109,
     "holes": 18,
@@ -1514,7 +1487,7 @@
   },
   {
     "event": "the13thminamisomaopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2017-04-29",
     "hla": 101,
     "holes": 18,
@@ -1534,7 +1507,7 @@
   },
   {
     "event": "the28thtokyoopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2017-04-15",
     "hla": 84,
     "holes": 18,
@@ -1544,7 +1517,7 @@
   },
   {
     "event": "the15thsagaopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2017-04-08",
     "hla": 93,
     "holes": 18,
@@ -1564,7 +1537,7 @@
   },
   {
     "event": "the2017nationaldoubleschampionship",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2017-03-04",
     "hla": 83,
     "holes": 18,
@@ -1634,7 +1607,7 @@
   },
   {
     "event": "the3rdkagoshimaopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2017-01-28",
     "hla": 84,
     "holes": 18,
@@ -1664,7 +1637,7 @@
   },
   {
     "event": "the16thchubuopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2016-12-10",
     "hla": 98,
     "holes": 18,
@@ -1741,7 +1714,7 @@
   },
   {
     "event": "the12thkyotoclassic",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2016-11-12",
     "holes": 18,
     "ratings": {
@@ -1760,7 +1733,7 @@
   },
   {
     "event": "the2016showakinenparkopen",
-    "round": "Rd1,Rd2",
+    "round": "Rd1,2",
     "date": "2016-11-03",
     "holes": 27,
     "eventTitle": "The 2016 Showa Kinen Park Open",
@@ -1769,7 +1742,7 @@
   },
   {
     "event": "the16thtohokuopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2016-10-08",
     "hla": 75,
     "holes": 18,
@@ -1789,7 +1762,7 @@
   },
   {
     "event": "the28thjapannationalchampionship",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2016-09-18",
     "hla": 130,
     "holes": 18,
@@ -1821,7 +1794,7 @@
   },
   {
     "event": "the11thmichinokuopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2016-08-20",
     "hla": 101,
     "holes": 18,
@@ -1841,7 +1814,7 @@
   },
   {
     "event": "the20thkantoopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2016-07-15",
     "hla": 117,
     "holes": 18,
@@ -1861,7 +1834,7 @@
   },
   {
     "event": "the5thhokkaidoopen",
-    "round": "Rd1,Rd2,Rd3,Rd4",
+    "round": "Rd1,2,3,4",
     "date": "2016-07-01",
     "hla": 0,
     "holes": 18,
@@ -1881,7 +1854,7 @@
   },
   {
     "event": "the11thmastersnationalchampionship",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2016-06-18",
     "hla": 94,
     "holes": 18,
@@ -1901,7 +1874,7 @@
   },
   {
     "event": "the5thmaikoopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2016-06-11",
     "hla": 0,
     "holes": 18,
@@ -1921,7 +1894,7 @@
   },
   {
     "event": "the5thfukuiopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2016-05-28",
     "holes": 18,
     "ratings": {
@@ -1940,7 +1913,7 @@
   },
   {
     "event": "the11thkiyosatonomoriopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2016-05-14",
     "hla": 81,
     "holes": 18,
@@ -1960,7 +1933,7 @@
   },
   {
     "event": "the18thnipponopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2016-04-30",
     "hla": 0,
     "holes": 18,
@@ -1980,7 +1953,7 @@
   },
   {
     "event": "the27thtokyoopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2016-04-16",
     "hla": 90,
     "holes": 18,
@@ -2000,7 +1973,7 @@
   },
   {
     "event": "the14thsagaopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2016-04-09",
     "hla": 91,
     "holes": 18,
@@ -2020,7 +1993,7 @@
   },
   {
     "event": "the12thminamisomaopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2016-03-20",
     "hla": 108,
     "holes": 18,
@@ -2040,7 +2013,7 @@
   },
   {
     "event": "the2016nationaldoubleschampionship",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2016-03-04",
     "hla": 83,
     "holes": 18,
@@ -2107,7 +2080,7 @@
   },
   {
     "event": "the2ndkagoshimaopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2016-01-23",
     "hla": 83,
     "holes": 18,
@@ -2137,7 +2110,7 @@
   },
   {
     "event": "the29thkyushuopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2015-12-19",
     "hla": 89,
     "holes": 18,
@@ -2227,7 +2200,7 @@
   },
   {
     "event": "the11thkyotoclassic",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2015-11-07",
     "holes": 18,
     "ratings": {
@@ -2246,7 +2219,7 @@
   },
   {
     "event": "the2015showakinenparkopen",
-    "round": "Rd1,Rd2",
+    "round": "Rd1,2",
     "date": "2015-11-03",
     "holes": 27,
     "eventTitle": "The 2015 Showa Kinen Park Open",
@@ -2315,7 +2288,7 @@
   },
   {
     "event": "the27thjapannationalchampionship",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2015-09-21",
     "hla": 126,
     "holes": 18,
@@ -2355,7 +2328,7 @@
   },
   {
     "event": "the19thkansaiopen",
-    "round": "Rd1,Rd2",
+    "round": "Rd1,2",
     "date": "2015-09-05",
     "hla": 106,
     "holes": 18,
@@ -2375,7 +2348,7 @@
   },
   {
     "event": "the10thmichinokuopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2015-08-22",
     "hla": 110,
     "holes": 18,
@@ -2395,7 +2368,7 @@
   },
   {
     "event": "the15thasoopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2015-07-25",
     "hla": 86,
     "holes": 18,
@@ -2415,7 +2388,7 @@
   },
   {
     "event": "the19thkantoopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2015-07-11",
     "hla": 111,
     "holes": 18,
@@ -2435,7 +2408,7 @@
   },
   {
     "event": "the4thhokkaidoopen",
-    "round": "Rd1,Rd2",
+    "round": "Rd1,2",
     "date": "2015-06-27",
     "holes": 18,
     "ratings": {
@@ -2454,7 +2427,7 @@
   },
   {
     "event": "the10thmastersnationalchampionship",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2015-06-18",
     "hla": 105,
     "holes": 18,
@@ -2474,7 +2447,7 @@
   },
   {
     "event": "the4thfukuiopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2015-05-30",
     "holes": 18,
     "ratings": {
@@ -2493,7 +2466,7 @@
   },
   {
     "event": "the10thkiyosatonomoriopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2015-05-16",
     "hla": 81,
     "holes": 18,
@@ -2513,7 +2486,7 @@
   },
   {
     "event": "the17thnipponopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2015-05-04",
     "hla": 0,
     "holes": 18,
@@ -2590,7 +2563,7 @@
   },
   {
     "event": "the13thsagaopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2015-04-11",
     "hla": 91,
     "holes": 18,
@@ -2610,7 +2583,7 @@
   },
   {
     "event": "the2015nationaldoubleschampionship",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2015-03-07",
     "hla": 90,
     "holes": 18,
@@ -2620,7 +2593,7 @@
   },
   {
     "event": "the4thokinawaopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2015-02-21",
     "holes": 18,
     "ratings": {
@@ -2639,7 +2612,7 @@
   },
   {
     "event": "the1stkagoshimaopen",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2015-01-24",
     "hla": 85,
     "holes": 18,
@@ -2659,7 +2632,7 @@
   },
   {
     "event": "the2015nationalteamchampionship",
-    "round": "Rd1,Rd2,Rd3",
+    "round": "Rd1,2,3",
     "date": "2015-01-11",
     "hla": 80,
     "holes": 18,
@@ -2669,7 +2642,7 @@
   },
   {
     "event": "the2014japanopen",
-    "round": "Rd1,Rd4,Rd5(Fujin)",
+    "round": "Rd1,4,5(Fujin)",
     "date": "2014-06-05",
     "hla": 146,
     "holes": 18,
@@ -2689,7 +2662,7 @@
   },
   {
     "event": "the2014japanopen",
-    "round": "Rd2,Rd3(Raijin)",
+    "round": "Rd2,3(Raijin)",
     "date": "2014-06-05",
     "hla": 131,
     "holes": 18,
@@ -2709,7 +2682,7 @@
   },
   {
     "event": "the2010japanopen",
-    "round": "Rd1,Rd4,Semifinal",
+    "round": "Rd1,4,SF",
     "date": "2010-06-10",
     "holes": 18,
     "ratings": {
@@ -2728,7 +2701,7 @@
   },
   {
     "event": "the2010japanopen",
-    "round": "Rd2,Rd3",
+    "round": "Rd2,3",
     "date": "2010-06-10",
     "holes": 18,
     "ratings": {
@@ -2804,7 +2777,7 @@
   },
   {
     "event": "the2006japanopen",
-    "round": "Semifinal",
+    "round": "SF",
     "date": "2006-06-16",
     "holes": 18,
     "ratings": {

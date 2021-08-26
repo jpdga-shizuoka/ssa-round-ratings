@@ -1,6 +1,8 @@
 import { MatTableDataSource } from '@angular/material/table';
+import { BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { RemoteService, VideoInfo, EventCategory } from '../remote.service';
+
+import { RemoteService, VideoInfo } from '../remote.service';
 import { LocalizeService } from '../localize.service';
 
 /**
@@ -14,9 +16,8 @@ export class VideosDataSource extends MatTableDataSource<VideoInfo> {
   constructor(
     private readonly remote: RemoteService,
     private readonly localize: LocalizeService,
-    private readonly category: EventCategory,
     private readonly limit?: number,
-    private readonly keyword?: string,
+    private readonly keyword?: string
   ) {
     super();
     this.setupFilter();
@@ -27,17 +28,17 @@ export class VideosDataSource extends MatTableDataSource<VideoInfo> {
    * the returned stream emits new items.
    * @returns A stream of the items to be rendered.
    */
-  connect() {
+  connect(): BehaviorSubject<VideoInfo[]> {
     this.loading = true;
-    this.remote.getVideos(this.category)
-    .pipe(
-      map(videos => this.filterWithKeyword(videos)),
-      map(videos => this.limit ? videos.slice(0, this.limit) : videos)
-    ).subscribe(
-      videos => this.data = videos,
-      err => console.log(err),
-      () => this.loading = false
-    );
+    this.remote.getVideos()
+      .pipe(
+        map(videos => this.filterWithKeyword(videos)),
+        map(videos => this.limit ? videos.slice(0, this.limit) : videos)
+      ).subscribe(
+        videos => { this.data = videos; },
+        err => console.log(err),
+        () => { this.loading = false; }
+      );
 
     return super.connect();
   }
@@ -46,7 +47,7 @@ export class VideosDataSource extends MatTableDataSource<VideoInfo> {
    *  Called when the table is being destroyed. Use this function, to clean up
    * any open connections or free any held resources that were set up during connect.
    */
-  disconnect() {
+  disconnect(): void {
     super.disconnect();
   }
 
@@ -56,7 +57,7 @@ export class VideosDataSource extends MatTableDataSource<VideoInfo> {
     }
     const results: VideoInfo[] = [];
     videos.forEach(video => {
-      if (video.title.toLowerCase().includes(this.keyword)) {
+      if (this.keyword && video.title.toLowerCase().includes(this.keyword)) {
         results.push(video);
       }
     });
@@ -65,7 +66,7 @@ export class VideosDataSource extends MatTableDataSource<VideoInfo> {
 
   private setupFilter() {
     this.filterPredicate = (data: VideoInfo, filters: string): boolean => {
-      const matchFilter = [];
+      const matchFilter: boolean[] = [];
       const filterArray = filters.split('&');
       const columns: string[] = [
         data.title,
@@ -74,7 +75,7 @@ export class VideosDataSource extends MatTableDataSource<VideoInfo> {
         this.localize.transform(data.title, 'event')
       ];
       filterArray.forEach(filter => {
-        const customFilter = [];
+        const customFilter: boolean[] = [];
         columns.forEach(column =>
           customFilter.push(column.toLowerCase().includes(filter)));
         matchFilter.push(customFilter.some(Boolean)); // OR

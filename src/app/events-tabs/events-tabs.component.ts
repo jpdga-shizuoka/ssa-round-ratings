@@ -1,108 +1,57 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { MatDialog } from '@angular/material/dialog';
-import { MatBottomSheet, MatBottomSheetRef } from '@angular/material/bottom-sheet';
-
-import { Observable, BehaviorSubject, Subject } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
+import { Router, ActivatedRoute } from '@angular/router';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { GeoMarker } from '../map-common';
-import { EventInfo } from '../models';
 import { isHandset } from '../ng-utilities';
-import { NoticeBottomsheetComponent } from '../dialogs/notice-bottomsheet.component';
-
-const DISPLAYED_COLUMNS = {
-  upcoming: [['date', 'title'],   ['date', 'title', 'location']],
-  local:    [['date', 'title'],   ['date', 'title', 'location']],
-  monthly:  [['location', 'day'], ['location', 'day', 'month']]
-};
-const TABS_TITLE = {
-  upcoming: ['Official', 'Location map'],
-  local:    ['Local', 'Location Map'],
-  monthly:  ['Monthly', 'Location Map']
-};
+import { EventCategory } from '../models';
+import { RoutingTabsComponent } from '../routing-tabs/routing-tabs.component';
 
 @Component({
-  selector: 'app-events-tabs',
-  templateUrl: './events-tabs.component.html',
-  styleUrls: ['./events-tabs.component.css']
+  template: ''
 })
-export class EventsTabsComponent implements OnInit, AfterViewInit {
-
-  category: string;
+export class EventsTabsComponent extends RoutingTabsComponent implements OnInit {
   isHandset$: Observable<boolean>;
-  markerSelected: Subject<GeoMarker>;
-  selectedTab: number;
+  category!: EventCategory;
+  displayedColumns!: string[][];
+  titles!: string[];
 
   constructor(
-    private route: ActivatedRoute,
-    private bottomsheet: MatBottomSheet,
-    breakpointObserver: BreakpointObserver,
+    router: Router,
+    route: ActivatedRoute,
+    location: Location,
+    breakpointObserver: BreakpointObserver
   ) {
+    super(router, route, location);
     this.isHandset$ = isHandset(breakpointObserver);
-    this.markerSelected = new Subject<GeoMarker>();
-    this.selectedTab = 0;
-
-    if (this.route.snapshot.url.length !== 2) {
-      throw new TypeError(`unexpected path: ${this.route.snapshot.url}`);
-    }
-    this.category = this.route.snapshot.url[1].path;
-    if (this.category !== 'upcoming'
-    && this.category !== 'local'
-    && this.category !== 'monthly') {
-      throw new TypeError(`unexpected category: ${this.category}`);
-    }
-  }
-
-  ngOnInit() {
-  }
-
-  ngAfterViewInit() {
-    if (this.category === 'monthly'
-    && sessionStorage.getItem('monthlyConfirmed') !== 'true') {
-      this.openNoticeBottomsheet();
-    }
   }
 
   get displayedColumns$(): Observable<string[]> {
     return this.isHandset$.pipe(
-      map(hs => DISPLAYED_COLUMNS[this.category][hs ? 0 : 1])
+      map(hs => this.displayedColumns[hs ? 0 : 1])
     );
   }
 
-  get tableTitle() {
-    return TABS_TITLE[this.category][0];
+  get tableTitle(): string {
+    return this.titles[0];
   }
 
-  get mapTitle() {
-    return TABS_TITLE[this.category][1];
+  get mapTitle(): string {
+    return this.titles[1];
   }
 
-  get title() {
-    let schedule = 'Schedule';
-    switch (this.category) {
-      case 'local':
-        schedule = 'Local Events';
-        break;
-      case 'monthly':
-        schedule = 'Monthly Events';
-        break;
+  ngOnInit(): void {
+    super.ngOnInit();
+    if (!this.titles) {
+      throw new Error('[titles] must be initialized');
     }
-    return schedule;
-  }
-
-  onMarkerSelected(marker: GeoMarker) {
-    this.markerSelected.next(marker);
-    this.selectedTab = 0;
-  }
-
-  private openNoticeBottomsheet() {
-    const bottomsheetRef = this.bottomsheet.open(NoticeBottomsheetComponent);
-
-    bottomsheetRef.afterDismissed()
-    .subscribe(() => sessionStorage.setItem('monthlyConfirmed', 'true'));
-
-    setTimeout(() => bottomsheetRef.dismiss(), 5000);
+    if (!this.category) {
+      throw new Error('[category] must be initialized');
+    }
+    if (!this.displayedColumns$) {
+      throw new Error('[displayedColumns$] must be initialized');
+    }
   }
 }

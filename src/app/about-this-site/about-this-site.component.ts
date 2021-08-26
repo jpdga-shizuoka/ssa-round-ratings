@@ -7,8 +7,7 @@ import { LocalizeService } from '../localize.service';
   styleUrls: ['./about-this-site.component.css']
 })
 export class AboutThisSiteComponent {
-
-  get primaryLanguage() {
+  get primaryLanguage(): boolean {
     return this.localize.isGlobal;
   }
 

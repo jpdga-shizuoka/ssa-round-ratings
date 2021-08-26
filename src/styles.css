@@ -55,11 +55,8 @@ a[href^="http://maps.apple"] {
 .mat-drawer-container {
   background-color: transparent;
 }
-.app-container > * {
-  background-color: #fafafa;
-}
 .app-container {
-  margin-top: 6px;
+  background-color: #fafafa;
 }
 .spinner {
   width: 100vw;
@@ -68,4 +65,7 @@ a[href^="http://maps.apple"] {
   top: calc(100vh / 2);
   left: 0;
   z-index: 100;
+}
+th {
+  user-select: none;
 }

@@ -1,41 +1,40 @@
-import { AfterViewInit, Component, OnInit, ViewChild, Input } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, Input } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { MatTable } from '@angular/material/table';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+import { ScriptLoaderService } from '../script-loader.service';
 import { VideoBottomsheetComponent } from '../dialogs/video-bottomsheet.component';
 import { VideoInfo } from '../models';
 import { isHandset } from '../ng-utilities';
 import { VideosDataSource } from './videos-datasource';
-import { RemoteService, EventCategory } from '../remote.service';
+import { RemoteService } from '../remote.service';
 import { LocalizeService } from '../localize.service';
 
-const DISPLAYED_COLUMNS = [['title', 'subttl'], [ 'year', 'title', 'subttl']];
+const DISPLAYED_COLUMNS = [['title', 'subttl'], ['year', 'title', 'subttl']];
 
 @Component({
   selector: 'app-videos-table',
   templateUrl: './videos-table.component.html',
-  styleUrls: ['./videos-table.component.css'],
+  styleUrls: ['./videos-table.component.css']
 })
-export class VideosTableComponent implements AfterViewInit, OnInit {
+export class VideosTableComponent implements OnInit, AfterViewInit {
   @Input() pageSizeOptions = [10, 20, 50, 100];
   @Input() showSearch = true;
   @Input() showMore = false;
   @Input() search = '';
-  @Input() category = 'video' as EventCategory;
-  @Input() limit?: number;
+  @Input() limit = 0;
   @Input() keyword?: string;
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
 
   readonly isHandset$: Observable<boolean>;
-  dataSource: VideosDataSource;
+  dataSource!: VideosDataSource;
 
   get displayedColumns$(): Observable<string[]> {
     return this.isHandset$.pipe(
@@ -44,40 +43,36 @@ export class VideosTableComponent implements AfterViewInit, OnInit {
   }
 
   constructor(
+    private scriptLoader: ScriptLoaderService,
     private bottomSheet: MatBottomSheet,
     private readonly remote: RemoteService,
     private readonly localize: LocalizeService,
-    breakpointObserver: BreakpointObserver,
+    breakpointObserver: BreakpointObserver
   ) {
     this.isHandset$ = isHandset(breakpointObserver);
   }
 
-  get loading() { return this.dataSource.loading; }
+  get loading(): boolean { return this.dataSource?.loading ?? true; }
   get isMinimum(): boolean {
     return this.showMore && this.limit <= this.pageSizeOptions[0];
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.dataSource
-      = new VideosDataSource(this.remote, this.localize, this.category, this.limit, this.keyword);
-
-    // This code loads the IFrame Player API code asynchronously, according to the instructions at
-    // https://developers.google.com/youtube/iframe_api_reference#Getting_Started
-    const tag = document.createElement('script');
-    tag.src = 'https://www.youtube.com/iframe_api';
-    document.body.appendChild(tag);
+      = new VideosDataSource(this.remote, this.localize, this.limit, this.keyword);
+    this.scriptLoader.youtube();
   }
 
-  ngAfterViewInit() {
+  ngAfterViewInit(): void {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
   }
 
-  onRawClicked(video: VideoInfo) {
+  onRawClicked(video: VideoInfo): void {
     this.openVideoSheet(video);
   }
 
-  applyFilter(filterValue: string) {
+  applyFilter(filterValue: string): void {
     this.dataSource.filter = filterValue.trim().toLowerCase();
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
@@ -86,8 +81,8 @@ export class VideosTableComponent implements AfterViewInit, OnInit {
   }
 
   private openVideoSheet(video: VideoInfo) {
-    const bottomSheetRef = this.bottomSheet.open(VideoBottomsheetComponent, {
-      data: video,
+    this.bottomSheet.open(VideoBottomsheetComponent, {
+      data: video
     });
   }
 }

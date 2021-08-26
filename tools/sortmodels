@@ -3,7 +3,7 @@
 const fs = require('fs');
 const list = [
   {
-    model: '../src/assets/model/events.json',
+    model: '../src/assets/models/events.json',
     compare: (a, b) => {
       if (a.period.from > b.period.from) {
         return -1;
@@ -15,7 +15,7 @@ const list = [
     }
   },
   {
-    model: '../src/assets/model/local-events.json',
+    model: '../src/assets/models/local-events.json',
     compare: (a, b) => {
       if (a.period.from > b.period.from) {
         return -1;
@@ -27,7 +27,7 @@ const list = [
     }
   },
   {
-    model: '../src/assets/model/rounds.json',
+    model: '../src/assets/models/rounds.json',
     compare: (a, b) => {
       if (a.date > b.date) {
         return -1;

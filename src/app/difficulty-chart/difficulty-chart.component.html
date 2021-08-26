@@ -1,0 +1,20 @@
+<div class="chart">
+  <ngx-charts-bubble-chart-interactive
+    [view]="[630, 480]"
+    [results]="rounds"
+    [xAxis]="showXAxis"
+    [yAxis]="showYAxis"
+    [legend]="showLegend"
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel"
+    [yAxisLabel]="yAxisLabel"
+    [xScaleMin]="xScaleMin"
+    [xScaleMax]="xScaleMax"
+    [yScaleMin]="yScaleMin"
+    [yScaleMax]="yScaleMax"
+    [eventId]="eventId"
+    [tooltipDisabled]="tooltipDisabled"
+    (select)="onClickItem($event)">
+  </ngx-charts-bubble-chart-interactive>
+</div>
