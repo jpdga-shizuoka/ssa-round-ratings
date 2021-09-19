@@ -24,4 +24,8 @@ export class LocalTableComponent extends EventsTableComponent {
   onRawClicked(event: EventInfo) {
     this.expandedElement = this.isDetailExpand(event) ? undefined : event;
   }
+
+  isCanceled(event: EventInfo): boolean {
+    return event.status === 'CANCELED';
+  }
 }
