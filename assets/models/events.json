@@ -110,6 +110,7 @@
       "from": "2021-10-30",
       "to": "2021-10-31"
     },
+    "status": "CANCELED",
     "jpdga": {
       "eventId": "578"
     },
@@ -153,6 +154,7 @@
       "from": "2021-10-16",
       "to": "2021-10-17"
     },
+    "status": "CANCELED",
     "jpdga": {
       "eventId": "576"
     },
@@ -178,6 +180,7 @@
       "from": "2021-09-26",
       "to": "2021-09-26"
     },
+    "status": "CANCELED",
     "jpdga": {
       "eventId": "583"
     },
