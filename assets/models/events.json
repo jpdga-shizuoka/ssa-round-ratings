@@ -126,6 +126,9 @@
   {
     "title": "The 24th Kansai Open",
     "location": "fuminnomorihiyoshi",
+    "layout": {
+      "official": "https://membership.jpdga.jp/tour/2021/577_map_pro.pdf"
+    },
     "period": {
       "from": "2021-10-23",
       "to": "2021-10-24"
@@ -142,6 +145,9 @@
   {
     "title": "The Amateur Japan National Championship",
     "location": "fuminnomorihiyoshi",
+    "layout": {
+      "official": "https://membership.jpdga.jp/tour/2021/577_map_jpama.pdf"
+    },
     "period": {
       "from": "2021-10-23",
       "to": "2021-10-24"
