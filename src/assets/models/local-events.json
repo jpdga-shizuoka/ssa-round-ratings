@@ -35,6 +35,23 @@
   },
   {
     "category": "local",
+    "title": "The Tochigi Prefecture Championships",
+    "location": "shiromigaokasportspark",
+    "period": {
+      "from": "2021-11-28",
+      "to": "2021-11-28"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Tochigi Disc Golf Association",
+        "url": "http://www.tochigiflyingdisc.com/2021/10/04/2021栃木県大会開催予定/"
+      }
+    ],
+    "id": "thetochigiprefecturechampionships2021"
+  },
+  {
+    "category": "local",
     "title": "The Aichi Open Disc Golf Series",
     "location": "kasaharagreenheights",
     "period": {
