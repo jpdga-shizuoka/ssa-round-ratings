@@ -134,6 +134,15 @@
   {
     "prefecture": "Tochigi",
     "geolocation": [
+      36.526901518996326,
+      140.0910787154823
+    ],
+    "id": "shiromigaokasportspark",
+    "title": "Shiromigaoka Sports Park"
+  },
+  {
+    "prefecture": "Tochigi",
+    "geolocation": [
       36.274043,
       139.799768
     ],
