@@ -230,6 +230,17 @@
     "id": "hitachiseasidepark",
     "title": "Hitachi Seaside Park"
   },
+
+  {
+    "prefecture": "Toyama",
+    "geolocation": [
+      36.84746034749535,
+      137.45301591704876
+    ],
+    "id": "kurobecityfureaiexchangecenter",
+    "title": "Kurobe City Fureai Exchange Center"
+  },
+
   {
     "prefecture": "Fukui",
     "geolocation": [

@@ -52,6 +52,23 @@
   },
   {
     "category": "local",
+    "title": "The Frostbite Disc Golf Tournament",
+    "location": "kurobecityfureaiexchangecenter",
+    "period": {
+      "from": "2021-11-21",
+      "to": "2021-11-21"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Frostbite Disc Golf",
+        "url": "https://frostbite.jp/archives/994"
+      }
+    ],
+    "id": "thefrostbitediscgolftournament"
+  },
+  {
+    "category": "local",
     "title": "The Aichi Open Disc Golf Series",
     "location": "kasaharagreenheights",
     "period": {
