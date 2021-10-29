@@ -52,6 +52,23 @@
   },
   {
     "category": "local",
+    "title": "The Iwate Prefecture Championships",
+    "location": "hanamakiregionalpark",
+    "period": {
+      "from": "2021-11-28",
+      "to": "2021-11-28"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Iwate Disc Golf Association",
+        "url": "https://jpdgaiwate.sakura.ne.jp/main/2021岩手県ディスクゴルフ大会/"
+      }
+    ],
+    "id": "theiwateprefecturechampionships"
+  },
+  {
+    "category": "local",
     "title": "The Frostbite Disc Golf Tournament",
     "location": "kurobecityfureaiexchangecenter",
     "period": {
@@ -100,17 +117,6 @@
         "url": "https://aifda.or.jp/category/discgolf/"
       }
     ]
-  },
-  {
-    "category": "local",
-    "title": "The Nenrin Pic Gifu",
-    "location": "mitakechonanzanpark",
-    "period": {
-      "from": "2021-10-31",
-      "to": "2021-10-31"
-    },
-    "status": "CANCELED",
-    "id": "thenenrinpicgifu"
   },
   {
     "category": "local",
