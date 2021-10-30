@@ -133,12 +133,19 @@
       "from": "2021-10-23",
       "to": "2021-10-24"
     },
+    "players": {
+      "pro": 40,
+      "ama": 11,
+      "misc": 0
+    },
     "pdga": {
       "eventId": "54455",
       "scoreId": "54455"
     },
     "jpdga": {
-      "eventId": "577"
+      "eventId": "577",
+      "topicId": "1578",
+      "photoId": "72157720076978263"
     },
     "id": "the24thkansaiopen"
   },
@@ -152,12 +159,19 @@
       "from": "2021-10-23",
       "to": "2021-10-24"
     },
+    "players": {
+      "pro": 0,
+      "ama": 18,
+      "misc": 0
+    },
     "pdga": {
       "eventId": "54457",
       "scoreId": "54457"
     },
     "jpdga": {
-      "eventId": "577"
+      "eventId": "577",
+      "topicId": "1578",
+      "photoId": "72157720076978263"
     },
     "id": "theamateurjapannationalchampionship"
   },
