@@ -1,5 +1,15 @@
 [
   {
+    "event": "the24thkansaiopen",
+    "round": "Rd1,2,3",
+    "date": "2021-10-23",
+    "hla": 128,
+    "holes": 18,
+    "eventTitle": "The 24th Kansai Open",
+    "id": "the24thkansaiopen.rd1rd2rd3",
+    "locationTitle": "Fumin-no-Mori Hiyoshi"
+  },
+  {
     "event": "the4thgifuhiruganoopen",
     "round": "Rd1,2,3",
     "date": "2021-05-03",
