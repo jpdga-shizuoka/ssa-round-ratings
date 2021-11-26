@@ -2,6 +2,7 @@
   {
     "title": "The 2022 Japan Open",
     "location": "fukuicountryclub",
+    "status": "CANCELED",
     "period": {
       "from": "2022-05-13",
       "to": "2022-05-20"
@@ -62,6 +63,9 @@
       "from": "2021-12-18",
       "to": "2021-12-19"
     },
+    "pdga": {
+      "eventId": "55134"
+    },
     "jpdga": {
       "eventId": "573"
     },
@@ -73,6 +77,9 @@
     "period": {
       "from": "2021-12-04",
       "to": "2021-12-05"
+    },
+    "pdga": {
+      "eventId": "55135"
     },
     "jpdga": {
       "eventId": "579"
@@ -86,6 +93,9 @@
       "from": "2021-11-27",
       "to": "2021-11-28"
     },
+    "pdga": {
+      "eventId": "55133"
+    },
     "jpdga": {
       "eventId": "580"
     },
@@ -93,7 +103,7 @@
       {
         "type": "website",
         "title": "Official Site",
-        "url": "http://www.jpdgafukuoka.com/blog/?page_id=3478"
+        "url": "http://www.jpdgafukuoka.com/blog/?page_id=4279"
       },
       {
         "type": "website",
