@@ -337,13 +337,13 @@
     "locationTitle": "Mizubayashi Sport Park"
   },
   {
-    "event": "the4thmihoopen",
+    "event": "the3rdmihoopen",
     "round": "Rd1,2",
     "date": "2019-09-28",
     "hla": 63,
     "holes": 18,
-    "eventTitle": "The 4th Miho Open",
-    "id": "the4thmihoopen.rd1rd2",
+    "eventTitle": "The 3rd Miho Open",
+    "id": "the3rdmihoopen.rd1rd2",
     "locationTitle": "Hikari-to-Kaze-no-Oka Park"
   },
   {
