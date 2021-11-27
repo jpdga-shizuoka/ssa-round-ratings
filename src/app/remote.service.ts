@@ -29,7 +29,7 @@ export class RemoteService {
   ) { }
 
   path(path: string): string {
-    return ['assets', this.localize.isGlobal ? 'global' : 'ja', path].join('/');
+    return ['assets', this.localize.isGlobal ? 'global' : 'local', path].join('/');
   }
 
   getText(path: string): Observable<string> {
