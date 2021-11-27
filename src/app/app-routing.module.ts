@@ -54,8 +54,8 @@ const routes: Routes = [
     data: {
       metaDescription: {
         title: 'DG Japan - Disc Golf Events',
-        subtitle: 'Schedule',
-        description: 'Schedule of the official disc golf events held in Japan.',
+        subtitle: 'Upcoming',
+        description: 'Upcoming schedule of the official events.',
         keywords: 'disc golf,official events,japan'
       }
     }
@@ -71,7 +71,7 @@ const routes: Routes = [
       metaDescription: {
         title: 'DG Japan - Local Events',
         subtitle: 'Local Events',
-        description: 'Schedule of the local events held in Japan.',
+        description: 'Upcoming schedule of the local events.',
         keywords: 'disc golf,local events,japan'
       }
     }
@@ -87,7 +87,7 @@ const routes: Routes = [
       metaDescription: {
         title: 'DG Japan - Monthly Events',
         subtitle: 'Monthly',
-        description: 'Schedule of the local monthly events held in Japan.',
+        description: 'Schedule of the local monthly events.',
         keywords: 'disc golf,monthly events,japan'
       }
     }

@@ -29,7 +29,7 @@ export class AppComponent implements OnInit, OnDestroy, MetaDescription {
   private ssMeta?: Subscription;
   get subtitle(): string { return this.localize.transform(this.subtitle$.value); }
   get home(): string { return this.localize.transform('Home'); }
-  get schedule(): string { return this.localize.transform('Schedule'); }
+  get schedule(): string { return this.localize.transform('Upcoming'); }
   get results(): string { return this.localize.transform('Results'); }
   get localEvents(): string { return this.localize.transform('Local Events'); }
   get monthlyEvents(): string { return this.localize.transform('Monthly Events'); }

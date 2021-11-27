@@ -6,7 +6,7 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 import { EventsTabsComponent } from './events-tabs.component';
 
 const DISPLAYED_COLUMNS = [['date', 'title'], ['date', 'title', 'location']];
-const TITLES = ['Local', 'Location'];
+const TITLES = ['Event', 'Location'];
 const TABS = ['events', 'locations'];
 
 @Component({
