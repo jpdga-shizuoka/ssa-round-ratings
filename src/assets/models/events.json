@@ -230,7 +230,7 @@
     "id": "the11thhokkaidoopen"
   },
   {
-    "title": "The 17th Masters National Championship",
+    "title": "The 17th Masters National Championships",
     "location": "hikaritokazenookapark",
     "period": {
       "from": "2022-06-25",
@@ -290,7 +290,7 @@
     "id": "the5thgifuhiruganoopen"
   },
   {
-    "title": "The 34th Japan National Championship",
+    "title": "The 34th Japan National Championships",
     "location": "minamisomahoseridingpark",
     "period": {
       "from": "2022-04-30",
@@ -314,7 +314,7 @@
     "id": "the20thsagaopen"
   },
   {
-    "title": "The 2022 National Doubles Championship",
+    "title": "The 2022 National Doubles Championships",
     "location": "hitachiseasidepark",
     "period": {
       "from": "2022-03-05",
@@ -357,7 +357,7 @@
     "id": "the1stmikawaopen"
   },
   {
-    "title": "The 2022 National Team Championship",
+    "title": "The 2022 National Team Championships",
     "location": "oyamaomoinomoripark",
     "period": {
       "from": "2022-01-09",
@@ -390,14 +390,14 @@
     "id": "the21stchubuopen"
   },
   {
-    "title": "The 33rd Japan National Championship",
+    "title": "The 33rd Japan National Championships",
     "location": "mikawarinkairyokuchi",
     "period": {
       "from": "2021-12-18",
       "to": "2021-12-19"
     },
     "pdga": {
-      "eventId": "55134"
+      "eventId": "55135"
     },
     "jpdga": {
       "eventId": "573"
@@ -412,7 +412,7 @@
       "to": "2021-12-05"
     },
     "pdga": {
-      "eventId": "55135"
+      "eventId": "55134"
     },
     "jpdga": {
       "eventId": "579"
@@ -496,7 +496,7 @@
     "id": "the24thkansaiopen"
   },
   {
-    "title": "The Amateur Japan National Championship",
+    "title": "The Amateur Japan National Championships",
     "location": "fuminnomorihiyoshi",
     "layout": {
       "official": "https://membership.jpdga.jp/tour/2021/577_map_jpama.pdf"
@@ -647,7 +647,7 @@
     "id": "the10thhokkaidoopen"
   },
   {
-    "title": "The 16th Masters National Championship",
+    "title": "The 16th Masters National Championships",
     "location": "hikaritokazenookapark",
     "period": {
       "from": "2021-06-26",
@@ -763,7 +763,7 @@
     "id": "the19thsagaopen"
   },
   {
-    "title": "The 2021 National Doubles Championship",
+    "title": "The 2021 National Doubles Championships",
     "location": "hitachiseasidepark",
     "period": {
       "from": "2021-03-06",
@@ -802,7 +802,7 @@
     "id": "the7thkagoshimaopen"
   },
   {
-    "title": "The 2021 National Team Championship",
+    "title": "The 2021 National Team Championships",
     "location": "oyamaomoinomoripark",
     "period": {
       "from": "2021-01-10",
@@ -1029,7 +1029,7 @@
   },
   {
     "id": "the32ndjapannationalchampionship",
-    "title": "The 32nd Japan National Championship",
+    "title": "The 32nd Japan National Championships",
     "location": "maikodiscgolfpark",
     "layout": {
       "official": "http://www.jpdga.jp/data/event/2020/545_map.pdf",
@@ -1209,7 +1209,7 @@
     "id": "the9thhokkaidoopen"
   },
   {
-    "title": "The 15th Masters National Championship",
+    "title": "The 15th Masters National Championships",
     "location": "hikaritokazenookapark",
     "period": {
       "from": "2020-06-27",
@@ -1334,7 +1334,7 @@
     ]
   },
   {
-    "title": "The 2020 National Doubles Championship",
+    "title": "The 2020 National Doubles Championships",
     "location": "hitachiseasidepark",
     "period": {
       "from": "2020-02-29",
@@ -1404,7 +1404,7 @@
     ]
   },
   {
-    "title": "The 2020 National Team Championship",
+    "title": "The 2020 National Team Championships",
     "location": "oyamaomoinomoripark",
     "period": {
       "from": "2020-01-12",
@@ -1607,7 +1607,7 @@
     ]
   },
   {
-    "title": "The 31st Japan National Championship",
+    "title": "The 31st Japan National Championships",
     "location": "maikodiscgolfpark",
     "period": {
       "from": "2019-09-22",
@@ -1722,7 +1722,7 @@
     ]
   },
   {
-    "title": "The 7th Asia Championship",
+    "title": "The 7th Asia Championships",
     "location": "uminonakamichiseasidepark",
     "period": {
       "from": "2019-08-03",
@@ -1826,7 +1826,7 @@
     ]
   },
   {
-    "title": "The 14th Masters National Championship",
+    "title": "The 14th Masters National Championships",
     "location": "hikaritokazenookapark",
     "period": {
       "from": "2019-06-22",
@@ -2032,7 +2032,7 @@
     ]
   },
   {
-    "title": "The 2019 National Doubles Championship",
+    "title": "The 2019 National Doubles Championships",
     "location": "hitachiseasidepark",
     "period": {
       "from": "2019-03-02",
@@ -2119,7 +2119,7 @@
     ]
   },
   {
-    "title": "The 2019 National Team Championship",
+    "title": "The 2019 National Team Championships",
     "location": "oyamaomoinomoripark",
     "period": {
       "from": "2019-01-13",
@@ -2314,7 +2314,7 @@
     ]
   },
   {
-    "title": "The 30th Japan National Championship",
+    "title": "The 30th Japan National Championships",
     "location": "maikodiscgolfpark",
     "period": {
       "from": "2018-09-16",
@@ -2467,7 +2467,7 @@
     ]
   },
   {
-    "title": "The 13th Masters National Championship",
+    "title": "The 13th Masters National Championships",
     "location": "hikaritokazenookapark",
     "period": {
       "from": "2018-06-23",
@@ -2666,7 +2666,7 @@
     ]
   },
   {
-    "title": "The 2018 National Doubles Championship",
+    "title": "The 2018 National Doubles Championships",
     "location": "hitachiseasidepark",
     "period": {
       "from": "2018-03-03",
@@ -2718,7 +2718,7 @@
     ]
   },
   {
-    "title": "The 2018 National Team Championship",
+    "title": "The 2018 National Team Championships",
     "location": "oyamaomoinomoripark",
     "period": {
       "from": "2018-01-07",
@@ -2869,7 +2869,7 @@
     ]
   },
   {
-    "title": "The 29th Japan National Championship",
+    "title": "The 29th Japan National Championships",
     "location": "maikodiscgolfpark",
     "period": {
       "from": "2017-09-17",
@@ -3038,7 +3038,7 @@
     ]
   },
   {
-    "title": "The 12th Masters National Championship",
+    "title": "The 12th Masters National Championships",
     "location": "hikaritokazenookapark",
     "period": {
       "from": "2017-06-24",
@@ -3221,7 +3221,7 @@
     ]
   },
   {
-    "title": "The 2017 National Doubles Championship",
+    "title": "The 2017 National Doubles Championships",
     "location": "hitachiseasidepark",
     "period": {
       "from": "2017-03-04",
@@ -3305,7 +3305,7 @@
     ]
   },
   {
-    "title": "The 2017 National Team Championship",
+    "title": "The 2017 National Team Championships",
     "location": "oyamaomoinomoripark",
     "period": {
       "from": "2017-01-08",
@@ -3462,7 +3462,7 @@
     ]
   },
   {
-    "title": "The 28th Japan National Championship",
+    "title": "The 28th Japan National Championships",
     "location": "maikodiscgolfpark",
     "period": {
       "from": "2016-09-18",
@@ -3574,7 +3574,7 @@
     ]
   },
   {
-    "title": "The 11th Masters National Championship",
+    "title": "The 11th Masters National Championships",
     "location": "furusatofureaipark",
     "period": {
       "from": "2016-06-18",
@@ -3758,7 +3758,7 @@
     ]
   },
   {
-    "title": "The 2016 National Doubles Championship",
+    "title": "The 2016 National Doubles Championships",
     "location": "hitachiseasidepark",
     "period": {
       "from": "2016-03-05",
@@ -3836,7 +3836,7 @@
     ]
   },
   {
-    "title": "The 2016 National Team Championship",
+    "title": "The 2016 National Team Championships",
     "location": "oyamaomoinomoripark",
     "period": {
       "from": "2016-01-10",
@@ -4037,7 +4037,7 @@
     ]
   },
   {
-    "title": "The 27th Japan National Championship",
+    "title": "The 27th Japan National Championships",
     "location": "maikodiscgolfpark",
     "period": {
       "from": "2015-09-21",
@@ -4214,7 +4214,7 @@
     "id": "the4thmaikoopen"
   },
   {
-    "title": "The 10th Masters National Championship",
+    "title": "The 10th Masters National Championships",
     "location": "maikodiscgolfpark",
     "period": {
       "from": "2015-06-13",
@@ -4361,7 +4361,7 @@
     ]
   },
   {
-    "title": "The 2015 National Doubles Championship",
+    "title": "The 2015 National Doubles Championships",
     "location": "hitachiseasidepark",
     "period": {
       "from": "2015-03-07",
@@ -4454,7 +4454,7 @@
     ]
   },
   {
-    "title": "The 2015 National Team Championship",
+    "title": "The 2015 National Team Championships",
     "location": "oyamasportpark",
     "period": {
       "from": "2015-01-11",
@@ -4662,7 +4662,7 @@
     "id": "the27thkyushuopen"
   },
   {
-    "title": "The 25th Japan National Championship",
+    "title": "The 25th Japan National Championships",
     "location": "maikodiscgolfpark",
     "period": {
       "from": "2013-09-22",
