@@ -36,6 +36,339 @@
     ],
     "id": "the2022japanopen"
   },
+
+  {
+    "title": "The 21st Chubu Open",
+    "location": "mikawarinkairyokuchi",
+    "period": {
+      "from": "2022-12-17",
+      "to": "2022-12-18"
+    },
+    "jpdga": {
+      "eventId": "611"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://aifda.or.jp/event"
+      }
+    ],
+    "id": "the21stchubuopen2"
+  },
+  {
+    "title": "The 36th Kyushu Open",
+    "location": "uminonakamichiseasidepark",
+    "period": {
+      "from": "2022-11-26",
+      "to": "2022-11-27"
+    },
+    "jpdga": {
+      "eventId": "610"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "http://www.jpdgafukuoka.com/blog/?page_id=4279"
+      },
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/discgolfkyushuopen/"
+      }
+    ],
+    "id": "the36thkyushuopen"
+  },
+  {
+    "title": "The 34th Showa Kinen Park Open",
+    "location": "showakinenpark",
+    "period": {
+      "from": "2022-11-03",
+      "to": "2022-11-06"
+    },
+    "jpdga": {
+      "eventId": "608"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "http://jpdga-tokyo.com/skpo/"
+      }
+    ],
+    "id": "the34thshowakinenparkopen"
+  },
+  {
+    "title": "The 25th Kansai Open",
+    "location": "fuminnomorihiyoshi",
+    "period": {
+      "from": "2022-11-12",
+      "to": "2022-11-13"
+    },
+    "jpdga": {
+      "eventId": "609"
+    },
+    "id": "the25thkansaiopen"
+  },
+
+  {
+    "id": "the1stalljapanchampionships",
+    "title": "The 1st All Japan Championships",
+    "location": "maikodiscgolfpark",
+    "period": {
+      "from": "2022-10-22",
+      "to": "2022-10-23"
+    },
+    "jpdga": {
+      "eventId": "607"
+    }
+  },
+  {
+    "title": "The 9th Fukui Open",
+    "location": "seasidenaturepark",
+    "period": {
+      "from": "2022-10-15",
+      "to": "2022-10-16"
+    },
+    "jpdga": {
+      "eventId": "606"
+    },
+    "id": "the9thfukuiopen"
+  },
+  {
+    "title": "The 22nd Tohoku Open",
+    "location": "mizubayashisportpark",
+    "period": {
+      "from": "2022-10-08",
+      "to": "2022-10-09"
+    },
+    "jpdga": {
+      "eventId": "605"
+    },
+    "id": "the22ndtohokuopen"
+  },
+  {
+    "title": "The 1st Japan Pro Disc Golf Championships",
+    "location": "kiyoharakohgyodanchi",
+    "period": {
+      "from": "2022-09-17",
+      "to": "2022-09-19"
+    },
+    "jpdga": {
+      "eventId": "603"
+    },
+    "id": "the1stjapanprodiscgolfchampionships"
+  },
+  {
+    "title": "The 17th Michinoku Open",
+    "location": "kitakamisportpark",
+    "period": {
+      "from": "2022-08-06",
+      "to": "2022-08-07"
+    },
+    "jpdga": {
+      "eventId": "599"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "http://jpdgaiwate.com"
+      }
+    ],
+    "id": "the17thmichinokuopen"
+  },
+  {
+    "title": "The 2022 PDGA Women's Global Event",
+    "location": "kitakamisportpark",
+    "period": {
+      "from": "2022-08-06",
+      "to": "2022-08-07"
+    },
+    "jpdga": {
+      "eventId": "599"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "http://jpdgaiwate.com"
+      }
+    ],
+    "id": "the2022pdgawomensglobaleventmichinoku"
+  },
+  {
+    "title": "The 26th Kanto Open",
+    "location": "shiromigaokasportspark",
+    "period": {
+      "from": "2022-07-17",
+      "to": "2022-07-18"
+    },
+    "jpdga": {
+      "eventId": "598"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "http://www.tochigiflyingdisc.com"
+      }
+    ],
+    "id": "the26thkantoopen"
+  },
+  {
+    "title": "The 11th Hokkaido Open",
+    "location": "hunkawanpanolamapark",
+    "period": {
+      "from": "2022-07-02",
+      "to": "2022-07-03"
+    },
+    "jpdga": {
+      "eventId": "595"
+    },
+    "id": "the11thhokkaidoopen"
+  },
+  {
+    "title": "The 17th Masters National Championship",
+    "location": "hikaritokazenookapark",
+    "period": {
+      "from": "2022-06-25",
+      "to": "2022-06-26"
+    },
+    "jpdga": {
+      "eventId": "594"
+    },
+    "id": "the17thmastersnationalchampionship"
+  },
+  {
+    "title": "The 4th Miho Open",
+    "location": "hikaritokazenookapark",
+    "period": {
+      "from": "2022-06-25",
+      "to": "2022-06-26"
+    },
+    "jpdga": {
+      "eventId": "594"
+    },
+    "id": "the4thmihoopen"
+  },
+  {
+    "id": "the24thnipponopen",
+    "title": "The 24th Nippon Open",
+    "location": "kibougaokaculturalpark",
+    "period": {
+      "from": "2022-06-11",
+      "to": "2022-06-12"
+    },
+    "jpdga": {
+      "eventId": "592"
+    }
+  },
+  {
+    "title": "The 17th Kiyosato-no-mori Open",
+    "location": "kiyosatonomori",
+    "period": {
+      "from": "2022-05-21",
+      "to": "2022-05-22"
+    },
+    "jpdga": {
+      "eventId": "591"
+    },
+    "id": "the17thkiyosatonomoriopen"
+  },
+  {
+    "title": "The 5th Gifu Hirugano Open",
+    "location": "hiruganokogen",
+    "period": {
+      "from": "2022-05-07",
+      "to": "2022-05-08"
+    },
+    "jpdga": {
+      "eventId": "590"
+    },
+    "id": "the5thgifuhiruganoopen"
+  },
+  {
+    "title": "The 34th Japan National Championship",
+    "location": "minamisomahoseridingpark",
+    "period": {
+      "from": "2022-04-30",
+      "to": "2022-05-01"
+    },
+    "jpdga": {
+      "eventId": "589"
+    },
+    "id": "the34thjapannationalchampionship"
+  },
+  {
+    "title": "The 20th Saga Open",
+    "location": "yoshinogarihistoricalpark",
+    "period": {
+      "from": "2022-04-09",
+      "to": "2022-04-10"
+    },
+    "jpdga": {
+      "eventId": "587"
+    },
+    "id": "the20thsagaopen"
+  },
+  {
+    "title": "The 2022 National Doubles Championship",
+    "location": "hitachiseasidepark",
+    "period": {
+      "from": "2022-03-05",
+      "to": "2022-03-06"
+    },
+    "jpdga": {
+      "eventId": "612"
+    },
+    "id": "the2022nationaldoubleschampionship"
+  },
+  {
+    "title": "The 11th Okinawa Open",
+    "location": "nakijinsonsportpark",
+    "period": {
+      "from": "2022-02-19",
+      "to": "2022-02-20"
+    },
+    "jpdga": {
+      "eventId": "586"
+    },
+    "id": "the11thokinawaopen"
+  },
+  {
+    "title": "The 1st Mikawa Open",
+    "location": "mikawarinkairyokuchi",
+    "period": {
+      "from": "2022-02-12",
+      "to": "2022-02-13"
+    },
+    "jpdga": {
+      "eventId": "585"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://aifda.or.jp/event"
+      }
+    ],
+    "id": "the1stmikawaopen"
+  },
+  {
+    "title": "The 2022 National Team Championship",
+    "location": "oyamaomoinomoripark",
+    "period": {
+      "from": "2022-01-09",
+      "to": "2022-01-10"
+    },
+    "jpdga": {
+      "eventId": "584"
+    },
+    "id": "the2022nationalteamchampionship"
+  },
+
   {
     "title": "The 21st Chubu Open",
     "location": "mikawarinkairyokuchi",
@@ -89,6 +422,9 @@
   {
     "title": "The 35th Kyushu Open",
     "location": "uminonakamichiseasidepark",
+    "layout": {
+      "official": "http://www.jpdgafukuoka.com/data/35KOmap1920.jpg"
+    },
     "period": {
       "from": "2021-11-27",
       "to": "2021-11-28"
@@ -899,10 +1235,7 @@
     "jpdga": {
       "eventId": "534"
     },
-    "id": "the4thmihoopen",
-    "rounds": [
-      "the4thmihoopen.rd1rd2"
-    ]
+    "id": "the4thmihoopen-canceled"
   },
   {
     "title": "The 2nd PWBF Cup",
@@ -1252,7 +1585,7 @@
     ]
   },
   {
-    "title": "The 4th Miho Open",
+    "title": "The 3rd Miho Open",
     "location": "hikaritokazenookapark",
     "period": {
       "from": "2019-09-28",
@@ -1268,9 +1601,9 @@
       "ama": 94,
       "misc": 11
     },
-    "id": "the4thmihoopen",
+    "id": "the3rdmihoopen",
     "rounds": [
-      "the4thmihoopen.rd1rd2"
+      "the3rdmihoopen.rd1rd2"
     ]
   },
   {
