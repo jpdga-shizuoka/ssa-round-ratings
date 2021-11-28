@@ -68,7 +68,7 @@ export class AppComponent implements OnInit, OnDestroy, MetaDescription {
     // @see https://stackoverflow.com/questions/47813927/how-to-refresh-a-component-in-angular
     // @note The following technique is working, but it affects routerLinkActive;
     // https://medium.com/@rakshitshah/refresh-angular-component-without-navigation-148a87c2de3f
-    const currentPath = this.location.path().replace(/^\//, '');
-    await this.ngRouter.navigate(['reload', currentPath], { skipLocationChange: true });
+    const currentPath = this.location.path().split('?')[0].replace(/^\//, '');
+    await this.ngRouter.navigate(['/reload', currentPath], { skipLocationChange: true });
   }
 }
