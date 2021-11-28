@@ -139,6 +139,9 @@ const routes: Routes = [
   },
   {
     path: 'reload', component: ReloadComponent
+  },
+  {
+    path: 'reload/:currentpath', component: ReloadComponent
   }
 ];
 

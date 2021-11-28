@@ -62,15 +62,13 @@ export class AppComponent implements OnInit, OnDestroy, MetaDescription {
       .subscribe(result => result ? this.drawer.close() : '');
   }
 
-  onClickLanguage(): void {
+  async onClickLanguage(): Promise<void> {
     this.localize.toggleLanguage();
 
     // @see https://stackoverflow.com/questions/47813927/how-to-refresh-a-component-in-angular
     // @note The following technique is working, but it affects routerLinkActive;
     // https://medium.com/@rakshitshah/refresh-angular-component-without-navigation-148a87c2de3f
     const currentPath = this.location.path().replace(/^\//, '');
-    this.ngRouter.navigate(['reload'], { skipLocationChange: true })
-      .then(() => this.ngRouter.navigate([currentPath], { skipLocationChange: true }))
-      .catch(err => { console.log(err); });
+    await this.ngRouter.navigate(['reload', currentPath], { skipLocationChange: true });
   }
 }
