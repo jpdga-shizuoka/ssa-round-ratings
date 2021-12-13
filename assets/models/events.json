@@ -392,12 +392,17 @@
   {
     "title": "The 33rd Japan National Championships",
     "location": "mikawarinkairyokuchi",
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2021/573_map.pdf",
+      "cbj": "the33rdjapannationalchampionship"
+    },
     "period": {
       "from": "2021-12-18",
       "to": "2021-12-19"
     },
     "pdga": {
-      "eventId": "55135"
+      "eventId": "55135",
+      "scoreId": "55135"
     },
     "jpdga": {
       "eventId": "573"
@@ -412,7 +417,8 @@
       "to": "2021-12-05"
     },
     "pdga": {
-      "eventId": "55134"
+      "eventId": "55134",
+      "scoreId": "55134"
     },
     "jpdga": {
       "eventId": "579"
