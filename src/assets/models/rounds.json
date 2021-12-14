@@ -1,5 +1,24 @@
 [
   {
+    "event": "the17thkyotoclassic",
+    "round": "Rd1,2,3",
+    "date": "2021-12-04",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 49,
+        "rating": 1062
+      },
+      "player2": {
+        "score": 71,
+        "rating": 870
+      }
+    },
+    "eventTitle": "The 17th Kyoto Classic",
+    "id": "the17thkyotoclassic.rd1rd2rd3",
+    "locationTitle": "Kyoto Tamba Park"
+  },
+  {
     "event": "the24thkansaiopen",
     "round": "Rd1,2,3",
     "date": "2021-10-23",
