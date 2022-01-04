@@ -45,7 +45,7 @@ export function calcRoundStat(rounds: RoundInfo[]): RoundInfo[] {
     if (round.ratings) {
       round.weight = calcWeight(round.ratings.player1, round.ratings.player2);
       round.offset = calcOffset(round);
-      round.ssa = calcSsa(round);
+      [round.ssa, round.ssaRaw] = calcSsa(round);
       round.category = calcCategory(round.ssa);
       round.difficulty = calcDifficulty(round);
     }
@@ -73,11 +73,13 @@ export function calcOffset(round: RoundInfo) {
 
 export function calcSsa(round: RoundInfo) {
   if (!round.offset || !round.weight) {
-    return 0;
+    return [0, 0];
   }
   const holes = round.holes || 18;
   const regulation = holes / 18;
-  return (1000 - round.offset) / round.weight / regulation;
+  const ssaRaw = (1000 - round.offset) / round.weight;
+  const ssa = ssaRaw / regulation;
+  return [ssa, ssaRaw];
 }
 
 export function calcCategory(ssa: number) {

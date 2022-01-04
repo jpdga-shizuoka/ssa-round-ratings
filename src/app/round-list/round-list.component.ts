@@ -27,4 +27,8 @@ export class RoundListComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.table.dataSource = this.dataSource!;
   }
+
+  is18holes(round: RoundInfo): boolean {
+    return round.holes == 18;
+  }
 }
