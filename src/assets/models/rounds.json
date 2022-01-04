@@ -1,5 +1,25 @@
 [
   {
+    "event": "the35thkyushuopen",
+    "round": "Rd1,2",
+    "date": "2021-11-27",
+    "hla": 100,
+    "holes": 27,
+    "ratings": {
+      "player1": {
+        "score": 72,
+        "rating": 1067
+      },
+      "player2": {
+        "score": 107,
+        "rating": 861
+      }
+    },
+    "eventTitle": "The 35th Kyushu Open",
+    "id": "the35thkyushuopen.rd1rd2",
+    "locationTitle": "Umino-Nakamichi Seaside Park"
+  },
+  {
     "event": "the17thkyotoclassic",
     "round": "Rd1,2,3",
     "date": "2021-12-04",
