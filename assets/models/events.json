@@ -445,12 +445,20 @@
       "from": "2021-11-27",
       "to": "2021-11-28"
     },
+    "players": {
+      "pro": 62,
+      "ama": 35,
+      "misc": 0
+    },
     "pdga": {
       "eventId": "55133"
     },
     "jpdga": {
       "eventId": "580"
     },
+    "rounds": [
+      "the35thkyushuopen.rd1rd2"
+    ],
     "urls": [
       {
         "type": "website",
