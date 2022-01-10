@@ -410,6 +410,7 @@
       "scoreId": "55135"
     },
     "jpdga": {
+      "topicId": "1597",
       "eventId": "573"
     },
     "id": "the33rdjapannationalchampionship"
@@ -431,6 +432,7 @@
       "scoreId": "55134"
     },
     "jpdga": {
+      "topicId": "1594",
       "eventId": "579"
     },
     "id": "the17thkyotoclassic"
@@ -454,6 +456,8 @@
       "eventId": "55133"
     },
     "jpdga": {
+      "photoId": "72157720235206586",
+      "topicId": "1593",
       "eventId": "580"
     },
     "rounds": [
@@ -655,6 +659,23 @@
     "jpdga": {
       "eventId": "582"
     },
+    "urls": [
+      {
+        "type": "video",
+        "title": "MPO Round#1 Front9 Feature Card",
+        "url": "https://youtu.be/zZBuMuge_uM"
+      },
+      {
+        "type": "video",
+        "title": "MPO Round#1 Back9 Feature Card",
+        "url": "https://youtu.be/vtsx76C3gkY"
+      },
+      {
+        "type": "video",
+        "title": "MPO Final Lead Card",
+        "url": "https://youtu.be/HEYMUK41ztI"
+      }
+    ],
     "id": "the1sthitachseasideparkopen"
   },
   {
@@ -771,6 +792,48 @@
     "id": "the4thgifuhiruganoopen",
     "rounds": [
       "the4thgifuhiruganoopen.rd1rd2rd3"
+    ],
+    "urls": [
+      {
+        "type": "video",
+        "title": "MPO Round#1 Front9 Feature Card",
+        "url": "https://youtu.be/ZiU1W1KzFZs"
+      },
+      {
+        "type": "video",
+        "title": "MPO Round#1 Back9 Feature Card",
+        "url": "https://youtu.be/M7vptTh9-d4"
+      },
+      {
+        "type": "video",
+        "title": "MPO Round#2 Front9 Lead Card",
+        "url": "https://youtu.be/TMZm9uJj604"
+      },
+      {
+        "type": "video",
+        "title": "MPO Round#2 Back9 Lead Card",
+        "url": "https://youtu.be/_vJZ1IF4c2w"
+      },
+      {
+        "type": "video",
+        "title": "MPO Round#3 Front9 Lead Card",
+        "url": "https://youtu.be/CYSLYYfwJV0"
+      },
+      {
+        "type": "video",
+        "title": "MPO Round#3 Back9 Lead Card",
+        "url": "https://youtu.be/VnAx5Owu0n4"
+      },
+      {
+        "type": "video",
+        "title": "MPO Semifinal9 Lead Card",
+        "url": "https://youtu.be/544-EmzI57s"
+      },
+      {
+        "type": "video",
+        "title": "MPO Final9 Lead Card",
+        "url": "https://youtu.be/xJ3jV-vlNR4"
+      }
     ]
   },
   {
