@@ -410,6 +410,7 @@
       "scoreId": "55135"
     },
     "jpdga": {
+      "topicId": "1597",
       "eventId": "573"
     },
     "id": "the33rdjapannationalchampionship"
@@ -431,6 +432,7 @@
       "scoreId": "55134"
     },
     "jpdga": {
+      "topicId": "1594",
       "eventId": "579"
     },
     "id": "the17thkyotoclassic"
@@ -454,6 +456,8 @@
       "eventId": "55133"
     },
     "jpdga": {
+      "photoId": "72157720235206586",
+      "topicId": "1593",
       "eventId": "580"
     },
     "rounds": [
