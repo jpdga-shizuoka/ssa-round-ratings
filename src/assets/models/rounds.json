@@ -64,6 +64,16 @@
     "date": "2021-10-23",
     "hla": 128,
     "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 60,
+        "rating": 1039
+      },
+      "player2": {
+        "score": 83,
+        "rating": 890
+      }
+    },
     "eventTitle": "The 24th Kansai Open",
     "id": "the24thkansaiopen.rd1rd2rd3",
     "locationTitle": "Fumin-no-Mori Hiyoshi"
