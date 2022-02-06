@@ -329,7 +329,7 @@
     "id": "the2022nationaldoubleschampionship"
   },
   {
-    "title": "The 11th Okinawa Open",
+    "title": "The 10th Okinawa Open",
     "location": "nakijinsonsportpark",
     "period": {
       "from": "2022-02-19",
@@ -341,11 +341,21 @@
     "jpdga": {
       "eventId": "586"
     },
-    "id": "the11thokinawaopen"
+    "urls": [
+      {
+        "type": "video",
+        "title": "Course Layout",
+        "url": "https://youtu.be/hVpPqIO9Yk0"
+      }
+    ],
+    "id": "the10thokinawaopen"
   },
   {
     "title": "The 1st Mikawa Open",
     "location": "mikawarinkairyokuchi",
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2022/585_map.pdf"
+    },
     "period": {
       "from": "2022-02-12",
       "to": "2022-02-13"
@@ -888,7 +898,7 @@
     "jpdga": {
       "eventId": "554"
     },
-    "id": "the10thokinawaopen"
+    "id": "the10thokinawaopencanceled"
   },
   {
     "title": "The 7th Kagoshima Open",
