@@ -8,14 +8,22 @@ const SHORT_FORMAT = { day: 'numeric' } as Intl.DateTimeFormatOptions;
   name: 'period'
 })
 export class PeriodPipe implements PipeTransform {
-  transform(value: Period|string): string {
+  transform(value: Period|string, type='full'): string {
     if (isDate(value)) {
-      return new Date(value as string).toLocaleDateString(undefined, LONG_FORMAT);
+      const date = new Date(value as string);
+      if (type === 'short') {
+        return date.getFullYear().toString();
+      }
+      return date.toLocaleDateString(undefined, LONG_FORMAT);
     }
     if (isPeriod(value)) {
       const period = value;
       try {
-        const from = new Date(period.from).toLocaleDateString(undefined, LONG_FORMAT);
+        const fromDate = new Date(period.from);
+        if (type === 'short') {
+          return fromDate.getFullYear().toString();
+        }
+        const from = fromDate.toLocaleDateString(undefined, LONG_FORMAT);
         if (period.from === period.to) {
           return from;
         }
