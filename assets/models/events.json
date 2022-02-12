@@ -361,7 +361,8 @@
       "to": "2022-02-13"
     },
     "pdga": {
-      "eventId": "56393"
+      "eventId": "56393",
+      "scoreId": "56393"
     },
     "jpdga": {
       "eventId": "585"
