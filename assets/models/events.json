@@ -1473,6 +1473,9 @@
       "from": "2020-02-15",
       "to": "2020-02-16"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2019/521_map.pdf"
+    },
     "pdga": {
       "eventId": "44595"
     },
@@ -1497,6 +1500,9 @@
     "period": {
       "from": "2020-01-25",
       "to": "2020-01-26"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2019/520_map.pdf"
     },
     "pdga": {
       "eventId": "44594"
