@@ -293,8 +293,8 @@
     "title": "The 34th Japan National Championships",
     "location": "minamisomahoseridingpark",
     "period": {
-      "from": "2022-04-30",
-      "to": "2022-05-01"
+      "from": "2022-05-04",
+      "to": "2022-05-05"
     },
     "jpdga": {
       "eventId": "589"
@@ -344,8 +344,13 @@
     "urls": [
       {
         "type": "video",
-        "title": "Course Layout",
+        "title": "Course layout",
         "url": "https://youtu.be/MF3hL9n8WS0"
+      },
+      {
+        "type": "video",
+        "title": "Competition rules",
+        "url": "https://youtu.be/VdtecH7pO1o"
       }
     ],
     "id": "the10thokinawaopen"
@@ -433,6 +438,13 @@
       "topicId": "1597",
       "eventId": "573"
     },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Hole stats",
+        "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRFmHCcpKPHLl80CbnD1C823a8wqXNgyUXdjn-F9ER_nF_nkXyuQk4wRPoy6sCKaXPNIHdcsqMQtvpW/pubhtml"
+      }
+    ],
     "rounds": [
       "the33rdjapannationalchampionship.rd1rd2rd3"
     ],
