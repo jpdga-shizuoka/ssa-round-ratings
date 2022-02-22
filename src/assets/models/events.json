@@ -1,5 +1,41 @@
 [
   {
+    "title": "The 2023 Japan Open",
+    "location": "fukuicountryclub",
+    "period": {
+      "from": "2023-05-12",
+      "to": "2023-05-19"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://www.jo-discgolf-fukui-sakai.jp"
+      },
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://www.jo-discgolf-fukui-sakai.jp/en/"
+      },
+      {
+        "type": "video",
+        "title": "From Innova",
+        "url": "https://youtu.be/dPHDXwmx5tA"
+      },
+      {
+        "type": "video",
+        "title": "World Masters Games 2021 Kansai",
+        "url": "https://youtu.be/idqLqIEHGJ0"
+      },
+      {
+        "type": "video",
+        "title": "Fukui Country Club",
+        "url": "https://youtu.be/G69pnd2qsZQ"
+      }
+    ],
+    "id": "the2023japanopen"
+  },
+  {
     "title": "The 2022 Japan Open",
     "location": "fukuicountryclub",
     "status": "CANCELED",
