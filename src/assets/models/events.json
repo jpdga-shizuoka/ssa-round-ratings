@@ -379,6 +379,11 @@
     },
     "urls": [
       {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://yousukenakahodo781.wixsite.com/mysite"
+      },
+      {
         "type": "video",
         "title": "Course layout",
         "url": "https://youtu.be/MF3hL9n8WS0"
