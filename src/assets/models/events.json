@@ -377,6 +377,11 @@
     "jpdga": {
       "eventId": "586"
     },
+    "players": {
+      "pro": 32,
+      "ama": 6,
+      "misc": 3
+    },
     "urls": [
       {
         "type": "website",
@@ -413,6 +418,11 @@
     "jpdga": {
       "eventId": "585"
     },
+    "players": {
+      "pro": 24,
+      "ama": 21,
+      "misc": 0
+    },
     "urls": [
       {
         "type": "website",
@@ -432,9 +442,13 @@
     "jpdga": {
       "eventId": "584"
     },
+    "players": {
+      "pro": 64,
+      "ama": 48,
+      "misc": 0
+    },
     "id": "the2022nationalteamchampionship"
   },
-
   {
     "title": "The 21st Chubu Open",
     "location": "mikawarinkairyokuchi",
