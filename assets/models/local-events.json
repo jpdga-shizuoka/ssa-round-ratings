@@ -1,11 +1,28 @@
 [
   {
     "category": "local",
+    "title": "The 3rd Hop Japan Cup Disc Golf Tournament",
+    "location": "greenparkmiyakoji",
+    "period": {
+      "from": "2022-05-29",
+      "to": "2022-05-29"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/greenparkmiyakoji"
+      }
+    ],
+    "id": "the3rhopjapancupdiscgolftournament"
+  },
+  {
+    "category": "local",
     "title": "The Aichi Open Disc Golf Series",
     "location": "mikawarinkairyokuchi",
     "period": {
-      "from": "2022-03-06",
-      "to": "2022-03-06"
+      "from": "2022-03-13",
+      "to": "2022-03-13"
     },
     "urls": [
       {
