@@ -36,44 +36,6 @@
     "id": "the2023japanopen"
   },
   {
-    "title": "The 2022 Japan Open",
-    "location": "fukuicountryclub",
-    "status": "CANCELED",
-    "period": {
-      "from": "2022-05-13",
-      "to": "2022-05-20"
-    },
-    "urls": [
-      {
-        "type": "website",
-        "title": "Official Site",
-        "url": "https://www.jo-discgolf-fukui-sakai.jp"
-      },
-      {
-        "type": "website",
-        "title": "Official Site",
-        "url": "https://www.jo-discgolf-fukui-sakai.jp/en/"
-      },
-      {
-        "type": "video",
-        "title": "from Innova",
-        "url": "https://youtu.be/dPHDXwmx5tA"
-      },
-      {
-        "type": "video",
-        "title": "World Masters Games 2021 Kansai",
-        "url": "https://youtu.be/idqLqIEHGJ0"
-      },
-      {
-        "type": "video",
-        "title": "Fukui Country Club",
-        "url": "https://youtu.be/G69pnd2qsZQ"
-      }
-    ],
-    "id": "the2022japanopen"
-  },
-
-  {
     "title": "The 21st Chubu Open",
     "location": "mikawarinkairyokuchi",
     "period": {
@@ -308,6 +270,9 @@
       "from": "2022-05-21",
       "to": "2022-05-22"
     },
+    "pdga": {
+      "eventId": "58648"
+    },
     "jpdga": {
       "eventId": "591"
     },
@@ -319,6 +284,9 @@
     "period": {
       "from": "2022-05-07",
       "to": "2022-05-08"
+    },
+    "pdga": {
+      "eventId": "58647"
     },
     "jpdga": {
       "eventId": "590"
@@ -332,6 +300,9 @@
       "from": "2022-05-04",
       "to": "2022-05-05"
     },
+    "pdga": {
+      "eventId": "58410"
+    },
     "jpdga": {
       "eventId": "589"
     },
@@ -343,6 +314,9 @@
     "period": {
       "from": "2022-04-09",
       "to": "2022-04-10"
+    },
+    "pdga": {
+      "eventId": "58409"
     },
     "jpdga": {
       "eventId": "587"
@@ -362,6 +336,13 @@
     "jpdga": {
       "eventId": "612"
     },
+    "urls": [
+      {
+        "type": "video",
+        "title": "Digest",
+        "url": "https://youtu.be/jUCxyXfP-iA"
+      }
+    ],
     "id": "the2022nationaldoubleschampionship"
   },
   {
@@ -375,7 +356,9 @@
       "eventId": "56394"
     },
     "jpdga": {
-      "eventId": "586"
+      "eventId": "586",
+      "topicId": "1615",
+      "photoId": "72177720297408715"
     },
     "players": {
       "pro": 32,
@@ -387,6 +370,21 @@
         "type": "website",
         "title": "Official Site",
         "url": "https://yousukenakahodo781.wixsite.com/mysite"
+      },
+      {
+        "type": "video",
+        "title": "MPO Final9",
+        "url": "https://youtu.be/JXgfaVkI7EI"
+      },
+      {
+        "type": "video",
+        "title": "FPO Final9",
+        "url": "https://youtu.be/7fw2pYgavws"
+      },
+      {
+        "type": "video",
+        "title": "Ama Final9",
+        "url": "https://youtu.be/cy6QEejIW78"
       },
       {
         "type": "video",
@@ -767,6 +765,21 @@
         "type": "video",
         "title": "MPO Final Lead Card",
         "url": "https://youtu.be/HEYMUK41ztI"
+      },
+      {
+        "type": "video",
+        "title": "R#1 Front9, Shimakage Camera",
+        "url": "https://youtu.be/6e0EHft-h6M"
+      },
+      {
+        "type": "video",
+        "title": "R#1 Back9, Shimakage Camera",
+        "url": "https://youtu.be/0XS9DxeEKM4"
+      },
+      {
+        "type": "video",
+        "title": "Round#2, Shimakage Camera",
+        "url": "https://youtu.be/PWomowA8fxA"
       }
     ],
     "id": "the1sthitachseasideparkopen"
