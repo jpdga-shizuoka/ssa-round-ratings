@@ -119,6 +119,23 @@
     "id": "theaichiopendiscgolfseries"
   },
   {
+    "id": "theikedatowndiscgolftournament",
+    "category": "local",
+    "title": "The Ikeda Town Disc Golf Tournament",
+    "location": "ikedatowngeneralgymnasium",
+    "period": {
+      "from": "2022-05-22",
+      "to": "2022-05-22"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Gifu Flying Disc Association",
+        "url": "https://www.facebook.com/gifuflyingdiscassociation/"
+      }
+    ]
+  },
+  {
     "category": "local",
     "title": "The Aichi Open Disc Golf Series",
     "location": "kasaharagreenheights",
