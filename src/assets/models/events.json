@@ -315,6 +315,9 @@
       "from": "2022-04-09",
       "to": "2022-04-10"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2022/587_map.pdf"
+    },
     "pdga": {
       "eventId": "58409"
     },
