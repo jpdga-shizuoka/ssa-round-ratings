@@ -137,6 +137,23 @@
   },
   {
     "category": "local",
+    "title": "The Oyama Mayor's Cup Disc Golf Tournament",
+    "location": "oyamaomoinomoripark",
+    "period": {
+      "from": "2022-05-15",
+      "to": "2022-05-15"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Oyama Disc Golf Association",
+        "url": "https://www.facebook.com/小山市ディスクゴルフ協会-1445376232379294/"
+      }
+    ],
+    "id": "theoyamamayorscupdiscgolftournament"
+  },
+  {
+    "category": "local",
     "title": "The Aichi Open Disc Golf Series",
     "location": "kasaharagreenheights",
     "period": {
