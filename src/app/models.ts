@@ -120,3 +120,10 @@ export interface TotalYearPlayers {
   year: number;
   players: Players;
 }
+
+export type Organization = 'PDGA' | 'JPDGA';
+
+export interface Members {
+  year: number;
+  members: number;
+}

@@ -55,6 +55,8 @@ import { BottomSheetDetailDisabledComponent } from './dialogs/bottom-sheet-detai
 import { PrefaceComponent } from './preface/preface.component';
 import { IcalenderComponent } from './icalendar/icalendar.component';
 import { DifficultyChartComponent } from './difficulty-chart/difficulty-chart.component';
+import { AnnualChartComponent } from './annual-chart/annual-chart.component';
+import { MembersChartComponent } from './members-chart/members-chart.component';
 import { TermsComponent } from './terms/terms.component';
 import { BubbleChartInteractiveComponent } from './difficulty-chart/custom-chart/bubble-chart-interactive.component';
 import { BubbleSeriesInteractiveComponent } from './difficulty-chart/custom-chart/bubble-series-interactive.component';
@@ -97,6 +99,8 @@ import { EventPipe } from './event.pipe';
     PrefaceComponent,
     IcalenderComponent,
     DifficultyChartComponent,
+    AnnualChartComponent,
+    MembersChartComponent,
     BubbleChartInteractiveComponent,
     BubbleSeriesInteractiveComponent,
     RoundListComponent,
