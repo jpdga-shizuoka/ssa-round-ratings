@@ -10,11 +10,11 @@ import {
 } from './libs';
 import {
   EventInfo, RoundInfo, LocationInfo, EventCategory, VideoInfo, TotalYearPlayers,
-  EventId, LocationId, RoundId, Members, Organization
+  EventId, LocationId, RoundId, Members, Organization, AnnualReport
 } from './models';
 export {
   EventInfo, RoundInfo, LocationInfo, EventCategory, VideoInfo, TotalYearPlayers,
-  Subscription, EventId, LocationId, Members, Organization
+  Subscription, EventId, LocationId, Members, Organization, AnnualReport
 };
 
 export type UserFilter = (events: EventInfo[], category: EventCategory) => EventInfo[];
@@ -122,6 +122,11 @@ export class RemoteService {
   getMembers(organization: Organization): Observable<Members[]> {
     return this.http
       .get<Members[]>(organization2url(organization), { responseType: 'json' });
+  }
+
+  getAnnualReports(): Observable<AnnualReport[]> {
+    return this.http
+      .get<AnnualReport[]>('assets/models/annual-reports.json', { responseType: 'json' });
   }
 
   private filterVideos(events: EventInfo[]): VideoInfo[] {

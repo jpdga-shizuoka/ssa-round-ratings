@@ -1,1 +1,7 @@
-<p>annual-chart works!</p>
+<div class="chart">
+  <ul>
+    <li *ngFor="let report of reports$ | async">
+      <a href={{report.url}}>{{report.year}}</a>
+    </li>
+  </ul>
+</div>

@@ -127,3 +127,8 @@ export interface Members {
   year: number;
   members: number;
 }
+
+export interface AnnualReport {
+  year: number;
+  url: string;
+}
