@@ -6,15 +6,15 @@ import { catchError, tap, map } from 'rxjs/operators';
 
 import { LocalizeService } from './localize.service';
 import {
-  category2url, upcomingFilter, sortEvents, countPlayers, compareByDate, filterByList
+  category2url, upcomingFilter, sortEvents, countPlayers, compareByDate, filterByList, organization2url
 } from './libs';
 import {
   EventInfo, RoundInfo, LocationInfo, EventCategory, VideoInfo, TotalYearPlayers,
-  EventId, LocationId, RoundId
+  EventId, LocationId, RoundId, Members, Organization, AnnualReport
 } from './models';
 export {
   EventInfo, RoundInfo, LocationInfo, EventCategory, VideoInfo, TotalYearPlayers,
-  Subscription, EventId, LocationId
+  Subscription, EventId, LocationId, Members, Organization, AnnualReport
 };
 
 export type UserFilter = (events: EventInfo[], category: EventCategory) => EventInfo[];
@@ -117,6 +117,16 @@ export class RemoteService {
     return this.getEvents('past').pipe(
       map(events => countPlayers(events))
     );
+  }
+
+  getMembers(organization: Organization): Observable<Members[]> {
+    return this.http
+      .get<Members[]>(organization2url(organization), { responseType: 'json' });
+  }
+
+  getAnnualReports(): Observable<AnnualReport[]> {
+    return this.http
+      .get<AnnualReport[]>('assets/models/annual-reports.json', { responseType: 'json' });
   }
 
   private filterVideos(events: EventInfo[]): VideoInfo[] {

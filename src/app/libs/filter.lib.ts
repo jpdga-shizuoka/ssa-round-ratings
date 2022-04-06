@@ -1,5 +1,5 @@
 import {
-  RoundInfo, EventInfo, EventCategory, TotalYearPlayers, Players, RoundId
+  RoundInfo, EventInfo, EventCategory, TotalYearPlayers, Players, RoundId, Organization
 } from '../models';
 
 const CATEGORY2FILE = {
@@ -10,6 +10,10 @@ const CATEGORY2FILE = {
   local: 'local-events',
   monthly: 'monthly-events'
 };
+
+export function organization2url(organization: Organization) {
+  return `assets/models/members.${organization}.json`;
+}
 
 export function category2url(category: EventCategory) {
   return `assets/models/${CATEGORY2FILE[category]}.json`;

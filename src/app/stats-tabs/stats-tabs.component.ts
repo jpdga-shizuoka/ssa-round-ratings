@@ -4,7 +4,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 import { RoutingTabsComponent } from '../routing-tabs/routing-tabs.component';
 
-const TABS = ['difficulty', 'players'];
+const TABS = ['difficulty', 'players', 'memberships', 'reports'];
 
 @Component({
   selector: 'app-stats-tabs',
