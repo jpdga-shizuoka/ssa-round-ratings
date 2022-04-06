@@ -40,6 +40,7 @@ export class MembersChartComponent implements OnInit {
   yScaleMax?: number;;
   legendTitle = '';
   yAxisLabel = 'Members';
+  view = [400, 400];
 
   constructor(private readonly remote: RemoteService) { }
 
