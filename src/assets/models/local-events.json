@@ -69,6 +69,23 @@
   },
   {
     "category": "local",
+    "title": "The Tochigi Kokutai",
+    "location": "shiromigaokasportspark",
+    "period": {
+      "from": "2022-07-16",
+      "to": "2022-07-16"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Tochigi Kokutai",
+        "url": "https://www.tochigikokutai2022.jp/kokutai/competition/フライングディスク"
+      }
+    ],
+    "id": "thetochigikokutai"
+  },
+  {
+    "category": "local",
     "title": "The Aichi Open Disc Golf Series",
     "location": "shiminshikinomori",
     "period": {
@@ -151,6 +168,23 @@
       }
     ],
     "id": "theoyamamayorscupdiscgolftournament"
+  },
+  {
+    "category": "local",
+    "title": "The Hiyoshi Challenge",
+    "location": "fuminnomorihiyoshi",
+    "period": {
+      "from": "2022-05-08",
+      "to": "2022-05-08"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Kyoto Disc Golf Association",
+        "url": "https://www.facebook.com/jpdgakyoto"
+      }
+    ],
+    "id": "thehiyoshichallenge"
   },
   {
     "category": "local",
