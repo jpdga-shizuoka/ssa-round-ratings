@@ -306,6 +306,11 @@
     "jpdga": {
       "eventId": "589"
     },
+    "players": {
+      "pro": 74,
+      "ama": 29,
+      "misc": 1
+    },
     "id": "the34thjapannationalchampionship"
   },
   {
@@ -324,6 +329,11 @@
     "jpdga": {
       "eventId": "587"
     },
+    "players": {
+      "pro": 38,
+      "ama": 17,
+      "misc": 0
+    },
     "id": "the20thsagaopen"
   },
   {
@@ -337,7 +347,13 @@
       "eventId": "56396"
     },
     "jpdga": {
-      "eventId": "612"
+      "eventId": "612",
+      "topicId": "1618"
+    },
+    "players": {
+      "pro": 46,
+      "ama": 48,
+      "misc": 12
     },
     "urls": [
       {
