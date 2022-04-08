@@ -259,6 +259,9 @@
       "from": "2022-06-11",
       "to": "2022-06-12"
     },
+    "pdga": {
+      "eventId": "59456"
+    },
     "jpdga": {
       "eventId": "592"
     }
@@ -314,7 +317,7 @@
     "id": "the34thjapannationalchampionship"
   },
   {
-    "title": "The 20th Saga Open",
+    "title": "The 20th Saga Yoshinogari Open",
     "location": "yoshinogarihistoricalpark",
     "period": {
       "from": "2022-04-09",
@@ -962,7 +965,7 @@
     ]
   },
   {
-    "title": "The 19th Saga Open",
+    "title": "The 19th Saga Yoshinogari Open",
     "location": "yoshinogarihistoricalpark",
     "period": {
       "from": "2021-04-10",
@@ -1511,7 +1514,7 @@
     ]
   },
   {
-    "title": "The 18th Saga Open",
+    "title": "The 18th Saga Yoshinogari Open",
     "location": "yoshinogarihistoricalpark",
     "period": {
       "from": "2020-04-11",
@@ -2187,7 +2190,7 @@
     ]
   },
   {
-    "title": "The 17th Saga Open",
+    "title": "The 17th Saga Yoshinogari Open",
     "location": "yoshinogarihistoricalpark",
     "period": {
       "from": "2019-04-13",
@@ -2836,7 +2839,7 @@
     ]
   },
   {
-    "title": "The 16th Saga Open",
+    "title": "The 16th Saga Yoshinogari Open",
     "location": "yoshinogarihistoricalpark",
     "period": {
       "from": "2018-04-14",
@@ -3414,7 +3417,7 @@
     ]
   },
   {
-    "title": "The 15th Saga Open",
+    "title": "The 15th Saga Yoshinogari Open",
     "location": "yoshinogarihistoricalpark",
     "period": {
       "from": "2017-04-08",
@@ -3930,7 +3933,7 @@
     ]
   },
   {
-    "title": "The 14th Saga Open",
+    "title": "The 14th Saga Yoshinogari Open",
     "location": "yoshinogarihistoricalpark",
     "period": {
       "from": "2016-04-09",
@@ -4556,7 +4559,7 @@
     ]
   },
   {
-    "title": "The 13th Saga Open",
+    "title": "The 13th Saga Yoshinogari Open",
     "location": "yoshinogarihistoricalpark",
     "period": {
       "from": "2015-04-11",
