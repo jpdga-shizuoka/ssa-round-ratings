@@ -260,7 +260,8 @@
       "to": "2022-06-12"
     },
     "pdga": {
-      "eventId": "59456"
+      "eventId": "59456",
+      "scoreId": "59456"
     },
     "jpdga": {
       "eventId": "592"
@@ -289,7 +290,8 @@
       "to": "2022-05-08"
     },
     "pdga": {
-      "eventId": "58647"
+      "eventId": "58647",
+      "scoreId": "58647"
     },
     "jpdga": {
       "eventId": "590"
