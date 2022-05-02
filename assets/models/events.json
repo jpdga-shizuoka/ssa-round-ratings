@@ -305,6 +305,9 @@
       "from": "2022-05-04",
       "to": "2022-05-05"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2022/589_map.pdf"
+    },
     "pdga": {
       "eventId": "58410"
     },
