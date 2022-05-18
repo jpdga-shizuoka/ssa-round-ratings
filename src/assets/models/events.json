@@ -274,11 +274,19 @@
       "from": "2022-05-21",
       "to": "2022-05-22"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2022/591_map.pdf"
+    },
     "pdga": {
       "eventId": "58648"
     },
     "jpdga": {
       "eventId": "591"
+    },
+    "players": {
+      "pro": 51,
+      "ama": 41,
+      "misc": 3
     },
     "id": "the17thkiyosatonomoriopen"
   },
@@ -296,6 +304,11 @@
     "jpdga": {
       "eventId": "590"
     },
+    "players": {
+      "pro": 20,
+      "ama": 15,
+      "misc": 0
+    },
     "id": "the5thgifuhiruganoopen"
   },
   {
@@ -309,7 +322,8 @@
       "official": "http://www.jpdga.jp/data/event/2022/589_map.pdf"
     },
     "pdga": {
-      "eventId": "58410"
+      "eventId": "58410",
+      "scoreId": "58410"
     },
     "jpdga": {
       "eventId": "589"
