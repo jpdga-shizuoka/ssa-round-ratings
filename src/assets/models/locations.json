@@ -87,6 +87,14 @@
     "title": "Kibougaoka Cultural Park"
   },
   {
+    "prefecture": "Shiga",
+    "geolocation": [
+      35.05886561087921, 136.04987540047873
+    ],
+    "id": "kibougaokaculturalparkwest",
+    "title": "Kibougaoka Cultural Park"
+  },
+  {
     "prefecture": "Kyoto",
     "geolocation": [
       35.137323,
