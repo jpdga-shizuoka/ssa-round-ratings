@@ -1,5 +1,85 @@
 [
   {
+    "event": "the17thkiyosatonomoriopen",
+    "round": "Rd1,2,3",
+    "date": "2022-05-21",
+    "hla": 81,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 46,
+        "rating": 1047
+      },
+      "player2": {
+        "score": 62,
+        "rating": 888
+      }
+    },
+    "eventTitle": "The 17th Kiyosato-no-mori Open",
+    "id": "the17thkiyosatonomoriopen.rd1rd2rd3",
+    "locationTitle": "Kiyosato-no-mori"
+  },
+  {
+    "event": "the5thgifuhiruganoopen",
+    "round": "Rd1,2,3",
+    "date": "2022-05-07",
+    "hla": 97,
+    "holes": 18,
+    "eventTitle": "The 5th Gifu Hirugano Open",
+    "id": "the5thgifuhiruganoopen.rd1rd2rd3",
+    "locationTitle": "Hirugano Kogen",
+    "ratings": {
+      "player1": {
+        "score": 48,
+        "rating": 1026
+      },
+      "player2": {
+        "score": 62,
+        "rating": 890
+      }
+    }
+  },
+  {
+    "event": "the34thjapannationalchampionship",
+    "round": "Rd1,2,3",
+    "date": "2022-05-04",
+    "hla": 119,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 56,
+        "rating": 1058
+      },
+      "player2": {
+        "score": 83,
+        "rating": 873
+      }
+    },
+    "eventTitle": "The 34th Japan National Championship",
+    "id": "the34thjapannationalchampionship.rd1rd2rd3",
+    "locationTitle": "Mikawa Rinkai Ryokuchi"
+  },
+  {
+    "event": "the20thsagaopen",
+    "round": "Rd1,2,3",
+    "date": "2022-04-09",
+    "hla": 91,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 50,
+        "rating": 1071
+      },
+      "player2": {
+        "score": 76,
+        "rating": 860
+      }
+    },
+    "eventTitle": "The 20th Saga Open",
+    "id": "the20thsagaopen.rd1rd2rd3",
+    "locationTitle": "Yoshinogari Historical Park"
+  },
+  {
     "event": "the33rdjapannationalchampionship",
     "round": "Rd1,2,3",
     "date": "2021-12-18",

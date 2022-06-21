@@ -159,12 +159,38 @@
     "id": "the1stjapanprodiscgolfchampionships"
   },
   {
+    "id": "the8thasiachampionship",
+    "title": "The 8th Asia Championships",
+    "location": "uminonakamichiseasidepark",
+    "period": {
+      "from": "2022-08-20",
+      "to": "2022-08-21"
+    },
+    "pdga": {
+      "eventId": "41245"
+    },
+    "jpdga": {
+      "eventId": "1638"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "http://www.jpdgafukuoka.com/blog/?page_id=2861"
+      }
+    ]
+  },
+  {
+    "id": "the17thmichinokuopen",
     "title": "The 17th Michinoku Open",
     "location": "kitakamisportpark",
     "period": {
       "from": "2022-08-06",
       "to": "2022-08-07"
     },
+    "pdga": {
+      "eventId": "60506"
+    },
     "jpdga": {
       "eventId": "599"
     },
@@ -174,16 +200,19 @@
         "title": "Official Site",
         "url": "http://jpdgaiwate.com"
       }
-    ],
-    "id": "the17thmichinokuopen"
+    ]
   },
   {
+    "id": "the2022pdgawomensglobaleventmichinoku",
     "title": "The 2022 PDGA Women's Global Event",
     "location": "kitakamisportpark",
     "period": {
       "from": "2022-08-06",
       "to": "2022-08-07"
     },
+    "pdga": {
+      "eventId": "60506"
+    },
     "jpdga": {
       "eventId": "599"
     },
@@ -193,15 +222,18 @@
         "title": "Official Site",
         "url": "http://jpdgaiwate.com"
       }
-    ],
-    "id": "the2022pdgawomensglobaleventmichinoku"
+    ]
   },
   {
+    "id": "the26thkantoopen",
     "title": "The 26th Kanto Open",
     "location": "shiromigaokasportspark",
     "period": {
       "from": "2022-07-17",
       "to": "2022-07-18"
+    },
+    "pdga": {
+      "eventId": "60507"
     },
     "jpdga": {
       "eventId": "598"
@@ -212,34 +244,60 @@
         "title": "Official Site",
         "url": "http://www.tochigiflyingdisc.com"
       }
-    ],
-    "id": "the26thkantoopen"
+    ]
   },
   {
+    "id": "the3rdhitachseasideparkopen",
+    "title": "The 3rd Hitach Seaside Park Open",
+    "location": "hitachiseasidepark",
+    "period": {
+      "from": "2022-07-10",
+      "to": "2022-07-10"
+    },
+    "jpdga": {
+      "eventId": "1625"
+    }
+  },
+  {
+    "id": "the11thhokkaidoopen",
     "title": "The 11th Hokkaido Open",
     "location": "hunkawanpanolamapark",
     "period": {
       "from": "2022-07-02",
       "to": "2022-07-03"
     },
+    "pdga": {
+      "eventId": "60441"
+    },
     "jpdga": {
       "eventId": "595"
-    },
-    "id": "the11thhokkaidoopen"
+    }
   },
   {
+    "id": "the17thmastersnationalchampionship",
     "title": "The 17th Masters National Championships",
     "location": "hikaritokazenookapark",
     "period": {
       "from": "2022-06-25",
       "to": "2022-06-26"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2022/594_map.pdf"
+    },
+    "pdga": {
+      "eventId": "60440"
+    },
     "jpdga": {
       "eventId": "594"
     },
-    "id": "the17thmastersnationalchampionship"
+    "players": {
+      "pro": 36,
+      "ama": 20,
+      "misc": 0
+    }
   },
   {
+    "id": "the4thmihoopen",
     "title": "The 4th Miho Open",
     "location": "hikaritokazenookapark",
     "period": {
@@ -249,7 +307,11 @@
     "jpdga": {
       "eventId": "594"
     },
-    "id": "the4thmihoopen"
+    "players": {
+      "pro": 13,
+      "ama": 0,
+      "misc": 0
+    }
   },
   {
     "id": "the24thnipponopen",
@@ -268,6 +330,11 @@
     },
     "jpdga": {
       "eventId": "592"
+    },
+    "players": {
+      "pro": 56,
+      "ama": 18,
+      "misc": 0
     }
   },
   {
@@ -284,13 +351,17 @@
       "eventId": "58648"
     },
     "jpdga": {
-      "eventId": "591"
+      "eventId": "591",
+      "topicId": "1634"
     },
     "players": {
       "pro": 51,
       "ama": 41,
       "misc": 3
     },
+    "rounds": [
+      "the17thkiyosatonomoriopen.rd1rd2rd3"
+    ],
     "id": "the17thkiyosatonomoriopen"
   },
   {
@@ -312,6 +383,9 @@
       "ama": 15,
       "misc": 0
     },
+    "rounds": [
+      "the5thgifuhiruganoopen.rd1rd2rd3"
+    ],
     "id": "the5thgifuhiruganoopen"
   },
   {
@@ -329,13 +403,24 @@
       "scoreId": "58410"
     },
     "jpdga": {
-      "eventId": "589"
+      "eventId": "589",
+      "topicId": "1628"
     },
     "players": {
       "pro": 74,
       "ama": 29,
       "misc": 1
     },
+    "urls": [
+      {
+        "type": "website",
+        "title": "村爺のなんでもいいべ",
+        "url": "https://blog.goo.ne.jp/y-ohmura-1866/e/01f929965e4eb87ac9871265a088d8a0"
+      }
+    ],
+    "rounds": [
+      "the34thjapannationalchampionship.rd1rd2rd3"
+    ],
     "id": "the34thjapannationalchampionship"
   },
   {
@@ -361,6 +446,9 @@
       "ama": 17,
       "misc": 0
     },
+    "rounds": [
+      "the20thsagaopen.rd1rd2rd3"
+    ],
     "id": "the20thsagaopen"
   },
   {
