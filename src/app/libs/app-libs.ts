@@ -100,7 +100,7 @@ export function makeMiscInfo(event: EventInfo): MiscInfo[] {
   const info: MiscInfo[] = [];
   if (event.urls) {
     for (const urlInfo of event.urls) {
-      if (urlInfo.type === 'video') {
+      if (urlInfo.type === 'video' || urlInfo.type === 'photo') {
         continue;
       }
       info.push({
@@ -124,6 +124,23 @@ export function makeVideoInfo(event: EventInfo): MiscInfo[] {
         icon: ICONS[urlInfo.type],
         title: urlInfo.title,
         date: new Date(event.period?.from ?? 0),
+        url: urlInfo.url
+      });
+    }
+  }
+  return info;
+}
+
+export function makePhotoInfo(event: EventInfo): MiscInfo[] {
+  const info: MiscInfo[] = [];
+  if (event?.urls) {
+    for (const urlInfo of event.urls) {
+      if (urlInfo.type !== 'photo') {
+        continue;
+      }
+      info.push({
+        icon: ICONS[urlInfo.type],
+        title: urlInfo.title,
         url: urlInfo.url
       });
     }

@@ -4,7 +4,7 @@ import { Observable, Subject, Subscription } from 'rxjs';
 import { first, tap } from 'rxjs/operators';
 
 import { RemoteService, EventId, EventInfo, LocationInfo } from '../remote.service';
-import { getCbjUrl, makePdgaInfo, makeJpdgaInfo, makeMiscInfo, makeVideoInfo } from '../libs';
+import { getCbjUrl, makePdgaInfo, makeJpdgaInfo, makeMiscInfo, makeVideoInfo, makePhotoInfo } from '../libs';
 import { MiscInfo } from '../app-common';
 import { RoundId, Layouts } from '../models';
 
@@ -53,6 +53,7 @@ export class EventComponent implements OnInit, OnDestroy {
   jpdgaInfo: MiscInfo[] = [];
   miscInfo: MiscInfo[] = [];
   videoInfo: MiscInfo[] = [];
+  photoInfo: MiscInfo[] = [];
   layouts: LayoutUrl[] = [];
   totalPlayers?: number;
   canceled = false;
@@ -77,6 +78,7 @@ export class EventComponent implements OnInit, OnDestroy {
             this.jpdgaInfo = makeJpdgaInfo(event);
             this.miscInfo = makeMiscInfo(event);
             this.videoInfo = makeVideoInfo(event);
+            this.photoInfo = makePhotoInfo(event);
             this.totalPlayers = getTotalPlayers(event);
             this.layouts = layout2layouts(event.layout);
             this.canceled = event.status === 'CANCELED';

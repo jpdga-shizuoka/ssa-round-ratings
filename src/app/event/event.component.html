@@ -93,6 +93,15 @@
     </app-video-list>
   </div>
 
+  <div *ngIf="photoInfo.length">
+    <h2>{{'Photos' | localize}}</h2>
+    <li *ngFor="let photo of photoInfo;">
+      <a href="{{photo.url}}">
+        {{photo.title}}
+      </a>
+    </li>
+  </div>
+
   <div *ngIf="event$ | async as event">
     <h2>{{'History' | localize}}</h2>
     <app-event-list [event]="event"></app-event-list>
