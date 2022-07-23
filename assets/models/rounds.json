@@ -1,5 +1,45 @@
 [
   {
+    "id": "the17thmastersnationalchampionship.rd1rd2rd3",
+    "eventTitle": "The 17th Masters National Championship",
+    "event": "the17thmastersnationalchampionship",
+    "locationTitle": "Hikari-to-Kaze-no-Oka Park",
+    "round": "Rd1,2,3",
+    "date": "2022-06-25",
+    "hla": 75,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 46,
+        "rating": 1065
+      },
+      "player2": {
+        "score": 67,
+        "rating": 867
+      }
+    }
+  },
+  {
+    "id": "the24thnipponopen.rd1rd2rd3",
+    "eventTitle": "The 24th Nippon Open",
+    "locationTitle": "Kibougaoka Cultural Park West",
+    "event": "the24thnipponopen",
+    "round": "Rd1,2,3",
+    "date": "2022-06-11",
+    "hla": 116,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 59,
+        "rating": 1026
+      },
+      "player2": {
+        "score": 76,
+        "rating": 903
+      }
+    }
+  },
+  {
     "event": "the17thkiyosatonomoriopen",
     "round": "Rd1,2,3",
     "date": "2022-05-21",

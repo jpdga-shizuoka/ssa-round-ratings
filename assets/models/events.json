@@ -325,6 +325,9 @@
       "eventId": "594",
       "topicId": "1643"
     },
+    "rounds": [
+      "the17thmastersnationalchampionship.rd1rd2rd3"
+    ],
     "players": {
       "pro": 36,
       "ama": 20,
@@ -371,9 +374,35 @@
       "pro": 56,
       "ama": 18,
       "misc": 0
-    }
+    },
+    "rounds": [
+      "the24thnipponopen.rd1rd2rd3"
+    ],
+    "urls": [
+      {
+        "type": "photo",
+        "title": "京都府フライングディスク協会",
+        "url": "https://img.gg/B6xL98f"
+      },
+      {
+        "type": "photo",
+        "title": "滋賀県フライングディスク協会",
+        "url": "https://www.facebook.com/media/set/?vanity=Shigafda&set=a.2967446376880394"
+      },
+      {
+        "type": "photo",
+        "title": "D.ch Day1",
+        "url": "https://www.facebook.com/media/set/?set=a.470319114941700"
+      },
+      {
+        "type": "photo",
+        "title": "D.ch Day2",
+        "url": "https://www.facebook.com/media/set/?set=a.472196424753969"
+      }
+    ]
   },
   {
+    "id": "the17thkiyosatonomoriopen",
     "title": "The 17th Kiyosato-no-mori Open",
     "location": "kiyosatonomori",
     "period": {
@@ -398,9 +427,16 @@
     "rounds": [
       "the17thkiyosatonomoriopen.rd1rd2rd3"
     ],
-    "id": "the17thkiyosatonomoriopen"
+    "urls": [
+      {
+        "type": "photo",
+        "title": "D.ch",
+        "url": "https://www.facebook.com/media/set/?set=a.456990019607943"
+      }
+    ]
   },
   {
+    "id": "the5thgifuhiruganoopen",
     "title": "The 5th Gifu Hirugano Open",
     "location": "hiruganokogen",
     "period": {
@@ -422,7 +458,23 @@
     "rounds": [
       "the5thgifuhiruganoopen.rd1rd2rd3"
     ],
-    "id": "the5thgifuhiruganoopen"
+    "urls": [
+      {
+        "type": "video",
+        "title": "Lead card, R3F9, MPO by D.ch",
+        "url": "https://youtu.be/LAQAm5z87cs"
+      },
+      {
+        "type": "video",
+        "title": "Lead card, R3B9, MPO by D.ch",
+        "url": "https://youtu.be/VGLBYArfhQ0"
+      },
+      {
+        "type": "photo",
+        "title": "D.ch",
+        "url": "https://www.facebook.com/media/set/?set=a.457718922868386"
+      }
+    ]
   },
   {
     "title": "The 34th Japan National Championships",
