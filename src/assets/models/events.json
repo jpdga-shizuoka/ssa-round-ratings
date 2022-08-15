@@ -111,8 +111,8 @@
   },
 
   {
-    "id": "the1stalljapanchampionships",
-    "title": "The 1st All Japan Championships",
+    "id": "the1stmaikoclassic",
+    "title": "The 1st Maiko Classic",
     "location": "maikodiscgolfpark",
     "period": {
       "from": "2022-10-22",
@@ -147,7 +147,7 @@
     "id": "the22ndtohokuopen"
   },
   {
-    "title": "The 1st Japan Pro Disc Golf Championships",
+    "title": "The 1st Japan Series Disc Golf Championships",
     "location": "kiyoharakohgyodanchi",
     "period": {
       "from": "2022-09-17",
@@ -156,7 +156,7 @@
     "jpdga": {
       "eventId": "603"
     },
-    "id": "the1stjapanprodiscgolfchampionships"
+    "id": "the1stjapanseriesdiscgolfchampionships"
   },
   {
     "id": "the8thasiachampionship",
@@ -166,8 +166,8 @@
       "from": "2022-08-20",
       "to": "2022-08-21"
     },
-    "pdga": {
-      "eventId": "41245"
+    "layout": {
+      "official": "http://www.jpdgafukuoka.com/blog/wp/wp-content/uploads/2022/08/coursemap.jpg"
     },
     "jpdga": {
       "eventId": "1638"
@@ -176,7 +176,7 @@
       {
         "type": "website",
         "title": "Official Site",
-        "url": "http://www.jpdgafukuoka.com/blog/?page_id=2861"
+        "url": "http://www.jpdgafukuoka.com/blog/?page_id=5017"
       }
     ]
   },
@@ -187,6 +187,9 @@
     "period": {
       "from": "2022-08-06",
       "to": "2022-08-07"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2022/599_map.pdf"
     },
     "pdga": {
       "eventId": "60506"
@@ -199,6 +202,36 @@
         "type": "website",
         "title": "Official Site",
         "url": "http://jpdgaiwate.com"
+      },
+      {
+        "type": "video",
+        "title": "Round3, Shimakage Camera",
+        "url": "https://youtu.be/MiIQ6Zx58mI"
+      },
+      {
+        "type": "photo",
+        "title": "D.ch",
+        "url": "https://www.facebook.com/media/set/?set=a.511893580784253"
+      },
+      {
+        "type": "photo",
+        "title": "Official#1",
+        "url": "https://www.facebook.com/1848600115381290/posts/pfbid02b5bErKNBtz8e7dJKQSB9GW6qqXwU2SvS6FYJ9VQXFq8r5o6hHf3DwGxhmmY3dF4al/?d=n"
+      },
+      {
+        "type": "photo",
+        "title": "Official#2",
+        "url": "https://www.facebook.com/1848600115381290/posts/pfbid0ZvKSWhMBTQYuMcKsj9naxTS3B3Hjg56zTvf1psjig31dNkQarNu9BRJPSVPbRoxul/?d=n"
+      },
+      {
+        "type": "photo",
+        "title": "Official#3",
+        "url": "https://wwww.facebook.com/1848600115381290/posts/pfbid02jC4tYB8BUYR5E5KXcCd86zgtFg6ujV3LWtSqvhAzTZ99ii1rQh14PNwTf38e9EdAl/?d=n"
+      },
+      {
+        "type": "photo",
+        "title": "Official Videos",
+        "url": "https://www.facebook.com/1848600115381290/posts/pfbid03DYB4m11czA3oR75QJhFDEpwFTLFYGYfuGgFQvuaSF1UHRsPCNXeFHqmUtyZeZtml/?d=n"
       }
     ],
     "players": {
@@ -214,6 +247,9 @@
     "period": {
       "from": "2022-08-06",
       "to": "2022-08-07"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2022/599_map.pdf"
     },
     "pdga": {
       "eventId": "60506"
@@ -459,6 +495,16 @@
       "the5thgifuhiruganoopen.rd1rd2rd3"
     ],
     "urls": [
+      {
+        "type": "video",
+        "title": "Final, MPO by D.ch",
+        "url": "https://youtu.be/2zRo15gmsSM"
+      },
+      {
+        "type": "video",
+        "title": "Semifinal, MPO by D.ch",
+        "url": "https://youtu.be/LUqNncQDARQ"
+      },
       {
         "type": "video",
         "title": "Lead card, R3F9, MPO by D.ch",
