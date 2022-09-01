@@ -6,6 +6,9 @@
       "from": "2023-05-12",
       "to": "2023-05-19"
     },
+    "layout": {
+      "official": "https://www.jo-discgolf-fukui-sakai.jp/games/coursemap"
+    },
     "urls": [
       {
         "type": "website",
@@ -183,7 +186,8 @@
       "official": "http://www.jpdgafukuoka.com/blog/wp/wp-content/uploads/2022/08/coursemap.jpg"
     },
     "jpdga": {
-      "eventId": "1638"
+      "eventId": "1638",
+      "topicId": "1660"
     },
     "urls": [
       {
