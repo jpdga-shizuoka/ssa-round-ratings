@@ -39,11 +39,35 @@
     "id": "the2023japanopen"
   },
   {
+    "id": "the11thokinawaopen",
+    "title": "The 11th Okinawa Open",
+    "location": "nakijinsonsportpark",
+    "period": {
+      "from": "2023-02-18",
+      "to": "2023-02-19"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://yousukenakahodo781.wixsite.com/mysite"
+      },
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/groups/2366167146940075"
+      }
+    ]
+  },
+  {
     "title": "The 21st Chubu Open",
     "location": "mikawarinkairyokuchi",
     "period": {
       "from": "2022-12-17",
       "to": "2022-12-18"
+    },
+    "pdga": {
+      "eventId": "63249"
     },
     "jpdga": {
       "eventId": "611"
@@ -63,6 +87,9 @@
     "period": {
       "from": "2022-11-26",
       "to": "2022-11-27"
+    },
+    "pdga": {
+      "eventId": "63248"
     },
     "jpdga": {
       "eventId": "610"
@@ -107,6 +134,9 @@
       "from": "2022-11-12",
       "to": "2022-11-13"
     },
+    "pdga": {
+      "eventId": "63247"
+    },
     "jpdga": {
       "eventId": "609"
     },
@@ -126,7 +156,14 @@
     },
     "jpdga": {
       "eventId": "607"
-    }
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/maiko.dg.classic/"
+      }
+    ]
   },
   {
     "title": "The 9th Fukui Open",
@@ -159,11 +196,15 @@
     "id": "the22ndtohokuopen"
   },
   {
+    "id": "the1stjapanseriesdiscgolfchampionships",
     "title": "The 1st Japan Series Disc Golf Championships",
     "location": "kiyoharakohgyodanchi",
     "period": {
       "from": "2022-09-17",
       "to": "2022-09-19"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2022/603_map.pdf"
     },
     "pdga": {
       "eventId": "61988",
@@ -172,7 +213,23 @@
     "jpdga": {
       "eventId": "603"
     },
-    "id": "the1stjapanseriesdiscgolfchampionships"
+    "urls": [
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/kiyohara.green"
+      },
+      {
+        "type": "website",
+        "title": "Course descriptions, Discgolf Navi",
+        "url": "https://discgolf-navi.com/tournament/nt-abt-lt/japan-series2022_course/"
+      }
+    ],
+    "players": {
+      "pro": 84,
+      "ama": 0,
+      "misc": 0
+    }
   },
   {
     "id": "the8thasiachampionship",
@@ -195,7 +252,12 @@
         "title": "Official Site",
         "url": "http://www.jpdgafukuoka.com/blog/?page_id=5017"
       }
-    ]
+    ],
+    "players": {
+      "pro": 40,
+      "ama": 16,
+      "misc": 0
+    }
   },
   {
     "id": "the17thmichinokuopen",
@@ -252,9 +314,9 @@
       }
     ],
     "players": {
-        "pro": 60,
-        "ama": 19,
-        "misc": 1
+      "pro": 60,
+      "ama": 19,
+      "misc": 1
     }
   },
   {
