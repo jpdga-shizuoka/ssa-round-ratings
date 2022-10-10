@@ -163,9 +163,15 @@
         "title": "Facebook",
         "url": "https://www.facebook.com/maiko.dg.classic/"
       }
-    ]
+    ],
+    "players": {
+      "pro": 52,
+      "ama": 9,
+      "misc": 0
+    }
   },
   {
+    "id": "the9thfukuiopen",
     "title": "The 9th Fukui Open",
     "location": "seasidenaturepark",
     "period": {
@@ -178,14 +184,22 @@
     "jpdga": {
       "eventId": "606"
     },
-    "id": "the9thfukuiopen"
+    "players": {
+      "pro": 25,
+      "ama": 27,
+      "misc": 0
+    }
   },
   {
+    "id": "the22ndtohokuopen",
     "title": "The 22nd Tohoku Open",
     "location": "mizubayashisportpark",
     "period": {
       "from": "2022-10-08",
       "to": "2022-10-09"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2022/605_map.pdf"
     },
     "pdga": {
       "eventId": "62982"
@@ -193,7 +207,11 @@
     "jpdga": {
       "eventId": "605"
     },
-    "id": "the22ndtohokuopen"
+    "players": {
+      "pro": 41,
+      "ama": 13,
+      "misc": 0
+    }
   },
   {
     "id": "the1stjapanseriesdiscgolfchampionships",
