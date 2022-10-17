@@ -128,6 +128,7 @@
     "id": "the34thshowakinenparkopen"
   },
   {
+    "id": "the25thkansaiopen",
     "title": "The 25th Kansai Open",
     "location": "fuminnomorihiyoshi",
     "period": {
@@ -140,7 +141,13 @@
     "jpdga": {
       "eventId": "609"
     },
-    "id": "the25thkansaiopen"
+    "urls": [
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/kansaiopen.discgolf"
+      }
+    ]
   },
 
   {
@@ -178,12 +185,22 @@
       "from": "2022-10-15",
       "to": "2022-10-16"
     },
+    "layout": {
+      "official": "http://www.sukima-labo.com/dg291/2022fukuiopen/2022fukuiop-course.pdf"
+    },
     "pdga": {
       "eventId": "62983"
     },
     "jpdga": {
       "eventId": "606"
     },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "http://www.sukima-labo.com/dg291/"
+      }
+    ],
     "players": {
       "pro": 25,
       "ama": 27,
