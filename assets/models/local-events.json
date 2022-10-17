@@ -1,11 +1,29 @@
 [
   {
+    "id": "thetochigiprefecturechampionships2021",
+    "category": "local",
+    "title": "The Tochigi Prefecture Championships",
+    "location": "shiromigaokasportspark",
+    "period": {
+      "from": "2022-11-27",
+      "to": "2022-11-27"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Officail site",
+        "url": "http://tochigiflyingdisc.com/2022/10/02/第35回栃木県ディスクゴルフ大会（2022年11月27日）市貝/"
+      }
+    ]
+  },
+  {
+    "id": "theaichiopendiscgolfseries",
     "category": "local",
     "title": "The Aichi Open Disc Golf Series",
-    "location": "mikawarinkairyokuchi",
+    "location": "kasaharagreenheights",
     "period": {
-      "from": "2023-03-05",
-      "to": "2023-03-05"
+      "from": "2022-11-20",
+      "to": "2022-11-20"
     },
     "urls": [
       {
@@ -13,9 +31,27 @@
         "title": "Aichi Flying Disc Association",
         "url": "https://aifda.or.jp/category/discgolf/"
       }
-    ],
-    "id": "theaichiopendiscgolfseries"
+    ]
   },
+
+  {
+    "id": "thediscgolffestival",
+    "category": "local",
+    "title": "The Disc Golf Festival",
+    "location": "greenparkmiyakoji",
+    "period": {
+      "from": "2022-11-19",
+      "to": "2022-11-20"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/greenparkmiyakoji"
+      }
+    ]
+  },
+
   {
     "category": "local",
     "title": "The Aichi Open Disc Golf Series",
