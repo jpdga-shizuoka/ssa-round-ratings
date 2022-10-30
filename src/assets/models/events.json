@@ -109,11 +109,15 @@
     "id": "the36thkyushuopen"
   },
   {
+    "id": "the34thshowakinenparkopen",
     "title": "The 34th Showa Kinen Park Open",
     "location": "showakinenpark",
     "period": {
       "from": "2022-11-03",
       "to": "2022-11-06"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2022/608_map.pdf"
     },
     "jpdga": {
       "eventId": "608"
@@ -122,10 +126,9 @@
       {
         "type": "website",
         "title": "Official Site",
-        "url": "http://jpdga-tokyo.com/skpo/"
+        "url": "https://jpdgatokyooffice.wixsite.com/website/event-details/dai34kaikokueishowakinenkoenopundisukugorufutonamento"
       }
-    ],
-    "id": "the34thshowakinenparkopen"
+    ]
   },
   {
     "id": "the25thkansaiopen",
@@ -136,6 +139,7 @@
       "to": "2022-11-13"
     },
     "pdga": {
+      "scoreId": "63247",
       "eventId": "63247"
     },
     "jpdga": {
@@ -147,9 +151,13 @@
         "title": "Facebook",
         "url": "https://www.facebook.com/kansaiopen.discgolf"
       }
-    ]
+    ],
+    "players": {
+      "pro": 58,
+      "ama": 87,
+      "misc": 113
+    }
   },
-
   {
     "id": "the1stmaikoclassic",
     "title": "The 1st Maiko Classic",
@@ -159,6 +167,7 @@
       "to": "2022-10-23"
     },
     "pdga": {
+      "scoreId": "61984",
       "eventId": "62984"
     },
     "jpdga": {
