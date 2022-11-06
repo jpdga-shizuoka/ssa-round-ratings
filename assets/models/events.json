@@ -82,6 +82,7 @@
     "id": "the21stchubuopen2"
   },
   {
+    "id": "the36thkyushuopen",
     "title": "The 36th Kyushu Open",
     "location": "uminonakamichiseasidepark",
     "period": {
@@ -106,7 +107,11 @@
         "url": "https://www.facebook.com/discgolfkyushuopen/"
       }
     ],
-    "id": "the36thkyushuopen"
+    "players": {
+      "pro": 62,
+      "ama": 35,
+      "misc": 0
+    }
   },
   {
     "id": "the34thshowakinenparkopen",
@@ -127,8 +132,18 @@
         "type": "website",
         "title": "Official Site",
         "url": "https://jpdgatokyooffice.wixsite.com/website/event-details/dai34kaikokueishowakinenkoenopundisukugorufutonamento"
+      },
+      {
+        "type": "photo",
+        "title": "Official",
+        "url": "https://www.amazon.co.jp/photos/share/TLIrKH3qoUxGBGbY8RQGz7gWEdAypDAaPwiQnbeZR6Q"
       }
-    ]
+    ],
+    "players": {
+      "pro": 58,
+      "ama": 87,
+      "misc": 113
+    }
   },
   {
     "id": "the25thkansaiopen",
@@ -153,9 +168,9 @@
       }
     ],
     "players": {
-      "pro": 58,
-      "ama": 87,
-      "misc": 113
+      "pro": 33,
+      "ama": 19,
+      "misc": 0
     }
   },
   {
@@ -175,9 +190,24 @@
     },
     "urls": [
       {
+        "type": "video",
+        "title": "Round#2, Front9, MPO by D.ch",
+        "url": "https://youtu.be/kFIQNmPAsgk"
+      },
+      {
         "type": "website",
         "title": "Facebook",
         "url": "https://www.facebook.com/maiko.dg.classic/"
+      },
+      {
+        "type": "photo",
+        "title": "D.ch",
+        "url": "https://www.facebook.com/media/set/?set=a.572459924727618"
+      },
+      {
+        "type": "website",
+        "title": "Round Stats, Disc Golf Navi",
+        "url": "https://discgolf-navi.com/blog/maiko_classic2022/"
       }
     ],
     "players": {
