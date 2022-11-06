@@ -321,7 +321,12 @@
       "pro": 84,
       "ama": 0,
       "misc": 0
-    }
+    },
+    "rounds": [
+      "the1stjapanseriesdiscgolfchampionships.rd3",
+      "the1stjapanseriesdiscgolfchampionships.rd2",
+      "the1stjapanseriesdiscgolfchampionships.rd1"
+    ]
   },
   {
     "id": "the8thasiachampionship",
@@ -333,6 +338,9 @@
     },
     "layout": {
       "official": "http://www.jpdgafukuoka.com/blog/wp/wp-content/uploads/2022/08/coursemap.jpg"
+    },
+    "pdga": {
+      "eventId": "63115"
     },
     "jpdga": {
       "eventId": "1638",
@@ -349,7 +357,12 @@
       "pro": 40,
       "ama": 16,
       "misc": 0
-    }
+    },
+    "rounds": [
+      "the8thasiachampionship.rd3",
+      "the8thasiachampionship.rd2",
+      "the8thasiachampionship.rd1"
+    ]
   },
   {
     "id": "the17thmichinokuopen",
@@ -409,7 +422,10 @@
       "pro": 60,
       "ama": 19,
       "misc": 1
-    }
+    },
+    "rounds": [
+      "the17thmichinokuopen.rd1rd2rd3"
+    ]
   },
   {
     "id": "the2022pdgawomensglobaleventmichinoku",
@@ -469,7 +485,12 @@
       "pro": 18,
       "ama": 41,
       "misc": 5
-    }
+    },
+    "rounds": [
+      "the26thkantoopen.rd1rd4",
+      "the26thkantoopen.rd2",
+      "the26thkantoopen.rd3"
+    ]
   },
   {
     "id": "the3rdhitachseasideparkopen",
@@ -512,7 +533,10 @@
       "pro": 33,
       "ama": 12,
       "misc": 0
-    }
+    },
+    "rounds": [
+      "the11thhokkaidoopen.rd1rd2rd3"
+    ]
   },
   {
     "id": "the17thmastersnationalchampionship",
