@@ -182,10 +182,11 @@
       "to": "2022-10-23"
     },
     "pdga": {
-      "scoreId": "61984",
+      "scoreId": "62984",
       "eventId": "62984"
     },
     "jpdga": {
+      "topicId": "1673",
       "eventId": "607"
     },
     "urls": [
@@ -231,6 +232,7 @@
       "eventId": "62983"
     },
     "jpdga": {
+      "topicId": "1672",
       "eventId": "606"
     },
     "urls": [
@@ -261,6 +263,7 @@
       "eventId": "62982"
     },
     "jpdga": {
+      "topicId": "1669",
       "eventId": "605"
     },
     "players": {
