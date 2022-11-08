@@ -168,6 +168,9 @@
       "from": "2022-11-12",
       "to": "2022-11-13"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2022/609_map.pdf"
+    },
     "pdga": {
       "scoreId": "63247",
       "eventId": "63247"
