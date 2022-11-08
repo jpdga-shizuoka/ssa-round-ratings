@@ -135,8 +135,23 @@
       },
       {
         "type": "photo",
-        "title": "Official",
+        "title": "Day#1, Murakami's Photo",
+        "url": "https://www.amazon.co.jp/photos/share/afVXdrkrHCaluVvylzG3AChAnAvYtZfenwQIhZ4VXyC"
+      },
+      {
+        "type": "photo",
+        "title": "Day#2, Murakami's Photo",
+        "url": "https://www.amazon.co.jp/photos/share/GoTweuguW5yNBxJST3VzMMnhsc12FV2ALxfwRBUlg4z"
+      },
+      {
+        "type": "photo",
+        "title": "Pro, Day#3, Murakami's Photo",
         "url": "https://www.amazon.co.jp/photos/share/TLIrKH3qoUxGBGbY8RQGz7gWEdAypDAaPwiQnbeZR6Q"
+      },
+      {
+        "type": "photo",
+        "title": "Ama, Day#3, Murakami's Photo",
+        "url": "https://www.amazon.co.jp/photos/share/SUsHsVSWOYNESTcopVI8UwkAoqJwuHXf0BN6FVcEWUh"
       }
     ],
     "players": {
