@@ -60,6 +60,37 @@
     ]
   },
   {
+    "id": "the4thhitachseasideparkopen",
+    "title": "The 4th Hitach Seaside Park Open",
+    "location": "hitachiseasidepark",
+    "period": {
+      "from": "2023-01-22",
+      "to": "2023-01-22"
+    },
+    "jpdga": {
+      "eventId": "625"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://hitachikaihin.jp/dgt-4th/"
+      }
+    ]
+  },
+  {
+    "id": "the2023nationalteamchampionship",
+    "title": "The 2023 National Team Championships",
+    "location": "oyamaomoinomoripark",
+    "period": {
+      "from": "2023-01-08",
+      "to": "2023-01-09"
+    },
+    "jpdga": {
+      "eventId": "624"
+    }
+  },
+  {
     "title": "The 21st Chubu Open",
     "location": "mikawarinkairyokuchi",
     "period": {
@@ -97,9 +128,29 @@
     },
     "urls": [
       {
+        "type": "video",
+        "title": "Feature Card, MPO, Fron14, Round#1, Live",
+        "url": "https://youtu.be/1VhuAfUF9lE"
+      },
+      {
+        "type": "video",
+        "title": "Feature Card, MPO, Back13, Round#1, Live",
+        "url": "https://youtu.be/M56lNhuRNJY"
+      },
+      {
+        "type": "video",
+        "title": "Lead Card, MPO, Fron14, Round#2, Live",
+        "url": "https://youtu.be/WnlaKc5hPa4"
+      },
+      {
+        "type": "video",
+        "title": "Lead Card, MPO, Back13, Round#2, Live",
+        "url": "https://youtu.be/njfOwxPvAhk"
+      },
+      {
         "type": "website",
         "title": "Official Site",
-        "url": "http://www.jpdgafukuoka.com/blog/?page_id=4279"
+        "url": "http://www.jpdgafukuoka.com/blog/?page_id=5044"
       },
       {
         "type": "website",
@@ -179,6 +230,11 @@
       "eventId": "609"
     },
     "urls": [
+      {
+        "type": "photo",
+        "title": "Day1",
+        "url": "https://nis.nikonimagespace.com/html/guest/ja/index.html?g=3IMuRvoy40Y5iIdqOOQ-nQgSFeLFAY99-k2JWA4lwI6Cw8u_CBoduMIHkdjBQiQlfC2Nh-GWqR8XVPY67FeL-g"
+      },
       {
         "type": "website",
         "title": "Facebook",
@@ -759,6 +815,26 @@
       "misc": 1
     },
     "urls": [
+      {
+        "type": "video",
+        "title": "Lead Card, Front9, Round2, MPO, D.ch",
+        "url": "https://youtu.be/kFIQNmPAsgk"
+      },
+      {
+        "type": "video",
+        "title": "Lead Card, Back9, Round2, MPO, D.ch",
+        "url": "https://youtu.be/fCdBuoCddtM"
+      },
+      {
+        "type": "video",
+        "title": "Lead Card, Front9, Round3, MPO, D.ch",
+        "url": "https://youtu.be/w4ZY6wz8AzU"
+      },
+      {
+        "type": "video",
+        "title": "Lead Card, Back9, Round3, MPO, D.ch",
+        "url": "https://youtu.be/5JkOKiveLWc"
+      },
       {
         "type": "website",
         "title": "村爺のなんでもいいべ",
