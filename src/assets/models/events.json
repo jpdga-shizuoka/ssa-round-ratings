@@ -91,6 +91,7 @@
     }
   },
   {
+    "id": "the21stchubuopen",
     "title": "The 21st Chubu Open",
     "location": "mikawarinkairyokuchi",
     "period": {
@@ -114,7 +115,11 @@
         "url": "https://aifda.or.jp/event"
       }
     ],
-    "id": "the21stchubuopen2"
+    "players": {
+      "pro": 51,
+      "ama": 19,
+      "misc": 0
+    }
   },
   {
     "id": "the36thkyushuopen",
@@ -1007,26 +1012,6 @@
       "misc": 0
     },
     "id": "the2022nationalteamchampionship"
-  },
-  {
-    "title": "The 21st Chubu Open",
-    "location": "mikawarinkairyokuchi",
-    "status": "CANCELED",
-    "period": {
-      "from": "2021-12-18",
-      "to": "2021-12-19"
-    },
-    "jpdga": {
-      "eventId": "581"
-    },
-    "urls": [
-      {
-        "type": "website",
-        "title": "Official Site",
-        "url": "https://aifda.or.jp/event"
-      }
-    ],
-    "id": "the21stchubuopen"
   },
   {
     "title": "The 33rd Japan National Championships",
