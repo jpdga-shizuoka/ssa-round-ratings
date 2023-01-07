@@ -29,7 +29,7 @@ export class AppComponent implements OnInit, OnDestroy, MetaDescription {
   private ssMeta?: Subscription;
   get subtitle(): string { return this.localize.transform(this.subtitle$.value); }
   get home(): string { return this.localize.transform('Home'); }
-  get schedule(): string { return this.localize.transform('Schedule'); }
+  get schedule(): string { return this.localize.transform('Upcoming'); }
   get results(): string { return this.localize.transform('Results'); }
   get localEvents(): string { return this.localize.transform('Local Events'); }
   get monthlyEvents(): string { return this.localize.transform('Monthly Events'); }
@@ -62,15 +62,13 @@ export class AppComponent implements OnInit, OnDestroy, MetaDescription {
       .subscribe(result => result ? this.drawer.close() : '');
   }
 
-  onClickLanguage(): void {
+  async onClickLanguage(): Promise<void> {
     this.localize.toggleLanguage();
 
     // @see https://stackoverflow.com/questions/47813927/how-to-refresh-a-component-in-angular
     // @note The following technique is working, but it affects routerLinkActive;
     // https://medium.com/@rakshitshah/refresh-angular-component-without-navigation-148a87c2de3f
-    const currentPath = this.location.path().replace(/^\//, '');
-    this.ngRouter.navigate(['reload'], { skipLocationChange: true })
-      .then(() => this.ngRouter.navigate([currentPath], { skipLocationChange: true }))
-      .catch(err => { console.log(err); });
+    const currentPath = this.location.path().split('?')[0].replace(/^\//, '');
+    await this.ngRouter.navigate(['/reload', currentPath], { skipLocationChange: true });
   }
 }

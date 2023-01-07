@@ -1,11 +1,269 @@
 [
   {
+    "id": "thetochigiprefecturechampionships2021",
+    "category": "local",
+    "title": "The Tochigi Prefecture Championships",
+    "location": "shiromigaokasportspark",
+    "period": {
+      "from": "2022-11-27",
+      "to": "2022-11-27"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Officail site",
+        "url": "http://tochigiflyingdisc.com/2022/10/02/第35回栃木県ディスクゴルフ大会（2022年11月27日）市貝/"
+      }
+    ]
+  },
+  {
+    "id": "theaichiopendiscgolfseries",
+    "category": "local",
+    "title": "The Aichi Open Disc Golf Series",
+    "location": "kasaharagreenheights",
+    "period": {
+      "from": "2022-11-20",
+      "to": "2022-11-20"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ]
+  },
+
+  {
+    "id": "thediscgolffestival",
+    "category": "local",
+    "title": "The Disc Golf Festival",
+    "location": "greenparkmiyakoji",
+    "period": {
+      "from": "2022-11-19",
+      "to": "2022-11-20"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/greenparkmiyakoji"
+      }
+    ]
+  },
+
+  {
+    "category": "local",
+    "title": "The Aichi Open Disc Golf Series",
+    "location": "kasaharagreenheights",
+    "period": {
+      "from": "2022-10-02",
+      "to": "2022-10-02"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendiscgolfseries"
+  },
+  {
+    "category": "local",
+    "title": "The Aichi Open Disc Golf Series",
+    "location": "shinshiropark",
+    "period": {
+      "from": "2022-09-11",
+      "to": "2022-09-11"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendiscgolfseries"
+  },
+  {
+    "category": "local",
+    "title": "The Aichi Open Doubles",
+    "location": "shinshiropark",
+    "period": {
+      "from": "2022-07-31",
+      "to": "2022-07-31"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendiscgolfseries"
+  },
+  {
+    "category": "local",
+    "title": "The Tochigi Kokutai",
+    "location": "shiromigaokasportspark",
+    "period": {
+      "from": "2022-07-16",
+      "to": "2022-07-16"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Tochigi Kokutai",
+        "url": "https://www.tochigikokutai2022.jp/kokutai/competition/フライングディスク"
+      }
+    ],
+    "id": "thetochigikokutai"
+  },
+  {
+    "category": "local",
+    "title": "The Aichi Open Disc Golf Series",
+    "location": "shiminshikinomori",
+    "period": {
+      "from": "2022-07-03",
+      "to": "2022-07-03"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendiscgolfseries"
+  },
+  {
+    "id": "thegifupresidentcup",
+    "category": "local",
+    "title": "The Gifu President Cup",
+    "location": "ikedatowngeneralgymnasium",
+    "period": {
+      "from": "2022-06-05",
+      "to": "2022-06-05"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ]
+  },
+  {
+    "category": "local",
+    "title": "The Aichi Open Disc Golf Series",
+    "location": "shiminshikinomori",
+    "period": {
+      "from": "2022-05-29",
+      "to": "2022-05-29"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendiscgolfseries"
+  },
+  {
+    "id": "theikedatowndiscgolftournament",
+    "category": "local",
+    "title": "The Ikeda Town Disc Golf Tournament",
+    "location": "ikedatowngeneralgymnasium",
+    "period": {
+      "from": "2022-05-22",
+      "to": "2022-05-22"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/gifuflyingdiscassociation/"
+      }
+    ]
+  },
+  {
+    "category": "local",
+    "title": "The Oyama Mayor's Cup Disc Golf Tournament",
+    "location": "oyamaomoinomoripark",
+    "period": {
+      "from": "2022-05-15",
+      "to": "2022-05-15"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/小山市ディスクゴルフ協会-1445376232379294/"
+      }
+    ],
+    "id": "theoyamamayorscupdiscgolftournament"
+  },
+  {
+    "category": "local",
+    "title": "The Hiyoshi Challenge",
+    "location": "fuminnomorihiyoshi",
+    "period": {
+      "from": "2022-05-08",
+      "to": "2022-05-08"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/jpdgakyoto"
+      }
+    ],
+    "id": "thehiyoshichallenge"
+  },
+  {
+    "category": "local",
+    "title": "The Aichi Open Disc Golf Series",
+    "location": "kasaharagreenheights",
+    "period": {
+      "from": "2022-04-17",
+      "to": "2022-04-17"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendiscgolfseries"
+  },
+
+  {
+    "category": "local",
+    "title": "The 3rd Hop Japan Cup Disc Golf Tournament",
+    "location": "greenparkmiyakoji",
+    "period": {
+      "from": "2022-05-29",
+      "to": "2022-05-29"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/greenparkmiyakoji"
+      }
+    ],
+    "id": "the3rhopjapancupdiscgolftournament"
+  },
+  {
     "category": "local",
     "title": "The Aichi Open Disc Golf Series",
     "location": "mikawarinkairyokuchi",
     "period": {
-      "from": "2022-03-06",
-      "to": "2022-03-06"
+      "from": "2022-03-13",
+      "to": "2022-03-13"
     },
     "urls": [
       {
@@ -35,6 +293,57 @@
   },
   {
     "category": "local",
+    "title": "The Tochigi Prefecture Championships",
+    "location": "shiromigaokasportspark",
+    "period": {
+      "from": "2021-11-28",
+      "to": "2021-11-28"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Tochigi Disc Golf Association",
+        "url": "http://www.tochigiflyingdisc.com/2021/10/04/2021栃木県大会開催予定/"
+      }
+    ],
+    "id": "thetochigiprefecturechampionships2021"
+  },
+  {
+    "category": "local",
+    "title": "The Iwate Prefecture Championships",
+    "location": "hanamakiregionalpark",
+    "period": {
+      "from": "2021-11-28",
+      "to": "2021-11-28"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Iwate Disc Golf Association",
+        "url": "https://jpdgaiwate.sakura.ne.jp/main/2021岩手県ディスクゴルフ大会/"
+      }
+    ],
+    "id": "theiwateprefecturechampionships"
+  },
+  {
+    "category": "local",
+    "title": "The Frostbite Disc Golf Tournament",
+    "location": "kurobecityfureaiexchangecenter",
+    "period": {
+      "from": "2021-11-21",
+      "to": "2021-11-21"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Frostbite Disc Golf",
+        "url": "https://frostbite.jp/archives/994"
+      }
+    ],
+    "id": "thefrostbitediscgolftournament"
+  },
+  {
+    "category": "local",
     "title": "The Aichi Open Disc Golf Series",
     "location": "kasaharagreenheights",
     "period": {
@@ -51,14 +360,21 @@
     "id": "theaichiopendiscgolfseries"
   },
   {
+    "id": "thegifupresidentcup",
     "category": "local",
-    "title": "The Nenrin Pic Gifu",
-    "location": "mitakechonanzanpark",
+    "title": "The Gifu President Cup",
+    "location": "kasaharagreenheights",
     "period": {
       "from": "2021-10-31",
       "to": "2021-10-31"
     },
-    "id": "thenenrinpicgifu"
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ]
   },
   {
     "category": "local",
@@ -68,6 +384,7 @@
       "from": "2021-09-26",
       "to": "2021-09-26"
     },
+    "status": "CANCELED",
     "urls": [
       {
         "type": "website",
@@ -127,24 +444,6 @@
       }
     ],
     "id": "theaichiopendiscgolfseries"
-  },
-  {
-    "id": "thegifupresidentcup",
-    "category": "local",
-    "title": "The Gifu President Cup",
-    "location": "kasaharagreenheights",
-    "period": {
-      "from": "2021-06-06",
-      "to": "2021-06-06"
-    },
-    "status": "CANCELED",
-    "urls": [
-      {
-        "type": "website",
-        "title": "Aichi Flying Disc Association",
-        "url": "https://aifda.or.jp/category/discgolf/"
-      }
-    ]
   },
   {
     "category": "local",

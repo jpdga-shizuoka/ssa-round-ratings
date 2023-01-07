@@ -9,10 +9,24 @@
       </ng-template>
     </mat-tab>
 
-  <mat-tab label="{{'Anual Total Players' | localize}}">
+  <mat-tab label="{{'Players' | localize}}">
     <ng-template matTabContent>
       <app-total-players>
       </app-total-players>
+    </ng-template>
+  </mat-tab>
+
+  <mat-tab label="{{'Members' | localize}}">
+    <ng-template matTabContent>
+      <app-members-chart>
+      </app-members-chart>
+    </ng-template>
+  </mat-tab>
+
+  <mat-tab label="{{'Annual Reports' | localize}}">
+    <ng-template matTabContent>
+      <app-annual-chart>
+      </app-annual-chart>
     </ng-template>
   </mat-tab>
 </mat-tab-group>

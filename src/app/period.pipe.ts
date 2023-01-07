@@ -1,25 +1,77 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { Period } from './models';
 
-const LONG_FORMAT = { year: 'numeric', month: 'short', day: 'numeric' } as Intl.DateTimeFormatOptions;
-const SHORT_FORMAT = { day: 'numeric' } as Intl.DateTimeFormatOptions;
+type DateFormat = 'long' | 'neutral' | 'short';
+
+const THIS_YEAR_LONG_FORMAT = { month: 'short', day: 'numeric' } as Intl.DateTimeFormatOptions;
+const OTHER_YEAR_LONG_FORMAT = { year: 'numeric', month: 'short', day: 'numeric' } as Intl.DateTimeFormatOptions;
+const THIS_YEAR_SHORT_FORMAT = { month: 'short', day: 'numeric'  } as Intl.DateTimeFormatOptions;
+const OTHER_YEAR_SHORT_FORMAT = { year: 'numeric', month: 'short' } as Intl.DateTimeFormatOptions;
+const DAY_FORMAT = { day: 'numeric' } as Intl.DateTimeFormatOptions;
+
+function isPastYear(date: Date): boolean {
+  const now = new Date();
+  return date.getFullYear() < now.getFullYear();
+}
+
+function isThisYear(date: Date): boolean {
+  const now = new Date();
+  return date.getFullYear() ===  now.getFullYear();
+}
+
+function isFutureYear(date: Date): boolean {
+  const now = new Date();
+  return date.getFullYear() > now.getFullYear();
+}
+
+function toLongDate(date: Date): string {
+  return date.toLocaleDateString(undefined, isThisYear(date) ? THIS_YEAR_LONG_FORMAT : OTHER_YEAR_LONG_FORMAT);
+}
+
+function toShortDate(date: Date): string {
+  return date.toLocaleDateString(undefined, isThisYear(date) ? THIS_YEAR_SHORT_FORMAT : OTHER_YEAR_SHORT_FORMAT);
+}
+
+function toNeutralDate(date: Date): string {
+  if (isFutureYear(date)) {
+    return toLongDate(date);
+  } else {
+    return toShortDate(date);
+  }
+}
+
+function toDate(date: Date, format: DateFormat): string {
+  switch (format) {
+    case 'short':
+      return toShortDate(date);
+    case 'neutral':
+      return toNeutralDate(date);
+    case 'long':
+      return toLongDate(date);
+  }
+}
 
 @Pipe({
   name: 'period'
 })
 export class PeriodPipe implements PipeTransform {
-  transform(value: Period|string): string {
+  transform(value: Period | string, format = 'long' as DateFormat): string {
     if (isDate(value)) {
-      return new Date(value as string).toLocaleDateString(undefined, LONG_FORMAT);
+      const date = new Date(value as string);
+      return toDate(date, format);
     }
     if (isPeriod(value)) {
       const period = value;
       try {
-        const from = new Date(period.from).toLocaleDateString(undefined, LONG_FORMAT);
+        const fromDate = new Date(period.from);
+        const from = toDate(fromDate, format);
         if (period.from === period.to) {
           return from;
         }
-        const to = new Date(period.to).toLocaleDateString(undefined, SHORT_FORMAT);
+        if ((format === 'neutral' || format === 'short') && isPastYear(fromDate)) {
+          return from;
+        }
+        const to = new Date(period.to).toLocaleDateString(undefined, DAY_FORMAT);
         return `${from} - ${to}`;
       } catch {
         const from = (new Date(period.from)).toLocaleDateString();

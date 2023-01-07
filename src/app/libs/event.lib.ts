@@ -1,4 +1,4 @@
-const REMOVE_PATERN = /[ \-.,()]/g;
+const REMOVE_PATERN = /[ \-.,()']/g;
 
 export interface EventParts {
   count?: number;

@@ -87,6 +87,14 @@
     "title": "Kibougaoka Cultural Park"
   },
   {
+    "prefecture": "Shiga",
+    "geolocation": [
+      35.05886561087921, 136.04987540047873
+    ],
+    "id": "kibougaokaculturalparkwest",
+    "title": "Kibougaoka Cultural Park"
+  },
+  {
     "prefecture": "Kyoto",
     "geolocation": [
       35.137323,
@@ -101,8 +109,8 @@
       39.434693,
       141.056849
     ],
-    "id": "hanamakikoikipark",
-    "title": "Hanamaki Koiki Park"
+    "id": "hanamakiregionalpark",
+    "title": "Hanamaki Regional Park"
   },
   {
     "prefecture": "Iwate",
@@ -130,6 +138,15 @@
     ],
     "id": "kiyoharakohgyodanchi",
     "title": "Kiyohara Kohgyo Danchi"
+  },
+  {
+    "prefecture": "Tochigi",
+    "geolocation": [
+      36.526901518996326,
+      140.0910787154823
+    ],
+    "id": "shiromigaokasportspark",
+    "title": "Shiromigaoka Sports Park"
   },
   {
     "prefecture": "Tochigi",
@@ -221,6 +238,17 @@
     "id": "hitachiseasidepark",
     "title": "Hitachi Seaside Park"
   },
+
+  {
+    "prefecture": "Toyama",
+    "geolocation": [
+      36.84746034749535,
+      137.45301591704876
+    ],
+    "id": "kurobecityfureaiexchangecenter",
+    "title": "Kurobe City Fureai Exchange Center"
+  },
+
   {
     "prefecture": "Fukui",
     "geolocation": [

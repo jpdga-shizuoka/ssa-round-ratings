@@ -4,16 +4,17 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, of as observableOf, Subscription } from 'rxjs';
 import { catchError, tap, map } from 'rxjs/operators';
 
+import { LocalizeService } from './localize.service';
 import {
-  category2url, upcomingFilter, sortEvents, countPlayers, compareByDate, filterByList
+  category2url, upcomingFilter, sortEvents, countPlayers, compareByDate, filterByList, organization2url
 } from './libs';
 import {
   EventInfo, RoundInfo, LocationInfo, EventCategory, VideoInfo, TotalYearPlayers,
-  EventId, LocationId, RoundId
+  EventId, LocationId, RoundId, Members, Organization, AnnualReport
 } from './models';
 export {
   EventInfo, RoundInfo, LocationInfo, EventCategory, VideoInfo, TotalYearPlayers,
-  Subscription, EventId, LocationId
+  Subscription, EventId, LocationId, Members, Organization, AnnualReport
 };
 
 export type UserFilter = (events: EventInfo[], category: EventCategory) => EventInfo[];
@@ -22,10 +23,17 @@ export type UserFilter = (events: EventInfo[], category: EventCategory) => Event
   providedIn: 'root'
 })
 export class RemoteService {
-  constructor(private readonly http: HttpClient) { }
+  constructor(
+    private readonly localize: LocalizeService,
+    private readonly http: HttpClient    
+  ) { }
+
+  path(path: string): string {
+    return ['assets', this.localize.isGlobal ? 'global' : 'local', path].join('/');
+  }
 
   getText(path: string): Observable<string> {
-    return this.http.get('assets/local/' + path, { responseType: 'text' });
+    return this.http.get(this.path(path), { responseType: 'text' });
   }
 
   getEvents(category: EventCategory, filter?: UserFilter): Observable<EventInfo[]> {
@@ -109,6 +117,16 @@ export class RemoteService {
     return this.getEvents('past').pipe(
       map(events => countPlayers(events))
     );
+  }
+
+  getMembers(organization: Organization): Observable<Members[]> {
+    return this.http
+      .get<Members[]>(organization2url(organization), { responseType: 'json' });
+  }
+
+  getAnnualReports(): Observable<AnnualReport[]> {
+    return this.http
+      .get<AnnualReport[]>('assets/models/annual-reports.json', { responseType: 'json' });
   }
 
   private filterVideos(events: EventInfo[]): VideoInfo[] {

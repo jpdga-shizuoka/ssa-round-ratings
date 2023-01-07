@@ -1,0 +1,33 @@
+.chart {
+  user-select: none;
+  overflow-x: auto;
+  margin: 10px;
+}
+
+.legend {
+  padding: 8px 8px;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+caption {
+  text-align: left;
+}
+
+td:first-child {
+  width: 30px;
+  text-align: right;
+}
+
+@media (max-width: 414px) {
+  .legend {
+    font-size: small;
+  }
+
+  td:first-child {
+    width: 20px;
+  }
+}

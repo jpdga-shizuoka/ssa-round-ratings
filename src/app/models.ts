@@ -109,6 +109,7 @@ export interface RoundInfo extends RoundInfoBase {
   locationTitle?: string;
   event$?: Observable<EventInfo>;
   ssa?: number;         // Scratch Scoring Average
+  ssaRaw?: number;      // raw ssa (not regulated)
   difficulty?: number;
   category?: string;    // SSA Range Category
   weight?: number;
@@ -118,4 +119,16 @@ export interface RoundInfo extends RoundInfoBase {
 export interface TotalYearPlayers {
   year: number;
   players: Players;
+}
+
+export type Organization = 'PDGA' | 'JPDGA';
+
+export interface Members {
+  year: number;
+  members: number;
+}
+
+export interface AnnualReport {
+  year: number;
+  url: string;
 }

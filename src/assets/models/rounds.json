@@ -1,5 +1,424 @@
 [
   {
+    "id": "the1stjapanseriesdiscgolfchampionships.rd3",
+    "event": "the1stjapanseriesdiscgolfchampionships",
+    "title": "The 1st Japan Series Disc Golf Championships",
+    "locationTitle": "Kiyohara Kohgyo Danchi",
+    "round": "Rd3",
+    "date": "2022-09-18",
+    "hla": 138,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 65,
+        "rating": 1042
+      },
+      "player2": {
+        "score": 94,
+        "rating": 904
+      }
+    }
+  },
+  {
+    "id": "the1stjapanseriesdiscgolfchampionships.rd2",
+    "event": "the1stjapanseriesdiscgolfchampionships",
+    "title": "The 1st Japan Series Disc Golf Championships",
+    "locationTitle": "Kiyohara Kohgyo Danchi",
+    "round": "Rd2",
+    "date": "2022-09-18",
+    "hla": 138,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 61,
+        "rating": 1056
+      },
+      "player2": {
+        "score": 90,
+        "rating": 902
+      }
+    }
+  },
+  {
+    "id": "the1stjapanseriesdiscgolfchampionships.rd1",
+    "event": "the1stjapanseriesdiscgolfchampionships",
+    "title": "The 1st Japan Series Disc Golf Championships",
+    "locationTitle": "Kiyohara Kohgyo Danchi",
+    "round": "Rd1",
+    "date": "2022-09-17",
+    "hla": 138,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 66,
+        "rating": 1029
+      },
+      "player2": {
+        "score": 95,
+        "rating": 876
+      }
+    }
+  },
+  {
+    "eventTitle": "The 8th Asia Championship",
+    "id": "the8thasiachampionship.rd3",
+    "locationTitle": "Umino-Nakamichi Seaside Park",
+    "event": "the8thasiachampionship",
+    "round": "Rd3",
+    "date": "2022-08-28",
+    "hla": 74,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 45,
+        "rating": 1066
+      },
+      "player2": {
+        "score": 64,
+        "rating": 891
+      }
+    }
+  },
+  {
+    "eventTitle": "The 8th Asia Championship",
+    "id": "the8thasiachampionship.rd2",
+    "locationTitle": "Umino-Nakamichi Seaside Park",
+    "event": "the8thasiachampionship",
+    "round": "Rd2",
+    "date": "2022-08-27",
+    "hla": 112,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 50,
+        "rating": 1055
+      },
+      "player2": {
+        "score": 68,
+        "rating": 844
+      }
+    }
+  },
+  {
+    "eventTitle": "The 8th Asia Championship",
+    "id": "the8thasiachampionship.rd1",
+    "locationTitle": "Umino-Nakamichi Seaside Park",
+    "event": "the8thasiachampionship",
+    "round": "Rd1",
+    "date": "2022-08-27",
+    "hla": 85,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 47,
+        "rating": 1053
+      },
+      "player2": {
+        "score": 71,
+        "rating": 873
+      }
+    }
+  },
+  {
+    "eventTitle": "The 17th Michinoku Open",
+    "id": "the17thmichinokuopen.rd1rd2rd3",
+    "locationTitle": "Kitakami Sport Park",
+    "event": "the17thmichinokuopen",
+    "round": "Rd1,2,3",
+    "date": "2022-08-06",
+    "hla": 101,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 56,
+        "rating": 1030
+      },
+      "player2": {
+        "score": 76,
+        "rating": 872
+      }
+    }
+  },
+  {
+    "id": "the26thkantoopen.rd3",
+    "event": "the26thkantoopen",
+    "eventTitle": "The 26th Kanto Open",
+    "locationTitle": "Shiromigaoka Sports Park",
+    "round": "Rd3",
+    "date": "2022-07-18",
+    "hla": 98,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 47,
+        "rating": 1069
+      },
+      "player2": {
+        "score": 74,
+        "rating": 824
+      }
+    }
+  },
+  {
+    "id": "the26thkantoopen.rd2",
+    "event": "the26thkantoopen",
+    "eventTitle": "The 26th Kanto Open",
+    "locationTitle": "Shiromigaoka Sports Park",
+    "round": "Rd2",
+    "date": "2022-07-17",
+    "hla": 100,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 50,
+        "rating": 1061
+      },
+      "player2": {
+        "score": 74,
+        "rating": 858
+      }
+    }
+  },
+  {
+    "id": "the26thkantoopen.rd1rd4",
+    "event": "the26thkantoopen",
+    "eventTitle": "The 26th Kanto Open",
+    "locationTitle": "Shiromigaoka Sports Park",
+    "round": "Rd1,4",
+    "date": "2022-07-17",
+    "hla": 94,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 50,
+        "rating": 1038
+      },
+      "player2": {
+        "score": 69,
+        "rating": 864
+      }
+    }
+  },
+  {
+    "id": "the11thhokkaidoopen.rd1rd2rd3",
+    "event": "the11thhokkaidoopen",
+    "eventTitle": "The 11th Hokkaido Open",
+    "locationTitle": "Hunka-wan Panolama Park",
+    "round": "Rd1,2,3",
+    "date": "2022-07-02",
+    "hla": 114,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 52,
+        "rating": 1045
+      },
+      "player2": {
+        "score": 72,
+        "rating": 876
+      }
+    }
+  },
+  {
+    "id": "the17thmastersnationalchampionship.rd1rd2rd3",
+    "eventTitle": "The 17th Masters National Championship",
+    "event": "the17thmastersnationalchampionship",
+    "locationTitle": "Hikari-to-Kaze-no-Oka Park",
+    "round": "Rd1,2,3",
+    "date": "2022-06-25",
+    "hla": 75,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 46,
+        "rating": 1065
+      },
+      "player2": {
+        "score": 67,
+        "rating": 867
+      }
+    }
+  },
+  {
+    "id": "the24thnipponopen.rd1rd2rd3",
+    "eventTitle": "The 24th Nippon Open",
+    "locationTitle": "Kibougaoka Cultural Park West",
+    "event": "the24thnipponopen",
+    "round": "Rd1,2,3",
+    "date": "2022-06-11",
+    "hla": 116,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 59,
+        "rating": 1026
+      },
+      "player2": {
+        "score": 76,
+        "rating": 903
+      }
+    }
+  },
+  {
+    "event": "the17thkiyosatonomoriopen",
+    "round": "Rd1,2,3",
+    "date": "2022-05-21",
+    "hla": 81,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 46,
+        "rating": 1047
+      },
+      "player2": {
+        "score": 62,
+        "rating": 888
+      }
+    },
+    "eventTitle": "The 17th Kiyosato-no-mori Open",
+    "id": "the17thkiyosatonomoriopen.rd1rd2rd3",
+    "locationTitle": "Kiyosato-no-mori"
+  },
+  {
+    "event": "the5thgifuhiruganoopen",
+    "round": "Rd1,2,3",
+    "date": "2022-05-07",
+    "hla": 97,
+    "holes": 18,
+    "eventTitle": "The 5th Gifu Hirugano Open",
+    "id": "the5thgifuhiruganoopen.rd1rd2rd3",
+    "locationTitle": "Hirugano Kogen",
+    "ratings": {
+      "player1": {
+        "score": 48,
+        "rating": 1026
+      },
+      "player2": {
+        "score": 62,
+        "rating": 890
+      }
+    }
+  },
+  {
+    "event": "the34thjapannationalchampionship",
+    "round": "Rd1,2,3",
+    "date": "2022-05-04",
+    "hla": 119,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 56,
+        "rating": 1058
+      },
+      "player2": {
+        "score": 83,
+        "rating": 873
+      }
+    },
+    "eventTitle": "The 34th Japan National Championship",
+    "id": "the34thjapannationalchampionship.rd1rd2rd3",
+    "locationTitle": "Mikawa Rinkai Ryokuchi"
+  },
+  {
+    "event": "the20thsagaopen",
+    "round": "Rd1,2,3",
+    "date": "2022-04-09",
+    "hla": 91,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 50,
+        "rating": 1071
+      },
+      "player2": {
+        "score": 76,
+        "rating": 860
+      }
+    },
+    "eventTitle": "The 20th Saga Open",
+    "id": "the20thsagaopen.rd1rd2rd3",
+    "locationTitle": "Yoshinogari Historical Park"
+  },
+  {
+    "event": "the33rdjapannationalchampionship",
+    "round": "Rd1,2,3",
+    "date": "2021-12-18",
+    "hla": 115,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 61,
+        "rating": 1049
+      },
+      "player2": {
+        "score": 89,
+        "rating": 888
+      }
+    },
+    "eventTitle": "The 33rd Japan National Championship",
+    "id": "the33rdjapannationalchampionship.rd1rd2rd3",
+    "locationTitle": "Mikawa Rinkai Ryokuchi"
+  },
+  {
+    "event": "the35thkyushuopen",
+    "round": "Rd1,2",
+    "date": "2021-11-27",
+    "hla": 100,
+    "holes": 27,
+    "ratings": {
+      "player1": {
+        "score": 72,
+        "rating": 1067
+      },
+      "player2": {
+        "score": 107,
+        "rating": 861
+      }
+    },
+    "eventTitle": "The 35th Kyushu Open",
+    "id": "the35thkyushuopen.rd1rd2",
+    "locationTitle": "Umino-Nakamichi Seaside Park"
+  },
+  {
+    "event": "the17thkyotoclassic",
+    "round": "Rd1,2,3",
+    "date": "2021-12-04",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 49,
+        "rating": 1062
+      },
+      "player2": {
+        "score": 71,
+        "rating": 870
+      }
+    },
+    "eventTitle": "The 17th Kyoto Classic",
+    "id": "the17thkyotoclassic.rd1rd2rd3",
+    "locationTitle": "Kyoto Tamba Park"
+  },
+  {
+    "event": "the24thkansaiopen",
+    "round": "Rd1,2,3",
+    "date": "2021-10-23",
+    "hla": 128,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 60,
+        "rating": 1039
+      },
+      "player2": {
+        "score": 83,
+        "rating": 890
+      }
+    },
+    "eventTitle": "The 24th Kansai Open",
+    "id": "the24thkansaiopen.rd1rd2rd3",
+    "locationTitle": "Fumin-no-Mori Hiyoshi"
+  },
+  {
     "event": "the4thgifuhiruganoopen",
     "round": "Rd1,2,3",
     "date": "2021-05-03",
@@ -43,7 +462,7 @@
     "event": "the34thkyushuopen",
     "round": "Rd2",
     "date": "2020-11-29",
-    "hla": 97,
+    "hla": 94,
     "holes": 27,
     "ratings": {
       "player1": {
@@ -327,13 +746,13 @@
     "locationTitle": "Mizubayashi Sport Park"
   },
   {
-    "event": "the4thmihoopen",
+    "event": "the3rdmihoopen",
     "round": "Rd1,2",
     "date": "2019-09-28",
     "hla": 63,
     "holes": 18,
-    "eventTitle": "The 4th Miho Open",
-    "id": "the4thmihoopen.rd1rd2",
+    "eventTitle": "The 3rd Miho Open",
+    "id": "the3rdmihoopen.rd1rd2",
     "locationTitle": "Hikari-to-Kaze-no-Oka Park"
   },
   {

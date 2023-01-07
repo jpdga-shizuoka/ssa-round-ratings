@@ -24,6 +24,9 @@ body {
 app-preface h1 {
   font-size: 15px;
 }
+app-preface h2 {
+  font-size: 14px;
+}
 .img-container {
   display: flex;
   align-items: center;
@@ -32,6 +35,13 @@ app-preface h1 {
 .img-container img {
   box-shadow: 2px 2px 4px rgba(0,0,0,0.6);
   margin-bottom: 1rem;
+}
+.fit-picture {
+  display: block;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+  width: 100%;
+  margin-top: 0.5rem;
+  object-fit: contain;
 }
 app-preface .footer {
   text-align: right;
