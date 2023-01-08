@@ -1219,13 +1219,18 @@
     "urls": [
       {
         "type": "video",
-        "title": "Lead Card, Front9, Round2, MPO, D.ch",
-        "url": "https://youtu.be/kFIQNmPAsgk"
+        "title": "Lead Card, Final, MPO, D.ch",
+        "url": "https://youtube.com/watch?v=HG4UcntQVks"
       },
       {
         "type": "video",
-        "title": "Lead Card, Back9, Round2, MPO, D.ch",
-        "url": "https://youtu.be/fCdBuoCddtM"
+        "title": "Lead Card, Semi-final, MPO, D.ch",
+        "url": "https://youtube.com/watch?v=cm-uPXhF1eQ"
+      },
+      {
+        "type": "video",
+        "title": "Lead Card, Back9, Round3, MPO, D.ch",
+        "url": "https://youtu.be/5JkOKiveLWc"
       },
       {
         "type": "video",
@@ -1234,8 +1239,13 @@
       },
       {
         "type": "video",
-        "title": "Lead Card, Back9, Round3, MPO, D.ch",
-        "url": "https://youtu.be/5JkOKiveLWc"
+        "title": "Lead Card, Back9, Round2, MPO, D.ch",
+        "url": "https://youtu.be/fCdBuoCddtM"
+      },
+      {
+        "type": "video",
+        "title": "Lead Card, Front9, Round2, MPO, D.ch",
+        "url": "https://youtu.be/kFIQNmPAsgk"
       },
       {
         "type": "website",

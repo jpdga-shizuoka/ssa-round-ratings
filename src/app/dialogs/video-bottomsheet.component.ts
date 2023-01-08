@@ -5,9 +5,9 @@ import { DeviceDetectorService } from 'ngx-device-detector';
 
 import { VideoInfo } from '../models';
 
-const FACEBOOK = /https:\/\/www.facebook.com\/.+\/videos\/(\d+)\//;
-const YOUTUBE = /https:\/\/www.youtube.com\/watch?v=([0-9a-zA-Z_-]+)/;
-const YOUTUBE_SHORT = /https:\/\/youtu.be\/([0-9a-zA-Z_-]+)/;
+const FACEBOOK = /https:\/\/www\.facebook\.com\/.+\/videos\/(\d+)\//;
+const YOUTUBE = /https:\/\/youtube\.com\/watch\?v=([0-9a-zA-Z_-]+)/;
+const YOUTUBE_SHORT = /https:\/\/youtu\.be\/([0-9a-zA-Z_-]+)/;
 const MAX_VIDEO_WIDTH = 640;
 const VIDEO_SIDE_PADDING = 16;
 
@@ -58,6 +58,7 @@ export class VideoBottomsheetComponent {
     if (result != null) {
       this.videoType = 'YT';
       this.videoId = result[1];
+      return;
     }
   }
 
