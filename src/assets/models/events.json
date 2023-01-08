@@ -1,5 +1,320 @@
 [
   {
+    "id": "the22ndchubuopen",
+    "title": "The 22nd Chubu Open",
+    "location": "mikawarinkairyokuchi",
+    "period": {
+      "from": "2023-12-16",
+      "to": "2023-12-17"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2023/656_map.pdf"
+    },
+    "jpdga": {
+      "eventId": "656"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://aifda.or.jp/event"
+      }
+    ]
+  },
+  {
+    "id": "the37thkyushuopen",
+    "title": "The 37th Kyushu Open",
+    "location": "uminonakamichiseasidepark",
+    "period": {
+      "from": "2023-11-25",
+      "to": "2023-11-26"
+    },
+    "jpdga": {
+      "eventId": "610"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "http://www.jpdgafukuoka.com"
+      },
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/discgolfkyushuopen/"
+      }
+    ]
+  },
+  {
+    "id": "the35thshowakinenparkopen",
+    "title": "The 35th Showa Kinen Park Open",
+    "location": "showakinenpark",
+    "period": {
+      "from": "2023-11-03",
+      "to": "2023-11-05"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2023/653_map.pdf"
+    },
+    "jpdga": {
+      "eventId": "653"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://jpdgatokyooffice.wixsite.com/"
+      }
+    ]
+  },
+  {
+    "id": "the2ndmaikoclassic",
+    "title": "The 2nd Maiko Classic",
+    "location": "maikodiscgolfpark",
+    "period": {
+      "from": "2023-10-14",
+      "to": "2023-10-15"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2023/652_map.pdf"
+    },
+    "jpdga": {
+      "eventId": "652"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/maiko.dg.classic/"
+      }
+    ]
+  },
+  {
+    "id": "the23rddtohokuopen",
+    "title": "The 23rd Tohoku Open",
+    "location": "mizubayashisportpark",
+    "period": {
+      "from": "2023-10-08",
+      "to": "2023-10-09"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2023/651_map.pdf"
+    },
+    "jpdga": {
+      "eventId": "651"
+    }
+  },
+  {
+    "id": "the26thkansaiopen",
+    "title": "The 26th Kansai Open",
+    "location": "fuminnomorihiyoshi",
+    "period": {
+      "from": "2023-09-30",
+      "to": "2023-10-01"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2023/649_map.pdf"
+    },
+    "jpdga": {
+      "eventId": "649"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/kansaiopen.discgolf"
+      }
+    ]
+  },
+  {
+    "id": "the27thkantoopen",
+    "title": "The 27th Kanto Open",
+    "location": "shiromigaokasportspark",
+    "period": {
+      "from": "2023-09-16",
+      "to": "2023-09-17"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2023/647_map.pdf"
+    },
+    "jpdga": {
+      "eventId": "647"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "http://www.tochigiflyingdisc.com"
+      }
+    ]
+  },
+  {
+    "id": "the27thkantoopenama",
+    "title": "The 27th Kanto Open (Ama)",
+    "location": "shiromigaokasportspark",
+    "period": {
+      "from": "2023-09-18",
+      "to": "2023-09-18"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2023/648_map.pdf"
+    },
+    "jpdga": {
+      "eventId": "648"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "http://www.tochigiflyingdisc.com"
+      }
+    ]
+  },
+  {
+    "id": "the9thasiachampionship",
+    "title": "The 9th Asia Championships",
+    "location": "uminonakamichiseasidepark",
+    "period": {
+      "from": "2023-08-19",
+      "to": "2023-08-20"
+    },
+    "jpdga": {
+      "eventId": "645"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "http://www.jpdgafukuoka.com/"
+      }
+    ]
+  },
+  {
+    "id": "the18thmichinokuopen",
+    "title": "The 18th Michinoku Open",
+    "location": "kitakamisportpark",
+    "period": {
+      "from": "2023-08-05",
+      "to": "2023-08-06"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2023/644_map.pdf"
+    },
+    "jpdga": {
+      "eventId": "644"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "http://jpdgaiwate.com"
+      }
+    ]
+  },
+  {
+    "id": "the2nd japanseriesdiscgolfchampionships",
+    "title": "The 2nd Japan Series Disc Golf Championships",
+    "location": "kiyoharakohgyodanchi",
+    "period": {
+      "from": "2023-07-15",
+      "to": "2023-07-17"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2023/642_map.pdf"
+    },
+    "jpdga": {
+      "eventId": "642"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/kiyohara.green"
+      }
+    ]
+  },
+  {
+    "id": "the25thnipponopen",
+    "title": "The 25th Nippon Open",
+    "location": "kibougaokaculturalparkwest",
+    "period": {
+      "from": "2023-07-08",
+      "to": "2023-07-09"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2023/641_map.pdf"
+    },
+    "jpdga": {
+      "eventId": "641"
+    }
+  },
+  {
+    "id": "the12thhokkaidoopen",
+    "title": "The 12th Hokkaido Open",
+    "location": "hunkawanpanolamapark",
+    "period": {
+      "from": "2023-07-01",
+      "to": "2023-07-02"
+    },
+    "jpdga": {
+      "eventId": "640"
+    }
+  },
+  {
+    "id": "the18thmastersnationalchampionship",
+    "title": "The 18th Masters National Championships",
+    "location": "hikaritokazenookapark",
+    "period": {
+      "from": "2023-06-24",
+      "to": "2023-06-25"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2023/637_map.pdf"
+    },
+    "jpdga": {
+      "eventId": "637"
+    }
+  },
+  {
+    "id": "the5thmihoopen",
+    "title": "The 5th Miho Open",
+    "location": "hikaritokazenookapark",
+    "period": {
+      "from": "2023-06-24",
+      "to": "2023-06-25"
+    },
+    "jpdga": {
+      "eventId": "637"
+    }
+  },
+  {
+    "id": "the6thgifuhiruganoopen",
+    "title": "The 6th Gifu Hirugano Open",
+    "location": "hiruganokogen",
+    "period": {
+      "from": "2023-05-27",
+      "to": "2023-05-28"
+    },
+    "jpdga": {
+      "eventId": "634"
+    }
+  },
+  {
+    "id": "the18thkiyosatonomoriopen",
+    "title": "The 18th Kiyosato-no-mori Open",
+    "location": "kiyosatonomori",
+    "period": {
+      "from": "2023-05-20",
+      "to": "2023-05-21"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2023/633_map.pdf"
+    },
+    "jpdga": {
+      "eventId": "633"
+    }
+  },
+  {
     "title": "The 2023 Japan Open",
     "location": "fukuicountryclub",
     "period": {
@@ -8,6 +323,9 @@
     },
     "layout": {
       "official": "https://www.jo-discgolf-fukui-sakai.jp/games/coursemap"
+    },
+    "jpdga": {
+      "eventId": "632"
     },
     "urls": [
       {
@@ -37,6 +355,81 @@
       }
     ],
     "id": "the2023japanopen"
+  },
+  {
+    "id": "the35thjapannationalchampionship",
+    "title": "The 35th Japan National Championships",
+    "location": "minamisomahoseridingpark",
+    "period": {
+      "from": "2023-05-04",
+      "to": "2023-05-05"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2023/631_map.pdf"
+    },
+    "jpdga": {
+      "eventId": "631"
+    }
+  },
+  {
+    "id": "the18thminamisomaopen",
+    "title": "The 18th Minamisoma Open",
+    "location": "minamisomahoseridingpark",
+    "period": {
+      "from": "2023-04-29",
+      "to": "2023-04-30"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2023/630_map.pdf"
+    },
+    "jpdga": {
+      "eventId": "630"
+    }
+  },
+  {
+    "id": "the35thjapannationalchampionshipama",
+    "title": "The 35th Japan National Championships (Ama)",
+    "location": "minamisomahoseridingpark",
+    "period": {
+      "from": "2023-04-29",
+      "to": "2023-04-30"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2023/629_map.pdf"
+    },
+    "jpdga": {
+      "eventId": "629"
+    }
+  },
+  {
+    "id": "the30thtokyoopen",
+    "title": "The 30th Tokyo Open",
+    "location": "tatsuminomoriseasidepark",
+    "period": {
+      "from": "2023-04-15",
+      "to": "2023-04-16"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2023/628_map.pdf"
+    },
+    "jpdga": {
+      "eventId": "628"
+    }
+  },
+  {
+    "id": "the2023nationaldoubleschampionship",
+    "title": "The 2023 National Doubles Championships",
+    "location": "hitachiseasidepark",
+    "period": {
+      "from": "2023-03-04",
+      "to": "2023-03-05"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2023/627_map.pdf"
+    },
+    "jpdga": {
+      "eventId": "627"
+    }
   },
   {
     "id": "the11thokinawaopen",
