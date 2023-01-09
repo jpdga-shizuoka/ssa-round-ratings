@@ -5,7 +5,22 @@
       <tbody>
         <tr class="element-row mat-row">
           <td class="mat-cell">{{'Date' | localize}}</td>
-          <td class="mat-cell">{{event?.period | period}}
+          <td class="mat-cell">
+            <div *ngIf="showCalendar(event); else noWeather">
+              <div *ngIf="location$ | async as location">
+                <div *ngIf="location.weather">
+                  {{event?.period | period}}
+                  <a href="{{location.weather}}" target="_blank" rel="noopener">
+                    {{"Weather" | localize}}&#9728;
+                  </a>
+                </div>
+              </div>
+            </div>
+            <ng-template #noWeather>
+              <div *ngIf="location$ | async as location">
+                {{event?.period | period}}
+              </div>
+            </ng-template>
             <span *ngIf="canceled" class="canceled">CANCELED</span>
           </td>
         </tr>

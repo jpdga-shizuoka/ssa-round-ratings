@@ -24,6 +24,7 @@ export interface LocationInfo {
   title: string;
   geolocation: GeoPosition;
   prefecture: string;
+  weather?: string;
 }
 
 export interface PdgaInfo {
