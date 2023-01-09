@@ -315,10 +315,11 @@
     }
   },
   {
+    "id": "the2023japanopen",
     "title": "The 2023 Japan Open",
     "location": "fukuicountryclub",
     "period": {
-      "from": "2023-05-12",
+      "from": "2023-05-17",
       "to": "2023-05-19"
     },
     "layout": {
@@ -335,7 +336,7 @@
       },
       {
         "type": "website",
-        "title": "Official Site",
+        "title": "Official Site (English)",
         "url": "https://www.jo-discgolf-fukui-sakai.jp/en/"
       },
       {
@@ -353,8 +354,34 @@
         "title": "Fukui Country Club",
         "url": "https://youtu.be/G69pnd2qsZQ"
       }
-    ],
-    "id": "the2023japanopen"
+    ]
+  },
+  {
+    "id": "the2023japanopenfriendship",
+    "title": "The 2023 Japan Open (Friendship)",
+    "location": "seasidenaturepark",
+    "period": {
+      "from": "2023-05-13",
+      "to": "2023-05-14"
+    },
+    "layout": {
+      "official": "https://www.jo-discgolf-fukui-sakai.jp/games/coursemap"
+    },
+    "jpdga": {
+      "eventId": "632"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://www.jo-discgolf-fukui-sakai.jp"
+      },
+      {
+        "type": "website",
+        "title": "Official Site (English)",
+        "url": "https://www.jo-discgolf-fukui-sakai.jp/en/"
+      }
+    ]
   },
   {
     "id": "the35thjapannationalchampionship",
