@@ -544,7 +544,11 @@
       "pro": 51,
       "ama": 19,
       "misc": 0
-    }
+    },
+    "rounds": [
+      "the21stchubuopen.rd3",
+      "the21stchubuopen.rd1rd2"
+    ]
   },
   {
     "id": "the36thkyushuopen",
@@ -553,6 +557,9 @@
     "period": {
       "from": "2022-11-26",
       "to": "2022-11-27"
+    },
+    "layout": {
+      "official": "https://www.jpdgafukuoka.com/data/36KOmap2022.jpg"
     },
     "pdga": {
       "eventId": "63248"
@@ -596,7 +603,10 @@
       "pro": 59,
       "ama": 49,
       "misc": 2
-    }
+    },
+    "rounds":[
+      "the36thkyushuopen.rd1rd2"
+    ]
   },
   {
     "id": "the34thshowakinenparkopen",
@@ -679,7 +689,10 @@
       "pro": 33,
       "ama": 19,
       "misc": 0
-    }
+    },
+    "rounds": [
+      "the25thkansaiopen.rd1rd2rd3"
+    ]
   },
   {
     "id": "the1stmaikoclassic",
@@ -723,7 +736,10 @@
       "pro": 52,
       "ama": 9,
       "misc": 0
-    }
+    },
+    "rounds":[
+      "the1stmaikoclassic.rd1rd2rd3"
+    ]
   },
   {
     "id": "the9thfukuiopen",
@@ -754,7 +770,10 @@
       "pro": 25,
       "ama": 27,
       "misc": 0
-    }
+    },
+    "rounds": [
+      "the9thfukuiopen.rd1rd2rd3"
+    ]
   },
   {
     "id": "the22ndtohokuopen",
@@ -778,7 +797,11 @@
       "pro": 41,
       "ama": 13,
       "misc": 0
-    }
+    },
+    "rounds":[
+      "the22ndtohokuopen.rd1rd2",
+      "the22ndtohokuopen.rd3"
+    ]
   },
   {
     "id": "the1stjapanseriesdiscgolfchampionships",
@@ -832,8 +855,7 @@
     },
     "rounds": [
       "the1stjapanseriesdiscgolfchampionships.rd3",
-      "the1stjapanseriesdiscgolfchampionships.rd2",
-      "the1stjapanseriesdiscgolfchampionships.rd1"
+      "the1stjapanseriesdiscgolfchampionships.rd1rd2"
     ]
   },
   {
@@ -1347,11 +1369,15 @@
     "id": "the2022nationaldoubleschampionship"
   },
   {
+    "id": "the10thokinawaopen",
     "title": "The 10th Okinawa Open",
     "location": "nakijinsonsportpark",
     "period": {
       "from": "2022-02-19",
       "to": "2022-02-20"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2022/586_map.pdf"
     },
     "pdga": {
       "eventId": "56394"
@@ -1398,9 +1424,12 @@
         "url": "https://youtu.be/VdtecH7pO1o"
       }
     ],
-    "id": "the10thokinawaopen"
+    "rounds":[
+      "the10thokinawaopen.rd1rd2"
+    ]
   },
   {
+    "id": "the1stmikawaopen",
     "title": "The 1st Mikawa Open",
     "location": "mikawarinkairyokuchi",
     "layout": {
@@ -1429,7 +1458,10 @@
         "url": "https://aifda.or.jp/event"
       }
     ],
-    "id": "the1stmikawaopen"
+    "rounds":[
+      "the1stmikawaopen.rd1rd2",
+      "the1stmikawaopen.rd3"
+    ]
   },
   {
     "title": "The 2022 National Team Championships",
