@@ -46,7 +46,7 @@
     "locationTitle": "Umino-Nakamichi Seaside Park",
     "round": "Rd1,2",
     "date": "2022-11-26",
-    "hla": 100,
+    "hla": 102,
     "holes": 27,
     "ratings": {
       "player1": {
@@ -464,7 +464,7 @@
     "event": "the5thgifuhiruganoopen",
     "round": "Rd1,2,3",
     "date": "2022-05-07",
-    "hla": 97,
+    "hla": 93,
     "holes": 18,
     "eventTitle": "The 5th Gifu Hirugano Open",
     "id": "the5thgifuhiruganoopen.rd1rd2rd3",
@@ -504,7 +504,7 @@
     "event": "the20thsagaopen",
     "round": "Rd1,2,3",
     "date": "2022-04-09",
-    "hla": 91,
+    "hla": 97,
     "holes": 18,
     "ratings": {
       "player1": {
@@ -527,7 +527,7 @@
     "locationTitle": "Nakijinson Sport Park",
     "round": "Rd1,2",
     "date": "2022-02-19",
-    "hla": 99,
+    "hla": 93,
     "holes": 18,
     "ratings": {
       "player1": {
