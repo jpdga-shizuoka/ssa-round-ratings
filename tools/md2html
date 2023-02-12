@@ -3,6 +3,7 @@
 const Path = require('path');
 
 const DOC_LIST = [
+  "index",
   "divisions",
   "points",
   "faq_ratings",

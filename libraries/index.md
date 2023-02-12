@@ -1,0 +1,12 @@
+
+* [PDGAツアー選手の分類と部門](app-clasifications)
+* [PDGAの部門、レーティングおよびポイントについて](app-devisions)
+* [よくある質問 - レーティング編](app-library_index)
+* [PDGA公認大会における非標準規則の採用に関して](app-node_standard_rules)
+* [プレーヤーパックまたはアマチュア向け賞品の価値に見合う妥当な品目とは](app-playerpack)
+* [PDGAポイントの仕組み](app-points)
+* [PDGAレーティングの仕組み](app-ratings)
+* [プロからアマチュアへの再登録の条件](app-reclassification)
+* [5. PDGA公式規則と競技マニュアル](app-sec5)
+* [8. 2023年PDGA国際大会の基準](app-sec8)
+* [# PDGA真のアマチュア大会](app-true_amature)
