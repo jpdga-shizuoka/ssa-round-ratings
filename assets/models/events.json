@@ -307,8 +307,8 @@
       "from": "2023-05-20",
       "to": "2023-05-21"
     },
-    "layout": {
-      "official": "http://www.jpdga.jp/data/event/2023/633_map.pdf"
+    "pdga": {
+      "eventId": "66722"
     },
     "jpdga": {
       "eventId": "633"
@@ -436,8 +436,8 @@
       "from": "2023-04-15",
       "to": "2023-04-16"
     },
-    "layout": {
-      "official": "http://www.jpdga.jp/data/event/2023/628_map.pdf"
+    "pdga": {
+      "eventId": "66721"
     },
     "jpdga": {
       "eventId": "628"
@@ -454,6 +454,9 @@
     "layout": {
       "official": "http://www.jpdga.jp/data/event/2023/627_map.pdf"
     },
+    "pdga": {
+      "eventId": "66069"
+    },
     "jpdga": {
       "eventId": "627"
     }
@@ -466,7 +469,18 @@
       "from": "2023-02-18",
       "to": "2023-02-19"
     },
+    "pdga": {
+      "eventId": "66068"
+    },
+    "jpdga": {
+      "eventId": "626"
+    },
     "urls": [
+      {
+        "type": "video",
+        "title": "Course preview",
+        "url": "https://youtube.com/watch?v=tjCMW_bGVeg"
+      },
       {
         "type": "website",
         "title": "Official Site",
@@ -481,13 +495,14 @@
   },
   {
     "id": "the4thhitachseasideparkopen",
-    "title": "The 4th Hitach Seaside Park Open",
+    "title": "The 4th Hitachi Seaside Park Open",
     "location": "hitachiseasidepark",
     "period": {
       "from": "2023-01-22",
       "to": "2023-01-22"
     },
     "jpdga": {
+      "topicId": "1700",
       "eventId": "625"
     },
     "urls": [
@@ -507,6 +522,7 @@
       "to": "2023-01-09"
     },
     "jpdga": {
+      "topicId": "1701",
       "eventId": "624"
     },
     "urls":[
@@ -836,6 +852,11 @@
       },
       {
         "type": "video",
+        "title": "Final, FPO",
+        "url": "https://youtube.com/watch?v=Y_iqfPxwm_8"
+      },
+      {
+        "type": "video",
         "title": "Final, FPO, LIVE",
         "url": "https://youtu.be/o4F5vE1meoI"
       },
@@ -1031,7 +1052,7 @@
   },
   {
     "id": "the3rdhitachseasideparkopen",
-    "title": "The 3rd Hitach Seaside Park Open",
+    "title": "The 3rd Hitachi Seaside Park Open",
     "location": "hitachiseasidepark",
     "period": {
       "from": "2022-07-10",
@@ -1702,7 +1723,7 @@
     "id": "the21sttohokuopen"
   },
   {
-    "title": "The 2nd Hitach Seaside Park Open",
+    "title": "The 2nd Hitachi Seaside Park Open",
     "location": "hitachiseasidepark",
     "period": {
       "from": "2021-09-26",
@@ -1768,7 +1789,7 @@
     "id": "the25thkantoopen"
   },
   {
-    "title": "The 1st Hitach Seaside Park Open",
+    "title": "The 1st Hitachi Seaside Park Open",
     "location": "hitachiseasidepark",
     "layout": {
       "official": "http://www.jpdga.jp/data/event/2021/582_map.pdf"
