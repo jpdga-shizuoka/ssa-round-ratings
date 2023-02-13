@@ -63,7 +63,17 @@ import { BubbleSeriesInteractiveComponent } from './difficulty-chart/custom-char
 import { RoundListComponent } from './round-list/round-list.component';
 import { VideoListComponent } from './video-list/video-list.component';
 import { EventListComponent } from './event-list/event-list.component';
-
+import { LibrariesClassificationsComponent } from './libraries/librariesclassifications.component';
+import { LibrariesDivisionsComponent } from './libraries/librariesdivisions.component';
+import { LibrariesFaq_ratingsComponent } from './libraries/librariesfaq_ratings.component';
+import { LibrariesNon_standard_rulesComponent } from './libraries/librariesnon_standard_rules.component';
+import { LibrariesPlayerpackComponent } from './libraries/librariesplayerpack.component';
+import { LibrariesPointsComponent } from './libraries/librariespoints.component';
+import { LibrariesRatingsComponent } from './libraries/librariesratings.component';
+import { LibrariesReclassificationComponent } from './libraries/librariesreclassification.component';
+import { LibrariesSec5Component } from './libraries/librariessec5.component';
+import { LibrariesSec8Component } from './libraries/librariessec8.component';
+import { LibrariesTrue_amateurComponent } from './libraries/librariestrue_amateur.component';
 import { SchedulePipe } from './schedule.pipe';
 import { GeolinkPipe } from './geolink.pipe';
 import { LocalizePipe } from './localize.pipe';
@@ -106,6 +116,17 @@ import { EventPipe } from './event.pipe';
         RoundListComponent,
         VideoListComponent,
         EventListComponent,
+        LibrariesClassificationsComponent,
+        LibrariesDivisionsComponent,
+        LibrariesFaq_ratingsComponent,
+        LibrariesNon_standard_rulesComponent,
+        LibrariesPlayerpackComponent,
+        LibrariesPointsComponent,
+        LibrariesRatingsComponent,
+        LibrariesReclassificationComponent,
+        LibrariesSec5Component,
+        LibrariesSec8Component,
+        LibrariesTrue_amateurComponent,
         SchedulePipe,
         GeolinkPipe,
         LocalizePipe,
