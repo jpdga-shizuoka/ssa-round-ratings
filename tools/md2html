@@ -1,29 +1,36 @@
 #!/usr/bin/env node
 
 const Path = require('path');
-
-const DOC_LIST = [
-  "index",
-  "divisions",
-  "points",
-  "faq_ratings",
-  "ratings",
-  "sec5",
-  "reclassification",
-  "sec8",
-  "classifications",
-  "non_standard_rules",
-  "true_amateur",
-  "playerpack"
-];
-const external = /^http/i;
-const DOC_SRC = 'libraries';
-const DST = './src/app/'
 const fs = require('fs');
 const md = require('markdown-it')({replaceLink: replaceLink})
 //.use(require('markdown-it-container'), 'app-table')
 .use(replaceLinkPlugIn);
 
+const external = /^http/i;
+const DST = './src/app/'
+const DOC_SRC = 'libraries';
+const DST_DIR = Path.join(DST, DOC_SRC);
+const SRC_DIR = './libraries';
+const PATTERN = /([\w]+)\.md/;
+const DOC_LIST = [];
+//
+//  retrieve file list from specified folder
+//
+fs.readdirSync(SRC_DIR).forEach(file => {
+    const result = file.match(PATTERN);
+    if (result) {
+      DOC_LIST.push(result[1]);
+    }
+});
+//
+//  prepare destination folder
+//
+if (!fs.existsSync(DST_DIR)){
+  fs.mkdirSync(DST_DIR, { recursive: true });
+}
+//
+//  create ts & html files
+//
 createComponents(DOC_LIST, DOC_SRC);
 
 //////////////////////////////////////////////////////////////////////
@@ -43,8 +50,8 @@ function createComponents(sources, srcPath) {
 
 function makeHtml(id, html, srcPath) {
   const name = srcPath;
-  const dstPath = Path.join(DST, srcPath, id + '.html');
-  let content =`<div class="app-${name}" id="app-${id}">`;
+  const dstPath = Path.join(DST, srcPath, id + '.component.html');
+  let content =`<div class="app-${name}">`;
   content += `
 ${html}</div>`;
   fs.writeFileSync(dstPath, content);
@@ -55,15 +62,20 @@ function makeComponent(id, srcPath) {
   const Name = capitalizeFirstLetter(name);
   const sid = makeId(id);
   const dstPath = Path.join(DST, srcPath, name + id + '.component.ts');
-  const content =`import { Component } from '@angular/core';
-import { ${Name}Component } from './${name}.component';
+  const content =`import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-${name}-${id}',
-  templateUrl: './${id}.html'
+  templateUrl: './${id}.component.html',
+  styleUrls: ['./${name}.component.css']
 })
-export class ${Name}${sid}Component extends ${Name}Component {
-}
-`;
+export class ${Name}${sid}Component implements OnInit {
+
+  constructor() {}
+
+  ngOnInit() {
+  }
+
+}`;
   fs.writeFileSync(dstPath, content);
 }
 
