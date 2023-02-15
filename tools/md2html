@@ -11,7 +11,7 @@ const DST = './src/app/'
 const DOC_SRC = 'libraries';
 const DST_DIR = Path.join(DST, DOC_SRC);
 const SRC_DIR = './libraries';
-const PATTERN = /([\w]+)\.md/;
+const PATTERN = /([\w-]+)\.md/;
 const DOC_LIST = [];
 //
 //  retrieve file list from specified folder
@@ -44,7 +44,7 @@ function createComponents(sources, srcPath) {
     const htmlContent = md.render(mdContent);
 
     makeHtml(id, htmlContent, srcPath);
-    makeComponent(id, srcPath);
+    // makeComponent(id, srcPath);
   });
 }
 
