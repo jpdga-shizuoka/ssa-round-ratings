@@ -195,7 +195,7 @@ const routes: Routes = [
     data: { metaDescription: {  title: 'DG Japan - Libraries'}}
   },
   {
-    path: 'libraries/trueamature',
+    path: 'libraries/trueamateur',
     component: TrueAmateurComponent,
     data: { metaDescription: {  title: 'DG Japan - Libraries'}}
   },

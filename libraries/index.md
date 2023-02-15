@@ -1,7 +1,4 @@
 
-* [schedule](schedule)
-* [past](past)
-* [about](about)
 * [PDGAツアー選手の分類と部門](/libraries/classifications)
 * [PDGAの部門、レーティングおよびポイントについて](/libraries/divisions)
 * [よくある質問 - レーティング編](/libraries/faqratings)
@@ -12,4 +9,4 @@
 * [プロからアマチュアへの再登録の条件](/libraries/reclassification)
 * [5. PDGA公式規則と競技マニュアル](/libraries/sec5)
 * [8. 2023年PDGA国際大会の基準](/libraries/sec8)
-* [# PDGA真のアマチュア大会](/libraries/trueamature)
+* [PDGA真のアマチュア大会](/libraries/trueamateur)

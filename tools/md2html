@@ -2,7 +2,10 @@
 
 const Path = require('path');
 const fs = require('fs');
-const md = require('markdown-it')({replaceLink: replaceLink})
+const md = require('markdown-it')({
+  html:         true,        // Enable HTML tags in source
+  replaceLink: replaceLink
+})
 //.use(require('markdown-it-container'), 'app-table')
 .use(replaceLinkPlugIn);
 
@@ -124,7 +127,7 @@ function replaceLink(link, env) {
   if (result != null) {
     return '/' + result[1];
   } else {
-    return '/' + link;
+    return link;
   }
 }
 
