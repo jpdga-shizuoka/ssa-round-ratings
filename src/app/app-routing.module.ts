@@ -11,6 +11,16 @@ import { StatsTabsComponent } from './stats-tabs/stats-tabs.component';
 import { IndexComponent } from './libraries/index.component';
 import { AboutThisSiteComponent } from './about-this-site/about-this-site.component';
 import { EventComponent } from './event/event.component';
+import { ClassificationsComponent } from './libraries/classifications.component';
+import { DivisionsComponent } from './libraries/divisions.component';
+import { FaqRatingsComponent } from './libraries/faq-ratings.component';
+import { NonStandardRulesComponent } from './libraries/non-standard-rules.component';
+import { PlayerpackComponent } from './libraries/playerpack.component';
+import { PointsComponent } from './libraries/points.component';
+import { ReclassificationComponent } from './libraries/reclassification.component';
+import { Sec5Component } from './libraries/sec5.component';
+import { Sec8Component } from './libraries/sec8.component';
+import { TrueAmateurComponent } from './libraries/true-amateur.component';
 
 export type UserData = {
   metaDescription: {
@@ -127,16 +137,67 @@ const routes: Routes = [
   },
 
   {
-    path: 'libraries',
+    path: 'libraries', redirectTo: '/libraries/index', pathMatch: 'full'
+  },
+  {
+    path: 'libraries/index',
     component: IndexComponent,
-    data: {
-      metaDescription: {
-        title: 'DG Japan - Libraries',
-        subtitle: 'Libraries',
-        description: 'Document libraries.',
-        keywords: 'disc golf,document,japan'
-      }
-    }
+    data: { metaDescription: {  title: 'DG Japan - Libraries'}}
+  },
+  {
+    path: 'libraries/classifications',
+    component: ClassificationsComponent,
+    data: { metaDescription: {  title: 'DG Japan - Libraries'}}
+  },
+  {
+    path: 'libraries/divisions',
+    component: DivisionsComponent,
+    data: { metaDescription: {  title: 'DG Japan - Libraries'}}
+  },
+  {
+    path: 'libraries/faqratings',
+    component: FaqRatingsComponent,
+    data: { metaDescription: {  title: 'DG Japan - Libraries'}}
+  },
+  {
+    path: 'libraries/nonstandards',
+    component: NonStandardRulesComponent,
+    data: { metaDescription: {  title: 'DG Japan - Libraries'}}
+  },
+  {
+    path: 'libraries/playerpack',
+    component: PlayerpackComponent,
+    data: { metaDescription: {  title: 'DG Japan - Libraries'}}
+  },
+  {
+    path: 'libraries/points',
+    component: PointsComponent,
+    data: { metaDescription: {  title: 'DG Japan - Libraries'}}
+  },
+  {
+    path: 'libraries/ratings',
+    component: ClassificationsComponent,
+    data: { metaDescription: {  title: 'DG Japan - Libraries'}}
+  },
+  {
+    path: 'libraries/reclassification',
+    component: ReclassificationComponent,
+    data: { metaDescription: {  title: 'DG Japan - Libraries'}}
+  },
+  {
+    path: 'libraries/sec5',
+    component: Sec5Component,
+    data: { metaDescription: {  title: 'DG Japan - Libraries'}}
+  },
+  {
+    path: 'libraries/sec8',
+    component: Sec8Component,
+    data: { metaDescription: {  title: 'DG Japan - Libraries'}}
+  },
+  {
+    path: 'libraries/trueamature',
+    component: TrueAmateurComponent,
+    data: { metaDescription: {  title: 'DG Japan - Libraries'}}
   },
 
   {
