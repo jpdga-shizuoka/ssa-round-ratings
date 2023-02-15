@@ -8,8 +8,7 @@ import { LocalTabsComponent } from './events-tabs/local-tabs.component';
 import { MonthlyTabsComponent } from './events-tabs/monthly-tabs.component';
 import { UpcomingTabsComponent } from './events-tabs/upcoming-tabs.component';
 import { StatsTabsComponent } from './stats-tabs/stats-tabs.component';
-import { LibrariesIndexComponent } from './libraries/librariesindex.component';
-import { LibrariesClassificationsComponent } from './libraries/librariesclassifications.component';
+import { IndexComponent } from './libraries/index.component';
 import { AboutThisSiteComponent } from './about-this-site/about-this-site.component';
 import { EventComponent } from './event/event.component';
 
@@ -129,19 +128,7 @@ const routes: Routes = [
 
   {
     path: 'libraries',
-    component: LibrariesIndexComponent,
-    data: {
-      metaDescription: {
-        title: 'DG Japan - Libraries',
-        subtitle: 'Libraries',
-        description: 'Document libraries.',
-        keywords: 'disc golf,document,japan'
-      }
-    }
-  },
-  {
-    path: 'libraries/classifications',
-    component: LibrariesClassificationsComponent,
+    component: IndexComponent,
     data: {
       metaDescription: {
         title: 'DG Japan - Libraries',

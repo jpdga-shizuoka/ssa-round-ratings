@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-librariesindex',
-  templateUrl: './librariesindex.component.html',
+  selector: 'app-index',
+  templateUrl: './index.component.html',
   styleUrls: ['./libraries.component.css']
 })
-export class LibrariesindexComponent implements OnInit {
+export class IndexComponent implements OnInit {
 
   constructor() { }
 

@@ -63,23 +63,24 @@ import { BubbleSeriesInteractiveComponent } from './difficulty-chart/custom-char
 import { RoundListComponent } from './round-list/round-list.component';
 import { VideoListComponent } from './video-list/video-list.component';
 import { EventListComponent } from './event-list/event-list.component';
-import { LibrariesClassificationsComponent } from './libraries/librariesclassifications.component';
-import { LibrariesDivisionsComponent } from './libraries/librariesdivisions.component';
-import { LibrariesFaq_ratingsComponent } from './libraries/librariesfaq_ratings.component';
-import { LibrariesNon_standard_rulesComponent } from './libraries/librariesnon_standard_rules.component';
-import { LibrariesPlayerpackComponent } from './libraries/librariesplayerpack.component';
-import { LibrariesPointsComponent } from './libraries/librariespoints.component';
-import { LibrariesRatingsComponent } from './libraries/librariesratings.component';
-import { LibrariesReclassificationComponent } from './libraries/librariesreclassification.component';
-import { LibrariesSec5Component } from './libraries/librariessec5.component';
-import { LibrariesSec8Component } from './libraries/librariessec8.component';
-import { LibrariesTrue_amateurComponent } from './libraries/librariestrue_amateur.component';
 import { SchedulePipe } from './schedule.pipe';
 import { GeolinkPipe } from './geolink.pipe';
 import { LocalizePipe } from './localize.pipe';
 import { PeriodPipe } from './period.pipe';
 import { LocationPipe } from './location.pipe';
 import { EventPipe } from './event.pipe';
+import { ClassificationsComponent } from './libraries/classifications.component';
+import { FaqRatingsComponent } from './libraries/faq-ratings.component';
+import { NonStandardRulesComponent } from './libraries/non-standard-rules.component';
+import { PointsComponent } from './libraries/points.component';
+import { ReclassificationComponent } from './libraries/reclassification.component';
+import { Sec8Component } from './libraries/sec8.component';
+import { DivisionsComponent } from './libraries/divisions.component';
+import { PlayerpackComponent } from './libraries/playerpack.component';
+import { RatingsComponent } from './libraries/ratings.component';
+import { Sec5Component } from './libraries/sec5.component';
+import { TrueAmateurComponent } from './libraries/true-amateur.component';
+import { IndexComponent } from './libraries/index.component';
 
 @NgModule({
     declarations: [
@@ -116,23 +117,24 @@ import { EventPipe } from './event.pipe';
         RoundListComponent,
         VideoListComponent,
         EventListComponent,
-        LibrariesClassificationsComponent,
-        LibrariesDivisionsComponent,
-        LibrariesFaq_ratingsComponent,
-        LibrariesNon_standard_rulesComponent,
-        LibrariesPlayerpackComponent,
-        LibrariesPointsComponent,
-        LibrariesRatingsComponent,
-        LibrariesReclassificationComponent,
-        LibrariesSec5Component,
-        LibrariesSec8Component,
-        LibrariesTrue_amateurComponent,
         SchedulePipe,
         GeolinkPipe,
         LocalizePipe,
         PeriodPipe,
         LocationPipe,
-        EventPipe
+        EventPipe,
+        ClassificationsComponent,
+        FaqRatingsComponent,
+        NonStandardRulesComponent,
+        PointsComponent,
+        ReclassificationComponent,
+        Sec8Component,
+        DivisionsComponent,
+        PlayerpackComponent,
+        RatingsComponent,
+        Sec5Component,
+        TrueAmateurComponent,
+        IndexComponent
     ],
     imports: [
         BrowserModule,
