@@ -6,7 +6,18 @@ const md = require('markdown-it')({
   html:         true,        // Enable HTML tags in source
   replaceLink: replaceLink
 })
-//.use(require('markdown-it-container'), 'app-table')
+.use(require('markdown-it-container'), 'widetable', {
+  render: function (tokens, idx) {
+    const m = tokens[idx].info.trim().match(/^widetable\s+(.*)$/);
+    if (tokens[idx].nesting === 1) {
+      // opening tag
+      return '<div class="app-table" id="' + md.utils.escapeHtml(m[1]) + '">\n';
+    } else {
+      // closing tag
+      return '</div>\n';
+    }
+  }
+})
 .use(replaceLinkPlugIn);
 
 const external = /^http/i;

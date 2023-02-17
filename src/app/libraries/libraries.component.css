@@ -3,21 +3,41 @@
     padding: 20px;
     background-color: white;
 }
-table,
-th,
-td {
-    border: 1px solid;
-}
 table {
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
     text-align: center;
-    border: 1px solid #ddd;
+    display: block;
+}
+table, th, td {
+    border: 1px solid;
 }
 tr:nth-child(even){background-color: #f2f2f2}
-table#sec8 {
-    width: 100%;
-    min-width: 1000px;
-    display: block;
+
+#table1 table {
+    min-width: 100em;
+}
+#table2 table {
+    min-width: 60em;
+}
+#table3 table {
+    width: 31em;
+}
+#table4 table {
+    min-width: 40em;
+}
+
+#table2 table th {
+    min-width: 6em;
+}
+#table3 table th {
+    min-width: 5em;
+}
+#table4 table th {
+    min-width: 5em;
+}
+
+.app-table {
+    overflow-x: auto;
 }
