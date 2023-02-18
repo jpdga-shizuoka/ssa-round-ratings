@@ -1,6 +1,6 @@
 # 資料室
 
-PDGAの公開資料から、興味を引く物をいくつか紹介します。
+PDGAの公開資料から、いくつか紹介します。
 
 * [PDGAの部門、レーティングおよびポイントについて](/libraries/divisions)
     * [PDGAツアー選手の分類と部門](/libraries/classifications)

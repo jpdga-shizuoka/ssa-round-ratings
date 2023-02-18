@@ -26,3 +26,6 @@
 * [PDGAレーティングの仕組み](/libraries/ratings)
 * [よくある質問 - レーティング編](/libraries/faqratings)
 * [プロからアマチュアへの再登録の条件](/libraries/reclassification)
+
+---
+* [資料室へ戻る](/libraries/index)

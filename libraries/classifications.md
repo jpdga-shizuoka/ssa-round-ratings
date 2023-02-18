@@ -135,3 +135,6 @@ PDGAツアーのプレーヤー制度は、プレーヤー部門の表と[PDGA�
 * [PDGAツアー基準](/libraries/tourstandards)
 * [PDGAの部門、レーティングおよびポイントについて](/libraries/divisions)
 * [プロからアマチュアへの再登録の条件](/libraries/reclassification)
+
+---
+* [資料室へ戻る](/libraries/index)

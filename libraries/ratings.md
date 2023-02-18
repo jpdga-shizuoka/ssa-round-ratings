@@ -37,3 +37,6 @@ PDGAは、トーナメントディレクター(以下TD)から正しいスコア
 
 * [PDGAの部門、レーティングおよびポイントについて](/libraries/divisions)
 * [よくある質問 - レーティング編](/libraries/faqratings)
+
+---
+* [資料室へ戻る](/libraries/index)

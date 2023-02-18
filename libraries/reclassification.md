@@ -39,8 +39,10 @@
 健康上の理由による再登録に関する詳細は、[PDGA大会支援班](https://www.pdga.com/contact/eventsupport)までお問い合わせください。
 
 ---
-
 ## 関連資料
 
 * [PDGAの部門、レーティングおよびポイントについて](/libraries/divisions)
 * [PDGAツアー選手の分類と部門](/libraries/classifications)
+
+---
+* [資料室へ戻る](/libraries/index)

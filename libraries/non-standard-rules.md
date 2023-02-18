@@ -35,9 +35,11 @@ TDとコース設計者は、標準的なPDGA規則に従いながらも、懲�
 標準でない規則の放棄を要求し、大会が確実に評価されるようにするための方策について話し合うには、[PDGA大会支援班](https://www.pdga.com/contact/eventsupport)に連絡してください。
 
 ---
-
 ## 関連資料
 
 * [DPGAディスクゴルフ公式規則](https://jpdga-shizuoka.github.io/rules/)
 * [PDGA競技マニュアル](http://www.jpdga.jp/data/2022discgolf_competiton.pdf)
 * [PDGAツアー基準](/libraries/tourstandards)
+
+---
+* [資料室へ戻る](/libraries/index)

@@ -29,9 +29,11 @@ PDGAの目標は、競技マニュアルに記載されている基準と手順�
 | 3.08.H	| TDの権利と責任: 大会を降格させる権利は、各国協会にあります。|
 
 ---
-
 ## 関連資料
 
 * [PDGAディスクゴルフ公式規則](https://jpdga-shizuoka.github.io/rules/)
 * [PDGA競技マニュアル(JPDGA版)](http://www.jpdga.jp/data/2022discgolf_competiton.pdf)
 * [PDGAツアー基準](/libraries/tourstandards)
+
+---
+* [資料室へ戻る](/libraries/index)

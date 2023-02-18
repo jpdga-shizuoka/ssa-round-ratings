@@ -137,3 +137,6 @@ WEBページの[Ratings History]タブで、現在のプレーヤーレーティ
 
 * [PDGAの部門、レーティングおよびポイントについて](/libraries/divisions)
 * [PDGAレーティングの仕組み](/libraries/ratings)
+
+---
+* [資料室へ戻る](/libraries/index)

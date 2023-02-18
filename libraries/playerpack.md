@@ -46,7 +46,9 @@ https://www.pdga.com/files/pdga_allowable_items_towards_player_pack_value.pdf)
 ある品目が妥当か否か懸念があれば、[PDGA大会支援班](https://www.pdga.com/contact/eventsupport)までお問い合わせください。
 
 ---
-
 ## 関連資料
 
 * [PDGA真のアマチュア大会](/libraries/trueamateur)
+
+---
+* [資料室へ戻る](/libraries/index)

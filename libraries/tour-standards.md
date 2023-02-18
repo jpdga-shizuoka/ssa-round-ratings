@@ -1,4 +1,4 @@
-本ページは、[PDGA Tour Standards](https://www.pdga.com/pdga-documents/tour-documents/pdga-tour-standards)の日本語版です。
+本ページは、[PDGA Tour Standards](https://www.pdga.com/pdga-documents/tour-documents/pdga-tour-standards)の日本語訳です。
 
 # PDGAツアー基準
 
@@ -13,3 +13,6 @@ PDGAツアー基準は全てのPDGA公認大会の基本的な要件を規定し
 * [各国における競技マニュアルの適用](/libraries/sec5)
 * [PDGA公認大会における非標準規則の採用に関して](/libraries/nonstandards)
 * [プレーヤーパックまたはアマチュア向け賞品の価値に見合う妥当な品目とは](/libraries/playerpack)
+
+---
+* [資料室へ戻る](/libraries/index)
