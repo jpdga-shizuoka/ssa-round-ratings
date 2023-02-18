@@ -34,6 +34,7 @@ export class AppComponent implements OnInit, OnDestroy, MetaDescription {
   get localEvents(): string { return this.localize.transform('Local Events'); }
   get monthlyEvents(): string { return this.localize.transform('Monthly Events'); }
   get stats(): string { return this.localize.transform('Stats'); }
+  get libraries(): string { return this.localize.transform('Libraries'); }
   get aboutThisSite(): string { return this.localize.transform('About this site'); }
 
   constructor(

@@ -63,13 +63,25 @@ import { BubbleSeriesInteractiveComponent } from './difficulty-chart/custom-char
 import { RoundListComponent } from './round-list/round-list.component';
 import { VideoListComponent } from './video-list/video-list.component';
 import { EventListComponent } from './event-list/event-list.component';
-
 import { SchedulePipe } from './schedule.pipe';
 import { GeolinkPipe } from './geolink.pipe';
 import { LocalizePipe } from './localize.pipe';
 import { PeriodPipe } from './period.pipe';
 import { LocationPipe } from './location.pipe';
 import { EventPipe } from './event.pipe';
+import { ClassificationsComponent } from './libraries/classifications.component';
+import { FaqRatingsComponent } from './libraries/faq-ratings.component';
+import { NonStandardRulesComponent } from './libraries/non-standard-rules.component';
+import { PointsComponent } from './libraries/points.component';
+import { ReclassificationComponent } from './libraries/reclassification.component';
+import { Sec8Component } from './libraries/sec8.component';
+import { DivisionsComponent } from './libraries/divisions.component';
+import { PlayerpackComponent } from './libraries/playerpack.component';
+import { RatingsComponent } from './libraries/ratings.component';
+import { Sec5Component } from './libraries/sec5.component';
+import { TrueAmateurComponent } from './libraries/true-amateur.component';
+import { IndexComponent } from './libraries/index.component';
+import { TourStandardsComponent } from './libraries/tour-standards.component';
 
 @NgModule({
     declarations: [
@@ -111,7 +123,20 @@ import { EventPipe } from './event.pipe';
         LocalizePipe,
         PeriodPipe,
         LocationPipe,
-        EventPipe
+        EventPipe,
+        ClassificationsComponent,
+        FaqRatingsComponent,
+        NonStandardRulesComponent,
+        PointsComponent,
+        ReclassificationComponent,
+        Sec8Component,
+        DivisionsComponent,
+        PlayerpackComponent,
+        RatingsComponent,
+        Sec5Component,
+        TrueAmateurComponent,
+        IndexComponent,
+        TourStandardsComponent
     ],
     imports: [
         BrowserModule,
