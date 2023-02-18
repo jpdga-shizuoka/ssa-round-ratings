@@ -1,12 +1,12 @@
-本PDGA資料は
+本ページは
 [PDGA Requirements for Reclassification from Professional to Amateur](https://www.pdga.com/reclassification)
-です。
+の日本語訳です。
 
 # プロからアマチュアへの再登録の条件
 
 プロ登録のPDGA会員は、アマチュアへの再登録を申請できますが、その資格を得るには以下の条件を満たす必要があります。再登録申請については、[PDGA大会支援班](https://www.pdga.com/contact/eventsupport)までお問い合わせください。
 
-1. 当該選手は、過去 1 年以内にプロ部門の競技による賞金を受け取っていないこと、
+1. 当該選手は、過去1年以内にプロ部門の競技による賞金を受け取っていないこと、
 
 1. 同選手は、過去5年間にプロからアマチュアに登録替えしていないこと、
 
@@ -37,3 +37,10 @@
 上記条件1と2を満たすが、プレーヤーレーティングが条件3を満たさないある選手は、医療免除による再登録を要求することができますが、それは以前の水準でプレーすることを妨げる恒久的な怪我または障害のためにのみに限られます。
 
 健康上の理由による再登録に関する詳細は、[PDGA大会支援班](https://www.pdga.com/contact/eventsupport)までお問い合わせください。
+
+---
+
+## 関連資料
+
+* [PDGAの部門、レーティングおよびポイントについて](/libraries/divisions)
+* [PDGAツアー選手の分類と部門](/libraries/classifications)

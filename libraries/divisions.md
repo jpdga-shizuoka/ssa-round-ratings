@@ -1,6 +1,6 @@
-本PDGA資料は
+本ページは
 [PDGA Divisions, Ratings, & Points](https://www.pdga.com/divisions-ratings-points)
-です。
+の日本語訳です。
 
 # PDGAの部門、レーティングおよびポイントについて
 
@@ -16,4 +16,13 @@
 
 あなたの合計ポイントは、現在3つの方法で利用できます。まず、すべての会員が利用できるのは、定期的に対戦している仲間や地元の選手の間で自慢できる権利です。
 
-他の2つの利用方法に関しては、「PDGAポイントの仕組み」を参照してください。
+他の2つの利用方法に関しては、「[PDGAポイントの仕組み]((/libraries/points))」を参照してください。
+
+---
+## 関連資料
+
+* [PDGAツアー選手の分類と部門](/libraries/classifications)
+* [PDGAポイントの仕組み](/libraries/points)
+* [PDGAレーティングの仕組み](/libraries/ratings)
+* [よくある質問 - レーティング編](/libraries/faqratings)
+* [プロからアマチュアへの再登録の条件](/libraries/reclassification)

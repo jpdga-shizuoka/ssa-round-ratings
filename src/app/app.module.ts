@@ -81,6 +81,7 @@ import { RatingsComponent } from './libraries/ratings.component';
 import { Sec5Component } from './libraries/sec5.component';
 import { TrueAmateurComponent } from './libraries/true-amateur.component';
 import { IndexComponent } from './libraries/index.component';
+import { TourStandardsComponent } from './libraries/tour-standards.component';
 
 @NgModule({
     declarations: [
@@ -134,7 +135,8 @@ import { IndexComponent } from './libraries/index.component';
         RatingsComponent,
         Sec5Component,
         TrueAmateurComponent,
-        IndexComponent
+        IndexComponent,
+        TourStandardsComponent
     ],
     imports: [
         BrowserModule,

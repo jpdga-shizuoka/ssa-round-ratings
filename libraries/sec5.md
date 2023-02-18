@@ -1,9 +1,10 @@
-本PDGA資料は
+本ページは
 [2023 PDGA International Program Guide](https://www.pdga.com/files/2023_int_program_guide_complete-v1.pdf)
-の第5章 PDGA Rules of Play & Competition Manual
-です。
+内の第5章の一部を訳しました。
 
-# 5. PDGA公式規則と競技マニュアル
+# 第5章 PDGA公式規則と競技マニュアル
+
+省略
 
 ## 各国における競技マニュアルの適用:
 
@@ -26,3 +27,11 @@ PDGAの目標は、競技マニュアルに記載されている基準と手順�
 | 1.13	| 青少年の安全: この項は強く推奨します。各国は、親、保護者、およびこの役割に割り当てられた他の人物に関して、責任を負う独自の礼儀作法を決定します。|
 | 3.07	| ツアー販売業者に関する方針。当該国内協会がこれらを決定します。|
 | 3.08.H	| TDの権利と責任: 大会を降格させる権利は、各国協会にあります。|
+
+---
+
+## 関連資料
+
+* [PDGAディスクゴルフ公式規則](https://jpdga-shizuoka.github.io/rules/)
+* [PDGA競技マニュアル(JPDGA版)](http://www.jpdga.jp/data/2022discgolf_competiton.pdf)
+* [PDGAツアー基準](/libraries/tourstandards)

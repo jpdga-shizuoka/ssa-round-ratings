@@ -21,6 +21,8 @@ import { ReclassificationComponent } from './libraries/reclassification.componen
 import { Sec5Component } from './libraries/sec5.component';
 import { Sec8Component } from './libraries/sec8.component';
 import { TrueAmateurComponent } from './libraries/true-amateur.component';
+import { TourStandardsComponent } from './libraries/tour-standards.component';
+import { RatingsComponent } from './libraries/ratings.component';
 
 export type UserData = {
   metaDescription: {
@@ -176,7 +178,7 @@ const routes: Routes = [
   },
   {
     path: 'libraries/ratings',
-    component: ClassificationsComponent,
+    component: RatingsComponent,
     data: { metaDescription: {  title: 'DG Japan - Libraries'}}
   },
   {
@@ -197,6 +199,11 @@ const routes: Routes = [
   {
     path: 'libraries/trueamateur',
     component: TrueAmateurComponent,
+    data: { metaDescription: {  title: 'DG Japan - Libraries'}}
+  },
+  {
+    path: 'libraries/tourstandards',
+    component: TourStandardsComponent,
     data: { metaDescription: {  title: 'DG Japan - Libraries'}}
   },
 
