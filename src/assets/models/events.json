@@ -295,6 +295,9 @@
       "from": "2023-05-27",
       "to": "2023-05-28"
     },
+    "pdga": {
+      "eventId": "67931"
+    },
     "jpdga": {
       "eventId": "634"
     }
@@ -394,6 +397,9 @@
     "layout": {
       "official": "http://www.jpdga.jp/data/event/2023/631_map.pdf"
     },
+    "pdga": {
+      "eventId": "67929"
+    },
     "jpdga": {
       "eventId": "631"
     }
@@ -423,6 +429,9 @@
     },
     "layout": {
       "official": "http://www.jpdga.jp/data/event/2023/629_map.pdf"
+    },
+    "pdga": {
+      "eventId": "67928"
     },
     "jpdga": {
       "eventId": "629"
