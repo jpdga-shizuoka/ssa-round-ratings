@@ -468,6 +468,11 @@
     },
     "jpdga": {
       "eventId": "627"
+    },
+    "players": {
+      "pro": 46,
+      "ama": 52,
+      "misc": 0
     }
   },
   {
@@ -478,11 +483,19 @@
       "from": "2023-02-18",
       "to": "2023-02-19"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2023/626_map.pdf"
+    },
     "pdga": {
       "eventId": "66068"
     },
     "jpdga": {
       "eventId": "626"
+    },
+    "players": {
+      "pro": 44,
+      "ama": 16,
+      "misc": 0
     },
     "urls": [
       {
@@ -500,6 +513,9 @@
         "title": "Facebook",
         "url": "https://www.facebook.com/groups/2366167146940075"
       }
+    ],
+    "rounds": [
+      "the11thokinawaopen.rd1rd2rd3"
     ]
   },
   {
@@ -513,6 +529,11 @@
     "jpdga": {
       "topicId": "1700",
       "eventId": "625"
+    },
+    "players": {
+      "pro": 10,
+      "ama": 45,
+      "misc": 3
     },
     "urls": [
       {
@@ -533,6 +554,11 @@
     "jpdga": {
       "topicId": "1701",
       "eventId": "624"
+    },
+    "players": {
+      "pro": 68,
+      "ama": 76,
+      "misc": 0
     },
     "urls":[
       {
