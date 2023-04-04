@@ -1,5 +1,25 @@
 [
   {
+    "id": "the11thokinawaopen.rd1rd2rd3",
+    "event": "the11thokinawaopen",
+    "eventTitle": "The 11th Okinawa Open",
+    "locationTitle": "Nakijinson Sport Park",
+    "round": "Rd1,2,3",
+    "date": "2023-02-18",
+    "hla": 96,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 49,
+        "rating": 1052
+      },
+      "player2": {
+        "score": 69,
+        "rating": 872
+      }
+    }
+  },
+  {
     "id": "the21stchubuopen.rd3",
     "eventTitle": "The 21st Chubu Open",
     "event": "the21stchubuopen",
