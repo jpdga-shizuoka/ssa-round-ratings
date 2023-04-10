@@ -1,5 +1,142 @@
 [
   {
+    "category": "local",
+    "title": "The Aichi Open Disc Golf Series",
+    "location": "shiminshikinomori",
+    "period": {
+      "from": "2024-03-03",
+      "to": "2024-03-03"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendiscgolfseries"
+  },
+  {
+    "category": "local",
+    "title": "The New Year Disc Golf Tournament",
+    "location": "shiminshikinomori",
+    "period": {
+      "from": "2024-01-07",
+      "to": "2024-01-07"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "thenewyeardiscgolftournament"
+  },
+  {
+    "category": "local",
+    "title": "The Aichi Open Disc Golf Series",
+    "location": "TBD",
+    "period": {
+      "from": "2023-11-05",
+      "to": "2023-11-05"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendiscgolfseries"
+  },
+  {
+    "category": "local",
+    "title": "The Aichi Open Disc Golf Series",
+    "location": "shinshiropark",
+    "period": {
+      "from": "2023-09-10",
+      "to": "2023-09-10"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendiscgolfseries"
+  },
+  {
+    "category": "local",
+    "title": "The Aichi Open, Doubles",
+    "location": "shinshiropark",
+    "period": {
+      "from": "2023-07-30",
+      "to": "2023-07-30"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendiscgolfseries"
+  },
+  {
+    "category": "local",
+    "title": "The Aichi Open Disc Golf Series",
+    "location": "shiminshikinomori",
+    "period": {
+      "from": "2023-07-02",
+      "to": "2023-07-02"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendiscgolfseries"
+  },
+  {
+    "category": "local",
+    "title": "The Aichi Open Disc Golf Series",
+    "location": "shinshiropark",
+    "period": {
+      "from": "2023-05-14",
+      "to": "2023-05-14"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendiscgolfseries"
+  },
+  {
+    "category": "local",
+    "title": "The Aichi Open Disc Golf Series",
+    "location": "mikawarinkairyokuchi",
+    "period": {
+      "from": "2023-04-16",
+      "to": "2023-04-16"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendiscgolfseries"
+  },
+
+  {
     "id": "thetochigiprefecturechampionships2021",
     "category": "local",
     "title": "The Tochigi Prefecture Championships",
