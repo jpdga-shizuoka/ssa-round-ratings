@@ -441,6 +441,9 @@
     "id": "the30thtokyoopen",
     "title": "The 30th Tokyo Open",
     "location": "tatsuminomoriseasidepark",
+    "layout": {
+      "official": "https://discgolf-navi.com/wp-content/uploads/2023/04/Tokyo2023CourseMAP.pdf"
+    },
     "period": {
       "from": "2023-04-15",
       "to": "2023-04-16"
