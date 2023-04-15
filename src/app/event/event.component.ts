@@ -98,9 +98,11 @@ export class EventComponent implements OnInit, OnDestroy {
   }
 
   showCalendar(event: EventInfo): boolean {
-    if (!event.period?.from) {
+    if (!event.period?.to) {
       return false;
     }
-    return new Date().getTime() < new Date(event.period.from).getTime();
+    const nextDay = new Date(event.period.to);
+    nextDay.setDate(nextDay.getDate() + 1);
+    return new Date().getTime() < nextDay.getTime();
   }
 }
