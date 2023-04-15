@@ -8,9 +8,19 @@
       <td class="mat-cell">{{'Course' | localize}}</td>
       <td class="mat-cell info-container">
         <div *ngIf="location$ | async as location">
-          <a href="{{location?.geolocation | geolink}}" target="_blank" rel="noopener">
-            {{location.title | localize}}, {{location.prefecture | localize}}
-          </a>
+          <div *ngIf="location.weather; else noWeather">
+            <a href="{{location?.geolocation | geolink}}" target="_blank" rel="noopener">
+              {{location.title | localize}}, {{location.prefecture | localize}}
+            </a>
+            <a href="{{location.weather}}" target="_blank" rel="noopener">
+              {{"Weather" | localize}}&#9728;
+            </a>
+          </div>
+          <ng-template #noWeather>
+            <a href="{{location?.geolocation | geolink}}" target="_blank" rel="noopener">
+              {{location.title | localize}}, {{location.prefecture | localize}}
+            </a>
+          </ng-template>
         </div>
       </td>
     </tr>
