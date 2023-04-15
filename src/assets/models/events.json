@@ -446,7 +446,8 @@
       "to": "2023-04-16"
     },
     "pdga": {
-      "eventId": "66721"
+      "eventId": "66721",
+      "scoreId": "66721"
     },
     "jpdga": {
       "eventId": "628"
