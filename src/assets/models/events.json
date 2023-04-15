@@ -454,6 +454,11 @@
     },
     "jpdga": {
       "eventId": "628"
+    },
+    "players": {
+      "pro": 45,
+      "ama": 37,
+      "misc": 4
     }
   },
   {
