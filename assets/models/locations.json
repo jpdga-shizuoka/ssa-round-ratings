@@ -46,13 +46,15 @@
       139.858533
     ],
     "id": "okawafurusatopark",
-    "title": "Okawa Furusato Park"
+    "title": "Okawa Furusato Park",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/7/3630/7368.html"
   },
   {
     "prefecture": "Fukushima",
     "geolocation": [37.432948484816826, 140.7266743090934],
     "id": "greenparkmiyakoji",
-    "title": "Green Park Miyakoji"
+    "title": "Green Park Miyakoji",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/7/3610/7211.html"
   },
   {
     "prefecture": "Niigata",
@@ -127,7 +129,8 @@
       141.091096
     ],
     "id": "kitakamisportpark",
-    "title": "Kitakami Sport Park"
+    "title": "Kitakami Sport Park",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/3/3310/3206.html"
   },
   {
     "prefecture": "Fukuoka",
@@ -203,7 +206,8 @@
       139.263713
     ],
     "id": "aikawafureainomura",
-    "title": "Aikawa Fureai-no-Mura"
+    "title": "Aikawa Fureai-no-Mura",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/14/4620/14401.html"
   },
   {
     "prefecture": "Shizuoka",
@@ -231,7 +235,8 @@
       140.161973
     ],
     "id": "furusatofureaipark",
-    "title": "Furusato Fureai Park"
+    "title": "Furusato Fureai Park",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/8/4020/8208.html"
   },
   {
     "prefecture": "Ibaraki",
@@ -372,7 +377,8 @@
       137.002935
     ],
     "id": "shiminshikinomori",
-    "title": "Shimin Shiki-no-mori"
+    "title": "Shimin Shiki-no-mori",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/23/5110/23219.html"
   },
   {
     "prefecture": "Aichi",
@@ -391,7 +397,8 @@
       137.542337
     ],
     "id": "shinshiropark",
-    "title": "Shinshiro Park"
+    "title": "Shinshiro Park",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/23/5120/23221.html"
   },
   {
     "prefecture": "Mie",
