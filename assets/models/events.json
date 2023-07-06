@@ -244,6 +244,10 @@
     "layout": {
       "official": "http://www.jpdga.jp/data/event/2023/641_map.pdf"
     },
+    "pdga": {
+      "scoreId": "70094",
+      "eventId": "70094"
+    },
     "jpdga": {
       "eventId": "641"
     }
