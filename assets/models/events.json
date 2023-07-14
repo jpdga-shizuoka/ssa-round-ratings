@@ -212,7 +212,7 @@
     ]
   },
   {
-    "id": "the2nd japanseriesdiscgolfchampionships",
+    "id": "the2ndjapanseriesdiscgolfchampionships",
     "title": "The 2nd Japan Series Disc Golf Championships",
     "location": "kiyoharakohgyodanchi",
     "period": {
@@ -221,6 +221,10 @@
     },
     "layout": {
       "official": "http://www.jpdga.jp/data/event/2023/642_map.pdf"
+    },
+    "pdga": {
+      "scoreId": "70095",
+      "eventId": "70095"
     },
     "jpdga": {
       "eventId": "642"
