@@ -1,5 +1,5 @@
 import { Component, ViewChild, Input, OnInit, AfterViewInit } from '@angular/core';
-import { MatTable } from '@angular/material/table';
+import { MatLegacyTable as MatTable } from '@angular/material/legacy-table';
 import { RoundId, RoundInfo } from '../models';
 import { RemoteService } from '../remote.service';
 import { RoundListDataSource } from './round-list-datasource';
