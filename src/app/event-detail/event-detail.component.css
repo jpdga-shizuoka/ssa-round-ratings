@@ -10,7 +10,8 @@ tr.element-row:active {
   background: #efefef;
 }
 table td {
-  padding: 10px;
+  padding: 5px 10px;
+  font-size: 13px;
 }
 table td:first-child {
   font-weight: bold;
@@ -23,9 +24,6 @@ table td:first-child {
 }
 .info-container > a:not(:last-child) {
   margin-right: 10px;
-}
-.mat-cell {
-  font-size: 13px;
 }
 @media (max-width: 414px) {
   .event-detail td:first-child {
