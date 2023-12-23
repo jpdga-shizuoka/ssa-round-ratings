@@ -1,4 +1,4 @@
-import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
+import { MatTableDataSource } from '@angular/material/table';
 import { Subscription, BehaviorSubject } from 'rxjs';
 import { tap, map } from 'rxjs/operators';
 import { RemoteService, EventCategory, EventInfo } from '../remote.service';
