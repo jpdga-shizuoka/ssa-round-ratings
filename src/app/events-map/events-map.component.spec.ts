@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { HttpClientModule } from '@angular/common/http';
-import { MatLegacyDialogModule as MatDialogModule } from '@angular/material/legacy-dialog';
-import { MatLegacyListModule as MatListModule } from '@angular/material/legacy-list';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatListModule } from '@angular/material/list';
 
 import { EventsMapComponent } from './events-map.component';
 import { MarkerDialogComponent } from '../dialogs/marker-dialog.component';

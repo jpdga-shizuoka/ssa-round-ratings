@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ViewChild, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { MatLegacyTable as MatTable } from '@angular/material/legacy-table';
+import { MatTable } from '@angular/material/table';
 
 import { EventInfo } from '../models';
 import { RemoteService } from '../remote.service';
