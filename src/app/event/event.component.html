@@ -1,11 +1,11 @@
 <div class="app-container">
   <div *ngIf="event$ | async as event">
     <h1>{{event?.title | localize}}</h1>
-    <table class="mat-table mat-elevation-z1">
+    <table class="mat-elevation-z1">
       <tbody>
-        <tr class="element-row mat-row">
-          <td class="mat-cell">{{'Date' | localize}}</td>
-          <td class="mat-cell">
+        <tr class="element-row">
+          <td>{{'Date' | localize}}</td>
+          <td>
             <div *ngIf="showCalendar(event); else noWeather">
               <div *ngIf="location$ | async as location">
                 <div *ngIf="location.weather">
@@ -25,16 +25,16 @@
           </td>
         </tr>
 
-        <tr class="element-row mat-row" *ngIf="showCalendar(event)">
-          <td class="mat-cell">iCalendar</td>
-          <td class="mat-cell">
+        <tr class="element-row" *ngIf="showCalendar(event)">
+          <td>iCalendar</td>
+          <td>
             <app-icalendar [event]="event"></app-icalendar>
           </td>
         </tr>
         
-        <tr class="element-row mat-row">
-          <td class="mat-cell">{{'Course' | localize}}</td>
-          <td class="mat-cell">
+        <tr class="element-row">
+          <td>{{'Course' | localize}}</td>
+          <td>
             <div *ngIf="location$ | async as location">
               <a href="{{location | geolink}}" target="_blank" rel="noopener">
                 {{location.title | localize}}, {{location.prefecture | localize}}
@@ -43,9 +43,9 @@
           </td>
         </tr>
 
-        <tr class="element-row mat-row" *ngIf="layouts.length">
-          <td class="mat-cell">{{'Layouts' | localize}}</td>
-          <td class="mat-cell">
+        <tr class="element-row" *ngIf="layouts.length">
+          <td>{{'Layouts' | localize}}</td>
+          <td>
             <ng-template ngFor let-info [ngForOf]="layouts">
               <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
                 {{info.title | localize}}
@@ -54,14 +54,14 @@
           </td>
         </tr>
         
-        <tr class="element-row mat-row" *ngIf="totalPlayers && !canceled">
-          <td class="mat-cell">{{'Partícipant' | localize}}</td>
-          <td class="mat-cell">{{totalPlayers}}</td>
+        <tr class="element-row" *ngIf="totalPlayers && !canceled">
+          <td>{{'Partícipant' | localize}}</td>
+          <td>{{totalPlayers}}</td>
         </tr>
     
-        <tr class="element-row mat-row" *ngIf="pdgaInfo.length && !canceled">
-          <td class="mat-cell">PDGA</td>
-          <td class="mat-cell info-container">
+        <tr class="element-row" *ngIf="pdgaInfo.length && !canceled">
+          <td>PDGA</td>
+          <td class="info-container">
             <ng-template ngFor let-info [ngForOf]="pdgaInfo">
               <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
                 {{info.title | localize}}
@@ -70,9 +70,9 @@
           </td>
         </tr>
     
-        <tr class="element-row mat-row" *ngIf="jpdgaInfo.length && !canceled">
-          <td class="mat-cell">JPDGA</td>
-          <td class="mat-cell info-container">
+        <tr class="element-row" *ngIf="jpdgaInfo.length && !canceled">
+          <td>JPDGA</td>
+          <td class="info-container">
             <ng-template ngFor let-info [ngForOf]="jpdgaInfo">
               <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
                 {{info.title | localize}}
@@ -81,9 +81,9 @@
           </td>
         </tr>
     
-        <tr class="element-row mat-row" *ngIf="miscInfo.length">
-          <td class="mat-cell">{{'Info' | localize}}</td>
-          <td class="mat-cell info-container">
+        <tr class="element-row" *ngIf="miscInfo.length">
+          <td>{{'Info' | localize}}</td>
+          <td class="info-container">
             <ng-template ngFor let-info [ngForOf]="miscInfo">
               <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
                 {{info.title | localize}}

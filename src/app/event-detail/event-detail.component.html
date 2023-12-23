@@ -1,12 +1,12 @@
-<table class='event-detail mat-table full-width-table'>
+<table class='event-detailfull-width-table'>
   <tbody>
-    <tr class="element-row mat-row" *ngIf="showMonthly$ | async">
-      <td class="mat-cell">{{'Month' | localize}}</td>
-      <td class="mat-cell">{{event.schedule | schedule:'month'}}</td>
+    <tr class="element-row" *ngIf="showMonthly$ | async">
+      <td>{{'Month' | localize}}</td>
+      <td>{{event.schedule | schedule:'month'}}</td>
     </tr>
-    <tr class="element-row mat-row">
-      <td class="mat-cell">{{'Course' | localize}}</td>
-      <td class="mat-cell info-container">
+    <tr class="element-row">
+      <td>{{'Course' | localize}}</td>
+      <td class="info-container">
         <div *ngIf="location$ | async as location">
           <div *ngIf="location.weather; else noWeather">
             <a href="{{location?.geolocation | geolink}}" target="_blank" rel="noopener">
@@ -24,9 +24,9 @@
         </div>
       </td>
     </tr>
-    <tr class="element-row mat-row" *ngIf="miscInfo.length">
-      <td class="mat-cell">{{'Info' | localize}}</td>
-      <td class="mat-cell">
+    <tr class="element-row" *ngIf="miscInfo.length">
+      <td>{{'Info' | localize}}</td>
+      <td>
         <div class="info-container">
           <ng-template ngFor let-info [ngForOf]="miscInfo">
             <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
@@ -36,9 +36,9 @@
         </div>
       </td>
     </tr>
-    <tr class="element-row mat-row" *ngIf="!isMonthly">
-      <td class="mat-cell">iCalendar</td>
-      <td class="mat-cell">
+    <tr class="element-row" *ngIf="!isMonthly">
+      <td>iCalendar</td>
+      <td>
         <app-icalendar [event]="event"></app-icalendar>
       </td>
     </tr>
