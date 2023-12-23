@@ -1,0 +1,2 @@
+#!/bin/sh
+./tools/md2html && ng deploy
