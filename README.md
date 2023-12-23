@@ -13,7 +13,7 @@ The [DG Japan](https://jpdga-shizuoka.github.io/ssa-round-ratings/) which is a w
 Do the following procedure in order to deploy this project to Github Pages.
 
 ```shell
-ng deploy
+./deploy
 ```
 
 ## References
