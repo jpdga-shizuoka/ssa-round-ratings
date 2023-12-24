@@ -10,6 +10,15 @@
     "layout": {
       "official": "http://www.jpdga.jp/data/event/2023/656_map.pdf"
     },
+    "players": {
+      "pro": 37,
+      "ama": 27,
+      "misc": 0
+    },
+    "pdga": {
+      "eventId": "71461",
+      "scoreId": "71461"
+    },
     "jpdga": {
       "eventId": "656"
     },
@@ -28,6 +37,15 @@
     "period": {
       "from": "2023-11-25",
       "to": "2023-11-26"
+    },
+    "players": {
+      "pro": 56,
+      "ama": 57,
+      "misc": 0
+    },
+    "pdga": {
+      "eventId": "71460",
+      "scoreId": "71460"
     },
     "jpdga": {
       "eventId": "610"
@@ -56,6 +74,11 @@
     "layout": {
       "official": "http://www.jpdga.jp/data/event/2023/653_map.pdf"
     },
+    "players": {
+      "pro": 50,
+      "ama": 68,
+      "misc": 107
+    },
     "jpdga": {
       "eventId": "653"
     },
@@ -77,6 +100,15 @@
     },
     "layout": {
       "official": "http://www.jpdga.jp/data/event/2023/652_map.pdf"
+    },
+    "players": {
+      "pro": 52,
+      "ama": 28,
+      "misc": 0
+    },
+    "pdga": {
+      "eventId": "71459",
+      "scoreId": "71459"
     },
     "jpdga": {
       "eventId": "652"
@@ -100,6 +132,14 @@
     "layout": {
       "official": "http://www.jpdga.jp/data/event/2023/651_map.pdf"
     },
+    "players": {
+      "pro": 33,
+      "ama": 16,
+      "misc": 0
+    },
+    "pdga": {
+      "eventId": "71458"
+    },
     "jpdga": {
       "eventId": "651"
     }
@@ -114,6 +154,15 @@
     },
     "layout": {
       "official": "http://www.jpdga.jp/data/event/2023/649_map.pdf"
+    },
+    "players": {
+      "pro": 22,
+      "ama": 0,
+      "misc": 0
+    },
+    "pdga": {
+      "eventId": "71457",
+      "scoreId": "71457"
     },
     "jpdga": {
       "eventId": "649"
@@ -137,6 +186,15 @@
     "layout": {
       "official": "http://www.jpdga.jp/data/event/2023/647_map.pdf"
     },
+    "players": {
+      "pro": 27,
+      "ama": 0,
+      "misc": 0
+    },
+    "pdga": {
+      "eventId": "71455",
+      "scoreId": "71455"
+    },
     "jpdga": {
       "eventId": "647"
     },
@@ -159,6 +217,15 @@
     "layout": {
       "official": "http://www.jpdga.jp/data/event/2023/648_map.pdf"
     },
+    "players": {
+      "pro": 0,
+      "ama": 74,
+      "misc": 4
+    },
+    "pdga": {
+      "eventId": "71456",
+      "scoreId": "71456"
+    },
     "jpdga": {
       "eventId": "648"
     },
@@ -177,6 +244,15 @@
     "period": {
       "from": "2023-08-19",
       "to": "2023-08-20"
+    },
+    "players": {
+      "pro": 45,
+      "ama": 39,
+      "misc": 8
+    },
+    "pdga": {
+      "eventId": "70134",
+      "scoreId": "70134"
     },
     "jpdga": {
       "eventId": "645"
@@ -200,6 +276,15 @@
     "layout": {
       "official": "http://www.jpdga.jp/data/event/2023/644_map.pdf"
     },
+    "players": {
+      "pro": 52,
+      "ama": 25,
+      "misc": 0
+    },
+    "pdga": {
+      "eventId": "70096",
+      "scoreId": "70096"
+    },
     "jpdga": {
       "eventId": "644"
     },
@@ -221,6 +306,11 @@
     },
     "layout": {
       "official": "http://www.jpdga.jp/data/event/2023/642_map.pdf"
+    },
+    "players": {
+      "pro": 60,
+      "ama": 0,
+      "misc": 0
     },
     "pdga": {
       "scoreId": "70095",
@@ -248,6 +338,11 @@
     "layout": {
       "official": "http://www.jpdga.jp/data/event/2023/641_map.pdf"
     },
+    "players": {
+      "pro": 36,
+      "ama": 19,
+      "misc": 0
+    },
     "pdga": {
       "scoreId": "70094",
       "eventId": "70094"
@@ -264,6 +359,14 @@
       "from": "2023-07-01",
       "to": "2023-07-02"
     },
+    "players": {
+      "pro": 25,
+      "ama": 16,
+      "misc": 0
+    },
+    "pdga": {
+      "eventId": "70093"
+    },
     "jpdga": {
       "eventId": "640"
     }
@@ -279,17 +382,31 @@
     "layout": {
       "official": "http://www.jpdga.jp/data/event/2023/637_map.pdf"
     },
+    "players": {
+      "pro": 35,
+      "ama": 27,
+      "misc": 0
+    },
+    "pdga": {
+      "eventId": "70092",
+      "scoreId": "70092"
+    },
     "jpdga": {
       "eventId": "637"
     }
   },
   {
-    "id": "the5thmihoopen",
-    "title": "The 5th Miho Open",
+    "id": "the7thmihoopen",
+    "title": "The 7th Miho Open",
     "location": "hikaritokazenookapark",
     "period": {
       "from": "2023-06-24",
       "to": "2023-06-25"
+    },
+    "players": {
+      "pro": 27,
+      "ama": 0,
+      "misc": 0
     },
     "jpdga": {
       "eventId": "637"
@@ -303,8 +420,14 @@
       "from": "2023-05-27",
       "to": "2023-05-28"
     },
+    "players": {
+      "pro": 21,
+      "ama": 9,
+      "misc": 0
+    },
     "pdga": {
-      "eventId": "67931"
+      "eventId": "67931",
+      "scoreId": "67931"
     },
     "jpdga": {
       "eventId": "634"
@@ -318,8 +441,14 @@
       "from": "2023-05-20",
       "to": "2023-05-21"
     },
+    "players": {
+      "pro": 36,
+      "ama": 34,
+      "misc": 0
+    },
     "pdga": {
-      "eventId": "66722"
+      "eventId": "66722",
+      "scoreId": "66722"
     },
     "jpdga": {
       "eventId": "633"
@@ -335,6 +464,11 @@
     },
     "layout": {
       "official": "https://www.jo-discgolf-fukui-sakai.jp/games/coursemap"
+    },
+    "players":{
+      "pro": 110,
+      "ama": 0,
+      "misc": 0
     },
     "jpdga": {
       "eventId": "632"
@@ -405,8 +539,14 @@
     "layout": {
       "official": "http://www.jpdga.jp/data/event/2023/631_map.pdf"
     },
+    "players": {
+      "pro": 74,
+      "ama": 0,
+      "misc": 0
+    },
     "pdga": {
-      "eventId": "67929"
+      "eventId": "67929",
+      "scoreId": "67929"
     },
     "jpdga": {
       "eventId": "631"
@@ -423,6 +563,11 @@
     "layout": {
       "official": "http://www.jpdga.jp/data/event/2023/630_map.pdf"
     },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 40
+    },
     "jpdga": {
       "eventId": "630"
     }
@@ -437,6 +582,11 @@
     },
     "layout": {
       "official": "http://www.jpdga.jp/data/event/2023/629_map.pdf"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 43,
+      "misc": 3
     },
     "pdga": {
       "eventId": "67928"
@@ -1181,8 +1331,8 @@
     }
   },
   {
-    "id": "the4thmihoopen",
-    "title": "The 4th Miho Open",
+    "id": "the6thmihoopen",
+    "title": "The 6th Miho Open",
     "location": "hikaritokazenookapark",
     "period": {
       "from": "2022-06-25",
