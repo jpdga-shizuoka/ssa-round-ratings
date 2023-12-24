@@ -206,6 +206,30 @@
     ]
   },
   {
+    "id": "the26thkansaiopenama",
+    "title": "The 26th Kansai Open (Ama)",
+    "location": "fuminnomorihiyoshi",
+    "period": {
+      "from": "2023-11-18",
+      "to": "2023-11-18"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 37,
+      "misc": 0
+    },
+    "jpdga": {
+      "eventId": "654"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/kansaiopen.discgolf"
+      }
+    ]
+  },
+  {
     "id": "the35thshowakinenparkopen",
     "title": "The 35th Showa Kinen Park Open",
     "location": "showakinenpark",
@@ -552,6 +576,23 @@
     },
     "jpdga": {
       "eventId": "637"
+    }
+  },
+  {
+    "id": "the5thhitachseasideparkopen",
+    "title": "The 5th Hitachi Seaside Park Open",
+    "location": "hitachiseasidepark",
+    "period": {
+      "from": "2023-06-04",
+      "to": "2023-06-04"
+    },
+    "players": {
+      "pro": 18,
+      "ama": 51,
+      "misc": 2
+    },
+    "jpdga": {
+      "eventId": "658"
     }
   },
   {
