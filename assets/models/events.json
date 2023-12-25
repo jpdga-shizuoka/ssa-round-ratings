@@ -136,11 +136,6 @@
       "eventId": "664"
     }
   },
-
-
-
-
-
   {
     "id": "the22ndchubuopen",
     "title": "The 22nd Chubu Open",
@@ -171,6 +166,26 @@
         "url": "https://aifda.or.jp/event"
       }
     ]
+  },
+  {
+    "id": "the1stjandluxcup",
+    "title": "The 1st Jandlux Cup",
+    "location": "michinokupark",
+    "period": {
+      "from": "2023-12-09",
+      "to": "2023-12-10"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2023/663_map.pdf"
+    },
+    "players": {
+      "pro": 34,
+      "ama": 0,
+      "misc": 0
+    },
+    "jpdga": {
+      "eventId": "663"
+    }
   },
   {
     "id": "the37thkyushuopen",
@@ -694,6 +709,11 @@
     },
     "layout": {
       "official": "https://www.jo-discgolf-fukui-sakai.jp/games/coursemap"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 50
     },
     "jpdga": {
       "eventId": "632"
