@@ -5,7 +5,7 @@
 const fs = require('fs');
 const path = require('node:path');
 
-const TARGET_DIR = path.join('..', 'src', 'assets', 'models');
+const TARGET_DIR = path.join('.', 'src', 'assets', 'models');
 const ROUNDS_FILE = path.join(TARGET_DIR, 'rounds.json');
 const EVENTS_FILE = path.join(TARGET_DIR, 'events.json');
 const LOCATIONS_FILE = path.join(TARGET_DIR, 'locations.json');
