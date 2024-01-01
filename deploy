@@ -1,2 +1,4 @@
 #!/bin/sh
-./tools/md2html && ng deploy
+./tools/build_models
+./tools/md2html
+ng deploy
