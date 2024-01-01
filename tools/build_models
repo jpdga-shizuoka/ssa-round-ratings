@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+//
+//  rounds.jsonから.rounds.jsonを生成する
+//
+const fs = require('fs');
+const path = require('node:path');
+
+const TARGET_DIR = path.join('..', 'src', 'assets', 'models');
+const ROUNDS_FILE = path.join(TARGET_DIR, 'rounds.json');
+const EVENTS_FILE = path.join(TARGET_DIR, 'events.json');
+const LOCATIONS_FILE = path.join(TARGET_DIR, 'locations.json');
+const ROUNDS_TO = path.join(TARGET_DIR, '.rounds.json');
+
+const rounds = JSON.parse(fs.readFileSync(ROUNDS_FILE, 'utf8'));
+const events = JSON.parse(fs.readFileSync(EVENTS_FILE, 'utf8'));
+const locations = JSON.parse(fs.readFileSync(LOCATIONS_FILE, 'utf8'));
+
+rounds.forEach(round => {
+  const event = events.find(event => event.id === round.event);
+  const location = locations.find(location => location.id === event.location);
+  round.eventTitle = event.title;
+  round.locationTitle = location.title;
+  round.date = event.period.from;
+});
+
+fs.writeFileSync(ROUNDS_TO, JSON.stringify(rounds, null, '  '));
