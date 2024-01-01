@@ -57,6 +57,9 @@ export function rounds2result(rounds: RoundInfo[], localize: LocalizeService): C
   };
 }
 
+//
+// 特定のeventIdを持つ要素を配列の最後に移動させる
+//
 export function reorder(data: ChartDataExt[], id?: EventId): ChartDataExt[] {
   if (!id) {
     return data;
