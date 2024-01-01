@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const PATH = '../src/assets/models/';
+const ROUNDS_FILE = PATH + 'rounds.json';
+const rounds = JSON.parse(fs.readFileSync(ROUNDS_FILE, 'utf8'));
+const regexp = /[ \-\.\,\(\)]/g;
+rounds.forEach(round => {
+    delete round.date;
+    delete round.eventTitle;
+    delete round.locationTitle;
+});
+
+fs.writeFileSync(ROUNDS_FILE, JSON.stringify(rounds, null, '  '));
