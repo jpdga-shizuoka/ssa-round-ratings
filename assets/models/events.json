@@ -195,6 +195,9 @@
       "from": "2023-11-25",
       "to": "2023-11-26"
     },
+    "layout": {
+      "official": "https://www.jpdgafukuoka.com/data/37KOmap1880.jpg"
+    },
     "players": {
       "pro": 56,
       "ama": 57,
@@ -211,13 +214,16 @@
       {
         "type": "website",
         "title": "Official Site",
-        "url": "http://www.jpdgafukuoka.com"
+        "url": "https://www.jpdgafukuoka.com/blog/?page_id=6280"
       },
       {
         "type": "website",
         "title": "Facebook",
         "url": "https://www.facebook.com/discgolfkyushuopen/"
       }
+    ],
+    "rounds": [
+      "the37thkyushuopen.rd1rd2"
     ]
   },
   {
@@ -300,10 +306,13 @@
         "title": "Facebook",
         "url": "https://www.facebook.com/maiko.dg.classic/"
       }
+    ],
+    "rounds": [
+      "the2ndmaikoclassic.rd1rd2rd3"
     ]
   },
   {
-    "id": "the23rddtohokuopen",
+    "id": "the23rdtohokuopen",
     "title": "The 23rd Tohoku Open",
     "location": "mizubayashisportpark",
     "period": {
@@ -323,7 +332,10 @@
     },
     "jpdga": {
       "eventId": "651"
-    }
+    },
+    "rounds": [
+      "the23rdtohokuopen.rd1rd2rd3"
+    ]
   },
   {
     "id": "the26thkansaiopen",
@@ -337,7 +349,7 @@
       "official": "http://www.jpdga.jp/data/event/2023/649_map.pdf"
     },
     "players": {
-      "pro": 22,
+      "pro": 27,
       "ama": 0,
       "misc": 0
     },
@@ -354,6 +366,10 @@
         "title": "Facebook",
         "url": "https://www.facebook.com/kansaiopen.discgolf"
       }
+    ],
+    "rounds": [
+      "the26thkansaiopen.rd1",
+      "the26thkansaiopen.rd2rd3"
     ]
   },
   {
@@ -368,7 +384,7 @@
       "official": "http://www.jpdga.jp/data/event/2023/647_map.pdf"
     },
     "players": {
-      "pro": 27,
+      "pro": 65,
       "ama": 0,
       "misc": 0
     },
@@ -385,6 +401,9 @@
         "title": "Official Site",
         "url": "http://www.tochigiflyingdisc.com"
       }
+    ],
+    "rounds": [
+      "the27thkantoopen.rd1rd2rd3"
     ]
   },
   {
@@ -416,6 +435,9 @@
         "title": "Official Site",
         "url": "http://www.tochigiflyingdisc.com"
       }
+    ],
+    "rounds": [
+      "the27thkantoopenama.rd1rd2"
     ]
   },
   {
@@ -475,6 +497,9 @@
         "title": "Official Site",
         "url": "http://jpdgaiwate.com"
       }
+    ],
+    "rounds": [
+      "the18thmichinokuopen.rd1rd2rd3"
     ]
   },
   {
@@ -506,6 +531,9 @@
         "title": "Facebook",
         "url": "https://www.facebook.com/kiyohara.green"
       }
+    ],
+    "rounds": [
+      "the2ndjapanseriesdiscgolfchampionships.rd1rd2rd3rd4"
     ]
   },
   {
@@ -530,7 +558,10 @@
     },
     "jpdga": {
       "eventId": "641"
-    }
+    },
+    "rounds": [
+      "the25thnipponopen.rd1rd2rd3"
+    ]
   },
   {
     "id": "the12thhokkaidoopen",
@@ -539,6 +570,9 @@
     "period": {
       "from": "2023-07-01",
       "to": "2023-07-02"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2023/640_map.pdf"
     },
     "players": {
       "pro": 25,
@@ -550,7 +584,10 @@
     },
     "jpdga": {
       "eventId": "640"
-    }
+    },
+    "rounds": [
+      "the12thhokkaidoopen.rd1rd2rd3"
+    ]
   },
   {
     "id": "the18thmastersnationalchampionship",
@@ -574,7 +611,10 @@
     },
     "jpdga": {
       "eventId": "637"
-    }
+    },
+    "rounds": [
+      "the18thmastersnationalchampionship.rd1rd2rd3"
+    ]
   },
   {
     "id": "the7thmihoopen",
@@ -629,7 +669,10 @@
     },
     "jpdga": {
       "eventId": "634"
-    }
+    },
+    "rounds": [
+      "the6thgifuhiruganoopen.rd1rd2rd3"
+    ]
   },
   {
     "id": "the18thkiyosatonomoriopen",
@@ -650,7 +693,10 @@
     },
     "jpdga": {
       "eventId": "633"
-    }
+    },
+    "rounds": [
+      "the18thkiyosatonomoriopen.rd1rd2rd3"
+    ]
   },
   {
     "id": "the2023japanopen",
@@ -753,7 +799,10 @@
     },
     "jpdga": {
       "eventId": "631"
-    }
+    },
+    "rounds":[
+      "the35thjapannationalchampionship.rd1rd2rd3"
+    ]
   },
   {
     "id": "the18thminamisomaopen",
@@ -796,7 +845,10 @@
     },
     "jpdga": {
       "eventId": "629"
-    }
+    },
+    "rounds":[
+      "the35thjapannationalchampionshipama.rd1rd2rd3"
+    ]
   },
   {
     "id": "the30thtokyoopen",
@@ -820,7 +872,10 @@
       "pro": 45,
       "ama": 37,
       "misc": 4
-    }
+    },
+    "rounds": [
+      "the30thtokyoopen.rd1rd2rd3"
+    ]
   },
   {
     "id": "the2023nationaldoubleschampionship",
