@@ -200,6 +200,14 @@
     "title": "Aso Minnano Mori"
   },
   {
+    "id": "ecoparkminamata",
+    "title": "ECO Park Minamata",
+    "prefecture": "Kumamoto",
+    "geolocation": [
+      32.19908109225617, 130.38387270550996
+    ]
+  },
+  {
     "prefecture": "Kanagawa",
     "geolocation": [
       35.537993,
