@@ -1,5 +1,344 @@
 [
   {
+    "id": "the23rdchubuopen",
+    "title": "The 23rd Chubu Open",
+    "location": "mikawarinkairyokuchi",
+    "period": {
+      "from": "2024-12-14",
+      "to": "2024-12-15"
+    },
+    "jpdga": {
+      "eventId": "706"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://aifda.or.jp/event"
+      }
+    ]
+  },
+  {
+    "id": "the2ndjandluxcup",
+    "title": "The 2nd Jandlux Cup",
+    "location": "michinokupark",
+    "period": {
+      "from": "2024-12-07",
+      "to": "2024-12-08"
+    },
+    "jpdga": {
+      "eventId": "705"
+    }
+  },
+  {
+    "id": "the38thkyushuopen",
+    "title": "The 38th Kyushu Open",
+    "location": "uminonakamichiseasidepark",
+    "period": {
+      "from": "2024-11-30",
+      "to": "2024-12-01"
+    },
+    "jpdga": {
+      "eventId": "704"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://www.jpdgafukuoka.com/"
+      },
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/discgolfkyushuopen/"
+      }
+    ]
+  },
+  {
+    "id": "the27thkansaiopenama",
+    "title": "The 27th Kansai Open (Ama)",
+    "location": "kyototambapark",
+    "period": {
+      "from": "2024-11-09",
+      "to": "2024-11-10"
+    },
+    "jpdga": {
+      "eventId": "703"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/kansaiopen.discgolf"
+      }
+    ]
+  },
+  {
+    "id": "the36thshowakinenparkopen",
+    "title": "The 36th Showa Kinen Park Open",
+    "location": "showakinenpark",
+    "period": {
+      "from": "2024-11-02",
+      "to": "2024-11-04"
+    },
+    "jpdga": {
+      "eventId": "701"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://jpdgatokyooffice.wixsite.com/"
+      }
+    ]
+  },
+  {
+    "id": "the3rdmaikoclassic",
+    "title": "The 3rd Maiko Classic",
+    "location": "maikodiscgolfpark",
+    "period": {
+      "from": "2024-10-19",
+      "to": "2024-10-20"
+    },
+    "jpdga": {
+      "eventId": "700"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/maiko.dg.classic/"
+      }
+    ]
+  },
+  {
+    "id": "the24thtohokuopen",
+    "title": "The 24th Tohoku Open",
+    "location": "mizubayashisportpark",
+    "period": {
+      "from": "2024-10-13",
+      "to": "2024-10-14"
+    },
+    "jpdga": {
+      "eventId": "699"
+    }
+  },
+  {
+    "id": "the27thkansaiopen",
+    "title": "The 27th Kansai Open",
+    "location": "fuminnomorihiyoshi",
+    "period": {
+      "from": "2024-10-05",
+      "to": "2024-10-06"
+    },
+    "jpdga": {
+      "eventId": "697"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/kansaiopen.discgolf"
+      }
+    ]
+  },
+  {
+    "id": "the36thjapannationalchampionship",
+    "title": "The 36th Japan National Championships",
+    "location": "minamisomahoseridingpark",
+    "period": {
+      "from": "2024-09-22",
+      "to": "2024-09-23"
+    },
+    "jpdga": {
+      "eventId": "696"
+    }
+  },
+  {
+    "id": "the1stfukuokauminakaopen",
+    "title": "The 1st Fukuoka Uminaka Open",
+    "location": "uminonakamichiseasidepark",
+    "period": {
+      "from": "2024-08-17",
+      "to": "2024-08-18"
+    },
+    "jpdga": {
+      "eventId": "693"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://www.jpdgafukuoka.com/"
+      },
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/discgolfkyushuopen/"
+      }
+    ]
+  },
+  {
+    "id": "the19thmichinokuopen",
+    "title": "The 19th Michinoku Open",
+    "location": "kitakamisportpark",
+    "period": {
+      "from": "2024-08-10",
+      "to": "2024-08-12"
+    },
+    "jpdga": {
+      "eventId": "691"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "http://jpdgaiwate.com"
+      }
+    ]
+  },
+  {
+    "id": "the26thnipponopen",
+    "title": "The 26th Nippon Open",
+    "location": "kibougaokaculturalparkwest",
+    "period": {
+      "from": "2024-07-20",
+      "to": "2024-07-21"
+    },
+    "jpdga": {
+      "eventId": "688"
+    }
+  },
+  {
+    "id": "the3rdjapanseriesdiscgolfchampionships",
+    "title": "The 3rd Japan Series Disc Golf Championships",
+    "location": "kiyoharakohgyodanchi",
+    "period": {
+      "from": "2024-07-13",
+      "to": "2024-07-15"
+    },
+    "jpdga": {
+      "eventId": "687"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/kiyohara.green"
+      }
+    ]
+  },
+  {
+    "id": "the13thhokkaidoopen",
+    "title": "The 13th Hokkaido Open",
+    "location": "hunkawanpanolamapark",
+    "period": {
+      "from": "2024-06-29",
+      "to": "2024-06-30"
+    },
+    "jpdga": {
+      "eventId": "686"
+    }
+  },
+  {
+    "id": "the8thmihoopen",
+    "title": "The 8th Miho Open",
+    "location": "hikaritokazenookapark",
+    "period": {
+      "from": "2024-06-15",
+      "to": "2024-06-16"
+    },
+    "jpdga": {
+      "eventId": "684"
+    }
+  },
+  {
+    "id": "the19thmastersnationalchampionship",
+    "title": "The 19th Masters National Championships",
+    "location": "hikaritokazenookapark",
+    "period": {
+      "from": "2024-06-15",
+      "to": "2024-06-16"
+    },
+    "jpdga": {
+      "eventId": "684"
+    }
+  },
+  {
+    "id": "the1stminamataopen",
+    "title": "The 1st Minamata Open",
+    "location": "ecoparkminamata",
+    "period": {
+      "from": "2024-06-01",
+      "to": "2024-06-02"
+    },
+    "jpdga": {
+      "eventId": "680"
+    }
+  },
+  {
+    "id": "the7thgifuhiruganoopen",
+    "title": "The 7th Gifu Hirugano Open",
+    "location": "hiruganokogen",
+    "period": {
+      "from": "2024-05-25",
+      "to": "2024-05-26"
+    },
+    "jpdga": {
+      "eventId": "679"
+    }
+  },
+  {
+    "id": "the2ndmichinokuqueenscup",
+    "title": "The 2nd Michinoku Queen's Cup",
+    "location": "kitakamisportpark",
+    "period": {
+      "from": "2024-05-18",
+      "to": "2024-05-19"
+    },
+    "jpdga": {
+      "eventId": "678"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "http://jpdgaiwate.com"
+      }
+    ]
+  },
+  {
+    "id": "the8thfukuiopen",
+    "title": "The 8th Fukui Open",
+    "location": "seasidenaturepark",
+    "period": {
+      "from": "2024-05-18",
+      "to": "2024-05-19"
+    },
+    "jpdga": {
+      "eventId": "677"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "http://www.sukima-labo.com/dg291/"
+      }
+    ]
+  },
+  {
+    "id": "the19thkiyosatonomoriopen",
+    "title": "The 19th Kiyosato-no-mori Open",
+    "location": "kiyosatonomori",
+    "period": {
+      "from": "2024-05-11",
+      "to": "2024-05-12"
+    },
+    "jpdga": {
+      "eventId": "676"
+    }
+  },
+  {
     "id": "the19thminamisomaopen",
     "title": "The 19th Minamisoma Open",
     "location": "minamisomahoseridingpark",
@@ -1230,8 +1569,8 @@
     ]
   },
   {
-    "id": "the9thfukuiopen",
-    "title": "The 9th Fukui Open",
+    "id": "the7thfukuiopen",
+    "title": "The 7th Fukui Open",
     "location": "seasidenaturepark",
     "period": {
       "from": "2022-10-15",
@@ -1260,7 +1599,7 @@
       "misc": 0
     },
     "rounds": [
-      "the9thfukuiopen.rd1rd2rd3"
+      "the7thfukuiopen.rd1rd2rd3"
     ]
   },
   {
@@ -2172,7 +2511,7 @@
     "jpdga": {
       "eventId": "576"
     },
-    "id": "the8thfukuiopen"
+    "id": "the8thfukuiopencanceled"
   },
   {
     "title": "The 21st Tohoku Open",
@@ -2723,7 +3062,7 @@
     "jpdga": {
       "eventId": "530"
     },
-    "id": "the7thfukuiopen"
+    "id": "the7thfukuiopencanceled"
   },
   {
     "title": "The 20th Tohoku Open",
