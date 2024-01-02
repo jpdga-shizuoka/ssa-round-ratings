@@ -500,6 +500,21 @@
     },
     "urls": [
       {
+        "type": "video",
+        "title": "VLOG MP40優勝,@discgolflab",
+        "url": "https://youtu.be/cpdIGrR5THo"
+      },
+      {
+        "type": "video",
+        "title": "初日の総括,@discgolflab",
+        "url": "https://youtu.be/-P_tbmZdv0w"
+      },
+      {
+        "type": "video",
+        "title": "公式練習,@discgolflab",
+        "url": "https://youtu.be/DJI5fD0HioY"
+      },
+      {
         "type": "website",
         "title": "Official Site",
         "url": "https://aifda.or.jp/event"
@@ -524,7 +539,29 @@
     },
     "jpdga": {
       "eventId": "663"
-    }
+    },
+    "urls": [
+      {
+        "type": "video",
+        "title": "Lead Card,B9,R#2,MPO,@JANDLUX",
+        "url": "https://youtu.be/AIowkh17OKY"
+      },
+      {
+        "type": "video",
+        "title": "Lead Card,F9,R#2,MPO,@JANDLUX",
+        "url": "https://youtu.be/SPcjvDG_mWo"
+      },
+      {
+        "type": "video",
+        "title": "Feature Card,B9,R#1,@JANDLUX",
+        "url": "https://youtu.be/fV019cf0iXM"
+      },
+      {
+        "type": "video",
+        "title": "Feature Card,F9,R#1,@JANDLUX",
+        "url": "https://youtu.be/SPcjvDG_mWo"
+      }
+    ]
   },
   {
     "id": "the37thkyushuopen",
@@ -610,6 +647,16 @@
     },
     "urls": [
       {
+        "type": "video",
+        "title": "Round#2,@TakeshiShimakage",
+        "url": "https://youtu.be/mewpCpttiq4"
+      },
+      {
+        "type": "video",
+        "title": "Round#1,@TakeshiShimakage",
+        "url": "https://youtu.be/UI5bJo_xl8Y"
+      },
+      {
         "type": "website",
         "title": "Official Site",
         "url": "https://jpdgatokyooffice.wixsite.com/"
@@ -640,6 +687,21 @@
       "eventId": "652"
     },
     "urls": [
+      {
+        "type": "video",
+        "title": "ディスクゴルフ大学第37回,@discgolflab",
+        "url": "https://youtu.be/pL_vI6QPmiQ"
+      },
+      {
+        "type": "video",
+        "title": "VLOG Final Day,@discgolflab",
+        "url": "https://youtu.be/cmf6Lnh1t8s"
+      },
+      {
+        "type": "video",
+        "title": "VLOG 1st Day,@discgolflab",
+        "url": "https://youtu.be/qRWuiMlbrzs"
+      },
       {
         "type": "website",
         "title": "Facebook",
@@ -735,6 +797,36 @@
       "eventId": "647"
     },
     "urls": [
+      {
+        "type": "video",
+        "title": "MP40優勝,@Dch-discchannel",
+        "url": "https://youtu.be/rxddeW_OrnY"
+      },
+      {
+        "type": "video",
+        "title": "完全VLOG,@Dch-discchannel",
+        "url": "https://youtu.be/3oUG1vnR3F4"
+      },
+      {
+        "type": "video",
+        "title": "Round#4,@TakeshiShimakage",
+        "url": "https://youtu.be/ein7l1MsGfo"
+      },
+      {
+        "type": "video",
+        "title": "Round#3,@TakeshiShimakage",
+        "url": "https://youtu.be/KtuADwBZYz8"
+      },
+      {
+        "type": "video",
+        "title": "Round#2,@TakeshiShimakage",
+        "url": "https://youtu.be/L-VhVs5Gnwo"
+      },
+      {
+        "type": "video",
+        "title": "Round#1,@TakeshiShimakage",
+        "url": "https://youtu.be/ceadqSEA2hg"
+      },
       {
         "type": "website",
         "title": "Official Site",
@@ -832,6 +924,16 @@
     },
     "urls": [
       {
+        "type": "video",
+        "title": "Final,MPO,@Dch-discchannel",
+        "url": "https://youtu.be/9VDbbWnHDvQ"
+      },
+      {
+        "type": "video",
+        "title": "Semi-Final,MPO,@Dch-discchannel",
+        "url": "https://youtu.be/AU7MvJi_r38"
+      },
+      {
         "type": "website",
         "title": "Official Site",
         "url": "http://jpdgaiwate.com"
@@ -866,6 +968,11 @@
     },
     "urls": [
       {
+        "type": "video",
+        "title": "Final,MPO,@Dch-discchannel",
+        "url": "https://youtu.be/CB5ZIOvHm14"
+      },
+      {
         "type": "website",
         "title": "Facebook",
         "url": "https://www.facebook.com/kiyohara.green"
@@ -898,6 +1005,13 @@
     "jpdga": {
       "eventId": "641"
     },
+    "urls": [
+      {
+        "type": "video",
+        "title": "Round#1,@TakeshiShimakage",
+        "url": "https://youtu.be/T3Az_C2NBss"
+      }
+    ],
     "rounds": [
       "the25thnipponopen.rd1rd2rd3"
     ]
@@ -951,6 +1065,18 @@
     "jpdga": {
       "eventId": "637"
     },
+    "urls": [
+      {
+        "type": "video",
+        "title": "Final,MPO,@Dch-discchannel",
+        "url": "https://youtu.be/uYCDVBlrRp4"
+      },
+      {
+        "type": "video",
+        "title": "Semi-Final,MPO,@Dch-discchannel",
+        "url": "https://youtu.be/0_Paaf5-VZs"
+      }
+    ],
     "rounds": [
       "the18thmastersnationalchampionship.rd1rd2rd3"
     ]
@@ -1010,6 +1136,11 @@
     },
     "urls": [
       {
+        "type": "video",
+        "title": "Final,FPO,@Dch-discchannel",
+        "url": "https://youtu.be/HnS1xjGwfaM"
+      },
+      {
         "type": "website",
         "title": "Official Site",
         "url": "http://jpdgaiwate.com"
@@ -1060,6 +1191,18 @@
     "jpdga": {
       "eventId": "633"
     },
+    "urls": [
+      {
+        "type": "video",
+        "title": "Final,MPO,@Dch-discchannel",
+        "url": "https://youtu.be/BKk8CDQT2QA"
+      },
+      {
+        "type": "video",
+        "title": "Semi-Final,MPO,@Dch-discchannel",
+        "url": "https://youtu.be/cdzzMuWcUzA"
+      }
+    ],
     "rounds": [
       "the18thkiyosatonomoriopen.rd1rd2rd3"
     ]
@@ -1084,6 +1227,21 @@
       "eventId": "632"
     },
     "urls": [
+      {
+        "type": "video",
+        "title": "Japan Open 2023,坂井市",
+        "url": "https://youtu.be/Jhsd-yHZAq8"
+      },
+      {
+        "type": "video",
+        "title": "MP40 Champion 完全VLOG,@discgolflab",
+        "url": "https://youtu.be/GSXxepWYg18"
+      },
+      {
+        "type": "video",
+        "title": "ディスクゴルフ大学代第18回,@discgolflab",
+        "url": "https://youtu.be/nY6kHyVFfDs"
+      },
       {
         "type": "website",
         "title": "Official Site",
@@ -1166,6 +1324,58 @@
     "jpdga": {
       "eventId": "631"
     },
+    "urls": [
+      {
+        "type": "video",
+        "title": "Final,MPO,@Dch-discchannel",
+        "url": "https://youtu.be/YXI8Ziv38gY"
+      },
+      {
+        "type": "video",
+        "title": "Semi-Final,MPO,@Dch-discchannel",
+        "url": "https://youtu.be/kE-bFLF4r_8"
+      },
+      {
+        "type": "video",
+        "title": "ディスクゴルフ大学第14回,@discgolflab",
+        "url": "https://youtu.be/YLt0aUt7Phk"
+      },
+      {
+        "type": "video",
+        "title": "練習日VLOG,@discgolflab",
+        "url": "https://youtu.be/1RSCCTbEueA"
+      },
+      {
+        "type": "video",
+        "title": "Master優勝,@discgolflab",
+        "url": "https://youtu.be/F9i-4bhJGLM"
+      },
+      {
+        "type": "video",
+        "title": "Semi-Final,@TakeshiShimakage",
+        "url": "https://youtu.be/yd9hdtORkcw"
+      },
+      {
+        "type": "video",
+        "title": "Round#3,@TakeshiShimakage",
+        "url": "https://youtu.be/yd9hdtORkcw"
+      },
+      {
+        "type": "video",
+        "title": "Round#2,@TakeshiShimakage",
+        "url": "https://youtu.be/medMKskIYWA"
+      },
+      {
+        "type": "video",
+        "title": "Round#1,@TakeshiShimakage",
+        "url": "https://youtu.be/AAtHt8qnUUQ"
+      },
+      {
+        "type": "video",
+        "title": "Game Planning,@TakeshiShimakage",
+        "url": "https://youtu.be/SbN_yrrucFg"
+      }
+    ],
     "rounds":[
       "the35thjapannationalchampionship.rd1rd2rd3"
     ]
@@ -1212,6 +1422,13 @@
     "jpdga": {
       "eventId": "629"
     },
+    "urls": [
+      {
+        "type": "video",
+        "title": "Final,MA1,@Dch-discchannel",
+        "url": "https://youtu.be/XkMb_dV8tjQ"
+      }
+    ],
     "rounds":[
       "the35thjapannationalchampionshipama.rd1rd2rd3"
     ]
@@ -1239,6 +1456,28 @@
       "ama": 37,
       "misc": 4
     },
+    "urls": [
+      {
+        "type": "video",
+        "title": "Final,MPO,@Dch-discchannel",
+        "url": "https://youtu.be/d3Q1NvYQA1o"
+      },
+      {
+        "type": "video",
+        "title": "Semi-Final,MPO,@Dch-discchannel",
+        "url": "https://youtu.be/m3PW5PvgDdQ"
+      },
+      {
+        "type": "video",
+        "title": "ディスクゴルフ大学第13回,@discgolflab",
+        "url": "https://youtu.be/h7240mpNtR8"
+      },
+      {
+        "type": "video",
+        "title": "Vlog,@discgolflab",
+        "url": "https://youtu.be/udfablPbrW0"
+      }
+    ],
     "rounds": [
       "the30thtokyoopen.rd1rd2rd3"
     ]
@@ -2048,6 +2287,11 @@
       "the17thkiyosatonomoriopen.rd1rd2rd3"
     ],
     "urls": [
+      {
+        "type": "video",
+        "title": "Final,MPO,@Dch-discchannel",
+        "url": "https://youtu.be/NMyCuWy2bw8"
+      },
       {
         "type": "photo",
         "title": "D.ch",
