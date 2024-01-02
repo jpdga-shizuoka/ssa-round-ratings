@@ -990,6 +990,33 @@
     }
   },
   {
+    "id": "the1stmichinokuqueenscup",
+    "title": "The 1st Michinoku Queen's Cup",
+    "location": "kitakamisportpark",
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2023/636_map.pdf"
+    },
+    "period": {
+      "from": "2023-06-03",
+      "to": "2023-06-04"
+    },
+    "jpdga": {
+      "eventId": "636"
+    },
+    "players": {
+      "pro": 20,
+      "ama": 7,
+      "misc": 16
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "http://jpdgaiwate.com"
+      }
+    ]
+  },
+  {
     "id": "the6thgifuhiruganoopen",
     "title": "The 6th Gifu Hirugano Open",
     "location": "hiruganokogen",
