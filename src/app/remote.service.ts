@@ -67,7 +67,7 @@ export class RemoteService {
 
   getRounds(roundList?: RoundId[]): Observable<RoundInfo[]> {
     return this.http
-      .get<RoundInfo[]>('assets/models/.rounds.json', { responseType: 'json' })
+      .get<RoundInfo[]>('assets/models/rounds.tmp.json', { responseType: 'json' })
       .pipe(
         map(rounds => roundList ? filterByList(rounds, roundList) : rounds),
         tap(rounds => rounds.forEach(

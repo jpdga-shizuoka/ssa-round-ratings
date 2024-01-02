@@ -9,7 +9,7 @@ const TARGET_DIR = path.join('.', 'src', 'assets', 'models');
 const ROUNDS_FILE = path.join(TARGET_DIR, 'rounds.json');
 const EVENTS_FILE = path.join(TARGET_DIR, 'events.json');
 const LOCATIONS_FILE = path.join(TARGET_DIR, 'locations.json');
-const ROUNDS_TO = path.join(TARGET_DIR, '.rounds.json');
+const ROUNDS_TO = path.join(TARGET_DIR, 'rounds.tmp.json');
 
 const rounds = JSON.parse(fs.readFileSync(ROUNDS_FILE, 'utf8'));
 const events = JSON.parse(fs.readFileSync(EVENTS_FILE, 'utf8'));
