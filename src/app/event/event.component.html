@@ -85,7 +85,11 @@
         </tr>
 
         <tr class="element-row" *ngIf="event.budget">
-          <td>{{'Pro Purse' | localize}}</td>
+          <td>
+            <a routerLink="/about">
+              {{'Pro Purse' | localize}}
+            </a>
+          </td>
           <td>
               {{roundUnderThousand(event.budget.totalprize) | currency:'JPY':'symbol':'1.0-0'}}
               ({{event.budget.prizeratio * 100 | number:'1.0-0'}}%,
