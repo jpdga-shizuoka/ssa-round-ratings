@@ -491,6 +491,12 @@
       "ama": 27,
       "misc": 0
     },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 1246,
+      "rate": 143,
+      "paidout": 17
+    },
     "pdga": {
       "eventId": "71461",
       "scoreId": "71461"
@@ -578,6 +584,12 @@
       "pro": 56,
       "ama": 57,
       "misc": 0
+    },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 1121,
+      "rate": 143,
+      "paidout": 16
     },
     "pdga": {
       "eventId": "71460",
@@ -679,6 +691,12 @@
       "ama": 28,
       "misc": 0
     },
+    "budget": {
+      "entreefee": 12000,
+      "purse": 1730,
+      "rate": 143,
+      "paidout": 24
+    },
     "pdga": {
       "eventId": "71459",
       "scoreId": "71459"
@@ -728,6 +746,12 @@
       "ama": 16,
       "misc": 0
     },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 609,
+      "rate": 143,
+      "paidout": 13
+    },
     "pdga": {
       "eventId": "71458"
     },
@@ -753,6 +777,12 @@
       "pro": 27,
       "ama": 0,
       "misc": 0
+    },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 651,
+      "rate": 143,
+      "paidout": 8
     },
     "pdga": {
       "eventId": "71457",
@@ -788,6 +818,12 @@
       "pro": 65,
       "ama": 0,
       "misc": 0
+    },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 1645,
+      "rate": 143,
+      "paidout": 10
     },
     "pdga": {
       "eventId": "71455",
@@ -884,6 +920,12 @@
       "ama": 39,
       "misc": 8
     },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 917,
+      "rate": 143,
+      "paidout": 15
+    },
     "pdga": {
       "eventId": "70134",
       "scoreId": "70134"
@@ -914,6 +956,12 @@
       "pro": 52,
       "ama": 25,
       "misc": 0
+    },
+    "budget": {
+      "entreefee": 10000,
+      "purse": 1288,
+      "rate": 143,
+      "paidout": 22
     },
     "pdga": {
       "eventId": "70096",
@@ -959,6 +1007,12 @@
       "ama": 0,
       "misc": 0
     },
+    "budget": {
+      "entreefee": 15000,
+      "purse": 1894,
+      "rate": 139,
+      "paidout": 12
+    },
     "pdga": {
       "scoreId": "70095",
       "eventId": "70095"
@@ -998,6 +1052,12 @@
       "ama": 19,
       "misc": 0
     },
+    "budget": {
+      "entreefee": 15000,
+      "purse": 2036,
+      "rate": 139,
+      "paidout": 12
+    },
     "pdga": {
       "scoreId": "70094",
       "eventId": "70094"
@@ -1032,6 +1092,12 @@
       "ama": 16,
       "misc": 0
     },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 610,
+      "rate": 143,
+      "paidout": 10
+    },
     "pdga": {
       "eventId": "70093"
     },
@@ -1057,6 +1123,12 @@
       "pro": 35,
       "ama": 27,
       "misc": 0
+    },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 959,
+      "rate": 143,
+      "paidout": 13
     },
     "pdga": {
       "eventId": "70092",
@@ -1160,6 +1232,12 @@
       "ama": 9,
       "misc": 0
     },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 448,
+      "rate": 125,
+      "paidout": 6
+    },
     "pdga": {
       "eventId": "67931",
       "scoreId": "67931"
@@ -1183,6 +1261,12 @@
       "pro": 36,
       "ama": 34,
       "misc": 0
+    },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 1392,
+      "rate": 125,
+      "paidout": 16
     },
     "pdga": {
       "eventId": "66722",
@@ -1316,6 +1400,12 @@
       "pro": 74,
       "ama": 0,
       "misc": 0
+    },
+    "budget": {
+      "entreefee": 15000,
+      "purse": 4488,
+      "rate": 125,
+      "paidout": 27
     },
     "pdga": {
       "eventId": "67929",
@@ -1456,6 +1546,12 @@
       "ama": 37,
       "misc": 4
     },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 2360,
+      "rate": 125,
+      "paidout": 17
+    },
     "urls": [
       {
         "type": "video",
@@ -1503,6 +1599,12 @@
       "pro": 46,
       "ama": 52,
       "misc": 0
+    },
+    "budget": {
+      "entreefee": 6000,
+      "purse": 1332,
+      "rate": 112,
+      "paidout": 14
     }
   },
   {
@@ -1526,6 +1628,12 @@
       "pro": 44,
       "ama": 16,
       "misc": 0
+    },
+    "budget": {
+      "entreefee": 8500,
+      "purse": 552,
+      "rate": 125,
+      "paidout": 13
     },
     "urls": [
       {

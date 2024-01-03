@@ -6,7 +6,7 @@ import { catchError, tap, map } from 'rxjs/operators';
 
 import { LocalizeService } from './localize.service';
 import {
-  category2url, upcomingFilter, sortEvents, countPlayers, compareByDate, filterByList, organization2url
+  category2url, upcomingFilter, sortEvents, countPlayers, compareByDate, filterByList, organization2url, calcProPurse
 } from './libs';
 import {
   EventInfo, RoundInfo, LocationInfo, EventCategory, VideoInfo, TotalYearPlayers,
@@ -45,6 +45,7 @@ export class RemoteService {
       .pipe(
         map(events => upcomingFilter(events, category)),
         map(events => filter ? filter(events, category) : events),
+        map(events => calcProPurse(events)),
         map(events => sortEvents(events, category)),
         catchError(this.handleError<EventInfo[]>('getEvents', []))
       );
