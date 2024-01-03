@@ -87,7 +87,7 @@
         <tr class="element-row" *ngIf="event.budget">
           <td>{{'Pro Purse' | localize}}</td>
           <td>
-              {{event.budget.totalprize | currency:'JPY':'symbol':'1.0-0'}}
+              {{roundUnderThousand(event.budget.totalprize) | currency:'JPY':'symbol':'1.0-0'}}
               ({{event.budget.prizeratio * 100 | number:'1.0-0'}}%,
               {{event.budget.paidratio * 100 | number:'1.0-0'}}%)
               {{getStars(event)}}

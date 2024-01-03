@@ -114,4 +114,8 @@ export class EventComponent implements OnInit, OnDestroy {
     let stars = '★'.repeat(starCount);
     return stars;
   }
+
+  roundUnderThousand(n: number): number {
+    return Math.round(n / 1000) * 1000;
+  }
 }
