@@ -158,7 +158,7 @@ export function calcProPurse(events: EventInfo[]): EventInfo[] {
 export function getStarsOfPurse(budget: ProBudget): number {
   let stars = 0;
   if (budget && budget.prizeratio && budget.paidratio) {
-    if (budget.purse >= 10000) {
+    if (budget.purse >= 1000) {
       stars++;
     }
     if (budget.prizeratio >= 0.5) {
