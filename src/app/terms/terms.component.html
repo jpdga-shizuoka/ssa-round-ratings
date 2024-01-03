@@ -1,6 +1,23 @@
 <table class="terms-table full-width-table" aria-label="Elements">
   <tbody>
-    <tr class="element-row">
+    <tr class="element-row mat-row">
+      <td>賞金総額(Pro Purse)</td>
+      <td>
+        プロ部門の入賞者に支払われる賞金のおよその総額.
+        PDGAの大会情報ページに記載されている<span>Pro Purse</span>を円換算したもの.
+        ただしその際のドル円レートは推定値を用いており,
+        そのためその総額も推定値である.
+        なお括弧内の2つの数字は,前者が出場登録料に対するプロ選手への賞金還元率で,
+        後者は賞金獲得者の割合である.
+        <a routerLink="/libraries/sec8">PDGAツアー基準</a>によると,
+        ティアB公認大会のプロ部門では,<br>
+        1. 賞金総額が$1000以上で,<br>
+        2. 出場登録料の50%以上を賞金とすることが求められるとともに,<br>
+        3. 出場選手の25%以上が賞金を獲得することが推奨されている.<br>
+        よって上記それぞれの条件を満たす毎に星を1つ付与して視覚的に表示した.
+      </td>
+    </tr>
+    <tr class="element-row mat-row">
       <td>SSA</td>
       <td *ngIf="primaryLanguage">
         Your PDGA Player Rating (PR) is a number that shows how close your
