@@ -8,6 +8,7 @@ import { MatSort } from '@angular/material/sort';
 import { Observable, Subscription } from 'rxjs';
 
 import { EventCategory } from '../models';
+import { LocalizeService } from '../localize.service';
 import { RemoteService } from '../remote.service';
 import { EventsDataSource, EventInfo } from './events-datasource';
 import { title2name } from '../libs';
@@ -34,11 +35,12 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private readonly remote: RemoteService
+    private readonly remote: RemoteService,
+    private readonly localize?: LocalizeService,
   ) { }
 
   ngOnInit(): void {
-    this.dataSource = new EventsDataSource(this.remote, this.category, this.limit);
+    this.dataSource = new EventsDataSource(this.remote, this.category, this.limit, this.localize);
 
     if (!this.displayedColumns$) {
       throw new Error('[displayedColumns$] is required');
