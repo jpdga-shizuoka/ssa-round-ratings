@@ -1059,7 +1059,7 @@
     "budget": {
       "entreefee": 15000,
       "purse": 2036,
-      "rate": 139,
+      "rate": 138,
       "paidout": 12
     },
     "pdga": {
@@ -1750,6 +1750,12 @@
         "url": "https://aifda.or.jp/event"
       }
     ],
+    "budget": {
+      "entreefee": 7000,
+      "purse": 2075,
+      "rate": 111,
+      "paidout": 23
+    },
     "players": {
       "pro": 51,
       "ama": 19,
@@ -1809,6 +1815,12 @@
         "url": "https://www.facebook.com/discgolfkyushuopen/"
       }
     ],
+    "budget": {
+      "entreefee": 8000,
+      "purse": 1494,
+      "rate": 111,
+      "paidout": 20
+    },
     "players": {
       "pro": 59,
       "ama": 49,
@@ -1895,6 +1907,12 @@
         "url": "https://www.facebook.com/kansaiopen.discgolf"
       }
     ],
+    "budget": {
+      "entreefee": 8000,
+      "purse": 792,
+      "rate": 125,
+      "paidout": 11
+    },
     "players": {
       "pro": 33,
       "ama": 19,
@@ -1937,8 +1955,14 @@
         "url": "https://discgolf-navi.com/blog/maiko_classic2022/"
       }
     ],
+    "budget": {
+      "entreefee": 12000,
+      "purse": 1320,
+      "rate": 111,
+      "paidout": 28
+    },
     "players": {
-      "pro": 52,
+      "pro": 51,
       "ama": 9,
       "misc": 0
     },
@@ -1991,6 +2015,12 @@
         "url": "http://www.sukima-labo.com/dg291/"
       }
     ],
+    "budget": {
+      "entreefee": 8000,
+      "purse": 720,
+      "rate": 111,
+      "paidout": 9
+    },
     "players": {
       "pro": 25,
       "ama": 27,
@@ -2017,6 +2047,12 @@
     "jpdga": {
       "topicId": "1669",
       "eventId": "605"
+    },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 756,
+      "rate": 111,
+      "paidout": 14
     },
     "players": {
       "pro": 41,
@@ -2078,6 +2114,12 @@
         "url": "https://discgolf-navi.com/tournament/nt-abt-lt/japan-series2022_course/"
       }
     ],
+    "budget": {
+      "entreefee": 10000,
+      "purse": 2104,
+      "rate": 111,
+      "paidout": 11
+    },
     "players": {
       "pro": 84,
       "ama": 0,
@@ -2113,8 +2155,14 @@
         "url": "http://www.jpdgafukuoka.com/blog/?page_id=5017"
       }
     ],
+    "budget": {
+      "entreefee": 8000,
+      "purse": 757,
+      "rate": 111,
+      "paidout": 12
+    },
     "players": {
-      "pro": 40,
+      "pro": 39,
       "ama": 16,
       "misc": 0
     },
@@ -2178,10 +2226,16 @@
         "url": "https://www.facebook.com/1848600115381290/posts/pfbid03DYB4m11czA3oR75QJhFDEpwFTLFYGYfuGgFQvuaSF1UHRsPCNXeFHqmUtyZeZtml/?d=n"
       }
     ],
+    "budget": {
+      "entreefee": 8000,
+      "purse": 1566,
+      "rate": 111,
+      "paidout": 21
+    },
     "players": {
-      "pro": 60,
-      "ama": 19,
-      "misc": 1
+      "pro": 58,
+      "ama": 18,
+      "misc": 0
     },
     "rounds": [
       "the17thmichinokuopen.rd1rd2rd3"
@@ -2241,10 +2295,16 @@
         "url": "http://tochigiflyingdisc.com/forums/フォーラム/関東オープン掲示板/"
       }
     ],
+    "budget": {
+      "entreefee": 6000,
+      "purse": 1260,
+      "rate": 111,
+      "paidout": 11
+    },
     "players": {
-      "pro": 18,
+      "pro": 63,
       "ama": 41,
-      "misc": 5
+      "misc": 4
     },
     "rounds": [
       "the26thkantoopen.rd1rd4",
@@ -2289,6 +2349,12 @@
     "jpdga": {
       "eventId": "595"
     },
+    "budget": {
+      "entreefee": 7000,
+      "purse": 936,
+      "rate": 111,
+      "paidout": 12
+    },
     "players": {
       "pro": 33,
       "ama": 12,
@@ -2319,6 +2385,12 @@
     "rounds": [
       "the17thmastersnationalchampionship.rd1rd2rd3"
     ],
+    "budget": {
+      "entreefee": 8000,
+      "purse": 1494,
+      "rate": 111,
+      "paidout": 16
+    },
     "players": {
       "pro": 36,
       "ama": 20,
@@ -2360,6 +2432,12 @@
     "jpdga": {
       "eventId": "592",
       "topicId": "1642"
+    },
+    "budget": {
+      "entreefee": 10000,
+      "purse": 2104,
+      "rate": 111,
+      "paidout": 17
     },
     "players": {
       "pro": 56,
@@ -2410,9 +2488,15 @@
       "eventId": "591",
       "topicId": "1634"
     },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 1575,
+      "rate": 111,
+      "paidout": 17
+    },
     "players": {
-      "pro": 51,
-      "ama": 41,
+      "pro": 49,
+      "ama": 20,
       "misc": 3
     },
     "rounds": [
@@ -2445,6 +2529,12 @@
     },
     "jpdga": {
       "eventId": "590"
+    },
+    "budget": {
+      "entreefee": 6000,
+      "purse": 336,
+      "rate": 125,
+      "paidout": 7
     },
     "players": {
       "pro": 20,
@@ -2500,10 +2590,16 @@
       "eventId": "589",
       "topicId": "1628"
     },
+    "budget": {
+      "entreefee": 12000,
+      "purse": 2968,
+      "rate": 111,
+      "paidout": 22
+    },
     "players": {
-      "pro": 74,
-      "ama": 29,
-      "misc": 1
+      "pro": 76,
+      "ama": 28,
+      "misc": 0
     },
     "urls": [
       {
@@ -2565,6 +2661,12 @@
       "topicId": "1621",
       "photoId": "72177720298302833"
     },
+    "budget": {
+      "entreefee": 6000,
+      "purse": 423,
+      "rate": 111,
+      "paidout": 7
+    },
     "players": {
       "pro": 38,
       "ama": 17,
@@ -2590,10 +2692,16 @@
       "eventId": "612",
       "topicId": "1618"
     },
+    "budget": {
+      "entreefee": 5000,
+      "purse": 900,
+      "rate": 111,
+      "paidout": 10
+    },
     "players": {
-      "pro": 46,
+      "pro": 40,
       "ama": 48,
-      "misc": 12
+      "misc": 18
     },
     "urls": [
       {
@@ -2632,8 +2740,14 @@
       "topicId": "1615",
       "photoId": "72177720297408715"
     },
+    "budget": {
+      "entreefee": 8500,
+      "purse": 540,
+      "rate": 111,
+      "paidout": 11
+    },
     "players": {
-      "pro": 32,
+      "pro": 31,
       "ama": 6,
       "misc": 3
     },
@@ -2691,9 +2805,15 @@
     "jpdga": {
       "eventId": "585"
     },
+    "budget": {
+      "entreefee": 6000,
+      "purse": 1105,
+      "rate": 111,
+      "paidout": 14
+    },
     "players": {
-      "pro": 24,
-      "ama": 21,
+      "pro": 34,
+      "ama": 22,
       "misc": 0
     },
     "urls": [
