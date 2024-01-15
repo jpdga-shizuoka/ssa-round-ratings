@@ -1600,15 +1600,15 @@
       "eventId": "627"
     },
     "players": {
-      "pro": 46,
-      "ama": 52,
-      "misc": 0
+      "pro": 64,
+      "ama": 68,
+      "misc": 34
     },
     "budget": {
       "entreefee": 6000,
       "purse": 1332,
       "rate": 112,
-      "paidout": 14
+      "paidout": 20
     }
   },
   {
@@ -2696,12 +2696,12 @@
       "entreefee": 5000,
       "purse": 900,
       "rate": 111,
-      "paidout": 10
+      "paidout": 16
     },
     "players": {
-      "pro": 40,
+      "pro": 46,
       "ama": 48,
-      "misc": 18
+      "misc": 12
     },
     "urls": [
       {
