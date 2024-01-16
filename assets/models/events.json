@@ -1846,6 +1846,11 @@
     },
     "urls": [
       {
+        "type": "video",
+        "title": "初優勝,@TakeshiShimakage",
+        "url": "https://youtu.be/pZshJD9ZZOs"
+      },
+      {
         "type": "website",
         "title": "Official Site",
         "url": "https://jpdgatokyooffice.wixsite.com/website/event-details/dai34kaikokueishowakinenkoenopundisukugorufutonamento"
@@ -2100,7 +2105,7 @@
       },
       {
         "type": "video",
-        "title": "Round3, Shimakage Camera",
+        "title": "Round3, @TakeshiShimakage",
         "url": "https://youtu.be/BJ0xfLqvYYc"
       },
       {
@@ -2150,6 +2155,11 @@
     },
     "urls": [
       {
+        "type": "video",
+        "title": "Round3,@TakeshiShimakage",
+        "url": "https://youtu.be/xBkBUdLXFIs"
+      },
+      {
         "type": "website",
         "title": "Official Site",
         "url": "http://www.jpdgafukuoka.com/blog/?page_id=5017"
@@ -2197,7 +2207,7 @@
       },
       {
         "type": "video",
-        "title": "Round3, Shimakage Camera",
+        "title": "Round3, @TakeshiShimakage",
         "url": "https://youtu.be/MiIQ6Zx58mI"
       },
       {
@@ -2942,7 +2952,7 @@
       },
       {
         "type": "video",
-        "title": "Round1, Shimakage Camera",
+        "title": "Round1, @TakeshiShimakage",
         "url": "https://youtu.be/HX4_PcpT7jA"
       }
     ],
@@ -3151,17 +3161,17 @@
       },
       {
         "type": "video",
-        "title": "R#1 Front9, Shimakage Camera",
+        "title": "R#1 Front9, @TakeshiShimakage",
         "url": "https://youtu.be/6e0EHft-h6M"
       },
       {
         "type": "video",
-        "title": "R#1 Back9, Shimakage Camera",
+        "title": "R#1 Back9, @TakeshiShimakage",
         "url": "https://youtu.be/0XS9DxeEKM4"
       },
       {
         "type": "video",
-        "title": "Round#2, Shimakage Camera",
+        "title": "Round#2, @TakeshiShimakage",
         "url": "https://youtu.be/PWomowA8fxA"
       }
     ],
