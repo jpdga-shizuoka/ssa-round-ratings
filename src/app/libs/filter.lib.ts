@@ -1,5 +1,5 @@
 import {
-  RoundInfo, EventInfo, EventCategory, TotalYearPlayers, Players, RoundId, Organization
+  RoundInfo, EventInfo, EventCategory, TotalYearPlayers, Players, RoundId, Organization, ProBudget
 } from '../models';
 
 const CATEGORY2FILE = {
@@ -142,4 +142,31 @@ export function countPlayers(events: EventInfo[]): TotalYearPlayers[] {
 
 export function filterByList(rounds: RoundInfo[], list?: RoundId[]): RoundInfo[] {
   return list ? rounds.filter(round => list.includes(round.id)) : rounds;
+}
+
+export function calcProPurse(events: EventInfo[]): EventInfo[] {
+  events.forEach(event => {
+    if (event.budget && event.players?.pro) {
+      event.budget.totalprize = event.budget.purse * event.budget.rate;
+      event.budget.prizeratio = event.budget.totalprize / (event.budget.entreefee * event.players.pro);
+      event.budget.paidratio = event.budget.paidout / event.players.pro;
+    }
+  });
+  return events;
+}
+
+export function getStarsOfPurse(budget: ProBudget): number {
+  let stars = 0;
+  if (budget && budget.prizeratio && budget.paidratio) {
+    if (budget.purse >= 1000) {
+      stars++;
+    }
+    if (budget.prizeratio >= 0.5) {
+      stars++;
+    }
+    if (budget.paidratio >= 0.25) {
+      stars++;
+    }
+  }
+  return stars;
 }

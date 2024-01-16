@@ -2,6 +2,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Subscription, BehaviorSubject } from 'rxjs';
 import { tap, map } from 'rxjs/operators';
 import { RemoteService, EventCategory, EventInfo } from '../remote.service';
+import { LocalizeService } from '../localize.service';
 
 export { EventInfo };
 
@@ -17,9 +18,11 @@ export class EventsDataSource extends MatTableDataSource<EventInfo> {
   constructor(
     private readonly remote: RemoteService,
     private readonly category: EventCategory,
-    private readonly limit?: number
+    private readonly limit?: number,
+    private readonly localize?: LocalizeService
   ) {
     super();
+    this.setupFilter();
   }
 
   /**
@@ -49,5 +52,34 @@ export class EventsDataSource extends MatTableDataSource<EventInfo> {
    */
   disconnect(): void {
     this.subscription?.unsubscribe();
+  }
+
+  private setupFilter() {
+    this.filterPredicate = (data: EventInfo, filters: string): boolean => {
+      const matchFilter: boolean[] = [];
+      const filterArray = filters.split('&');
+      const columns: string[] = [];
+
+      if (data.title) {
+        columns.push(data.title);
+      }
+
+      if (data.title && this.localize) {
+        columns.push(this.localize.transform(data.title, 'event'));
+      }
+
+      if (data.period) {
+        columns.push(data.period.from);
+        columns.push(data.period.to);
+      }
+
+      filterArray.forEach(filter => {
+        const customFilter: boolean[] = [];
+        columns.forEach(column =>
+          customFilter.push(column.toLowerCase().includes(filter)));
+        matchFilter.push(customFilter.some(Boolean)); // OR
+      });
+      return matchFilter.every(Boolean); // AND
+    };
   }
 }

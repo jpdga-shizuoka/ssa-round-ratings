@@ -7,7 +7,32 @@ tr:hover {
 tr:active {
   background: #efefef;
 }
+table td {
+  padding: 5px 10px;
+  font-size: 13px;
+}
+table td:first-child {
+  font-weight: bold;
+  min-width: 8rem;
+  text-align: center;
+}
 .canceled td {
   color: red;
   text-decoration: line-through;
+}
+@media (max-width: 414px) {
+  td:first-child {
+    width: 4rem;
+  }
+  td {
+    font-size: 12px;
+  }
+}
+@media (max-width: 320px) {
+  td:first-child {
+    width: 3.5rem;
+  }
+  td {
+    font-size: 11px;
+  }
 }

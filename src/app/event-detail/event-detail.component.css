@@ -9,6 +9,15 @@ tr.element-row:hover {
 tr.element-row:active {
   background: #efefef;
 }
+table td {
+  padding: 5px 10px;
+  font-size: 13px;
+}
+table td:first-child {
+  font-weight: bold;
+  min-width: 4rem;
+  text-align: center;
+}
 .event-detail td:first-child {
   font-weight: bold;
   width: 5rem;
@@ -16,14 +25,11 @@ tr.element-row:active {
 .info-container > a:not(:last-child) {
   margin-right: 10px;
 }
-.mat-cell {
-  font-size: 13px;
-}
 @media (max-width: 414px) {
   .event-detail td:first-child {
     width: 4rem;
   }
-  .mat-cell {
+  td {
     font-size: 12px;
   }
 }
@@ -31,7 +37,7 @@ tr.element-row:active {
   .event-detail td:first-child {
     width: 3.5rem;
   }
-  .mat-cell {
+  td {
     font-size: 11px;
   }
 }

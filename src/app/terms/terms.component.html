@@ -1,8 +1,25 @@
-<table class="terms-table full-width-table mat-table" aria-label="Elements">
+<table class="terms-table full-width-table" aria-label="Elements">
   <tbody>
     <tr class="element-row mat-row">
-      <td class="mat-cell">SSA</td>
-      <td class="mat-cell" *ngIf="primaryLanguage">
+      <td>賞金総額(Pro Purse)</td>
+      <td>
+        プロ部門の入賞者に支払われる賞金のおよその総額.
+        PDGAの大会情報ページに記載されている<span>Pro Purse</span>を円換算したもの.
+        ただしその際のドル円レートは推定値を用いており,
+        そのためその総額も推定値である.
+        なお括弧内の2つの数字は,前者が出場登録料に対するプロ選手への賞金還元率で,
+        後者は賞金獲得者の割合である.
+        <a routerLink="/libraries/sec8">PDGAツアー基準</a>によると,
+        ティアB公認大会のプロ部門では,<br>
+        1. 賞金総額が$1000以上で,<br>
+        2. 出場登録料の50%以上を賞金とすることが求められるとともに,<br>
+        3. 出場選手の25%以上が賞金を獲得することが推奨されている.<br>
+        よって上記それぞれの条件を満たす毎に星を1つ付与して視覚的に表示した.
+      </td>
+    </tr>
+    <tr class="element-row mat-row">
+      <td>SSA</td>
+      <td *ngIf="primaryLanguage">
         Your PDGA Player Rating (PR) is a number that shows how close your
         average round scores are compared to the course rating,
         called the <span>SSA (Scratch Scoring Averages</span>,
@@ -13,7 +30,7 @@
         played will have a rating over 1000.
         <a href="https://www.pdga.com/tags/ssa">Excerpt from the PDGA</a>
       </td>
-      <td class="mat-cell" *ngIf="!primaryLanguage">
+      <td *ngIf="!primaryLanguage">
         1000点のプレーヤー•レーティングを持つスクラッチ•プレーヤーが,
         当該コースをラウンドした際に期待されるラウンド•スコアを,
         <span>SSA (Scratch Scoring Averages)</span> と呼ぶ.
@@ -32,23 +49,23 @@
       </td>
     </tr>
     <tr class="element-row mat-row">
-      <td class="mat-cell">HLA</td>
-      <td class="mat-cell" *ngIf="primaryLanguage">
+      <td>HLA</td>
+      <td *ngIf="primaryLanguage">
         Average Length (meter) of Holes of a course
       </td>
-      <td class="mat-cell" *ngIf="!primaryLanguage">
+      <td *ngIf="!primaryLanguage">
         当該コースの平均ホール長(メートル)
       </td>
     </tr>
     <tr class="element-row mat-row">
-      <td class="mat-cell">TD</td>
-      <td class="mat-cell" *ngIf="primaryLanguage">
+      <td>TD</td>
+      <td *ngIf="primaryLanguage">
         The difficulty of the course increases simply by increasing the distance.
         <span>TD (Technical Difficulty)</span> is one of difficulties excluding the difficulty due to the distance,
         which is calculated according to the following equation;
         <span>TD = SSA / HLA * 10;</span>
       </td>
-      <td class="mat-cell" *ngIf="!primaryLanguage">
+      <td *ngIf="!primaryLanguage">
         コースの難度は単純に距離を伸ばせば上がるが,
         その距離による難度を排した技術的な難度を表す指標として,
         以下の方程式に従い算出した実験的な数値;<br/>

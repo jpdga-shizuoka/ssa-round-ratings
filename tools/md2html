@@ -1,0 +1,167 @@
+#!/usr/bin/env node
+
+const Path = require('path');
+const fs = require('fs');
+const md = require('markdown-it')({
+  html:         true,        // Enable HTML tags in source
+  replaceLink: replaceLink
+})
+.use(replaceLinkPlugIn)
+.use(require('markdown-it-sup'))
+.use(require('markdown-it-container'), 'widetable', {
+  render: function (tokens, idx) {
+    const m = tokens[idx].info.trim().match(/^widetable\s+(.*)$/);
+    if (tokens[idx].nesting === 1) {
+      // opening tag
+      return '<div class="app-table" id="' + md.utils.escapeHtml(m[1]) + '">\n';
+    } else {
+      // closing tag
+      return '</div>\n';
+    }
+  }
+});
+
+const external = /^http/i;
+const DST = './src/app/'
+const DOC_SRC = 'libraries';
+const DST_DIR = Path.join(DST, DOC_SRC);
+const SRC_DIR = './libraries';
+const PATTERN = /([\w-]+)\.md/;
+const DOC_LIST = [];
+//
+//  retrieve file list from specified folder
+//
+fs.readdirSync(SRC_DIR).forEach(file => {
+    const result = file.match(PATTERN);
+    if (result) {
+      DOC_LIST.push(result[1]);
+    }
+});
+//
+//  prepare destination folder
+//
+if (!fs.existsSync(DST_DIR)){
+  fs.mkdirSync(DST_DIR, { recursive: true });
+}
+//
+//  create ts & html files
+//
+createComponents(DOC_LIST, DOC_SRC);
+
+//////////////////////////////////////////////////////////////////////
+// end of program
+//////////////////////////////////////////////////////////////////////
+
+function createComponents(sources, srcPath) {
+  sources.forEach(id => {
+    const filepath = Path.join(srcPath, id + '.md');
+    const mdContent = fs.readFileSync(filepath, 'utf8');
+    const htmlContent = md.render(mdContent);
+
+    makeHtml(id, htmlContent, srcPath);
+    // makeComponent(id, srcPath);
+  });
+}
+
+function makeHtml(id, html, srcPath) {
+  const name = srcPath;
+  const dstPath = Path.join(DST, srcPath, id + '.component.html');
+  let content =`<div class="app-${name}">`;
+  content += `
+${html}</div>`;
+  fs.writeFileSync(dstPath, content);
+}
+
+function makeComponent(id, srcPath) {
+  const name = srcPath;
+  const Name = capitalizeFirstLetter(name);
+  const sid = makeId(id);
+  const dstPath = Path.join(DST, srcPath, name + id + '.component.ts');
+  const content =`import { Component, OnInit } from '@angular/core';
+@Component({
+  selector: 'app-${name}-${id}',
+  templateUrl: './${id}.component.html',
+  styleUrls: ['./${name}.component.css']
+})
+export class ${Name}${sid}Component implements OnInit {
+
+  constructor() {}
+
+  ngOnInit() {
+  }
+
+}`;
+  fs.writeFileSync(dstPath, content);
+}
+
+//
+// @ see https://github.com/martinheidegger/markdown-it-replace-link
+//
+function replaceLinkPlugIn(md) {
+  md.core.ruler.after(
+    'inline',
+    'replace-link',
+    state => {
+      const replace = md.options.replaceLink;
+      if (typeof replace === 'function') {
+        state.tokens.forEach(blockToken => {
+          if (blockToken.type === 'inline' && blockToken.children) {
+            blockToken.children.forEach(token => {
+              const type = token.type;
+              if (type === 'link_open') {
+                replaceAttr(token, 'href', replace, state.env);
+              } else if (type === 'image') {
+                replaceAttr(token, 'src', replace, state.env);
+              }
+            });
+          }
+        });
+      }
+      return false;
+    }
+  );
+};
+
+function replaceAttr(token, attrName, replace, env) {
+  token.attrs.forEach(attr => {
+    if (attr[0] === attrName) {
+      if (attr[0] === 'href' && !external.test(attr[1]) ) {
+        attr[0] = 'routerLink'; // replace href with routerLink
+        attr[1] = replace(attr[1], env, token);
+      }
+    }
+  });
+}
+
+function replaceLink(link, env) {
+  const pattern = /(\w*)+\#(\w+)/;
+  const result = link.match(pattern);
+  if (result != null) {
+    return '/' + result[1];
+  } else {
+    return link;
+  }
+}
+
+//
+//  @see https://github.com/markdown-it/markdown-it-footnote/blob/master/index.js
+//
+function render_footnote_ref(tokens, idx, options, env, slf) {
+  const id      = slf.rules.footnote_anchor_name(tokens, idx, options, env, slf);
+  const caption = slf.rules.footnote_caption(tokens, idx, options, env, slf);
+  let refid = id;
+  if (tokens[idx].meta.subId > 0) {
+    refid += ':' + tokens[idx].meta.subId;
+  }
+
+  return '<sup class="footnote-ref"><a routerLink="." fragment="fn' + id + '" id="fnref' + refid + '">' + caption + '</a></sup>';
+}
+
+function makeId(string) {
+  const id = string.replace(/\-/g, '');
+  return capitalizeFirstLetter(id);
+}
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}

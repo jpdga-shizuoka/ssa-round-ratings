@@ -6,7 +6,8 @@
       139.391561
     ],
     "id": "showakinenpark",
-    "title": "Showa Kinen Park"
+    "title": "Showa Kinen Park",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/13/4410/13202.html"
   },
   {
     "prefecture": "Tokyo",
@@ -15,7 +16,8 @@
       139.813418
     ],
     "id": "tatsuminomoriseasidepark",
-    "title": "Tatsumi-no-Mori Seaside Park"
+    "title": "Tatsumi-no-Mori Seaside Park",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/13/4410/13108.html"
   },
   {
     "prefecture": "Fukushima",
@@ -24,7 +26,8 @@
       140.929094
     ],
     "id": "minamisomahoseridingpark",
-    "title": "Minamisoma Hose Riding Park"
+    "title": "Minamisoma Hose Riding Park",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/7/3620/7212.html"
   },
   {
     "prefecture": "Fukushima",
@@ -33,7 +36,8 @@
       140.929094
     ],
     "id": "minamisomabajipark",
-    "title": "Minamisoma Baji Park"
+    "title": "Minamisoma Baji Park",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/7/3620/7212.html"
   },
   {
     "prefecture": "Fukushima",
@@ -42,13 +46,15 @@
       139.858533
     ],
     "id": "okawafurusatopark",
-    "title": "Okawa Furusato Park"
+    "title": "Okawa Furusato Park",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/7/3630/7368.html"
   },
   {
     "prefecture": "Fukushima",
     "geolocation": [37.432948484816826, 140.7266743090934],
     "id": "greenparkmiyakoji",
-    "title": "Green Park Miyakoji"
+    "title": "Green Park Miyakoji",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/7/3610/7211.html"
   },
   {
     "prefecture": "Niigata",
@@ -57,7 +63,8 @@
       138.826901
     ],
     "id": "maikodiscgolfpark",
-    "title": "Maiko Disc Golf Park"
+    "title": "Maiko Disc Golf Park",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/15/5420/15226.html"
   },
   {
     "prefecture": "Niigata",
@@ -84,7 +91,8 @@
       136.082685
     ],
     "id": "kibougaokaculturalpark",
-    "title": "Kibougaoka Cultural Park"
+    "title": "Kibougaoka Cultural Park",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/25/6010/25210.html"
   },
   {
     "prefecture": "Shiga",
@@ -92,7 +100,8 @@
       35.05886561087921, 136.04987540047873
     ],
     "id": "kibougaokaculturalparkwest",
-    "title": "Kibougaoka Cultural Park"
+    "title": "Kibougaoka Cultural Park",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/25/6010/25210.html"
   },
   {
     "prefecture": "Kyoto",
@@ -101,7 +110,8 @@
       135.530041
     ],
     "id": "fuminnomorihiyoshi",
-    "title": "Fumin-no-Mori Hiyoshi"
+    "title": "Fumin-no-Mori Hiyoshi",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/26/6110/26213.html"
   },
   {
     "prefecture": "Iwate",
@@ -119,7 +129,8 @@
       141.091096
     ],
     "id": "kitakamisportpark",
-    "title": "Kitakami Sport Park"
+    "title": "Kitakami Sport Park",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/3/3310/3206.html"
   },
   {
     "prefecture": "Fukuoka",
@@ -128,7 +139,8 @@
       130.355778
     ],
     "id": "uminonakamichiseasidepark",
-    "title": "Umino-Nakamichi Seaside Park"
+    "title": "Umino-Nakamichi Seaside Park",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/40/8210/40131.html"
   },
   {
     "prefecture": "Tochigi",
@@ -137,7 +149,8 @@
       139.978235
     ],
     "id": "kiyoharakohgyodanchi",
-    "title": "Kiyohara Kohgyo Danchi"
+    "title": "Kiyohara Kohgyo Danchi",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/9/4110/9201.html"
   },
   {
     "prefecture": "Tochigi",
@@ -146,7 +159,8 @@
       140.0910787154823
     ],
     "id": "shiromigaokasportspark",
-    "title": "Shiromigaoka Sports Park"
+    "title": "Shiromigaoka Sports Park",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/9/4110/9344.html"
   },
   {
     "prefecture": "Tochigi",
@@ -155,7 +169,8 @@
       139.799768
     ],
     "id": "oyamaomoinomoripark",
-    "title": "Oyama Omoi-no-Mori Park"
+    "title": "Oyama Omoi-no-Mori Park",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/9/4110/9208.html"
   },
   {
     "prefecture": "Tochigi",
@@ -185,13 +200,22 @@
     "title": "Aso Minnano Mori"
   },
   {
+    "id": "ecoparkminamata",
+    "title": "ECO Park Minamata",
+    "prefecture": "Kumamoto",
+    "geolocation": [
+      32.19908109225617, 130.38387270550996
+    ]
+  },
+  {
     "prefecture": "Kanagawa",
     "geolocation": [
       35.537993,
       139.263713
     ],
     "id": "aikawafureainomura",
-    "title": "Aikawa Fureai-no-Mura"
+    "title": "Aikawa Fureai-no-Mura",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/14/4620/14401.html"
   },
   {
     "prefecture": "Shizuoka",
@@ -209,7 +233,8 @@
       140.309498
     ],
     "id": "hunkawanpanolamapark",
-    "title": "Hunka-wan Panolama Park"
+    "title": "Hunka-wan Panolama Park",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/1d/2300/1346.html"
   },
   {
     "prefecture": "Ibaraki",
@@ -218,7 +243,8 @@
       140.161973
     ],
     "id": "furusatofureaipark",
-    "title": "Furusato Fureai Park"
+    "title": "Furusato Fureai Park",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/8/4020/8208.html"
   },
   {
     "prefecture": "Ibaraki",
@@ -227,7 +253,8 @@
       140.305402
     ],
     "id": "hikaritokazenookapark",
-    "title": "Hikari-to-Kaze-no-Oka Park"
+    "title": "Hikari-to-Kaze-no-Oka Park",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/8/4020/8442.html"
   },
   {
     "prefecture": "Ibaraki",
@@ -236,7 +263,8 @@
       140.601818
     ],
     "id": "hitachiseasidepark",
-    "title": "Hitachi Seaside Park"
+    "title": "Hitachi Seaside Park",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/8/4010/8221.html"
   },
 
   {
@@ -256,7 +284,8 @@
       136.134013
     ],
     "id": "seasidenaturepark",
-    "title": "Seaside Nature Park"
+    "title": "Seaside Nature Park",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/18/5710/18210.html"
   },
   {
     "prefecture": "Fukui",
@@ -265,7 +294,8 @@
       136.302471
     ],
     "id": "fukuicountryclub",
-    "title": "Fukui Country Club"
+    "title": "Fukui Country Club",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/18/5710/18210.html"
   },
   {
     "prefecture": "Yamanashi",
@@ -274,7 +304,8 @@
       138.436223
     ],
     "id": "kiyosatonomori",
-    "title": "Kiyosato-no-mori"
+    "title": "Kiyosato-no-mori",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/19/4910/19209.html"
   },
   {
     "prefecture": "Gifu",
@@ -292,7 +323,8 @@
       136.907814
     ],
     "id": "hiruganokogen",
-    "title": "Hirugano Kogen"
+    "title": "Hirugano Kogen",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/21/5210/21219.html"
   },
   {
     "prefecture": "Gifu",
@@ -334,7 +366,8 @@
       127.977237
     ],
     "id": "nakijinsonsportpark",
-    "title": "Nakijinson Sport Park"
+    "title": "Nakijinson Sport Park",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/47/9120/47306.html"
   },
   {
     "prefecture": "Kagoshima",
@@ -352,7 +385,8 @@
       137.002935
     ],
     "id": "shiminshikinomori",
-    "title": "Shimin Shiki-no-mori"
+    "title": "Shimin Shiki-no-mori",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/23/5110/23219.html"
   },
   {
     "prefecture": "Aichi",
@@ -361,7 +395,8 @@
       137.323191
     ],
     "id": "mikawarinkairyokuchi",
-    "title": "Mikawa Rinkai Ryokuchi"
+    "title": "Mikawa Rinkai Ryokuchi",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/23/5120/23207.html"
   },
   {
     "prefecture": "Aichi",
@@ -370,7 +405,8 @@
       137.542337
     ],
     "id": "shinshiropark",
-    "title": "Shinshiro Park"
+    "title": "Shinshiro Park",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/23/5120/23221.html"
   },
   {
     "prefecture": "Mie",
@@ -396,7 +432,8 @@
       140.031388
     ],
     "id": "mizubayashisportpark",
-    "title": "Mizubayashi Sport Park"
+    "title": "Mizubayashi Sport Park",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/5/3210/5210.html"
   },
   {
     "prefecture": "Hyogo",

@@ -20,6 +20,15 @@ tr.element-row:hover {
 tr.element-row:active {
   background: #efefef;
 }
+table td {
+  padding: 5px 10px;
+  font-size: 13px;
+}
+table td:first-child {
+  font-weight: bold;
+  min-width: 4rem;
+  text-align: center;
+}
 .canceled {
   color: red;
   font-weight: bolder;

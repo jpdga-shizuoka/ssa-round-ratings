@@ -70,7 +70,7 @@ export class EventsMapComponent implements OnInit, OnDestroy {
 
   onMarkerClick(event: google.maps.MapMouseEvent): void {
     const markers = this.mapSource$.getValue();
-    const marker = markers.find(m => event.latLng.equals(new google.maps.LatLng(m.position.lat, m.position.lng)));
+    const marker = markers.find(m => event.latLng?.equals(new google.maps.LatLng(m.position.lat, m.position.lng)));
     if (!marker) {
       return;
     }

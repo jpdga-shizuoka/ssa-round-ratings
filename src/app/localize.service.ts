@@ -48,7 +48,7 @@ export class LocalizeService {
       return value;
     }
     let result = value;
-    for (const dict of getDictionaries(lc)) {
+    for (const dict of getDictionaries(lc) as Record<string, string>[]) {
       const local = dict[name2key(value)];
       if (local) {
         result = local;

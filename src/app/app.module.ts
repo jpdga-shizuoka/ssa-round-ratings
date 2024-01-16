@@ -63,94 +63,114 @@ import { BubbleSeriesInteractiveComponent } from './difficulty-chart/custom-char
 import { RoundListComponent } from './round-list/round-list.component';
 import { VideoListComponent } from './video-list/video-list.component';
 import { EventListComponent } from './event-list/event-list.component';
-
 import { SchedulePipe } from './schedule.pipe';
 import { GeolinkPipe } from './geolink.pipe';
 import { LocalizePipe } from './localize.pipe';
 import { PeriodPipe } from './period.pipe';
 import { LocationPipe } from './location.pipe';
 import { EventPipe } from './event.pipe';
+import { ClassificationsComponent } from './libraries/classifications.component';
+import { FaqRatingsComponent } from './libraries/faq-ratings.component';
+import { NonStandardRulesComponent } from './libraries/non-standard-rules.component';
+import { PointsComponent } from './libraries/points.component';
+import { ReclassificationComponent } from './libraries/reclassification.component';
+import { Sec8Component } from './libraries/sec8.component';
+import { DivisionsComponent } from './libraries/divisions.component';
+import { PlayerpackComponent } from './libraries/playerpack.component';
+import { RatingsComponent } from './libraries/ratings.component';
+import { Sec5Component } from './libraries/sec5.component';
+import { TrueAmateurComponent } from './libraries/true-amateur.component';
+import { IndexComponent } from './libraries/index.component';
+import { TourStandardsComponent } from './libraries/tour-standards.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ReloadComponent,
-    RoundsTabsComponent,
-    RoundsTableComponent,
-    AboutThisSiteComponent,
-    TermsComponent,
-    EventComponent,
-    EventDetailComponent,
-    LocalTabsComponent,
-    MonthlyTabsComponent,
-    UpcomingTabsComponent,
-    EventsTableComponent,
-    LocalTableComponent,
-    MonthlyTableComponent,
-    EventsMapComponent,
-    NoticeBottomsheetComponent,
-    VideoBottomsheetComponent,
-    BottomSheetDetailDisabledComponent,
-    MarkerDialogComponent,
-    DashBoardComponent,
-    TotalPlayersComponent,
-    VideosTableComponent,
-    StatsTabsComponent,
-    PrefaceComponent,
-    IcalenderComponent,
-    DifficultyChartComponent,
-    AnnualChartComponent,
-    MembersChartComponent,
-    BubbleChartInteractiveComponent,
-    BubbleSeriesInteractiveComponent,
-    RoundListComponent,
-    VideoListComponent,
-    EventListComponent,
-    SchedulePipe,
-    GeolinkPipe,
-    LocalizePipe,
-    PeriodPipe,
-    LocationPipe,
-    EventPipe
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    LayoutModule,
-    YouTubePlayerModule,
-    GoogleMapsModule,
-    HttpClientModule,
-    HttpClientJsonpModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatTooltipModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatInputModule,
-    MatChipsModule,
-    MatSortModule,
-    MatButtonModule,
-    MatCheckboxModule,
-    MatRadioModule,
-    MatSidenavModule,
-    MatListModule,
-    MatCardModule,
-    MatTabsModule,
-    MatDialogModule,
-    MatBottomSheetModule,
-    MatMenuModule,
-    MatProgressSpinnerModule,
-    MatExpansionModule,
-    NgxChartsModule
-  ],
-  entryComponents: [
-    NoticeBottomsheetComponent,
-    BottomSheetDetailDisabledComponent,
-    MarkerDialogComponent
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        ReloadComponent,
+        RoundsTabsComponent,
+        RoundsTableComponent,
+        AboutThisSiteComponent,
+        TermsComponent,
+        EventComponent,
+        EventDetailComponent,
+        LocalTabsComponent,
+        MonthlyTabsComponent,
+        UpcomingTabsComponent,
+        EventsTableComponent,
+        LocalTableComponent,
+        MonthlyTableComponent,
+        EventsMapComponent,
+        NoticeBottomsheetComponent,
+        VideoBottomsheetComponent,
+        BottomSheetDetailDisabledComponent,
+        MarkerDialogComponent,
+        DashBoardComponent,
+        TotalPlayersComponent,
+        VideosTableComponent,
+        StatsTabsComponent,
+        PrefaceComponent,
+        IcalenderComponent,
+        DifficultyChartComponent,
+        AnnualChartComponent,
+        MembersChartComponent,
+        BubbleChartInteractiveComponent,
+        BubbleSeriesInteractiveComponent,
+        RoundListComponent,
+        VideoListComponent,
+        EventListComponent,
+        SchedulePipe,
+        GeolinkPipe,
+        LocalizePipe,
+        PeriodPipe,
+        LocationPipe,
+        EventPipe,
+        ClassificationsComponent,
+        FaqRatingsComponent,
+        NonStandardRulesComponent,
+        PointsComponent,
+        ReclassificationComponent,
+        Sec8Component,
+        DivisionsComponent,
+        PlayerpackComponent,
+        RatingsComponent,
+        Sec5Component,
+        TrueAmateurComponent,
+        IndexComponent,
+        TourStandardsComponent
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        LayoutModule,
+        YouTubePlayerModule,
+        GoogleMapsModule,
+        HttpClientModule,
+        HttpClientJsonpModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatTooltipModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatInputModule,
+        MatChipsModule,
+        MatSortModule,
+        MatButtonModule,
+        MatCheckboxModule,
+        MatRadioModule,
+        MatSidenavModule,
+        MatListModule,
+        MatCardModule,
+        MatTabsModule,
+        MatDialogModule,
+        MatBottomSheetModule,
+        MatMenuModule,
+        MatProgressSpinnerModule,
+        MatExpansionModule,
+        NgxChartsModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

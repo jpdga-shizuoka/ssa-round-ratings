@@ -1,3 +1,33 @@
-.full-width-table {
+table {
   width: 100%;
+}
+tr:hover {
+  background: whitesmoke;
+}
+tr:active {
+  background: #efefef;
+}
+table td {
+  padding: 5px 10px;
+  font-size: 13px;
+}
+table td:first-child {
+  min-width: 4rem;
+  text-align: center;
+}
+@media (max-width: 414px) {
+  td:first-child {
+    width: 4rem;
+  }
+  td {
+    font-size: 12px;
+  }
+}
+@media (max-width: 320px) {
+  td:first-child {
+    width: 3.5rem;
+  }
+  td {
+    font-size: 11px;
+  }
 }

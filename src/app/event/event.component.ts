@@ -4,7 +4,7 @@ import { Observable, Subject, Subscription } from 'rxjs';
 import { first, tap } from 'rxjs/operators';
 
 import { RemoteService, EventId, EventInfo, LocationInfo } from '../remote.service';
-import { getCbjUrl, makePdgaInfo, makeJpdgaInfo, makeMiscInfo, makeVideoInfo, makePhotoInfo } from '../libs';
+import { getCbjUrl, makePdgaInfo, makeJpdgaInfo, makeMiscInfo, makeVideoInfo, makePhotoInfo, getStarsOfPurse } from '../libs';
 import { MiscInfo } from '../app-common';
 import { RoundId, Layouts } from '../models';
 
@@ -98,9 +98,24 @@ export class EventComponent implements OnInit, OnDestroy {
   }
 
   showCalendar(event: EventInfo): boolean {
-    if (!event.period?.from) {
+    if (!event.period?.to) {
       return false;
     }
-    return new Date().getTime() < new Date(event.period.from).getTime();
+    const nextDay = new Date(event.period.to);
+    nextDay.setDate(nextDay.getDate() + 1);
+    return new Date().getTime() < nextDay.getTime();
+  }
+
+  getStars(event: EventInfo): string {
+    if (!event.budget?.purse) {
+      return '';
+    }
+    let starCount = getStarsOfPurse(event.budget);
+    let stars = '★'.repeat(starCount);
+    return stars;
+  }
+
+  roundUnderThousand(n: number): number {
+    return Math.round(n / 1000) * 1000;
   }
 }

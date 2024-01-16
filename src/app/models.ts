@@ -24,6 +24,7 @@ export interface LocationInfo {
   title: string;
   geolocation: GeoPosition;
   prefecture: string;
+  weather?: string;
 }
 
 export interface PdgaInfo {
@@ -54,6 +55,16 @@ export interface Layouts {
   cbj?: string;
 }
 
+export interface ProBudget {
+  entreefee: number;  // JPY
+  purse: number;      // Pro Purse, USD
+  rate: number;       // JPY/USD
+  paidout: number;    // Players paid out
+  totalprize?: number;  // Pro Purse, JPY
+  prizeratio?: number;  // Pro Payout % of Entry Fees
+  paidratio?: number;   // % Players paid out
+}
+
 export interface EventInfo {
   id: EventId;
   title?: string;
@@ -70,6 +81,7 @@ export interface EventInfo {
   players?: Players;
   layout?: Layouts;
   rounds?: RoundId[];
+  budget?: ProBudget;
 }
 
 export interface VideoInfo {

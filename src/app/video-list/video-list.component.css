@@ -1,6 +1,3 @@
-.full-width-table {
-  width: 100%;
-}
 table {
   width: 100%;
 }
@@ -9,4 +6,12 @@ tr.element-row:hover {
 }
 tr.element-row:active {
   background: #efefef;
+}
+table td {
+  padding: 5px 10px;
+  font-size: 13px;
+}
+table td:first-child {
+  font-weight: bold;
+  text-align: center;
 }

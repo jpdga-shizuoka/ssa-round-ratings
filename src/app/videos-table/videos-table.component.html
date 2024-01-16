@@ -48,7 +48,6 @@
 
   <mat-paginator #paginator *ngIf="!isMinimum"
       [length]="dataSource?.data?.length"
-      [pageIndex]="0"
       [pageSize]="pageSizeOptions[0]"
       [pageSizeOptions]="pageSizeOptions">
   </mat-paginator>
