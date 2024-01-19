@@ -161,7 +161,19 @@ export function getStarsOfPurse(budget: ProBudget): number {
     if (budget.purse >= 1000) {
       stars++;
     }
-    if (budget.prizeratio >= 0.5) {
+    if (budget.prizeratio >= 0.10) {
+      stars++;
+    }
+    if (budget.prizeratio >= 0.25) {
+      stars++;
+    }
+    if (budget.prizeratio >= 0.30) {
+      stars++;
+    }
+    if (budget.prizeratio >= 0.50) {
+      stars++;
+    }
+    if (budget.paidratio >= 0.20) {
       stars++;
     }
     if (budget.paidratio >= 0.25) {
