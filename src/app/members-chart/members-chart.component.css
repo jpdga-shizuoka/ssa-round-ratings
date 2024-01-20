@@ -2,6 +2,7 @@
   user-select: none;
   overflow-x: auto;
   margin: 10px;
+  height: 450px;
 }
 
 .legend {
