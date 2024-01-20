@@ -111,7 +111,7 @@ export class EventComponent implements OnInit, OnDestroy {
       return '';
     }
     let starCount = getStarsOfPurse(event.budget);
-    let stars = '★'.repeat(starCount);
+    let stars = '\u{2605}'.repeat(starCount);
     return stars;
   }
 
