@@ -82,6 +82,7 @@ import { Sec5Component } from './libraries/sec5.component';
 import { TrueAmateurComponent } from './libraries/true-amateur.component';
 import { IndexComponent } from './libraries/index.component';
 import { TourStandardsComponent } from './libraries/tour-standards.component';
+import { PhotoListComponent } from './photo-list/photo-list.component';
 
 @NgModule({
     declarations: [
@@ -136,7 +137,8 @@ import { TourStandardsComponent } from './libraries/tour-standards.component';
         Sec5Component,
         TrueAmateurComponent,
         IndexComponent,
-        TourStandardsComponent
+        TourStandardsComponent,
+        PhotoListComponent
     ],
     imports: [
         BrowserModule,

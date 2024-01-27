@@ -127,11 +127,8 @@
 
   <div *ngIf="photoInfo.length">
     <h2>{{'Photos' | localize}}</h2>
-    <li *ngFor="let photo of photoInfo;">
-      <a href="{{photo.url}}">
-        {{photo.title}}
-      </a>
-    </li>
+    <app-photo-list [list]="photoInfo">
+    </app-photo-list>
   </div>
 
   <div *ngIf="event$ | async as event">
