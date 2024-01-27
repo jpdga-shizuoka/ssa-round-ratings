@@ -413,6 +413,9 @@
       "from": "2024-03-02",
       "to": "2024-03-03"
     },
+    "pdga": {
+      "eventId": "77102"
+    },
     "jpdga": {
       "eventId": "667"
     }
@@ -426,7 +429,8 @@
       "to": "2024-02-11"
     },
     "pdga": {
-      "eventId": "75533"
+      "eventId": "75533",
+      "scoreId": "75533"
     },
     "jpdga": {
       "eventId": "666"
@@ -1112,6 +1116,11 @@
       "eventId": "641"
     },
     "urls": [
+      {
+        "type": "video",
+        "title": "Final,MPO,@Dch-discchannel",
+        "url": "https://youtu.be/z0BaJTvQirY"
+      },
       {
         "type": "video",
         "title": "Semi-Final,MPO,@Dch-discchannel",
