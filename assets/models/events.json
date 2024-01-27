@@ -485,6 +485,16 @@
     },
     "urls": [
       {
+        "type": "photo",
+        "title": "Day1,小山市ディスクゴルフ協会",
+        "url": "https://www.facebook.com/share/UxFxHt46rfXgi117"
+      },
+      {
+        "type": "photo",
+        "title": "小山市ディスクゴルフ協会",
+        "url": "https://www.facebook.com/share/kjVQSRpAMdjtAhSK"
+      },
+      {
         "type": "video",
         "title": "アマオープン午前,@tiikiken",
         "url": "https://youtu.be/esZOuYWK2xk"
@@ -577,6 +587,11 @@
       "eventId": "663"
     },
     "urls": [
+      {
+        "type": "video",
+        "title": "Lead Card,F9,R#3,MPO,@JANDLUX",
+        "url": "https://youtu.be/HxAgXwwIu10"
+      },
       {
         "type": "video",
         "title": "Lead Card,B9,R#2,MPO,@JANDLUX",
