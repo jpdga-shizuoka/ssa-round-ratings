@@ -428,12 +428,20 @@
       "from": "2024-02-10",
       "to": "2024-02-11"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/666_map.pdf"
+    },
     "pdga": {
       "eventId": "75533",
       "scoreId": "75533"
     },
     "jpdga": {
       "eventId": "666"
+    },
+    "players": {
+      "pro": 31,
+      "ama": 25,
+      "misc": 0
     },
     "urls": [
       {
@@ -476,6 +484,7 @@
       "to": "2024-01-08"
     },
     "jpdga": {
+      "topicId": "1812",
       "eventId": "664"
     },
     "players": {
@@ -538,6 +547,7 @@
       "scoreId": "71461"
     },
     "jpdga": {
+      "topicId": "1796",
       "eventId": "656"
     },
     "urls": [
@@ -651,6 +661,7 @@
       "scoreId": "71460"
     },
     "jpdga": {
+      "topicId": "1792",
       "eventId": "610"
     },
     "urls": [
@@ -683,6 +694,7 @@
       "misc": 0
     },
     "jpdga": {
+      "topicId": "1789",
       "eventId": "654"
     },
     "urls": [
@@ -710,6 +722,7 @@
       "misc": 107
     },
     "jpdga": {
+      "topicId": "1788",
       "eventId": "653"
     },
     "urls": [
@@ -757,6 +770,7 @@
       "scoreId": "71459"
     },
     "jpdga": {
+      "topicId": "1791",
       "eventId": "652"
     },
     "urls": [
@@ -811,6 +825,7 @@
       "eventId": "71458"
     },
     "jpdga": {
+      "topicId": "1777",
       "eventId": "651"
     },
     "rounds": [
@@ -844,6 +859,7 @@
       "scoreId": "71457"
     },
     "jpdga": {
+      "topicId": "1775",
       "eventId": "649"
     },
     "urls": [
@@ -885,6 +901,7 @@
       "scoreId": "71455"
     },
     "jpdga": {
+      "topicId": "1773",
       "eventId": "647"
     },
     "urls": [
@@ -996,6 +1013,7 @@
       "scoreId": "70134"
     },
     "jpdga": {
+      "topicId": "1764",
       "eventId": "645"
     },
     "urls": [
@@ -1033,6 +1051,7 @@
       "scoreId": "70096"
     },
     "jpdga": {
+      "topicId": "1759",
       "eventId": "644"
     },
     "urls": [
@@ -1083,6 +1102,7 @@
       "eventId": "70095"
     },
     "jpdga": {
+      "topicId": "1755",
       "eventId": "642"
     },
     "urls": [
@@ -1128,6 +1148,7 @@
       "eventId": "70094"
     },
     "jpdga": {
+      "topicId": "1750",
       "eventId": "641"
     },
     "urls": [
@@ -1210,6 +1231,7 @@
       "scoreId": "70092"
     },
     "jpdga": {
+      "topicId": "1744",
       "eventId": "637"
     },
     "urls": [
@@ -1259,6 +1281,7 @@
       "misc": 2
     },
     "jpdga": {
+      "topicId": "1737",
       "eventId": "658"
     }
   },
@@ -1274,6 +1297,7 @@
       "to": "2023-06-04"
     },
     "jpdga": {
+      "topicId": "1736",
       "eventId": "636"
     },
     "players": {
@@ -1318,6 +1342,7 @@
       "scoreId": "67931"
     },
     "jpdga": {
+      "topicId": "1749",
       "eventId": "634"
     },
     "rounds": [
@@ -1348,6 +1373,7 @@
       "scoreId": "66722"
     },
     "jpdga": {
+      "topicId": "1730",
       "eventId": "633"
     },
     "urls": [
@@ -1487,6 +1513,7 @@
       "scoreId": "67929"
     },
     "jpdga": {
+      "topicId": "1735",
       "eventId": "631"
     },
     "urls": [
@@ -1614,6 +1641,7 @@
       "scoreId": "66721"
     },
     "jpdga": {
+      "topicId": "1718",
       "eventId": "628"
     },
     "players": {
@@ -1668,6 +1696,7 @@
       "eventId": "66069"
     },
     "jpdga": {
+      "topicId": "1709",
       "eventId": "627"
     },
     "players": {
