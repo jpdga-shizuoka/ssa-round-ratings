@@ -428,12 +428,20 @@
       "from": "2024-02-10",
       "to": "2024-02-11"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/666_map.pdf"
+    },
     "pdga": {
       "eventId": "75533",
       "scoreId": "75533"
     },
     "jpdga": {
       "eventId": "666"
+    },
+    "players": {
+      "pro": 31,
+      "ama": 25,
+      "misc": 0
     },
     "urls": [
       {
