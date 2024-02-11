@@ -73,6 +73,7 @@ export interface EventInfo {
   location$?: Observable<LocationInfo>;
   status?: string;
   pdga?: PdgaInfo;
+  pdga2nd?: PdgaInfo;
   jpdga?: JpdgaInfo;
   website?: string;     // url of the event
   urls?: UrlInfo[];

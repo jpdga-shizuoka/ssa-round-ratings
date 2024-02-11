@@ -1,6 +1,19 @@
 import { RoundInfo, EventInfo } from '../models';
 import { ICONS, MiscInfo } from '../app-common';
 
+function isFutureEvent(date: string): boolean {
+  const eventDate = new Date(date);
+  const nowDate = new Date();
+  return eventDate.getTime() > nowDate.getTime();
+}
+
+function getLabelForResult(event: EventInfo): string {
+  if (!event.period) {
+    return '';
+  }
+  return isFutureEvent(event.period.from) ? 'Current Registration' : 'Results';
+}
+
 export function getJpdgaInfo(eventId?: string): string {
   return `http://www.jpdga.jp/event.php?tno=${eventId ?? ''}`;
 }
@@ -153,7 +166,7 @@ export function makePdgaInfo(event: EventInfo): MiscInfo[] {
   if (event.pdga?.eventId) {
     info.push({
       icon: 'public',
-      title: 'Results',
+      title: getLabelForResult(event),
       url: getPdgaResult(event.pdga.eventId)
     });
   }
@@ -172,7 +185,7 @@ export function makePdga2nd(event: EventInfo): MiscInfo[] {
   if (event.pdga2nd?.eventId) {
     info.push({
       icon: 'public',
-      title: 'Results',
+      title: getLabelForResult(event),
       url: getPdgaResult(event.pdga2nd.eventId)
     });
   }
