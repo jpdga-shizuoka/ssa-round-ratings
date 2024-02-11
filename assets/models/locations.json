@@ -205,7 +205,8 @@
     "prefecture": "Kumamoto",
     "geolocation": [
       32.19908109225617, 130.38387270550996
-    ]
+    ],
+    "weather": "https://weather.yahoo.co.jp/weather/jp/43/8630/43205.html"
   },
   {
     "prefecture": "Kanagawa",
