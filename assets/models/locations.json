@@ -345,7 +345,8 @@
     "id": "enakyoparkcountryclub",
     "title": "Ena-Kyo Park Country Club",
     "prefecture": "Gifu",
-    "geolocation": [35.483179, 137.421964]
+    "geolocation": [35.483179, 137.421964],
+    "weather": "https://weather.yahoo.co.jp/weather/jp/21/5210/21210.html"
   },
   {
     "prefecture": "Saga",
