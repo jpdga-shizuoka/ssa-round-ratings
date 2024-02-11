@@ -342,6 +342,12 @@
     "title": "Mitake-cho Nanzan Park"
   },
   {
+    "id": "enakyoparkcountryclub",
+    "title": "Ena-Kyo Park Country Club",
+    "prefecture": "Gifu",
+    "geolocation": [35.483179, 137.421964]
+  },
+  {
     "prefecture": "Saga",
     "geolocation": [
       33.325602,
