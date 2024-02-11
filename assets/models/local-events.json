@@ -1,11 +1,12 @@
 [
   {
+    "id": "theaichiopendiscgolfseries",
     "category": "local",
     "title": "The Aichi Open Disc Golf Series",
-    "location": "shiminshikinomori",
+    "location": "enakyoparkcountryclub",
     "period": {
-      "from": "2024-03-03",
-      "to": "2024-03-03"
+      "from": "2024-04-14",
+      "to": "2024-04-14"
     },
     "urls": [
       {
@@ -13,8 +14,24 @@
         "title": "Aichi Flying Disc Association",
         "url": "https://aifda.or.jp/category/discgolf/"
       }
-    ],
-    "id": "theaichiopendiscgolfseries"
+    ]
+  },
+  {
+    "id": "theaichiopendiscgolfseries",
+    "category": "local",
+    "title": "The Aichi Open Disc Golf Series",
+    "location": "enakyoparkcountryclub",
+    "period": {
+      "from": "2024-03-17",
+      "to": "2024-03-17"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ]
   },
   {
     "category": "local",
