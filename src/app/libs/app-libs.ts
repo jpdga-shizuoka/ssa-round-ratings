@@ -167,6 +167,25 @@ export function makePdgaInfo(event: EventInfo): MiscInfo[] {
   return info;
 }
 
+export function makePdga2nd(event: EventInfo): MiscInfo[] {
+  const info: MiscInfo[] = [];
+  if (event.pdga2nd?.eventId) {
+    info.push({
+      icon: 'public',
+      title: 'Results',
+      url: getPdgaResult(event.pdga2nd.eventId)
+    });
+  }
+  if (event.pdga2nd?.scoreId) {
+    info.push({
+      icon: 'public',
+      title: 'Live Score',
+      url: getLiveScore(event.pdga2nd.scoreId)
+    });
+  }
+  return info;
+}
+
 export function makeJpdgaInfo(event: EventInfo): MiscInfo[] {
   const info: MiscInfo[] = [];
   if (isPastEvent(event)) {

@@ -72,7 +72,18 @@
             </ng-template>
           </td>
         </tr>
-    
+
+        <tr class="element-row" *ngIf="pdga2nd.length && !canceled">
+          <td>PDGA</td>
+          <td class="info-container">
+            <ng-template ngFor let-info [ngForOf]="pdga2nd">
+              <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
+                {{info.title | localize}}
+              </a>
+            </ng-template>
+          </td>
+        </tr>
+        
         <tr class="element-row" *ngIf="jpdgaInfo.length && !canceled">
           <td>JPDGA</td>
           <td class="info-container">

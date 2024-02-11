@@ -4,7 +4,7 @@ import { Observable, Subject, Subscription } from 'rxjs';
 import { first, tap } from 'rxjs/operators';
 
 import { RemoteService, EventId, EventInfo, LocationInfo } from '../remote.service';
-import { getCbjUrl, makePdgaInfo, makeJpdgaInfo, makeMiscInfo, makeVideoInfo, makePhotoInfo, getStarsOfPurse } from '../libs';
+import { getCbjUrl, makePdgaInfo, makePdga2nd, makeJpdgaInfo, makeMiscInfo, makeVideoInfo, makePhotoInfo, getStarsOfPurse } from '../libs';
 import { MiscInfo } from '../app-common';
 import { RoundId, Layouts } from '../models';
 
@@ -50,6 +50,7 @@ export class EventComponent implements OnInit, OnDestroy {
   roundList$?: Subject<RoundId[]>;
   location$?: Observable<LocationInfo>;
   pdgaInfo: MiscInfo[] = [];
+  pdga2nd: MiscInfo[] = [];
   jpdgaInfo: MiscInfo[] = [];
   miscInfo: MiscInfo[] = [];
   videoInfo: MiscInfo[] = [];
@@ -75,6 +76,7 @@ export class EventComponent implements OnInit, OnDestroy {
           tap(event => {
             this.location$ = this.remote.getLocation(event.location).pipe(first());
             this.pdgaInfo = makePdgaInfo(event);
+            this.pdga2nd = makePdga2nd(event);
             this.jpdgaInfo = makeJpdgaInfo(event);
             this.miscInfo = makeMiscInfo(event);
             this.videoInfo = makeVideoInfo(event);
