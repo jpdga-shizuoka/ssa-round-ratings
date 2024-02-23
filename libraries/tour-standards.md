@@ -1,11 +1,13 @@
-本ページは、[PDGA Tour Standards](https://www.pdga.com/pdga-documents/tour-documents/pdga-tour-standards)の日本語訳です。
+本ページは、[PDGA Tour Standards](https://www.pdga.com/pdga-documents/tour-documents/pdga-tour-standards)の邦訳です。
+
+---
 
 # PDGAツアー基準
 
 PDGAツアー基準は全てのPDGA公認大会の基本的な要件を規定しています。
 
-* [2023年PDGAツアー基準(北米向け)(英語)](https://www.pdga.com/files/2023_pdga_tour_standards_v10.pdf)
-* [2023年PDGA国際大会の基準(北米以外)](/libraries/sec8)
+* [PDGAツアー基準(北米向け)(英語)](https://www.pdga.com/files/2024_pdga_us_canada_tour_standards_v6.pdf)
+* [PDGA国際大会の基準(北米以外)](/libraries/ts)
 
 ---
 ## 関連資料
