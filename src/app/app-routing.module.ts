@@ -19,7 +19,7 @@ import { PlayerpackComponent } from './libraries/playerpack.component';
 import { PointsComponent } from './libraries/points.component';
 import { ReclassificationComponent } from './libraries/reclassification.component';
 import { Sec5Component } from './libraries/sec5.component';
-import { Sec8Component } from './libraries/sec8.component';
+import { Ts2023Component } from './libraries/ts2023.component';
 import { TrueAmateurComponent } from './libraries/true-amateur.component';
 import { TourStandardsComponent } from './libraries/tour-standards.component';
 import { RatingsComponent } from './libraries/ratings.component';
@@ -222,11 +222,11 @@ const routes: Routes = [
     }}
   },
   {
-    path: 'libraries/sec8',
-    component: Sec8Component,
+    path: 'libraries/ts2023',
+    component: Ts2023Component,
     data: { metaDescription: {
-      title: 'DG Japan - 国際大会の基準',
-      subtitle: '国際大会の基準'
+      title: 'DG Japan - 国際大会の基準(2023)',
+      subtitle: '国際大会の基準(2023)'
     }}
   },
   {
