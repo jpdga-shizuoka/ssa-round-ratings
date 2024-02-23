@@ -370,6 +370,9 @@
       "from": "2024-04-20",
       "to": "2024-04-21"
     },
+    "pdga": {
+      "eventId": "79081"
+    },
     "jpdga": {
       "eventId": "670"
     }
@@ -381,6 +384,9 @@
     "period": {
       "from": "2024-04-13",
       "to": "2024-04-14"
+    },
+    "pdga": {
+      "eventId": "79080"
     },
     "jpdga": {
       "eventId": "669"
@@ -610,6 +616,11 @@
       "eventId": "663"
     },
     "urls": [
+      {
+        "type": "video",
+        "title": "Lead Card,F9,Final,MPO,@JANDLUX",
+        "url": "https://youtu.be/1EAHglncK6c"
+      },
       {
         "type": "video",
         "title": "Lead Card,F9,R#3,MPO,@JANDLUX",
