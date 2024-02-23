@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-sec8',
-  templateUrl: './sec8.component.html',
+  selector: 'app-ts2023',
+  templateUrl: './ts2023.component.html',
   styleUrls: ['./libraries.component.css']
 })
-export class Sec8Component implements OnInit {
+export class Ts2023Component implements OnInit {
 
   constructor() { }
 
