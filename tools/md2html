@@ -8,6 +8,8 @@ const md = require('markdown-it')({
 })
 .use(replaceLinkPlugIn)
 .use(require('markdown-it-sup'))
+.use(require('markdown-it-ins'))
+.use(require('markdown-it-strikethrough-alt'))
 .use(require('markdown-it-container'), 'widetable', {
   render: function (tokens, idx) {
     const m = tokens[idx].info.trim().match(/^widetable\s+(.*)$/);
