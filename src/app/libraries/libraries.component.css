@@ -35,3 +35,11 @@ tr:nth-child(even){background-color: #f2f2f2}
 .app-table {
     overflow-x: auto;
 }
+s {
+    text-decoration-thickness: 0.2rem;
+    color: #555;
+}
+ins {
+    background-color: #d4fcbc;
+    text-decoration: none;
+}
