@@ -20,6 +20,7 @@ import { PointsComponent } from './libraries/points.component';
 import { ReclassificationComponent } from './libraries/reclassification.component';
 import { Sec5Component } from './libraries/sec5.component';
 import { Ts2023Component } from './libraries/ts2023.component';
+import { Ts2024Component } from './libraries/ts2024.component';
 import { TrueAmateurComponent } from './libraries/true-amateur.component';
 import { TourStandardsComponent } from './libraries/tour-standards.component';
 import { RatingsComponent } from './libraries/ratings.component';
@@ -219,6 +220,17 @@ const routes: Routes = [
     data: { metaDescription: {
       title: 'DG Japan - 各国への競技マニュアルの適用',
       subtitle: '各国への競技マニュアルの適用'
+    }}
+  },
+  {
+    path: 'libraries/ts', redirectTo: 'libraries/ts2024', pathMatch: 'full'
+  },
+  {
+    path: 'libraries/ts2024',
+    component: Ts2024Component,
+    data: { metaDescription: {
+      title: 'DG Japan - 国際大会の基準(2024)',
+      subtitle: '国際大会の基準(2024)'
     }}
   },
   {

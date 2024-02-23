@@ -75,6 +75,7 @@ import { NonStandardRulesComponent } from './libraries/non-standard-rules.compon
 import { PointsComponent } from './libraries/points.component';
 import { ReclassificationComponent } from './libraries/reclassification.component';
 import { Ts2023Component } from './libraries/ts2023.component';
+import { Ts2024Component } from './libraries/ts2024.component';
 import { DivisionsComponent } from './libraries/divisions.component';
 import { PlayerpackComponent } from './libraries/playerpack.component';
 import { RatingsComponent } from './libraries/ratings.component';
@@ -131,6 +132,7 @@ import { PhotoListComponent } from './photo-list/photo-list.component';
         PointsComponent,
         ReclassificationComponent,
         Ts2023Component,
+        Ts2024Component,
         DivisionsComponent,
         PlayerpackComponent,
         RatingsComponent,
