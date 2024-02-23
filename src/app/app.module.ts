@@ -74,7 +74,7 @@ import { FaqRatingsComponent } from './libraries/faq-ratings.component';
 import { NonStandardRulesComponent } from './libraries/non-standard-rules.component';
 import { PointsComponent } from './libraries/points.component';
 import { ReclassificationComponent } from './libraries/reclassification.component';
-import { Sec8Component } from './libraries/sec8.component';
+import { Ts2023Component } from './libraries/ts2023.component';
 import { DivisionsComponent } from './libraries/divisions.component';
 import { PlayerpackComponent } from './libraries/playerpack.component';
 import { RatingsComponent } from './libraries/ratings.component';
@@ -130,7 +130,7 @@ import { PhotoListComponent } from './photo-list/photo-list.component';
         NonStandardRulesComponent,
         PointsComponent,
         ReclassificationComponent,
-        Sec8Component,
+        Ts2023Component,
         DivisionsComponent,
         PlayerpackComponent,
         RatingsComponent,
