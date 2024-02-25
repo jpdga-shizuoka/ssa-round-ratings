@@ -29,7 +29,7 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   search = '';
   dataSource!: EventsDataSource;
   expandedElement?: EventInfo;
-  pageSizeOptions = [10, 20, 50, 100];
+  pageSizeOptions = [30, 60, 120];
   private subscription?: Subscription;
 
   constructor(

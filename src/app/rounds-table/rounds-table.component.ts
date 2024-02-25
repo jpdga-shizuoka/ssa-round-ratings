@@ -38,7 +38,7 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   dataSource!: RoundsDataSource;
   expandedElement?: RoundInfo;
   showDetail = false;
-  pageSizeOptions = [10, 20, 50, 100];
+  pageSizeOptions = [30, 60, 120];
   private ssMarker?: Subscription;
   private ssQuery?: Subscription;
   private detailDisabled = false;

@@ -24,7 +24,7 @@ const DISPLAYED_COLUMNS = [['title', 'subttl'], ['year', 'title', 'subttl']];
   styleUrls: ['./videos-table.component.css']
 })
 export class VideosTableComponent implements OnInit, AfterViewInit {
-  @Input() pageSizeOptions = [10, 20, 50, 100];
+  @Input() pageSizeOptions = [30, 60, 120];
   @Input() showSearch = true;
   @Input() showMore = false;
   @Input() search = '';
