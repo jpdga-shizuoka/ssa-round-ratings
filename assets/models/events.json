@@ -419,6 +419,9 @@
       "from": "2024-03-02",
       "to": "2024-03-03"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/667_map.pdf"
+    },
     "pdga": {
       "eventId": "77102"
     },
