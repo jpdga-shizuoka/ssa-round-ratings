@@ -423,9 +423,11 @@
       "official": "http://www.jpdga.jp/data/event/2024/667_map.pdf"
     },
     "pdga": {
+      "scoreId": "77102",
       "eventId": "77102"
     },
     "pdga2nd": {
+      "scoreId": "78423",
       "eventId": "78423"
     },
     "jpdga": {
