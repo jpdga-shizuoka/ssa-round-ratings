@@ -347,7 +347,7 @@
     "location": "minamisomahoseridingpark",
     "period": {
       "from": "2024-05-04",
-      "to": "2024-04-04"
+      "to": "2024-05-04"
     },
     "jpdga": {
       "eventId": "671"
@@ -402,6 +402,10 @@
     "period": {
       "from": "2024-04-06",
       "to": "2024-04-07"
+    },
+    "pdga": {
+      "scoreId": "79194",
+      "eventId": "79194"
     },
     "jpdga": {
       "eventId": "668"
