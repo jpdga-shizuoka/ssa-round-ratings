@@ -444,7 +444,19 @@
       "pro": 56,
       "ama": 138,
       "misc": 0
-    }
+    },
+    "urls": [
+      {
+        "type": "video",
+        "title": "Winner interview,MPO,@discgolflab",
+        "url": "https://youtu.be/6VEaTMY8bqs"
+      },
+      {
+        "type": "video",
+        "title": "Lead Card,R3F9,MPO,@Dch-discchannel",
+        "url": "https://youtu.be/BVmxPrOFn2U"
+      }
+    ]
   },
   {
     "id": "the12thokinawaopen",
