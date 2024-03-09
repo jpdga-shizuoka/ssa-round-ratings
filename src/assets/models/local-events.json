@@ -17,6 +17,23 @@
     "id": "theminamiaizuopen"
   },
   {
+    "id": "theikedatowndiscgolftournament",
+    "category": "local",
+    "title": "The Ikeda Town Disc Golf Tournament",
+    "location": "ikedatowngeneralgymnasium",
+    "period": {
+      "from": "2024-06-23",
+      "to": "2024-06-23"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/gifuflyingdiscassociation/"
+      }
+    ]
+  },
+  {
     "id": "theaichiopendiscgolfseries",
     "category": "local",
     "title": "The Aichi Open Disc Golf Series",
