@@ -1,6 +1,40 @@
 [
   {
     "category": "local",
+    "title": "The Aichi Open Disc Golf Series",
+    "location": "mikawarinkairyokuchi",
+    "period": {
+      "from": "2024-12-08",
+      "to": "2024-12-08"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendiscgolfseries"
+  },
+  {
+    "category": "local",
+    "title": "The Aichi Open Disc Golf Series",
+    "location": "shiminshikinomori",
+    "period": {
+      "from": "2024-11-10",
+      "to": "2024-11-10"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendiscgolfseries"
+  },
+  {
+    "category": "local",
     "title": "The Minami Aizu Open",
     "location": "okawafurusatopark",
     "period": {
@@ -15,6 +49,40 @@
       }
     ],
     "id": "theminamiaizuopen"
+  },
+  {
+    "category": "local",
+    "title": "The Aichi Open Disc Golf Series",
+    "location": "shiminshikinomori",
+    "period": {
+      "from": "2024-08-04",
+      "to": "2024-08-04"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendiscgolfseries"
+  },
+  {
+    "category": "local",
+    "title": "The Aichi Open, Doubles",
+    "location": "shinshiropark",
+    "period": {
+      "from": "2024-07-07",
+      "to": "2024-07-07"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendiscgolfseries"
   },
   {
     "id": "theikedatowndiscgolftournament",
@@ -32,6 +100,23 @@
         "url": "https://www.facebook.com/gifuflyingdiscassociation/"
       }
     ]
+  },
+  {
+    "category": "local",
+    "title": "The Aichi Open Disc Golf Series",
+    "location": "shinshiropark",
+    "period": {
+      "from": "2024-05-12",
+      "to": "2024-05-12"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Aichi Flying Disc Association",
+        "url": "https://aifda.or.jp/category/discgolf/"
+      }
+    ],
+    "id": "theaichiopendiscgolfseries"
   },
   {
     "id": "theaichiopendiscgolfseries",
