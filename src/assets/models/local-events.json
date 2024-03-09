@@ -1,5 +1,22 @@
 [
   {
+    "category": "local",
+    "title": "The Minami Aizu Open",
+    "location": "okawafurusatopark",
+    "period": {
+      "from": "2024-08-25",
+      "to": "2024-08-25"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://facebook.com/events/s/%E7%AC%AC%EF%BC%92%EF%BC%93%E5%9B%9E%E4%BC%9A%E6%B4%A5%E3%82%AA%E3%83%BC%E3%83%95%E3%83%B3%E3%83%86%E3%82%A3%E3%82%B9%E3%82%AF%E3%82%B3%E3%83%AB%E3%83%95%E5%A4%A7%E4%BC%9A/1428209927730325/"
+      }
+    ],
+    "id": "theminamiaizuopen"
+  },
+  {
     "id": "theaichiopendiscgolfseries",
     "category": "local",
     "title": "The Aichi Open Disc Golf Series",
