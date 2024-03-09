@@ -277,7 +277,14 @@
     },
     "jpdga": {
       "eventId": "680"
-    }
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://discgolf.jp/event/minamata/"
+      }
+    ]
   },
   {
     "id": "the7thgifuhiruganoopen",
@@ -298,6 +305,9 @@
     "period": {
       "from": "2024-05-18",
       "to": "2024-05-19"
+    },
+    "pdga": {
+      "eventId": "79794"
     },
     "jpdga": {
       "eventId": "678"
@@ -446,6 +456,11 @@
       "misc": 0
     },
     "urls": [
+      {
+        "type": "video",
+        "title": "Digest,@horiant",
+        "url": "https://youtu.be/d-tth7vIZLE"
+      },
       {
         "type": "video",
         "title": "Winner interview,MPO,@discgolflab",
