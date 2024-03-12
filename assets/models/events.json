@@ -2875,13 +2875,16 @@
     "pdga": {
       "eventId": "56396"
     },
+    "pdga2nd": {
+      "eventId": "59219"
+    },
     "jpdga": {
       "eventId": "612",
       "topicId": "1618"
     },
     "budget": {
       "entreefee": 5000,
-      "purse": 900,
+      "purse": 1152,
       "rate": 111,
       "paidout": 16
     },
