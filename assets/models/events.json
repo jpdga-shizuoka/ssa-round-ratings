@@ -2,10 +2,10 @@
   {
     "id": "the23rdchubuopen",
     "title": "The 23rd Chubu Open",
-    "location": "mikawarinkairyokuchi",
+    "location": "enakyoparkcountryclub",
     "period": {
-      "from": "2024-12-14",
-      "to": "2024-12-15"
+      "from": "2025-03-15",
+      "to": "2025-03-16"
     },
     "jpdga": {
       "eventId": "706"
@@ -248,8 +248,8 @@
     "title": "The 8th Miho Open",
     "location": "hikaritokazenookapark",
     "period": {
-      "from": "2024-06-15",
-      "to": "2024-06-16"
+      "from": "2024-06-22",
+      "to": "2024-06-23"
     },
     "jpdga": {
       "eventId": "684"
@@ -260,8 +260,8 @@
     "title": "The 19th Masters National Championships",
     "location": "hikaritokazenookapark",
     "period": {
-      "from": "2024-06-15",
-      "to": "2024-06-16"
+      "from": "2024-06-22",
+      "to": "2024-06-23"
     },
     "jpdga": {
       "eventId": "684"
