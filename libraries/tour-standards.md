@@ -12,7 +12,7 @@ PDGAツアー基準は全てのPDGA公認大会の基本的な要件を規定し
 ---
 ## 関連資料
 
-* [各国における競技マニュアルの適用](/libraries/sec5)
+* [各国における競技マニュアルの適用](/libraries/ordgcm)
 * [PDGA公認大会における非標準規則の採用に関して](/libraries/nonstandards)
 * [プレーヤーパックまたはアマチュア向け賞品の価値に見合う妥当な品目とは](/libraries/playerpack)
 

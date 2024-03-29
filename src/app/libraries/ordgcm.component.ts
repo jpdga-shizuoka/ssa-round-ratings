@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-sec5',
-  templateUrl: './sec5.component.html',
+  selector: 'app-ordgcm',
+  templateUrl: './ordgcm.component.html',
   styleUrls: ['./libraries.component.css']
 })
-export class Sec5Component implements OnInit {
+export class OrdgCmComponent implements OnInit {
 
   constructor() { }
 

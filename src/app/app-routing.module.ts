@@ -18,7 +18,7 @@ import { NonStandardRulesComponent } from './libraries/non-standard-rules.compon
 import { PlayerpackComponent } from './libraries/playerpack.component';
 import { PointsComponent } from './libraries/points.component';
 import { ReclassificationComponent } from './libraries/reclassification.component';
-import { Sec5Component } from './libraries/sec5.component';
+import { OrdgCmComponent } from './libraries/ordgcm.component';
 import { Ts2023Component } from './libraries/ts2023.component';
 import { Ts2024Component } from './libraries/ts2024.component';
 import { TrueAmateurComponent } from './libraries/true-amateur.component';
@@ -215,8 +215,8 @@ const routes: Routes = [
     }}
   },
   {
-    path: 'libraries/sec5',
-    component: Sec5Component,
+    path: 'libraries/ordgcm',
+    component: OrdgCmComponent,
     data: { metaDescription: {
       title: 'DG Japan - 各国への競技マニュアルの適用',
       subtitle: '各国への競技マニュアルの適用'
