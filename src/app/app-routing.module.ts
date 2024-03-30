@@ -19,6 +19,7 @@ import { PlayerpackComponent } from './libraries/playerpack.component';
 import { PointsComponent } from './libraries/points.component';
 import { ReclassificationComponent } from './libraries/reclassification.component';
 import { OrdgCm23Component } from './libraries/ordgcm23.component';
+import { OrdgCm24Component } from './libraries/ordgcm24.component';
 import { Ts2023Component } from './libraries/ts2023.component';
 import { Ts2024Component } from './libraries/ts2024.component';
 import { TrueAmateurComponent } from './libraries/true-amateur.component';
@@ -215,11 +216,22 @@ const routes: Routes = [
     }}
   },
   {
-    path: 'libraries/ordgcm',
+    path: 'libraries/ordgcm', redirectTo: 'libraries/ordgcm24', pathMatch: 'full'
+  },
+  {
+    path: 'libraries/ordgcm24',
+    component: OrdgCm24Component,
+    data: { metaDescription: {
+      title: 'DG Japan - 公式規則と競技マニュアル(2024)',
+      subtitle: '公式規則と競技マニュアル(2024)'
+    }}
+  },
+  {
+    path: 'libraries/ordgcm23',
     component: OrdgCm23Component,
     data: { metaDescription: {
-      title: 'DG Japan - 公式規則と競技マニュアル',
-      subtitle: '公式規則と競技マニュアル'
+      title: 'DG Japan - 公式規則と競技マニュアル(2023)',
+      subtitle: '公式規則と競技マニュアル(2023)'
     }}
   },
   {

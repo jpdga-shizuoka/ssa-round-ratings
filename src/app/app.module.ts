@@ -80,6 +80,7 @@ import { DivisionsComponent } from './libraries/divisions.component';
 import { PlayerpackComponent } from './libraries/playerpack.component';
 import { RatingsComponent } from './libraries/ratings.component';
 import { OrdgCm23Component } from './libraries/ordgcm23.component';
+import { OrdgCm24Component } from './libraries/ordgcm24.component';
 import { TrueAmateurComponent } from './libraries/true-amateur.component';
 import { IndexComponent } from './libraries/index.component';
 import { TourStandardsComponent } from './libraries/tour-standards.component';
@@ -137,6 +138,7 @@ import { PhotoListComponent } from './photo-list/photo-list.component';
         PlayerpackComponent,
         RatingsComponent,
         OrdgCm23Component,
+        OrdgCm24Component,
         TrueAmateurComponent,
         IndexComponent,
         TourStandardsComponent,
