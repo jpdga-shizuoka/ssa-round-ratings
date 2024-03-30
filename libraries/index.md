@@ -10,7 +10,7 @@ PDGAの公開資料から、いくつか紹介します。
     * [PDGAポイントの仕組み](/libraries/points)
 * [PDGAツアー基準](/libraries/tourstandards)
     * [PDGA国際大会の基準](/libraries/ts)
-    * [各国における競技マニュアルの適用](/libraries/ordgcm)
+    * [PDGA公式規則と競技マニュアル](/libraries/ordgcm)
     * [PDGA公認大会における非標準規則の採用に関して](/libraries/nonstandards)
     * [プレーヤーパックまたはアマチュア向け賞品の価値に見合う妥当な品目とは](/libraries/playerpack)
 * [PDGA真のアマチュア大会](/libraries/trueamateur)

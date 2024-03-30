@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-ordgcm',
-  templateUrl: './ordgcm.component.html',
+  templateUrl: './ordgcm23.component.html',
   styleUrls: ['./libraries.component.css']
 })
-export class OrdgCmComponent implements OnInit {
+export class OrdgCm23Component implements OnInit {
 
   constructor() { }
 

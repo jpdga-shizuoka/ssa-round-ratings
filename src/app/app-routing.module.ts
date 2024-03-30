@@ -18,7 +18,7 @@ import { NonStandardRulesComponent } from './libraries/non-standard-rules.compon
 import { PlayerpackComponent } from './libraries/playerpack.component';
 import { PointsComponent } from './libraries/points.component';
 import { ReclassificationComponent } from './libraries/reclassification.component';
-import { OrdgCmComponent } from './libraries/ordgcm.component';
+import { OrdgCm23Component } from './libraries/ordgcm23.component';
 import { Ts2023Component } from './libraries/ts2023.component';
 import { Ts2024Component } from './libraries/ts2024.component';
 import { TrueAmateurComponent } from './libraries/true-amateur.component';
@@ -216,7 +216,7 @@ const routes: Routes = [
   },
   {
     path: 'libraries/ordgcm',
-    component: OrdgCmComponent,
+    component: OrdgCm23Component,
     data: { metaDescription: {
       title: 'DG Japan - 公式規則と競技マニュアル',
       subtitle: '公式規則と競技マニュアル'

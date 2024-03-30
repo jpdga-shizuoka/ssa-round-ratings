@@ -79,7 +79,7 @@ import { Ts2024Component } from './libraries/ts2024.component';
 import { DivisionsComponent } from './libraries/divisions.component';
 import { PlayerpackComponent } from './libraries/playerpack.component';
 import { RatingsComponent } from './libraries/ratings.component';
-import { OrdgCmComponent } from './libraries/ordgcm.component';
+import { OrdgCm23Component } from './libraries/ordgcm23.component';
 import { TrueAmateurComponent } from './libraries/true-amateur.component';
 import { IndexComponent } from './libraries/index.component';
 import { TourStandardsComponent } from './libraries/tour-standards.component';
@@ -136,7 +136,7 @@ import { PhotoListComponent } from './photo-list/photo-list.component';
         DivisionsComponent,
         PlayerpackComponent,
         RatingsComponent,
-        OrdgCmComponent,
+        OrdgCm23Component,
         TrueAmateurComponent,
         IndexComponent,
         TourStandardsComponent,
