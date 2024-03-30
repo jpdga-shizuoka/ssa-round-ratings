@@ -218,8 +218,8 @@ const routes: Routes = [
     path: 'libraries/ordgcm',
     component: OrdgCmComponent,
     data: { metaDescription: {
-      title: 'DG Japan - 各国への競技マニュアルの適用',
-      subtitle: '各国への競技マニュアルの適用'
+      title: 'DG Japan - 公式規則と競技マニュアル',
+      subtitle: '公式規則と競技マニュアル'
     }}
   },
   {
