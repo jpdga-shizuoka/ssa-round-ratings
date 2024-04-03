@@ -413,6 +413,14 @@
       "from": "2024-04-06",
       "to": "2024-04-07"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/668_map.pdf"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 73,
+      "misc": 0
+    },
     "pdga": {
       "scoreId": "79194",
       "eventId": "79194"
