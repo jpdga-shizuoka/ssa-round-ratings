@@ -328,6 +328,9 @@
       "from": "2024-05-18",
       "to": "2024-05-19"
     },
+    "pdga": {
+      "eventId": "79763"
+    },
     "jpdga": {
       "eventId": "677"
     },
@@ -397,6 +400,9 @@
     "period": {
       "from": "2024-04-13",
       "to": "2024-04-14"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/669_map.pdf"
     },
     "pdga": {
       "eventId": "79080"
