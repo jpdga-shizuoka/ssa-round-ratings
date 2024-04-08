@@ -321,12 +321,31 @@
     ]
   },
   {
+    "id": "thediscgolfwomensgrobaleventtokyo2024",
+    "title": "The Discgolf Womens grobal event Tokyo 2024",
+    "location": "showakinenpark",
+    "period": {
+      "from": "2024-05-18",
+      "to": "2024-05-18"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://www.facebook.com/share/GL3TbtrsT3gBjkMe/"
+      }
+    ]
+  },
+  {
     "id": "the8thfukuiopen",
     "title": "The 8th Fukui Open",
     "location": "seasidenaturepark",
     "period": {
       "from": "2024-05-18",
       "to": "2024-05-19"
+    },
+    "pdga": {
+      "eventId": "79763"
     },
     "jpdga": {
       "eventId": "677"
@@ -336,6 +355,22 @@
         "type": "website",
         "title": "Official Site",
         "url": "http://www.sukima-labo.com/dg291/"
+      }
+    ]
+  },
+  {
+    "id": "thediscgolfwomensgrobaleventtokyo2024",
+    "title": "The Discgolf Womens grobal event Tokyo 2024",
+    "location": "showakinenpark",
+    "period": {
+      "from": "2024-05-18",
+      "to": "2024-05-18"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://www.facebook.com/share/GL3TbtrsT3gBjkMe/"
       }
     ]
   },
@@ -397,6 +432,9 @@
     "period": {
       "from": "2024-04-13",
       "to": "2024-04-14"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/669_map.pdf"
     },
     "pdga": {
       "eventId": "79080"
