@@ -436,6 +436,11 @@
     "layout": {
       "official": "http://www.jpdga.jp/data/event/2024/669_map.pdf"
     },
+    "players": {
+      "pro": 28,
+      "ama": 42,
+      "misc": 0
+    },
     "pdga": {
       "eventId": "79080"
     },
