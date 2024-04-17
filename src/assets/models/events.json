@@ -294,6 +294,7 @@
       "from": "2024-05-25",
       "to": "2024-05-26"
     },
+    "status": "CANCELED",
     "jpdga": {
       "eventId": "679"
     }
@@ -382,9 +383,19 @@
       "from": "2024-05-11",
       "to": "2024-05-12"
     },
+    "pdga": {
+      "eventId": "81085"
+    },
     "jpdga": {
       "eventId": "676"
-    }
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://discgolf-navi.com/tournament/nt-abt-lt/kiyosato-open/"
+      }
+    ]
   },
   {
     "id": "the19thminamisomaopen",
@@ -589,6 +600,7 @@
       "from": "2024-01-21",
       "to": "2024-01-21"
     },
+    "status": "CANCELED",
     "jpdga": {
       "eventId": "665"
     },
