@@ -429,12 +429,28 @@
       "from": "2024-04-20",
       "to": "2024-04-21"
     },
+    "layout": {
+      "official": "https://discgolf-navi.com/tournament/nt-abt-lt/tokyo-open/#toc3"
+    },
     "pdga": {
+      "scoreId": "79081",
       "eventId": "79081"
     },
     "jpdga": {
       "eventId": "670"
-    }
+    },
+    "players": {
+      "pro": 43,
+      "ama": 43,
+      "misc": 0
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://discgolf-navi.com/tournament/nt-abt-lt/tokyo-open/"
+      }
+    ]
   },
   {
     "id": "the21stsagaopen",
