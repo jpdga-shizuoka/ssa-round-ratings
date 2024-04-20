@@ -468,6 +468,12 @@
       "ama": 42,
       "misc": 0
     },
+    "budget": {
+      "entreefee": 7000,
+      "purse": 490,
+      "rate": 150,
+      "paidout": 8
+    },
     "pdga": {
       "eventId": "79080"
     },
@@ -533,6 +539,12 @@
       "ama": 138,
       "misc": 0
     },
+    "budget": {
+      "entreefee": 6000,
+      "purse": 1232,
+      "rate": 143,
+      "paidout": 15
+    },
     "urls": [
       {
         "type": "photo",
@@ -594,6 +606,12 @@
       "pro": 37,
       "ama": 30,
       "misc": 0
+    },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 385,
+      "rate": 125,
+      "paidout": 11
     },
     "urls": [
       {
