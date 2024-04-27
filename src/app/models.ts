@@ -28,6 +28,7 @@ export interface LocationInfo {
 }
 
 export interface PdgaInfo {
+  tier?: 'A' | 'B' | 'C';
   eventId?: string;
   scoreId?: string;
 }
