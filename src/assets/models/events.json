@@ -312,6 +312,26 @@
     }
   },
   {
+    "id": "theuminakawge2024",
+    "title": "The UMINAKA +WGE 2024",
+    "location": "uminonakamichiseasidepark",
+    "period": {
+      "from": "2024-05-19",
+      "to": "2024-05-19"
+    },
+    "pdga": {
+      "tier": "C",
+      "eventId": "81519"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "http://www.jpdgafukuoka.com/blog/?info=2024wge"
+      }
+    ]
+  },
+  {
     "id": "the2ndmichinokuqueenscup",
     "title": "The 2nd Michinoku Queen's Cup",
     "location": "kitakamisportpark",
@@ -320,6 +340,7 @@
       "to": "2024-05-19"
     },
     "pdga": {
+      "tier": "C",
       "eventId": "79794"
     },
     "jpdga": {
@@ -340,6 +361,10 @@
     "period": {
       "from": "2024-05-18",
       "to": "2024-05-18"
+    },
+    "pdga": {
+      "tier": "C",
+      "eventId": "80828"
     },
     "urls": [
       {
