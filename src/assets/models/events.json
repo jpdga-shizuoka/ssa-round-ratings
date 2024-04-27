@@ -287,6 +287,18 @@
     ]
   },
   {
+    "id": "the1stenagorgeopen",
+    "title": "The 1st Ena Gorge Open",
+    "location": "enakyoparkcountryclub",
+    "period": {
+      "from": "2024-05-25",
+      "to": "2024-05-26"
+    },
+    "jpdga": {
+      "eventId": "710"
+    }
+  },
+  {
     "id": "the7thgifuhiruganoopen",
     "title": "The 7th Gifu Hirugano Open",
     "location": "hiruganokogen",
