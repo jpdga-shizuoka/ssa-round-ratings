@@ -454,6 +454,15 @@
       "from": "2024-05-05",
       "to": "2024-05-06"
     },
+    "players": {
+      "pro": 0,
+      "ama": 48,
+      "misc": 3
+    },
+    "pdga": {
+      "tier": "B",
+      "eventId": "81355"
+    },
     "jpdga": {
       "eventId": "672"
     }
