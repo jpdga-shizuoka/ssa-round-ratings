@@ -496,6 +496,21 @@
     },
     "urls": [
       {
+        "type": "video",
+        "title": "Final, MPO,@Dch-discchannel",
+        "url": "https://youtu.be/H_rFcagRZPU"
+      },
+      {
+        "type": "video",
+        "title": "Semi-final, MPO,@Dch-discchannel",
+        "url": "https://youtu.be/FgVPed_nj3A"
+      },
+      {
+        "type": "video",
+        "title": "Vlog,@discgolflab",
+        "url": "https://youtu.be/RnXk-K0Ma58"
+      },
+      {
         "type": "website",
         "title": "Official Site",
         "url": "https://discgolf-navi.com/tournament/nt-abt-lt/tokyo-open/"
