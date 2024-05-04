@@ -446,6 +446,9 @@
       "from": "2024-05-04",
       "to": "2024-05-04"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/671_map.pdf"
+    },
     "jpdga": {
       "eventId": "671"
     }
