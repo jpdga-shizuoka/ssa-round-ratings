@@ -461,6 +461,9 @@
       "from": "2024-05-05",
       "to": "2024-05-06"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/672_map.pdf"
+    },
     "players": {
       "pro": 0,
       "ama": 48,
@@ -468,6 +471,7 @@
     },
     "pdga": {
       "tier": "B",
+      "scoreId": "81355",
       "eventId": "81355"
     },
     "jpdga": {
