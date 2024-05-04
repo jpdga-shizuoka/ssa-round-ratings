@@ -483,6 +483,7 @@
       "official": "https://discgolf-navi.com/tournament/nt-abt-lt/tokyo-open/#toc3"
     },
     "pdga": {
+      "tier": "B",
       "scoreId": "79081",
       "eventId": "79081"
     },
@@ -493,6 +494,12 @@
       "pro": 43,
       "ama": 43,
       "misc": 0
+    },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 1724,
+      "rate": 153.85,
+      "paidout": 10
     },
     "urls": [
       {
