@@ -449,6 +449,11 @@
     "layout": {
       "official": "http://www.jpdga.jp/data/event/2024/671_map.pdf"
     },
+    "players": {
+      "pro": 25,
+      "ama": 44,
+      "misc": 0
+    },
     "jpdga": {
       "eventId": "671"
     }
