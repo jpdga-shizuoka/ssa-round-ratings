@@ -446,6 +446,9 @@
       "from": "2024-05-04",
       "to": "2024-05-04"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/671_map.pdf"
+    },
     "jpdga": {
       "eventId": "671"
     }
@@ -458,6 +461,9 @@
       "from": "2024-05-05",
       "to": "2024-05-06"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/672_map.pdf"
+    },
     "players": {
       "pro": 0,
       "ama": 48,
@@ -465,6 +471,7 @@
     },
     "pdga": {
       "tier": "B",
+      "scoreId": "81355",
       "eventId": "81355"
     },
     "jpdga": {
@@ -483,6 +490,7 @@
       "official": "https://discgolf-navi.com/tournament/nt-abt-lt/tokyo-open/#toc3"
     },
     "pdga": {
+      "tier": "B",
       "scoreId": "79081",
       "eventId": "79081"
     },
@@ -493,6 +501,12 @@
       "pro": 43,
       "ama": 43,
       "misc": 0
+    },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 1724,
+      "rate": 153.85,
+      "paidout": 10
     },
     "urls": [
       {
