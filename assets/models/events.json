@@ -343,6 +343,14 @@
       "from": "2024-05-18",
       "to": "2024-05-19"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/678_map.pdf"
+    },
+    "players": {
+      "pro": 23,
+      "ama": 21,
+      "misc": 0
+    },
     "pdga": {
       "tier": "C",
       "eventId": "79794"
@@ -366,6 +374,11 @@
       "from": "2024-05-18",
       "to": "2024-05-18"
     },
+    "players": {
+      "pro": 4,
+      "ama": 14,
+      "misc": 2
+    },
     "pdga": {
       "tier": "C",
       "eventId": "80828"
@@ -385,6 +398,14 @@
     "period": {
       "from": "2024-05-18",
       "to": "2024-05-19"
+    },
+    "layout": {
+      "official": "http://www.sukima-labo.com/dg291/2024fukuiopen/2024fukuiop-course.pdf"
+    },
+    "players": {
+      "pro": 33,
+      "ama": 16,
+      "misc": 0
     },
     "pdga": {
       "eventId": "79763"
