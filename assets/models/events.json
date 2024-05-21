@@ -263,6 +263,10 @@
       "from": "2024-06-15",
       "to": "2024-06-16"
     },
+    "pdga": {
+      "tier": "B",
+      "eventId": "81665"
+    },
     "jpdga": {
       "eventId": "684"
     }
@@ -296,6 +300,7 @@
     },
     "pdga": {
       "tier": "B",
+      "scoreId": "81663",
       "eventId": "81663"
     },
     "jpdga": {
@@ -322,6 +327,11 @@
     "period": {
       "from": "2024-05-19",
       "to": "2024-05-19"
+    },
+    "players": {
+      "pro": 1,
+      "ama": 10,
+      "misc": 1
     },
     "pdga": {
       "tier": "C",
@@ -353,6 +363,7 @@
     },
     "pdga": {
       "tier": "C",
+      "scoreId": "79794",
       "eventId": "79794"
     },
     "jpdga": {
@@ -381,6 +392,7 @@
     },
     "pdga": {
       "tier": "C",
+      "scoreId": "80828",
       "eventId": "80828"
     },
     "urls": [
@@ -414,6 +426,11 @@
       "eventId": "677"
     },
     "urls": [
+      {
+        "type": "video",
+        "title": "Vlog,@discgolflab",
+        "url": "https://youtu.be/-Rq5AdTaUCM"
+      },
       {
         "type": "website",
         "title": "Official Site",
@@ -460,7 +477,23 @@
     "jpdga": {
       "eventId": "676"
     },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 914,
+      "rate": 156.3,
+      "paidout": 12
+    },
     "urls": [
+      {
+        "type": "video",
+        "title": "Final, MPO,@Dch-discchannel",
+        "url": "https://youtu.be/HSmQDwAYvBw"
+      },
+      {
+        "type": "video",
+        "title": "Vlog,@discgolflab",
+        "url": "https://youtu.be/CFT0n-mVEnk"
+      },
       {
         "type": "website",
         "title": "Official Site",
@@ -511,7 +544,14 @@
     },
     "jpdga": {
       "eventId": "672"
-    }
+    },
+    "urls":[
+      {
+        "type": "video",
+        "title": "Final MA1, @Dch-discchannel",
+        "url": "https://youtu.be/IkTvgy6kuG8"
+      }
+    ]
   },
   {
     "id": "the31sttokyoopen",
