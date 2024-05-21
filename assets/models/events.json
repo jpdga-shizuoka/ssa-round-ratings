@@ -298,6 +298,9 @@
       "from": "2024-05-25",
       "to": "2024-05-26"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/710_map.pdf"
+    },
     "pdga": {
       "tier": "B",
       "scoreId": "81663",
