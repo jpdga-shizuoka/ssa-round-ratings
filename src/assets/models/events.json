@@ -427,6 +427,11 @@
     },
     "urls": [
       {
+        "type": "video",
+        "title": "Vlog,@discgolflab",
+        "url": "https://youtu.be/-Rq5AdTaUCM"
+      },
+      {
         "type": "website",
         "title": "Official Site",
         "url": "http://www.sukima-labo.com/dg291/"
@@ -480,6 +485,16 @@
     },
     "urls": [
       {
+        "type": "video",
+        "title": "Final, MPO,@Dch-discchannel",
+        "url": "https://youtu.be/HSmQDwAYvBw"
+      },
+      {
+        "type": "video",
+        "title": "Vlog,@discgolflab",
+        "url": "https://youtu.be/CFT0n-mVEnk"
+      },
+      {
         "type": "website",
         "title": "Official Site",
         "url": "https://discgolf-navi.com/tournament/nt-abt-lt/kiyosato-open/"
@@ -529,7 +544,14 @@
     },
     "jpdga": {
       "eventId": "672"
-    }
+    },
+    "urls":[
+      {
+        "type": "video",
+        "title": "Final MA1, @Dch-discchannel",
+        "url": "https://youtu.be/IkTvgy6kuG8"
+      }
+    ]
   },
   {
     "id": "the31sttokyoopen",
