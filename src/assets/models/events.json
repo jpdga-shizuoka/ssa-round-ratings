@@ -296,6 +296,7 @@
     },
     "pdga": {
       "tier": "B",
+      "scoreId": "81663",
       "eventId": "81663"
     },
     "jpdga": {
@@ -358,6 +359,7 @@
     },
     "pdga": {
       "tier": "C",
+      "scoreId": "79794",
       "eventId": "79794"
     },
     "jpdga": {
@@ -386,6 +388,7 @@
     },
     "pdga": {
       "tier": "C",
+      "scoreId": "80828",
       "eventId": "80828"
     },
     "urls": [
