@@ -37,7 +37,7 @@ export function compareTime(t1: Date, category: EventCategory) {
       return t1.getTime() < t2.getTime();
     }
     case 'upcoming': {
-      t2.setDate(t2.getDate() - 7);
+      t2.setDate(t2.getDate() - 1);
       return t1.getTime() > t2.getTime();
     }
     case 'local': {
