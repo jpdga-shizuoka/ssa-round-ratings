@@ -301,6 +301,11 @@
     "layout": {
       "official": "http://www.jpdga.jp/data/event/2024/710_map.pdf"
     },
+    "players": {
+      "pro": 13,
+      "ama": 18,
+      "misc": 0
+    },
     "pdga": {
       "tier": "B",
       "scoreId": "81663",
