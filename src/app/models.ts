@@ -28,12 +28,13 @@ export interface LocationInfo {
 }
 
 export interface PdgaInfo {
-  tier?: 'A' | 'B' | 'C';
+  tier?: 'A' | 'B' | 'C' | 'XA' | 'XB' | 'XC';
   eventId?: string;
   scoreId?: string;
 }
 
 export interface JpdgaInfo {
+  tier?: 'NT' | 'ABT-A' | 'ABT-B' | 'LT';
   eventId?: string;
   topicId?: string;
   photoId?: string;
