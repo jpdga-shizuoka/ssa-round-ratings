@@ -288,6 +288,7 @@
       "misc": 0
     },
     "jpdga": {
+      "tier": "LT",
       "eventId": "680"
     },
     "urls": [
@@ -320,6 +321,7 @@
       "eventId": "81663"
     },
     "jpdga": {
+      "tier": "ABT-B",
       "eventId": "710"
     }
   },
@@ -333,6 +335,7 @@
     },
     "status": "CANCELED",
     "jpdga": {
+      "tier": "ABT-B",
       "eventId": "679"
     }
   },
@@ -383,6 +386,7 @@
       "eventId": "79794"
     },
     "jpdga": {
+      "tier": "LT",
       "eventId": "678"
     },
     "urls": [
@@ -439,6 +443,7 @@
       "eventId": "79763"
     },
     "jpdga": {
+      "tier": "ABT-A",
       "eventId": "677"
     },
     "budget": {
@@ -457,22 +462,6 @@
         "type": "website",
         "title": "Official Site",
         "url": "http://www.sukima-labo.com/dg291/"
-      }
-    ]
-  },
-  {
-    "id": "thediscgolfwomensgrobaleventtokyo2024",
-    "title": "The Discgolf Womens grobal event Tokyo 2024",
-    "location": "showakinenpark",
-    "period": {
-      "from": "2024-05-18",
-      "to": "2024-05-18"
-    },
-    "urls": [
-      {
-        "type": "website",
-        "title": "Official Site",
-        "url": "https://www.facebook.com/share/GL3TbtrsT3gBjkMe/"
       }
     ]
   },
@@ -497,6 +486,7 @@
       "eventId": "81085"
     },
     "jpdga": {
+      "tier": "ABT-B",
       "eventId": "676"
     },
     "budget": {
@@ -540,6 +530,7 @@
       "misc": 0
     },
     "jpdga": {
+      "tier": "LT",
       "eventId": "671"
     }
   },
@@ -565,6 +556,7 @@
       "eventId": "81355"
     },
     "jpdga": {
+      "tier": "NT",
       "eventId": "672"
     },
     "urls":[
@@ -592,6 +584,7 @@
       "eventId": "79081"
     },
     "jpdga": {
+      "tier":"ABT-B",
       "topicId": "1861",
       "eventId": "670"
     },
@@ -655,6 +648,7 @@
       "eventId": "79080"
     },
     "jpdga": {
+      "tier":"ABT-B",
       "topicId": "1856",
       "eventId": "669"
     }
@@ -680,6 +674,7 @@
       "eventId": "79194"
     },
     "jpdga": {
+      "tier":"ABT-A",
       "topicId": "1846",
       "eventId": "668"
     },
@@ -711,6 +706,7 @@
       "eventId": "78423"
     },
     "jpdga": {
+      "tier":"ABT-A",
       "topicId": "1837",
       "eventId": "667"
     },
@@ -779,6 +775,7 @@
       "scoreId": "75533"
     },
     "jpdga": {
+      "tier":"ABT-A",
       "topicId": "1828",
       "eventId": "666"
     },
