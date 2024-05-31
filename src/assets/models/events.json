@@ -279,6 +279,14 @@
       "from": "2024-06-01",
       "to": "2024-06-02"
     },
+    "layout": {
+      "official": "https://discgolf.jp/event/minamata/dg-minamata2024-map1.pdf"
+    },
+    "players": {
+      "pro": 46,
+      "ama": 34,
+      "misc": 0
+    },
     "jpdga": {
       "eventId": "680"
     },
