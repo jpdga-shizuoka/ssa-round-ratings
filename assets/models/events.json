@@ -433,6 +433,12 @@
     "jpdga": {
       "eventId": "677"
     },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 563,
+      "rate": 156.25,
+      "paidout": 13
+    },
     "urls": [
       {
         "type": "video",
