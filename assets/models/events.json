@@ -23,8 +23,8 @@
     "title": "The 2nd Jandlux Cup",
     "location": "michinokupark",
     "period": {
-      "from": "2024-12-07",
-      "to": "2024-12-08"
+      "from": "2024-12-14",
+      "to": "2024-12-15"
     },
     "jpdga": {
       "eventId": "705"
@@ -238,6 +238,10 @@
     "period": {
       "from": "2024-06-29",
       "to": "2024-06-30"
+    },
+    "pdga": {
+      "tier": "B",
+      "eventId": "82579"
     },
     "jpdga": {
       "eventId": "686"
