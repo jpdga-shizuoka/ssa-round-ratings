@@ -330,6 +330,7 @@
     },
     "jpdga": {
       "tier": "ABT-B",
+      "topicId": "1879",
       "eventId": "710"
     }
   },
@@ -395,6 +396,7 @@
     },
     "jpdga": {
       "tier": "LT",
+      "topicId": "1878",
       "eventId": "678"
     },
     "urls": [
