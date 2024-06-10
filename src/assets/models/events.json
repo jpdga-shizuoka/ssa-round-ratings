@@ -267,8 +267,12 @@
       "from": "2024-06-15",
       "to": "2024-06-16"
     },
+    "layout": {
+      "official": "https://discgolf-navi.com/wp-content/uploads/2024/06/マスターズ・美浦オープン2024コースマップ.pdf"
+    },
     "pdga": {
       "tier": "B",
+      "scoreId": "81665",
       "eventId": "81665"
     },
     "jpdga": {
