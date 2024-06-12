@@ -253,9 +253,18 @@
     "location": "hikaritokazenookapark",
     "period": {
       "from": "2024-06-15",
-      "to": "2024-06-16"
+      "to": "2024-06-15"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 19
+    },
+    "layout": {
+      "official": "https://discgolf-navi.com/wp-content/uploads/2024/06/マスターズ・美浦オープン2024コースマップ.pdf"
     },
     "jpdga": {
+      "tier": "LT",
       "eventId": "684"
     }
   },
@@ -267,8 +276,17 @@
       "from": "2024-06-15",
       "to": "2024-06-16"
     },
+    "layout": {
+      "official": "https://discgolf-navi.com/wp-content/uploads/2024/06/マスターズ・美浦オープン2024コースマップ.pdf"
+    },
+    "players": {
+      "pro": 40,
+      "ama": 36,
+      "misc": 0
+    },
     "pdga": {
       "tier": "B",
+      "scoreId": "81665",
       "eventId": "81665"
     },
     "jpdga": {
@@ -326,6 +344,7 @@
     },
     "jpdga": {
       "tier": "ABT-B",
+      "topicId": "1879",
       "eventId": "710"
     }
   },
@@ -391,6 +410,7 @@
     },
     "jpdga": {
       "tier": "LT",
+      "topicId": "1878",
       "eventId": "678"
     },
     "urls": [
