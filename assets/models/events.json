@@ -244,6 +244,7 @@
       "eventId": "82579"
     },
     "jpdga": {
+      "tier": "ABT-A",
       "eventId": "686"
     }
   },
@@ -290,6 +291,7 @@
       "eventId": "81665"
     },
     "jpdga": {
+      "tier": "ABT-B",
       "eventId": "684"
     }
   },
@@ -346,6 +348,12 @@
       "tier": "ABT-B",
       "topicId": "1879",
       "eventId": "710"
+    },
+    "budget": {
+      "entreefee": 9000,
+      "purse": 225,
+      "rate": 155.5,
+      "paidout": 5
     }
   },
   {
