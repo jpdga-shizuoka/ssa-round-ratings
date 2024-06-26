@@ -239,6 +239,14 @@
       "from": "2024-06-29",
       "to": "2024-06-30"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/686_map.pdf"
+    },
+    "players": {
+      "pro": 32,
+      "ama": 13,
+      "misc": 2
+    },
     "pdga": {
       "tier": "B",
       "eventId": "82579"
@@ -246,7 +254,20 @@
     "jpdga": {
       "tier": "ABT-A",
       "eventId": "686"
-    }
+    },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 0,
+      "rate": 0,
+      "paidout": 0
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://www.facebook.com/hokkaidoopen.discgolf"
+      }
+    ]
   },
   {
     "id": "the8thmihoopen",
