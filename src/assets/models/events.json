@@ -314,6 +314,12 @@
     "jpdga": {
       "tier": "ABT-B",
       "eventId": "684"
+    },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 1323,
+      "rate": 158.6,
+      "paidout": 15
     }
   },
   {
