@@ -227,6 +227,11 @@
       "from": "2024-07-13",
       "to": "2024-07-15"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/687_map1.pdf",
+      "Back tee": "http://www.jpdga.jp/data/event/2024/687_mapback.pdf",
+      "Front tee": "http://www.jpdga.jp/data/event/2024/687_mapfront.pdf"
+    },
     "pdga": {
       "eventId": "79195"
     },
