@@ -232,7 +232,13 @@
       "Back tee": "http://www.jpdga.jp/data/event/2024/687_mapback.pdf",
       "Front tee": "http://www.jpdga.jp/data/event/2024/687_mapfront.pdf"
     },
+    "players": {
+      "pro": 72,
+      "ama": 0,
+      "misc": 0
+    },
     "pdga": {
+      "scoreId": "79195",
       "eventId": "79195"
     },
     "jpdga": {
