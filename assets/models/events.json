@@ -229,8 +229,8 @@
     },
     "layout": {
       "official": "http://www.jpdga.jp/data/event/2024/687_map1.pdf",
-      "Back tee": "http://www.jpdga.jp/data/event/2024/687_mapback.pdf",
-      "Front tee": "http://www.jpdga.jp/data/event/2024/687_mapfront.pdf"
+      "back": "http://www.jpdga.jp/data/event/2024/687_mapback.pdf",
+      "front": "http://www.jpdga.jp/data/event/2024/687_mapfront.pdf"
     },
     "players": {
       "pro": 72,
