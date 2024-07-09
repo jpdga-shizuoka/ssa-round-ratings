@@ -54,6 +54,8 @@ export interface Players {
 
 export interface Layouts {
   official?: string;
+  back?: string;
+  front?: string;
   cbj?: string;
 }
 

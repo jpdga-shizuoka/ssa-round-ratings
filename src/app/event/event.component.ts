@@ -30,6 +30,18 @@ function layout2layouts(layout?: Layouts) {
       url: layout.official
     });
   }
+  if (layout?.back) {
+    urls.push({
+      title: 'Back tee',
+      url: layout.back
+    });
+  }
+  if (layout?.front) {
+    urls.push({
+      title: 'Front tee',
+      url: layout.front
+    });
+  }
   if (layout?.cbj) {
     urls.push({
       title: 'Caddie Book Japan',
