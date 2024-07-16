@@ -211,11 +211,21 @@
       "from": "2024-07-20",
       "to": "2024-07-21"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/688_map.pdf"
+    },
+    "players": {
+      "pro": 35,
+      "ama": 24,
+      "misc": 0
+    },
     "pdga": {
+      "tier": "B",
       "scoreId": "82950",
       "eventId": "82950"
     },
     "jpdga": {
+      "tier": "NT",
       "eventId": "688"
     }
   },
@@ -242,6 +252,7 @@
       "eventId": "79195"
     },
     "jpdga": {
+      "tier": "NT",
       "eventId": "687"
     },
     "urls": [
