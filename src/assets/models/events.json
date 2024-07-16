@@ -248,6 +248,7 @@
       "misc": 0
     },
     "pdga": {
+      "tier": "B",
       "scoreId": "79195",
       "eventId": "79195"
     },
@@ -256,6 +257,16 @@
       "eventId": "687"
     },
     "urls": [
+      {
+        "type": "video",
+        "title": "R1B9,MPO,Featuer Card@Dch-discchannel",
+        "url": "https://youtu.be/KxLnDDp1mCk"
+      },
+      {
+        "type": "video",
+        "title": "R1F9,MPO,Featuer Card@Dch-discchannel",
+        "url": "https://youtu.be/6zpwhXKwuRM"
+      },
       {
         "type": "website",
         "title": "Facebook",
