@@ -56,6 +56,7 @@ export interface Layouts {
   official?: string;
   back?: string;
   front?: string;
+  ama?: string;
   cbj?: string;
 }
 

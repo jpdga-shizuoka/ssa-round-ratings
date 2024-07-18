@@ -42,6 +42,12 @@ function layout2layouts(layout?: Layouts) {
       url: layout.front
     });
   }
+  if (layout?.ama) {
+    urls.push({
+      title: 'Ama tee',
+      url: layout.ama
+    });
+  }
   if (layout?.cbj) {
     urls.push({
       title: 'Caddie Book Japan',
