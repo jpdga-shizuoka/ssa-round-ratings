@@ -212,7 +212,10 @@
       "to": "2024-07-21"
     },
     "layout": {
-      "official": "http://www.jpdga.jp/data/event/2024/688_map.pdf"
+      "official": "http://www.jpdga.jp/data/event/2024/688_map_mpo.pdf",
+      "back": "http://www.jpdga.jp/data/event/2024/688_map_mpo.pdf",
+      "front": "http://www.jpdga.jp/data/event/2024/688_map_fpo.pdf",
+      "ama": "http://www.jpdga.jp/data/event/2024/688_map_ama.pdf"
     },
     "players": {
       "pro": 35,
