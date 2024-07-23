@@ -1,7 +1,7 @@
 <div class="chart">
   <ul>
     <li *ngFor="let report of reports$ | async">
-      <a href={{report.url}}>{{report.title}}</a>
+      <a href={{report.url}} target="_blank" rel="noopener">{{report.title}}</a>
     </li>
   </ul>
 </div>
