@@ -259,6 +259,12 @@
       "tier": "NT",
       "eventId": "687"
     },
+    "budget": {
+      "entreefee": 15000,
+      "purse": 2040,
+      "rate": 157.48,
+      "paidout": 19
+    },
     "urls": [
       {
         "type": "video",
@@ -304,9 +310,9 @@
     },
     "budget": {
       "entreefee": 8000,
-      "purse": 0,
-      "rate": 0,
-      "paidout": 0
+      "purse": 789,
+      "rate": 161.3,
+      "paidout": 15
     },
     "urls": [
       {
