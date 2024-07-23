@@ -147,6 +147,6 @@ export interface Members {
 }
 
 export interface AnnualReport {
-  year: number;
+  title: string;
   url: string;
 }
