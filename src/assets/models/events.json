@@ -304,9 +304,9 @@
     },
     "budget": {
       "entreefee": 8000,
-      "purse": 0,
-      "rate": 0,
-      "paidout": 0
+      "purse": 789,
+      "rate": 161.3,
+      "paidout": 15
     },
     "urls": [
       {
