@@ -102,9 +102,9 @@
             </a>
           </td>
           <td>
-              {{roundUnderThousand(event.budget.totalprize) | currency:'JPY':'symbol':'1.0-0'}}
-              ({{event.budget.prizeratio * 100 | number:'1.0-0'}}%,
-              {{event.budget.paidratio * 100 | number:'1.0-0'}}%)
+            {{'Pro purse' | localize}}: {{roundUnderThousand(event.budget.totalprize) | currency:'JPY':'symbol':'1.0-0'}}<br>
+              {{'Paidout of fee' | localize}}: {{event.budget.prizeratio * 100 | number:'1.0-0'}}%,
+              {{'Paidout of players' | localize}}: {{event.budget.paidratio * 100 | number:'1.0-0'}}%
           </td>
         </tr>
     
