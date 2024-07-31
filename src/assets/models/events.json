@@ -229,6 +229,12 @@
     "jpdga": {
       "tier": "NT",
       "eventId": "688"
+    },
+    "budget": {
+      "entreefee": 15000,
+      "purse": 1729,
+      "paidout": 12,
+      "rate": 153.51
     }
   },
   {
