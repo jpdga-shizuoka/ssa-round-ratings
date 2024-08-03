@@ -1,18 +1,92 @@
 [
   {
-    "title": "Pro Purse 2023",
+    "year": 2024,
+    "title": "PDGA Sanctioned Events",
+    "url": "https://www.pdga.com/tour/search?OfficialName=&td=&date_filter%5Bmin%5D%5Bdate%5D=2024-01-01&date_filter%5Bmax%5D%5Bdate%5D=2024-12-31&Country%5B%5D=Japan"
+  },
+  {
+    "year": 2023,
+    "title": "PDGA Sanctioned Events",
+    "url": "https://www.pdga.com/tour/search?OfficialName=&td=&date_filter%5Bmin%5D%5Bdate%5D=2023-01-01&date_filter%5Bmax%5D%5Bdate%5D=2023-12-31&Country%5B%5D=Japan"
+  },
+  {
+    "year": 2023,
+    "title": "Pro Purse",
     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vS3YDGHEDSQly99qiSUlheI7kwxq7kd2HilLidsrwq9oqZO-Tu1I_Opd84t-dfhf1UxwHmjKuI5DlrU/pubhtml?gid=0&single=true"
   },
   {
-    "title": "Pro Purse 2022",
+    "year": 2022,
+    "title": "PDGA Sanctioned Events",
+    "url": "https://www.pdga.com/tour/search?OfficialName=&td=&date_filter%5Bmin%5D%5Bdate%5D=2022-01-01&date_filter%5Bmax%5D%5Bdate%5D=2022-12-31&Country%5B%5D=Japan"
+  },
+  {
+    "year": 2022,
+    "title": "Pro Purse",
     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vS3YDGHEDSQly99qiSUlheI7kwxq7kd2HilLidsrwq9oqZO-Tu1I_Opd84t-dfhf1UxwHmjKuI5DlrU/pubhtml?gid=1060636191&single=true"
   },
   {
-    "title": "Annual Report 2022",
+    "year": 2022,
+    "title": "Course Ratings",
+    "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRfw9mthAt45u9NQyIGcD65FKeKuCEMdFKHYik8eX5HJcNEgmnJ_5zLxYkBaVAWkb_ZTbUaAiQV1qyF/pubhtml?gid=0&single=true"
+  },
+  {
+    "year": 2022,
+    "title": "Annual Reports",
     "url": "https://docs.google.com/presentation/d/e/2PACX-1vRxX5dgueUxbvLgRIXaChBLbGSp1V48lQHmK5Qd1WAx5ogcSbiuw3PxVJn4LNfCSfRmOD7l9GI953fd/pub"
   },
   {
-    "title": "Annual Report 2021",
+    "year": 2021,
+    "title": "PDGA Sanctioned Events",
+    "url": "https://www.pdga.com/tour/search?OfficialName=&td=&date_filter%5Bmin%5D%5Bdate%5D=2021-01-01&date_filter%5Bmax%5D%5Bdate%5D=2021-12-31&Country%5B%5D=Japan"
+  },
+  {
+    "year": 2021,
+    "title": "Annual Reports",
     "url": "https://docs.google.com/presentation/d/e/2PACX-1vTAHH1qGrKN5CcJuqHczMh8TRp6n9UyQkOjMcTL_Co_jlA4fUsote2iVLdoGaVkXTpG4k1-86r-UZec/pub"
+  },
+  {
+    "year": 2021,
+    "title": "Course Ratings",
+    "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRfw9mthAt45u9NQyIGcD65FKeKuCEMdFKHYik8eX5HJcNEgmnJ_5zLxYkBaVAWkb_ZTbUaAiQV1qyF/pubhtml?gid=283305231&single=true"
+  },
+  {
+    "year": 2020,
+    "title": "PDGA Sanctioned Events",
+    "url": "https://www.pdga.com/tour/search?OfficialName=&td=&date_filter%5Bmin%5D%5Bdate%5D=2020-01-01&date_filter%5Bmax%5D%5Bdate%5D=2020-12-31&Country%5B%5D=Japan"
+  },
+  {
+    "year": 2020,
+    "title": "Course Ratings",
+    "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRfw9mthAt45u9NQyIGcD65FKeKuCEMdFKHYik8eX5HJcNEgmnJ_5zLxYkBaVAWkb_ZTbUaAiQV1qyF/pubhtml?gid=430900881&single=true"
+  },
+  {
+    "year": 2019,
+    "title": "PDGA Sanctioned Events",
+    "url": "https://www.pdga.com/tour/search?OfficialName=&td=&date_filter%5Bmin%5D%5Bdate%5D=2019-01-01&date_filter%5Bmax%5D%5Bdate%5D=2019-12-31&Country%5B%5D=Japan"
+  },
+  {
+    "year": 2018,
+    "title": "PDGA Sanctioned Events",
+    "url": "https://www.pdga.com/tour/search?OfficialName=&td=&date_filter%5Bmin%5D%5Bdate%5D=2018-01-01&date_filter%5Bmax%5D%5Bdate%5D=2018-12-31&Country%5B%5D=Japan"
+  },
+  {
+    "year": 2017,
+    "title": "PDGA Sanctioned Events",
+    "url": "https://www.pdga.com/tour/search?OfficialName=&td=&date_filter%5Bmin%5D%5Bdate%5D=2017-01-01&date_filter%5Bmax%5D%5Bdate%5D=2017-12-31&Country%5B%5D=Japan"
+  },
+  {
+    "year": 2016,
+    "title": "PDGA Sanctioned Events",
+    "url": "https://www.pdga.com/tour/search?OfficialName=&td=&date_filter%5Bmin%5D%5Bdate%5D=2016-01-01&date_filter%5Bmax%5D%5Bdate%5D=2016-12-31&Country%5B%5D=Japan"
+  },
+  {
+    "year": 2015,
+    "title": "PDGA Sanctioned Events",
+    "url": "https://www.pdga.com/tour/search?OfficialName=&td=&date_filter%5Bmin%5D%5Bdate%5D=2015-01-01&date_filter%5Bmax%5D%5Bdate%5D=2015-12-31&Country%5B%5D=Japan"
+  },
+  {
+    "year": 2014,
+    "title": "PDGA Sanctioned Events",
+    "url": "https://www.pdga.com/tour/search?OfficialName=&td=&date_filter%5Bmin%5D%5Bdate%5D=2014-01-01&date_filter%5Bmax%5D%5Bdate%5D=2014-12-31&Country%5B%5D=Japan"
   }
 ]

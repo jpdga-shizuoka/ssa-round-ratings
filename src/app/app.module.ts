@@ -55,7 +55,6 @@ import { BottomSheetDetailDisabledComponent } from './dialogs/bottom-sheet-detai
 import { PrefaceComponent } from './preface/preface.component';
 import { IcalenderComponent } from './icalendar/icalendar.component';
 import { DifficultyChartComponent } from './difficulty-chart/difficulty-chart.component';
-import { AnnualChartComponent } from './annual-chart/annual-chart.component';
 import { MembersChartComponent } from './members-chart/members-chart.component';
 import { TermsComponent } from './terms/terms.component';
 import { BubbleChartInteractiveComponent } from './difficulty-chart/custom-chart/bubble-chart-interactive.component';
@@ -85,6 +84,7 @@ import { TrueAmateurComponent } from './libraries/true-amateur.component';
 import { IndexComponent } from './libraries/index.component';
 import { TourStandardsComponent } from './libraries/tour-standards.component';
 import { PhotoListComponent } from './photo-list/photo-list.component';
+import { AnnualReportsComponent } from './annual-reports/annual-reports.component';
 
 @NgModule({
     declarations: [
@@ -114,7 +114,6 @@ import { PhotoListComponent } from './photo-list/photo-list.component';
         PrefaceComponent,
         IcalenderComponent,
         DifficultyChartComponent,
-        AnnualChartComponent,
         MembersChartComponent,
         BubbleChartInteractiveComponent,
         BubbleSeriesInteractiveComponent,
@@ -142,7 +141,8 @@ import { PhotoListComponent } from './photo-list/photo-list.component';
         TrueAmateurComponent,
         IndexComponent,
         TourStandardsComponent,
-        PhotoListComponent
+        PhotoListComponent,
+        AnnualReportsComponent
     ],
     imports: [
         BrowserModule,
