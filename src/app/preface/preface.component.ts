@@ -1,22 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { Component } from '@angular/core';
 
-import { RemoteService } from '../remote.service';
+import { LocalizeService } from '../localize.service';
 
 @Component({
   selector: 'app-preface',
   templateUrl: './preface.component.html',
   styleUrls: ['./preface.component.css']
 })
-export class PrefaceComponent implements OnInit {
-  readonly content$: BehaviorSubject<string>;
+export class PrefaceComponent {
 
-  constructor(private readonly remote: RemoteService) {
-    this.content$ = new BehaviorSubject<string>('');
-  }
+  constructor(private localize: LocalizeService) {}
 
-  ngOnInit(): void {
-    this.remote.getText('preface.html')
-      .subscribe(data => this.content$.next(data));
+  get isGlobal(): boolean {
+    return this.localize.isGlobal
   }
 }

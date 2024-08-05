@@ -69,18 +69,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "dgjapan:build"
+            "buildTarget": "dgjapan:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "dgjapan:build:production"
+              "buildTarget": "dgjapan:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "dgjapan:build"
+            "buildTarget": "dgjapan:build"
           }
         },
         "test": {
