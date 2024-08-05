@@ -6,6 +6,9 @@
 .sidenav-container {
   height: 100%;
 }
+.mat-drawer-container {
+  background-color: transparent;
+}
 .sidenav mat-icon {
   padding-right: 16px;
 }

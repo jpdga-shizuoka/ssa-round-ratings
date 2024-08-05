@@ -6,6 +6,7 @@ body {
   margin: 0;
   background: repeat url("./assets/img/background.png");
   background-size: 30px 30px;
+  background-color: transparent;
 }
 .my-align {
   display: inline-flex;
@@ -67,9 +68,6 @@ a[href^="http://maps.apple"] {
   background: url("assets/img/room-24px.svg") no-repeat right center;
   background-size: 1.2rem 1.2rem;
   padding-right: 1.3rem;
-}
-.mat-drawer-container {
-  background-color: transparent;
 }
 .app-container {
   background-color: #fafafa;
