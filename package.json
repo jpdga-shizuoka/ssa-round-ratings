@@ -6,7 +6,6 @@
     "start": "ng serve",
     "build": "ng build --base-href=./",
     "test": "ng test",
-    "lint": "ng lint",
     "e2e": "ng e2e"
   },
   "private": true,
@@ -40,13 +39,12 @@
     "@types/jest": "~26.0.23",
     "@types/node": "~12.11.1",
     "angular-cli-ghpages": "^1.0.6",
-    "eslint": "^8.51.0",
     "jest": "~29.7.0",
     "markdown-it": "^14.0.0",
     "markdown-it-container": "^4.0.0",
     "markdown-it-ins": "^4.0.0",
     "markdown-it-strikethrough-alt": "^1.0.0",
     "markdown-it-sup": "^2.0.0",
-    "typescript": "5.2"
+    "typescript": "^5.3.2"
   }
 }
