@@ -28,14 +28,6 @@ export class RemoteService {
     private readonly http: HttpClient    
   ) { }
 
-  path(path: string): string {
-    return ['assets', this.localize.isGlobal ? 'global' : 'local', path].join('/');
-  }
-
-  getText(path: string): Observable<string> {
-    return this.http.get(this.path(path), { responseType: 'text' });
-  }
-
   getEvents(category: EventCategory, filter?: UserFilter): Observable<EventInfo[]> {
     if (!category) {
       throw new TypeError('getEvents: no category specified');
