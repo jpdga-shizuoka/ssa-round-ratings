@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -85,6 +85,7 @@ import { IndexComponent } from './libraries/index.component';
 import { TourStandardsComponent } from './libraries/tour-standards.component';
 import { PhotoListComponent } from './photo-list/photo-list.component';
 import { AnnualReportsComponent } from './annual-reports/annual-reports.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
     declarations: [
@@ -174,7 +175,13 @@ import { AnnualReportsComponent } from './annual-reports/annual-reports.componen
         MatMenuModule,
         MatProgressSpinnerModule,
         MatExpansionModule,
-        NgxChartsModule
+        NgxChartsModule,
+        ServiceWorkerModule.register('ngsw-worker.js', {
+          enabled: !isDevMode(),
+          // Register the ServiceWorker as soon as the application is stable
+          // or after 30 seconds (whichever comes first).
+          registrationStrategy: 'registerWhenStable:30000'
+        })
     ],
     providers: [],
     bootstrap: [AppComponent]
