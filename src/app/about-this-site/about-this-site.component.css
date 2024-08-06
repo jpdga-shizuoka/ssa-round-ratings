@@ -51,3 +51,7 @@ h4 a {
 .oss-table td:first-child {
   text-align: right;
 }
+.email {
+  color: blue;
+  text-decoration: underline;
+}
