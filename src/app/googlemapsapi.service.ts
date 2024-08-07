@@ -5,7 +5,7 @@ import { catchError, map, shareReplay } from 'rxjs/operators';
 import { environment } from '../environments/environment';
 
 const GOOGLE_MAPS_API
-  = `https://maps.googleapis.com/maps/api/js?key=${environment.googlemaps.apikey}`;
+  = `https://maps.googleapis.com/maps/api/js?key=${environment.googlemaps.apikey}&libraries=marker`;
 
 @Injectable({
   providedIn: 'root'

@@ -24,6 +24,7 @@ export class EventsMapComponent implements OnInit, OnDestroy {
   loading = true;
   zoom = environment.googlemaps.zoom;
   center = environment.googlemaps.center;
+  mapId = '47ea6e4a3f020c5';
   mapOptions = {
     minZoom: 4,
     disableDefaultUI: true
