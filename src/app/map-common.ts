@@ -1,4 +1,4 @@
-import { EventId } from './models';
+import { EventId, Period } from './models';
 
 export interface Position {
   lat: number;
@@ -9,4 +9,5 @@ export interface GeoMarker {
   eventId: EventId;
   location: string;
   title: string;
+  period?: Period;
 }
