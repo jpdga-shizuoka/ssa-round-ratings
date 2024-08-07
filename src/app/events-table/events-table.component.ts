@@ -27,6 +27,7 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   search = '';
+  showDetail = false;
   dataSource!: EventsDataSource;
   expandedElement?: EventInfo;
   pageSizeOptions = [30, 60, 120];

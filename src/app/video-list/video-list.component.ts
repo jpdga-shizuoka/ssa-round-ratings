@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { ScriptLoaderService } from '../script-loader.service';
 
-import { VideoInfo } from '../models';
+import { MiscInfo } from '../models';
 import { VideoBottomsheetComponent } from '../dialogs/video-bottomsheet.component';
 
 @Component({
@@ -11,7 +11,7 @@ import { VideoBottomsheetComponent } from '../dialogs/video-bottomsheet.componen
   styleUrls: ['./video-list.component.css']
 })
 export class VideoListComponent implements OnInit {
-  @Input() list!: VideoInfo[];
+  @Input() list!: MiscInfo[];
 
   constructor(
     private bottomSheet: MatBottomSheet,
@@ -22,11 +22,11 @@ export class VideoListComponent implements OnInit {
     this.scriptLoader.youtube();
   }
 
-  onRawClicked(video: VideoInfo): void {
+  onRawClicked(video: MiscInfo): void {
     this.openVideoSheet(video);
   }
 
-  private openVideoSheet(video: VideoInfo) {
+  private openVideoSheet(video: MiscInfo) {
     this.bottomSheet.open(VideoBottomsheetComponent, {
       data: video
     });

@@ -3,7 +3,7 @@ import { YouTubePlayer } from '@angular/youtube-player';
 import { MatBottomSheetRef, MAT_BOTTOM_SHEET_DATA } from '@angular/material/bottom-sheet';
 import { DeviceDetectorService } from 'ngx-device-detector';
 
-import { VideoInfo } from '../models';
+import { MiscInfo } from '../models';
 
 const FACEBOOK = /https:\/\/www\.facebook\.com\/.+\/videos\/(\d+)\//;
 const YOUTUBE = /https:\/\/youtube\.com\/watch\?v=([0-9a-zA-Z_-]+)/;
@@ -25,7 +25,7 @@ export class VideoBottomsheetComponent {
   isMobile = false;
 
   constructor(
-    @Inject(MAT_BOTTOM_SHEET_DATA) public video: VideoInfo,
+    @Inject(MAT_BOTTOM_SHEET_DATA) public video: MiscInfo,
     private deviceService: DeviceDetectorService,
     private bottomSheetRef: MatBottomSheetRef<VideoBottomsheetComponent>
   ) {
@@ -62,8 +62,8 @@ export class VideoBottomsheetComponent {
     }
   }
 
-  get year(): number {
-    return this.video.date.getFullYear();
+  get year(): number | string {
+    return this.video.date?.getFullYear() ?? '';
   }
 
   get event(): string {
@@ -71,7 +71,7 @@ export class VideoBottomsheetComponent {
   }
 
   get title(): string {
-    return this.video.subttl;
+    return this.video.subttl ?? '';
   }
 
   get isYoutubeVideo(): boolean {

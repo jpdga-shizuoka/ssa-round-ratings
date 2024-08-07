@@ -2,7 +2,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { RemoteService, VideoInfo } from '../remote.service';
+import { RemoteService, MiscInfo } from '../remote.service';
 import { LocalizeService } from '../localize.service';
 
 /**
@@ -10,7 +10,7 @@ import { LocalizeService } from '../localize.service';
  * encapsulate all logic for fetching and manipulating the displayed data
  * (including sorting, pagination, and filtering).
  */
-export class VideosDataSource extends MatTableDataSource<VideoInfo> {
+export class VideosDataSource extends MatTableDataSource<MiscInfo> {
   loading = true;
 
   constructor(
@@ -28,7 +28,7 @@ export class VideosDataSource extends MatTableDataSource<VideoInfo> {
    * the returned stream emits new items.
    * @returns A stream of the items to be rendered.
    */
-  connect(): BehaviorSubject<VideoInfo[]> {
+  connect(): BehaviorSubject<MiscInfo[]> {
     this.loading = true;
     this.remote.getVideos()
       .pipe(
@@ -51,11 +51,11 @@ export class VideosDataSource extends MatTableDataSource<VideoInfo> {
     super.disconnect();
   }
 
-  private filterWithKeyword(videos: VideoInfo[]) {
+  private filterWithKeyword(videos: MiscInfo[]) {
     if (!this.keyword) {
       return videos;
     }
-    const results: VideoInfo[] = [];
+    const results: MiscInfo[] = [];
     videos.forEach(video => {
       if (this.keyword && video.title.toLowerCase().includes(this.keyword)) {
         results.push(video);
@@ -65,13 +65,12 @@ export class VideosDataSource extends MatTableDataSource<VideoInfo> {
   }
 
   private setupFilter() {
-    this.filterPredicate = (data: VideoInfo, filters: string): boolean => {
+    this.filterPredicate = (data: MiscInfo, filters: string): boolean => {
       const matchFilter: boolean[] = [];
       const filterArray = filters.split('&');
       const columns: string[] = [
         data.title,
-        data.subttl,
-        data.date.toDateString(),
+        data.date?.toDateString() ?? '',
         this.localize.transform(data.title, 'event')
       ];
       filterArray.forEach(filter => {

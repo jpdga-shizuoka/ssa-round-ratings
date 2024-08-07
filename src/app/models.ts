@@ -1,4 +1,6 @@
 import { Observable } from 'rxjs';
+import { ICONS, MiscInfo } from './app-common';
+export { ICONS, MiscInfo };
 
 export type EventCategory = 'alltime' | 'upcoming' | 'past' | 'local' | 'monthly' | 'video';
 export type EventId = string;
@@ -88,13 +90,6 @@ export interface EventInfo {
   layout?: Layouts;
   rounds?: RoundId[];
   budget?: ProBudget;
-}
-
-export interface VideoInfo {
-  title: string;
-  subttl: string;
-  date: Date;
-  url: string;
 }
 
 export interface Schedule {

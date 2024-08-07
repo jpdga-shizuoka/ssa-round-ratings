@@ -1,5 +1,4 @@
-import { RoundInfo, EventInfo } from '../models';
-import { ICONS, MiscInfo } from '../app-common';
+import { RoundInfo, EventInfo, MiscInfo, ICONS } from '../models';
 
 function isFutureEvent(date: string): boolean {
   const eventDate = new Date(date);

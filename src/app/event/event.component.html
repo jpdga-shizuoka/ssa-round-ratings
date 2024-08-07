@@ -1,6 +1,6 @@
 <div class="app-container">
   <div *ngIf="event$ | async as event">
-    <h1>{{event?.title | localize}}</h1>
+    <h1>{{event.title | localize}}</h1>
     <table class="mat-elevation-z1">
       <tbody>
         <tr class="element-row">
@@ -9,19 +9,19 @@
             <div *ngIf="showCalendar(event); else noCalendar">
               <div *ngIf="location$ | async as location">
                 <div *ngIf="location.weather; else noWeather">
-                  {{event?.period | period}}
+                  {{event.period | period}}
                   <a href="{{location.weather}}" target="_blank" rel="noopener">
                     {{"Weather" | localize}}&#9728;
                   </a>
                 </div>
                 <ng-template #noWeather>
-                  {{event?.period | period}}
+                  {{event.period | period}}
                 </ng-template>
               </div>
             </div>
             <ng-template #noCalendar>
               <div *ngIf="location$ | async as location">
-                {{event?.period | period}}
+                {{event.period | period}}
               </div>
             </ng-template>
             <span *ngIf="canceled" class="canceled">CANCELED</span>
@@ -103,8 +103,8 @@
           </td>
           <td>
             {{'Pro purse' | localize}}: {{roundUnderThousand(event.budget.totalprize) | currency:'JPY':'symbol':'1.0-0'}}<br>
-              {{'Paid out % of Fee' | localize}}: {{event.budget.prizeratio * 100 | number:'1.0-0'}}%,
-              {{'Paid out % of Players' | localize}}: {{event.budget.paidratio * 100 | number:'1.0-0'}}%
+              {{'Paid out % of Fee' | localize}}: {{(event.budget.prizeratio ?? 0) * 100 | number:'1.0-0'}}%,
+              {{'Paid out % of Players' | localize}}: {{(event.budget.paidratio ?? 0) * 100 | number:'1.0-0'}}%
           </td>
         </tr>
     

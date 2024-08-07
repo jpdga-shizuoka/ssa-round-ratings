@@ -135,7 +135,10 @@ export class EventComponent implements OnInit, OnDestroy {
     return stars;
   }
 
-  roundUnderThousand(n: number): number {
+  roundUnderThousand(n?: number): number {
+    if (!n) {
+      return 0;
+    }
     return Math.round(n / 1000) * 1000;
   }
 }

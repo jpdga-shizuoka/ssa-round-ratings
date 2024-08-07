@@ -10,7 +10,7 @@ import { map } from 'rxjs/operators';
 
 import { ScriptLoaderService } from '../script-loader.service';
 import { VideoBottomsheetComponent } from '../dialogs/video-bottomsheet.component';
-import { VideoInfo } from '../models';
+import { MiscInfo } from '../models';
 import { isHandset } from '../ng-utilities';
 import { VideosDataSource } from './videos-datasource';
 import { RemoteService } from '../remote.service';
@@ -68,7 +68,7 @@ export class VideosTableComponent implements OnInit, AfterViewInit {
     this.dataSource.paginator = this.paginator;
   }
 
-  onRawClicked(video: VideoInfo): void {
+  onRawClicked(video: MiscInfo): void {
     this.openVideoSheet(video);
   }
 
@@ -80,7 +80,7 @@ export class VideosTableComponent implements OnInit, AfterViewInit {
     this.search = filterValue;
   }
 
-  private openVideoSheet(video: VideoInfo) {
+  private openVideoSheet(video: MiscInfo) {
     this.bottomSheet.open(VideoBottomsheetComponent, {
       data: video
     });

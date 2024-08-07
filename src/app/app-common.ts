@@ -9,6 +9,7 @@ export const ICONS: {
 export interface MiscInfo {
   icon: string;
   title: string;
+  subttl?: string;
   url: string;
   date?: Date;
 }

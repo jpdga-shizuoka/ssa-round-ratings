@@ -19,7 +19,10 @@ export function category2url(category: EventCategory) {
   return `assets/models/${CATEGORY2FILE[category]}.json`;
 }
 
-export function compareByDate(a: Date, b: Date): number {
+export function compareByDate(a?: Date, b?: Date): number {
+  if (!a || !b) {
+    return 0;
+  }
   if (a < b) {
     return 1;
   }

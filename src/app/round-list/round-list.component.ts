@@ -12,7 +12,7 @@ import { RoundListDataSource } from './round-list-datasource';
 export class RoundListComponent implements OnInit, AfterViewInit {
   @Input() list!: RoundId[];
   @ViewChild(MatTable) table!: MatTable<RoundInfo>;
-  dataSource?: RoundListDataSource;
+  dataSource!: RoundListDataSource;
   displayedColumns = ['title', 'holes', 'hla', 'ssa', 'td'];
 
   constructor(private remote: RemoteService) {}

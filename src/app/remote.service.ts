@@ -9,11 +9,11 @@ import {
   category2url, upcomingFilter, sortEvents, countPlayers, compareByDate, filterByList, organization2url, calcProPurse
 } from './libs';
 import {
-  EventInfo, RoundInfo, LocationInfo, EventCategory, VideoInfo, TotalYearPlayers,
-  EventId, LocationId, RoundId, Members, Organization, AnnualReport
+  EventInfo, RoundInfo, LocationInfo, EventCategory, MiscInfo, TotalYearPlayers,
+  EventId, LocationId, RoundId, Members, Organization, AnnualReport, ICONS
 } from './models';
 export {
-  EventInfo, RoundInfo, LocationInfo, EventCategory, VideoInfo, TotalYearPlayers,
+  EventInfo, RoundInfo, LocationInfo, EventCategory, MiscInfo, TotalYearPlayers,
   Subscription, EventId, LocationId, Members, Organization, AnnualReport
 };
 
@@ -99,7 +99,7 @@ export class RemoteService {
     );
   }
 
-  getVideos(): Observable<VideoInfo[]> {
+  getVideos(): Observable<MiscInfo[]> {
     const category = 'video' as EventCategory;
     return this.getEvents(category).pipe(
       map(events => this.filterVideos(events))
@@ -122,8 +122,8 @@ export class RemoteService {
       .get<AnnualReport[]>('assets/models/annual-reports.json', { responseType: 'json' });
   }
 
-  private filterVideos(events: EventInfo[]): VideoInfo[] {
-    const videos: VideoInfo[] = [];
+  private filterVideos(events: EventInfo[]): MiscInfo[] {
+    const videos: MiscInfo[] = [];
     events.forEach(event => {
       if (event.urls) {
         event.urls.forEach(url => {
@@ -131,6 +131,7 @@ export class RemoteService {
             return;
           }
           videos.push({
+            icon: ICONS['video'],
             title: event.title ?? '',
             subttl: url.title,
             date: new Date(event.period?.from ?? 0),

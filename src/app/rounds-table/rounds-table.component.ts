@@ -14,12 +14,6 @@ import { RoundsDataSource } from './rounds-datasource';
 import { LocalizeService } from '../localize.service';
 import { getEventTitle, title2name } from '../libs';
 
-interface ExpandedRow {
-  canceled: boolean;
-  'round-element-row': boolean;
-  'round-expanded-row': boolean;
-}
-
 @Component({
   selector: 'app-rounds-table',
   templateUrl: './rounds-table.component.html',
