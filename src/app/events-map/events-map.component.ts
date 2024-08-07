@@ -5,7 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 
 import { GeoMarker } from '../map-common';
 import { EventCategory, LocationSearch, EventGo } from '../models';
-import { MarkerDialogComponent } from '../dialogs/marker-dialog.component';
+import { MarkerDialogComponent, MarkerDialogData } from '../dialogs/marker-dialog.component';
 import { environment } from '../../environments/environment';
 import { RemoteService, EventInfo, LocationInfo } from '../remote.service';
 import { GoogleMapsApiService } from '../googlemapsapi.service';
@@ -89,14 +89,15 @@ export class EventsMapComponent implements OnInit, OnDestroy {
   }
 
   private openDialog(cat: EventCategory, marker: GeoMarker, events: EventInfo[]) {
+    const makerInfo: MarkerDialogData = {
+      category: cat,
+      position: marker.position,
+      location: marker.location,
+      events
+    };
     return this.dialog.open(MarkerDialogComponent, {
       width: '400px',
-      data: {
-        category: cat,
-        position: marker.position,
-        location: marker.location,
-        events
-      }
+      data: makerInfo
     }).afterClosed().subscribe(event => {
       if (!event) {
         return;
