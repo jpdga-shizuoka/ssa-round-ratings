@@ -26,7 +26,7 @@ export class RoutingTabsComponent implements OnInit, OnDestroy {
       throw new Error('[tabs] must be initialized');
     }
     this.subscription = this.route.params.subscribe(params => {
-      const tag = params.tagname as string;
+      const tag = params['tagname'] as string;
       const index = this.tabs.findIndex((value => value === tag));
       if (index >= 0 && index < this.tabs.length) {
         this.selectedTab = index;

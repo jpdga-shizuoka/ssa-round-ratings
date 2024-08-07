@@ -21,7 +21,7 @@ export class MonthlyTableComponent extends EventsTableComponent {
     super(route, router, remote);
   }
 
-  onRawClicked(event: EventInfo) {
+  override onRawClicked(event: EventInfo) {
     this.expandedElement = this.isDetailExpand(event) ? undefined : event;
   }
 }

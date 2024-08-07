@@ -86,7 +86,7 @@ export class EventComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.subscription = this.route.params.subscribe(params => {
-      this.eventId = params.eventId as EventId;
+      this.eventId = params['eventId'] as EventId;
       if (this.eventId) {
         this.event$ = new Subject<EventInfo>();
         this.roundList$ = new Subject<RoundId[]>();

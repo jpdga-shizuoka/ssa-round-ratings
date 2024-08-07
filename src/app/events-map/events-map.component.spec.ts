@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatListModule } from '@angular/material/list';
 
@@ -13,17 +13,15 @@ describe('EventsMapComponent', () => {
 
   beforeEach(waitForAsync(() => {
     return TestBed.configureTestingModule({
-      declarations: [
+    declarations: [
         EventsMapComponent,
         MarkerDialogComponent,
         LocalizePipe
-      ],
-      imports: [
-        HttpClientModule,
-        MatDialogModule,
-        MatListModule
-      ]
-    }).compileComponents();
+    ],
+    imports: [MatDialogModule,
+        MatListModule],
+    providers: [provideHttpClient(withInterceptorsFromDi())]
+}).compileComponents();
   }));
 
   beforeEach(() => {

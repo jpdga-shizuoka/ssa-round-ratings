@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterTestingModule } from '@angular/router/testing';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 import { EventDetailComponent } from './event-detail.component';
 import { GeolinkPipe } from '../geolink.pipe';
@@ -14,18 +14,16 @@ describe('EventDetailComponent', () => {
 
   beforeEach(waitForAsync(() => {
     return TestBed.configureTestingModule({
-      declarations: [
+    declarations: [
         EventDetailComponent,
         GeolinkPipe,
         LocalizePipe,
         SchedulePipe
-      ],
-      imports: [
-        RouterTestingModule,
-        MatIconModule,
-        HttpClientModule
-      ]
-    }).compileComponents();
+    ],
+    imports: [RouterTestingModule,
+        MatIconModule],
+    providers: [provideHttpClient(withInterceptorsFromDi())]
+}).compileComponents();
   }));
 
   beforeEach(() => {

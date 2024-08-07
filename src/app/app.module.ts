@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { YouTubePlayerModule } from '@angular/youtube-player';
-import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi, withJsonpSupport } from '@angular/common/http';
 import { GoogleMapsModule } from '@angular/google-maps';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -87,8 +87,7 @@ import { PhotoListComponent } from './photo-list/photo-list.component';
 import { AnnualReportsComponent } from './annual-reports/annual-reports.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
-@NgModule({
-    declarations: [
+@NgModule({ declarations: [
         AppComponent,
         ReloadComponent,
         RoundsTabsComponent,
@@ -145,16 +144,13 @@ import { ServiceWorkerModule } from '@angular/service-worker';
         PhotoListComponent,
         AnnualReportsComponent
     ],
-    imports: [
-        BrowserModule,
+    bootstrap: [AppComponent], imports: [BrowserModule,
         FormsModule,
         BrowserAnimationsModule,
         AppRoutingModule,
         LayoutModule,
         YouTubePlayerModule,
         GoogleMapsModule,
-        HttpClientModule,
-        HttpClientJsonpModule,
         MatToolbarModule,
         MatIconModule,
         MatTooltipModule,
@@ -177,13 +173,9 @@ import { ServiceWorkerModule } from '@angular/service-worker';
         MatExpansionModule,
         NgxChartsModule,
         ServiceWorkerModule.register('ngsw-worker.js', {
-          enabled: !isDevMode(),
-          // Register the ServiceWorker as soon as the application is stable
-          // or after 30 seconds (whichever comes first).
-          registrationStrategy: 'registerWhenStable:30000'
-        })
-    ],
-    providers: [],
-    bootstrap: [AppComponent]
-})
+            enabled: !isDevMode(),
+            // Register the ServiceWorker as soon as the application is stable
+            // or after 30 seconds (whichever comes first).
+            registrationStrategy: 'registerWhenStable:30000'
+        })], providers: [provideHttpClient(withInterceptorsFromDi(), withJsonpSupport())] })
 export class AppModule { }

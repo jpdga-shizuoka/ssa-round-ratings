@@ -4,7 +4,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -31,8 +31,8 @@ describe('DashBoardComponent', () => {
 
   beforeEach(waitForAsync(() => {
     return TestBed.configureTestingModule({
-      schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      declarations: [
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    declarations: [
         DashBoardComponent,
         VideosTableComponent,
         LocalizePipe,
@@ -41,13 +41,11 @@ describe('DashBoardComponent', () => {
         SchedulePipe,
         PeriodPipe,
         EventPipe
-      ],
-      imports: [
-        NoopAnimationsModule,
+    ],
+    imports: [NoopAnimationsModule,
         LayoutModule,
         RouterTestingModule,
         FormsModule,
-        HttpClientModule,
         MatButtonModule,
         MatCardModule,
         MatGridListModule,
@@ -56,9 +54,9 @@ describe('DashBoardComponent', () => {
         MatBottomSheetModule,
         MatFormFieldModule,
         MatInputModule,
-        MatTableModule
-      ]
-    }).compileComponents();
+        MatTableModule],
+    providers: [provideHttpClient(withInterceptorsFromDi())]
+}).compileComponents();
   }));
 
   beforeEach(() => {

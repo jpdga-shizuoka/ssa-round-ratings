@@ -28,7 +28,7 @@ export class VideosDataSource extends MatTableDataSource<MiscInfo> {
    * the returned stream emits new items.
    * @returns A stream of the items to be rendered.
    */
-  connect(): BehaviorSubject<MiscInfo[]> {
+  override connect(): BehaviorSubject<MiscInfo[]> {
     this.loading = true;
     this.remote.getVideos()
       .pipe(
@@ -47,7 +47,7 @@ export class VideosDataSource extends MatTableDataSource<MiscInfo> {
    *  Called when the table is being destroyed. Use this function, to clean up
    * any open connections or free any held resources that were set up during connect.
    */
-  disconnect(): void {
+  override disconnect(): void {
     super.disconnect();
   }
 
