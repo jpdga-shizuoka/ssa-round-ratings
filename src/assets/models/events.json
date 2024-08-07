@@ -194,11 +194,16 @@
       "ama": 29,
       "misc": 3
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/691_map.pdf"
+    },
     "pdga": {
+      "tier": "B",
       "scoreId": "83523",
       "eventId": "83523"
     },
     "jpdga": {
+      "tier": "ABT-A",
       "eventId": "691"
     },
     "urls": [
