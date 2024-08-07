@@ -146,7 +146,7 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
   @Input() maxRadius = 10;
   @Input() minRadius = 3;
   @Input() autoScale: boolean = true;
-  @Input() schemeType: ScaleType = ScaleType.Ordinal;
+  @Input() mySchemeType: ScaleType = ScaleType.Ordinal;
   @Input() legendPosition = LegendPosition.Right;
   @Input() tooltipDisabled: boolean = false;
   @Input() xScaleMin: any;
@@ -191,7 +191,7 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
 
   activeEntries: Entry[] = [];
 
-  update(): void {
+  override update(): void {
     const results = this.results;
     super.update();
     this.results = results;
@@ -208,7 +208,7 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
       showXLabel: this.showXAxisLabel,
       showYLabel: this.showYAxisLabel,
       showLegend: this.legend,
-      legendType: this.schemeType
+      legendType: this.mySchemeType
     });
 
     this.seriesDomain = this.data?.length ? this.data.map(d => d.name) : this.seriesDomain;
@@ -218,8 +218,8 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
 
     this.transform = `translate(${this.dims.xOffset},${this.margin[0]})`;
 
-    const colorDomain = this.schemeType === ScaleType.Ordinal ? this.seriesDomain : this.rDomain;
-    this.colors = new ColorHelper(this.scheme, this.schemeType, colorDomain, this.customColors);
+    const colorDomain = this.mySchemeType === ScaleType.Ordinal ? this.seriesDomain : this.rDomain;
+    this.colors = new ColorHelper(this.scheme, this.mySchemeType, colorDomain, this.customColors);
 
     this.minRadius = Math.max(this.minRadius, 1);
     this.maxRadius = Math.max(this.maxRadius, 1);
@@ -316,14 +316,14 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
   }
 
   getLegendOptions(): LegendOptions {
-    return this.schemeType === ScaleType.Ordinal ? {
-        scaleType: this.schemeType,
+    return this.mySchemeType === ScaleType.Ordinal ? {
+        scaleType: this.mySchemeType,
         colors: this.colors,
         domain: this.seriesDomain ?? [],
         position: this.legendPosition,
         title: this.legendTitle
       } : {
-        scaleType: this.schemeType,
+        scaleType: this.mySchemeType,
         colors: this.colors?.scale,
         domain: this.rDomain ?? [],
         position: this.legendPosition,

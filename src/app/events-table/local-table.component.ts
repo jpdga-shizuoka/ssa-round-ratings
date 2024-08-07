@@ -21,11 +21,11 @@ export class LocalTableComponent extends EventsTableComponent {
     super(route, router, remote);
   }
 
-  onRawClicked(event: EventInfo) {
+  override onRawClicked(event: EventInfo) {
     this.expandedElement = this.isDetailExpand(event) ? undefined : event;
   }
 
-  isCanceled(event: EventInfo): boolean {
+  override isCanceled(event: EventInfo): boolean {
     return event.status === 'CANCELED';
   }
 }

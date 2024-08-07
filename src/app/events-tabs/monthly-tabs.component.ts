@@ -40,7 +40,7 @@ export class MonthlyTabsComponent extends EventsTabsComponent {
     }
   }
 
-  ngOnDestroy(): void {
+  override ngOnDestroy(): void {
     this.ss?.unsubscribe();
     super.ngOnDestroy();
   }

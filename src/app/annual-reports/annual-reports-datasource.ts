@@ -23,7 +23,7 @@ export class AnnualReportsDataSource extends MatTableDataSource<AnnualReport> {
    * the returned stream emits new items.
    * @returns A stream of the items to be rendered.
    */
-  connect(): BehaviorSubject<AnnualReport[]> {
+  override connect(): BehaviorSubject<AnnualReport[]> {
     this.remote.getAnnualReports().subscribe(
       reports => { this.data = reports; },
       err => console.log(err),
@@ -36,5 +36,5 @@ export class AnnualReportsDataSource extends MatTableDataSource<AnnualReport> {
    *  Called when the table is being destroyed. Use this function, to clean up
    * any open connections or free any held resources that were set up during connect.
    */
-  disconnect(): void {}
+  override disconnect(): void {}
 }
