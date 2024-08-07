@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ActivatedRoute } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
@@ -33,8 +33,8 @@ describe('EventsTabsComponent', () => {
 
   beforeEach(waitForAsync(() => {
     return TestBed.configureTestingModule({
-      schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      declarations: [
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    declarations: [
         EventsTabsComponent,
         EventsTableComponent,
         EventsMapComponent,
@@ -46,13 +46,9 @@ describe('EventsTabsComponent', () => {
         SchedulePipe,
         PeriodPipe,
         EventPipe
-      ],
-      imports: [
-        RouterTestingModule.withRoutes(
-          [{ path: 'events/local', component: EventsTabsComponent }]
-        ),
+    ],
+    imports: [RouterTestingModule.withRoutes([{ path: 'events/local', component: EventsTabsComponent }]),
         NoopAnimationsModule,
-        HttpClientModule,
         MatIconModule,
         MatPaginatorModule,
         MatSortModule,
@@ -61,18 +57,16 @@ describe('EventsTabsComponent', () => {
         MatBottomSheetModule,
         MatFormFieldModule,
         MatInputModule,
-        MatDialogModule
-      ],
-      // https://gist.github.com/benjamincharity/3d25cd2c95b6ecffadb18c3d4dbbd80b
-      providers: [{
-        provide: ActivatedRoute,
-        useValue: {
-          snapshot: {
-            url: [{ path: 'events' }, { path: 'local' }]
-          }
-        }
-      }]
-    }).compileComponents();
+        MatDialogModule],
+    providers: [{
+            provide: ActivatedRoute,
+            useValue: {
+                snapshot: {
+                    url: [{ path: 'events' }, { path: 'local' }]
+                }
+            }
+        }, provideHttpClient(withInterceptorsFromDi())]
+}).compileComponents();
   }));
 
   beforeEach(() => {

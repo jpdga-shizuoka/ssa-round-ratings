@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -22,24 +22,22 @@ describe('StatsTabsComponent', () => {
 
   beforeEach(waitForAsync(() => {
     return TestBed.configureTestingModule({
-      schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      declarations: [
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    declarations: [
         StatsTabsComponent,
         TotalPlayersComponent,
         LocalizePipe
-      ],
-      imports: [
-        RouterTestingModule,
+    ],
+    imports: [RouterTestingModule,
         NoopAnimationsModule,
         FormsModule,
-        HttpClientModule,
         MatIconModule,
         MatTabsModule,
         MatFormFieldModule,
         MatInputModule,
-        NgxChartsModule
-      ]
-    }).compileComponents();
+        NgxChartsModule],
+    providers: [provideHttpClient(withInterceptorsFromDi())]
+}).compileComponents();
   }));
 
   beforeEach(() => {
