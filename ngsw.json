@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1722942107740,
+  "timestamp": 1723000164791,
   "index": "https://jpdga-shizuoka.github.io/ssa-round-ratings/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "https://jpdga-shizuoka.github.io/ssa-round-ratings/favicon.ico",
         "https://jpdga-shizuoka.github.io/ssa-round-ratings/index.html",
-        "https://jpdga-shizuoka.github.io/ssa-round-ratings/main.4fe9bee55099f1f9.js",
+        "https://jpdga-shizuoka.github.io/ssa-round-ratings/main.87f56f3c577dc793.js",
         "https://jpdga-shizuoka.github.io/ssa-round-ratings/manifest.webmanifest",
         "https://jpdga-shizuoka.github.io/ssa-round-ratings/polyfills.d190637e189a6a4f.js",
         "https://jpdga-shizuoka.github.io/ssa-round-ratings/runtime.fb724d8c0713eaf5.js",
@@ -112,8 +112,8 @@
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/models/rounds.json": "4c23c850bc08b94c4ee2dfa45c385555950592e6",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/background.78090163f1ea24b6.png": "e73765d5d309e55e18a9143db2a011c7df60c72c",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/favicon.ico": "7108cd1825222d5bd76e0c68b178d0bf608dc5da",
-    "https://jpdga-shizuoka.github.io/ssa-round-ratings/index.html": "0d8ab7db2bcd998da1be1c1824827c22b034979e",
-    "https://jpdga-shizuoka.github.io/ssa-round-ratings/main.4fe9bee55099f1f9.js": "143061770bd41d348c4cacbe98b09a3c4a382884",
+    "https://jpdga-shizuoka.github.io/ssa-round-ratings/index.html": "b05f6303fbd1ac6d6f1d773797cf648f83b05f2a",
+    "https://jpdga-shizuoka.github.io/ssa-round-ratings/main.87f56f3c577dc793.js": "ee65b33a6515facde1c2671d6080181b3b891d87",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/manifest.webmanifest": "5c93407b4b1506533f8ce52362745167a7625ed9",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/menu-back-image.1fce402af27f84fa.png": "6138526bcf3aad21418f6b95513f3df66dfb96b7",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/open_in_new-24px.b0e76dea768c6863.svg": "4659a31d0dec34789d2ed76afe728bac5d91db94",
