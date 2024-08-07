@@ -50,7 +50,7 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
       throw new Error('[category] is required');
     }
     this.subscription = this.route.queryParams.subscribe(params => {
-      this.updateSearch(params.location);
+      this.updateSearch(params['location']);
     });
   }
 

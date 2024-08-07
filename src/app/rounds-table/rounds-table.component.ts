@@ -65,7 +65,7 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
       });
     }
     this.ssQuery = this.route.queryParams
-      .subscribe(query => this.updateSearch(query.search));
+      .subscribe(query => this.updateSearch(query['search']));
   }
 
   ngAfterViewInit(): void {
