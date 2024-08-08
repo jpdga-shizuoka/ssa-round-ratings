@@ -9,6 +9,7 @@ import { MarkerDialogComponent, MarkerDialogData } from '../dialogs/marker-dialo
 import { environment } from '../../environments/environment';
 import { RemoteService, EventInfo, LocationInfo } from '../remote.service';
 import { GoogleMapsApiService } from '../googlemapsapi.service';
+import { compareByDate } from '../libs';
 
 @Component({
   selector: 'app-events-map',
@@ -82,10 +83,19 @@ export class EventsMapComponent implements OnInit, OnDestroy {
         events.push({
           id: m.eventId,
           location: m.location,
-          title: m.title
+          title: m.title,
+          period: m.period
         });
       }
     }
+    events.sort((a, b) => {
+      if (!a.period || !b.period) {
+        return 0;
+      }
+      const dateA = new Date(a.period.from);
+      const dateB = new Date(b.period.from);
+      return compareByDate(dateA, dateB);
+    });
     this.subscription = this.openDialog(this.category, marker, events);
   }
 
@@ -148,7 +158,8 @@ function makeMarker(event: EventInfo, location: LocationInfo): GeoMarker {
     },
     eventId: event.id,
     location: location.id,
-    title: event.title ?? ''
+    title: event.title ?? '',
+    period: event.period
   };
 }
 
