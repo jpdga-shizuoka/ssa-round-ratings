@@ -162,7 +162,16 @@
       "from": "2024-08-17",
       "to": "2024-08-18"
     },
+    "layout": {
+      "official": "https://www.jpdgafukuoka.com/blog/wp/wp-content/uploads/2024/08/c75f15dac38c90f49517a8337f2b0c92.jpg"
+    },
+    "players": {
+      "pro": 32,
+      "ama": 35,
+      "misc": 3
+    },
     "pdga": {
+      "scoreId": "83205",
       "eventId": "83205"
     },
     "jpdga": {
