@@ -222,6 +222,11 @@
     },
     "urls": [
       {
+        "type": "video",
+        "title": "Vlog,@discgolflab",
+        "url": "https://youtu.be/P8m3dHvUw2Q?si=hRC3Bu-iB7kKlTe_"
+      },
+      {
         "type": "website",
         "title": "Official Site",
         "url": "http://jpdgaiwate.com"

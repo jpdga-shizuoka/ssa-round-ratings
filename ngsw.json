@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1724312323649,
+  "timestamp": 1724320863644,
   "index": "https://jpdga-shizuoka.github.io/ssa-round-ratings/index.html",
   "assetGroups": [
     {
@@ -102,7 +102,7 @@
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/local/menu-aliase-dictionary.json": "5f3e13b238e38bc24ec6fe2ac01f72d17a8b0131",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/local/prefecture-aliase-dictionary.json": "6fa9f9affdaa14f61102dd33c9df6f6e7a70f6a7",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/models/annual-reports.json": "6de7e8b6f21cdf85ec27f1c7d49dd780d856e0cf",
-    "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/models/events.json": "460305ef419a7b073ce97ebc5054397faa8a5993",
+    "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/models/events.json": "6cba364295ee8163a4fe0ba4cdde39c78aedad01",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/models/local-events.json": "bf70b0b90f927a32ac1f3ff574f0cd76c2fa5fc4",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/models/locations.json": "651eecc04bd1e42e8665bbb62f04b8a11bea8527",
     "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/models/members.JPDGA.json": "937fad0fb02395183ba3c3905e363fc0ed08f267",
