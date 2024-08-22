@@ -179,6 +179,11 @@
     },
     "urls": [
       {
+        "type": "video",
+        "title": "Final,Lead Card,MPO@DigitalUminaka",
+        "url": "https://youtu.be/19xlRG0Kr0Y?si=Oo73YidxWjxJ7ky3"
+      },
+      {
         "type": "website",
         "title": "Official Site",
         "url": "https://www.jpdgafukuoka.com/"
@@ -293,8 +298,13 @@
     "urls": [
       {
         "type": "video",
+        "title": "R3F9,MPO,Lead Card@Dch-discchannel",
+        "url": "https://youtu.be/Yhl0vJqC5Do?si=e1NU1Hyp2z_vn1nj"
+      },
+      {
+        "type": "video",
         "title": "R2B9,MPO,Lead Card@Dch-discchannel",
-        "url": "https://youtu.be/ulewTSjaHnY?si=x8iJHjnbkavQV6lo"
+        "url": "https://youtu.be/ulewTSjaHnY?si=QxaY2z9dy0crw54H"
       },
       {
         "type": "video",
