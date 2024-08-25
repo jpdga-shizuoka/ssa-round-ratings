@@ -204,8 +204,8 @@
       "to": "2024-08-12"
     },
     "players": {
-      "pro": 49,
-      "ama": 29,
+      "pro": 44,
+      "ama": 34,
       "misc": 3
     },
     "layout": {
@@ -219,6 +219,12 @@
     "jpdga": {
       "tier": "ABT-A",
       "eventId": "691"
+    },
+    "budget": {
+      "entreefee": 10000,
+      "purse": 1286,
+      "paidout": 20,
+      "rate": 147.1
     },
     "urls": [
       {
