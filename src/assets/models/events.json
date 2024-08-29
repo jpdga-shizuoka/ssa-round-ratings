@@ -171,10 +171,12 @@
       "misc": 3
     },
     "pdga": {
+      "tier": "B",
       "scoreId": "83205",
       "eventId": "83205"
     },
     "jpdga": {
+      "tier": "ABT-B",
       "eventId": "693"
     },
     "budget": {
