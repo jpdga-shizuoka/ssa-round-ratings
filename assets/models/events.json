@@ -119,7 +119,12 @@
       "from": "2024-10-13",
       "to": "2024-10-14"
     },
+    "pdga": {
+      "tier": "B",
+      "eventId": "85150"
+    },
     "jpdga": {
+      "tier": "ABT-B",
       "eventId": "699"
     }
   },
@@ -150,7 +155,12 @@
       "from": "2024-09-22",
       "to": "2024-09-23"
     },
+    "pdga": {
+      "tier": "B",
+      "eventId": "85149"
+    },
     "jpdga": {
+      "tier": "NT",
       "eventId": "696"
     }
   },
@@ -171,10 +181,12 @@
       "misc": 3
     },
     "pdga": {
+      "tier": "B",
       "scoreId": "83205",
       "eventId": "83205"
     },
     "jpdga": {
+      "tier": "ABT-B",
       "eventId": "693"
     },
     "budget": {
@@ -206,7 +218,7 @@
     "title": "The 19th Michinoku Open",
     "location": "kitakamisportpark",
     "period": {
-      "from": "2024-08-10",
+      "from": "2024-08-11",
       "to": "2024-08-12"
     },
     "players": {
