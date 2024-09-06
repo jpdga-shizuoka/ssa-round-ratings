@@ -160,6 +160,9 @@
       "from": "2024-09-22",
       "to": "2024-09-23"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/696_map.pdf"
+    },
     "pdga": {
       "tier": "B",
       "eventId": "85149"
