@@ -136,7 +136,12 @@
       "from": "2024-10-05",
       "to": "2024-10-06"
     },
+    "pdga": {
+      "tier": "B",
+      "eventId": "85302"
+    },
     "jpdga": {
+      "tier": "ABT-A",
       "eventId": "697"
     },
     "urls": [
@@ -154,6 +159,9 @@
     "period": {
       "from": "2024-09-22",
       "to": "2024-09-23"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/696_map.pdf"
     },
     "pdga": {
       "tier": "B",
@@ -325,6 +333,17 @@
       "paidout": 19
     },
     "urls": [
+      {
+        "type": "video",
+        "title": "Final,MPO,Lead Card@Dch-discchannel",
+        "url": "https://youtu.be/l24UoLJe9ds?si=wJJJtRTn_zSD93PL"
+      },
+      {
+        "type": "video",
+        "title": "R3B9,MPO,Lead Card@Dch-discchannel",
+        "url": "https://youtu.be/3alNBjnueaI?si=Mw3XDuMGcAuF1qmr"
+      },
+
       {
         "type": "video",
         "title": "R3F9,MPO,Lead Card@Dch-discchannel",
