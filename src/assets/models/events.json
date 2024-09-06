@@ -136,7 +136,12 @@
       "from": "2024-10-05",
       "to": "2024-10-06"
     },
+    "pdga": {
+      "tier": "B",
+      "eventId": "85302"
+    },
     "jpdga": {
+      "tier": "ABT-A",
       "eventId": "697"
     },
     "urls": [
