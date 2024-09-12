@@ -219,33 +219,37 @@ PDGAは2021年10月に大会支援チームを設立し、TDの支援を行っ�
 - 会員関連: Memberships Manager, vallen@pdga.com  
 - その他の問題: International Director international@pdga.com  
 
-## 9. プレーヤー分類
+## 9. プレーヤーの分類
 
-すべての国に適用されるPDGAプロフェッショナルおよびアマチュア部門の表は、以下のリンクで確認できます:
+すべての国に適用されるPDGAプロフェッショナルおよびアマチュア部門の分類表は、以下のリンクで確認できます:
 [https://www.pdga.com/pdga-documents/tour-documents/divisions-ratings-and-points-factors](https://www.pdga.com/pdga-documents/tour-documents/divisions-ratings-and-points-factors).
 
-PDGAプレーヤーの年齢：  
+### PDGAプレーヤーの年齢:
+
 プレーヤーの公式なPDGA年齢は、誕生日ではなく生年に基づきます。そのため、その年の誕生日に到達する年齢が、そのツアー年間を通じてのPDGA年齢となり、年齢に基づく部門の資格を決定します。例：
 - 39歳の男性プレーヤーがカレンダー年のいずれかの時点で40歳になる場合、その年のPDGA年齢は40歳であり、MP40またはMA40にその年の間ずっと参加資格があります。
 - 15歳の女性プレーヤーがカレンダー年のいずれかの時点で16歳になる場合、その年のPDGA年齢は16歳であり、その年はFJ15には参加資格がなく、FJ18または年齢制限のない部門(FPO、FA1、FA2など)に参加しなければなりません。
 
-プレーヤーの性別：  
+### プレーヤーの性別:
+
 女性は混合部門で競技することができますが、男性は女性部門で競技することはできません。2023年12月、PDGAは性別に基づく部門の参加資格に関するポリシーを更新し、トランスジェンダー選手の参加資格も含めています。詳細は以下のリンクをご覧ください：  
 [https://www.pdga.com/medical/gender-based-division-eligibility](https://www.pdga.com/medical/gender-based-division-eligibility)
 
-プレーヤーの分類：
+### プレーヤーの分類:
+
 - プロ部門で順位に基づく賞金を受け取るか、プロ会員として更新することで、プレーヤーはPDGAアマチュア資格を放棄します。
 - アマチュアプレーヤーは、プロの賞金の代わりに商品を受け取るか、何も受け取らないことでPDGAアマチュア資格を保持します。
 - プロからアマチュアへの再分類の要件については、以下のリンクで確認できます：  
   [https://www.pdga.com/files/2023_pdga_reclassification_from_pro_to_amateur_criteria.pdf](https://www.pdga.com/files/2023_pdga_reclassification_from_pro_to_amateur_criteria.pdf)
 
-合理的な修正ポリシーと適応ルール：  
-このポリシーは、障害のあるプレーヤーがPDGA公認大会に参加できるよう、特定のルールの免除を申請できるようにしています。免除は年単位で提供され、毎年再申請が必要です。また、回復可能な一時的な怪我に対しては適用されません。詳細については、以下のリンクをご覧ください：  
+### 合理的な修正ポリシーと適応ルール:
+
+このポリシーは、障害のあるプレーヤーがPDGA公認大会に参加できるよう、特定のルールの免除を申請できるようにしています。免除は年単位で提供され、毎年再申請が必要です。また、回復可能な一時的な怪我に対しては適用されません。詳細については、以下のリンクをご覧ください: 
 [https://www.pdga.com/medical/reasonable-modification-request](https://www.pdga.com/medical/reasonable-modification-request)  
-加えて、2023年7月にPDGAは、車椅子アスリートや適応アスリートに関するルールの付録を発表しました。詳細はこちらをご覧ください：  
+加えて、2023年7月にPDGAは、車椅子アスリートや適応アスリートに関するルールの付録を発表しました。詳細はこちらをご覧ください: 
 [https://www.pdga.com/news/adaptive-rules-disc-golf](https://www.pdga.com/news/adaptive-rules-disc-golf)
 
-## 第11章 2024 PDGA世界選手権
+## 第11章 2024年PDGA世界選手権
 
 |開催日|公式名称|都市|州|国|
 |-----|-------|---|--|--|
@@ -258,17 +262,19 @@ PDGAプレーヤーの年齢：
 
 最近、PDGAは2025年のプロ世界選手権が初めてヨーロッパのフィンランド、タンペレ/ノキアで開催されることを発表しました。
 
-## 第12章 2024 PDGA国際メジャー＆チャンピオンシップ大会
+## 第12章 2024年PDGA国際メジャーおよびチャンピオンシップ大会
 
 | 開催日 | ティア | 公式名称 | 都市 | 国 | ウェブサイト |
 | -------- | ---- | ------------- | ---- | ---- | ----------- |
 | 7月17日〜21日 | M | ヨーロピアンオープン | ノキア | フィンランド | [http://www.opendiscgolf.com/](http://www.opendiscgolf.com/) |
 | 11月6日〜9日 | XA | WFDFディスクゴルフ世界チーム選手権 | パース | オーストラリア | [https://wfdf.sport/](https://wfdf.sport/) |
 
-**ヨーロッパディスクゴルフ選手権**  
+### ヨーロッパディスクゴルフ選手権
+
 隔年で開催されるヨーロッパ選手権は、ヨーロッパディスクゴルフ連盟(EDGF)および開催者によって運営されます。参加資格はヨーロッパ市民および居住者に限定されており、次回は2025年に開催されます。詳細はこちら：[https://discgolffederation.eu/](https://discgolffederation.eu/)
 
-**WFDF世界ディスクゴルフチーム選手権**  
+### WFDF世界ディスクゴルフチーム選手権
+
 WFDF世界チーム選手権は2年に一度開催されます。2022年のクロアチア大会では25か国が参加し、エストニアが金メダル、チェコが銀メダル、カナダが銅メダルを獲得しました。2024年大会はオーストラリアで開催されます。詳細はこちら：[https://wfdf.sport/](https://wfdf.sport/)
 
 PDGAは、国際メジャー大会、ヨーロッパ選手権、WFDFチーム世界選手権を、資金援助、ソーシャルメディアでのプロモーション、ライブスコアリング、そして現地参加を通じて支援しています。
@@ -294,7 +300,7 @@ PDGAが公認するA、B、またはCティア大会で問題が発生した場�
 3. **国内協会が事件を追及するほど重大ではないと判断し、PDGA会員が異議を唱える場合**  
    会員は、現役のPDGA会員10名以上の署名を添えてフォームを提出することができます。
 
-注記：国内協会は、国内の事務に対する権限の一環として、希望する場合には自国のメンバーをPDGAおよび非PDGAの大会から出場停止にすることができます。しかし、その場合、国内協会はその処置に伴うすべての結果について完全に責任を負い、出場停止は該当国の国境内でのみ適用されます。例として、国内メンバーとしての品位を欠く行動を理由に選手が懲戒される場合や、PDGAに懲戒措置フォームが提出されているが、懲戒委員会が多数の案件を調査しているため対応が遅れている場合が挙げられます。一方、PDGAによる懲戒措置が会員に対して行われた場合、その措置はすべてのPDGA大会および会員特典に対して世界的に適用されます。
+注記: 国内協会は、国内の事務に対する権限の一環として、希望する場合には自国のメンバーをPDGAおよび非PDGAの大会から出場停止にすることができます。しかし、その場合、国内協会はその処置に伴うすべての結果について完全に責任を負い、出場停止は該当国の国境内でのみ適用されます。例として、国内メンバーとしての品位を欠く行動を理由に選手が懲戒される場合や、PDGAに懲戒措置フォームが提出されているが、懲戒委員会が多数の案件を調査しているため対応が遅れている場合が挙げられます。一方、PDGAによる懲戒措置が会員に対して行われた場合、その措置はすべてのPDGA大会および会員特典に対して世界的に適用されます。
 
 懲戒措置フォームは以下のリンクから入手できます: [https://www.pdga.com/documents/disciplinary-action-form](https://www.pdga.com/documents/disciplinary-action-form).
 
@@ -310,6 +316,101 @@ PDGAの懲戒手続きに関する詳細は、以下のリンクをご覧くだ�
 
 マルコポーロプログラムの詳細、申請書、そしてこれまでの受領者によるプロジェクト報告書の例については、以下のリンクをご覧ください: [http://www.pdga.com/marco-polo-program](http://www.pdga.com/marco-polo-program)。
 
+# 第2部 PDGAヨーロッパ
+
+## 第15章 PDGAヨーロッパの概要
+
+2017年に、PDGAヨーロッパ委員会とPDGAグローバル理事会は、PDGAヨーロッパを自律的かつ自立した大陸支部へと移行するための国際ディレクターの構想文書を承認し、PDGAヨーロッパ理事会を設立することを決議しました。
+
+- ヨーロッパ会員に対する会員パッケージの内容と履行に関するアンケート調査
+- 毎月のテレカンファレンスでの継続的な業務の運営
+- PDGAグローバル代表者とともに、ヨーロッパ理事会とスタッフによる毎年対面でのサミットの開催
+- 毎年開催されるユーロツアーシリーズの組織と実施
+- 2019年3月にフルタイムのヨーロッパツアーマネージャーの雇用と研修を実施
+- 2019年9月にフィンランドでPDGAヨーロッパを非営利団体として登録
+- ヘルシンキのフィンランドスポーツ施設にPDGAヨーロッパオフィスを開設
+- 2022年から理事長の指導のもとで年次戦略計画を策定
+- ヨーロッパからの会員費とイベント公認料の大部分をグローバルオフィスが受け取り、それを活用して拡大する年間予算を設計し実施
+- PDGAヨーロッパのウェブショップを立ち上げました。詳細はこちら: https://www.ultimo.cz/en/euro-tour/
+- ウクライナオープンの募金活動を通じて€3600を集め、さらに€2500をウクライナでのディスクゴルフ支援に寄付
+- Covidの影響で2年間の中止を経て、ディスクゴルフプロツアーと提携し、2022年と2023年に史上最大のユーロツアーシリーズを開催
+- 2022年にPDGAヨーロッパディスクゴルフ開発プログラムを導入
+- 2022年9月および2023年11月に初のPDGAヨーロッパ年次総会を開催
+- 2023年に初のPDGAヨーロッパ女子イベントを開催
+- 2023年3月にマーケティング＆メディアマネージャーを雇用し、研修を実施
+- 2023年9月にジェネラルマネージャーを雇用
+- 2024年に向けて、ユーロツアーとヨーロッパプロツアーを統合し、独立したDisc Golf Pro Tour – ヨーロッパエリートシリーズを支援
+- 2024年から、ヨーロッパディスクゴルフ連盟（EDGF）と協力し、各国支援プログラムの設計と実施を開始
+
+### 連絡先およびリソース
+
+> 省略
+
+## 第16章 PDGAヨーロッパのディスクゴルフ発展プログラム
+
+PDGAヨーロッパ開発プログラムは、ヨーロッパ大陸でのディスクゴルフの成長を促進するために、2022年に設立されました。このプログラムは、ヨーロッパの会員費やイベント料金から得られた資金の一部を再投資する手段として開始され、ヨーロッパ内におけるマルコポーロプログラムに代わる取り組みです。
+新しいコースやコース改良、女性、ジュニア、学校・コミュニティ向けプログラム、その他のよく計画されたプロジェクトに対して助成金が提供されます。2022年と2023年には、9か国に対して合計14の助成金が授与されました。詳細については、以下のリンクをご覧ください: [PDGAヨーロッパディスクゴルフ開発助成金プログラム](https://www.pdga.com/europe/disc-golf-development-grant-program)
+
+2023年のユーロツアーとヨーロピアンプロツアーシーズン後、これら2つの取り組みを統合し、Disc Golf Pro Tour – Europeという新しいシリーズが誕生しました。このシリーズでは、5つのエリートレベルのMPO/FPOイベント（以下のスケジュール参照）と6つのシルバーシリーズイベントが開催されます。PDGAヨーロッパは、アメリカのDGPTイベントでPDGAグローバル運営・物流チームが提供しているようなサポートを、これらのイベントに対して提供します。詳細は以下をご覧ください: [DGPT Europe](https://www.dgpt.com/news/dgpt-europe-about/)
+
+| イベントクラス | 日程 | 名称 | 場所 |
+|----------------|------|------|------|
+| シルバー | 5月3日～5日 | ベルギアンオープン | Braine-l'Alleud, ベルギー |
+| エリート | 5月10日～12日 | コペンハーゲンオープン | コペンハーゲン, デンマーク |
+| シルバー | 5月31日～6月2日 | ノルウェーオープン | トンスベルグ, ノルウェー |
+| シルバー | 6月7日～9日 | ハイノラオープン | ハイノラ, フィンランド |
+| エリート | 6月14日～16日 | トゥルクオープン | トゥルク, フィンランド |
+| シルバー | 6月21日～23日 | アーレオープン | ノール, スウェーデン |
+| エリート | 6月28日～30日 | スウェーデンオープン | ボロース, スウェーデン |
+| エリート | 7月12日～14日 | クロクホルオープン | オスロ, ノルウェー |
+| エリート | 7月26日～28日 | ヨーロピアンディスクゴルフフェスティバル | タリン, エストニア |
+| シルバー | 8月2日～4日 | ヤルヴァオープン x テューニ | ストックホルム, スウェーデン |
+| シルバー | 8月9日～11日 | バルト選手権 / ツアーファイナル | アルタガセ, エストニア |
+
+## 第18章 ヨーロッパ各国支援プログラム
+
+PDGAユーロツアーが2024年に開催されないことにより、PDGAヨーロッパは財政的および人的資源を他の優先事項に集中させることが可能になります。現在、EDGFと協力して開始された主要なプログラムは、29の加盟ヨーロッパ国内ディスクゴルフ協会への支援を強化することを目的としています。各国のスポーツの現状を診断し、最も効果的な支援方法や分野を特定することから始まります。
+
+計画は以下の4つのフェーズで構成されています：
+
+1. 各PDGAカントリーコーディネーターとのインタビューが行われ、最近の統計分析を構築することを目的としています（会員数、コース数、イベント数、住民数、1人当たりGDPなどの推移）。また、国際大会、教育システム、フィードバックチャネル、TDのトレーニング、法的相違、助成金プログラム、メディアとの関係、国内選手権の放送などの側面についても調査し、他国の成功例を共有し、効果的な措置を提案できるようにします。
+
+2. 次に、各国の組織的側面を調査するため、国内協会に対して包括的な調査が実施されます。これには、ディスクゴルフや協会の国内での認知度、会員の種類、会費、クラブなどの要素が含まれます。この調査は2015年のPDGA国際国調査の更新版であり、各国における時間経過による変化を研究し、アジア、オセアニア、ラテンアメリカの他国と比較できる利点があります。
+
+3. PDGAナショナルコーディネーターと国内協会の会長との2回目の会合を行い、調査結果を分析し、この支援計画の優先事項を確定するとともに、隣接国との協力可能な行動についても検討します。
+
+4.	最後に、旧大陸（ヨーロッパ）のディスクゴルフの現状に関するグローバルなビジョンを更新した後、PDGAヨーロッパとヨーロッパディスクゴルフ連盟は結論を共有し、それぞれの活動分野での連携を改善します。これにより、ヨーロッパ全体のディスクゴルフの成長をあらゆるレベルで引き続き推進していきます。
+
+## 第19章 PDGAヨーロッパ女子イベント
+
+2023年に初めてPDGAヨーロッパ女子イベントが開催され、16のイベントに13か国が参加しました。今後は、PDGA女子グローバルイベントが開催されない年にあたる2025年から、隔年で開催される予定です。このイベントは、女性のディスクゴルフ参加を促進し、女性の存在と成果を祝うためのプラットフォームを提供することで、PDGAヨーロッパが女性の参加に対して強くコミットしていることを示しています。
+
+## 第20章 PDGAヨーロッパアワード
+
+### 年間最優秀ボランティア賞
+
+この賞は2009年に設立され、PDGAヨーロッパ理事会の投票によって選ばれます。
+
+| | | |
+|-|-|-|
+|2009 Florence Dumont |2014 Janne Karlsson |2019 Kasper Andersen|
+|2010 Peter Bygde | 2015 Marko Saviauk |2020 Tapani Aulu|
+|2011 Jonas & Mats Löf |2016 Peter Buijsrogge |2021 Zoë Winfield|
+|2012 Darius Gricius |2017 Carlos Rio |2022 Rene Mikkelsen|
+|2013 Laura Nagtegaal |2018 Dinko Šimenc |2023 to be announced|
+
+### 年間最優秀プレーヤー賞
+
+2014年以降、この賞の受賞者は、年間最終プレーヤーレーティング、ユーロツアーシリーズの成績、PDGAメジャー、エリートシリーズ、Aティア大会、およびヨーロッパ選手権での順位に基づくポイントシステムで決定されています。
+
+| | |
+|-|-|
+|2014 Simon Lizotte & Ragna Bygde |2019 Simon Lizotte & Kristin Tattar|
+|2015 Simon Lizotte & Ragna Bygde |2020 COVIDにより受賞者無し|
+|2016 Karl Johan Nybo & Eveliina Salonen |2021 Linus Carlsson & Kristin Tattar|
+|2017 Simon Lizotte & Eveliina Salonen |2022 Niklas Anttila & Kristin Tattar|
+|2018 Seppo Paju & Kristin Tattar |2023 to be announced|
+
 # 第3部 付録
 
 ## 付録A PDGA国際会員の特典
@@ -319,24 +420,267 @@ PDGAの懲戒手続きに関する詳細は、以下のリンクをご覧くだ�
 PDGA会員の直接的な特典は以下の通りです：
 
 1. 更新会員は、当年の会員カードとステッカーを含む基本パッケージを受け取ります。
-2. 新規会員は生涯有効の会員番号を取得し、更新会員には年間PDGAロゴのバッグタグが提供されます。
-3. 現役会員は、PDGAツアーの全レベルのイベントに出場可能で、メジャー大会（PDGA世界選手権など）への招待ポイントを獲得します。
-4. 各ラウンドの成績に基づきプレーヤーレーティングが与えられ、他のプレーヤーやトップ選手と比較できます。
-5. PDGAのeニュースレターやディスクゴルファーマガジンなどを受け取るオプションがあります。
-6. Disc Golf Networkの50%割引が適用され、ツアーメジャーやDisc Golf Pro Tour Elite Seriesのライブ映像が楽しめます。
-7. Pulsea Disc Golf Academyの30日間の無料トライアルと年次サブスクリプションの70%割引を受けられます。
-8. Entertainment Benefits Groupとの提携で、ホテルや旅行の割引が受けられます。
-9. PDGAの理事選挙で投票、理事への立候補、PDGA委員会への参加が可能です。
+2. 新規および初回会員は、生涯有効の会員番号を取得します。更新会員には、毎年PDGAロゴ入りのバッグタグが提供されます。
+3. 現役会員は、PDGAツアーのすべてのレベルのイベントに参加する資格があり、PDGA世界選手権などのメジャー大会への招待に向けたポイントを獲得できます。現役PDGA会員は、[www.pdga.com](http://www.pdga.com) にある個人の統計ページで、トーナメントシーズンやキャリアの結果を追跡することができます。
+4. PDGA会員は、ツアーイベントでのラウンドごとの成績に基づき、個別のプレーヤーレーティングを取得します。PDGAのレーティングシステムは、プレーヤーの現在の競技レベルを測定し、友人やライバル、さらには国内外のトップディスクゴルファーとゲームを比較できるようにします。多くのトップレベルのイベントでは、プレーヤーレーティングが出場資格の基準となっています。
+5. 現役の国際会員は、情報豊富なPDGAのeニュースレター（無料）を受け取るオプションがあり、また、PDGAの「DiscGolfer」マガジン、競技ルールおよび競技マニュアルの印刷版（英語）、PDGAロゴ入りのミニディスクやディスクの購読を購入することができます。
+6. 現役会員は、Disc Golf Networkの50%割引を利用する資格があります。Disc Golf Networkでは、ツアーメジャー大会やDisc Golf Pro Tour Elite Seriesのライブ中継を提供しています。詳細については、[こちら](https://www.dgpt.com/news/your-complete-guide-to-navigating-dgn-2-0/)をご覧ください。
+7. Pulsea Disc Golf Academyは、現役PDGA会員に対して、オンラインアカデミーの30日間の無料トライアルを提供しています。Pulseaには、トッププロによる約500本の短いビデオレッスンがあり、現役PDGA会員は年間サブスクリプションを70%割引で利用可能です。詳しくは以下のリンクをご覧ください: [Pulsea PDGA特典](https://www.pulsea.com/pdga-benefit)。
+8. PDGAは、Entertainment Benefits Groupと提携し、会員がトーナメントスケジュールをサポートするために、ホテルや旅行料金の割引を提供しています。詳しくは以下をご覧ください: [新会員特典](https://www.pdga.com/news/new-member-benefits)。
+9. PDGA会員は、毎年行われるPDGA理事会選挙で投票したり、理事に立候補したり、PDGAの委員会で活動したりすることができます。すべての現役会員はPDGAのグローバル選挙に投票でき、ヨーロッパの現役会員はPDGAヨーロッパ理事会の選挙にも投票することができます。
 
 PDGA会員費は、間接的な特典として、以下の活動やプログラムの支援に使われます：
 
-1. PDGAデータベースやウェブサイト、ソフトウェアの開発と維持
-2. 世界中のコースディレクトリの提供
-3. 会員およびイベントシステムの管理
-4. 規則の見直しやツアー基準の開発
-5. ディスクゴルフの宣伝
-6. 50か国の国際プログラム
-7. マルコポーロプログラムやPDGAヨーロッパ開発基金
-8. 国際ディスクゴルフセンターの運営
+1. PDGAデータベース、ウェブサイト、およびソフトウェア（Disc Golf Scene、LiveApp、TournamentManager、Tournament Central、Live Scoringを含む）の開発、維持、革新。
+2. 現在、75以上の国や地域で10,000件以上のコースが掲載されている世界的なオンラインコースディレクトリ。
+3. PDGAスタッフは、膨大な会員およびイベントシステムの日常的な管理、会計処理、年間のプロ、アマチュア、マスター、ジュニア世界選手権およびその他のメジャーイベントの運営を行っています。システムの年次改良も担当しており、2020年3月以降は、ディスクゴルフに影響を与えるCOVID-19パンデミックの管理も含まれています。
+4. ボランティアの理事会と委員会メンバーによる運営では、競技規則の見直しと改訂、公認プレーのためのディスクやバスケットのテストと承認、ツアーおよび競技基準の策定、コースとプレーヤーレーティングシステムの監督、懲戒問題の調査、そして環境や持続可能性、女性、ジュニア、マイノリティの参加拡大など、ディスクゴルフの重要な側面を検討しています。
+5. ディスクゴルフのマーケティング活動には、一般の人々やスポンサー、ソーシャルメディアおよび伝統的なメディアへの宣伝が含まれます。主な内容として、ライブウェブTVや主要イベントの後処理映像、印刷物（特にDiscGolferマガジン）、見本市でのスポーツの紹介、写真、ディスクゴルフの指導ビデオ、主要イベントや素晴らしいショットの映像などが含まれます。
+6. 国際プログラムは、50の加盟国でディスクゴルフとPDGAブランドの成長を強化し、支援しています。
+7. マルコポーロプログラムおよびPDGAヨーロッパ開発基金は、新しい地域や国でのディスクゴルフの導入と発展を支援しています。
+8. ジョージア州コロンビア郡のウィルドウッドパークにある国際ディスクゴルフセンター（IDGC）は、2007年4月に開設されました。IDGCは、ディスクゴルフの重要なリソースおよび本部であり、ディスクゴルフ殿堂、ステディ・エド・ヘドリック博物館、PDGAオフィス、そして3つの世界クラスのコースがあります。
 
 これらすべてのPDGAの活動やプログラムは、ディスクゴルフの信頼性を高め、スポーツの正式化、成長、そして統一に貢献しています。つまり、PDGA会員としては、上記の直接的な特典を享受するだけでなく、世界中でスポーツとPDGAの発展を支援し、促進することにも貢献しているのです。
+
+## 付録B PDGA国際統計  
+
+### 2020-2023年大陸別および国別の統計
+
+出典: PDGAデータベース。**太字の国/地域名および統計** = PDGA加盟国
+<table>
+<thead>
+<tr>
+  <th rowspan="2">国/地域</th><th rowspan="2">記号</th>
+  <th colspan="4">有効会員数</th><th colspan="4">ツアー大会数</th>
+</tr>
+<tr>
+  <th>2020年</th><th>2021年</th><th>2022年</th><th>2023年</th>
+  <th>2020年</th><th>2021年</th><th>2022年</th><th>2023年</th>
+</tr>
+</thead>
+<tbody>
+<tr><td colspan="10"><b>北米</b></td></tr>
+<tr><td><b>アメリカ合衆国</b></td><td><b>US</b></td><td><b>56943</b></td><td><b>88148</b></td><td><b>103342</b></td><td><b>106439</b></td><td><b>2592</b></td><td><b>5465</b></td><td><b>6914</b></td><td><b>8105</b></td></tr>
+<tr><td><b>カナダ</b></td><td><b>CA</b></td><td><b>2050</b></td><td><b>3559</b></td><td><b>4964</b></td><td><b>5478</b></td><td><b>88</b></td><td><b>203</b></td><td><b>294</b></td><td><b>369</b></td></tr>
+<tr><td colspan="2"><b>小計</b></td><td>58993</td><td>91707</td><td>108306</td><td>111917</td><td>2680</td><td>5668</td><td>7208</td><td>8474</td></tr>
+<tr><td colspan="2"><b>北米成長率</b></td><td><b>35.4%</b></td><td><b>55.5%</b></td><td><b>18.1%</b></td><td><b>3.3%</b></td><td><b>-25.6%</b></td><td><b>111.5%</b></td><td><b>27.2%</b></td><td><b>17.6%</b></td></tr>
+
+<!-- Europe section -->
+<tr><td colspan="10"><b>ヨーロッパ</b></td></tr>
+<tr><td><b>オーランド諸島</b></td><td><b>AX</b></td><td><b>3</b></td><td><b>13</b></td><td><b>18</b></td><td><b>18</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>3</b></td></tr>
+<tr><td><b>アルメニア</b></td><td><b>AM</b></td><td><b>0</b></td><td><b>1</b></td><td><b>6</b></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td></tr>
+<tr><td><b>オーストリア</b></td><td><b>AT</b></td><td><b>196</b></td><td><b>365</b></td><td><b>380</b></td><td><b>377</b></td><td><b>8</b></td><td><b>15</b></td><td><b>17</b></td><td><b>20</b></td></tr>
+<tr><td><b>ベルギー</b></td><td><b>BE</b></td><td><b>41</b></td><td><b>92</b></td><td><b>91</b></td><td><b>98</b></td><td><b>4</b></td><td><b>8</b></td><td><b>11</b></td><td><b>15</b></td></tr>
+<tr><td><b>ブルガリア</b></td><td><b>BG</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>2</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td></tr>
+<tr><td><b>クロアチア</b></td><td><b>HR</b></td><td><b>30</b></td><td><b>39</b></td><td><b>53</b></td><td><b>61</b></td><td><b>10</b></td><td><b>16</b></td><td><b>22</b></td><td><b>23</b></td></tr>
+<tr><td><b>キプロス</b></td><td><b>CY</b></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td></tr>
+<tr><td><b>チェコ共和国</b></td><td><b>CZ</b></td><td><b>276</b></td><td><b>351</b></td><td><b>456</b></td><td><b>531</b></td><td><b>19</b></td><td><b>30</b></td><td><b>45</b></td><td><b>63</b></td></tr>
+<tr><td><b>デンマーク</b></td><td><b>DK</b></td><td><b>550</b></td><td><b>952</b></td><td><b>1054</b></td><td><b>1177</b></td><td><b>31</b></td><td><b>50</b></td><td><b>68</b></td><td><b>88</b></td></tr>
+<tr><td><b>エストニア</b></td><td><b>EE</b></td><td><b>1018</b></td><td><b>1253</b></td><td><b>1447</b></td><td><b>1417</b></td><td><b>42</b></td><td><b>48</b></td><td><b>74</b></td><td><b>80</b></td></tr>
+<tr><td><b>フィンランド</b></td><td><b>FI</b></td><td><b>3317</b></td><td><b>4310</b></td><td><b>4637</b></td><td><b>4562</b></td><td><b>197</b></td><td><b>248</b></td><td><b>316</b></td><td><b>375</b></td></tr>
+<tr><td><b>フランス</b></td><td><b>FR</b></td><td><b>331</b></td><td><b>426</b></td><td><b>509</b></td><td><b>562</b></td><td><b>18</b></td><td><b>23</b></td><td><b>57</b></td><td><b>62</b></td></tr>
+<tr><td><b>ドイツ</b></td><td><b>DE</b></td><td><b>504</b></td><td><b>658</b></td><td><b>819</b></td><td><b>931</b></td><td><b>33</b></td><td><b>43</b></td><td><b>76</b></td><td><b>99</b></td></tr>
+<tr><td><b>ギリシャ</b></td><td><b>GR</b></td><td><b>2</b></td><td><b>1</b></td><td><b>1</b></td><td><b>4</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td></tr>
+<tr><td><b>ハンガリー</b></td><td><b>HU</b></td><td><b>22</b></td><td><b>34</b></td><td><b>36</b></td><td><b>36</b></td><td><b>3</b></td><td><b>4</b></td><td><b>3</b></td><td><b>6</b></td></tr>
+<tr><td><b>アイスランド</b></td><td><b>IS</b></td><td><b>143</b></td><td><b>263</b></td><td><b>309</b></td><td><b>292</b></td><td><b>14</b></td><td><b>19</b></td><td><b>44</b></td><td><b>50</b></td></tr>
+<tr><td><b>アイルランド</b></td><td><b>IE</b></td><td><b>12</b></td><td><b>19</b></td><td><b>30</b></td><td><b>32</b></td><td><b>4</b></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td></tr>
+<tr><td><b>マン島</b></td><td><b>IM</b></td><td><b>0</b></td><td><b>2</b></td><td><b>1</b></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td></tr>
+<tr><td><b>イタリア</b></td><td><b>IT</b></td><td><b>27</b></td><td><b>38</b></td><td><b>56</b></td><td><b>62</b></td><td><b>1</b></td><td><b>3</b></td><td><b>6</b></td><td><b>8</b></td></tr>
+<tr><td><b>ラトビア</b></td><td><b>LV</b></td><td><b>56</b></td><td><b>97</b></td><td><b>219</b></td><td><b>335</b></td><td><b>11</b></td><td><b>7</b></td><td><b>23</b></td><td><b>33</b></td></tr>
+<tr><td><b>リトアニア</b></td><td><b>LT</b></td><td><b>79</b></td><td><b>171</b></td><td><b>179</b></td><td><b>202</b></td><td><b>14</b></td><td><b>14</b></td><td><b>19</b></td><td><b>21</b></td></tr>
+<tr><td><b>ルクセンブルク</b></td><td><b>LU</b></td><td><b>6</b></td><td><b>12</b></td><td><b>18</b></td><td><b>17</b></td><td><b>0</b></td><td><b>2</b></td><td><b>1</b></td><td><b>3</b></td></tr>
+<tr><td><b>モンテネグロ</b></td><td><b>ME</b></td><td><b>0</b></td><td><b>0</b></td><td><b>2</b></td><td><b>10</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td></tr>
+<tr><td><b>オランダ</b></td><td><b>NL</b></td><td><b>123</b></td><td><b>196</b></td><td><b>262</b></td><td><b>302</b></td><td><b>11</b></td><td><b>18</b></td><td><b>52</b></td><td><b>41</b></td></tr>
+<tr><td><b>ノルウェー</b></td><td><b>NO</b></td><td><b>1249</b></td><td><b>2226</b></td><td><b>3264</b></td><td><b>3462</b></td><td><b>50</b></td><td><b>111</b></td><td><b>154</b></td><td><b>169</b></td></tr>
+<tr><td><b>ポーランド</b></td><td><b>PL</b></td><td><b>57</b></td><td><b>120</b></td><td><b>151</b></td><td><b>211</b></td><td><b>4</b></td><td><b>13</b></td><td><b>11</b></td><td><b>23</b></td></tr>
+<tr><td><b>ポルトガル</b></td><td><b>PT</b></td><td><b>7</b></td><td><b>13</b></td><td><b>19</b></td><td><b>27</b></td><td><b>0</b></td><td><b>2</b></td><td><b>2</b></td><td><b>3</b></td></tr>
+<tr><td><b>ルーマニア</b></td><td><b>RO</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td></tr>
+<tr><td><b>ロシア</b></td><td><b>RU</b></td><td><b>31</b></td><td><b>51</b></td><td><b>36</b></td><td><b>1</b></td><td><b>9</b></td><td><b>16</b></td><td><b>0</b></td><td><b>0</b></td></tr>
+<tr><td><b>セルビア</b></td><td><b>RS</b></td><td><b>21</b></td><td><b>26</b></td><td><b>24</b></td><td><b>28</b></td><td><b>4</b></td><td><b>9</b></td><td><b>9</b></td><td><b>14</b></td></tr>
+<tr><td><b>スロバキア</b></td><td><b>SK</b></td><td><b>28</b></td><td><b>32</b></td><td><b>34</b></td><td><b>43</b></td><td><b>2</b></td><td><b>4</b></td><td><b>4</b></td><td><b>4</b></td></tr>
+<tr><td><b>スロベニア</b></td><td><b>SI</b></td><td><b>28</b></td><td><b>31</b></td><td><b>43</b></td><td><b>41</b></td><td><b>3</b></td><td><b>4</b></td><td><b>7</b></td><td><b>10</b></td></tr>
+<tr><td><b>スペイン</b></td><td><b>ES</b></td><td><b>74</b></td><td><b>106</b></td><td><b>131</b></td><td><b>158</b></td><td><b>8</b></td><td><b>15</b></td><td><b>32</b></td><td><b>49</b></td></tr>
+<tr><td><b>スウェーデン</b></td><td><b>SE</b></td><td><b>2157</b></td><td><b>3865</b></td><td><b>4955</b></td><td><b>5544</b></td><td><b>154</b></td><td><b>242</b></td><td><b>352</b></td><td><b>421</b></td></tr>
+<tr><td><b>スイス</b></td><td><b>CH</b></td><td><b>165</b></td><td><b>210</b></td><td><b>269</b></td><td><b>301</b></td><td><b>5</b></td><td><b>13</b></td><td><b>34</b></td><td><b>14</b></td></tr>
+<tr><td><b>トルコ</b></td><td><b>TR</b></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td></tr>
+<tr><td><b>ウクライナ</b></td><td><b>UA</b></td><td><b>35</b></td><td><b>37</b></td><td><b>24</b></td><td><b>38</b></td><td><b>5</b></td><td><b>6</b></td><td><b>2</b></td><td><b>10</b></td></tr>
+<tr><td><b>イギリス</b></td><td><b>GB</b></td><td><b>362</b></td><td><b>582</b></td><td><b>689</b></td><td><b>702</b></td><td><b>14</b></td><td><b>51</b></td><td><b>92</b></td><td><b>79</b></td></tr>
+<tr><td colspan="2"><b>小計</b></td><td>10950</td><td>16593</td><td>20224</td><td>21588</td><td>678</td><td>1035</td><td>1533</td><td>1787</td></tr>
+<tr><td colspan="2"><b>ヨーロッパ成長率</b></td><td><b>22.7%</b></td><td><b>52.1%</b></td><td><b>21.7%</b></td><td><b>6.7%</b></td><td><b>-25.6%</b></td><td><b>111.5%</b></td><td><b>27.2%</b></td><td><b>17.6%</b></td></tr>
+
+<!-- Oceania section -->
+<tr><td colspan="10"><b>オセアニア</b></td></tr>
+<tr><td><b>オーストラリア</b></td><td><b>AU</b></td><td><b>386</b></td><td><b>598</b></td><td><b>760</b></td><td><b>883</b></td><td><b>28</b></td><td><b>57</b></td><td><b>80</b></td><td><b>87</b></td></tr>
+<tr><td><b>ニュージーランド</b></td><td><b>NZ</b></td><td><b>275</b></td><td><b>464</b></td><td><b>751</b></td><td><b>869</b></td><td><b>14</b></td><td><b>28</b></td><td><b>62</b></td><td><b>60</b></td></tr>
+<tr><td colspan="2"><b>小計</b></td><td>661</td><td>1062</td><td>1511</td><td>1752</td><td>42</td><td>85</td><td>142</td><td>147</td></tr>
+<tr><td colspan="2"><b>オセアニア成長率</b></td><td><b>33.8%</b></td><td><b>61.6%</b></td><td><b>42.3%</b></td><td><b>15.9%</b></td><td><b>-27.6%</b></td><td><b>102.3%</b></td><td><b>67.1%</b></td><td><b>3.5%</b></td></tr>
+
+<!-- Asia section -->
+<tr><td colspan="10"><b>アジア</b></td></tr>
+<tr><td><b>カンボジア</b></td><td><b>KH</b></td><td><b>7</b></td><td><b>1</b></td><td><b>6</b></td><td><b>6</b></td><td><b>2</b></td><td><b>1</b></td><td><b>1</b></td><td><b>3</b></td></tr>
+<tr><td><b>中国</b></td><td><b>CN</b></td><td><b>45</b></td><td><b>41</b></td><td><b>69</b></td><td><b>92</b></td><td><b>2</b></td><td><b>4</b></td><td><b>5</b></td><td><b>7</b></td></tr>
+<tr><td><b>台湾</b></td><td><b>TW</b></td><td><b>20</b></td><td><b>10</b></td><td><b>11</b></td><td><b>28</b></td><td><b>1</b></td><td><b>1</b></td><td><b>0</b></td><td><b>2</b></td></tr>
+<tr><td><b>香港</b></td><td><b>HK</b></td><td><b>3</b></td><td><b>1</b></td><td><b>7</b></td><td><b>9</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td></tr>
+<tr><td>インド</td><td>IN</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>インドネシア</td><td>ID</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>イラン</td><td>IR</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td><b>イスラエル</b></td><td><b>IL</b></td><td><b>2</b></td><td><b>2</b></td><td><b>7</b></td><td><b>6</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td></tr>
+<tr><td><b>日本</b></td><td><b>JP</b></td><td><b>108</b></td><td><b>122</b></td><td><b>170</b></td><td><b>187</b></td><td><b>9</b></td><td><b>4</b></td><td><b>22</b></td><td><b>21</b></td></tr>
+<tr><td><b>マレーシア</b></td><td><b>MY</b></td><td><b>39</b></td><td><b>33</b></td><td><b>25</b></td><td><b>29</b></td><td><b>6</b></td><td><b>5</b></td><td><b>7</b></td><td><b>7</b></td></tr>
+<tr><td><b>モンゴル</b></td><td><b>MN</b></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td><td><b>2</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td></tr>
+<tr><td><b>フィリピン</b></td><td><b>PH</b></td><td><b>2</b></td><td><b>2</b></td><td><b>27</b></td><td><b>66</b></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td><td><b>5</b></td></tr>
+<tr><td>カタール</td><td>QA</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>サウジアラビア</td><td>SA</td><td>3</td><td>5</td><td>5</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td><b>シンガポール</b></td><td><b>SG</b></td><td><b>33</b></td><td><b>32</b></td><td><b>50</b></td><td><b>45</b></td><td><b>3</b></td><td><b>3</b></td><td><b>6</b></td><td><b>4</b></td></tr>
+<tr><td><b>韓国</b></td><td><b>KR</b></td><td><b>32</b></td><td><b>16</b></td><td><b>16</b></td><td><b>47</b></td><td><b>3</b></td><td><b>3</b></td><td><b>3</b></td><td><b>2</b></td></tr>
+<tr><td><b>タイ</b></td><td><b>TH</b></td><td><b>23</b></td><td><b>21</b></td><td><b>39</b></td><td><b>58</b></td><td><b>3</b></td><td><b>2</b></td><td><b>10</b></td><td><b>9</b></td></tr>
+<tr><td><b>UAE</b></td><td><b>AE</b></td><td><b>0</b></td><td><b>2</b></td><td><b>1</b></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td></tr>
+<tr><td><b>ベトナム</b></td><td><b>VN</b></td><td><b>7</b></td><td><b>3</b></td><td><b>7</b></td><td><b>6</b></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td></tr>
+<tr><td colspan="2"><b>小計</b></td><td>326</td><td>293</td><td>441</td><td>591</td><td>30</td><td>23</td><td>55</td><td>60</td></tr>
+<tr><td colspan="2"><b>アジア成長率</b></td><td><b>-1.2%</b></td><td><b>-9.3%</b></td><td><b>50.5%</b></td><td><b>34.0%</b></td><td><b>-50.8%</b></td><td><b>-25.8%</b></td><td><b>139.1%</b></td><td><b>9.1%</b></td></tr>
+
+<!-- Latin America & Caribbean section -->
+<tr><td colspan="10"><b>ラテンアメリカ＆カリブ</b></td></tr>
+<tr><td><b>アルゼンチン</b></td><td><b>AR</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>2</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td></tr>
+<tr><td><b>アルバ</b></td><td><b>AW</b></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td></tr><tr><td><b>ベリーズ</b></td><td><b>BZ</b></td><td><b>10</b></td><td><b>15</b></td><td><b>34</b></td><td><b>87</b></td><td><b>3</b></td><td><b>6</b></td><td><b>13</b></td><td><b>18</b></td></tr>
+<tr><td><b>ブラジル</b></td><td><b>BR</b></td><td><b>2</b></td><td><b>5</b></td><td><b>5</b></td><td><b>2</b></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td><td><b>1</b></td></tr>
+<tr><td><b>チリ</b></td><td><b>CL</b></td><td><b>0</b></td><td><b>2</b></td><td><b>3</b></td><td><b>3</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td></tr>
+<tr><td><b>コロンビア</b></td><td><b>CO</b></td><td><b>4</b></td><td><b>21</b></td><td><b>45</b></td><td><b>106</b></td><td><b>0</b></td><td><b>1</b></td><td><b>5</b></td><td><b>15</b></td></tr>
+<tr><td>コスタリカ</td><td>CR</td><td>2</td><td>1</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>キューバ</td><td>CU</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>ドミニカ共和国</td><td>DO</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>エルサルバドル</td><td>SV</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td><b>フランス領ギアナ</b></td><td><b>GF</b></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td></tr>
+<tr><td><b>グアテマラ</b></td><td><b>GT</b></td><td><b>0</b></td><td><b>1</b></td><td><b>6</b></td><td><b>10</b></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td></tr>
+<tr><td><b>メキシコ</b></td><td><b>MX</b></td><td><b>20</b></td><td><b>50</b></td><td><b>117</b></td><td><b>161</b></td><td><b>1</b></td><td><b>3</b></td><td><b>13</b></td><td><b>33</b></td></tr>
+<tr><td>ニカラグア</td><td>NI</td><td>3</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>パナマ</td><td>PA</td><td>0</td><td>0</td><td>2</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td><b>プエルトリコ</b></td><td><b>PR</b></td><td><b>7</b></td><td><b>6</b></td><td><b>8</b></td><td><b>16</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td></tr>
+<tr><td>タークス・カイコス諸島</td><td>TC</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>ウルグアイ</td><td>UY</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td><b>ベネズエラ</b></td><td><b>VE</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>4</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td></tr>
+
+<tr><td colspan="2"><b>小計</b></td><td>48</td><td>104</td><td>223</td><td>399</td><td>5</td><td>11</td><td>33</td><td>69</td></tr>
+<tr><td colspan="2"><b>ラテンアメリカ＆カリブ成長率</b></td><td><b>84.6%</b></td><td><b>116.7%</b></td><td><b>114.4%</b></td><td><b>78.9%</b></td><td><b>25.0%</b></td><td><b>120.0%</b></td><td><b>200.0%</b></td><td><b>109.1%</b></td></tr>
+
+<!-- Africa section -->
+<tr><td colspan="10"><b>アフリカ</b></td></tr>
+<tr><td><b>エチオピア</b></td><td><b>ET</b></td><td><b>4</b></td><td><b>7</b></td><td><b>9</b></td><td><b>1</b></td><td><b>1</b></td><td><b>2</b></td><td><b>1</b></td><td><b>0</b></td></tr>
+<tr><td><b>ケニア</b></td><td><b>KE</b></td><td><b>0</b></td><td><b>2</b></td><td><b>3</b></td><td><b>8</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>2</b></td></tr>
+<tr><td><b>モーリシャス</b></td><td><b>MU</b></td><td><b>1</b></td><td><b>1</b></td><td><b>1</b></td><td><b>1</b></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td></tr>
+<tr><td><b>モロッコ</b></td><td><b>MA</b></td><td><b>0</b></td><td><b>0</b></td><td><b>5</b></td><td><b>6</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td></tr>
+<tr><td><b>南アフリカ</b></td><td><b>ZA</b></td><td><b>2</b></td><td><b>1</b></td><td><b>34</b></td><td><b>43</b></td><td><b>0</b></td><td><b>0</b></td><td><b>4</b></td><td><b>8</b></td></tr>
+<tr><td><b>ウガンダ</b></td><td><b>UG</b></td><td><b>0</b></td><td><b>0</b></td><td><b>3</b></td><td><b>19</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td></tr>
+<tr><td><b>ザンビア</b></td><td><b>ZM</b></td><td><b>31</b></td><td><b>25</b></td><td><b>31</b></td><td><b>18</b></td><td><b>1</b></td><td><b>2</b></td><td><b>1</b></td><td><b>3</b></td></tr>
+<tr><td>ジンバブエ</td><td>ZW</td><td>0</td><td>0</td><td>0</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td colspan="2"><b>小計</b></td><td><b>38</b></td><td><b>36</b></td><td><b>86</b></td><td><b>100</b></td><td><b>2</b></td><td><b>5</b></td><td><b>6</b></td><td><b>14</b></td></tr>
+<tr><td colspan="2"><b>アフリカ成長率</b></td><td><b>111.1%</b></td><td><b>-9.5%</b></td><td><b>138.9%</b></td><td><b>16.3%</b></td><td><b>-33.3%</b></td><td><b>250.0%</b></td><td><b>20.0%</b></td><td><b>133.3%</b></td></tr>
+
+<tr><td colspan="2"><b>世界全体の合計</b></td><td><b>71016</b></td><td><b>109795</b></td><td><b>130791</b></td><td><b>136347</b></td><td><b>3437</b></td><td><b>6827</b></td><td><b>8977</b></td><td><b>10551</b></td></tr>
+<tr><td colspan="2"><b>世界全体の成長率</b></td><td><b>33.1%</b></td><td><b>54.6%</b></td><td><b>18.3%</b></td><td><b>4.2%</b></td><td><b>-26.1%</b></td><td><b>98.6%</b></td><td><b>31.2%</b></td><td><b>17.5%</b></td></tr>
+</tbody>
+</table>
+
+注記: 2023年末時点で、82の国や地域に現役のPDGA会員が存在し、スコットランド、ウェールズ、北アイルランドを含めると85になります。2023年のPDGAツアーイベントは52の国で開催されました。ヨーロッパは、51のPDGA加盟国のうち29を占めており、米国とカナダ以外のPDGA会員およびイベントの約87%を占めています。次に大きい地域はオセアニアで、2023年に成長率が最も高かったのはラテンアメリカでした。
+
+## 付録C PDGAコースディレクトリー国別コース数
+
+2023年12月31日時点で、PDGAコースディレクトリーには81の国と地域に10691のコースが登録されています。  
+詳細については、以下のリンクをご参照ください: [https://www.pdga.com/course-directory](https://www.pdga.com/course-directory)
+
+<table>
+  <thead>
+    <tr>
+      <th>国/地域</th>
+      <th>コース数</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><b>ヨーロッパ</b></td><td><b>2160</b></td></tr>
+    <tr><td>オーランド諸島</td><td>14</td></tr>
+    <tr><td>オーストリア</td><td>22</td></tr>
+    <tr><td>ベラルーシ</td><td>1</td></tr>
+    <tr><td>ベルギー</td><td>9</td></tr>
+    <tr><td>クロアチア</td><td>6</td></tr>
+    <tr><td>チェコ共和国</td><td>103</td></tr>
+    <tr><td>デンマーク</td><td>83</td></tr>
+    <tr><td>エストニア</td><td>156</td></tr>
+    <tr><td>フィンランド</td><td>742</td></tr>
+    <tr><td>フランス</td><td>114</td></tr>
+    <tr><td>ドイツ</td><td>131</td></tr>
+    <tr><td>グリーンランド</td><td>2</td></tr>
+    <tr><td>ハンガリー</td><td>4</td></tr>
+    <tr><td>アイスランド</td><td>63</td></tr>
+    <tr><td>アイルランド</td><td>4</td></tr>
+    <tr><td>イタリア</td><td>8</td></tr>
+    <tr><td>ラトビア</td><td>26</td></tr>
+    <tr><td>リトアニア</td><td>14</td></tr>
+    <tr><td>ルクセンブルク</td><td>3</td></tr>
+    <tr><td>モンテネグロ</td><td>1</td></tr>
+    <tr><td>オランダ</td><td>24</td></tr>
+    <tr><td>ノルウェー</td><td>136</td></tr>
+    <tr><td>ポーランド</td><td>14</td></tr>
+    <tr><td>ポルトガル</td><td>1</td></tr>
+    <tr><td>ルーマニア</td><td>1</td></tr>
+    <tr><td>ロシア</td><td>9</td></tr>
+    <tr><td>スロバキア</td><td>12</td></tr>
+    <tr><td>スロベニア</td><td>9</td></tr>
+    <tr><td>スペイン</td><td>25</td></tr>
+    <tr><td>スウェーデン</td><td>267</td></tr>
+    <tr><td>スイス</td><td>41</td></tr>
+    <tr><td><b>オセアニア</b></td><td></td><td><b>153</b></td></tr>
+    <tr><td>オーストラリア</td><td>95</td></tr>
+    <tr><td>グアム</td><td>1</td></tr>
+    <tr><td>ニュージーランド</td><td>57</td></tr>
+    <tr><td><b>ラテンアメリカ＆カリブ</b></td><td></td><td><b>59</b></td></tr>
+    <tr><td>アルゼンチン</td><td>1</td></tr>
+    <tr><td>ベリーズ</td><td>10</td></tr>
+    <tr><td>ブラジル</td><td>2</td></tr>
+    <tr><td>コロンビア</td><td>10</td></tr>
+    <tr><td>コスタリカ</td><td>3</td></tr>
+    <tr><td>キューバ</td><td>1</td></tr>
+    <tr><td>キュラソー</td><td>1</td></tr>
+    <tr><td>ドミニカ共和国</td><td>1</td></tr>
+    <tr><td>エクアドル</td><td>1</td></tr>
+    <tr><td>グアテマラ</td><td>1</td></tr>
+    <tr><td>ホンジュラス</td><td>3</td></tr>
+    <tr><td>メキシコ</td><td>16</td></tr>
+    <tr><td>ニカラグア</td><td>5</td></tr>
+    <tr><td>ペルー</td><td>1</td></tr>
+    <tr><td>プエルトリコ</td><td>1</td></tr>
+    <tr><td>ヴァージン諸島</td><td>1</td></tr>
+    <tr><td><b>アジア</b></td><td><b>148</b></td></tr>
+    <tr><td>カンボジア</td><td>1</td></tr>
+    <tr><td>中国</td><td>4</td></tr>
+    <tr><td>台湾</td><td>4</td></tr>
+    <tr><td>イラン</td><td>1</td></tr>
+    <tr><td>イスラエル</td><td>3</td></tr>
+    <tr><td>日本</td><td>75</td></tr>
+    <tr><td>マレーシア</td><td>13</td></tr>
+    <tr><td>モンゴル</td><td>1</td></tr>
+    <tr><td>フィリピン</td><td>7</td></tr>
+    <tr><td>カタール</td><td>1</td></tr>
+    <tr><td>サウジアラビア</td><td>1</td></tr>
+    <tr><td>シンガポール</td><td>6</td></tr>
+    <tr><td>韓国</td><td>17</td></tr>
+    <tr><td>タイ</td><td>10</td></tr>
+    <tr><td>トルコ</td><td>1</td></tr>
+    <tr><td>ウズベキスタン</td><td>1</td></tr>
+    <tr><td>ベトナム</td><td>1</td></tr>
+    <tr><td><b>アフリカ</b></td><td><b>21</b></td></tr>
+    <tr><td>エチオピア</td><td>3</td></tr>
+    <tr><td>ケニア</td><td>2</td></tr>
+    <tr><td>モーリシャス</td><td>2</td></tr>
+    <tr><td>ナミビア</td><td>1</td></tr>
+    <tr><td>南アフリカ</td><td>9</td></tr>
+    <tr><td>トーゴ</td><td>1</td></tr>
+    <tr><td>ウガンダ</td><td>1</td></tr>
+    <tr><td>ザンビア</td><td>2</td></tr>
+    <tr><td>ジンバブエ</td><td>0</td></tr>
+    <tr><td><b>まとめ</b></td><td><b></b></td></tr>
+    <tr><td>アメリカ合衆国</td><td>7747</td></tr>
+    <tr><td>カナダ</td><td>403</td></tr>
+    <tr><td>北米以外</td><td><b>2520</b></td></tr>
+    <tr><td><b>合計</b></td><td><b>10670</b></td></tr>
+  </tbody>
+</table>
