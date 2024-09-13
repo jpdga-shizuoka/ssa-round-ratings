@@ -4,11 +4,11 @@
 
 ---
 
-# 第1部: 各国共通情報
+# 第1部: 各国共通の情報
 
 ## 第1章 序論
 
-PDGAは1976年に設立され、ディスクゴルフの国際的な統括機関です。その使命は「ディスクゴルフを世界的に認知された競技スポーツおよびレクリエーション活動に発展させること」です。2005年にPDGAの国際プログラムが開始されて以来、ヨーロッパ、東アジア、オセアニアにおいてPDGAの活動は飛躍的に拡大してきました。現在では、ディスクゴルフはラテンアメリカやアフリカでも発展を遂げつつあります。これらの進展は、PDGAスタッフ、協力する各国の協会、地域のクラブ、そして世界中の数千人のボランティアの共同の献身によるものです。
+PDGAは1976年に設立された、ディスクゴルフの国際的な統括機関です。その使命は「ディスクゴルフを世界的に認知された競技スポーツおよびレクリエーション活動に発展させること」です。2005年にPDGAの国際プログラムが開始されて以来、ヨーロッパ、東アジア、オセアニアにおいてPDGAの活動は飛躍的に拡大してきました。現在では、ディスクゴルフはラテンアメリカやアフリカでも発展を遂げつつあります。これらの進展は、PDGAスタッフ、協力する各国の協会、地域のクラブ、そして世界中の数千人のボランティアの共同の献身によるものです。
 
 PDGAの国際プログラムは、国際担当ディレクター、会員管理および成長促進担当ディレクター、PDGAヨーロッパの理事会およびスタッフ、ラテンアメリカ担当コーディネーター、PDGAアジア委員会によって運営されています。PDGAに加盟する各国の協会パートナーや国際コーディネーターからの意見やフィードバックも反映されています。このプログラムは、米国にあるPDGAのグローバル本部によって支援されており、スタッフおよびコンサルタントチームが`www.pdga.com`や会員・大会データベースを管理し、革新を進めています。また、世界規模のPDGAツアーやPDGA世界選手権大会を毎年開催・支援するとともに、世界中から寄せられる日々の問い合わせや問題にも対応しています。
 
@@ -93,7 +93,7 @@ PDGA国際コーディネーターの役割と責任は以下の通りです:
 
 **国際コーディネーター 2024年1月**
 
-    * 訳註: 日本国以外は省略
+> 訳註: 日本国以外は省略
 
 |アジア|   |      |      |                 |
 |----|---|------|------|-----------------|
@@ -146,7 +146,7 @@ PDGAの目標は、競技マニュアルに記載されている基準と手順�
 - 国内協会が、自国のプレーヤーのPDGA会員を一括で登録する場合。
 
 会費: プロフェッショナル会員はUS$30、アマチュアおよびジュニア会員はUS$20<br>
-`+` US$30: PDGAロゴ入りディスクとミニディスク
+`+` US$30: PDGAロゴ入りディスクとミニディスク<br>
 `+` US$40: PDGAのDiscgolfer Magazine年間購読(年4回発行、航空郵送)
 
 会員は、PDGA会員証、大会結果やプレーヤーレーティングが表示される個別の会員ページ(`www.pdga.com`で確認可能)、プレーヤー資格が満たされていれば世界中のPDGAツアー大会に参加する権利、その他の特典を受け取ります。新規・初回会員は生涯有効の会員番号を取得し、更新会員は年間バッグタグを受け取ります。詳細は、付録A「PDGA国際会員の特典」を参照してください。
@@ -163,7 +163,7 @@ PDGAの目標は、競技マニュアルに記載されている基準と手順�
 
 オフィシャル試験は、[`http://www.pdga.com/rules/exam`](http://www.pdga.com/rules/exam) でオンラインで受験できます。この試験は参考資料を閲覧しながら、合格するまで何度でも受験可能です。合格後、US$10の認定料を支払い、オフィシャルとして認定されます。認定資格は3年間有効です。すべてのPDGAトーナメントディレクターおよびPDGAメジャーまたはエリートシリーズ大会に参加するすべてのプレーヤーは、認定オフィシャルであることが求められます。
 
-c. 大会の公認
+### c. 大会の公認
 
 すべての国際大会は、PDGAによって公認される前に、ホスト国の協会の承認を受けなければなりません。これには、PDGAが公認する毎年のナショナル•チャンピオンシップ大会も含まれており、その開催権は国内協会の権限下にあります。
 
@@ -176,7 +176,7 @@ c. 大会の公認
 
 国内協会がこれらの権限を保持しないことを希望する場合、国内の大会TDに対して、協会の承認なしでPDGAに大会を公認申請できることを伝える必要があります。国内協会がこの権限を放棄し、地理的に近い場所で同じ日程で公認を希望する大会間で競合が発生した場合、国際コーディネーターが大会スケジュールの調整役を務めるべきです。
 
-すべての記載された大会TDおよびアシスタントTDは、PDGAが大会を公認する前に、PDGA正会員であり、認定PDGAオフィシャルである必要があります。
+すべての記載された大会TDおよびアシスタントTDは、PDGAが大会を公認する前に、PDGA正会員であり、PDGA認定オフィシャルである必要があります。
 
 各国際大会がPDGA公認を受けるためには、TDまたは国別協会が以下のリンクにあるPDGA公認契約書を記入する必要があります: [`http://www.pdga.com/pdga-event-sanctioning-agreement`](http://www.pdga.com/pdga-event-sanctioning-agreement) 。支払い情報がチェックアウトページで送信された時点で、公認申請が受理されます。
 
@@ -228,7 +228,7 @@ PDGAは2021年10月に大会支援チームを設立し、TDの支援を行っ�
 ## 9. プレーヤーの分類
 
 すべての国に適用されるPDGAプロフェッショナルおよびアマチュア部門の分類表は、以下のリンクで確認できます:
-[`https://www.pdga.com/pdga-documents/tour-documents/divisions-ratings-and-points-factors`](https://www.pdga.com/pdga-documents/tour-documents/divisions-ratings-and-points-factors).
+[`https://www.pdga.com/.../divisions-ratings-and-points-factors`](https://www.pdga.com/pdga-documents/tour-documents/divisions-ratings-and-points-factors).
 
 ### PDGAプレーヤーの年齢:
 
@@ -246,22 +246,25 @@ PDGAは2021年10月に大会支援チームを設立し、TDの支援を行っ�
 - プロ部門で順位に基づく賞金を受け取るか、プロ会員として更新することで、プレーヤーはPDGAアマチュア資格を放棄します。
 - アマチュアプレーヤーは、プロの賞金の代わりに商品を受け取るか、何も受け取らないことでPDGAアマチュア資格を保持します。
 - プロからアマチュアへの再登録の要件については、以下のリンクで確認できます:
-  [`https://www.pdga.com/files/2023_pdga_reclassification_from_pro_to_amateur_criteria.pdf`](https://www.pdga.com/files/2023_pdga_reclassification_from_pro_to_amateur_criteria.pdf)
+  [`https://www.pdga.com/.../2023_pdga_reclassification_from_pro_to_amateur_criteria`](https://www.pdga.com/files/2023_pdga_reclassification_from_pro_to_amateur_criteria.pdf)
 
 ### 規則変更の合理的申請ポリシーと適応規則:
 
 このポリシーは、障害のあるプレーヤーがPDGA公認大会に参加できるよう、特定の規則の免除を申請できるようにしています。免除は年単位で提供され、毎年再申請が必要です。また、回復可能な一時的な怪我に対しては適用されません。詳細については、以下のリンクをご覧ください:
-[`https://www.pdga.com/medical/reasonable-modification-request`](https://www.pdga.com/medical/reasonable-modification-request)
+[`https://www.pdga.com/.../reasonable-modification-request`](https://www.pdga.com/medical/reasonable-modification-request)
+
 加えて、2023年7月にPDGAは、車椅子アスリートや適応アスリートに関する規則の附則を発表しました。詳細は[ディスクゴルフのための適応規則](https://drive.google.com/file/d/1pqpwrATw00Vn5M8o2lb5KQckR_As1M9E/view)をご覧ください。
 
 ## 第11章 2024年PDGA世界選手権
 
+::: widetable ipg-p1-c11
 |開催日|公式名称|都市|州|国|
 |-----|-------|---|--|--|
 |6月11日〜15日|PDGAマスターズ(アマ＆プロ)世界選手権 | エンポリア | カンザス | アメリカ |
 |7月16日〜20日|PDGAジュニア世界選手権 | タルサ | オクラホマ | アメリカ |
 |8月6日〜10日|PDGAアマチュア(MA1/FA1)世界選手権 | グランドラピッズ | ミシガン | アメリカ |
 |8月21日〜25日|PDGAプロフェッショナル(MPO/FPO)世界選手権 | リンチバーグ | バージニア | アメリカ |
+:::
 
 2024年のこれらの大会に関する詳細やPDGA世界選手権の申請書類は、[`http://www.pdga.com/world-championships`](http://www.pdga.com/world-championships) でご確認ください。各大会のリンクをクリックすると、資格基準や登録スケジュールが確認できます。
 
@@ -269,10 +272,12 @@ PDGAは2021年10月に大会支援チームを設立し、TDの支援を行っ�
 
 ## 第12章 2024年PDGA国際メジャーおよびチャンピオンシップ大会
 
+::: widetable ipg-p1-c12
 | 開催日 | ティア | 公式名称 | 都市 | 国 | ウェブサイト |
 | -------- | ---- | ------------- | ---- | ---- | ----------- |
 | 7月17日〜21日 | M | ヨーロピアンオープン | ノキア | フィンランド | [`http://www.opendiscgolf.com/`](http://www.opendiscgolf.com/) |
 | 11月6日〜9日 | XA | WFDFディスクゴルフ世界チーム選手権 | パース | オーストラリア | [`https://wfdf.sport/`](https://wfdf.sport/) |
+:::
 
 ### ヨーロッパディスクゴルフ選手権
 
@@ -307,9 +312,9 @@ PDGAが公認するA、B、またはCティア大会で問題が発生した場�
 
 注記: 国内協会は、国内の事務に対する権限の一環として、希望する場合には自国のメンバーをPDGAおよび非PDGAの大会から出場停止にすることができます。しかし、その場合、国内協会はその処置に伴うすべての結果について完全に責任を負い、出場停止は該当国の国境内でのみ適用されます。例として、国内メンバーとしての品位を欠く行動を理由に選手が懲戒される場合や、PDGAに懲戒措置申請書が提出されているが、懲戒委員会が多数の案件を調査しているため対応が遅れている場合が挙げられます。一方、PDGAによる懲戒措置が会員に対して行われた場合、その措置はすべてのPDGA大会および会員特典に対して世界的に適用されます。
 
-懲戒措置申請書は以下のリンクから入手できます: [`https://www.pdga.com/documents/disciplinary-action-form`](https://www.pdga.com/documents/disciplinary-action-form).
+懲戒措置申請書は以下のリンクから入手できます: [`https://www.pdga.com/.../disciplinary-action-form`](https://www.pdga.com/documents/disciplinary-action-form).
 
-PDGAの懲戒手続きに関する詳細は、以下のリンクをご覧ください: [`https://www.pdga.com/documents/disciplinary-process`](https://www.pdga.com/documents/disciplinary-process).
+PDGAの懲戒手続きに関する詳細は、以下のリンクをご覧ください: [`https://www.pdga.com/.../disciplinary-process`](https://www.pdga.com/documents/disciplinary-process).
 
 ## 第14章 マルコポーロ•プログラム
 
@@ -360,6 +365,7 @@ PDGAヨーロッパの発展プログラムは、ヨーロッパ大陸でのデ�
 
 2023年のユーロツアーとヨーロピアン•プロツアーのシーズン後、これら2つの取り組みを統合し、ディスクゴルフ•プロツアー(DGPT)ヨーロッパという新しいシリーズが誕生しました。このシリーズでは、5つのエリートレベルのMPO/FPO大会(以下のスケジュール参照)と6つのシルバーシリーズ大会が開催されます。PDGAヨーロッパは、アメリカのDGPT大会でPDGAグローバル運営・物流チームが提供しているようなサポートを、これらの大会に対して提供します。詳細は以下をご覧ください: [DGPTヨーロッパ](https://www.dgpt.com/news/dgpt-europe-about/)
 
+::: widetable ipg-p2-c17
 | 大会クラス | 日程 | 名称 | 場所 |
 |----------------|------|------|------|
 | シルバー | 5月3日～5日 | ベルギーオープン | ブレンラルー, ベルギー |
@@ -373,6 +379,7 @@ PDGAヨーロッパの発展プログラムは、ヨーロッパ大陸でのデ�
 | エリート | 7月26日～28日 | ヨーロピアン•ディスクゴルフ•フェスティバル | タリン, エストニア |
 | シルバー | 8月2日～4日 | ヤルヴァオープン x テューニ | ストックホルム, スウェーデン |
 | シルバー | 8月9日～11日 | バルト選手権 / ツアーファイナル | アルタガセ, エストニア |
+:::
 
 ## 第18章 ヨーロッパ各国支援プログラム
 
@@ -398,6 +405,7 @@ PDGAユーロツアーが2024年に開催されないことにより、PDGAヨ�
 
 この賞は2009年に設立され、PDGAヨーロッパ理事会の投票によって選ばれます。
 
+::: widetable ipg-p2-c20A
 | | | |
 |-|-|-|
 |2009 Florence Dumont |2014 Janne Karlsson |2019 Kasper Andersen|
@@ -405,11 +413,13 @@ PDGAユーロツアーが2024年に開催されないことにより、PDGAヨ�
 |2011 Jonas & Mats Löf |2016 Peter Buijsrogge |2021 Zoë Winfield|
 |2012 Darius Gricius |2017 Carlos Rio |2022 Rene Mikkelsen|
 |2013 Laura Nagtegaal |2018 Dinko Šimenc |2023 to be announced|
+:::
 
 ### 年間最優秀プレーヤー賞
 
 2014年以降、この賞の受賞者は、年間最終プレーヤーレーティング、ユーロツアーシリーズの成績、PDGAメジャー、エリートシリーズ、Aティア大会、およびヨーロッパ選手権での順位に基づくポイントシステムで決定されています。
 
+::: widetable ipg-p2-c20B
 | | |
 |-|-|
 |2014 Simon Lizotte & Ragna Bygde |2019 Simon Lizotte & Kristin Tattar|
@@ -417,6 +427,7 @@ PDGAユーロツアーが2024年に開催されないことにより、PDGAヨ�
 |2016 Karl Johan Nybo & Eveliina Salonen |2021 Linus Carlsson & Kristin Tattar|
 |2017 Simon Lizotte & Eveliina Salonen |2022 Niklas Anttila & Kristin Tattar|
 |2018 Seppo Paju & Kristin Tattar |2023 to be announced|
+:::
 
 # 第3部 付録
 
@@ -454,6 +465,7 @@ PDGA会員費は、間接的な特典として、以下の活動やプログラ�
 ### 2020-2023年大陸別および国別の統計
 
 出典: PDGAデータベース (**PDGA加盟国は太字で示しています**)
+<div class="app-table" id="ipg-p3-ab">
 <table>
 <thead>
 <tr>
@@ -587,6 +599,7 @@ PDGA会員費は、間接的な特典として、以下の活動やプログラ�
 <tr><td colspan="2"><b>世界全体の成長率</b></td><td><b>33.1%</b></td><td><b>54.6%</b></td><td><b>18.3%</b></td><td><b>4.2%</b></td><td><b>-26.1%</b></td><td><b>98.6%</b></td><td><b>31.2%</b></td><td><b>17.5%</b></td></tr>
 </tbody>
 </table>
+</div>
 
 注記: 2023年末時点で、82の国や地域にPDGA正会員が存在し、スコットランド、ウェールズ、北アイルランドを含めると85になります。2023年のPDGAツアー大会は52の国で開催されました。ヨーロッパは、51のPDGA加盟国のうち29を占めており、米国とカナダ以外のPDGA会員および大会の約87%を占めています。次に大きい地域はオセアニアで、2023年に成長率が最も高かったのはラテンアメリカでした。
 
@@ -635,11 +648,11 @@ PDGA会員費は、間接的な特典として、以下の活動やプログラ�
     <tr><td>スペイン</td><td>25</td></tr>
     <tr><td>スウェーデン</td><td>267</td></tr>
     <tr><td>スイス</td><td>41</td></tr>
-    <tr><td><b>オセアニア</b></td><td></td><td><b>153</b></td></tr>
+    <tr><td><b>オセアニア</b></td><td><b>153</b></td></tr>
     <tr><td>オーストラリア</td><td>95</td></tr>
     <tr><td>グアム</td><td>1</td></tr>
     <tr><td>ニュージーランド</td><td>57</td></tr>
-    <tr><td><b>ラテンアメリカ＆カリブ海地域</b></td><td></td><td><b>59</b></td></tr>
+    <tr><td><b>ラテンアメリカ＆カリブ海地域</b></td><td><b>59</b></td></tr>
     <tr><td>アルゼンチン</td><td>1</td></tr>
     <tr><td>ベリーズ</td><td>10</td></tr>
     <tr><td>ブラジル</td><td>2</td></tr>
