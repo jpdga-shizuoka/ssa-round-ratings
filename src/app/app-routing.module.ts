@@ -25,6 +25,7 @@ import { Ts2024Component } from './libraries/ts2024.component';
 import { TrueAmateurComponent } from './libraries/true-amateur.component';
 import { TourStandardsComponent } from './libraries/tour-standards.component';
 import { RatingsComponent } from './libraries/ratings.component';
+import { ProgramguidComponent } from './libraries/programguid.component';
 
 export type UserData = {
   metaDescription: {
@@ -267,6 +268,14 @@ const routes: Routes = [
     data: { metaDescription: {
       title: 'DG Japan - ツアー基準',
       subtitle: 'ツアー基準'
+    }}
+  },
+  {
+    path: 'libraries/programguid',
+    component: ProgramguidComponent,
+    data: { metaDescription: {
+      title: 'DG Japan - 国際プログラムガイド',
+      subtitle: '国際プログラムガイド'
     }}
   },
 

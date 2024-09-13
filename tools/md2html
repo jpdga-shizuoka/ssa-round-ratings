@@ -70,7 +70,7 @@ function makeHtml(id, html, srcPath) {
   const dstPath = Path.join(DST, srcPath, id + '.component.html');
   let content =`<div class="app-${name}">`;
   content += `
-${html}</div>`;
+${html.replace(/@/g, '&#64;')}</div>`;
   fs.writeFileSync(dstPath, content);
 }
 
