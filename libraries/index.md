@@ -8,11 +8,17 @@ PDGAの公開資料から、いくつか紹介します。
     * [PDGAレーティングの仕組み](/libraries/ratings)
     * [よくある質問 - レーティング編](/libraries/faqratings)
     * [PDGAポイントの仕組み](/libraries/points)
+
 * [PDGAツアー基準](/libraries/tourstandards)
-    * [PDGA国際大会の基準](/libraries/ts)
-    * [PDGA公式規則と競技マニュアル](/libraries/ordgcm)
+    * [国際プログラムガイド](/libraries/programguid)
+
+        以下は、本国際プログラムガイドからの抜粋です。
+        * [PDGA国際大会の基準](/libraries/ts)
+        * [PDGA公式規則と競技マニュアル](/libraries/ordgcm)
+
     * [PDGA公認大会における非標準規則の採用に関して](/libraries/nonstandards)
     * [プレーヤーパックまたはアマチュア向け賞品の価値に見合う妥当な品目とは](/libraries/playerpack)
+
 * [PDGA真のアマチュア大会](/libraries/trueamateur)
 
 ---

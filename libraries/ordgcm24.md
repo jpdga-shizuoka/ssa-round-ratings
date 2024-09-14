@@ -1,9 +1,8 @@
-本ページは
-[2024 PDGA International Program Guide](https://www.pdga.com/files/2024_international_program_guide_final_complete_0122.pdf)
-第7章の邦訳です。
+本ページは、[**2024年PDGA国際プログラムガイド**](/libraries/programguid)から
+**第7章 PDGA公式規則および競技マニュアル**を抜粋したものです。
+
 本ページの履歴は以下の通りです;
 * [PDGA公式規則と競技マニュアル(2023年)](/libraries/ordgcm23)
-
 ---
 
 # PDGA公式規則と競技マニュアル(2024年)

@@ -83,6 +83,7 @@ import { OrdgCm24Component } from './libraries/ordgcm24.component';
 import { TrueAmateurComponent } from './libraries/true-amateur.component';
 import { IndexComponent } from './libraries/index.component';
 import { TourStandardsComponent } from './libraries/tour-standards.component';
+import { ProgramguidComponent } from './libraries/programguid.component';
 import { PhotoListComponent } from './photo-list/photo-list.component';
 import { AnnualReportsComponent } from './annual-reports/annual-reports.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -141,6 +142,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
         TrueAmateurComponent,
         IndexComponent,
         TourStandardsComponent,
+        ProgramguidComponent,
         PhotoListComponent,
         AnnualReportsComponent
     ],
