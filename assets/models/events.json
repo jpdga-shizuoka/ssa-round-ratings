@@ -161,10 +161,18 @@
       "to": "2024-09-23"
     },
     "layout": {
-      "official": "http://www.jpdga.jp/data/event/2024/696_map.pdf"
+      "official": "http://www.jpdga.jp/data/event/2024/696_map.pdf",
+      "back": "https://membership.jpdga.jp/event/2024/696_map_mpo.pdf",
+      "front": "https://membership.jpdga.jp/event/2024/696_map_etc.pdf"
+    },
+    "players": {
+      "pro": 73,
+      "ama": 0,
+      "misc": 0
     },
     "pdga": {
       "tier": "B",
+      "scoreId": "85149",
       "eventId": "85149"
     },
     "jpdga": {
