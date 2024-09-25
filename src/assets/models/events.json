@@ -100,7 +100,11 @@
       "from": "2024-10-26",
       "to": "2024-10-27"
     },
+    "pdga": {
+      "tier": "B"
+    },
     "jpdga": {
+      "tier": "NT",
       "eventId": "700"
     },
     "urls": [
@@ -134,7 +138,7 @@
     "location": "fuminnomorihiyoshi",
     "period": {
       "from": "2024-10-05",
-      "to": "2024-10-06"
+      "to": "2024-10-08"
     },
     "pdga": {
       "tier": "B",
