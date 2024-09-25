@@ -786,7 +786,19 @@
     "jpdga": {
       "tier": "LT",
       "eventId": "671"
-    }
+    },
+    "urls":[
+      {
+        "type": "video",
+        "title": "Final B9@Dch-discchannel",
+        "url": "https://youtu.be/kDKO_F25IQA?si=w66XEc5pMnklnMmn"
+      },
+      {
+        "type": "video",
+        "title": "Final F9@Dch-discchannel",
+        "url": "https://youtu.be/snvIHn5lpBk?si=bX7IctfpiupQIOQa"
+      }
+    ]
   },
   {
     "id": "the36thjapannationalchampionshipama",
