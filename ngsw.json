@@ -1,29 +1,11 @@
 {
   "configVersion": 1,
-  "timestamp": 1727249390563,
+  "timestamp": 1727249898373,
   "index": "https://jpdga-shizuoka.github.io/ssa-round-ratings/index.html",
   "assetGroups": [
     {
       "name": "app",
       "installMode": "prefetch",
-      "updateMode": "prefetch",
-      "cacheQueryOptions": {
-        "ignoreVary": true
-      },
-      "urls": [
-        "https://jpdga-shizuoka.github.io/ssa-round-ratings/favicon.ico",
-        "https://jpdga-shizuoka.github.io/ssa-round-ratings/index.html",
-        "https://jpdga-shizuoka.github.io/ssa-round-ratings/main.10d5c00ca9343c2e.js",
-        "https://jpdga-shizuoka.github.io/ssa-round-ratings/manifest.webmanifest",
-        "https://jpdga-shizuoka.github.io/ssa-round-ratings/polyfills.d190637e189a6a4f.js",
-        "https://jpdga-shizuoka.github.io/ssa-round-ratings/runtime.fb724d8c0713eaf5.js",
-        "https://jpdga-shizuoka.github.io/ssa-round-ratings/styles.5db729cdce0915a6.css"
-      ],
-      "patterns": []
-    },
-    {
-      "name": "assets",
-      "installMode": "lazy",
       "updateMode": "prefetch",
       "cacheQueryOptions": {
         "ignoreVary": true
@@ -64,6 +46,24 @@
         "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/models/monthly-events.json",
         "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/models/rounds-work.json",
         "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/models/rounds.json",
+        "https://jpdga-shizuoka.github.io/ssa-round-ratings/favicon.ico",
+        "https://jpdga-shizuoka.github.io/ssa-round-ratings/index.html",
+        "https://jpdga-shizuoka.github.io/ssa-round-ratings/main.10d5c00ca9343c2e.js",
+        "https://jpdga-shizuoka.github.io/ssa-round-ratings/manifest.webmanifest",
+        "https://jpdga-shizuoka.github.io/ssa-round-ratings/polyfills.d190637e189a6a4f.js",
+        "https://jpdga-shizuoka.github.io/ssa-round-ratings/runtime.fb724d8c0713eaf5.js",
+        "https://jpdga-shizuoka.github.io/ssa-round-ratings/styles.5db729cdce0915a6.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
         "https://jpdga-shizuoka.github.io/ssa-round-ratings/background.78090163f1ea24b6.png",
         "https://jpdga-shizuoka.github.io/ssa-round-ratings/menu-back-image.1fce402af27f84fa.png",
         "https://jpdga-shizuoka.github.io/ssa-round-ratings/open_in_new-24px.b0e76dea768c6863.svg",
