@@ -138,7 +138,10 @@
     "location": "fuminnomorihiyoshi",
     "period": {
       "from": "2024-10-05",
-      "to": "2024-10-08"
+      "to": "2024-10-06"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/697_map.pdf"
     },
     "pdga": {
       "tier": "B",
