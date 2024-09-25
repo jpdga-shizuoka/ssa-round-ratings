@@ -182,7 +182,19 @@
     "jpdga": {
       "tier": "NT",
       "eventId": "696"
-    }
+    },
+    "urls": [
+      {
+        "type": "video",
+        "title": "R2,F9,Lead Card,MPO@Dch-discchannel",
+        "url": "https://youtu.be/8fgCPk6W03c?si=7YgWv6VIFrHRsEWy"
+      },
+      {
+        "type": "video",
+        "title": "MP40+,Vlog@discgolflab",
+        "url": "https://youtu.be/atZTi8bqa7A?si=OmsoNIwRfmWJRd5t"
+      }
+    ]
   },
   {
     "id": "the1stfukuokauminakaopen",
