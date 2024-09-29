@@ -8,6 +8,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatSidenav } from '@angular/material/sidenav';
 import { BehaviorSubject } from 'rxjs';
 import { take, filter } from 'rxjs/operators';
+import { environment } from '../environments/environment';
 
 import { LocalizeService } from './localize.service';
 import {
@@ -50,7 +51,7 @@ export class AppComponent implements OnInit, OnDestroy, MetaDescription {
     public ngRouter: Router,
     breakpointObserver: BreakpointObserver
   ) {
-    if (swUpdate.isEnabled) {
+    if (swUpdate.isEnabled && environment.production) {
       this.swUpdate.versionUpdates
         .pipe(filter((evt): evt is VersionReadyEvent => evt.type === 'VERSION_READY'))
         .subscribe((evt) => {
