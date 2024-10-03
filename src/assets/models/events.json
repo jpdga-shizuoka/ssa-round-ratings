@@ -105,7 +105,8 @@
       "to": "2024-10-27"
     },
     "pdga": {
-      "tier": "B"
+      "tier": "B",
+      "eventId": "85798"
     },
     "jpdga": {
       "tier": "NT",
