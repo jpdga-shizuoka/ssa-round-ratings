@@ -1,5 +1,14 @@
 [
   {
+    "id": "the1stjapandiscgolfmatchplaychampionships",
+    "title": "The 1st Japan Disc Golf Match Play Championships",
+    "location": "minamisomahoseridingpark",
+    "period": {
+      "from": "2025-03-29",
+      "to": "2025-03-30"
+    }
+  },
+  {
     "id": "the23rdchubuopen",
     "title": "The 23rd Chubu Open",
     "location": "enakyoparkcountryclub",
