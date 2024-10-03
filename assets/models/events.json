@@ -62,6 +62,10 @@
       "from": "2024-11-16",
       "to": "2024-11-17"
     },
+    "pdga": {
+      "tier": "B",
+      "eventId": "85891"
+    },
     "jpdga": {
       "eventId": "703"
     },
@@ -101,7 +105,8 @@
       "to": "2024-10-27"
     },
     "pdga": {
-      "tier": "B"
+      "tier": "B",
+      "eventId": "85798"
     },
     "jpdga": {
       "tier": "NT",
@@ -143,9 +148,13 @@
     "layout": {
       "official": "http://www.jpdga.jp/data/event/2024/697_map.pdf"
     },
+    "players": {
+      "pro": 22
+    },
     "pdga": {
       "tier": "B",
-      "eventId": "85302"
+      "eventId": "85302",
+      "scoreId": "85302"
     },
     "jpdga": {
       "tier": "ABT-A",
