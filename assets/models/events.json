@@ -158,7 +158,9 @@
       "official": "http://www.jpdga.jp/data/event/2024/697_map.pdf"
     },
     "players": {
-      "pro": 22
+      "pro": 22,
+      "ama": 0,
+      "misc": 0
     },
     "pdga": {
       "tier": "B",
