@@ -344,7 +344,10 @@
       "purse": 1729,
       "paidout": 12,
       "rate": 153.51
-    }
+    },
+    "rounds": [
+      "the26thnipponopen.rd1rd2rd3"
+    ]
   },
   {
     "id": "the3rdjapanseriesdiscgolfchampionships",
@@ -421,6 +424,12 @@
         "title": "Facebook",
         "url": "https://www.facebook.com/kiyohara.green"
       }
+    ],
+    "rounds": [
+      "the3rdjapanseriesdiscgolfchampionships.rd1rd2",
+      "the3rdjapanseriesdiscgolfchampionships.rd3",
+      "the3rdjapanseriesdiscgolfchampionships.rd1rd2front",
+      "the3rdjapanseriesdiscgolfchampionships.rd3front"
     ]
   },
   {
@@ -460,6 +469,10 @@
         "title": "Official Site",
         "url": "https://www.facebook.com/hokkaidoopen.discgolf"
       }
+    ],
+    "rounds": [
+      "the13thhokkaidoopen.rd1rd2rd3",
+      "the13thhokkaidoopen.rd1rd2rd3fronttee"
     ]
   },
   {
@@ -550,6 +563,9 @@
         "title": "Vlog,@discgolflab",
         "url": "https://youtu.be/8SEsubbHXoA"
       }
+    ],
+    "rounds": [
+      "the19thmastersnationalchampionship.rd1rd2rd3"
     ]
   },
   {
@@ -611,7 +627,10 @@
       "purse": 225,
       "rate": 155.5,
       "paidout": 5
-    }
+    },
+    "rounds": [
+      "the1stenakyoopen.rd1rd2rd3"
+    ]
   },
   {
     "id": "the7thgifuhiruganoopen",
@@ -650,6 +669,9 @@
         "title": "Official Site",
         "url": "http://www.jpdgafukuoka.com/blog/?info=2024wge"
       }
+    ],
+    "rounds": [
+      "theuminakawge2024.rd1rd2"
     ]
   },
   {
@@ -684,6 +706,9 @@
         "title": "Official Site",
         "url": "http://jpdgaiwate.com"
       }
+    ],
+    "rounds": [
+      "the2ndmichinokuqueenscup.rd1rd2rd3"
     ]
   },
   {
@@ -710,6 +735,9 @@
         "title": "Official Site",
         "url": "https://www.facebook.com/share/GL3TbtrsT3gBjkMe/"
       }
+    ],
+    "rounds": [
+      "thediscgolfwomensgrobaleventtokyo2024.rd1rd2"
     ]
   },
   {
@@ -752,6 +780,9 @@
         "title": "Official Site",
         "url": "http://www.sukima-labo.com/dg291/"
       }
+    ],
+    "rounds": [
+      "the8thfukuiopen.rd1rd2rd3"
     ]
   },
   {
@@ -800,6 +831,9 @@
         "title": "Official Site",
         "url": "https://discgolf-navi.com/tournament/nt-abt-lt/kiyosato-open/"
       }
+    ],
+    "rounds": [
+      "the19thkiyosatonomoriopen.rd1rd2rd3"
     ]
   },
   {
@@ -866,6 +900,9 @@
         "title": "Final MA1, @Dch-discchannel",
         "url": "https://youtu.be/IkTvgy6kuG8"
       }
+    ],
+    "rounds": [
+      "the36thjapannationalchampionshipama.rd1rd2rd3"
     ]
   },
   {
@@ -921,6 +958,9 @@
         "title": "Official Site",
         "url": "https://discgolf-navi.com/tournament/nt-abt-lt/tokyo-open/"
       }
+    ],
+    "rounds": [
+      "the31sttokyoopen.rd1rd2rd3"
     ]
   },
   {
@@ -952,7 +992,10 @@
       "tier":"ABT-B",
       "topicId": "1856",
       "eventId": "669"
-    }
+    },
+    "rounds": [
+      "the21stsagaopen.rd1rd2rd3"
+    ]
   },
   {
     "id": "the28thkantoopenama",
@@ -985,6 +1028,9 @@
         "title": "Official Site",
         "url": "http://www.tochigiflyingdisc.com"
       }
+    ],
+    "rounds": [
+      "the28thkantoopenama.rd1rd2rd3"
     ]
   },
   {
@@ -1102,6 +1148,9 @@
         "title": "Facebook",
         "url": "https://www.facebook.com/groups/2366167146940075"
       }
+    ],
+    "rounds": [
+      "the12thokinawaopen.rd1rd2rd3"
     ]
   },
   {
