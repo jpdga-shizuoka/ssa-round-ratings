@@ -27,6 +27,7 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { AppComponent } from './app.component';
@@ -173,6 +174,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
         MatMenuModule,
         MatProgressSpinnerModule,
         MatExpansionModule,
+        MatSnackBarModule,
         NgxChartsModule,
         ServiceWorkerModule.register('ngsw-worker.js', {
             enabled: !isDevMode(),
