@@ -1,5 +1,39 @@
 [
   {
+    "id": "the1stfukuokauminakaopen.rd1rd2rd3",
+    "event": "the1stfukuokauminakaopen",
+    "round": "Rd1,2,3",
+    "hla": 97,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 50,
+        "rating": 1023
+      },
+      "player2": {
+        "score": 69,
+        "rating": 841
+      }
+    }
+  },
+  {
+    "id": "the19thmichinokuopen.rd1rd2",
+    "event": "the19thmichinokuopen",
+    "round": "Rd1,2",
+    "hla": 101,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 51,
+        "rating": 1057
+      },
+      "player2": {
+        "score": 82,
+        "rating": 799
+      }
+    }
+  },
+  {
     "id": "the26thnipponopen.rd1rd2rd3",
     "event": "the26thnipponopen",
     "round": "Rd1,2,3",

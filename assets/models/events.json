@@ -276,6 +276,12 @@
       "tier": "NT",
       "eventId": "696"
     },
+    "budget": {
+      "entreefee": 15000,
+      "purse": 3744,
+      "paidout": 32,
+      "rate": 142.15
+    },
     "urls": [
       {
         "type": "video",
@@ -336,6 +342,9 @@
         "title": "Facebook",
         "url": "https://www.facebook.com/discgolfkyushuopen/"
       }
+    ],
+    "rounds": [
+      "the1stfukuokauminakaopen.rd1rd2rd3"
     ]
   },
   {
@@ -380,6 +389,9 @@
         "title": "Official Site",
         "url": "http://jpdgaiwate.com"
       }
+    ],
+    "rounds": [
+      "the19thmichinokuopen.rd1rd2"
     ]
   },
   {
