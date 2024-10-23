@@ -29,18 +29,6 @@
     ]
   },
   {
-    "id": "the20thmastersnationalchampionship",
-    "title": "The 20th Masters National Championships",
-    "period": {
-      "from": "2025-03-01",
-      "to": "2025-03-02"
-    },
-    "jpdga": {
-      "tier": "ABT-B",
-      "eventId": "718"
-    }
-  },
-  {
     "id": "the13thokinawaopen",
     "title": "The 13th Okinawa Open",
     "location": "nakijinsonsportpark",
