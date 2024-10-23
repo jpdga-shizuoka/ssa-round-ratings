@@ -47,7 +47,12 @@
       "from": "2024-11-30",
       "to": "2024-12-01"
     },
+    "pdga": {
+      "tier": "B",
+      "eventId": "86185"
+    },
     "jpdga": {
+      "tier": "ABT-A ",
       "eventId": "704"
     },
     "urls": [
