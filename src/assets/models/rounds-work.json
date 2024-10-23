@@ -1,5 +1,25 @@
 [
   {
+    "id": "the19thmichinokuopen.rd1rd2",
+    "event": "the19thmichinokuopen",
+    "round": "Rd1,2",
+    "hla": 102,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 51,
+        "rating": 1057
+      },
+      "player2": {
+        "score": 82,
+        "rating": 799
+      }
+    },
+    "eventTitle": "The 19th Michinoku Open",
+    "locationTitle": "Kitakami Sport Park",
+    "date": "2024-08-11"
+  },
+  {
     "id": "the26thnipponopen.rd1rd2rd3",
     "event": "the26thnipponopen",
     "round": "Rd1,2,3",
