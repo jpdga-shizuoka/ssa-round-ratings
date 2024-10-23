@@ -276,6 +276,12 @@
       "tier": "NT",
       "eventId": "696"
     },
+    "budget": {
+      "entreefee": 15000,
+      "purse": 3744,
+      "paidout": 32,
+      "rate": 142.15
+    },
     "urls": [
       {
         "type": "video",
