@@ -113,8 +113,17 @@
       "from": "2024-10-26",
       "to": "2024-10-27"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/700_map.pdf"
+    },
+    "players": {
+      "pro": 48,
+      "ama": 22,
+      "misc": 0
+    },
     "pdga": {
       "tier": "B",
+      "scoreId": "85798",
       "eventId": "85798"
     },
     "jpdga": {
