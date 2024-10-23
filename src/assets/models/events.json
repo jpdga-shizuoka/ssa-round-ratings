@@ -17,6 +17,7 @@
       "to": "2025-03-16"
     },
     "jpdga": {
+      "tier": "ABT-B",
       "eventId": "706"
     },
     "urls": [
@@ -26,6 +27,64 @@
         "url": "https://aifda.or.jp/event"
       }
     ]
+  },
+  {
+    "id": "the20thmastersnationalchampionship",
+    "title": "The 20th Masters National Championships",
+    "period": {
+      "from": "2025-03-01",
+      "to": "2025-03-02"
+    },
+    "jpdga": {
+      "tier": "ABT-B",
+      "eventId": "718"
+    }
+  },
+  {
+    "id": "the13thokinawaopen",
+    "title": "The 13th Okinawa Open",
+    "location": "nakijinsonsportpark",
+    "period": {
+      "from": "2025-02-22",
+      "to": "2025-02-23"
+    },
+    "jpdga": {
+      "tier":"ABT-A",
+      "eventId": "717"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/groups/2366167146940075"
+      }
+    ]
+  },
+  {
+    "id": "the7thhitachseasideparkopen",
+    "title": "The 7th Hitachi Seaside Park Open",
+    "location": "hitachiseasidepark",
+    "period": {
+      "from": "2025-01-18",
+      "to": "2025-01-19"
+    },
+    "jpdga": {
+      "tier": "LT",
+      "eventId": "716"
+    }
+  },
+  {
+    "id": "the2025nationalteamchampionship",
+    "title": "The 2025 National Team Championships",
+    "location": "oyamaomoinomoripark",
+    "period": {
+      "from": "2025-01-12",
+      "to": "2025-01-13"
+    },
+    "jpdga": {
+      "tier": "LT",
+      "eventId": "715"
+    }
   },
   {
     "id": "the2ndjandluxcup",
