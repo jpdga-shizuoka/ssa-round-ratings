@@ -146,13 +146,37 @@
       "from": "2024-11-02",
       "to": "2024-11-04"
     },
+    "layout": {
+      "official": "https://ec6553c1-0a4e-40a5-88a2-47b820800e15.filesusr.com/ugd/58d912_da6740ba37ae4b339b6f5b2170360684.pdf"
+    },
+    "players": {
+      "pro": 51,
+      "ama": 77,
+      "misc": 44
+    },
     "jpdga": {
+      "tier": "LT",
       "eventId": "701"
     },
     "urls": [
       {
         "type": "website",
+        "title": "コースルール",
+        "url": "https://ec6553c1-0a4e-40a5-88a2-47b820800e15.filesusr.com/ugd/58d912_c30f3bd8b38b4274885d315ed04f2424.pdf"
+      },
+      {
+        "type": "website",
+        "title": "Course rule",
+        "url": "https://ec6553c1-0a4e-40a5-88a2-47b820800e15.filesusr.com/ugd/58d912_4d9a2cf124e84991b797b02336383496.pdf"
+      },
+      {
+        "type": "website",
         "title": "Official Site",
+        "url": "https://jpdgatokyooffice.wixsite.com/website"
+      },
+      {
+        "type": "website",
+        "title": "Facebook",
         "url": "https://www.facebook.com/jpdgatokyo"
       }
     ]
@@ -1539,7 +1563,7 @@
       {
         "type": "website",
         "title": "Official Site",
-        "url": "https://jpdgatokyooffice.wixsite.com/"
+        "url": "https://jpdgatokyooffice.wixsite.com/website"
       }
     ]
   },
