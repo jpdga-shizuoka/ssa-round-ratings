@@ -210,22 +210,22 @@
       {
         "type": "video",
         "title": "Final,MPO@Dch-discchannel",
-        "url": "https://youtu.be/kLiO2j-OS1Q?si=qmRzK8O6bdMOtD3W"
+        "url": "https://youtu.be/kLiO2j-OS1Q"
       },
       {
         "type": "video",
         "title": "R3,B9,Lead Card,MPO@Dch-discchannel",
-        "url": "https://youtu.be/8ZwM3M0t1y0?si=EWynKpulj50Qg-Fz"
+        "url": "https://youtu.be/8ZwM3M0t1y0"
       },
       {
         "type": "video",
         "title": "R3,F9,Lead Card,MPO@Dch-discchannel",
-        "url": "https://youtu.be/8hns-fsZfcY?si=pJfcab4fBEYwhmrp"
+        "url": "https://youtu.be/8hns-fsZfcY"
       },
       {
         "type": "video",
         "title": "MP40+,Vlog@discgolflab",
-        "url": "https://youtu.be/YBclmoR0HP0?si=mVR1ISxbk7jxtBAC"
+        "url": "https://youtu.be/YBclmoR0HP0"
       },
       {
         "type": "website",
@@ -329,13 +329,28 @@
     "urls": [
       {
         "type": "video",
+        "title": "Final,MPO@Dch-discchannel",
+        "url": "https://youtu.be/drqw58TfQGo"
+      },
+      {
+        "type": "video",
+        "title": "Semifinal,MPO@Dch-discchannel",
+        "url": "https://youtu.be/Eo9mtIc24aU"
+      },
+      {
+        "type": "video",
+        "title": "R2,B9,Lead Card,MPO@Dch-discchannel",
+        "url": "https://youtu.be/a7aIlnzTWuU"
+      },
+      {
+        "type": "video",
         "title": "R2,F9,Lead Card,MPO@Dch-discchannel",
-        "url": "https://youtu.be/8fgCPk6W03c?si=7YgWv6VIFrHRsEWy"
+        "url": "https://youtu.be/8fgCPk6W03c"
       },
       {
         "type": "video",
         "title": "MP40+,Vlog@discgolflab",
-        "url": "https://youtu.be/atZTi8bqa7A?si=OmsoNIwRfmWJRd5t"
+        "url": "https://youtu.be/atZTi8bqa7A"
       }
     ]
   },
