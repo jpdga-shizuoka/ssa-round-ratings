@@ -123,14 +123,29 @@
       "from": "2024-11-16",
       "to": "2024-11-17"
     },
+    "layout": {
+      "official": "https://membership.jpdga.jp/event/2024/703_map1.pdf"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 24,
+      "misc": 0
+    },
     "pdga": {
       "tier": "B",
+      "scoreId": "85891",
       "eventId": "85891"
     },
     "jpdga": {
+      "tier": "ABT-B",
       "eventId": "703"
     },
     "urls": [
+      {
+        "type": "website",
+        "title": "ノービス部門コース",
+        "url": "https://membership.jpdga.jp/event/2024/703_map2.pdf"
+      },
       {
         "type": "website",
         "title": "Facebook",
