@@ -94,8 +94,17 @@
       "from": "2024-11-30",
       "to": "2024-12-01"
     },
+    "layout": {
+      "official": "https://www.jpdgafukuoka.com/data/38KO2024map.jpg"
+    },
+    "players": {
+      "pro": 50,
+      "ama": 64,
+      "misc": 0
+    },
     "pdga": {
       "tier": "B",
+      "scoreId": "86185",
       "eventId": "86185"
     },
     "jpdga": {
