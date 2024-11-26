@@ -94,8 +94,17 @@
       "from": "2024-11-30",
       "to": "2024-12-01"
     },
+    "layout": {
+      "official": "https://www.jpdgafukuoka.com/data/38KO2024map.jpg"
+    },
+    "players": {
+      "pro": 50,
+      "ama": 64,
+      "misc": 0
+    },
     "pdga": {
       "tier": "B",
+      "scoreId": "86185",
       "eventId": "86185"
     },
     "jpdga": {
@@ -123,14 +132,29 @@
       "from": "2024-11-16",
       "to": "2024-11-17"
     },
+    "layout": {
+      "official": "https://membership.jpdga.jp/event/2024/703_map1.pdf"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 24,
+      "misc": 0
+    },
     "pdga": {
       "tier": "B",
+      "scoreId": "85891",
       "eventId": "85891"
     },
     "jpdga": {
+      "tier": "ABT-B",
       "eventId": "703"
     },
     "urls": [
+      {
+        "type": "website",
+        "title": "ノービス部門コース",
+        "url": "https://membership.jpdga.jp/event/2024/703_map2.pdf"
+      },
       {
         "type": "website",
         "title": "Facebook",
@@ -150,15 +174,35 @@
       "official": "https://ec6553c1-0a4e-40a5-88a2-47b820800e15.filesusr.com/ugd/58d912_da6740ba37ae4b339b6f5b2170360684.pdf"
     },
     "players": {
-      "pro": 51,
+      "pro": 50,
       "ama": 77,
-      "misc": 44
+      "misc": 88
     },
     "jpdga": {
       "tier": "LT",
       "eventId": "701"
     },
     "urls": [
+      {
+        "type": "video",
+        "title": "Final,B9,Ama@Dch-discchannel",
+        "url": "https://youtu.be/0oxaer_tdDU"
+      },
+      {
+        "type": "video",
+        "title": "Final,F9,Ama@Dch-discchannel",
+        "url": "https://youtu.be/TCbdQFkGDHs"
+      },
+      {
+        "type": "video",
+        "title": "R1B9,Ama@Dch-discchannel",
+        "url": "https://youtu.be/lb8Zn8nDhWI"
+      },
+      {
+        "type": "video",
+        "title": "R1F9,Ama@Dch-discchannel",
+        "url": "https://youtu.be/WyQ7hg6navY"
+      },
       {
         "type": "website",
         "title": "コースルール",
@@ -440,8 +484,23 @@
     "urls": [
       {
         "type": "video",
+        "title": "Final F9,MPO@Dch-discchannel",
+        "url": "https://youtu.be/5X8ivJ5F_EA"
+      },
+      {
+        "type": "video",
+        "title": "R1B9,MPO@Dch-discchannel",
+        "url": "https://youtu.be/7lowVIH7qT0"
+      },
+      {
+        "type": "video",
+        "title": "R1F9,MPO@Dch-discchannel",
+        "url": "https://youtu.be/c7bTPEUDqzQ"
+      },
+      {
+        "type": "video",
         "title": "Vlog,@discgolflab",
-        "url": "https://youtu.be/P8m3dHvUw2Q?si=hRC3Bu-iB7kKlTe_"
+        "url": "https://youtu.be/P8m3dHvUw2Q"
       },
       {
         "type": "website",
