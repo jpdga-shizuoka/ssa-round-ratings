@@ -106,8 +106,10 @@ export class EventComponent implements OnInit, OnDestroy {
         ).subscribe(event => {
           this.event$?.next(event);
           this.event$?.complete();
-          this.roundList$?.next(event.rounds);
-          this.roundList$?.complete();
+          if (event.rounds) {
+            this.roundList$?.next(event.rounds);
+            this.roundList$?.complete();  
+          }
         });
       }
     });
