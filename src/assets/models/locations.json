@@ -378,6 +378,15 @@
     "weather": "https://weather.yahoo.co.jp/weather/jp/47/9120/47306.html"
   },
   {
+    "prefecture": "Okinawa",
+    "geolocation": [
+      26.33184274878941, 127.75379882850903
+    ],
+    "id": "kadenaairbase",
+    "title": "Kadena Air Base",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/47/9110/47325.html"
+  },
+  {
     "prefecture": "Kagoshima",
     "geolocation": [
       31.633516,

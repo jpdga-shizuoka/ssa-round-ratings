@@ -87,6 +87,25 @@
     }
   },
   {
+    "id": "theleftovershowdown2024",
+    "title": "The Leftover Showdown 2024",
+    "location": "kadenaairbase",
+    "period": {
+      "from": "2024-12-14",
+      "to": "2024-12-14"
+    },
+    "pdga": {
+      "eventId": "87032"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://www.discgolfscene.com/tournaments/Leftover_Showdown_2024"
+      }
+    ]
+  },
+  {
     "id": "the38thkyushuopen",
     "title": "The 38th Kyushu Open",
     "location": "uminonakamichiseasidepark",
