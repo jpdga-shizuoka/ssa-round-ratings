@@ -1,6 +1,16 @@
 [
   {
     "year": 2024,
+    "title": "Course Ratings",
+    "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRfw9mthAt45u9NQyIGcD65FKeKuCEMdFKHYik8eX5HJcNEgmnJ_5zLxYkBaVAWkb_ZTbUaAiQV1qyF/pubhtml?gid=1626277628&single=true"
+  },
+  {
+    "year": 2024,
+    "title": "Pro Purse",
+    "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vS3YDGHEDSQly99qiSUlheI7kwxq7kd2HilLidsrwq9oqZO-Tu1I_Opd84t-dfhf1UxwHmjKuI5DlrU/pubhtml?gid=1921100659&single=true"
+  },
+  {
+    "year": 2024,
     "title": "PDGA Sanctioned Events",
     "url": "https://www.pdga.com/tour/search?OfficialName=&td=&date_filter%5Bmin%5D%5Bdate%5D=2024-01-01&date_filter%5Bmax%5D%5Bdate%5D=2024-12-31&Country%5B%5D=Japan"
   },
