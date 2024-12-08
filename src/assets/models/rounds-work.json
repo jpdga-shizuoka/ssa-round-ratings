@@ -1,5 +1,125 @@
 [
   {
+    "id": "the3rdmaikoclassic.rd1rd2rd3",
+    "event": "the3rdmaikoclassic",
+    "round": "Rd1,2,3",
+    "hla": 135,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 50,
+        "rating": 1058
+      },
+      "player2": {
+        "score": 67,
+        "rating": 913
+      }
+    },
+    "eventTitle": "The 3rd Maiko Classic",
+    "locationTitle": "Maiko Disc Golf Park",
+    "date": "2024-10-26"
+  },
+  {
+    "id": "the24thtohokuopen.rd1rd2rd3",
+    "event": "the24thtohokuopen",
+    "round": "Rd1,2,3",
+    "hla": 84,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 52,
+        "rating": 1014
+      },
+      "player2": {
+        "score": 68,
+        "rating": 866
+      }
+    },
+    "eventTitle": "The 24th Tohoku Open",
+    "locationTitle": "Mizubayashi Sport Park",
+    "date": "2024-10-13"
+  },
+  {
+    "id": "the27thkansaiopenama.rd3",
+    "event": "the27thkansaiopenama",
+    "round": "Rd1,2,3",
+    "hla": 106,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 48,
+        "rating": 974
+      },
+      "player2": {
+        "score": 58,
+        "rating": 852
+      }
+    },
+    "eventTitle": "The 27th Kansai Open (Ama)",
+    "locationTitle": "Kyoto Tamba Park",
+    "date": "2024-11-16"
+  },
+  {
+    "id": "the27thkansaiopenama.rd2",
+    "event": "the27thkansaiopenama",
+    "round": "Rd1,2,3",
+    "hla": 106,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 48,
+        "rating": 975
+      },
+      "player2": {
+        "score": 57,
+        "rating": 866
+      }
+    },
+    "eventTitle": "The 27th Kansai Open (Ama)",
+    "locationTitle": "Kyoto Tamba Park",
+    "date": "2024-11-16"
+  },
+  {
+    "id": "the27thkansaiopenama.rd1",
+    "event": "the27thkansaiopenama",
+    "round": "Rd1,2,3",
+    "hla": 106,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 46,
+        "rating": 1002
+      },
+      "player2": {
+        "score": 60,
+        "rating": 833
+      }
+    },
+    "eventTitle": "The 27th Kansai Open (Ama)",
+    "locationTitle": "Kyoto Tamba Park",
+    "date": "2024-11-16"
+  },
+  {
+    "id": "the27thkansaiopen.rd1rd2rd3",
+    "event": "the27thkansaiopen",
+    "round": "Rd1,2,3",
+    "hla": 106,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 48,
+        "rating": 1068
+      },
+      "player2": {
+        "score": 67,
+        "rating": 900
+      }
+    },
+    "eventTitle": "The 27th Kansai Open",
+    "locationTitle": "Fumin-no-Mori Hiyoshi",
+    "date": "2024-10-05"
+  },
+  {
     "id": "the1stfukuokauminakaopen.rd1rd2rd3",
     "event": "the1stfukuokauminakaopen",
     "round": "Rd1,2,3",
