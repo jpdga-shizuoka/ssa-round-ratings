@@ -136,6 +136,10 @@
       "paidout": 16,
       "rate": 150.25
     },
+    "rounds": [
+      "the38thkyushuopen.rd1",
+      "the38thkyushuopen.rd2"
+    ],
     "urls": [
       {
         "type": "website",
