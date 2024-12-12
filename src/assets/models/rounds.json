@@ -1,5 +1,39 @@
 [
   {
+    "id": "the38thkyushuopen.rd2",
+    "event": "the38thkyushuopen",
+    "round": "Rd2",
+    "hla": 95,
+    "holes": 27,
+    "ratings": {
+      "player1": {
+        "score": 77,
+        "rating": 1006
+      },
+      "player2": {
+        "score": 105,
+        "rating": 825
+      }
+    }
+  },
+  {
+    "id": "the38thkyushuopen.rd1",
+    "event": "the38thkyushuopen",
+    "round": "Rd1",
+    "hla": 95,
+    "holes": 27,
+    "ratings": {
+      "player1": {
+        "score": 82,
+        "rating": 995
+      },
+      "player2": {
+        "score": 106,
+        "rating": 849
+      }
+    }
+  },
+  {
     "id": "the3rdmaikoclassic.rd1rd2rd3",
     "event": "the3rdmaikoclassic",
     "round": "Rd1,2,3",
