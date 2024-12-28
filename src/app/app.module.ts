@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { YouTubePlayerModule } from '@angular/youtube-player';
-import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi, withJsonpSupport } from '@angular/common/http';
 import { GoogleMapsModule } from '@angular/google-maps';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -27,6 +27,7 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { AppComponent } from './app.component';
@@ -55,7 +56,6 @@ import { BottomSheetDetailDisabledComponent } from './dialogs/bottom-sheet-detai
 import { PrefaceComponent } from './preface/preface.component';
 import { IcalenderComponent } from './icalendar/icalendar.component';
 import { DifficultyChartComponent } from './difficulty-chart/difficulty-chart.component';
-import { AnnualChartComponent } from './annual-chart/annual-chart.component';
 import { MembersChartComponent } from './members-chart/members-chart.component';
 import { TermsComponent } from './terms/terms.component';
 import { BubbleChartInteractiveComponent } from './difficulty-chart/custom-chart/bubble-chart-interactive.component';
@@ -74,17 +74,22 @@ import { FaqRatingsComponent } from './libraries/faq-ratings.component';
 import { NonStandardRulesComponent } from './libraries/non-standard-rules.component';
 import { PointsComponent } from './libraries/points.component';
 import { ReclassificationComponent } from './libraries/reclassification.component';
-import { Sec8Component } from './libraries/sec8.component';
+import { Ts2023Component } from './libraries/ts2023.component';
+import { Ts2024Component } from './libraries/ts2024.component';
 import { DivisionsComponent } from './libraries/divisions.component';
 import { PlayerpackComponent } from './libraries/playerpack.component';
 import { RatingsComponent } from './libraries/ratings.component';
-import { Sec5Component } from './libraries/sec5.component';
+import { OrdgCm23Component } from './libraries/ordgcm23.component';
+import { OrdgCm24Component } from './libraries/ordgcm24.component';
 import { TrueAmateurComponent } from './libraries/true-amateur.component';
 import { IndexComponent } from './libraries/index.component';
 import { TourStandardsComponent } from './libraries/tour-standards.component';
+import { ProgramguidComponent } from './libraries/programguid.component';
+import { PhotoListComponent } from './photo-list/photo-list.component';
+import { AnnualReportsComponent } from './annual-reports/annual-reports.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
-@NgModule({
-    declarations: [
+@NgModule({ declarations: [
         AppComponent,
         ReloadComponent,
         RoundsTabsComponent,
@@ -111,7 +116,6 @@ import { TourStandardsComponent } from './libraries/tour-standards.component';
         PrefaceComponent,
         IcalenderComponent,
         DifficultyChartComponent,
-        AnnualChartComponent,
         MembersChartComponent,
         BubbleChartInteractiveComponent,
         BubbleSeriesInteractiveComponent,
@@ -129,25 +133,27 @@ import { TourStandardsComponent } from './libraries/tour-standards.component';
         NonStandardRulesComponent,
         PointsComponent,
         ReclassificationComponent,
-        Sec8Component,
+        Ts2023Component,
+        Ts2024Component,
         DivisionsComponent,
         PlayerpackComponent,
         RatingsComponent,
-        Sec5Component,
+        OrdgCm23Component,
+        OrdgCm24Component,
         TrueAmateurComponent,
         IndexComponent,
-        TourStandardsComponent
+        TourStandardsComponent,
+        ProgramguidComponent,
+        PhotoListComponent,
+        AnnualReportsComponent
     ],
-    imports: [
-        BrowserModule,
+    bootstrap: [AppComponent], imports: [BrowserModule,
         FormsModule,
         BrowserAnimationsModule,
         AppRoutingModule,
         LayoutModule,
         YouTubePlayerModule,
         GoogleMapsModule,
-        HttpClientModule,
-        HttpClientJsonpModule,
         MatToolbarModule,
         MatIconModule,
         MatTooltipModule,
@@ -168,9 +174,12 @@ import { TourStandardsComponent } from './libraries/tour-standards.component';
         MatMenuModule,
         MatProgressSpinnerModule,
         MatExpansionModule,
-        NgxChartsModule
-    ],
-    providers: [],
-    bootstrap: [AppComponent]
-})
+        MatSnackBarModule,
+        NgxChartsModule,
+        ServiceWorkerModule.register('ngsw-worker.js', {
+            enabled: !isDevMode(),
+            // Register the ServiceWorker as soon as the application is stable
+            // or after 30 seconds (whichever comes first).
+            registrationStrategy: 'registerWhenStable:30000'
+        })], providers: [provideHttpClient(withInterceptorsFromDi(), withJsonpSupport())] })
 export class AppModule { }

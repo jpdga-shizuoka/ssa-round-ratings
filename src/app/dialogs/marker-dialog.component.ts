@@ -1,17 +1,15 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Observable } from 'rxjs';
-import { EventCategory } from '../models';
+import { EventCategory, EventInfo } from '../models';
 import { RemoteService, LocationInfo } from '../remote.service';
+import { Position } from '../map-common';
 
 export interface MarkerDialogData {
   category: EventCategory;
-  position: {
-    lat: number;
-    lng: number;
-  };
+  position: Position;
   location: string;
-  events: string[];
+  events: EventInfo[];
 }
 
 @Component({
@@ -27,6 +25,10 @@ export class MarkerDialogComponent {
     private readonly remote: RemoteService
   ) {
     this.location$ = this.remote.getLocation(this.data.location);
+  }
+
+  get events(): EventInfo[] {
+    return this.data.events;
   }
 
   get showEventBotton(): boolean {

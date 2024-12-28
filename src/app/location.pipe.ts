@@ -8,7 +8,7 @@ import { LocalizeService } from './localize.service';
 export class LocationPipe implements PipeTransform {
   constructor(private readonly localize: LocalizeService) {}
 
-  transform(location?: LocationInfo, format?: string): string {
+  transform(location: LocationInfo | null, format?: string): string {
     if (!location || !format) {
       return '';
     }

@@ -4,7 +4,7 @@ import { Observable, Subject, Subscription } from 'rxjs';
 import { first, tap } from 'rxjs/operators';
 
 import { RemoteService, EventId, EventInfo, LocationInfo } from '../remote.service';
-import { getCbjUrl, makePdgaInfo, makeJpdgaInfo, makeMiscInfo, makeVideoInfo, makePhotoInfo, getStarsOfPurse } from '../libs';
+import { getCbjUrl, makePdgaInfo, makePdga2nd, makeJpdgaInfo, makeMiscInfo, makeVideoInfo, makePhotoInfo, getStarsOfPurse } from '../libs';
 import { MiscInfo } from '../app-common';
 import { RoundId, Layouts } from '../models';
 
@@ -30,6 +30,24 @@ function layout2layouts(layout?: Layouts) {
       url: layout.official
     });
   }
+  if (layout?.back) {
+    urls.push({
+      title: 'Back tee',
+      url: layout.back
+    });
+  }
+  if (layout?.front) {
+    urls.push({
+      title: 'Front tee',
+      url: layout.front
+    });
+  }
+  if (layout?.ama) {
+    urls.push({
+      title: 'Ama tee',
+      url: layout.ama
+    });
+  }
   if (layout?.cbj) {
     urls.push({
       title: 'Caddie Book Japan',
@@ -50,6 +68,7 @@ export class EventComponent implements OnInit, OnDestroy {
   roundList$?: Subject<RoundId[]>;
   location$?: Observable<LocationInfo>;
   pdgaInfo: MiscInfo[] = [];
+  pdga2nd: MiscInfo[] = [];
   jpdgaInfo: MiscInfo[] = [];
   miscInfo: MiscInfo[] = [];
   videoInfo: MiscInfo[] = [];
@@ -67,7 +86,7 @@ export class EventComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.subscription = this.route.params.subscribe(params => {
-      this.eventId = params.eventId as EventId;
+      this.eventId = params['eventId'] as EventId;
       if (this.eventId) {
         this.event$ = new Subject<EventInfo>();
         this.roundList$ = new Subject<RoundId[]>();
@@ -75,6 +94,7 @@ export class EventComponent implements OnInit, OnDestroy {
           tap(event => {
             this.location$ = this.remote.getLocation(event.location).pipe(first());
             this.pdgaInfo = makePdgaInfo(event);
+            this.pdga2nd = makePdga2nd(event);
             this.jpdgaInfo = makeJpdgaInfo(event);
             this.miscInfo = makeMiscInfo(event);
             this.videoInfo = makeVideoInfo(event);
@@ -86,8 +106,10 @@ export class EventComponent implements OnInit, OnDestroy {
         ).subscribe(event => {
           this.event$?.next(event);
           this.event$?.complete();
-          this.roundList$?.next(event.rounds);
-          this.roundList$?.complete();
+          if (event.rounds) {
+            this.roundList$?.next(event.rounds);
+            this.roundList$?.complete();  
+          }
         });
       }
     });
@@ -111,11 +133,14 @@ export class EventComponent implements OnInit, OnDestroy {
       return '';
     }
     let starCount = getStarsOfPurse(event.budget);
-    let stars = '★'.repeat(starCount);
+    let stars = '\u{2605}'.repeat(starCount);
     return stars;
   }
 
-  roundUnderThousand(n: number): number {
+  roundUnderThousand(n?: number): number {
+    if (!n) {
+      return 0;
+    }
     return Math.round(n / 1000) * 1000;
   }
 }

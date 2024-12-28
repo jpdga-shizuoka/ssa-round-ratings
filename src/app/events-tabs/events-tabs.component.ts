@@ -42,7 +42,7 @@ export class EventsTabsComponent extends RoutingTabsComponent implements OnInit 
     return this.titles[1];
   }
 
-  ngOnInit(): void {
+  override ngOnInit(): void {
     super.ngOnInit();
     if (!this.titles) {
       throw new Error('[titles] must be initialized');

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { forkJoin } from 'rxjs';
+import { LegendPosition } from '@swimlane/ngx-charts';
 
 import { RemoteService, Members, Organization } from '../remote.service';
-import { CItem, CData } from '../ngx-charts';
+import { CData } from '../ngx-charts';
 
 type Orgs = {
   pdga: Members[];
@@ -37,10 +38,11 @@ function calcScaleMax(orgs: Orgs): number {
 })
 export class MembersChartComponent implements OnInit {
   chartSource?: CData[];
-  yScaleMax?: number;;
+  yScaleMax = 0;
   legendTitle = '';
   yAxisLabel = 'Members';
-  view = [400, 400];
+  view = [400, 400] as [number, number];
+  legendPosition = LegendPosition.Below;
 
   constructor(private readonly remote: RemoteService) { }
 

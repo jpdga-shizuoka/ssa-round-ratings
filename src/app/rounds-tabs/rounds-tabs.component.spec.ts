@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
@@ -35,8 +35,8 @@ describe('RoundsTabsComponent', () => {
 
   beforeEach(waitForAsync(() => {
     return TestBed.configureTestingModule({
-      schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      declarations: [
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    declarations: [
         RoundsTabsComponent,
         RoundsTableComponent,
         EventsMapComponent,
@@ -49,12 +49,10 @@ describe('RoundsTabsComponent', () => {
         GeolinkPipe,
         SchedulePipe,
         PeriodPipe
-      ],
-      imports: [
-        FormsModule,
+    ],
+    imports: [FormsModule,
         RouterTestingModule,
         NoopAnimationsModule,
-        HttpClientModule,
         MatIconModule,
         MatPaginatorModule,
         MatSortModule,
@@ -64,9 +62,9 @@ describe('RoundsTabsComponent', () => {
         MatDialogModule,
         MatInputModule,
         MatListModule,
-        MatBottomSheetModule
-      ]
-    }).compileComponents();
+        MatBottomSheetModule],
+    providers: [provideHttpClient(withInterceptorsFromDi())]
+}).compileComponents();
   }));
 
   beforeEach(() => {

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LegendPosition } from '@swimlane/ngx-charts';
+import { LegendPosition, Color } from '@swimlane/ngx-charts';
 import { RemoteService } from '../remote.service';
 import { TotalYearPlayers } from '../models';
 
@@ -33,7 +33,7 @@ export class TotalPlayersComponent implements OnInit {
   animations = true;
   colorScheme = {
     domain: ['#aaf255', '#61d800', '#008b00']
-  };
+  } as Color;
 
   constructor(private readonly remote: RemoteService) {}
 

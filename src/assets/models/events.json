@@ -1,13 +1,23 @@
 [
   {
+    "id": "the1stjapandiscgolfmatchplaychampionships",
+    "title": "The 1st Japan Disc Golf Match Play Championships",
+    "location": "minamisomahoseridingpark",
+    "period": {
+      "from": "2025-03-29",
+      "to": "2025-03-30"
+    }
+  },
+  {
     "id": "the23rdchubuopen",
     "title": "The 23rd Chubu Open",
-    "location": "mikawarinkairyokuchi",
+    "location": "enakyoparkcountryclub",
     "period": {
-      "from": "2024-12-14",
-      "to": "2024-12-15"
+      "from": "2025-03-15",
+      "to": "2025-03-16"
     },
     "jpdga": {
+      "tier": "ABT-B",
       "eventId": "706"
     },
     "urls": [
@@ -19,16 +29,100 @@
     ]
   },
   {
+    "id": "the13thokinawaopen",
+    "title": "The 13th Okinawa Open",
+    "location": "nakijinsonsportpark",
+    "period": {
+      "from": "2025-02-22",
+      "to": "2025-02-23"
+    },
+    "pdga": {
+      "tier": "B",
+      "eventId": "87628"
+    },
+    "jpdga": {
+      "tier":"ABT-A",
+      "eventId": "717"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://sites.google.com/view/opdga/"
+      },
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/groups/2366167146940075"
+      }
+    ]
+  },
+  {
+    "id": "the7thhitachseasideparkopen",
+    "title": "The 7th Hitachi Seaside Park Open",
+    "location": "hitachiseasidepark",
+    "period": {
+      "from": "2025-01-18",
+      "to": "2025-01-19"
+    },
+    "jpdga": {
+      "tier": "LT",
+      "eventId": "716"
+    }
+  },
+  {
+    "id": "the2025nationalteamchampionship",
+    "title": "The 2025 National Team Championships",
+    "location": "oyamaomoinomoripark",
+    "period": {
+      "from": "2025-01-12",
+      "to": "2025-01-13"
+    },
+    "jpdga": {
+      "tier": "LT",
+      "eventId": "715"
+    }
+  },
+  {
     "id": "the2ndjandluxcup",
     "title": "The 2nd Jandlux Cup",
     "location": "michinokupark",
     "period": {
-      "from": "2024-12-07",
-      "to": "2024-12-08"
+      "from": "2024-12-14",
+      "to": "2024-12-15"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 39
     },
     "jpdga": {
       "eventId": "705"
     }
+  },
+  {
+    "id": "theleftovershowdown2024",
+    "title": "The Leftover Showdown 2024",
+    "location": "kadenaairbase",
+    "period": {
+      "from": "2024-12-14",
+      "to": "2024-12-14"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 16
+    },
+    "pdga": {
+      "eventId": "87032"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://www.discgolfscene.com/tournaments/Leftover_Showdown_2024"
+      }
+    ]
   },
   {
     "id": "the38thkyushuopen",
@@ -38,9 +132,33 @@
       "from": "2024-11-30",
       "to": "2024-12-01"
     },
+    "layout": {
+      "official": "https://www.jpdgafukuoka.com/data/38KO2024map.jpg"
+    },
+    "players": {
+      "pro": 50,
+      "ama": 64,
+      "misc": 0
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "86185",
+      "eventId": "86185"
+    },
     "jpdga": {
+      "tier": "ABT-A ",
       "eventId": "704"
     },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 1120,
+      "paidout": 16,
+      "rate": 150.25
+    },
+    "rounds": [
+      "the38thkyushuopen.rd1",
+      "the38thkyushuopen.rd2"
+    ],
     "urls": [
       {
         "type": "website",
@@ -59,13 +177,37 @@
     "title": "The 27th Kansai Open (Ama)",
     "location": "kyototambapark",
     "period": {
-      "from": "2024-11-09",
-      "to": "2024-11-10"
+      "from": "2024-11-16",
+      "to": "2024-11-17"
+    },
+    "layout": {
+      "official": "https://membership.jpdga.jp/event/2024/703_map1.pdf"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 24,
+      "misc": 0
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "85891",
+      "eventId": "85891"
     },
     "jpdga": {
+      "tier": "ABT-B",
       "eventId": "703"
     },
+    "rounds": [
+      "the27thkansaiopenama.rd1",
+      "the27thkansaiopenama.rd2",
+      "the27thkansaiopenama.rd3"
+    ],
     "urls": [
+      {
+        "type": "website",
+        "title": "ノービス部門コース",
+        "url": "https://membership.jpdga.jp/event/2024/703_map2.pdf"
+      },
       {
         "type": "website",
         "title": "Facebook",
@@ -81,14 +223,58 @@
       "from": "2024-11-02",
       "to": "2024-11-04"
     },
+    "layout": {
+      "official": "https://ec6553c1-0a4e-40a5-88a2-47b820800e15.filesusr.com/ugd/58d912_da6740ba37ae4b339b6f5b2170360684.pdf"
+    },
+    "players": {
+      "pro": 50,
+      "ama": 77,
+      "misc": 88
+    },
     "jpdga": {
+      "tier": "LT",
       "eventId": "701"
     },
     "urls": [
       {
+        "type": "video",
+        "title": "Final,B9,Ama@Dch-discchannel",
+        "url": "https://youtu.be/0oxaer_tdDU"
+      },
+      {
+        "type": "video",
+        "title": "Final,F9,Ama@Dch-discchannel",
+        "url": "https://youtu.be/TCbdQFkGDHs"
+      },
+      {
+        "type": "video",
+        "title": "R1B9,Ama@Dch-discchannel",
+        "url": "https://youtu.be/lb8Zn8nDhWI"
+      },
+      {
+        "type": "video",
+        "title": "R1F9,Ama@Dch-discchannel",
+        "url": "https://youtu.be/WyQ7hg6navY"
+      },
+      {
+        "type": "website",
+        "title": "コースルール",
+        "url": "https://ec6553c1-0a4e-40a5-88a2-47b820800e15.filesusr.com/ugd/58d912_c30f3bd8b38b4274885d315ed04f2424.pdf"
+      },
+      {
+        "type": "website",
+        "title": "Course rule",
+        "url": "https://ec6553c1-0a4e-40a5-88a2-47b820800e15.filesusr.com/ugd/58d912_4d9a2cf124e84991b797b02336383496.pdf"
+      },
+      {
         "type": "website",
         "title": "Official Site",
-        "url": "https://jpdgatokyooffice.wixsite.com/"
+        "url": "https://jpdgatokyooffice.wixsite.com/website"
+      },
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/jpdgatokyo"
       }
     ]
   },
@@ -97,13 +283,56 @@
     "title": "The 3rd Maiko Classic",
     "location": "maikodiscgolfpark",
     "period": {
-      "from": "2024-10-19",
-      "to": "2024-10-20"
+      "from": "2024-10-26",
+      "to": "2024-10-27"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/700_map.pdf"
+    },
+    "players": {
+      "pro": 48,
+      "ama": 22,
+      "misc": 0
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "85798",
+      "eventId": "85798"
     },
     "jpdga": {
+      "tier": "NT",
       "eventId": "700"
     },
+    "rounds": [
+      "the3rdmaikoclassic.rd1rd2rd3"
+    ],
+    "budget": {
+      "entreefee": 17000,
+      "purse": 1868,
+      "paidout": 23,
+      "rate": 152.9
+    },
     "urls": [
+      {
+        "type": "video",
+        "title": "Final,MPO@Dch-discchannel",
+        "url": "https://youtu.be/kLiO2j-OS1Q"
+      },
+      {
+        "type": "video",
+        "title": "R3,B9,Lead Card,MPO@Dch-discchannel",
+        "url": "https://youtu.be/8ZwM3M0t1y0"
+      },
+      {
+        "type": "video",
+        "title": "R3,F9,Lead Card,MPO@Dch-discchannel",
+        "url": "https://youtu.be/8hns-fsZfcY"
+      },
+      {
+        "type": "video",
+        "title": "MP40+,Vlog@discgolflab",
+        "url": "https://youtu.be/YBclmoR0HP0"
+      },
       {
         "type": "website",
         "title": "Facebook",
@@ -119,9 +348,32 @@
       "from": "2024-10-13",
       "to": "2024-10-14"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/699_map.pdf"
+    },
+    "players": {
+      "pro": 32,
+      "ama": 18,
+      "misc": 0
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "85150",
+      "eventId": "85150"
+    },
     "jpdga": {
+      "tier": "ABT-B",
       "eventId": "699"
-    }
+    },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 568,
+      "paidout": 12,
+      "rate": 151.5
+    },
+    "rounds": [
+      "the24thtohokuopen.rd1rd2rd3"
+    ]
   },
   {
     "id": "the27thkansaiopen",
@@ -131,9 +383,32 @@
       "from": "2024-10-05",
       "to": "2024-10-06"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/697_map.pdf"
+    },
+    "players": {
+      "pro": 22,
+      "ama": 0,
+      "misc": 0
+    },
+    "pdga": {
+      "tier": "B",
+      "eventId": "85302",
+      "scoreId": "85302"
+    },
     "jpdga": {
+      "tier": "ABT-A",
       "eventId": "697"
     },
+    "budget": {
+      "entreefee": 10000,
+      "purse": 650,
+      "paidout": 11,
+      "rate": 148.55
+    },
+    "rounds": [
+      "the27thkansaiopen.rd1rd2rd3"
+    ],
     "urls": [
       {
         "type": "website",
@@ -150,9 +425,58 @@
       "from": "2024-09-22",
       "to": "2024-09-23"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/696_map.pdf",
+      "back": "https://membership.jpdga.jp/event/2024/696_map_mpo.pdf",
+      "front": "https://membership.jpdga.jp/event/2024/696_map_etc.pdf"
+    },
+    "players": {
+      "pro": 73,
+      "ama": 0,
+      "misc": 0
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "85149",
+      "eventId": "85149"
+    },
     "jpdga": {
+      "tier": "NT",
       "eventId": "696"
-    }
+    },
+    "budget": {
+      "entreefee": 15000,
+      "purse": 3744,
+      "paidout": 32,
+      "rate": 142.15
+    },
+    "urls": [
+      {
+        "type": "video",
+        "title": "Final,MPO@Dch-discchannel",
+        "url": "https://youtu.be/drqw58TfQGo"
+      },
+      {
+        "type": "video",
+        "title": "Semifinal,MPO@Dch-discchannel",
+        "url": "https://youtu.be/Eo9mtIc24aU"
+      },
+      {
+        "type": "video",
+        "title": "R2,B9,Lead Card,MPO@Dch-discchannel",
+        "url": "https://youtu.be/a7aIlnzTWuU"
+      },
+      {
+        "type": "video",
+        "title": "R2,F9,Lead Card,MPO@Dch-discchannel",
+        "url": "https://youtu.be/8fgCPk6W03c"
+      },
+      {
+        "type": "video",
+        "title": "MP40+,Vlog@discgolflab",
+        "url": "https://youtu.be/atZTi8bqa7A"
+      }
+    ]
   },
   {
     "id": "the1stfukuokauminakaopen",
@@ -162,10 +486,35 @@
       "from": "2024-08-17",
       "to": "2024-08-18"
     },
+    "layout": {
+      "official": "https://www.jpdgafukuoka.com/blog/wp/wp-content/uploads/2024/08/c75f15dac38c90f49517a8337f2b0c92.jpg"
+    },
+    "players": {
+      "pro": 32,
+      "ama": 35,
+      "misc": 3
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "83205",
+      "eventId": "83205"
+    },
     "jpdga": {
+      "tier": "ABT-B",
       "eventId": "693"
     },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 748,
+      "paidout": 13,
+      "rate": 145
+    },
     "urls": [
+      {
+        "type": "video",
+        "title": "Final,Lead Card,MPO@DigitalUminaka",
+        "url": "https://youtu.be/19xlRG0Kr0Y?si=Oo73YidxWjxJ7ky3"
+      },
       {
         "type": "website",
         "title": "Official Site",
@@ -176,6 +525,9 @@
         "title": "Facebook",
         "url": "https://www.facebook.com/discgolfkyushuopen/"
       }
+    ],
+    "rounds": [
+      "the1stfukuokauminakaopen.rd1rd2rd3"
     ]
   },
   {
@@ -183,18 +535,61 @@
     "title": "The 19th Michinoku Open",
     "location": "kitakamisportpark",
     "period": {
-      "from": "2024-08-10",
+      "from": "2024-08-11",
       "to": "2024-08-12"
     },
+    "players": {
+      "pro": 44,
+      "ama": 34,
+      "misc": 3
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/691_map.pdf"
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "83523",
+      "eventId": "83523"
+    },
     "jpdga": {
+      "tier": "ABT-A",
       "eventId": "691"
     },
+    "budget": {
+      "entreefee": 10000,
+      "purse": 1286,
+      "paidout": 20,
+      "rate": 147.1
+    },
     "urls": [
+      {
+        "type": "video",
+        "title": "Final F9,MPO@Dch-discchannel",
+        "url": "https://youtu.be/5X8ivJ5F_EA"
+      },
+      {
+        "type": "video",
+        "title": "R1B9,MPO@Dch-discchannel",
+        "url": "https://youtu.be/7lowVIH7qT0"
+      },
+      {
+        "type": "video",
+        "title": "R1F9,MPO@Dch-discchannel",
+        "url": "https://youtu.be/c7bTPEUDqzQ"
+      },
+      {
+        "type": "video",
+        "title": "Vlog,@discgolflab",
+        "url": "https://youtu.be/P8m3dHvUw2Q"
+      },
       {
         "type": "website",
         "title": "Official Site",
         "url": "http://jpdgaiwate.com"
       }
+    ],
+    "rounds": [
+      "the19thmichinokuopen.rd1rd2"
     ]
   },
   {
@@ -205,9 +600,34 @@
       "from": "2024-07-20",
       "to": "2024-07-21"
     },
+    "layout": {
+      "back": "http://www.jpdga.jp/data/event/2024/688_map_mpo.pdf",
+      "front": "http://www.jpdga.jp/data/event/2024/688_map_fpo.pdf",
+      "ama": "http://www.jpdga.jp/data/event/2024/688_map_ama.pdf"
+    },
+    "players": {
+      "pro": 35,
+      "ama": 24,
+      "misc": 0
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "82950",
+      "eventId": "82950"
+    },
     "jpdga": {
+      "tier": "NT",
       "eventId": "688"
-    }
+    },
+    "budget": {
+      "entreefee": 15000,
+      "purse": 1729,
+      "paidout": 12,
+      "rate": 153.51
+    },
+    "rounds": [
+      "the26thnipponopen.rd1rd2rd3"
+    ]
   },
   {
     "id": "the3rdjapanseriesdiscgolfchampionships",
@@ -217,15 +637,79 @@
       "from": "2024-07-13",
       "to": "2024-07-15"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/687_map1.pdf",
+      "back": "http://www.jpdga.jp/data/event/2024/687_mapback.pdf",
+      "front": "http://www.jpdga.jp/data/event/2024/687_mapfront.pdf"
+    },
+    "players": {
+      "pro": 72,
+      "ama": 0,
+      "misc": 0
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "79195",
+      "eventId": "79195"
+    },
     "jpdga": {
+      "tier": "NT",
       "eventId": "687"
     },
+    "budget": {
+      "entreefee": 15000,
+      "purse": 2040,
+      "rate": 157.48,
+      "paidout": 19
+    },
     "urls": [
+      {
+        "type": "video",
+        "title": "Final,MPO,Lead Card@Dch-discchannel",
+        "url": "https://youtu.be/l24UoLJe9ds?si=wJJJtRTn_zSD93PL"
+      },
+      {
+        "type": "video",
+        "title": "R3B9,MPO,Lead Card@Dch-discchannel",
+        "url": "https://youtu.be/3alNBjnueaI?si=Mw3XDuMGcAuF1qmr"
+      },
+
+      {
+        "type": "video",
+        "title": "R3F9,MPO,Lead Card@Dch-discchannel",
+        "url": "https://youtu.be/Yhl0vJqC5Do?si=e1NU1Hyp2z_vn1nj"
+      },
+      {
+        "type": "video",
+        "title": "R2B9,MPO,Lead Card@Dch-discchannel",
+        "url": "https://youtu.be/ulewTSjaHnY?si=QxaY2z9dy0crw54H"
+      },
+      {
+        "type": "video",
+        "title": "R2F9,MPO,Lead Card@Dch-discchannel",
+        "url": "https://youtu.be/Vb1WcUxDWJQ"
+      },
+      {
+        "type": "video",
+        "title": "R1B9,MPO,Featuer Card@Dch-discchannel",
+        "url": "https://youtu.be/KxLnDDp1mCk"
+      },
+      {
+        "type": "video",
+        "title": "R1F9,MPO,Featuer Card@Dch-discchannel",
+        "url": "https://youtu.be/6zpwhXKwuRM"
+      },
       {
         "type": "website",
         "title": "Facebook",
         "url": "https://www.facebook.com/kiyohara.green"
       }
+    ],
+    "rounds": [
+      "the3rdjapanseriesdiscgolfchampionships.rd1rd2",
+      "the3rdjapanseriesdiscgolfchampionships.rd3",
+      "the3rdjapanseriesdiscgolfchampionships.rd1rd2front",
+      "the3rdjapanseriesdiscgolfchampionships.rd3front"
     ]
   },
   {
@@ -236,9 +720,40 @@
       "from": "2024-06-29",
       "to": "2024-06-30"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/686_map.pdf"
+    },
+    "players": {
+      "pro": 32,
+      "ama": 13,
+      "misc": 2
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "82579",
+      "eventId": "82579"
+    },
     "jpdga": {
+      "tier": "ABT-A",
       "eventId": "686"
-    }
+    },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 789,
+      "rate": 161.3,
+      "paidout": 15
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://www.facebook.com/hokkaidoopen.discgolf"
+      }
+    ],
+    "rounds": [
+      "the13thhokkaidoopen.rd1rd2rd3",
+      "the13thhokkaidoopen.rd1rd2rd3fronttee"
+    ]
   },
   {
     "id": "the8thmihoopen",
@@ -246,9 +761,18 @@
     "location": "hikaritokazenookapark",
     "period": {
       "from": "2024-06-15",
-      "to": "2024-06-16"
+      "to": "2024-06-15"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 19
+    },
+    "layout": {
+      "official": "https://discgolf-navi.com/wp-content/uploads/2024/06/マスターズ・美浦オープン2024コースマップ.pdf"
     },
     "jpdga": {
+      "tier": "LT",
       "eventId": "684"
     }
   },
@@ -260,9 +784,69 @@
       "from": "2024-06-15",
       "to": "2024-06-16"
     },
+    "layout": {
+      "official": "https://discgolf-navi.com/wp-content/uploads/2024/06/マスターズ・美浦オープン2024コースマップ.pdf"
+    },
+    "players": {
+      "pro": 40,
+      "ama": 36,
+      "misc": 0
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "81665",
+      "eventId": "81665"
+    },
     "jpdga": {
+      "tier": "ABT-B",
       "eventId": "684"
-    }
+    },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 1323,
+      "rate": 158.6,
+      "paidout": 15
+    },
+    "urls": [
+      {
+        "type": "video",
+        "title": "Day2 Highlights@Dchplus",
+        "url": "https://youtu.be/nq14rCkSVto?si=fm6iDzq9s--R8Lj7"
+      },
+      {
+        "type": "video",
+        "title": "Day1 Highlights@Dchplus",
+        "url": "https://youtu.be/PHOSMNt9UPQ?si=Fm2-dqC5bJovWsPg"
+      },
+      {
+        "type": "video",
+        "title": "Final, MP40+,@Dch-discchannel",
+        "url": "https://youtu.be/vWIElQfQWcs"
+      },
+      {
+        "type": "video",
+        "title": "Semifinal, MP40+,@Dch-discchannel",
+        "url": "https://youtu.be/CktaKdBiBzI"
+      },
+      {
+        "type": "video",
+        "title": "Final, MP40+,@discgolflab",
+        "url": "https://youtu.be/bKIK6h9l3no"
+      },
+      {
+        "type": "video",
+        "title": "Semifinal, MP40+,@discgolflab",
+        "url": "https://youtu.be/RlqfRLo0Uzs"
+      },
+      {
+        "type": "video",
+        "title": "Vlog,@discgolflab",
+        "url": "https://youtu.be/8SEsubbHXoA"
+      }
+    ],
+    "rounds": [
+      "the19thmastersnationalchampionship.rd1rd2rd3"
+    ]
   },
   {
     "id": "the1stminamataopen",
@@ -272,9 +856,61 @@
       "from": "2024-06-01",
       "to": "2024-06-02"
     },
+    "layout": {
+      "official": "https://discgolf.jp/event/minamata/dg-minamata2024-map1.pdf"
+    },
+    "players": {
+      "pro": 46,
+      "ama": 34,
+      "misc": 0
+    },
     "jpdga": {
+      "tier": "LT",
       "eventId": "680"
-    }
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://discgolf.jp/event/minamata/"
+      }
+    ]
+  },
+  {
+    "id": "the1stenakyoopen",
+    "title": "The 1st Enakyo Open",
+    "location": "enakyoparkcountryclub",
+    "period": {
+      "from": "2024-05-25",
+      "to": "2024-05-26"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/710_map.pdf"
+    },
+    "players": {
+      "pro": 13,
+      "ama": 29,
+      "misc": 0
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "81663",
+      "eventId": "81663"
+    },
+    "jpdga": {
+      "tier": "ABT-B",
+      "topicId": "1879",
+      "eventId": "710"
+    },
+    "budget": {
+      "entreefee": 9000,
+      "purse": 225,
+      "rate": 155.5,
+      "paidout": 5
+    },
+    "rounds": [
+      "the1stenakyoopen.rd1rd2rd3"
+    ]
   },
   {
     "id": "the7thgifuhiruganoopen",
@@ -284,9 +920,39 @@
       "from": "2024-05-25",
       "to": "2024-05-26"
     },
+    "status": "CANCELED",
     "jpdga": {
+      "tier": "ABT-B",
       "eventId": "679"
     }
+  },
+  {
+    "id": "theuminakawge2024",
+    "title": "The UMINAKA +WGE 2024",
+    "location": "uminonakamichiseasidepark",
+    "period": {
+      "from": "2024-05-19",
+      "to": "2024-05-19"
+    },
+    "players": {
+      "pro": 1,
+      "ama": 10,
+      "misc": 1
+    },
+    "pdga": {
+      "tier": "C",
+      "eventId": "81519"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "http://www.jpdgafukuoka.com/blog/?info=2024wge"
+      }
+    ],
+    "rounds": [
+      "theuminakawge2024.rd1rd2"
+    ]
   },
   {
     "id": "the2ndmichinokuqueenscup",
@@ -296,7 +962,22 @@
       "from": "2024-05-18",
       "to": "2024-05-19"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/678_map.pdf"
+    },
+    "players": {
+      "pro": 23,
+      "ama": 21,
+      "misc": 0
+    },
+    "pdga": {
+      "tier": "C",
+      "scoreId": "79794",
+      "eventId": "79794"
+    },
     "jpdga": {
+      "tier": "LT",
+      "topicId": "1878",
       "eventId": "678"
     },
     "urls": [
@@ -305,6 +986,38 @@
         "title": "Official Site",
         "url": "http://jpdgaiwate.com"
       }
+    ],
+    "rounds": [
+      "the2ndmichinokuqueenscup.rd1rd2rd3"
+    ]
+  },
+  {
+    "id": "thediscgolfwomensgrobaleventtokyo2024",
+    "title": "The Discgolf Womens grobal event Tokyo 2024",
+    "location": "showakinenpark",
+    "period": {
+      "from": "2024-05-18",
+      "to": "2024-05-18"
+    },
+    "players": {
+      "pro": 4,
+      "ama": 14,
+      "misc": 2
+    },
+    "pdga": {
+      "tier": "C",
+      "scoreId": "80828",
+      "eventId": "80828"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://www.facebook.com/share/GL3TbtrsT3gBjkMe/"
+      }
+    ],
+    "rounds": [
+      "thediscgolfwomensgrobaleventtokyo2024.rd1rd2"
     ]
   },
   {
@@ -315,15 +1028,41 @@
       "from": "2024-05-18",
       "to": "2024-05-19"
     },
+    "layout": {
+      "official": "http://www.sukima-labo.com/dg291/2024fukuiopen/2024fukuiop-course.pdf"
+    },
+    "players": {
+      "pro": 33,
+      "ama": 16,
+      "misc": 0
+    },
+    "pdga": {
+      "eventId": "79763"
+    },
     "jpdga": {
+      "tier": "ABT-A",
       "eventId": "677"
     },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 563,
+      "rate": 156.25,
+      "paidout": 13
+    },
     "urls": [
+      {
+        "type": "video",
+        "title": "Vlog,@discgolflab",
+        "url": "https://youtu.be/-Rq5AdTaUCM"
+      },
       {
         "type": "website",
         "title": "Official Site",
         "url": "http://www.sukima-labo.com/dg291/"
       }
+    ],
+    "rounds": [
+      "the8thfukuiopen.rd1rd2rd3"
     ]
   },
   {
@@ -334,9 +1073,48 @@
       "from": "2024-05-11",
       "to": "2024-05-12"
     },
+    "layout": {
+      "official": "https://discgolf-navi.com/wp-content/uploads/2024/05/kiyosatonomori2024CourseRULE_compressed-1.pdf"
+    },
+    "players": {
+      "pro": 36,
+      "ama": 35,
+      "misc": 0
+    },
+    "pdga": {
+      "scoreId": "81085",
+      "eventId": "81085"
+    },
     "jpdga": {
+      "tier": "ABT-B",
       "eventId": "676"
-    }
+    },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 914,
+      "rate": 156.3,
+      "paidout": 12
+    },
+    "urls": [
+      {
+        "type": "video",
+        "title": "Final, MPO,@Dch-discchannel",
+        "url": "https://youtu.be/HSmQDwAYvBw"
+      },
+      {
+        "type": "video",
+        "title": "Vlog,@discgolflab",
+        "url": "https://youtu.be/CFT0n-mVEnk"
+      },
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://discgolf-navi.com/tournament/nt-abt-lt/kiyosato-open/"
+      }
+    ],
+    "rounds": [
+      "the19thkiyosatonomoriopen.rd1rd2rd3"
+    ]
   },
   {
     "id": "the19thminamisomaopen",
@@ -344,11 +1122,32 @@
     "location": "minamisomahoseridingpark",
     "period": {
       "from": "2024-05-04",
-      "to": "2024-04-04"
+      "to": "2024-05-04"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/671_map.pdf"
+    },
+    "players": {
+      "pro": 25,
+      "ama": 44,
+      "misc": 0
     },
     "jpdga": {
+      "tier": "LT",
       "eventId": "671"
-    }
+    },
+    "urls":[
+      {
+        "type": "video",
+        "title": "Final B9@Dch-discchannel",
+        "url": "https://youtu.be/kDKO_F25IQA?si=w66XEc5pMnklnMmn"
+      },
+      {
+        "type": "video",
+        "title": "Final F9@Dch-discchannel",
+        "url": "https://youtu.be/snvIHn5lpBk?si=bX7IctfpiupQIOQa"
+      }
+    ]
   },
   {
     "id": "the36thjapannationalchampionshipama",
@@ -358,9 +1157,33 @@
       "from": "2024-05-05",
       "to": "2024-05-06"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/672_map.pdf"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 48,
+      "misc": 3
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "81355",
+      "eventId": "81355"
+    },
     "jpdga": {
+      "tier": "NT",
       "eventId": "672"
-    }
+    },
+    "urls":[
+      {
+        "type": "video",
+        "title": "Final MA1, @Dch-discchannel",
+        "url": "https://youtu.be/IkTvgy6kuG8"
+      }
+    ],
+    "rounds": [
+      "the36thjapannationalchampionshipama.rd1rd2rd3"
+    ]
   },
   {
     "id": "the31sttokyoopen",
@@ -370,9 +1193,55 @@
       "from": "2024-04-20",
       "to": "2024-04-21"
     },
+    "layout": {
+      "official": "https://discgolf-navi.com/tournament/nt-abt-lt/tokyo-open/#toc3"
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "79081",
+      "eventId": "79081"
+    },
     "jpdga": {
+      "tier":"ABT-B",
+      "topicId": "1861",
       "eventId": "670"
-    }
+    },
+    "players": {
+      "pro": 43,
+      "ama": 43,
+      "misc": 0
+    },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 1724,
+      "rate": 153.85,
+      "paidout": 10
+    },
+    "urls": [
+      {
+        "type": "video",
+        "title": "Final, MPO,@Dch-discchannel",
+        "url": "https://youtu.be/H_rFcagRZPU"
+      },
+      {
+        "type": "video",
+        "title": "Semi-final, MPO,@Dch-discchannel",
+        "url": "https://youtu.be/FgVPed_nj3A"
+      },
+      {
+        "type": "video",
+        "title": "Vlog,@discgolflab",
+        "url": "https://youtu.be/RnXk-K0Ma58"
+      },
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://discgolf-navi.com/tournament/nt-abt-lt/tokyo-open/"
+      }
+    ],
+    "rounds": [
+      "the31sttokyoopen.rd1rd2rd3"
+    ]
   },
   {
     "id": "the21stsagaopen",
@@ -382,9 +1251,31 @@
       "from": "2024-04-13",
       "to": "2024-04-14"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/669_map.pdf"
+    },
+    "players": {
+      "pro": 28,
+      "ama": 42,
+      "misc": 0
+    },
+    "budget": {
+      "entreefee": 7000,
+      "purse": 490,
+      "rate": 150,
+      "paidout": 8
+    },
+    "pdga": {
+      "eventId": "79080"
+    },
     "jpdga": {
+      "tier":"ABT-B",
+      "topicId": "1856",
       "eventId": "669"
-    }
+    },
+    "rounds": [
+      "the21stsagaopen.rd1rd2rd3"
+    ]
   },
   {
     "id": "the28thkantoopenama",
@@ -394,7 +1285,21 @@
       "from": "2024-04-06",
       "to": "2024-04-07"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/668_map.pdf"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 73,
+      "misc": 0
+    },
+    "pdga": {
+      "scoreId": "79194",
+      "eventId": "79194"
+    },
     "jpdga": {
+      "tier":"ABT-A",
+      "topicId": "1846",
       "eventId": "668"
     },
     "urls": [
@@ -403,6 +1308,9 @@
         "title": "Official Site",
         "url": "http://www.tochigiflyingdisc.com"
       }
+    ],
+    "rounds": [
+      "the28thkantoopenama.rd1rd2rd3"
     ]
   },
   {
@@ -413,9 +1321,70 @@
       "from": "2024-03-02",
       "to": "2024-03-03"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/667_map.pdf"
+    },
+    "pdga": {
+      "scoreId": "77102",
+      "eventId": "77102"
+    },
+    "pdga2nd": {
+      "scoreId": "78423",
+      "eventId": "78423"
+    },
     "jpdga": {
+      "tier":"ABT-A",
+      "topicId": "1837",
       "eventId": "667"
-    }
+    },
+    "players": {
+      "pro": 56,
+      "ama": 138,
+      "misc": 0
+    },
+    "budget": {
+      "entreefee": 6000,
+      "purse": 1232,
+      "rate": 143,
+      "paidout": 15
+    },
+    "urls": [
+      {
+        "type": "photo",
+        "title": "D.ch",
+        "url": "https://www.facebook.com/share/3YoV8pfycA454HU5/"
+      },
+      {
+        "type": "video",
+        "title": "FINAL,MPO,@Dch-discchannel",
+        "url": "https://youtu.be/SKQZlZj_dhU"
+      },
+      {
+        "type": "video",
+        "title": "R3B9,MPO,@Dch-discchannel",
+        "url": "https://youtu.be/r8_3JrFkWxg"
+      },
+      {
+        "type": "video",
+        "title": "R3F9,MPO,@Dch-discchannel",
+        "url": "https://youtu.be/BVmxPrOFn2U"
+      },
+      {
+        "type": "video",
+        "title": "Digest,@horiant",
+        "url": "https://youtu.be/d-tth7vIZLE"
+      },
+      {
+        "type": "video",
+        "title": "Winner interview,MPO,@discgolflab",
+        "url": "https://youtu.be/6VEaTMY8bqs"
+      },
+      {
+        "type": "video",
+        "title": "Lead Card,R3F9,MPO,@Dch-discchannel",
+        "url": "https://youtu.be/BVmxPrOFn2U"
+      }
+    ]
   },
   {
     "id": "the12thokinawaopen",
@@ -425,11 +1394,28 @@
       "from": "2024-02-10",
       "to": "2024-02-11"
     },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/666_map.pdf"
+    },
     "pdga": {
-      "eventId": "75533"
+      "eventId": "75533",
+      "scoreId": "75533"
     },
     "jpdga": {
+      "tier":"ABT-A",
+      "topicId": "1828",
       "eventId": "666"
+    },
+    "players": {
+      "pro": 37,
+      "ama": 30,
+      "misc": 0
+    },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 385,
+      "rate": 125,
+      "paidout": 11
     },
     "urls": [
       {
@@ -442,6 +1428,9 @@
         "title": "Facebook",
         "url": "https://www.facebook.com/groups/2366167146940075"
       }
+    ],
+    "rounds": [
+      "the12thokinawaopen.rd1rd2rd3"
     ]
   },
   {
@@ -452,6 +1441,7 @@
       "from": "2024-01-21",
       "to": "2024-01-21"
     },
+    "status": "CANCELED",
     "jpdga": {
       "eventId": "665"
     },
@@ -472,13 +1462,56 @@
       "to": "2024-01-08"
     },
     "jpdga": {
+      "topicId": "1812",
       "eventId": "664"
     },
     "players": {
       "pro": 80,
       "ama": 120,
       "misc": 0
-    }
+    },
+    "urls": [
+      {
+        "type": "photo",
+        "title": "Day2,小山市ディスクゴルフ協会",
+        "url": "https://www.facebook.com/share/d1xZF8YHFN7sECDA"
+      },
+      {
+        "type": "photo",
+        "title": "Day1,小山市ディスクゴルフ協会",
+        "url": "https://www.facebook.com/share/UxFxHt46rfXgi117"
+      },
+      {
+        "type": "photo",
+        "title": "小山市ディスクゴルフ協会",
+        "url": "https://www.facebook.com/share/kjVQSRpAMdjtAhSK"
+      },
+      {
+        "type": "video",
+        "title": "アマオープン決勝,@tiikiken",
+        "url": "https://youtu.be/nPJemY-LuJQ"
+      },
+      {
+        "type": "video",
+        "title": "アマオープン午前,@tiikiken",
+        "url": "https://youtu.be/esZOuYWK2xk"
+      },
+      {
+        "type": "video",
+        "title": "アマオープン午後,@grents01",
+        "url": "https://youtu.be/sDmL7kPjbAU"
+      },
+      {
+        "type": "video",
+        "title": "アマオープン午前2,@grents01",
+        "url": "https://youtu.be/6Bq6gf6rN3Y"
+      },
+      {
+        "type": "video",
+        "title": "アマオープン午前1,@grents01",
+        "url": "https://youtu.be/5Wn1E37w7Nk"
+      }
+    ]
   },
   {
     "id": "the22ndchubuopen",
@@ -493,7 +1526,7 @@
     },
     "players": {
       "pro": 37,
-      "ama": 41,
+      "ama": 53,
       "misc": 0
     },
     "budget": {
@@ -507,6 +1540,7 @@
       "scoreId": "71461"
     },
     "jpdga": {
+      "topicId": "1796",
       "eventId": "656"
     },
     "urls": [
@@ -558,6 +1592,16 @@
     "urls": [
       {
         "type": "video",
+        "title": "Lead Card,F9,Final,MPO,@JANDLUX",
+        "url": "https://youtu.be/1EAHglncK6c"
+      },
+      {
+        "type": "video",
+        "title": "Lead Card,F9,R#3,MPO,@JANDLUX",
+        "url": "https://youtu.be/HxAgXwwIu10"
+      },
+      {
+        "type": "video",
         "title": "Lead Card,B9,R#2,MPO,@JANDLUX",
         "url": "https://youtu.be/AIowkh17OKY"
       },
@@ -565,6 +1609,16 @@
         "type": "video",
         "title": "Lead Card,F9,R#2,MPO,@JANDLUX",
         "url": "https://youtu.be/SPcjvDG_mWo"
+      },
+      {
+        "type": "video",
+        "title": "Chase Card,B9,R#2,MPO,@JANDLUX",
+        "url": "https://youtu.be/PQE7D6xh7yg"
+      },
+      {
+        "type": "video",
+        "title": "Chase Card,F9,R#2,MPO,@JANDLUX",
+        "url": "https://youtu.be/m-LhF5NSmwY"
       },
       {
         "type": "video",
@@ -605,6 +1659,7 @@
       "scoreId": "71460"
     },
     "jpdga": {
+      "topicId": "1792",
       "eventId": "610"
     },
     "urls": [
@@ -637,6 +1692,7 @@
       "misc": 0
     },
     "jpdga": {
+      "topicId": "1789",
       "eventId": "654"
     },
     "urls": [
@@ -664,6 +1720,7 @@
       "misc": 107
     },
     "jpdga": {
+      "topicId": "1788",
       "eventId": "653"
     },
     "urls": [
@@ -680,7 +1737,7 @@
       {
         "type": "website",
         "title": "Official Site",
-        "url": "https://jpdgatokyooffice.wixsite.com/"
+        "url": "https://jpdgatokyooffice.wixsite.com/website"
       }
     ]
   },
@@ -711,9 +1768,15 @@
       "scoreId": "71459"
     },
     "jpdga": {
+      "topicId": "1791",
       "eventId": "652"
     },
     "urls": [
+      {
+        "type": "video",
+        "title": "Final,Lead Card,MPO@Dch-discchannel",
+        "url": "https://youtu.be/gNQFhzD718w?si=hlvXVZ03YCnSp1O3"
+      },
       {
         "type": "video",
         "title": "ディスクゴルフ大学第37回,@discgolflab",
@@ -765,6 +1828,7 @@
       "eventId": "71458"
     },
     "jpdga": {
+      "topicId": "1777",
       "eventId": "651"
     },
     "rounds": [
@@ -798,6 +1862,7 @@
       "scoreId": "71457"
     },
     "jpdga": {
+      "topicId": "1775",
       "eventId": "649"
     },
     "urls": [
@@ -839,9 +1904,20 @@
       "scoreId": "71455"
     },
     "jpdga": {
+      "topicId": "1773",
       "eventId": "647"
     },
     "urls": [
+      {
+        "type": "video",
+        "title": "Final-B9,MPO,@Dch-discchannel",
+        "url": "https://youtu.be/i8TIGeMNkBM"
+      },
+      {
+        "type": "video",
+        "title": "Final-F9,MPO,@Dch-discchannel",
+        "url": "https://youtu.be/vfWGmKJ4sDo"
+      },
       {
         "type": "video",
         "title": "MP40優勝,@discgolflab",
@@ -924,6 +2000,9 @@
       "from": "2023-08-19",
       "to": "2023-08-20"
     },
+    "layout": {
+      "official": "http://www.jpdgafukuoka.com/data/asia2023coursemap.jpg"
+    },
     "players": {
       "pro": 45,
       "ama": 39,
@@ -940,6 +2019,7 @@
       "scoreId": "70134"
     },
     "jpdga": {
+      "topicId": "1764",
       "eventId": "645"
     },
     "urls": [
@@ -977,6 +2057,7 @@
       "scoreId": "70096"
     },
     "jpdga": {
+      "topicId": "1759",
       "eventId": "644"
     },
     "urls": [
@@ -1027,6 +2108,7 @@
       "eventId": "70095"
     },
     "jpdga": {
+      "topicId": "1755",
       "eventId": "642"
     },
     "urls": [
@@ -1072,9 +2154,20 @@
       "eventId": "70094"
     },
     "jpdga": {
+      "topicId": "1750",
       "eventId": "641"
     },
     "urls": [
+      {
+        "type": "video",
+        "title": "Final,MPO,@Dch-discchannel",
+        "url": "https://youtu.be/z0BaJTvQirY"
+      },
+      {
+        "type": "video",
+        "title": "Semi-Final,MPO,@Dch-discchannel",
+        "url": "https://youtu.be/_mnz6xJktxo"
+      },
       {
         "type": "video",
         "title": "Round#1,@TakeshiShimakage",
@@ -1144,6 +2237,7 @@
       "scoreId": "70092"
     },
     "jpdga": {
+      "topicId": "1744",
       "eventId": "637"
     },
     "urls": [
@@ -1193,6 +2287,7 @@
       "misc": 2
     },
     "jpdga": {
+      "topicId": "1737",
       "eventId": "658"
     }
   },
@@ -1208,6 +2303,7 @@
       "to": "2023-06-04"
     },
     "jpdga": {
+      "topicId": "1736",
       "eventId": "636"
     },
     "players": {
@@ -1252,8 +2348,16 @@
       "scoreId": "67931"
     },
     "jpdga": {
+      "topicId": "1749",
       "eventId": "634"
     },
+    "urls": [
+      {
+        "type": "video",
+        "title": "Semi-Final,MPO,@Dch-discchannel",
+        "url": "https://youtu.be/9wsm_sG8xao"
+      }
+    ],
     "rounds": [
       "the6thgifuhiruganoopen.rd1rd2rd3"
     ]
@@ -1282,6 +2386,7 @@
       "scoreId": "66722"
     },
     "jpdga": {
+      "topicId": "1730",
       "eventId": "633"
     },
     "urls": [
@@ -1421,6 +2526,7 @@
       "scoreId": "67929"
     },
     "jpdga": {
+      "topicId": "1735",
       "eventId": "631"
     },
     "urls": [
@@ -1548,6 +2654,7 @@
       "scoreId": "66721"
     },
     "jpdga": {
+      "topicId": "1718",
       "eventId": "628"
     },
     "players": {
@@ -1601,7 +2708,11 @@
     "pdga": {
       "eventId": "66069"
     },
+    "pdga2nd": {
+      "eventId": "68953"
+    },
     "jpdga": {
+      "topicId": "1709",
       "eventId": "627"
     },
     "players": {
@@ -1611,7 +2722,7 @@
     },
     "budget": {
       "entreefee": 6000,
-      "purse": 1332,
+      "purse": 1782,
       "rate": 112,
       "paidout": 20
     }
@@ -2703,13 +3814,16 @@
     "pdga": {
       "eventId": "56396"
     },
+    "pdga2nd": {
+      "eventId": "59219"
+    },
     "jpdga": {
       "eventId": "612",
       "topicId": "1618"
     },
     "budget": {
       "entreefee": 5000,
-      "purse": 900,
+      "purse": 1152,
       "rate": 111,
       "paidout": 16
     },

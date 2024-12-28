@@ -1,6 +1,6 @@
 <div class="app-container">
   <div *ngIf="event$ | async as event">
-    <h1>{{event?.title | localize}}</h1>
+    <h1>{{event.title | localize}}</h1>
     <table class="mat-elevation-z1">
       <tbody>
         <tr class="element-row">
@@ -9,19 +9,19 @@
             <div *ngIf="showCalendar(event); else noCalendar">
               <div *ngIf="location$ | async as location">
                 <div *ngIf="location.weather; else noWeather">
-                  {{event?.period | period}}
+                  {{event.period | period}}
                   <a href="{{location.weather}}" target="_blank" rel="noopener">
                     {{"Weather" | localize}}&#9728;
                   </a>
                 </div>
                 <ng-template #noWeather>
-                  {{event?.period | period}}
+                  {{event.period | period}}
                 </ng-template>
               </div>
             </div>
             <ng-template #noCalendar>
               <div *ngIf="location$ | async as location">
-                {{event?.period | period}}
+                {{event.period | period}}
               </div>
             </ng-template>
             <span *ngIf="canceled" class="canceled">CANCELED</span>
@@ -58,7 +58,7 @@
         </tr>
         
         <tr class="element-row" *ngIf="totalPlayers && !canceled">
-          <td>{{'Partícipant' | localize}}</td>
+          <td>{{'Participant' | localize}}</td>
           <td>{{totalPlayers}}</td>
         </tr>
     
@@ -72,7 +72,18 @@
             </ng-template>
           </td>
         </tr>
-    
+
+        <tr class="element-row" *ngIf="pdga2nd.length && !canceled">
+          <td>PDGA#2</td>
+          <td class="info-container">
+            <ng-template ngFor let-info [ngForOf]="pdga2nd">
+              <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
+                {{info.title | localize}}
+              </a>
+            </ng-template>
+          </td>
+        </tr>
+        
         <tr class="element-row" *ngIf="jpdgaInfo.length && !canceled">
           <td>JPDGA</td>
           <td class="info-container">
@@ -91,10 +102,9 @@
             </a>
           </td>
           <td>
-              {{roundUnderThousand(event.budget.totalprize) | currency:'JPY':'symbol':'1.0-0'}}
-              ({{event.budget.prizeratio * 100 | number:'1.0-0'}}%,
-              {{event.budget.paidratio * 100 | number:'1.0-0'}}%)
-              {{getStars(event)}}
+            {{'Pro purse' | localize}}: {{roundUnderThousand(event.budget.totalprize) | currency:'JPY':'symbol':'1.0-0'}}<br>
+              {{'Paid out % of Fee' | localize}}: {{(event.budget.prizeratio ?? 0) * 100 | number:'1.0-0'}}%,
+              {{'Paid out % of Players' | localize}}: {{(event.budget.paidratio ?? 0) * 100 | number:'1.0-0'}}%
           </td>
         </tr>
     
@@ -127,11 +137,8 @@
 
   <div *ngIf="photoInfo.length">
     <h2>{{'Photos' | localize}}</h2>
-    <li *ngFor="let photo of photoInfo;">
-      <a href="{{photo.url}}">
-        {{photo.title}}
-      </a>
-    </li>
+    <app-photo-list [list]="photoInfo">
+    </app-photo-list>
   </div>
 
   <div *ngIf="event$ | async as event">

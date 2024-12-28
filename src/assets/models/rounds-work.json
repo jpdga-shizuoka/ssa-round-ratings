@@ -1,5 +1,583 @@
 [
   {
+    "id": "the38thkyushuopen.rd2",
+    "event": "the38thkyushuopen",
+    "round": "Rd2",
+    "hla": 95,
+    "holes": 27,
+    "ratings": {
+      "player1": {
+        "score": 77,
+        "rating": 1006
+      },
+      "player2": {
+        "score": 105,
+        "rating": 825
+      }
+    },
+    "eventTitle": "The 38th Kyushu Open",
+    "locationTitle": "Umino-Nakamichi Seaside Park",
+    "date": "2024-11-30"
+  },
+  {
+    "id": "the38thkyushuopen.rd1",
+    "event": "the38thkyushuopen",
+    "round": "Rd1",
+    "hla": 95,
+    "holes": 27,
+    "ratings": {
+      "player1": {
+        "score": 82,
+        "rating": 995
+      },
+      "player2": {
+        "score": 106,
+        "rating": 849
+      }
+    },
+    "eventTitle": "The 38th Kyushu Open",
+    "locationTitle": "Umino-Nakamichi Seaside Park",
+    "date": "2024-11-30"
+  },
+  {
+    "id": "the3rdmaikoclassic.rd1rd2rd3",
+    "event": "the3rdmaikoclassic",
+    "round": "Rd1,2,3",
+    "hla": 135,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 50,
+        "rating": 1058
+      },
+      "player2": {
+        "score": 67,
+        "rating": 913
+      }
+    },
+    "eventTitle": "The 3rd Maiko Classic",
+    "locationTitle": "Maiko Disc Golf Park",
+    "date": "2024-10-26"
+  },
+  {
+    "id": "the24thtohokuopen.rd1rd2rd3",
+    "event": "the24thtohokuopen",
+    "round": "Rd1,2,3",
+    "hla": 84,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 52,
+        "rating": 1014
+      },
+      "player2": {
+        "score": 68,
+        "rating": 866
+      }
+    },
+    "eventTitle": "The 24th Tohoku Open",
+    "locationTitle": "Mizubayashi Sport Park",
+    "date": "2024-10-13"
+  },
+  {
+    "id": "the27thkansaiopenama.rd3",
+    "event": "the27thkansaiopenama",
+    "round": "Rd1,2,3",
+    "hla": 106,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 48,
+        "rating": 974
+      },
+      "player2": {
+        "score": 58,
+        "rating": 852
+      }
+    },
+    "eventTitle": "The 27th Kansai Open (Ama)",
+    "locationTitle": "Kyoto Tamba Park",
+    "date": "2024-11-16"
+  },
+  {
+    "id": "the27thkansaiopenama.rd2",
+    "event": "the27thkansaiopenama",
+    "round": "Rd1,2,3",
+    "hla": 106,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 48,
+        "rating": 975
+      },
+      "player2": {
+        "score": 57,
+        "rating": 866
+      }
+    },
+    "eventTitle": "The 27th Kansai Open (Ama)",
+    "locationTitle": "Kyoto Tamba Park",
+    "date": "2024-11-16"
+  },
+  {
+    "id": "the27thkansaiopenama.rd1",
+    "event": "the27thkansaiopenama",
+    "round": "Rd1,2,3",
+    "hla": 106,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 46,
+        "rating": 1002
+      },
+      "player2": {
+        "score": 60,
+        "rating": 833
+      }
+    },
+    "eventTitle": "The 27th Kansai Open (Ama)",
+    "locationTitle": "Kyoto Tamba Park",
+    "date": "2024-11-16"
+  },
+  {
+    "id": "the27thkansaiopen.rd1rd2rd3",
+    "event": "the27thkansaiopen",
+    "round": "Rd1,2,3",
+    "hla": 106,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 48,
+        "rating": 1068
+      },
+      "player2": {
+        "score": 67,
+        "rating": 900
+      }
+    },
+    "eventTitle": "The 27th Kansai Open",
+    "locationTitle": "Fumin-no-Mori Hiyoshi",
+    "date": "2024-10-05"
+  },
+  {
+    "id": "the1stfukuokauminakaopen.rd1rd2rd3",
+    "event": "the1stfukuokauminakaopen",
+    "round": "Rd1,2,3",
+    "hla": 97,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 50,
+        "rating": 1023
+      },
+      "player2": {
+        "score": 69,
+        "rating": 841
+      }
+    },
+    "eventTitle": "The 1st Fukuoka Uminaka Open",
+    "locationTitle": "Umino-Nakamichi Seaside Park",
+    "date": "2024-08-17"
+  },
+  {
+    "id": "the19thmichinokuopen.rd1rd2",
+    "event": "the19thmichinokuopen",
+    "round": "Rd1,2",
+    "hla": 101,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 51,
+        "rating": 1057
+      },
+      "player2": {
+        "score": 82,
+        "rating": 799
+      }
+    },
+    "eventTitle": "The 19th Michinoku Open",
+    "locationTitle": "Kitakami Sport Park",
+    "date": "2024-08-11"
+  },
+  {
+    "id": "the26thnipponopen.rd1rd2rd3",
+    "event": "the26thnipponopen",
+    "round": "Rd1,2,3",
+    "hla": 122,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 55,
+        "rating": 1039
+      },
+      "player2": {
+        "score": 77,
+        "rating": 866
+      }
+    },
+    "eventTitle": "The 26th Nippon Open",
+    "locationTitle": "Kibougaoka Cultural Park",
+    "date": "2024-07-20"
+  },
+  {
+    "id": "the3rdjapanseriesdiscgolfchampionships.rd1rd2",
+    "event": "the3rdjapanseriesdiscgolfchampionships",
+    "round": "Rd1,2",
+    "hla": 140,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 57,
+        "rating": 1069
+      },
+      "player2": {
+        "score": 89,
+        "rating": 879
+      }
+    },
+    "eventTitle": "The 3rd Japan Series Disc Golf Championships",
+    "locationTitle": "Kiyohara Kohgyo Danchi",
+    "date": "2024-07-13"
+  },
+  {
+    "id": "the3rdjapanseriesdiscgolfchampionships.rd3",
+    "event": "the3rdjapanseriesdiscgolfchampionships",
+    "round": "Rd3",
+    "hla": 140,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 70,
+        "rating": 1015
+      },
+      "player2": {
+        "score": 95,
+        "rating": 890
+      }
+    },
+    "eventTitle": "The 3rd Japan Series Disc Golf Championships",
+    "locationTitle": "Kiyohara Kohgyo Danchi",
+    "date": "2024-07-13"
+  },
+  {
+    "id": "the3rdjapanseriesdiscgolfchampionships.rd1rd2front",
+    "event": "the3rdjapanseriesdiscgolfchampionships",
+    "round": "Rd1,2 (Front Tee)",
+    "hla": 117,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 63,
+        "rating": 1001
+      },
+      "player2": {
+        "score": 81,
+        "rating": 872
+      }
+    },
+    "eventTitle": "The 3rd Japan Series Disc Golf Championships",
+    "locationTitle": "Kiyohara Kohgyo Danchi",
+    "date": "2024-07-13"
+  },
+  {
+    "id": "the3rdjapanseriesdiscgolfchampionships.rd3front",
+    "event": "the3rdjapanseriesdiscgolfchampionships",
+    "round": "Rd3 (Front Tee)",
+    "hla": 117,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 67,
+        "rating": 992
+      },
+      "player2": {
+        "score": 90,
+        "rating": 842
+      }
+    },
+    "eventTitle": "The 3rd Japan Series Disc Golf Championships",
+    "locationTitle": "Kiyohara Kohgyo Danchi",
+    "date": "2024-07-13"
+  },
+  {
+    "id": "the13thhokkaidoopen.rd1rd2rd3",
+    "event": "the13thhokkaidoopen",
+    "round": "Rd1,2,3",
+    "hla": 130,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 53,
+        "rating": 1034
+      },
+      "player2": {
+        "score": 78,
+        "rating": 820
+      }
+    },
+    "eventTitle": "The 13th Hokkaido Open",
+    "locationTitle": "Hunka-wan Panolama Park",
+    "date": "2024-06-29"
+  },
+  {
+    "id": "the13thhokkaidoopen.rd1rd2rd3fronttee",
+    "event": "the13thhokkaidoopen",
+    "round": "Rd1,2,3 (Front Tee)",
+    "hla": 114,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 58,
+        "rating": 985
+      },
+      "player2": {
+        "score": 77,
+        "rating": 821
+      }
+    },
+    "eventTitle": "The 13th Hokkaido Open",
+    "locationTitle": "Hunka-wan Panolama Park",
+    "date": "2024-06-29"
+  },
+  {
+    "id": "the19thmastersnationalchampionship.rd1rd2rd3",
+    "event": "the19thmastersnationalchampionship",
+    "round": "Rd1,2,3",
+    "hla": 71,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 46,
+        "rating": 1037
+      },
+      "player2": {
+        "score": 65,
+        "rating": 839
+      }
+    },
+    "eventTitle": "The 19th Masters National Championships",
+    "locationTitle": "Hikari-to-Kaze-no-Oka Park",
+    "date": "2024-06-15"
+  },
+  {
+    "id": "the1stenakyoopen.rd1rd2rd3",
+    "event": "the1stenakyoopen",
+    "round": "Rd1,2,3",
+    "holes": 18,
+    "hla": 106,
+    "ratings": {
+      "player1": {
+        "score": 45,
+        "rating": 1084
+      },
+      "player2": {
+        "score": 78,
+        "rating": 782
+      }
+    },
+    "eventTitle": "The 1st Enakyo Open",
+    "locationTitle": "Ena-Kyo Park Country Club",
+    "date": "2024-05-25"
+  },
+  {
+    "id": "theuminakawge2024.rd1rd2",
+    "event": "theuminakawge2024",
+    "round": "Rd1,2",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 51,
+        "rating": 953
+      },
+      "player2": {
+        "score": 65,
+        "rating": 790
+      }
+    },
+    "eventTitle": "The UMINAKA +WGE 2024",
+    "locationTitle": "Umino-Nakamichi Seaside Park",
+    "date": "2024-05-19"
+  },
+  {
+    "id": "the2ndmichinokuqueenscup.rd1rd2rd3",
+    "event": "the2ndmichinokuqueenscup",
+    "round": "Rd1,2,3",
+    "holes": 18,
+    "hla": 93,
+    "ratings": {
+      "player1": {
+        "score": 45,
+        "rating": 1020
+      },
+      "player2": {
+        "score": 61,
+        "rating": 831
+      }
+    },
+    "eventTitle": "The 2nd Michinoku Queen's Cup",
+    "locationTitle": "Kitakami Sport Park",
+    "date": "2024-05-18"
+  },
+  {
+    "id": "thediscgolfwomensgrobaleventtokyo2024.rd1rd2",
+    "event": "thediscgolfwomensgrobaleventtokyo2024",
+    "round": "Rd1,2",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 44,
+        "rating": 974
+      },
+      "player2": {
+        "score": 55,
+        "rating": 819
+      }
+    },
+    "eventTitle": "The Discgolf Womens grobal event Tokyo 2024",
+    "locationTitle": "Showa Kinen Park",
+    "date": "2024-05-18"
+  },
+  {
+    "id": "the8thfukuiopen.rd1rd2rd3",
+    "event": "the8thfukuiopen",
+    "round": "Rd1,2,3",
+    "holes": 18,
+    "hla": 93,
+    "ratings": {
+      "player1": {
+        "score": 46,
+        "rating": 1067
+      },
+      "player2": {
+        "score": 68,
+        "rating": 861
+      }
+    },
+    "eventTitle": "The 8th Fukui Open",
+    "locationTitle": "Seaside Nature Park",
+    "date": "2024-05-18"
+  },
+  {
+    "id": "the19thkiyosatonomoriopen.rd1rd2rd3",
+    "event": "the19thkiyosatonomoriopen",
+    "round": "Rd1,2,3",
+    "hla": 81,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 46,
+        "rating": 1056
+      },
+      "player2": {
+        "score": 71,
+        "rating": 813
+      }
+    },
+    "eventTitle": "The 19th Kiyosato-no-mori Open",
+    "locationTitle": "Kiyosato-no-mori",
+    "date": "2024-05-11"
+  },
+  {
+    "id": "the36thjapannationalchampionshipama.rd1rd2rd3",
+    "event": "the36thjapannationalchampionshipama",
+    "round": "Rd1,2,3",
+    "hla": 95,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 53,
+        "rating": 1010
+      },
+      "player2": {
+        "score": 73,
+        "rating": 826
+      }
+    },
+    "eventTitle": "The 36th Japan National Championships (Ama)",
+    "locationTitle": "Minamisoma Hose Riding Park",
+    "date": "2024-05-05"
+  },
+  {
+    "id": "the31sttokyoopen.rd1rd2rd3",
+    "event": "the31sttokyoopen",
+    "round": "Rd1,2,3",
+    "holes": 18,
+    "hla": 94,
+    "ratings": {
+      "player1": {
+        "score": 48,
+        "rating": 1058
+      },
+      "player2": {
+        "score": 75,
+        "rating": 811
+      }
+    },
+    "eventTitle": "The 31st Tokyo Open",
+    "locationTitle": "Tatsumi-no-Mori Seaside Park",
+    "date": "2024-04-20"
+  },
+  {
+    "id": "the21stsagaopen.rd1rd2rd3",
+    "event": "the21stsagaopen",
+    "round": "Rd1,2,3",
+    "hla": 92,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 48,
+        "rating": 1062
+      },
+      "player2": {
+        "score": 72,
+        "rating": 846
+      }
+    },
+    "eventTitle": "The 21st Saga Yoshinogari Open",
+    "locationTitle": "Yoshinogari Historical Park",
+    "date": "2024-04-13"
+  },
+  {
+    "id": "the28thkantoopenama.rd1rd2rd3",
+    "event": "the28thkantoopenama",
+    "round": "Rd1,2,3",
+    "hla": 94,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 49,
+        "rating": 1004
+      },
+      "player2": {
+        "score": 71,
+        "rating": 772
+      }
+    },
+    "eventTitle": "The 28th Kanto Open (Ama)",
+    "locationTitle": "Shiromigaoka Sports Park",
+    "date": "2024-04-06"
+  },
+  {
+    "id": "the12thokinawaopen.rd1rd2rd3",
+    "event": "the12thokinawaopen",
+    "round": "Rd1,2,3",
+    "hla": 91,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 48,
+        "rating": 1060
+      },
+      "player2": {
+        "score": 73,
+        "rating": 834
+      }
+    },
+    "eventTitle": "The 12th Okinawa Open",
+    "locationTitle": "Nakijinson Sport Park",
+    "date": "2024-02-10"
+  },
+  {
     "id": "the22ndchubuopen.rd3",
     "event": "the22ndchubuopen",
     "round": "Rd3",
@@ -221,7 +799,7 @@
   },
   {
     "id": "the25thnipponopen.rd1rd2rd3",
-    "event": "the24thnipponopen",
+    "event": "the25thnipponopen",
     "round": "Rd1,2,3",
     "hla": 112,
     "holes": 18,
@@ -235,9 +813,9 @@
         "rating": 887
       }
     },
-    "eventTitle": "The 24th Nippon Open",
+    "eventTitle": "The 25th Nippon Open",
     "locationTitle": "Kibougaoka Cultural Park",
-    "date": "2022-06-11"
+    "date": "2023-07-08"
   },
   {
     "id": "the12thhokkaidoopen.rd1rd2rd3",

@@ -14,7 +14,7 @@ import { EventListDataSource } from './event-list-datasource';
 export class EventListComponent implements OnInit, AfterViewInit {
   @Input() event!: EventInfo;
   @ViewChild(MatTable) table!: MatTable<EventInfo>;
-  dataSource?: EventListDataSource;
+  dataSource!: EventListDataSource;
   displayedColumns = ['date', 'title'];
   private pendingViewInit = false;
 

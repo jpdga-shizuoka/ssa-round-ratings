@@ -3,9 +3,12 @@ import { Location } from '@angular/common';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
+import { SwUpdate, VersionReadyEvent } from '@angular/service-worker';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatSidenav } from '@angular/material/sidenav';
 import { BehaviorSubject } from 'rxjs';
-import { take } from 'rxjs/operators';
+import { take, filter } from 'rxjs/operators';
+import { environment } from '../environments/environment';
 
 import { LocalizeService } from './localize.service';
 import {
@@ -40,12 +43,26 @@ export class AppComponent implements OnInit, OnDestroy, MetaDescription {
   constructor(
     private localize: LocalizeService,
     private location: Location,
+    private swUpdate: SwUpdate,
+    private snackBar: MatSnackBar,
     public ngActivatedRoute: ActivatedRoute,
     public ngTitle: Title,
     public ngMeta: Meta,
     public ngRouter: Router,
     breakpointObserver: BreakpointObserver
   ) {
+    if (swUpdate.isEnabled && environment.production) {
+      this.swUpdate.versionUpdates
+        .pipe(filter((evt): evt is VersionReadyEvent => evt.type === 'VERSION_READY'))
+        .subscribe((evt) => {
+          this.promptUser(evt).then((result) => {
+            if (result) {
+              document.location.reload();
+            }
+          });
+        }
+      )
+    }
     this.isHandset$ = isHandset(breakpointObserver);
   }
 
@@ -71,5 +88,23 @@ export class AppComponent implements OnInit, OnDestroy, MetaDescription {
     // https://medium.com/@rakshitshah/refresh-angular-component-without-navigation-148a87c2de3f
     const currentPath = this.location.path().split('?')[0].replace(/^\//, '');
     await this.ngRouter.navigate(['/reload', currentPath], { skipLocationChange: true });
+  }
+
+  private promptUser(evt: VersionReadyEvent): Promise<boolean> {
+    return new Promise((resolve) => {
+      const snackBarRef = this.snackBar.open(
+        this.localize.transform('A new version is available'),
+        this.localize.transform('Update'), {
+        duration: 30000,
+      });
+
+      snackBarRef.onAction().subscribe(() => {
+        resolve(true);
+      });
+
+      snackBarRef.afterDismissed().subscribe(() => {
+        resolve(false);
+      });
+    });
   }
 }

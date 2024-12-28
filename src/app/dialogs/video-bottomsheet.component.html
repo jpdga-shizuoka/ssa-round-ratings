@@ -1,13 +1,9 @@
 <div class="video-view">
   <div *ngIf="isYoutubeVideo; else facebookVideo">
     <div class="yt-view">
-      <youtube-player #player
+      <youtube-player
         [videoId]="videoId"
-        [width]="width"
-        [height]="height"
-        (ready)="onReady()"
-        (stateChange)="onStateChange($event)">
-      </youtube-player>
+        (stateChange)="onStateChange($event)"/>
     </div>
   </div>
   <ng-template #facebookVideo>
@@ -27,6 +23,6 @@
     <h3>
       {{event | localize}}
     </h3>
-    <p *ngIf="isMobile">{{year}}</p>
+    <p>{{year}}</p>
   <div>
 </div>

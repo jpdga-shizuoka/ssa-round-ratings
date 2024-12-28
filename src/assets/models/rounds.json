@@ -1,5 +1,496 @@
 [
   {
+    "id": "the38thkyushuopen.rd2",
+    "event": "the38thkyushuopen",
+    "round": "Rd2",
+    "hla": 95,
+    "holes": 27,
+    "ratings": {
+      "player1": {
+        "score": 77,
+        "rating": 1006
+      },
+      "player2": {
+        "score": 105,
+        "rating": 825
+      }
+    }
+  },
+  {
+    "id": "the38thkyushuopen.rd1",
+    "event": "the38thkyushuopen",
+    "round": "Rd1",
+    "hla": 95,
+    "holes": 27,
+    "ratings": {
+      "player1": {
+        "score": 82,
+        "rating": 995
+      },
+      "player2": {
+        "score": 106,
+        "rating": 849
+      }
+    }
+  },
+  {
+    "id": "the3rdmaikoclassic.rd1rd2rd3",
+    "event": "the3rdmaikoclassic",
+    "round": "Rd1,2,3",
+    "hla": 135,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 50,
+        "rating": 1058
+      },
+      "player2": {
+        "score": 67,
+        "rating": 913
+      }
+    }
+  },
+  {
+    "id": "the24thtohokuopen.rd1rd2rd3",
+    "event": "the24thtohokuopen",
+    "round": "Rd1,2,3",
+    "hla": 84,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 52,
+        "rating": 1014
+      },
+      "player2": {
+        "score": 68,
+        "rating": 866
+      }
+    }
+  },
+  {
+    "id": "the27thkansaiopenama.rd3",
+    "event": "the27thkansaiopenama",
+    "round": "Rd1,2,3",
+    "hla": 106,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 48,
+        "rating": 974
+      },
+      "player2": {
+        "score": 58,
+        "rating": 852
+      }
+    }
+  },
+  {
+    "id": "the27thkansaiopenama.rd2",
+    "event": "the27thkansaiopenama",
+    "round": "Rd1,2,3",
+    "hla": 106,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 48,
+        "rating": 975
+      },
+      "player2": {
+        "score": 57,
+        "rating": 866
+      }
+    }
+  },
+  {
+    "id": "the27thkansaiopenama.rd1",
+    "event": "the27thkansaiopenama",
+    "round": "Rd1,2,3",
+    "hla": 106,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 46,
+        "rating": 1002
+      },
+      "player2": {
+        "score": 60,
+        "rating": 833
+      }
+    }
+  },
+  {
+    "id": "the27thkansaiopen.rd1rd2rd3",
+    "event": "the27thkansaiopen",
+    "round": "Rd1,2,3",
+    "hla": 106,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 48,
+        "rating": 1068
+      },
+      "player2": {
+        "score": 67,
+        "rating": 900
+      }
+    }
+  },
+  {
+    "id": "the1stfukuokauminakaopen.rd1rd2rd3",
+    "event": "the1stfukuokauminakaopen",
+    "round": "Rd1,2,3",
+    "hla": 97,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 50,
+        "rating": 1023
+      },
+      "player2": {
+        "score": 69,
+        "rating": 841
+      }
+    }
+  },
+  {
+    "id": "the19thmichinokuopen.rd1rd2",
+    "event": "the19thmichinokuopen",
+    "round": "Rd1,2",
+    "hla": 101,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 51,
+        "rating": 1057
+      },
+      "player2": {
+        "score": 82,
+        "rating": 799
+      }
+    }
+  },
+  {
+    "id": "the26thnipponopen.rd1rd2rd3",
+    "event": "the26thnipponopen",
+    "round": "Rd1,2,3",
+    "hla": 122,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 55,
+        "rating": 1039
+      },
+      "player2": {
+        "score": 77,
+        "rating": 866
+      }
+    }
+  },
+  {
+    "id": "the3rdjapanseriesdiscgolfchampionships.rd1rd2",
+    "event": "the3rdjapanseriesdiscgolfchampionships",
+    "round": "Rd1,2",
+    "hla": 140,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 57,
+        "rating": 1069
+      },
+      "player2": {
+        "score": 89,
+        "rating": 879
+      }
+    }
+  },
+  {
+    "id": "the3rdjapanseriesdiscgolfchampionships.rd3",
+    "event": "the3rdjapanseriesdiscgolfchampionships",
+    "round": "Rd3",
+    "hla": 140,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 70,
+        "rating": 1015
+      },
+      "player2": {
+        "score": 95,
+        "rating": 890
+      }
+    }
+  },
+  {
+    "id": "the3rdjapanseriesdiscgolfchampionships.rd1rd2front",
+    "event": "the3rdjapanseriesdiscgolfchampionships",
+    "round": "Rd1,2 (Front Tee)",
+    "hla": 117,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 63,
+        "rating": 1001
+      },
+      "player2": {
+        "score": 81,
+        "rating": 872
+      }
+    }
+  },
+  {
+    "id": "the3rdjapanseriesdiscgolfchampionships.rd3front",
+    "event": "the3rdjapanseriesdiscgolfchampionships",
+    "round": "Rd3 (Front Tee)",
+    "hla": 117,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 67,
+        "rating": 992
+      },
+      "player2": {
+        "score": 90,
+        "rating": 842
+      }
+    }
+  },
+  {
+    "id": "the13thhokkaidoopen.rd1rd2rd3",
+    "event": "the13thhokkaidoopen",
+    "round": "Rd1,2,3",
+    "hla": 130,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 53,
+        "rating": 1034
+      },
+      "player2": {
+        "score": 78,
+        "rating": 820
+      }
+    }
+  },
+  {
+    "id": "the13thhokkaidoopen.rd1rd2rd3fronttee",
+    "event": "the13thhokkaidoopen",
+    "round": "Rd1,2,3 (Front Tee)",
+    "hla": 114,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 58,
+        "rating": 985
+      },
+      "player2": {
+        "score": 77,
+        "rating": 821
+      }
+    }
+  },
+  {
+    "id": "the19thmastersnationalchampionship.rd1rd2rd3",
+    "event": "the19thmastersnationalchampionship",
+    "round": "Rd1,2,3",
+    "hla": 71,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 46,
+        "rating": 1037
+      },
+      "player2": {
+        "score": 65,
+        "rating": 839
+      }
+    }
+  },
+  {
+    "id": "the1stenakyoopen.rd1rd2rd3",
+    "event": "the1stenakyoopen",
+    "round": "Rd1,2,3",
+    "holes": 18,
+    "hla": 106,
+    "ratings": {
+      "player1": {
+        "score": 45,
+        "rating": 1084
+      },
+      "player2": {
+        "score": 78,
+        "rating": 782
+      }
+    }
+  },
+  {
+    "id": "theuminakawge2024.rd1rd2",
+    "event": "theuminakawge2024",
+    "round": "Rd1,2",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 51,
+        "rating": 953
+      },
+      "player2": {
+        "score": 65,
+        "rating": 790
+      }
+    }
+  },
+  {
+    "id": "the2ndmichinokuqueenscup.rd1rd2rd3",
+    "event": "the2ndmichinokuqueenscup",
+    "round": "Rd1,2,3",
+    "holes": 18,
+    "hla": 93,
+    "ratings": {
+      "player1": {
+        "score": 45,
+        "rating": 1020
+      },
+      "player2": {
+        "score": 61,
+        "rating": 831
+      }
+    }
+  },
+  {
+    "id": "thediscgolfwomensgrobaleventtokyo2024.rd1rd2",
+    "event": "thediscgolfwomensgrobaleventtokyo2024",
+    "round": "Rd1,2",
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 44,
+        "rating": 974
+      },
+      "player2": {
+        "score": 55,
+        "rating": 819
+      }
+    }
+  },
+  {
+    "id": "the8thfukuiopen.rd1rd2rd3",
+    "event": "the8thfukuiopen",
+    "round": "Rd1,2,3",
+    "holes": 18,
+    "hla": 93,
+    "ratings": {
+      "player1": {
+        "score": 46,
+        "rating": 1067
+      },
+      "player2": {
+        "score": 68,
+        "rating": 861
+      }
+    }
+  },
+  {
+    "id": "the19thkiyosatonomoriopen.rd1rd2rd3",
+    "event": "the19thkiyosatonomoriopen",
+    "round": "Rd1,2,3",
+    "hla": 81,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 46,
+        "rating": 1056
+      },
+      "player2": {
+        "score": 71,
+        "rating": 813
+      }
+    }
+  },
+  {
+    "id": "the36thjapannationalchampionshipama.rd1rd2rd3",
+    "event": "the36thjapannationalchampionshipama",
+    "round": "Rd1,2,3",
+    "hla": 95,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 53,
+        "rating": 1010
+      },
+      "player2": {
+        "score": 73,
+        "rating": 826
+      }
+    }
+  },
+  {
+    "id": "the31sttokyoopen.rd1rd2rd3",
+    "event": "the31sttokyoopen",
+    "round": "Rd1,2,3",
+    "holes": 18,
+    "hla": 94,
+    "ratings": {
+      "player1": {
+        "score": 48,
+        "rating": 1058
+      },
+      "player2": {
+        "score": 75,
+        "rating": 811
+      }
+    }
+  },
+  {
+    "id": "the21stsagaopen.rd1rd2rd3",
+    "event": "the21stsagaopen",
+    "round": "Rd1,2,3",
+    "hla": 92,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 48,
+        "rating": 1062
+      },
+      "player2": {
+        "score": 72,
+        "rating": 846
+      }
+    }
+  },
+  {
+    "id": "the28thkantoopenama.rd1rd2rd3",
+    "event": "the28thkantoopenama",
+    "round": "Rd1,2,3",
+    "hla": 94,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 49,
+        "rating": 1004
+      },
+      "player2": {
+        "score": 71,
+        "rating": 772
+      }
+    }
+  },
+  {
+    "id": "the12thokinawaopen.rd1rd2rd3",
+    "event": "the12thokinawaopen",
+    "round": "Rd1,2,3",
+    "hla": 91,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 48,
+        "rating": 1060
+      },
+      "player2": {
+        "score": 73,
+        "rating": 834
+      }
+    }
+  },
+  {
     "id": "the22ndchubuopen.rd3",
     "event": "the22ndchubuopen",
     "round": "Rd3",
@@ -188,7 +679,7 @@
   },
   {
     "id": "the25thnipponopen.rd1rd2rd3",
-    "event": "the24thnipponopen",
+    "event": "the25thnipponopen",
     "round": "Rd1,2,3",
     "hla": 112,
     "holes": 18,

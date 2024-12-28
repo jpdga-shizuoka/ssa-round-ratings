@@ -1,15 +1,12 @@
-import { Component, Inject, ViewChild } from '@angular/core';
-import { YouTubePlayer } from '@angular/youtube-player';
+import { Component, Inject } from '@angular/core';
 import { MatBottomSheetRef, MAT_BOTTOM_SHEET_DATA } from '@angular/material/bottom-sheet';
 import { DeviceDetectorService } from 'ngx-device-detector';
 
-import { VideoInfo } from '../models';
+import { MiscInfo } from '../models';
 
 const FACEBOOK = /https:\/\/www\.facebook\.com\/.+\/videos\/(\d+)\//;
 const YOUTUBE = /https:\/\/youtube\.com\/watch\?v=([0-9a-zA-Z_-]+)/;
 const YOUTUBE_SHORT = /https:\/\/youtu\.be\/([0-9a-zA-Z_-]+)/;
-const MAX_VIDEO_WIDTH = 640;
-const VIDEO_SIDE_PADDING = 16;
 
 @Component({
   selector: 'app-video-bottomsheet',
@@ -17,22 +14,15 @@ const VIDEO_SIDE_PADDING = 16;
   styleUrls: ['./video-bottomsheet.component.css']
 })
 export class VideoBottomsheetComponent {
-  @ViewChild('player') player!: YouTubePlayer;
   videoId: string | undefined = undefined;
   videoType: 'YT' | 'FB' | undefined = undefined;
-  width: number;
-  height: number;
   isMobile = false;
 
   constructor(
-    @Inject(MAT_BOTTOM_SHEET_DATA) public video: VideoInfo,
+    @Inject(MAT_BOTTOM_SHEET_DATA) public video: MiscInfo,
     private deviceService: DeviceDetectorService,
     private bottomSheetRef: MatBottomSheetRef<VideoBottomsheetComponent>
   ) {
-    const width = window.innerWidth - VIDEO_SIDE_PADDING * 2;
-    this.width = Math.min(MAX_VIDEO_WIDTH, width);
-    this.height = this.width / 16 * 9;
-
     this.bottomSheetRef.afterDismissed().subscribe(() => {
       this.videoId = undefined;
     });
@@ -62,8 +52,8 @@ export class VideoBottomsheetComponent {
     }
   }
 
-  get year(): number {
-    return this.video.date.getFullYear();
+  get year(): number | string {
+    return this.video.date?.getFullYear() ?? '';
   }
 
   get event(): string {
@@ -71,7 +61,7 @@ export class VideoBottomsheetComponent {
   }
 
   get title(): string {
-    return this.video.subttl;
+    return this.video.subttl ?? '';
   }
 
   get isYoutubeVideo(): boolean {
@@ -85,12 +75,5 @@ export class VideoBottomsheetComponent {
     if (event?.data === 0) {
       this.bottomSheetRef.dismiss();
     }
-  }
-
-  //
-  //  @see https://developers.google.com/youtube/iframe_api_reference#Events
-  //
-  onReady(): void {
-    this.player.playVideo();
   }
 }

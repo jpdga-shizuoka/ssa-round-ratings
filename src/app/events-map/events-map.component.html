@@ -8,12 +8,13 @@
               [width]="width"
               [center]="center"
               [zoom]="zoom"
+              mapId="mapId"
               [options]="mapOptions"
               (tilesloaded)="onTilesloaded()">
-    <map-marker *ngFor="let location of mapSource$ | async"
+    <map-advanced-marker *ngFor="let location of mapSource$ | async"
               [title]="location.title"
               [position]="location.position"
               (mapClick)="onMarkerClick($event)">
-    </map-marker>
+    </map-advanced-marker>
   </google-map>
 </div>

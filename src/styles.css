@@ -6,6 +6,7 @@ body {
   margin: 0;
   background: repeat url("./assets/img/background.png");
   background-size: 30px 30px;
+  background-color: transparent;
 }
 .my-align {
   display: inline-flex;
@@ -20,12 +21,6 @@ body {
   position: fixed;
   top: 0;
   left: calc(50% - 50px);
-}
-app-preface h1 {
-  font-size: 15px;
-}
-app-preface h2 {
-  font-size: 14px;
 }
 .img-container {
   display: flex;
@@ -43,9 +38,6 @@ app-preface h2 {
   margin-top: 0.5rem;
   object-fit: contain;
 }
-app-preface .footer {
-  text-align: right;
-}
 a {
   text-decoration: none;
 }
@@ -55,21 +47,12 @@ a[target="_blank"] {
   background-size: 1.2rem 1.2rem;
   padding-right: 1.3rem;
 }
-.app-libraries a[href^="http"] {
-  display: inline-block;
-  background: url("assets/img/open_in_new-24px.svg") no-repeat right center;
-  background-size: 1rem 1rem;
-  padding-right: 1.1rem;
-}
 a[href^="https://maps.google"],
 a[href^="http://maps.apple"] {
   display: inline-block;
   background: url("assets/img/room-24px.svg") no-repeat right center;
   background-size: 1.2rem 1.2rem;
   padding-right: 1.3rem;
-}
-.mat-drawer-container {
-  background-color: transparent;
 }
 .app-container {
   background-color: #fafafa;

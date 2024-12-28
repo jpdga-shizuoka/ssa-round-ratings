@@ -1,10 +1,18 @@
 本ページは
 [2023 PDGA International Program Guide](https://www.pdga.com/files/2023_int_program_guide_complete-v1.pdf)
-内の第5章の一部を訳しました。
+第5章の邦訳です。
 
-# 第5章 PDGA公式規則と競技マニュアル
+---
 
-省略
+# PDGA公式規則と競技マニュアル(2023年)
+
+2022年1月1日に、ディスクゴルフの公式規則および競技マニュアル(ORDG＆CM)の新版が発効しました。その英語の公式オンライン版はこちらです: [https://www.pdga.com/rules](https://www.pdga.com/rules)。この公式規則は、すべてのPDGA公認ツアー大会で世界的に適用されます。一方、競技マニュアルの各国への適用に関しては、次節を参照して下さい (同競技マニュアルはアメリカとカナダでは完全に適用されます)。
+
+**2023年には、競技マニュアルを中心にいくつかの変更が加えられました。詳細はこちらで確認できます: [2023年公式規則、競技マニュアル、ツアー基準の更新](https://docs.google.com/presentation/d/e/2PACX-1vRQKajZr0Ye-F5OrV6IqhB38CLAZqR4_dsFH_J4EXrgopZ83imYkrmh1MvLdnoB-Hw9EiXG8ktZnCPp/pub?slide=id.g1a366a064e6_1_0)。次節の表を確認して、推奨されているが必須ではない競技マニュアルの章と更新内容を比較し、自国に適用される変更を特定してください。**
+
+**翻訳版に関して**:　英語以外の言語への翻訳に必要な文書と当該プロジェクトへのPDGAの資金援助の詳細については、2021年11月に英語が母国語でないすべての関連国に送付しました。新しい翻訳は、現在10の言語で完了しています。[international-rules](https://www.pdga.com/pdga-documents/international-rules)で確認できます。
+
+**TDへの重要な通知: 開催する大会がCOVID-19に関する自国政府の規制やPDGAの要件に引き続き従っていることを確認して下さい。大会前に「COVID-19での承認されたプレーに関するPDGAの要件とベストプラクティス」を確認してください。**
 
 ## 各国における競技マニュアルの適用:
 

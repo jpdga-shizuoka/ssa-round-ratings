@@ -3,6 +3,47 @@
     <mat-expansion-panel-header>
       {{'Preface' | localize}}
     </mat-expansion-panel-header>
-    <article class="app-preface" [innerHTML]="content$ | async"></article>
+    <article class="app-preface">
+      @if (isGlobal) {
+        <section>
+          The DG Japan is a database for disc golf events in Japan.
+        </section>
+        <h2>For foreign readers</h2>
+        <p>
+          Tap a button [文A] at upper-right corner to change text to English | Japanese.
+          <img class="fit-picture" src="assets/img/english.png" alt="Tap the button to change text to English">
+        </p>
+        <h2>As Web App</h2>
+        <p>
+          This website can also be used as a Progressive Web App (PWA).
+          For instructions on how to install it as a web app,
+          please refer to <a href="https://support.google.com/chrome/answer/9658361" target="_blank" rel="noopener">this link</a>.
+        </p>
+        <p class="footer">
+          <a href="https://jpdga-shizuoka.github.io/home/" target="_blank" rel="noopener">Shizuoka Disc Golf Association</a>
+        </p>
+      } @else {
+        <section>
+          DG Japanは,
+          日本で開催されるディスクゴルフ大会情報を収集した,
+          ディスクゴルフ専用データーベースです.
+        </section>
+        <h2>For foreign readers</h2>
+        <p>
+          Tap a button [文A] at upper-right corner to change text to English.
+          <img class="fit-picture" src="assets/img/english.png" alt="Tap the button to change text to English">
+        </p>
+        <h2>ウェブアプリとして</h2>
+        <p>
+          本ウェブサイトはウェブアプリ(PWA: Progressive Web Apps)としても利用可能です.
+          ウェブアプリとしてインストールする手順は
+          <a href="https://support.google.com/chrome/answer/9658361?hl=ja" target="_blank" rel="noopener">こちら</a>
+          を参照して下さい.
+        </p>
+        <p class="footer">
+          <a href="https://jpdga-shizuoka.github.io/home/" target="_blank" rel="noopener">静岡県ディスクゴルフ協会</a>
+        </p>
+      }
+    </article>
   </mat-expansion-panel>
 </mat-accordion>

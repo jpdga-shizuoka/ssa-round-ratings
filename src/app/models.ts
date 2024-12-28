@@ -1,4 +1,6 @@
 import { Observable } from 'rxjs';
+import { ICONS, MiscInfo } from './app-common';
+export { ICONS, MiscInfo };
 
 export type EventCategory = 'alltime' | 'upcoming' | 'past' | 'local' | 'monthly' | 'video';
 export type EventId = string;
@@ -28,11 +30,13 @@ export interface LocationInfo {
 }
 
 export interface PdgaInfo {
+  tier?: 'A' | 'B' | 'C' | 'XA' | 'XB' | 'XC';
   eventId?: string;
   scoreId?: string;
 }
 
 export interface JpdgaInfo {
+  tier?: 'NT' | 'ABT-A' | 'ABT-B' | 'LT';
   eventId?: string;
   topicId?: string;
   photoId?: string;
@@ -52,6 +56,9 @@ export interface Players {
 
 export interface Layouts {
   official?: string;
+  back?: string;
+  front?: string;
+  ama?: string;
   cbj?: string;
 }
 
@@ -73,6 +80,7 @@ export interface EventInfo {
   location$?: Observable<LocationInfo>;
   status?: string;
   pdga?: PdgaInfo;
+  pdga2nd?: PdgaInfo;
   jpdga?: JpdgaInfo;
   website?: string;     // url of the event
   urls?: UrlInfo[];
@@ -82,13 +90,6 @@ export interface EventInfo {
   layout?: Layouts;
   rounds?: RoundId[];
   budget?: ProBudget;
-}
-
-export interface VideoInfo {
-  title: string;
-  subttl: string;
-  date: Date;
-  url: string;
 }
 
 export interface Schedule {
@@ -142,5 +143,6 @@ export interface Members {
 
 export interface AnnualReport {
   year: number;
+  title: string;
   url: string;
 }

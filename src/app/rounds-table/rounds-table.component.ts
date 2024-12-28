@@ -14,12 +14,6 @@ import { RoundsDataSource } from './rounds-datasource';
 import { LocalizeService } from '../localize.service';
 import { getEventTitle, title2name } from '../libs';
 
-interface ExpandedRow {
-  canceled: boolean;
-  'round-element-row': boolean;
-  'round-expanded-row': boolean;
-}
-
 @Component({
   selector: 'app-rounds-table',
   templateUrl: './rounds-table.component.html',
@@ -38,7 +32,7 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   dataSource!: RoundsDataSource;
   expandedElement?: RoundInfo;
   showDetail = false;
-  pageSizeOptions = [10, 20, 50, 100];
+  pageSizeOptions = [30, 60, 120];
   private ssMarker?: Subscription;
   private ssQuery?: Subscription;
   private detailDisabled = false;
@@ -71,7 +65,7 @@ export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
       });
     }
     this.ssQuery = this.route.queryParams
-      .subscribe(query => this.updateSearch(query.search));
+      .subscribe(query => this.updateSearch(query['search']));
   }
 
   ngAfterViewInit(): void {

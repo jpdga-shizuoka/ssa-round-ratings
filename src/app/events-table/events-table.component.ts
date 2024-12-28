@@ -27,9 +27,10 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   search = '';
+  showDetail = false;
   dataSource!: EventsDataSource;
   expandedElement?: EventInfo;
-  pageSizeOptions = [10, 20, 50, 100];
+  pageSizeOptions = [30, 60, 120];
   private subscription?: Subscription;
 
   constructor(
@@ -49,7 +50,7 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
       throw new Error('[category] is required');
     }
     this.subscription = this.route.queryParams.subscribe(params => {
-      this.updateSearch(params.location);
+      this.updateSearch(params['location']);
     });
   }
 

@@ -43,8 +43,8 @@ import { ChartDataExt, EventId, Entry } from '../ngx-charts.interfaces';
       <svg:defs>
         <svg:clipPath [attr.id]="clipPathId">
           <svg:rect
-            [attr.width]="dims?.width + 10"
-            [attr.height]="dims?.height + 10"
+            [attr.width]="dims.width + 10"
+            [attr.height]="dims.height + 10"
             [attr.transform]="'translate(-5, -5)'"
           />
         </svg:clipPath>
@@ -78,8 +78,8 @@ import { ChartDataExt, EventId, Entry } from '../ngx-charts.interfaces';
           class="bubble-chart-area"
           x="0"
           y="0"
-          [attr.width]="dims?.width"
-          [attr.height]="dims?.height"
+          [attr.width]="dims.width"
+          [attr.height]="dims.height"
           style="fill: rgb(255, 0, 0); opacity: 0; cursor: 'auto';"
           (mouseenter)="deactivateAll()"
         />
@@ -140,13 +140,13 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
   @Input() yAxisLabel: string = '';
   @Input() xAxisTickFormatting: any;
   @Input() yAxisTickFormatting: any;
-  @Input() xAxisTicks?: any[];
-  @Input() yAxisTicks?: any[];
+  @Input() xAxisTicks!: any[];
+  @Input() yAxisTicks!: any[];
   @Input() roundDomains: boolean = false;
   @Input() maxRadius = 10;
   @Input() minRadius = 3;
   @Input() autoScale: boolean = true;
-  @Input() schemeType: ScaleType = ScaleType.Ordinal;
+  @Input() mySchemeType: ScaleType = ScaleType.Ordinal;
   @Input() legendPosition = LegendPosition.Right;
   @Input() tooltipDisabled: boolean = false;
   @Input() xScaleMin: any;
@@ -159,16 +159,16 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
   @Output() activate: EventEmitter<any> = new EventEmitter();
   @Output() deactivate: EventEmitter<any> = new EventEmitter();
 
-  @ContentChild('tooltipTemplate') tooltipTemplate?: TemplateRef<any>;
+  @ContentChild('tooltipTemplate') tooltipTemplate!: TemplateRef<any>;
 
   dims: ViewDimensions = { width: 0, height: 0};
-  colors?: ColorHelper;
+  colors!: ColorHelper;
   scaleType = 'linear';
   margin = [10, 20, 10, 20];
   bubblePadding = [0, 0, 0, 0];
   data?: ChartDataExt[];
 
-  legendOptions?: LegendOptions;
+  legendOptions!: LegendOptions;
   transform?: string;
 
   clipPath?: string;
@@ -182,16 +182,16 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
   xScaleType: ScaleType = ScaleType.Linear;
   yScaleType: ScaleType = ScaleType.Linear;
 
-  yScale?: ScaleLinear<number, number, never>;
-  xScale?: ScaleLinear<number, number, never>;
-  rScale?: ScaleLinear<number, number, never>;
+  yScale!: ScaleLinear<number, number, never>;
+  xScale!: ScaleLinear<number, number, never>;
+  rScale!: ScaleLinear<number, number, never>;
 
   xAxisHeight: number = 0;
   yAxisWidth: number = 0;
 
   activeEntries: Entry[] = [];
 
-  update(): void {
+  override update(): void {
     const results = this.results;
     super.update();
     this.results = results;
@@ -208,7 +208,7 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
       showXLabel: this.showXAxisLabel,
       showYLabel: this.showYAxisLabel,
       showLegend: this.legend,
-      legendType: this.schemeType
+      legendType: this.mySchemeType
     });
 
     this.seriesDomain = this.data?.length ? this.data.map(d => d.name) : this.seriesDomain;
@@ -218,8 +218,8 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
 
     this.transform = `translate(${this.dims.xOffset},${this.margin[0]})`;
 
-    const colorDomain = this.schemeType === ScaleType.Ordinal ? this.seriesDomain : this.rDomain;
-    this.colors = new ColorHelper(this.scheme, this.schemeType, colorDomain, this.customColors);
+    const colorDomain = this.mySchemeType === ScaleType.Ordinal ? this.seriesDomain : this.rDomain;
+    this.colors = new ColorHelper(this.scheme, this.mySchemeType, colorDomain, this.customColors);
 
     this.minRadius = Math.max(this.minRadius, 1);
     this.maxRadius = Math.max(this.maxRadius, 1);
@@ -316,14 +316,14 @@ export class BubbleChartInteractiveComponent extends BaseChartComponent {
   }
 
   getLegendOptions(): LegendOptions {
-    return this.schemeType === ScaleType.Ordinal ? {
-        scaleType: this.schemeType,
+    return this.mySchemeType === ScaleType.Ordinal ? {
+        scaleType: this.mySchemeType,
         colors: this.colors,
         domain: this.seriesDomain ?? [],
         position: this.legendPosition,
         title: this.legendTitle
       } : {
-        scaleType: this.schemeType,
+        scaleType: this.mySchemeType,
         colors: this.colors?.scale,
         domain: this.rDomain ?? [],
         position: this.legendPosition,

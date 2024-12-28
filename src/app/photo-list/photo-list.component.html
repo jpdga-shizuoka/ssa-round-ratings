@@ -1,0 +1,13 @@
+<div class="mat-elevation-z1">
+    <table class="full-width-table" aria-label="Elements">
+      <tbody>
+        <tr *ngFor="let item of list" class="element-row">
+          <td>
+            <a href="{{item.url}}" target="_blank" rel="noopener">
+                {{item.title}}
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>

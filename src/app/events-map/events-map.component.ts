@@ -5,10 +5,11 @@ import { MatDialog } from '@angular/material/dialog';
 
 import { GeoMarker } from '../map-common';
 import { EventCategory, LocationSearch, EventGo } from '../models';
-import { MarkerDialogComponent } from '../dialogs/marker-dialog.component';
+import { MarkerDialogComponent, MarkerDialogData } from '../dialogs/marker-dialog.component';
 import { environment } from '../../environments/environment';
 import { RemoteService, EventInfo, LocationInfo } from '../remote.service';
 import { GoogleMapsApiService } from '../googlemapsapi.service';
+import { compareByDate } from '../libs';
 
 @Component({
   selector: 'app-events-map',
@@ -24,6 +25,7 @@ export class EventsMapComponent implements OnInit, OnDestroy {
   loading = true;
   zoom = environment.googlemaps.zoom;
   center = environment.googlemaps.center;
+  mapId = '47ea6e4a3f020c5';
   mapOptions = {
     minZoom: 4,
     disableDefaultUI: true
@@ -81,22 +83,32 @@ export class EventsMapComponent implements OnInit, OnDestroy {
         events.push({
           id: m.eventId,
           location: m.location,
-          title: m.title
+          title: m.title,
+          period: m.period
         });
       }
     }
+    events.sort((a, b) => {
+      if (!a.period || !b.period) {
+        return 0;
+      }
+      const dateA = new Date(a.period.from);
+      const dateB = new Date(b.period.from);
+      return compareByDate(dateA, dateB);
+    });
     this.subscription = this.openDialog(this.category, marker, events);
   }
 
   private openDialog(cat: EventCategory, marker: GeoMarker, events: EventInfo[]) {
+    const makerInfo: MarkerDialogData = {
+      category: cat,
+      position: marker.position,
+      location: marker.location,
+      events
+    };
     return this.dialog.open(MarkerDialogComponent, {
       width: '400px',
-      data: {
-        category: cat,
-        position: marker.position,
-        location: marker.location,
-        events
-      }
+      data: makerInfo
     }).afterClosed().subscribe(event => {
       if (!event) {
         return;
@@ -146,7 +158,8 @@ function makeMarker(event: EventInfo, location: LocationInfo): GeoMarker {
     },
     eventId: event.id,
     location: location.id,
-    title: event.title ?? ''
+    title: event.title ?? '',
+    period: event.period
   };
 }
 

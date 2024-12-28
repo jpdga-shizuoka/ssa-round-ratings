@@ -55,7 +55,10 @@ function toDate(date: Date, format: DateFormat): string {
   name: 'period'
 })
 export class PeriodPipe implements PipeTransform {
-  transform(value: Period | string, format = 'long' as DateFormat): string {
+  transform(value?: Period | string, format = 'long' as DateFormat): string {
+    if (!value) {
+      return '';
+    }
     if (isDate(value)) {
       const date = new Date(value as string);
       return toDate(date, format);

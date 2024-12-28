@@ -30,7 +30,7 @@ export class EventsDataSource extends MatTableDataSource<EventInfo> {
    * the returned stream emits new items.
    * @returns A stream of the items to be rendered.
    */
-  connect(): BehaviorSubject<EventInfo[]> {
+  override connect(): BehaviorSubject<EventInfo[]> {
     this.loading = true;
     this.subscription = this.remote.getEvents(this.category)
       .pipe(
@@ -50,7 +50,7 @@ export class EventsDataSource extends MatTableDataSource<EventInfo> {
    *  Called when the table is being destroyed. Use this function, to clean up
    * any open connections or free any held resources that were set up during connect.
    */
-  disconnect(): void {
+  override disconnect(): void {
     this.subscription?.unsubscribe();
   }
 

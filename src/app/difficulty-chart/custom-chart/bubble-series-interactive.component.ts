@@ -72,7 +72,7 @@ export class BubbleSeriesInteractiveComponent implements OnChanges {
   @Input() xAxisLabel?: string;
   @Input() yAxisLabel?: string;
   @Input() tooltipDisabled: boolean = false;
-  @Input() tooltipTemplate?: TemplateRef<any>;
+  @Input() tooltipTemplate!: TemplateRef<any>;
   @Input() eventId?: EventId;
 
   @Output() select = new EventEmitter();
@@ -113,9 +113,9 @@ export class BubbleSeriesInteractiveComponent implements OnChanges {
     `;
   }
 
-  onClickBubble(value: string, circleObj: Circle): void {
+  onClickBubble(value: string | number, circleObj: Circle): void {
     const event = circleObj.data;
-    this.select.emit(event);
+    this.select.emit(event);  
   }
 
   isActive(entry: Entry): boolean {

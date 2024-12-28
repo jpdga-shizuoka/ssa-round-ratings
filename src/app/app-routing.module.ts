@@ -18,11 +18,14 @@ import { NonStandardRulesComponent } from './libraries/non-standard-rules.compon
 import { PlayerpackComponent } from './libraries/playerpack.component';
 import { PointsComponent } from './libraries/points.component';
 import { ReclassificationComponent } from './libraries/reclassification.component';
-import { Sec5Component } from './libraries/sec5.component';
-import { Sec8Component } from './libraries/sec8.component';
+import { OrdgCm23Component } from './libraries/ordgcm23.component';
+import { OrdgCm24Component } from './libraries/ordgcm24.component';
+import { Ts2023Component } from './libraries/ts2023.component';
+import { Ts2024Component } from './libraries/ts2024.component';
 import { TrueAmateurComponent } from './libraries/true-amateur.component';
 import { TourStandardsComponent } from './libraries/tour-standards.component';
 import { RatingsComponent } from './libraries/ratings.component';
+import { ProgramguidComponent } from './libraries/programguid.component';
 
 export type UserData = {
   metaDescription: {
@@ -214,19 +217,41 @@ const routes: Routes = [
     }}
   },
   {
-    path: 'libraries/sec5',
-    component: Sec5Component,
+    path: 'libraries/ordgcm', redirectTo: 'libraries/ordgcm24', pathMatch: 'full'
+  },
+  {
+    path: 'libraries/ordgcm24',
+    component: OrdgCm24Component,
     data: { metaDescription: {
-      title: 'DG Japan - 各国への競技マニュアルの適用',
-      subtitle: '各国への競技マニュアルの適用'
+      title: 'DG Japan - 公式規則と競技マニュアル(2024)',
+      subtitle: '公式規則と競技マニュアル(2024)'
     }}
   },
   {
-    path: 'libraries/sec8',
-    component: Sec8Component,
+    path: 'libraries/ordgcm23',
+    component: OrdgCm23Component,
     data: { metaDescription: {
-      title: 'DG Japan - 国際大会の基準',
-      subtitle: '国際大会の基準'
+      title: 'DG Japan - 公式規則と競技マニュアル(2023)',
+      subtitle: '公式規則と競技マニュアル(2023)'
+    }}
+  },
+  {
+    path: 'libraries/ts', redirectTo: 'libraries/ts2024', pathMatch: 'full'
+  },
+  {
+    path: 'libraries/ts2024',
+    component: Ts2024Component,
+    data: { metaDescription: {
+      title: 'DG Japan - 国際大会の基準(2024)',
+      subtitle: '国際大会の基準(2024)'
+    }}
+  },
+  {
+    path: 'libraries/ts2023',
+    component: Ts2023Component,
+    data: { metaDescription: {
+      title: 'DG Japan - 国際大会の基準(2023)',
+      subtitle: '国際大会の基準(2023)'
     }}
   },
   {
@@ -243,6 +268,14 @@ const routes: Routes = [
     data: { metaDescription: {
       title: 'DG Japan - ツアー基準',
       subtitle: 'ツアー基準'
+    }}
+  },
+  {
+    path: 'libraries/programguid',
+    component: ProgramguidComponent,
+    data: { metaDescription: {
+      title: 'DG Japan - 国際プログラムガイド',
+      subtitle: '国際プログラムガイド'
     }}
   },
 

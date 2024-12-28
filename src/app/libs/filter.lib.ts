@@ -19,7 +19,10 @@ export function category2url(category: EventCategory) {
   return `assets/models/${CATEGORY2FILE[category]}.json`;
 }
 
-export function compareByDate(a: Date, b: Date): number {
+export function compareByDate(a?: Date, b?: Date): number {
+  if (!a || !b) {
+    return 0;
+  }
   if (a < b) {
     return 1;
   }
@@ -37,7 +40,7 @@ export function compareTime(t1: Date, category: EventCategory) {
       return t1.getTime() < t2.getTime();
     }
     case 'upcoming': {
-      t2.setDate(t2.getDate() - 7);
+      t2.setDate(t2.getDate() - 1);
       return t1.getTime() > t2.getTime();
     }
     case 'local': {
@@ -161,7 +164,19 @@ export function getStarsOfPurse(budget: ProBudget): number {
     if (budget.purse >= 1000) {
       stars++;
     }
-    if (budget.prizeratio >= 0.5) {
+    if (budget.prizeratio >= 0.10) {
+      stars++;
+    }
+    if (budget.prizeratio >= 0.25) {
+      stars++;
+    }
+    if (budget.prizeratio >= 0.30) {
+      stars++;
+    }
+    if (budget.prizeratio >= 0.50) {
+      stars++;
+    }
+    if (budget.paidratio >= 0.20) {
       stars++;
     }
     if (budget.paidratio >= 0.25) {

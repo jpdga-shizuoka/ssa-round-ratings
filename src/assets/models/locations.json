@@ -205,7 +205,8 @@
     "prefecture": "Kumamoto",
     "geolocation": [
       32.19908109225617, 130.38387270550996
-    ]
+    ],
+    "weather": "https://weather.yahoo.co.jp/weather/jp/43/8630/43205.html"
   },
   {
     "prefecture": "Kanagawa",
@@ -342,6 +343,13 @@
     "title": "Mitake-cho Nanzan Park"
   },
   {
+    "id": "enakyoparkcountryclub",
+    "title": "Ena-Kyo Park Country Club",
+    "prefecture": "Gifu",
+    "geolocation": [35.483179, 137.421964],
+    "weather": "https://weather.yahoo.co.jp/weather/jp/21/5210/21210.html"
+  },
+  {
     "prefecture": "Saga",
     "geolocation": [
       33.325602,
@@ -368,6 +376,15 @@
     "id": "nakijinsonsportpark",
     "title": "Nakijinson Sport Park",
     "weather": "https://weather.yahoo.co.jp/weather/jp/47/9120/47306.html"
+  },
+  {
+    "prefecture": "Okinawa",
+    "geolocation": [
+      26.337237677801017, 127.77505747139438
+    ],
+    "id": "kadenaairbase",
+    "title": "Kadena Air Base",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/47/9110/47325.html"
   },
   {
     "prefecture": "Kagoshima",
