@@ -94,11 +94,18 @@
     "players": {
       "pro": 0,
       "ama": 0,
-      "misc": 39
+      "misc": 40
     },
     "jpdga": {
       "eventId": "705"
-    }
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Results(Udisc)",
+        "url": "https://udisc.com/events/jandlux-cup-2nd-YTaE6m/leaderboard"
+      }
+    ]
   },
   {
     "id": "theleftovershowdown2024",
