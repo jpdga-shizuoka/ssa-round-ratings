@@ -58,6 +58,36 @@
     ]
   },
   {
+    "id": "the3rdmusashikyuryoshinrinparkcup",
+    "title": "The 3rd Musashi-Kyuryo Shinrin Park Cup",
+    "location": "musashikyuryoshinrinpark",
+    "period": {
+      "from": "2025-02-01",
+      "to": "2025-02-02"
+    },
+    "players": {
+      "pro": 12,
+      "ama": 40,
+      "misc": 3
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "88091",
+      "eventId": "88091"
+    },
+    "jpdga": {
+      "tier": "LT",
+      "eventId": "751"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://www.facebook.com/share/1EjsX3FbeU/"
+      }
+    ]
+  },
+  {
     "id": "the7thhitachseasideparkopen",
     "title": "The 7th Hitachi Seaside Park Open",
     "location": "hitachiseasidepark",

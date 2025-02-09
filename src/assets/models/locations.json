@@ -469,5 +469,14 @@
     ],
     "id": "nasuhighlandgolfclub",
     "title": "Nasu Highland Golf Club"
+  },
+  {
+    "id": "musashikyuryoshinrinpark",
+    "title": "Musashi-Kyuryo Shinrin Park",
+    "prefecture": "Saitama",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/11/4320/11341.html",
+    "geolocation": [
+      36.08488358897518, 139.37159498850386
+    ]
   }
 ]
