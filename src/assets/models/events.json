@@ -705,6 +705,23 @@
       "paidout": 12,
       "rate": 153.51
     },
+    "urls": [
+      {
+        "type": "video",
+        "title": "Final,MPO@Dch-discchannel",
+        "url": "https://youtu.be/yacVwxaB6fk"
+      },
+      {
+        "type": "video",
+        "title": "B9,Semi-Final,MPO@Dch-discchannel",
+        "url": "https://youtu.be/5J8_Y44Sf_8"
+      },
+      {
+        "type": "video",
+        "title": "F9,Semi-Final,MPO@Dch-discchannel",
+        "url": "https://youtu.be/2BQQnU9o7dA"
+      }
+    ],
     "rounds": [
       "the26thnipponopen.rd1rd2rd3"
     ]
