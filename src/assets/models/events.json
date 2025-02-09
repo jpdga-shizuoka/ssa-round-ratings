@@ -1,5 +1,34 @@
 [
   {
+    "id": "the20thmastersnationalchampionship",
+    "title": "The 20th Masters National Championships",
+    "location": "hitachiseasidepark",
+    "period": {
+      "from": "2025-03-01",
+      "to": "2025-03-02"
+    },
+    "players": {
+      "pro": 40,
+      "ama": 40,
+      "misc": 0
+    },
+    "pdga": {
+      "tier": "B",
+      "eventId": "88262"
+    },
+    "jpdga": {
+      "tier": "ABT-B",
+      "eventId": "718"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://discgolf-navi.com/tournament/nt-abt-lt/masters-miho/"
+      }
+    ]
+  },
+  {
     "id": "the1stjapandiscgolfmatchplaychampionships",
     "title": "The 1st Japan Disc Golf Match Play Championships",
     "location": "minamisomahoseridingpark",
