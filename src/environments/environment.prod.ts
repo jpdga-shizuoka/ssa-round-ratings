@@ -23,7 +23,7 @@ export const environment: Environment = {
   production: true,
   projectPathName: '/ssa-round-ratings',
   googlemaps: {
-    apikey: 'AIzaSyAdTyqg908nbRCLCGIhmTu6IF0RLA3mJpg',
+    apikey: 'xxxx',
     center: {
       lat: 36.306148,
       lng: 137.995148
