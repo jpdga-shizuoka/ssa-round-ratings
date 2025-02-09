@@ -1,5 +1,34 @@
 [
   {
+    "id": "the20thmastersnationalchampionship",
+    "title": "The 20th Masters National Championships",
+    "location": "hitachiseasidepark",
+    "period": {
+      "from": "2025-03-01",
+      "to": "2025-03-02"
+    },
+    "players": {
+      "pro": 40,
+      "ama": 40,
+      "misc": 0
+    },
+    "pdga": {
+      "tier": "B",
+      "eventId": "88262"
+    },
+    "jpdga": {
+      "tier": "ABT-B",
+      "eventId": "718"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://discgolf-navi.com/tournament/nt-abt-lt/masters-miho/"
+      }
+    ]
+  },
+  {
     "id": "the1stjapandiscgolfmatchplaychampionships",
     "title": "The 1st Japan Disc Golf Match Play Championships",
     "location": "minamisomahoseridingpark",
@@ -9,16 +38,20 @@
     }
   },
   {
-    "id": "the23rdchubuopen",
-    "title": "The 23rd Chubu Open",
+    "id": "the24thchubuopen",
+    "title": "The 24th Chubu Open",
     "location": "enakyoparkcountryclub",
     "period": {
       "from": "2025-03-15",
       "to": "2025-03-16"
     },
+    "pdga": {
+      "tier": "B",
+      "eventId": "88891"
+    },
     "jpdga": {
       "tier": "ABT-B",
-      "eventId": "706"
+      "eventId": "719"
     },
     "urls": [
       {
@@ -54,6 +87,36 @@
         "type": "website",
         "title": "Facebook",
         "url": "https://www.facebook.com/groups/2366167146940075"
+      }
+    ]
+  },
+  {
+    "id": "the3rdmusashikyuryoshinrinparkcup",
+    "title": "The 3rd Musashi-Kyuryo Shinrin Park Cup",
+    "location": "musashikyuryoshinrinpark",
+    "period": {
+      "from": "2025-02-01",
+      "to": "2025-02-02"
+    },
+    "players": {
+      "pro": 12,
+      "ama": 40,
+      "misc": 3
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "88091",
+      "eventId": "88091"
+    },
+    "jpdga": {
+      "tier": "LT",
+      "eventId": "751"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://www.facebook.com/share/1EjsX3FbeU/"
       }
     ]
   },
