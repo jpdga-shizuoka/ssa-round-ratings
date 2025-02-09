@@ -38,16 +38,20 @@
     }
   },
   {
-    "id": "the23rdchubuopen",
-    "title": "The 23rd Chubu Open",
+    "id": "the24thchubuopen",
+    "title": "The 24th Chubu Open",
     "location": "enakyoparkcountryclub",
     "period": {
       "from": "2025-03-15",
       "to": "2025-03-16"
     },
+    "pdga": {
+      "tier": "B",
+      "eventId": "88891"
+    },
     "jpdga": {
       "tier": "ABT-B",
-      "eventId": "706"
+      "eventId": "719"
     },
     "urls": [
       {
