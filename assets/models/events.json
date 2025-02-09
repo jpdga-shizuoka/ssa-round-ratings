@@ -151,7 +151,34 @@
     "jpdga": {
       "tier": "LT",
       "eventId": "715"
-    }
+    },
+    "urls": [
+      {
+        "type": "video",
+        "title": "Final,Open,@tiikiken",
+        "url": "https://youtu.be/KyASpwGcw1k"
+      },
+      {
+        "type": "video",
+        "title": "Round1,Open,@tiikiken",
+        "url": "https://youtu.be/kt8uauZffRA"
+      },
+      {
+        "type": "video",
+        "title": "Final,Ama Open,@grents01",
+        "url": "https://youtu.be/-Bb76ggWJro"
+      },
+      {
+        "type": "video",
+        "title": "B9, Ama Open,@grents01",
+        "url": "https://youtu.be/tQXcoIv4qFA"
+      },
+      {
+        "type": "video",
+        "title": "F9,Ama Open,@grents01",
+        "url": "https://youtu.be/3o_3AxjnoDI"
+      }
+    ]
   },
   {
     "id": "the2ndjandluxcup",
@@ -173,6 +200,26 @@
       "eventId": "705"
     },
     "urls": [
+      {
+        "type": "video",
+        "title": "Final,Open,@JANDLUX",
+        "url": "https://youtu.be/mDSprkQnHGQ"
+      },
+      {
+        "type": "video",
+        "title": "Final,Ladies,@JANDLUX",
+        "url": "https://youtu.be/RTmPq9ox6DM"
+      },
+      {
+        "type": "video",
+        "title": "B9,Round3,Open,@JANDLUX",
+        "url": "https://youtu.be/VZpSmuieHVg"
+      },
+      {
+        "type": "video",
+        "title": "F9,Round3,Open,@JANDLUX",
+        "url": "https://youtu.be/AfRrRfvHQow"
+      },
       {
         "type": "website",
         "title": "Results(Udisc)",
@@ -705,6 +752,23 @@
       "paidout": 12,
       "rate": 153.51
     },
+    "urls": [
+      {
+        "type": "video",
+        "title": "Final,MPO@Dch-discchannel",
+        "url": "https://youtu.be/yacVwxaB6fk"
+      },
+      {
+        "type": "video",
+        "title": "B9,Semi-Final,MPO@Dch-discchannel",
+        "url": "https://youtu.be/5J8_Y44Sf_8"
+      },
+      {
+        "type": "video",
+        "title": "F9,Semi-Final,MPO@Dch-discchannel",
+        "url": "https://youtu.be/2BQQnU9o7dA"
+      }
+    ],
     "rounds": [
       "the26thnipponopen.rd1rd2rd3"
     ]
@@ -1298,6 +1362,11 @@
       "paidout": 10
     },
     "urls": [
+      {
+        "type": "video",
+        "title": "MJ15@Dch-discchannel",
+        "url": "https://youtu.be/HvoKx1bIzHY"
+      },
       {
         "type": "video",
         "title": "Final, MPO,@Dch-discchannel",
