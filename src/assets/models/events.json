@@ -151,7 +151,34 @@
     "jpdga": {
       "tier": "LT",
       "eventId": "715"
-    }
+    },
+    "urls": [
+      {
+        "type": "video",
+        "title": "Final,Open,@tiikiken",
+        "url": "https://youtu.be/KyASpwGcw1k"
+      },
+      {
+        "type": "video",
+        "title": "Round1,Open,@tiikiken",
+        "url": "https://youtu.be/kt8uauZffRA"
+      },
+      {
+        "type": "video",
+        "title": "Final,Ama Open,@grents01",
+        "url": "https://youtu.be/-Bb76ggWJro"
+      },
+      {
+        "type": "video",
+        "title": "B9, Ama Open,@grents01",
+        "url": "https://youtu.be/tQXcoIv4qFA"
+      },
+      {
+        "type": "video",
+        "title": "F9,Ama Open,@grents01",
+        "url": "https://youtu.be/3o_3AxjnoDI"
+      }
+    ]
   },
   {
     "id": "the2ndjandluxcup",
