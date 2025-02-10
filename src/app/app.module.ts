@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
-import { YouTubePlayerModule } from '@angular/youtube-player';
+import {YouTubePlayer, YOUTUBE_PLAYER_CONFIG} from '@angular/youtube-player';
 import { provideHttpClient, withInterceptorsFromDi, withJsonpSupport } from '@angular/common/http';
 import { GoogleMapsModule } from '@angular/google-maps';
 
@@ -147,12 +147,13 @@ import { ServiceWorkerModule } from '@angular/service-worker';
         PhotoListComponent,
         AnnualReportsComponent
     ],
-    bootstrap: [AppComponent], imports: [BrowserModule,
+    bootstrap: [AppComponent], 
+    imports: [BrowserModule,
         FormsModule,
         BrowserAnimationsModule,
         AppRoutingModule,
         LayoutModule,
-        YouTubePlayerModule,
+        YouTubePlayer,
         GoogleMapsModule,
         MatToolbarModule,
         MatIconModule,
@@ -181,5 +182,16 @@ import { ServiceWorkerModule } from '@angular/service-worker';
             // Register the ServiceWorker as soon as the application is stable
             // or after 30 seconds (whichever comes first).
             registrationStrategy: 'registerWhenStable:30000'
-        })], providers: [provideHttpClient(withInterceptorsFromDi(), withJsonpSupport())] })
+        })],
+        providers: [
+            {
+                provide: YOUTUBE_PLAYER_CONFIG,
+                useValue: {
+                  loadApi: false
+                }
+            },
+            provideHttpClient(withInterceptorsFromDi(), withJsonpSupport())
+        ] 
+        
+    })
 export class AppModule { }
