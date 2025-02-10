@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, HostListener, Inject, OnInit } from '@angular/core';
 import { MatBottomSheetRef, MAT_BOTTOM_SHEET_DATA } from '@angular/material/bottom-sheet';
 import { DeviceDetectorService } from 'ngx-device-detector';
 
@@ -8,15 +8,19 @@ const FACEBOOK = /https:\/\/www\.facebook\.com\/.+\/videos\/(\d+)\//;
 const YOUTUBE = /https:\/\/youtube\.com\/watch\?v=([0-9a-zA-Z_-]+)/;
 const YOUTUBE_SHORT = /https:\/\/youtu\.be\/([0-9a-zA-Z_-]+)/;
 
+const DEFAULT_PLAYER_WIDTH = 640;
+const VIDEO_PADINGS = 16 * 2;
+
 @Component({
   selector: 'app-video-bottomsheet',
   templateUrl: './video-bottomsheet.component.html',
   styleUrls: ['./video-bottomsheet.component.css']
 })
-export class VideoBottomsheetComponent {
+export class VideoBottomsheetComponent implements OnInit {
   videoId: string | undefined = undefined;
   videoType: 'YT' | 'FB' | undefined = undefined;
   isMobile = false;
+  videoWidth = 640;
 
   constructor(
     @Inject(MAT_BOTTOM_SHEET_DATA) public video: MiscInfo,
@@ -68,6 +72,15 @@ export class VideoBottomsheetComponent {
     return this.videoType === 'YT';
   }
 
+  ngOnInit() {
+    this.updateVideoWidth();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.updateVideoWidth();
+  }
+
   //
   // https://developers.google.com/youtube/iframe_api_reference#Playback_status
   //
@@ -75,5 +88,9 @@ export class VideoBottomsheetComponent {
     if (event?.data === 0) {
       this.bottomSheetRef.dismiss();
     }
+  }
+
+  private updateVideoWidth() {
+    this.videoWidth = Math.min(window.innerWidth - VIDEO_PADINGS, DEFAULT_PLAYER_WIDTH);
   }
 }
