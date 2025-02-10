@@ -9,6 +9,8 @@ const YOUTUBE = /https:\/\/youtube\.com\/watch\?v=([0-9a-zA-Z_-]+)/;
 const YOUTUBE_SHORT = /https:\/\/youtu\.be\/([0-9a-zA-Z_-]+)/;
 
 const DEFAULT_PLAYER_WIDTH = 640;
+const DEFAULT_PLAYER_HEIGHT = 390;
+const PLAYER_RATIO = DEFAULT_PLAYER_HEIGHT / DEFAULT_PLAYER_WIDTH;
 const VIDEO_PADINGS = 16 * 2;
 
 @Component({
@@ -20,7 +22,8 @@ export class VideoBottomsheetComponent implements OnInit {
   videoId: string | undefined = undefined;
   videoType: 'YT' | 'FB' | undefined = undefined;
   isMobile = false;
-  videoWidth = 640;
+  videoWidth = DEFAULT_PLAYER_WIDTH;
+  videoHeight = DEFAULT_PLAYER_HEIGHT;
 
   constructor(
     @Inject(MAT_BOTTOM_SHEET_DATA) public video: MiscInfo,
@@ -92,5 +95,6 @@ export class VideoBottomsheetComponent implements OnInit {
 
   private updateVideoWidth() {
     this.videoWidth = Math.min(window.innerWidth - VIDEO_PADINGS, DEFAULT_PLAYER_WIDTH);
+    this.videoHeight = this.videoWidth * PLAYER_RATIO;
   }
 }
