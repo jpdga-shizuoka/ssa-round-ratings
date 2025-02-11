@@ -107,8 +107,14 @@
     },
     "players": {
       "pro": 12,
-      "ama": 40,
+      "ama": 52,
       "misc": 3
+    },
+    "budget": {
+      "entreefee": 5000,
+      "purse": 195,
+      "paidout": 5,
+      "rate": 155.8
     },
     "pdga": {
       "tier": "B",
