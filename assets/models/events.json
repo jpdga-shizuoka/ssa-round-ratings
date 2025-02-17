@@ -76,8 +76,17 @@
       "from": "2025-02-22",
       "to": "2025-02-23"
     },
+    "layout": {
+      "official": "https://drive.google.com/file/d/1qDP2wxKV_QE06sMwEbXTooeDD3C4dTiH/view"
+    },
+    "players": {
+      "pro": 47,
+      "ama": 23,
+      "misc": 2
+    },
     "pdga": {
       "tier": "B",
+      "scoreId": "87628",
       "eventId": "87628"
     },
     "jpdga": {
@@ -85,6 +94,11 @@
       "eventId": "717"
     },
     "urls": [
+      {
+        "type": "video",
+        "title": "コース紹介",
+        "url": "https://youtu.be/w13hUqpVc_Y"
+      },
       {
         "type": "website",
         "title": "Official Site",
