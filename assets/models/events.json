@@ -141,6 +141,11 @@
     },
     "urls": [
       {
+        "type": "video",
+        "title": "コース紹介",
+        "url": "https://youtu.be/R6R8my_xIIs"
+      },
+      {
         "type": "website",
         "title": "Official Site",
         "url": "https://www.facebook.com/share/1EjsX3FbeU/"
