@@ -40,7 +40,18 @@
       "from": "2025-03-29",
       "to": "2025-03-30"
     },
+    "players": {
+      "pro": 38,
+      "ama": 0,
+      "misc": 0
+    },
     "urls": [
+      {
+        "type": "website",
+        "title": "出場者⼀覧",
+        "url": "https://www.jfda.or.jp/web/wp/wp-content/uploads/2025/02/2024AJDGMC_Seeding_20250227.pdf"
+
+      },
       {
         "type": "website",
         "title": "Official Site",
