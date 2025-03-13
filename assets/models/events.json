@@ -67,8 +67,12 @@
       "from": "2025-03-15",
       "to": "2025-03-16"
     },
+    "layout": {
+      "official": "https://membership.jpdga.jp/event/2025/719_map.pdf"
+    },
     "pdga": {
       "tier": "B",
+      "scoreId": "88891",
       "eventId": "88891"
     },
     "jpdga": {
