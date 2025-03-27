@@ -40,12 +40,25 @@
       "from": "2025-03-29",
       "to": "2025-03-30"
     },
+    "layout": {
+      "official": "https://www.jfda.or.jp/web/wp/wp-content/uploads/2025/03/2024AJDGMC_FieldMap_0324f.pdf"
+    },
     "players": {
       "pro": 38,
       "ama": 0,
       "misc": 0
     },
     "urls": [
+      {
+        "type": "website",
+        "title": "組み合わせスケジュール",
+        "url": "https://www.jfda.or.jp/web/wp/wp-content/uploads/2025/03/2024AJDGMC_TimeSchedule-Match_20250324.pdf"
+      },
+      {
+        "type": "website",
+        "title": "試合形式",
+        "url": "https://www.jfda.or.jp/web/wp/wp-content/uploads/2025/03/2024AJDGMC_CompetitionRules_20250310.pdf"
+      },
       {
         "type": "website",
         "title": "出場者⼀覧",
