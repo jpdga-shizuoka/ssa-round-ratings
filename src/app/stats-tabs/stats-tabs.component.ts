@@ -14,21 +14,20 @@ import { AnnualReportsComponent } from '../annual-reports/annual-reports.compone
 const TABS = ['difficulty', 'players', 'memberships', 'reports'];
 
 @Component({
-  selector: 'app-stats-tabs',
-  templateUrl: './stats-tabs.component.html',
-  styleUrls: ['./stats-tabs.component.css'],
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatTabsModule,
-    LocalizePipe,
-    DifficultyChartComponent,
-    TermsComponent,
-    TotalPlayersComponent,
-    MembersChartComponent,
-    AnnualReportsComponent
-  ]
+    selector: 'app-stats-tabs',
+    templateUrl: './stats-tabs.component.html',
+    styleUrls: ['./stats-tabs.component.css'],
+    imports: [
+        CommonModule,
+        RouterModule,
+        MatTabsModule,
+        LocalizePipe,
+        DifficultyChartComponent,
+        TermsComponent,
+        TotalPlayersComponent,
+        MembersChartComponent,
+        AnnualReportsComponent
+    ]
 })
 export class StatsTabsComponent extends RoutingTabsComponent {
   constructor(

@@ -17,17 +17,16 @@ export interface MarkerDialogData {
 }
 
 @Component({
-  selector: 'app-marker-dialog',
-  templateUrl: './marker-dialog.component.html',
-  styleUrls: ['./marker-dialog.component.css'],
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatDialogModule,
-    MatListModule,
-    MatButtonModule,
-    LocalizePipe,
-  ]
+    selector: 'app-marker-dialog',
+    templateUrl: './marker-dialog.component.html',
+    styleUrls: ['./marker-dialog.component.css'],
+    imports: [
+        CommonModule,
+        MatDialogModule,
+        MatListModule,
+        MatButtonModule,
+        LocalizePipe,
+    ]
 })
 export class MarkerDialogComponent {
   location$: Observable<LocationInfo>;

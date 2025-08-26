@@ -15,14 +15,13 @@ interface ChartData {
 }
 
 @Component({
-  selector: 'app-total-players',
-  templateUrl: './total-players.component.html',
-  styleUrls: ['./total-players.component.css'],
-  standalone: true,
-  imports: [
-    CommonModule,
-    NgxChartsModule
-  ]
+    selector: 'app-total-players',
+    templateUrl: './total-players.component.html',
+    styleUrls: ['./total-players.component.css'],
+    imports: [
+        CommonModule,
+        NgxChartsModule
+    ]
 })
 export class TotalPlayersComponent implements OnInit {
   chartSource?: ChartData[];

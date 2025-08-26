@@ -15,9 +15,9 @@ import { ScaleLinear } from 'd3-scale';
 import { Circle, ChartDataExt, ChartDataItem, EventId, Entry } from '../ngx-charts.interfaces';
 
 @Component({
-  // tslint:disable-next-line: component-selector
-  selector: 'g[ngx-charts-bubble-series-interactive]',
-  template: `
+    // tslint:disable-next-line: component-selector
+    selector: 'g[ngx-charts-bubble-series-interactive]',
+    template: `
     <svg:g *ngFor="let circle of circles; trackBy: trackBy">
       <svg:g [attr.transform]="circle.transform">
         <svg:g
@@ -47,23 +47,22 @@ import { Circle, ChartDataExt, ChartDataItem, EventId, Entry } from '../ngx-char
       </svg:g>
     </svg:g>
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  animations: [
-    trigger('animationState', [
-      transition(':enter', [
-        style({
-          opacity: 0,
-          transform: 'scale(0)'
-        }),
-        animate(250, style({ opacity: 1, transform: 'scale(1)' }))
-      ])
-    ])
-  ],
-  standalone: true,
-  imports: [
-    CommonModule,
-    ChartCommonModule
-  ]
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    animations: [
+        trigger('animationState', [
+            transition(':enter', [
+                style({
+                    opacity: 0,
+                    transform: 'scale(0)'
+                }),
+                animate(250, style({ opacity: 1, transform: 'scale(1)' }))
+            ])
+        ])
+    ],
+    imports: [
+        CommonModule,
+        ChartCommonModule
+    ]
 })
 export class BubbleSeriesInteractiveComponent implements OnChanges {
   @Input() data!: ChartDataExt;

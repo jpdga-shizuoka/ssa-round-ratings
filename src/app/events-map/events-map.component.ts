@@ -15,16 +15,15 @@ import { GoogleMapsApiService } from '../googlemapsapi.service';
 import { compareByDate } from '../libs';
 
 @Component({
-  selector: 'app-events-map',
-  templateUrl: './events-map.component.html',
-  styleUrls: ['./events-map.component.css'],
-  standalone: true,
-  imports: [
-    CommonModule,
-    GoogleMapsModule,
-    MatDialogModule,
-    MatProgressSpinnerModule
-  ]
+    selector: 'app-events-map',
+    templateUrl: './events-map.component.html',
+    styleUrls: ['./events-map.component.css'],
+    imports: [
+        CommonModule,
+        GoogleMapsModule,
+        MatDialogModule,
+        MatProgressSpinnerModule
+    ]
 })
 export class EventsMapComponent implements OnInit, OnDestroy {
   @Input() category!: EventCategory;

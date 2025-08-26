@@ -23,12 +23,11 @@ const DIALOG_DESCRIPTION = [
 ];
 
 @Component({
-  templateUrl: 'bottom-sheet-detail-disabled.component.html',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatListModule
-  ]
+    templateUrl: 'bottom-sheet-detail-disabled.component.html',
+    imports: [
+        CommonModule,
+        MatListModule
+    ]
 })
 export class BottomSheetDetailDisabledComponent {
   constructor(

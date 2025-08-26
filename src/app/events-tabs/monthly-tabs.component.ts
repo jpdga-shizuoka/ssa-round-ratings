@@ -17,19 +17,18 @@ const TITLES = ['Monthly', 'Location'];
 const TABS = ['events', 'locations'];
 
 @Component({
-  selector: 'app-monthly-tabs',
-  templateUrl: './monthly-tabs.component.html',
-  styleUrls: ['./events-tabs.component.css'],
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatBottomSheetModule,
-    MatTabsModule,
-    MonthlyTableComponent,
-    EventsMapComponent,
-    LocalizePipe
-  ]
+    selector: 'app-monthly-tabs',
+    templateUrl: './monthly-tabs.component.html',
+    styleUrls: ['./events-tabs.component.css'],
+    imports: [
+        CommonModule,
+        RouterModule,
+        MatBottomSheetModule,
+        MatTabsModule,
+        MonthlyTableComponent,
+        EventsMapComponent,
+        LocalizePipe
+    ]
 })
 export class MonthlyTabsComponent extends EventsTabsComponent {
   private ss?: Subscription;

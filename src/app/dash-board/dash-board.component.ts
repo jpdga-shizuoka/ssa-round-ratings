@@ -19,22 +19,21 @@ const EVENT_COLUMNS = [['date', 'title'], ['date', 'title', 'location']];
 const ROUND_COLUMNS_PAST = [['event', 'hla', 'ssa', 'td'], ['year', 'event', 'round', 'hla', 'ssa', 'td']];
 
 @Component({
-  selector: 'app-dash-board',
-  templateUrl: './dash-board.component.html',
-  styleUrls: ['./dash-board.component.css'],
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatIconModule,
-    MatTabsModule,
-    LocalizePipe,
-    PrefaceComponent,
-    EventsTableComponent,
-    LocalTableComponent,
-    RoundsTableComponent,
-    VideosTableComponent
-  ]
+    selector: 'app-dash-board',
+    templateUrl: './dash-board.component.html',
+    styleUrls: ['./dash-board.component.css'],
+    imports: [
+        CommonModule,
+        RouterModule,
+        MatIconModule,
+        MatTabsModule,
+        LocalizePipe,
+        PrefaceComponent,
+        EventsTableComponent,
+        LocalTableComponent,
+        RoundsTableComponent,
+        VideosTableComponent
+    ]
 })
 export class DashBoardComponent {
   isHandset$: Observable<boolean>;

@@ -30,9 +30,9 @@ import { ChartDataExt, EventId, Entry } from '../ngx-charts.interfaces';
 import { BubbleSeriesInteractiveComponent } from './bubble-series-interactive.component';
 
 @Component({
-  // tslint:disable-next-line: component-selector
-  selector: 'ngx-charts-bubble-chart-interactive',
-  template: `
+    // tslint:disable-next-line: component-selector
+    selector: 'ngx-charts-bubble-chart-interactive',
+    template: `
     <ngx-charts-chart
       [view]="[width, height]"
       [showLegend]="legend"
@@ -112,30 +112,26 @@ import { BubbleSeriesInteractiveComponent } from './bubble-series-interactive.co
       </svg:g>
     </ngx-charts-chart>
   `,
-  styleUrls: ['./base-chart.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  encapsulation: ViewEncapsulation.None,
-  animations: [
-    trigger('animationState', [
-      transition(':leave', [
-        style({
-          opacity: 1
-        }),
-        animate(
-          500,
-          style({
-            opacity: 0
-          })
-        )
-      ])
-    ])
-  ],
-  standalone: true,
-  imports: [
-    CommonModule,
-    ChartCommonModule,
-    BubbleSeriesInteractiveComponent
-  ]
+    styleUrls: ['./base-chart.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    encapsulation: ViewEncapsulation.None,
+    animations: [
+        trigger('animationState', [
+            transition(':leave', [
+                style({
+                    opacity: 1
+                }),
+                animate(500, style({
+                    opacity: 0
+                }))
+            ])
+        ])
+    ],
+    imports: [
+        CommonModule,
+        ChartCommonModule,
+        BubbleSeriesInteractiveComponent
+    ]
 })
 export class BubbleChartInteractiveComponent extends BaseChartComponent {
   @Input() showGridLines: boolean = true;

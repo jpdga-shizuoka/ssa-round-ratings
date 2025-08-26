@@ -24,20 +24,19 @@ import {
 } from './ng-utilities';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatListModule,
-    MatIconModule,
-    MatDividerModule,
-    MatSnackBarModule,
-  ]
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css'],
+    imports: [
+        CommonModule,
+        RouterModule,
+        MatSidenavModule,
+        MatToolbarModule,
+        MatListModule,
+        MatIconModule,
+        MatDividerModule,
+        MatSnackBarModule,
+    ]
 })
 export class AppComponent implements OnInit, OnDestroy, MetaDescription {
   @ViewChild('drawer') drawer!: MatSidenav;

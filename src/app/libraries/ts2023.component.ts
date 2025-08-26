@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-ts2023',
-  templateUrl: './ts2023.component.html',
-  styleUrls: ['./libraries.component.css']
+    selector: 'app-ts2023',
+    templateUrl: './ts2023.component.html',
+    styleUrls: ['./libraries.component.css'],
+    standalone: false
 })
 export class Ts2023Component implements OnInit {
 

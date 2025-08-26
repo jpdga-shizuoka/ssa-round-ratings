@@ -5,15 +5,14 @@ import { LocalizeService } from '../localize.service';
 import { LocalizePipe } from '../localize.pipe';
 
 @Component({
-  selector: 'app-preface',
-  templateUrl: './preface.component.html',
-  styleUrls: ['./preface.component.css'],
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatExpansionModule,
-    LocalizePipe
-  ]
+    selector: 'app-preface',
+    templateUrl: './preface.component.html',
+    styleUrls: ['./preface.component.css'],
+    imports: [
+        CommonModule,
+        MatExpansionModule,
+        LocalizePipe
+    ]
 })
 export class PrefaceComponent {
 

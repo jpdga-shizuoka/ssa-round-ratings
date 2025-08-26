@@ -28,24 +28,23 @@ import { LocalizePipe } from '../localize.pipe';
 const DISPLAYED_COLUMNS = [['title', 'subttl'], ['year', 'title', 'subttl']];
 
 @Component({
-  selector: 'app-videos-table',
-  templateUrl: './videos-table.component.html',
-  styleUrls: ['./videos-table.component.css'],
-  standalone: true,
-  imports: [
-    CommonModule,
-    FormsModule,
-    RouterModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatIconModule,
-    MatButtonModule,
-    MatBottomSheetModule,
-    LocalizePipe
-  ]
+    selector: 'app-videos-table',
+    templateUrl: './videos-table.component.html',
+    styleUrls: ['./videos-table.component.css'],
+    imports: [
+        CommonModule,
+        FormsModule,
+        RouterModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatSortModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatIconModule,
+        MatButtonModule,
+        MatBottomSheetModule,
+        LocalizePipe
+    ]
 })
 export class VideosTableComponent implements OnInit, AfterViewInit {
   @Input() pageSizeOptions = [30, 60, 120];

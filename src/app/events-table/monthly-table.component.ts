@@ -19,26 +19,25 @@ import { SchedulePipe } from '../schedule.pipe';
 import { EventDetailComponent } from '../event-detail/event-detail.component';
 
 @Component({
-  selector: 'app-monthly-table',
-  templateUrl: './monthly-table.component.html',
-  styleUrls: ['./events-table.component.css'],
-  animations: [detailExpand],
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatIconModule,
-    MatButtonModule,
-    LocalizePipe,
-    LocationPipe,
-    SchedulePipe,
-    EventDetailComponent
-  ]
+    selector: 'app-monthly-table',
+    templateUrl: './monthly-table.component.html',
+    styleUrls: ['./events-table.component.css'],
+    animations: [detailExpand],
+    imports: [
+        CommonModule,
+        RouterModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatSortModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatIconModule,
+        MatButtonModule,
+        LocalizePipe,
+        LocationPipe,
+        SchedulePipe,
+        EventDetailComponent
+    ]
 })
 export class MonthlyTableComponent extends EventsTableComponent {
   constructor(

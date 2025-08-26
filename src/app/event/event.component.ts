@@ -68,22 +68,21 @@ function layout2layouts(layout?: Layouts) {
 }
 
 @Component({
-  selector: 'app-event',
-  templateUrl: './event.component.html',
-  styleUrls: ['./event.component.css'],
-  standalone: true,
-  imports: [
-    CommonModule,
-    LocalizePipe,
-    PeriodPipe,
-    GeolinkPipe,
-    IcalenderComponent,
-    RoundListComponent,
-    VideoListComponent,
-    PhotoListComponent,
-    EventListComponent,
-    DifficultyChartComponent
-  ]
+    selector: 'app-event',
+    templateUrl: './event.component.html',
+    styleUrls: ['./event.component.css'],
+    imports: [
+        CommonModule,
+        LocalizePipe,
+        PeriodPipe,
+        GeolinkPipe,
+        IcalenderComponent,
+        RoundListComponent,
+        VideoListComponent,
+        PhotoListComponent,
+        EventListComponent,
+        DifficultyChartComponent
+    ]
 })
 export class EventComponent implements OnInit, OnDestroy {
   eventId?: EventId;

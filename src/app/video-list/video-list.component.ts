@@ -7,14 +7,13 @@ import { MiscInfo } from '../models';
 import { VideoBottomsheetComponent } from '../dialogs/video-bottomsheet.component';
 
 @Component({
-  selector: 'app-video-list',
-  templateUrl: './video-list.component.html',
-  styleUrls: ['./video-list.component.css'],
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatBottomSheetModule
-  ]
+    selector: 'app-video-list',
+    templateUrl: './video-list.component.html',
+    styleUrls: ['./video-list.component.css'],
+    imports: [
+        CommonModule,
+        MatBottomSheetModule
+    ]
 })
 export class VideoListComponent implements OnInit {
   @Input() list!: MiscInfo[];

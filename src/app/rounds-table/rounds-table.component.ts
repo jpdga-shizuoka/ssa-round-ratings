@@ -23,26 +23,25 @@ import { LocalizePipe } from '../localize.pipe';
 import { EventPipe } from '../event.pipe';
 
 @Component({
-  selector: 'app-rounds-table',
-  templateUrl: './rounds-table.component.html',
-  styleUrls: ['./rounds-table.component.css'],
-  animations: [detailExpand],
-  standalone: true,
-  imports: [
-    CommonModule,
-    FormsModule,
-    RouterModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatIconModule,
-    MatButtonModule,
-    MatBottomSheetModule,
-    LocalizePipe,
-    EventPipe
-  ]
+    selector: 'app-rounds-table',
+    templateUrl: './rounds-table.component.html',
+    styleUrls: ['./rounds-table.component.css'],
+    animations: [detailExpand],
+    imports: [
+        CommonModule,
+        FormsModule,
+        RouterModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatSortModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatIconModule,
+        MatButtonModule,
+        MatBottomSheetModule,
+        LocalizePipe,
+        EventPipe
+    ]
 })
 export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() displayedColumns$!: Observable<string[]>;

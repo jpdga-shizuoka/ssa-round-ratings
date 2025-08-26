@@ -19,20 +19,19 @@ const ROUND_COLUMNS = [['event', 'hla', 'ssa', 'td'], ['year', 'event', 'round',
 const TABS = ['events', 'rounds', 'videos', 'locations'];
 
 @Component({
-  selector: 'app-rounds-tabs',
-  templateUrl: './rounds-tabs.component.html',
-  styleUrls: ['./rounds-tabs.component.css'],
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatTabsModule,
-    EventsTableComponent,
-    RoundsTableComponent,
-    VideosTableComponent,
-    EventsMapComponent,
-    LocalizePipe
-  ]
+    selector: 'app-rounds-tabs',
+    templateUrl: './rounds-tabs.component.html',
+    styleUrls: ['./rounds-tabs.component.css'],
+    imports: [
+        CommonModule,
+        RouterModule,
+        MatTabsModule,
+        EventsTableComponent,
+        RoundsTableComponent,
+        VideosTableComponent,
+        EventsMapComponent,
+        LocalizePipe
+    ]
 })
 export class RoundsTabsComponent extends RoutingTabsComponent {
   isHandset$: Observable<boolean>;

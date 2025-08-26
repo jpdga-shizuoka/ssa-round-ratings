@@ -12,15 +12,14 @@ import { ChartDataExt, BubbleData, EventId } from './ngx-charts.interfaces';
 import { BubbleChartInteractiveComponent } from './custom-chart/bubble-chart-interactive.component';
 
 @Component({
-  selector: 'app-difficulty-chart',
-  templateUrl: './difficulty-chart.component.html',
-  styleUrls: ['./difficulty-chart.component.css'],
-  standalone: true,
-  imports: [
-    CommonModule,
-    NgxChartsModule,
-    BubbleChartInteractiveComponent
-  ]
+    selector: 'app-difficulty-chart',
+    templateUrl: './difficulty-chart.component.html',
+    styleUrls: ['./difficulty-chart.component.css'],
+    imports: [
+        CommonModule,
+        NgxChartsModule,
+        BubbleChartInteractiveComponent
+    ]
 })
 export class DifficultyChartComponent implements OnInit {
   @Input() eventId?: EventId;

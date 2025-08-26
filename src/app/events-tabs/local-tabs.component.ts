@@ -14,18 +14,17 @@ const TITLES = ['Event', 'Map'];
 const TABS = ['events', 'map'];
 
 @Component({
-  selector: 'app-local-tabs',
-  templateUrl: './local-tabs.component.html',
-  styleUrls: ['./events-tabs.component.css'],
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatTabsModule,
-    LocalTableComponent,
-    EventsMapComponent,
-    LocalizePipe
-  ]
+    selector: 'app-local-tabs',
+    templateUrl: './local-tabs.component.html',
+    styleUrls: ['./events-tabs.component.css'],
+    imports: [
+        CommonModule,
+        RouterModule,
+        MatTabsModule,
+        LocalTableComponent,
+        EventsMapComponent,
+        LocalizePipe
+    ]
 })
 export class LocalTabsComponent extends EventsTabsComponent {
   constructor(

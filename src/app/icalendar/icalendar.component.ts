@@ -8,14 +8,13 @@ import { Calendar } from './icalendar.class';
 import { LocalizePipe } from '../localize.pipe';
 
 @Component({
-  selector: 'app-icalendar',
-  templateUrl: './icalendar.component.html',
-  styleUrls: ['./icalendar.component.css'],
-  standalone: true,
-  imports: [
-    CommonModule,
-    LocalizePipe
-  ]
+    selector: 'app-icalendar',
+    templateUrl: './icalendar.component.html',
+    styleUrls: ['./icalendar.component.css'],
+    imports: [
+        CommonModule,
+        LocalizePipe
+    ]
 })
 export class IcalenderComponent implements OnInit {
   @Input() event!: EventInfo;

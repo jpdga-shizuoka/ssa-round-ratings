@@ -8,17 +8,16 @@ import { RemoteService } from '../remote.service';
 import { LocalizePipe } from '../localize.pipe';
 
 @Component({
-  selector: 'app-annual-reports',
-  templateUrl: './annual-reports.component.html',
-  styleUrls: ['./annual-reports.component.css'],
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
-    LocalizePipe
-  ]
+    selector: 'app-annual-reports',
+    templateUrl: './annual-reports.component.html',
+    styleUrls: ['./annual-reports.component.css'],
+    imports: [
+        CommonModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatSortModule,
+        LocalizePipe
+    ]
 })
 export class AnnualReportsComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;

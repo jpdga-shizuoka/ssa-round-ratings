@@ -18,22 +18,21 @@ const PLAYER_RATIO = DEFAULT_PLAYER_HEIGHT / DEFAULT_PLAYER_WIDTH;
 const VIDEO_PADINGS = 16 * 2;
 
 @Component({
-  selector: 'app-video-bottomsheet',
-  templateUrl: './video-bottomsheet.component.html',
-  styleUrls: ['./video-bottomsheet.component.css'],
-  standalone: true,
-  imports: [
-    CommonModule,
-    YouTubePlayer,
-    MatIconModule,
-    LocalizePipe
-  ],
-  providers: [{
-    provide: YOUTUBE_PLAYER_CONFIG,
-    useValue: {
-      loadApi: false
-    }
-  }]
+    selector: 'app-video-bottomsheet',
+    templateUrl: './video-bottomsheet.component.html',
+    styleUrls: ['./video-bottomsheet.component.css'],
+    imports: [
+        CommonModule,
+        YouTubePlayer,
+        MatIconModule,
+        LocalizePipe
+    ],
+    providers: [{
+            provide: YOUTUBE_PLAYER_CONFIG,
+            useValue: {
+                loadApi: false
+            }
+        }]
 })
 export class VideoBottomsheetComponent implements OnInit {
   videoId: string | undefined = undefined;

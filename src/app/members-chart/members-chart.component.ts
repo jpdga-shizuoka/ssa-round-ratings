@@ -33,14 +33,13 @@ function calcScaleMax(orgs: Orgs): number {
 }
 
 @Component({
-  selector: 'app-members-chart',
-  templateUrl: './members-chart.component.html',
-  styleUrls: ['./members-chart.component.css'],
-  standalone: true,
-  imports: [
-    CommonModule,
-    NgxChartsModule
-  ]
+    selector: 'app-members-chart',
+    templateUrl: './members-chart.component.html',
+    styleUrls: ['./members-chart.component.css'],
+    imports: [
+        CommonModule,
+        NgxChartsModule
+    ]
 })
 export class MembersChartComponent implements OnInit {
   chartSource?: CData[];

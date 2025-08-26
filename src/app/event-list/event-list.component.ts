@@ -10,16 +10,15 @@ import { LocalizePipe } from '../localize.pipe';
 import { EventListDataSource } from './event-list-datasource';
 
 @Component({
-  selector: 'app-event-list',
-  templateUrl: './event-list.component.html',
-  styleUrls: ['./event-list.component.css'],
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatTableModule,
-    PeriodPipe,
-    LocalizePipe
-  ]
+    selector: 'app-event-list',
+    templateUrl: './event-list.component.html',
+    styleUrls: ['./event-list.component.css'],
+    imports: [
+        CommonModule,
+        MatTableModule,
+        PeriodPipe,
+        LocalizePipe
+    ]
 })
 export class EventListComponent implements OnInit, AfterViewInit {
   @Input() event!: EventInfo;

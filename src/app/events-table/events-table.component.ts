@@ -24,26 +24,25 @@ import { LocationPipe } from '../location.pipe';
 import { SchedulePipe } from '../schedule.pipe';
 
 @Component({
-  selector: 'app-events-table',
-  templateUrl: './events-table.component.html',
-  styleUrls: ['./events-table.component.css'],
-  standalone: true,
-  imports: [
-    CommonModule,
-    FormsModule,
-    RouterModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatIconModule,
-    MatButtonModule,
-    PeriodPipe,
-    LocalizePipe,
-    LocationPipe,
-    SchedulePipe,
-  ]
+    selector: 'app-events-table',
+    templateUrl: './events-table.component.html',
+    styleUrls: ['./events-table.component.css'],
+    imports: [
+        CommonModule,
+        FormsModule,
+        RouterModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatSortModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatIconModule,
+        MatButtonModule,
+        PeriodPipe,
+        LocalizePipe,
+        LocationPipe,
+        SchedulePipe,
+    ]
 })
 export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() displayedColumns$!: Observable<string[]>;

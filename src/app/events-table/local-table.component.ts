@@ -19,26 +19,25 @@ import { LocationPipe } from '../location.pipe';
 import { EventDetailComponent } from '../event-detail/event-detail.component';
 
 @Component({
-  selector: 'app-local-table',
-  templateUrl: './local-table.component.html',
-  styleUrls: ['./events-table.component.css'],
-  animations: [detailExpand],
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatIconModule,
-    MatButtonModule,
-    PeriodPipe,
-    LocalizePipe,
-    LocationPipe,
-    EventDetailComponent
-  ]
+    selector: 'app-local-table',
+    templateUrl: './local-table.component.html',
+    styleUrls: ['./events-table.component.css'],
+    animations: [detailExpand],
+    imports: [
+        CommonModule,
+        RouterModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatSortModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatIconModule,
+        MatButtonModule,
+        PeriodPipe,
+        LocalizePipe,
+        LocationPipe,
+        EventDetailComponent
+    ]
 })
 export class LocalTableComponent extends EventsTableComponent {
   constructor(

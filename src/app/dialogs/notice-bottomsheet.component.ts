@@ -20,14 +20,13 @@ const MONTHLY_DIALOG_CONTENT = [
 ];
 
 @Component({
-  selector: 'app-notice-bottomsheet',
-  templateUrl: './notice-bottomsheet.component.html',
-  styleUrls: ['./notice-bottomsheet.component.css'],
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatListModule
-  ]
+    selector: 'app-notice-bottomsheet',
+    templateUrl: './notice-bottomsheet.component.html',
+    styleUrls: ['./notice-bottomsheet.component.css'],
+    imports: [
+        CommonModule,
+        MatListModule
+    ]
 })
 export class NoticeBottomsheetComponent {
   constructor(

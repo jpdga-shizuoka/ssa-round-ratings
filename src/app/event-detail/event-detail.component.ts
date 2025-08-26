@@ -13,18 +13,17 @@ import { SchedulePipe } from '../schedule.pipe';
 import { IcalenderComponent } from '../icalendar/icalendar.component';
 
 @Component({
-  selector: 'app-event-detail',
-  templateUrl: './event-detail.component.html',
-  styleUrls: ['./event-detail.component.css'],
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatIconModule,
-    LocalizePipe,
-    GeolinkPipe,
-    SchedulePipe,
-    IcalenderComponent
-  ]
+    selector: 'app-event-detail',
+    templateUrl: './event-detail.component.html',
+    styleUrls: ['./event-detail.component.css'],
+    imports: [
+        CommonModule,
+        MatIconModule,
+        LocalizePipe,
+        GeolinkPipe,
+        SchedulePipe,
+        IcalenderComponent
+    ]
 })
 export class EventDetailComponent implements OnInit {
   @Input() event!: EventInfo;
