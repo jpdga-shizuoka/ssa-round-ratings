@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, Subject, Subscription } from 'rxjs';
 import { first, tap } from 'rxjs/operators';
@@ -7,6 +8,15 @@ import { RemoteService, EventId, EventInfo, LocationInfo } from '../remote.servi
 import { getCbjUrl, makePdgaInfo, makePdga2nd, makeJpdgaInfo, makeMiscInfo, makeVideoInfo, makePhotoInfo, getStarsOfPurse } from '../libs';
 import { MiscInfo } from '../app-common';
 import { RoundId, Layouts } from '../models';
+import { LocalizePipe } from '../localize.pipe';
+import { PeriodPipe } from '../period.pipe';
+import { GeolinkPipe } from '../geolink.pipe';
+import { IcalenderComponent } from '../icalendar/icalendar.component';
+import { RoundListComponent } from '../round-list/round-list.component';
+import { VideoListComponent } from '../video-list/video-list.component';
+import { PhotoListComponent } from '../photo-list/photo-list.component';
+import { EventListComponent } from '../event-list/event-list.component';
+import { DifficultyChartComponent } from '../difficulty-chart/difficulty-chart.component';
 
 function getTotalPlayers(event: EventInfo): number {
   if (event.players) {
@@ -60,7 +70,20 @@ function layout2layouts(layout?: Layouts) {
 @Component({
   selector: 'app-event',
   templateUrl: './event.component.html',
-  styleUrls: ['./event.component.css']
+  styleUrls: ['./event.component.css'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    LocalizePipe,
+    PeriodPipe,
+    GeolinkPipe,
+    IcalenderComponent,
+    RoundListComponent,
+    VideoListComponent,
+    PhotoListComponent,
+    EventListComponent,
+    DifficultyChartComponent
+  ]
 })
 export class EventComponent implements OnInit, OnDestroy {
   eventId?: EventId;

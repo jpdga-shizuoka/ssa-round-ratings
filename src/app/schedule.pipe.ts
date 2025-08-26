@@ -23,7 +23,8 @@ const MONTH_TABLE: {
 const MONTH_DEFAULTS: number[] = [];
 
 @Pipe({
-  name: 'schedule'
+  name: 'schedule',
+  standalone: true
 })
 export class SchedulePipe implements PipeTransform {
   constructor(private readonly localize: LocalizeService) {}

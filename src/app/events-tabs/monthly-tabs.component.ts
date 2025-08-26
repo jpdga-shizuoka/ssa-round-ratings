@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
-import { Location } from '@angular/common';
-import { Router, ActivatedRoute } from '@angular/router';
+import { CommonModule, Location } from '@angular/common';
+import { Router, ActivatedRoute, RouterModule } from '@angular/router';
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { MatBottomSheet, MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { MatTabsModule } from '@angular/material/tabs';
 import { Subscription } from 'rxjs';
 
 import { NoticeBottomsheetComponent } from '../dialogs/notice-bottomsheet.component';
 import { EventsTabsComponent } from './events-tabs.component';
+import { MonthlyTableComponent } from '../events-table/monthly-table.component';
+import { EventsMapComponent } from '../events-map/events-map.component';
+import { LocalizePipe } from '../localize.pipe';
 
 const DISPLAYED_COLUMNS = [['location', 'day'], ['location', 'day', 'month']];
 const TITLES = ['Monthly', 'Location'];
@@ -15,7 +19,17 @@ const TABS = ['events', 'locations'];
 @Component({
   selector: 'app-monthly-tabs',
   templateUrl: './monthly-tabs.component.html',
-  styleUrls: ['./events-tabs.component.css']
+  styleUrls: ['./events-tabs.component.css'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    RouterModule,
+    MatBottomSheetModule,
+    MatTabsModule,
+    MonthlyTableComponent,
+    EventsMapComponent,
+    LocalizePipe
+  ]
 })
 export class MonthlyTabsComponent extends EventsTabsComponent {
   private ss?: Subscription;

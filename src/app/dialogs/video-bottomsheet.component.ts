@@ -1,8 +1,12 @@
 import { Component, HostListener, Inject, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { MatBottomSheetRef, MAT_BOTTOM_SHEET_DATA } from '@angular/material/bottom-sheet';
+import { MatIconModule } from '@angular/material/icon';
+import {YouTubePlayer, YOUTUBE_PLAYER_CONFIG} from '@angular/youtube-player';
 import { DeviceDetectorService } from 'ngx-device-detector';
 
 import { MiscInfo } from '../models';
+import { LocalizePipe } from '../localize.pipe';
 
 const FACEBOOK = /https:\/\/www\.facebook\.com\/.+\/videos\/(\d+)\//;
 const YOUTUBE = /https:\/\/youtube\.com\/watch\?v=([0-9a-zA-Z_-]+)/;
@@ -16,7 +20,20 @@ const VIDEO_PADINGS = 16 * 2;
 @Component({
   selector: 'app-video-bottomsheet',
   templateUrl: './video-bottomsheet.component.html',
-  styleUrls: ['./video-bottomsheet.component.css']
+  styleUrls: ['./video-bottomsheet.component.css'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    YouTubePlayer,
+    MatIconModule,
+    LocalizePipe
+  ],
+  providers: [{
+    provide: YOUTUBE_PLAYER_CONFIG,
+    useValue: {
+      loadApi: false
+    }
+  }]
 })
 export class VideoBottomsheetComponent implements OnInit {
   videoId: string | undefined = undefined;

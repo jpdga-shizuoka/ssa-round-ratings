@@ -1,6 +1,4 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-
+import { Routes } from '@angular/router';
 import { ReloadComponent } from './app-reload';
 import { DashBoardComponent } from './dash-board/dash-board.component';
 import { RoundsTabsComponent } from './rounds-tabs/rounds-tabs.component';
@@ -27,15 +25,7 @@ import { TourStandardsComponent } from './libraries/tour-standards.component';
 import { RatingsComponent } from './libraries/ratings.component';
 import { ProgramguidComponent } from './libraries/programguid.component';
 
-export type UserData = {
-  metaDescription: {
-    title?: string;
-    description?: string;
-    keywords?: string;
-  };
-}
-
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '',
     component: DashBoardComponent,
@@ -298,11 +288,3 @@ const routes: Routes = [
     path: 'reload/:currentpath', component: ReloadComponent
   }
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    scrollPositionRestoration: 'enabled'
-})],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }

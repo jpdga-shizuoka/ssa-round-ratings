@@ -8,8 +8,9 @@ import {
   ChangeDetectionStrategy,
   TemplateRef
 } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { trigger, style, animate, transition } from '@angular/animations';
-import { formatLabel, PlacementTypes, StyleTypes, ColorHelper, ScaleType } from '@swimlane/ngx-charts';
+import { formatLabel, PlacementTypes, StyleTypes, ColorHelper, ScaleType, ChartCommonModule } from '@swimlane/ngx-charts';
 import { ScaleLinear } from 'd3-scale';
 import { Circle, ChartDataExt, ChartDataItem, EventId, Entry } from '../ngx-charts.interfaces';
 
@@ -57,6 +58,11 @@ import { Circle, ChartDataExt, ChartDataItem, EventId, Entry } from '../ngx-char
         animate(250, style({ opacity: 1, transform: 'scale(1)' }))
       ])
     ])
+  ],
+  standalone: true,
+  imports: [
+    CommonModule,
+    ChartCommonModule
   ]
 })
 export class BubbleSeriesInteractiveComponent implements OnChanges {

@@ -1,7 +1,10 @@
 import { Component, Input, Output, EventEmitter, OnInit, ElementRef, OnDestroy } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { GoogleMapsModule } from '@angular/google-maps';
 import { Observable, BehaviorSubject, from, Subscription } from 'rxjs';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { GeoMarker } from '../map-common';
 import { EventCategory, LocationSearch, EventGo } from '../models';
@@ -14,7 +17,14 @@ import { compareByDate } from '../libs';
 @Component({
   selector: 'app-events-map',
   templateUrl: './events-map.component.html',
-  styleUrls: ['./events-map.component.css']
+  styleUrls: ['./events-map.component.css'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    GoogleMapsModule,
+    MatDialogModule,
+    MatProgressSpinnerModule
+  ]
 })
 export class EventsMapComponent implements OnInit, OnDestroy {
   @Input() category!: EventCategory;

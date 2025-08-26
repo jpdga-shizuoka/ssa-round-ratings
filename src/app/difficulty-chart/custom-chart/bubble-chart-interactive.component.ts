@@ -9,6 +9,7 @@ import {
   ContentChild,
   TemplateRef
 } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { trigger, style, animate, transition } from '@angular/animations';
 import { scaleLinear, ScaleLinear } from 'd3-scale';
 import {
@@ -22,9 +23,11 @@ import {
   ColorHelper,
   BaseChartComponent,
   calculateViewDimensions,
-  ScaleType
+  ScaleType,
+  ChartCommonModule
 } from '@swimlane/ngx-charts';
 import { ChartDataExt, EventId, Entry } from '../ngx-charts.interfaces';
+import { BubbleSeriesInteractiveComponent } from './bubble-series-interactive.component';
 
 @Component({
   // tslint:disable-next-line: component-selector
@@ -126,6 +129,12 @@ import { ChartDataExt, EventId, Entry } from '../ngx-charts.interfaces';
         )
       ])
     ])
+  ],
+  standalone: true,
+  imports: [
+    CommonModule,
+    ChartCommonModule,
+    BubbleSeriesInteractiveComponent
   ]
 })
 export class BubbleChartInteractiveComponent extends BaseChartComponent {

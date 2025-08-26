@@ -1,11 +1,15 @@
 import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
-import { Location } from '@angular/common';
+import { Location, CommonModule } from '@angular/common';
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, RouterModule } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
 import { SwUpdate, VersionReadyEvent } from '@angular/service-worker';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { MatSidenav } from '@angular/material/sidenav';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
 import { BehaviorSubject } from 'rxjs';
 import { take, filter } from 'rxjs/operators';
 import { environment } from '../environments/environment';
@@ -22,7 +26,18 @@ import {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    RouterModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatListModule,
+    MatIconModule,
+    MatDividerModule,
+    MatSnackBarModule,
+  ]
 })
 export class AppComponent implements OnInit, OnDestroy, MetaDescription {
   @ViewChild('drawer') drawer!: MatSidenav;

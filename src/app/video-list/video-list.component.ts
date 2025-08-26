@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { CommonModule } from '@angular/common';
+import { MatBottomSheet, MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { ScriptLoaderService } from '../script-loader.service';
 
 import { MiscInfo } from '../models';
@@ -8,7 +9,12 @@ import { VideoBottomsheetComponent } from '../dialogs/video-bottomsheet.componen
 @Component({
   selector: 'app-video-list',
   templateUrl: './video-list.component.html',
-  styleUrls: ['./video-list.component.css']
+  styleUrls: ['./video-list.component.css'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    MatBottomSheetModule
+  ]
 })
 export class VideoListComponent implements OnInit {
   @Input() list!: MiscInfo[];

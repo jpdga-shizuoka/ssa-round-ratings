@@ -1,9 +1,15 @@
 import { Component, OnInit, OnDestroy, Input, ViewChild, AfterViewInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { MatTable } from '@angular/material/table';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { Router, ActivatedRoute, RouterModule } from '@angular/router';
+import { MatTable, MatTableModule } from '@angular/material/table';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatSort, MatSortModule } from '@angular/material/sort';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatBottomSheet, MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { Observable, Subject, Subscription } from 'rxjs';
 
 import { GeoMarker } from '../map-common';
@@ -13,12 +19,30 @@ import { RemoteService, RoundInfo } from '../remote.service';
 import { RoundsDataSource } from './rounds-datasource';
 import { LocalizeService } from '../localize.service';
 import { getEventTitle, title2name } from '../libs';
+import { LocalizePipe } from '../localize.pipe';
+import { EventPipe } from '../event.pipe';
 
 @Component({
   selector: 'app-rounds-table',
   templateUrl: './rounds-table.component.html',
   styleUrls: ['./rounds-table.component.css'],
-  animations: [detailExpand]
+  animations: [detailExpand],
+  standalone: true,
+  imports: [
+    CommonModule,
+    FormsModule,
+    RouterModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    MatButtonModule,
+    MatBottomSheetModule,
+    LocalizePipe,
+    EventPipe
+  ]
 })
 export class RoundsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() displayedColumns$!: Observable<string[]>;

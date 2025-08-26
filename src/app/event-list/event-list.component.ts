@@ -1,15 +1,25 @@
 import { Component, OnInit, Input, ViewChild, AfterViewInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import { MatTable } from '@angular/material/table';
+import { MatTable, MatTableModule } from '@angular/material/table';
 
 import { EventInfo } from '../models';
 import { RemoteService } from '../remote.service';
+import { PeriodPipe } from '../period.pipe';
+import { LocalizePipe } from '../localize.pipe';
 import { EventListDataSource } from './event-list-datasource';
 
 @Component({
   selector: 'app-event-list',
   templateUrl: './event-list.component.html',
-  styleUrls: ['./event-list.component.css']
+  styleUrls: ['./event-list.component.css'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    MatTableModule,
+    PeriodPipe,
+    LocalizePipe
+  ]
 })
 export class EventListComponent implements OnInit, AfterViewInit {
   @Input() event!: EventInfo;

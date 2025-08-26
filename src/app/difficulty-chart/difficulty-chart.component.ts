@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { map } from 'rxjs/operators';
 
 import { RemoteService } from '../remote.service';
@@ -7,11 +9,18 @@ import { LocalizeService } from '../localize.service';
 import { calcRoundStat } from '../libs';
 import { rounds2result, reorder } from './difficulty-chart.lib';
 import { ChartDataExt, BubbleData, EventId } from './ngx-charts.interfaces';
+import { BubbleChartInteractiveComponent } from './custom-chart/bubble-chart-interactive.component';
 
 @Component({
   selector: 'app-difficulty-chart',
   templateUrl: './difficulty-chart.component.html',
-  styleUrls: ['./difficulty-chart.component.css']
+  styleUrls: ['./difficulty-chart.component.css'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    NgxChartsModule,
+    BubbleChartInteractiveComponent
+  ]
 })
 export class DifficultyChartComponent implements OnInit {
   @Input() eventId?: EventId;

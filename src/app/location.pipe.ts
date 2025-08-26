@@ -3,7 +3,8 @@ import { LocationInfo } from './models';
 import { LocalizeService } from './localize.service';
 
 @Pipe({
-  name: 'locationPrint'
+  name: 'locationPrint',
+  standalone: true
 })
 export class LocationPipe implements PipeTransform {
   constructor(private readonly localize: LocalizeService) {}

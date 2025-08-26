@@ -52,7 +52,8 @@ function toDate(date: Date, format: DateFormat): string {
 }
 
 @Pipe({
-  name: 'period'
+  name: 'period',
+  standalone: true
 })
 export class PeriodPipe implements PipeTransform {
   transform(value?: Period | string, format = 'long' as DateFormat): string {

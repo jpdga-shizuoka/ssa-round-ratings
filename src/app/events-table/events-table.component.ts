@@ -1,10 +1,16 @@
 import {
   Component, OnInit, OnDestroy, Input, ViewChild, AfterViewInit
 } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { MatTable } from '@angular/material/table';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { Router, ActivatedRoute, RouterModule } from '@angular/router';
+import { MatTable, MatTableModule } from '@angular/material/table';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatSort, MatSortModule } from '@angular/material/sort';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 import { Observable, Subscription } from 'rxjs';
 
 import { EventCategory } from '../models';
@@ -12,11 +18,32 @@ import { LocalizeService } from '../localize.service';
 import { RemoteService } from '../remote.service';
 import { EventsDataSource, EventInfo } from './events-datasource';
 import { title2name } from '../libs';
+import { PeriodPipe } from '../period.pipe';
+import { LocalizePipe } from '../localize.pipe';
+import { LocationPipe } from '../location.pipe';
+import { SchedulePipe } from '../schedule.pipe';
 
 @Component({
   selector: 'app-events-table',
   templateUrl: './events-table.component.html',
-  styleUrls: ['./events-table.component.css']
+  styleUrls: ['./events-table.component.css'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    FormsModule,
+    RouterModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    MatButtonModule,
+    PeriodPipe,
+    LocalizePipe,
+    LocationPipe,
+    SchedulePipe,
+  ]
 })
 export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() displayedColumns$!: Observable<string[]>;

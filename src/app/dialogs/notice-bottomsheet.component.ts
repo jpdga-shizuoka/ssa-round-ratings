@@ -1,5 +1,7 @@
 import { Component, Inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { MatBottomSheetRef, MAT_BOTTOM_SHEET_DATA } from '@angular/material/bottom-sheet';
+import { MatListModule } from '@angular/material/list';
 
 import { LocalizeService } from '../localize.service';
 
@@ -20,7 +22,12 @@ const MONTHLY_DIALOG_CONTENT = [
 @Component({
   selector: 'app-notice-bottomsheet',
   templateUrl: './notice-bottomsheet.component.html',
-  styleUrls: ['./notice-bottomsheet.component.css']
+  styleUrls: ['./notice-bottomsheet.component.css'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    MatListModule
+  ]
 })
 export class NoticeBottomsheetComponent {
   constructor(

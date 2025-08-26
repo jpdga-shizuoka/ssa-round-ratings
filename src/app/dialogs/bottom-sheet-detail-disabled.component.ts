@@ -1,8 +1,10 @@
 import { Component, Inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import {
   MatBottomSheetRef,
   MAT_BOTTOM_SHEET_DATA
 } from '@angular/material/bottom-sheet';
+import { MatListModule } from '@angular/material/list';
 
 import { LocalizeService } from '../localize.service';
 
@@ -21,7 +23,12 @@ const DIALOG_DESCRIPTION = [
 ];
 
 @Component({
-  templateUrl: 'bottom-sheet-detail-disabled.component.html'
+  templateUrl: 'bottom-sheet-detail-disabled.component.html',
+  standalone: true,
+  imports: [
+    CommonModule,
+    MatListModule
+  ]
 })
 export class BottomSheetDetailDisabledComponent {
   constructor(
