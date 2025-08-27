@@ -1,14 +1,19 @@
 import { Component, OnInit, Input } from '@angular/core';
+
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { LocalizeService } from '../localize.service';
 import { RemoteService } from '../remote.service';
 import { EventInfo } from '../models';
 import { Calendar } from './icalendar.class';
+import { LocalizePipe } from '../localize.pipe';
 
 @Component({
-  selector: 'app-icalendar',
-  templateUrl: './icalendar.component.html',
-  styleUrls: ['./icalendar.component.css']
+    selector: 'app-icalendar',
+    templateUrl: './icalendar.component.html',
+    styleUrls: ['./icalendar.component.css'],
+    imports: [
+    LocalizePipe
+]
 })
 export class IcalenderComponent implements OnInit {
   @Input() event!: EventInfo;

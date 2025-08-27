@@ -7,7 +7,8 @@ import { Subscription } from 'rxjs';
 import { LocationSearch, EventGo } from '../models';
 
 @Component({
-  template: ''
+  template: '',
+  standalone: true
 })
 export class RoutingTabsComponent implements OnInit, OnDestroy {
   selectedTab = 0;

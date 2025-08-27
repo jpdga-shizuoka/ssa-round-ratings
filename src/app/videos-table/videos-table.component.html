@@ -1,13 +1,17 @@
 <div class="app-videos-table">
-  <div class="search" *ngIf="!isMinimum && showSearch">
-    <mat-form-field class="search-box">
-      <input matInput #filter [(ngModel)]="search" (keyup)="applyFilter(filter.value)" placeholder="Search...">
-      <button mat-button *ngIf="search" matSuffix mat-icon-button aria-label="Clear" (click)="applyFilter('')">
-        <mat-icon>close</mat-icon>
-      </button>
-    </mat-form-field>
-    <div class='search-spacer'></div>
-  </div>
+  @if (!isMinimum && showSearch) {
+    <div class="search">
+      <mat-form-field class="search-box">
+        <input matInput #filter [(ngModel)]="search" (keyup)="applyFilter(filter.value)" placeholder="Search...">
+        @if (search) {
+          <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="applyFilter('')">
+            <mat-icon>close</mat-icon>
+          </button>
+        }
+      </mat-form-field>
+      <div class='search-spacer'></div>
+    </div>
+  }
 
   <table mat-table class="full-width-table"
     [dataSource]="dataSource">
@@ -41,14 +45,18 @@
       (click)="onRawClicked(row)">
     </tr>
 
-    <div *ngIf="showMore">
-      <tr mat-footer-row *matFooterRowDef="['more']"></tr>
-    </div>
+    @if (showMore) {
+      <div>
+        <tr mat-footer-row *matFooterRowDef="['more']"></tr>
+      </div>
+    }
   </table>
 
-  <mat-paginator #paginator *ngIf="!isMinimum"
+  @if (!isMinimum) {
+    <mat-paginator #paginator
       [length]="dataSource.data.length"
       [pageSize]="pageSizeOptions[0]"
       [pageSizeOptions]="pageSizeOptions">
-  </mat-paginator>
+    </mat-paginator>
+  }
 </div>

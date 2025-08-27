@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { GeoPosition, LocationInfo } from './models';
 
 @Pipe({
-  name: 'geolink'
+  name: 'geolink',
+  standalone: true
 })
 export class GeolinkPipe implements PipeTransform {
   transform(geoPosition?: GeoPosition | LocationInfo): string {

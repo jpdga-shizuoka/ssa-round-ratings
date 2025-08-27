@@ -1,9 +1,13 @@
 import { Component, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { CommonModule } from '@angular/common';
+import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
+import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
 import { Observable } from 'rxjs';
 import { EventCategory, EventInfo } from '../models';
 import { RemoteService, LocationInfo } from '../remote.service';
 import { Position } from '../map-common';
+import { LocalizePipe } from '../localize.pipe';
 
 export interface MarkerDialogData {
   category: EventCategory;
@@ -13,9 +17,16 @@ export interface MarkerDialogData {
 }
 
 @Component({
-  selector: 'app-marker-dialog',
-  templateUrl: './marker-dialog.component.html',
-  styleUrls: ['./marker-dialog.component.css']
+    selector: 'app-marker-dialog',
+    templateUrl: './marker-dialog.component.html',
+    styleUrls: ['./marker-dialog.component.css'],
+    imports: [
+        CommonModule,
+        MatDialogModule,
+        MatListModule,
+        MatButtonModule,
+        LocalizePipe,
+    ]
 })
 export class MarkerDialogComponent {
   location$: Observable<LocationInfo>;

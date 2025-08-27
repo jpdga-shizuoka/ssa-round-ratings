@@ -1,24 +1,96 @@
 [
   {
+    "id": "the20thmastersnationalchampionship",
+    "title": "The 20th Masters National Championships",
+    "location": "hitachiseasidepark",
+    "period": {
+      "from": "2025-03-01",
+      "to": "2025-03-02"
+    },
+    "layout": {
+      "official": "https://membership.jpdga.jp/event/2025/718_map.pdf"
+    },
+    "players": {
+      "pro": 40,
+      "ama": 40,
+      "misc": 0
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "88262",
+      "eventId": "88262"
+    },
+    "jpdga": {
+      "tier": "ABT-B",
+      "eventId": "718"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://discgolf-navi.com/tournament/nt-abt-lt/masters-miho/"
+      }
+    ]
+  },
+  {
     "id": "the1stjapandiscgolfmatchplaychampionships",
     "title": "The 1st Japan Disc Golf Match Play Championships",
     "location": "minamisomahoseridingpark",
     "period": {
       "from": "2025-03-29",
       "to": "2025-03-30"
-    }
+    },
+    "layout": {
+      "official": "https://www.jfda.or.jp/web/wp/wp-content/uploads/2025/03/2024AJDGMC_FieldMap_0324f.pdf"
+    },
+    "players": {
+      "pro": 38,
+      "ama": 0,
+      "misc": 0
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "組み合わせスケジュール",
+        "url": "https://www.jfda.or.jp/web/wp/wp-content/uploads/2025/03/2024AJDGMC_TimeSchedule-Match_20250324.pdf"
+      },
+      {
+        "type": "website",
+        "title": "試合形式",
+        "url": "https://www.jfda.or.jp/web/wp/wp-content/uploads/2025/03/2024AJDGMC_CompetitionRules_20250310.pdf"
+      },
+      {
+        "type": "website",
+        "title": "出場者⼀覧",
+        "url": "https://www.jfda.or.jp/web/wp/wp-content/uploads/2025/02/2024AJDGMC_Seeding_20250227.pdf"
+
+      },
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://www.jfda.or.jp/2025/01/31/2024alljapan-discgolf-matchplay-main/"
+      }
+    ]
   },
   {
-    "id": "the23rdchubuopen",
-    "title": "The 23rd Chubu Open",
+    "id": "the24thchubuopen",
+    "title": "The 24th Chubu Open",
     "location": "enakyoparkcountryclub",
     "period": {
       "from": "2025-03-15",
       "to": "2025-03-16"
     },
+    "layout": {
+      "official": "https://membership.jpdga.jp/event/2025/719_map.pdf"
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "88891",
+      "eventId": "88891"
+    },
     "jpdga": {
       "tier": "ABT-B",
-      "eventId": "706"
+      "eventId": "719"
     },
     "urls": [
       {
@@ -36,8 +108,17 @@
       "from": "2025-02-22",
       "to": "2025-02-23"
     },
+    "layout": {
+      "official": "https://drive.google.com/file/d/1qDP2wxKV_QE06sMwEbXTooeDD3C4dTiH/view"
+    },
+    "players": {
+      "pro": 47,
+      "ama": 23,
+      "misc": 2
+    },
     "pdga": {
       "tier": "B",
+      "scoreId": "87628",
       "eventId": "87628"
     },
     "jpdga": {
@@ -45,6 +126,11 @@
       "eventId": "717"
     },
     "urls": [
+      {
+        "type": "video",
+        "title": "コース紹介",
+        "url": "https://youtu.be/w13hUqpVc_Y"
+      },
       {
         "type": "website",
         "title": "Official Site",
@@ -58,12 +144,58 @@
     ]
   },
   {
+    "id": "the3rdmusashikyuryoshinrinparkcup",
+    "title": "The 3rd Musashi-Kyuryo Shinrin Park Cup",
+    "location": "musashikyuryoshinrinpark",
+    "period": {
+      "from": "2025-02-01",
+      "to": "2025-02-02"
+    },
+    "players": {
+      "pro": 12,
+      "ama": 52,
+      "misc": 3
+    },
+    "budget": {
+      "entreefee": 5000,
+      "purse": 195,
+      "paidout": 5,
+      "rate": 155.8
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "88091",
+      "eventId": "88091"
+    },
+    "jpdga": {
+      "tier": "LT",
+      "eventId": "751"
+    },
+    "urls": [
+      {
+        "type": "video",
+        "title": "コース紹介",
+        "url": "https://youtu.be/R6R8my_xIIs"
+      },
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://www.facebook.com/share/1EjsX3FbeU/"
+      }
+    ]
+  },
+  {
     "id": "the7thhitachseasideparkopen",
     "title": "The 7th Hitachi Seaside Park Open",
     "location": "hitachiseasidepark",
     "period": {
-      "from": "2025-01-18",
+      "from": "2025-01-19",
       "to": "2025-01-19"
+    },
+    "players": {
+      "pro": 19,
+      "ama": 50,
+      "misc": 2
     },
     "jpdga": {
       "tier": "LT",
@@ -81,7 +213,34 @@
     "jpdga": {
       "tier": "LT",
       "eventId": "715"
-    }
+    },
+    "urls": [
+      {
+        "type": "video",
+        "title": "Final,Open,@tiikiken",
+        "url": "https://youtu.be/KyASpwGcw1k"
+      },
+      {
+        "type": "video",
+        "title": "Round1,Open,@tiikiken",
+        "url": "https://youtu.be/kt8uauZffRA"
+      },
+      {
+        "type": "video",
+        "title": "Final,Ama Open,@grents01",
+        "url": "https://youtu.be/-Bb76ggWJro"
+      },
+      {
+        "type": "video",
+        "title": "B9, Ama Open,@grents01",
+        "url": "https://youtu.be/tQXcoIv4qFA"
+      },
+      {
+        "type": "video",
+        "title": "F9,Ama Open,@grents01",
+        "url": "https://youtu.be/3o_3AxjnoDI"
+      }
+    ]
   },
   {
     "id": "the2ndjandluxcup",
@@ -91,14 +250,44 @@
       "from": "2024-12-14",
       "to": "2024-12-15"
     },
+    "layout": {
+      "official": "https://udisc.com/courses/michinoku-park-NI0L/layouts?selectedLayoutId=111230"
+    },
     "players": {
       "pro": 0,
       "ama": 0,
-      "misc": 39
+      "misc": 40
     },
     "jpdga": {
       "eventId": "705"
-    }
+    },
+    "urls": [
+      {
+        "type": "video",
+        "title": "Final,Open,@JANDLUX",
+        "url": "https://youtu.be/mDSprkQnHGQ"
+      },
+      {
+        "type": "video",
+        "title": "Final,Ladies,@JANDLUX",
+        "url": "https://youtu.be/RTmPq9ox6DM"
+      },
+      {
+        "type": "video",
+        "title": "B9,Round3,Open,@JANDLUX",
+        "url": "https://youtu.be/VZpSmuieHVg"
+      },
+      {
+        "type": "video",
+        "title": "F9,Round3,Open,@JANDLUX",
+        "url": "https://youtu.be/AfRrRfvHQow"
+      },
+      {
+        "type": "website",
+        "title": "Results(Udisc)",
+        "url": "https://udisc.com/events/jandlux-cup-2nd-YTaE6m/leaderboard"
+      }
+    ]
   },
   {
     "id": "theleftovershowdown2024",
@@ -625,6 +814,23 @@
       "paidout": 12,
       "rate": 153.51
     },
+    "urls": [
+      {
+        "type": "video",
+        "title": "Final,MPO@Dch-discchannel",
+        "url": "https://youtu.be/yacVwxaB6fk"
+      },
+      {
+        "type": "video",
+        "title": "B9,Semi-Final,MPO@Dch-discchannel",
+        "url": "https://youtu.be/5J8_Y44Sf_8"
+      },
+      {
+        "type": "video",
+        "title": "F9,Semi-Final,MPO@Dch-discchannel",
+        "url": "https://youtu.be/2BQQnU9o7dA"
+      }
+    ],
     "rounds": [
       "the26thnipponopen.rd1rd2rd3"
     ]
@@ -1218,6 +1424,11 @@
       "paidout": 10
     },
     "urls": [
+      {
+        "type": "video",
+        "title": "MJ15@Dch-discchannel",
+        "url": "https://youtu.be/HvoKx1bIzHY"
+      },
       {
         "type": "video",
         "title": "Final, MPO,@Dch-discchannel",

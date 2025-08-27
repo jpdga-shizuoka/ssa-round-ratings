@@ -2,17 +2,21 @@
   <mat-card class="about-card">
     <img mat-card-image src="assets/img/fujikawa.jpg">
     <mat-card-content>
-      <p *ngIf="primaryLanguage">
-        The DG Japan is a database for disc golf events in Japan.
-      </p>
-      <p *ngIf="!primaryLanguage">
-        DG Japanは,
-        日本で開催されるディスクゴルフ大会情報を収集した,
-        ディスクゴルフ専用データーベースです.
-        なお本サイト上のデータにお気づきの点がありましたら,
-        <span class="email">jpdga.shizuoka&#64;gmail.com</span>
-        までご連絡いただけると幸いです.
-      </p>
+      @if (primaryLanguage) {
+        <p>
+          The DG Japan is a database for disc golf events in Japan.
+        </p>
+      }
+      @if (!primaryLanguage) {
+        <p>
+          DG Japanは,
+          日本で開催されるディスクゴルフ大会情報を収集した,
+          ディスクゴルフ専用データーベースです.
+          なお本サイト上のデータにお気づきの点がありましたら,
+          <span class="email">jpdga.shizuoka&#64;gmail.com</span>
+          までご連絡いただけると幸いです.
+        </p>
+      }
     </mat-card-content>
   </mat-card>
 
@@ -50,13 +54,16 @@
       <h3>GitHub Pages</h3>
     </div>
     <mat-card-content>
-      <p *ngIf="primaryLanguage">
-        This website is running on the <a href="https://pages.github.com">GitHub Pages</a>.
-        See <a href="https://help.github.com/en/github/site-policy/github-privacy-statement">
+      @if (primaryLanguage) {
+        <p>
+          This website is running on the <a href="https://pages.github.com">GitHub Pages</a>.
+          See <a href="https://help.github.com/en/github/site-policy/github-privacy-statement">
           the Github privacy policy
         </a> as well.
       </p>
-      <p *ngIf="!primaryLanguage">
+    }
+    @if (!primaryLanguage) {
+      <p>
         本サイトは GitHub が提供する
         <a href="https://pages.github.com">GitHub Pages</a>
         を利用して運用しています.
@@ -64,46 +71,55 @@
           Githubのプライバシーポリシー
         </a> も参照ください.
       </p>
-    </mat-card-content>
-  </mat-card>
+    }
+  </mat-card-content>
+</mat-card>
 
-  <mat-card class="about-card">
-    <mat-card-header>
-      <mat-card-title>Open Sourse Software</mat-card-title>
-    </mat-card-header>
-    <div class="github-card-img">
-      <img mat-card-image src="assets/img/github.svg">
-      <h3>GitHub</h3>
-    </div>
-    <mat-card-content>
-      <p *ngIf="primaryLanguage">
+<mat-card class="about-card">
+  <mat-card-header>
+    <mat-card-title>Open Sourse Software</mat-card-title>
+  </mat-card-header>
+  <div class="github-card-img">
+    <img mat-card-image src="assets/img/github.svg">
+    <h3>GitHub</h3>
+  </div>
+  <mat-card-content>
+    @if (primaryLanguage) {
+      <p>
         This is an open source project and all of resouces and information are published on the
         <a href="https://github.com/jpdga-shizuoka/ssa-round-ratings">Github</a>.
       </p>
-      <p *ngIf="!primaryLanguage">
+    }
+    @if (!primaryLanguage) {
+      <p>
         本サイトはオープンソース•ソフトウェア•プロジェクトとして
         <a href="https://github.com/jpdga-shizuoka/ssa-round-ratings">Github</a>
         に公開しました.
       </p>
-    </mat-card-content>
-  </mat-card>
+    }
+  </mat-card-content>
+</mat-card>
 
-  <mat-card class="about-card">
-    <mat-card-header>
-      <mat-card-title>Platform & Libs</mat-card-title>
-    </mat-card-header>
-    <div class="github-card-img">
-      <img alt="Angular Logo"
+<mat-card class="about-card">
+  <mat-card-header>
+    <mat-card-title>Platform & Libs</mat-card-title>
+  </mat-card-header>
+  <div class="github-card-img">
+    <img alt="Angular Logo"
         src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
       />
     </div>
     <mat-card-content>
-      <p *ngIf="primaryLanguage">
+      @if (primaryLanguage) {
+<p>
         This site is constructed from the following open source software mainly:
       </p>
-      <p *ngIf="!primaryLanguage">
+}
+      @if (!primaryLanguage) {
+<p>
         本サイトは主に以下のオープンソース•ソフトウェアを利用して構築されました:
       </p>
+}
       <table class="oss-table">
         <tbody>
           <tr>

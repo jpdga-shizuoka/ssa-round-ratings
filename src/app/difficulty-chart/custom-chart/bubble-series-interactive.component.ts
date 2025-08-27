@@ -8,56 +8,62 @@ import {
   ChangeDetectionStrategy,
   TemplateRef
 } from '@angular/core';
+
 import { trigger, style, animate, transition } from '@angular/animations';
-import { formatLabel, PlacementTypes, StyleTypes, ColorHelper, ScaleType } from '@swimlane/ngx-charts';
+import { formatLabel, PlacementTypes, StyleTypes, ColorHelper, ScaleType, ChartCommonModule } from '@swimlane/ngx-charts';
 import { ScaleLinear } from 'd3-scale';
 import { Circle, ChartDataExt, ChartDataItem, EventId, Entry } from '../ngx-charts.interfaces';
 
 @Component({
-  // tslint:disable-next-line: component-selector
-  selector: 'g[ngx-charts-bubble-series-interactive]',
-  template: `
-    <svg:g *ngFor="let circle of circles; trackBy: trackBy">
-      <svg:g [attr.transform]="circle.transform">
-        <svg:g
-          ngx-charts-circle
-          [@animationState]="'active'"
-          class="circle"
-          [cx]="0"
-          [cy]="0"
-          [r]="circle.radius"
-          [fill]="circle.color"
-          [style.opacity]="circle.opacity"
-          [class.active]="circle.isActive"
-          [pointerEvents]="'all'"
-          [data]="circle.value"
-          [classNames]="circle.classNames"
-          (select)="onClickBubble($event, circle)"
-          (activate)="activateCircle(circle)"
-          (deactivate)="deactivateCircle(circle)"
-          ngx-tooltip
-          [tooltipDisabled]="tooltipDisabled"
-          [tooltipPlacement]="placementTypes.Top"
-          [tooltipType]="styleTypes.tooltip"
-          [tooltipTitle]="tooltipTemplate ? undefined : getTooltipText(circle)"
-          [tooltipTemplate]="tooltipTemplate"
-          [tooltipContext]="circle.data"
-        />
-      </svg:g>
-    </svg:g>
-  `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  animations: [
-    trigger('animationState', [
-      transition(':enter', [
-        style({
-          opacity: 0,
-          transform: 'scale(0)'
-        }),
-        animate(250, style({ opacity: 1, transform: 'scale(1)' }))
-      ])
-    ])
-  ]
+    // tslint:disable-next-line: component-selector
+    selector: 'g[ngx-charts-bubble-series-interactive]',
+    template: `
+    @for (circle of circles; track trackBy($index, circle)) {
+      <svg:g>
+        <svg:g [attr.transform]="circle.transform">
+          <svg:g
+            ngx-charts-circle
+            [@animationState]="'active'"
+            class="circle"
+            [cx]="0"
+            [cy]="0"
+            [r]="circle.radius"
+            [fill]="circle.color"
+            [style.opacity]="circle.opacity"
+            [class.active]="circle.isActive"
+            [pointerEvents]="'all'"
+            [data]="circle.value"
+            [classNames]="circle.classNames"
+            (select)="onClickBubble($event, circle)"
+            (activate)="activateCircle(circle)"
+            (deactivate)="deactivateCircle(circle)"
+            ngx-tooltip
+            [tooltipDisabled]="tooltipDisabled"
+            [tooltipPlacement]="placementTypes.Top"
+            [tooltipType]="styleTypes.tooltip"
+            [tooltipTitle]="tooltipTemplate ? undefined : getTooltipText(circle)"
+            [tooltipTemplate]="tooltipTemplate"
+            [tooltipContext]="circle.data"
+            />
+          </svg:g>
+          </svg:g>
+        }
+    `,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    animations: [
+        trigger('animationState', [
+            transition(':enter', [
+                style({
+                    opacity: 0,
+                    transform: 'scale(0)'
+                }),
+                animate(250, style({ opacity: 1, transform: 'scale(1)' }))
+            ])
+        ])
+    ],
+    imports: [
+    ChartCommonModule
+]
 })
 export class BubbleSeriesInteractiveComponent implements OnChanges {
   @Input() data!: ChartDataExt;

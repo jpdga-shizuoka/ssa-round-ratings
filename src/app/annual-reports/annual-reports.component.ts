@@ -1,14 +1,22 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatTable } from '@angular/material/table';
+
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatSort, MatSortModule } from '@angular/material/sort';
+import { MatTable, MatTableModule } from '@angular/material/table';
 import { AnnualReportsDataSource, AnnualReport } from './annual-reports-datasource';
 import { RemoteService } from '../remote.service';
+import { LocalizePipe } from '../localize.pipe';
 
 @Component({
-  selector: 'app-annual-reports',
-  templateUrl: './annual-reports.component.html',
-  styleUrls: ['./annual-reports.component.css']
+    selector: 'app-annual-reports',
+    templateUrl: './annual-reports.component.html',
+    styleUrls: ['./annual-reports.component.css'],
+    imports: [
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    LocalizePipe
+]
 })
 export class AnnualReportsComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;

@@ -1,20 +1,26 @@
-<div class="spinner" *ngIf="loading">
-  <mat-spinner></mat-spinner>
-</div>
+@if (loading) {
+  <div class="spinner">
+    <mat-spinner></mat-spinner>
+  </div>
+}
 
-<div *ngIf="apiLoaded$ | async">
-  <google-map id="googlemap"
-              [height]="height"
-              [width]="width"
-              [center]="center"
-              [zoom]="zoom"
-              mapId="mapId"
-              [options]="mapOptions"
-              (tilesloaded)="onTilesloaded()">
-    <map-advanced-marker *ngFor="let location of mapSource$ | async"
-              [title]="location.title"
-              [position]="location.position"
-              (mapClick)="onMarkerClick($event)">
-    </map-advanced-marker>
-  </google-map>
-</div>
+@if (apiLoaded$ | async) {
+  <div>
+    <google-map id="googlemap"
+      [height]="height"
+      [width]="width"
+      [center]="center"
+      [zoom]="zoom"
+      mapId="mapId"
+      [options]="mapOptions"
+      (tilesloaded)="onTilesloaded()">
+      @for (location of mapSource$ | async; track location) {
+        <map-advanced-marker
+          [title]="location.title"
+          [position]="location.position"
+          (mapClick)="onMarkerClick($event)">
+        </map-advanced-marker>
+      }
+    </google-map>
+  </div>
+}

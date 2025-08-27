@@ -5,7 +5,6 @@ import { Observable, Subscription, BehaviorSubject, of } from 'rxjs';
 import { map, shareReplay, filter, mergeMap } from 'rxjs/operators';
 
 import { environment } from '../environments/environment';
-import { UserData } from './app-routing.module';
 
 export { map, shareReplay, of };
 export {
@@ -32,6 +31,14 @@ export interface MetaDescription {
   ngMeta: Meta;
   ngRouter: Router;
   subtitle$: BehaviorSubject<string>;
+}
+
+export type UserData = {
+  metaDescription: {
+    title?: string;
+    description?: string;
+    keywords?: string;
+  };
 }
 
 export function isHandset(observer: BreakpointObserver): Observable<boolean> {

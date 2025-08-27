@@ -10,7 +10,8 @@ import { EventCategory } from '../models';
 import { RoutingTabsComponent } from '../routing-tabs/routing-tabs.component';
 
 @Component({
-  template: ''
+  template: '',
+  standalone: true
 })
 export class EventsTabsComponent extends RoutingTabsComponent implements OnInit {
   isHandset$: Observable<boolean>;

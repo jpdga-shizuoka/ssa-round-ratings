@@ -1,15 +1,29 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
 import { MiscInfo } from '../app-common';
 import {
   BreakpointObserver, Observable, isHandset, of as observableOf
 } from '../ng-utilities';
 import { RemoteService, EventInfo, LocationInfo } from '../remote.service';
 import { getEventTitle, makeMiscInfo } from '../libs';
+import { LocalizePipe } from '../localize.pipe';
+import { GeolinkPipe } from '../geolink.pipe';
+import { SchedulePipe } from '../schedule.pipe';
+import { IcalenderComponent } from '../icalendar/icalendar.component';
 
 @Component({
-  selector: 'app-event-detail',
-  templateUrl: './event-detail.component.html',
-  styleUrls: ['./event-detail.component.css']
+    selector: 'app-event-detail',
+    templateUrl: './event-detail.component.html',
+    styleUrls: ['./event-detail.component.css'],
+    imports: [
+        CommonModule,
+        MatIconModule,
+        LocalizePipe,
+        GeolinkPipe,
+        SchedulePipe,
+        IcalenderComponent
+    ]
 })
 export class EventDetailComponent implements OnInit {
   @Input() event!: EventInfo;

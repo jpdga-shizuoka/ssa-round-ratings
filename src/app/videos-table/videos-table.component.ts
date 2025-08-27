@@ -1,9 +1,17 @@
 import { Component, OnInit, AfterViewInit, ViewChild, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { BreakpointObserver } from '@angular/cdk/layout';
 
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatSort, MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatBottomSheet, MatBottomSheetModule } from '@angular/material/bottom-sheet';
 
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -15,13 +23,28 @@ import { isHandset } from '../ng-utilities';
 import { VideosDataSource } from './videos-datasource';
 import { RemoteService } from '../remote.service';
 import { LocalizeService } from '../localize.service';
+import { LocalizePipe } from '../localize.pipe';
 
 const DISPLAYED_COLUMNS = [['title', 'subttl'], ['year', 'title', 'subttl']];
 
 @Component({
-  selector: 'app-videos-table',
-  templateUrl: './videos-table.component.html',
-  styleUrls: ['./videos-table.component.css']
+    selector: 'app-videos-table',
+    templateUrl: './videos-table.component.html',
+    styleUrls: ['./videos-table.component.css'],
+    imports: [
+        CommonModule,
+        FormsModule,
+        RouterModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatSortModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatIconModule,
+        MatButtonModule,
+        MatBottomSheetModule,
+        LocalizePipe
+    ]
 })
 export class VideosTableComponent implements OnInit, AfterViewInit {
   @Input() pageSizeOptions = [30, 60, 120];

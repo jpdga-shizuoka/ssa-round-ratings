@@ -1,8 +1,8 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false">
     <mat-toolbar id="menu-header"
       [ngClass]="(isHandset$ | async) ? 'menu-header-low' : 'menu-header-high'">
       <span>{{title}}</span>
@@ -64,23 +64,24 @@
   <mat-sidenav-content>
     <mat-toolbar color="primary" [ngClass]="{'toolbar-back': isHandset$ | async}" id="header">
       <span>
-        <div *ngIf="isHandset$ | async; else notHandset">
-          <button
-            type="button"
-            aria-label="Toggle sidenav"
-            mat-icon-button
-            (click)="drawer.toggle()">
-            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-          </button>
-          <span id="toolbar-title">{{subtitle}}</span>
-        </div>
-        <ng-template #notHandset>
+        @if (isHandset$ | async) {
+          <div>
+            <button class="tool-button"
+              type="button"
+              aria-label="Toggle sidenav"
+              mat-icon-button
+              (click)="drawer.toggle()">
+              <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+            </button>
+            <span id="toolbar-title">{{subtitle}}</span>
+          </div>
+        } @else {
           <span>{{subtitle}}</span>
-        </ng-template>
+        }
       </span>
       <span class="title-spacer"></span>
       <span class="title-button-row">
-        <button mat-icon-button aria-label="toggle language" (click)="onClickLanguage()">
+        <button class="tool-button" mat-icon-button aria-label="toggle language" (click)="onClickLanguage()">
           <mat-icon>translate</mat-icon>
         </button>
       </span>

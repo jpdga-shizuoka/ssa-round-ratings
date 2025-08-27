@@ -1,11 +1,13 @@
 <div class="mat-elevation-z1">
   <table class="full-width-table" aria-label="Elements">
     <tbody>
-      <tr *ngFor="let item of list" (click)="onRawClicked(item)" class="element-row">
-        <td>
-          {{item.title}} {{item.subttl}}
-        </td>
-      </tr>
+      @for (item of list; track item) {
+        <tr (click)="onRawClicked(item)" class="element-row">
+          <td>
+            {{item.title}} {{item.subttl}}
+          </td>
+        </tr>
+      }
     </tbody>
   </table>
 </div>

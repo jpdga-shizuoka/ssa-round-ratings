@@ -5,8 +5,9 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 @Component({
-  selector: 'app-reload',
-  template: ''
+    selector: 'app-reload',
+    template: '',
+    standalone: false
 })
 export class ReloadComponent implements OnInit, AfterViewInit {
   private currentpath?: string;
