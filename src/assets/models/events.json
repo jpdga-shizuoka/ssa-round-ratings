@@ -1,4 +1,29 @@
 [
+    {
+    "id": "the29thkantoopenama",
+    "title": "The 29th Kanto Open (Ama)",
+    "location": "shiromigaokasportspark",
+    "period": {
+      "from": "2025-04-05",
+      "to": "2025-04-06"
+    },
+    "layout": {
+      "official": "https://membership.jpdga.jp/event/2025/721_map.jpg"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 65,
+      "misc": 3
+    },
+    "pdga": {
+      "scoreId": "89556",
+      "eventId": "89556"
+    },
+    "jpdga": {
+      "tier":"ABT-A",
+      "eventId": "721"
+    }
+  },
   {
     "id": "the20thmastersnationalchampionship",
     "title": "The 20th Masters National Championships",
