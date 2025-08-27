@@ -40,7 +40,7 @@
     "@types/d3-shape": "^3.1.6",
     "@types/jest": "~26.0.23",
     "@types/node": "~12.11.1",
-    "angular-cli-ghpages": "^1.0.6",
+    "angular-cli-ghpages": "^2.0.3",
     "jest": "~29.7.0",
     "markdown-it": "^14.0.0",
     "markdown-it-container": "^4.0.0",
