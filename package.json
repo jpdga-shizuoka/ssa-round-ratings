@@ -47,6 +47,6 @@
     "markdown-it-ins": "^4.0.0",
     "markdown-it-strikethrough-alt": "^1.0.0",
     "markdown-it-sup": "^2.0.0",
-    "typescript": "5.8.3"
+    "typescript": "^5.9.2"
   }
 }
