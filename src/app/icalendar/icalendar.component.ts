@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { LocalizeService } from '../localize.service';
 import { RemoteService } from '../remote.service';
@@ -12,9 +12,8 @@ import { LocalizePipe } from '../localize.pipe';
     templateUrl: './icalendar.component.html',
     styleUrls: ['./icalendar.component.css'],
     imports: [
-        CommonModule,
-        LocalizePipe
-    ]
+    LocalizePipe
+]
 })
 export class IcalenderComponent implements OnInit {
   @Input() event!: EventInfo;

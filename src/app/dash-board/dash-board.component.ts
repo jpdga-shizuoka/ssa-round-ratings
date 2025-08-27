@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { RouterModule } from '@angular/router';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatIconModule } from '@angular/material/icon';
@@ -23,17 +23,16 @@ const ROUND_COLUMNS_PAST = [['event', 'hla', 'ssa', 'td'], ['year', 'event', 'ro
     templateUrl: './dash-board.component.html',
     styleUrls: ['./dash-board.component.css'],
     imports: [
-        CommonModule,
-        RouterModule,
-        MatIconModule,
-        MatTabsModule,
-        LocalizePipe,
-        PrefaceComponent,
-        EventsTableComponent,
-        LocalTableComponent,
-        RoundsTableComponent,
-        VideosTableComponent
-    ]
+    RouterModule,
+    MatIconModule,
+    MatTabsModule,
+    LocalizePipe,
+    PrefaceComponent,
+    EventsTableComponent,
+    LocalTableComponent,
+    RoundsTableComponent,
+    VideosTableComponent
+]
 })
 export class DashBoardComponent {
   isHandset$: Observable<boolean>;

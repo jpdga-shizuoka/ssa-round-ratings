@@ -8,7 +8,7 @@ import {
   ChangeDetectionStrategy,
   TemplateRef
 } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { trigger, style, animate, transition } from '@angular/animations';
 import { formatLabel, PlacementTypes, StyleTypes, ColorHelper, ScaleType, ChartCommonModule } from '@swimlane/ngx-charts';
 import { ScaleLinear } from 'd3-scale';
@@ -18,35 +18,37 @@ import { Circle, ChartDataExt, ChartDataItem, EventId, Entry } from '../ngx-char
     // tslint:disable-next-line: component-selector
     selector: 'g[ngx-charts-bubble-series-interactive]',
     template: `
-    <svg:g *ngFor="let circle of circles; trackBy: trackBy">
-      <svg:g [attr.transform]="circle.transform">
-        <svg:g
-          ngx-charts-circle
-          [@animationState]="'active'"
-          class="circle"
-          [cx]="0"
-          [cy]="0"
-          [r]="circle.radius"
-          [fill]="circle.color"
-          [style.opacity]="circle.opacity"
-          [class.active]="circle.isActive"
-          [pointerEvents]="'all'"
-          [data]="circle.value"
-          [classNames]="circle.classNames"
-          (select)="onClickBubble($event, circle)"
-          (activate)="activateCircle(circle)"
-          (deactivate)="deactivateCircle(circle)"
-          ngx-tooltip
-          [tooltipDisabled]="tooltipDisabled"
-          [tooltipPlacement]="placementTypes.Top"
-          [tooltipType]="styleTypes.tooltip"
-          [tooltipTitle]="tooltipTemplate ? undefined : getTooltipText(circle)"
-          [tooltipTemplate]="tooltipTemplate"
-          [tooltipContext]="circle.data"
-        />
-      </svg:g>
-    </svg:g>
-  `,
+    @for (circle of circles; track trackBy($index, circle)) {
+      <svg:g>
+        <svg:g [attr.transform]="circle.transform">
+          <svg:g
+            ngx-charts-circle
+            [@animationState]="'active'"
+            class="circle"
+            [cx]="0"
+            [cy]="0"
+            [r]="circle.radius"
+            [fill]="circle.color"
+            [style.opacity]="circle.opacity"
+            [class.active]="circle.isActive"
+            [pointerEvents]="'all'"
+            [data]="circle.value"
+            [classNames]="circle.classNames"
+            (select)="onClickBubble($event, circle)"
+            (activate)="activateCircle(circle)"
+            (deactivate)="deactivateCircle(circle)"
+            ngx-tooltip
+            [tooltipDisabled]="tooltipDisabled"
+            [tooltipPlacement]="placementTypes.Top"
+            [tooltipType]="styleTypes.tooltip"
+            [tooltipTitle]="tooltipTemplate ? undefined : getTooltipText(circle)"
+            [tooltipTemplate]="tooltipTemplate"
+            [tooltipContext]="circle.data"
+            />
+          </svg:g>
+          </svg:g>
+        }
+    `,
     changeDetection: ChangeDetectionStrategy.OnPush,
     animations: [
         trigger('animationState', [
@@ -60,9 +62,8 @@ import { Circle, ChartDataExt, ChartDataItem, EventId, Entry } from '../ngx-char
         ])
     ],
     imports: [
-        CommonModule,
-        ChartCommonModule
-    ]
+    ChartCommonModule
+]
 })
 export class BubbleSeriesInteractiveComponent implements OnChanges {
   @Input() data!: ChartDataExt;

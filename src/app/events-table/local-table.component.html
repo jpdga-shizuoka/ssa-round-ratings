@@ -30,11 +30,13 @@
   <ng-container matColumnDef="expandedDetail">
     <td mat-cell class="expanded-cell"
       *matCellDef="let element" [attr.colspan]="(displayedColumns$ | async)?.length">
-      <div class="event-element-detail" 
+      <div class="event-element-detail"
         [@detailExpand]="isDetailExpand(element) ? 'expanded' : 'collapsed'"
         (@detailExpand.done)="showDetail = isDetailExpand(element)">
-        <app-event-detail [event]="element" *ngIf="showDetail || expandedElement">
-        </app-event-detail>
+        @if (showDetail || expandedElement) {
+          <app-event-detail [event]="element">
+          </app-event-detail>
+        }
       </div>
     </td>
   </ng-container>
@@ -46,13 +48,17 @@
     (click)="onRawClicked(element)">
   </tr>
   <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="event-detail-row"></tr>
-  <div *ngIf="showMore">
-    <tr mat-footer-row *matFooterRowDef="['seemore']">
-  </div>
-</table>
+  @if (showMore) {
+    <div>
+      <tr mat-footer-row *matFooterRowDef="['seemore']">
+      </div>
+    }
+  </table>
 
-<mat-paginator #paginator *ngIf="!isMinimum" 
-  [length]="dataSource.data.length" 
-  [pageSize]="pageSizeOptions[0]" 
-  [pageSizeOptions]="pageSizeOptions">
-</mat-paginator>
+  @if (!isMinimum) {
+    <mat-paginator #paginator
+      [length]="dataSource.data.length"
+      [pageSize]="pageSizeOptions[0]"
+      [pageSizeOptions]="pageSizeOptions">
+    </mat-paginator>
+  }

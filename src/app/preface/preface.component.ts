@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { MatExpansionModule } from '@angular/material/expansion';
 import { LocalizeService } from '../localize.service';
 import { LocalizePipe } from '../localize.pipe';
@@ -9,10 +9,9 @@ import { LocalizePipe } from '../localize.pipe';
     templateUrl: './preface.component.html',
     styleUrls: ['./preface.component.css'],
     imports: [
-        CommonModule,
-        MatExpansionModule,
-        LocalizePipe
-    ]
+    MatExpansionModule,
+    LocalizePipe
+]
 })
 export class PrefaceComponent {
 

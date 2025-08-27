@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule, Location } from '@angular/common';
+import { Location } from '@angular/common';
 import { Router, ActivatedRoute, RouterModule } from '@angular/router';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -18,13 +18,12 @@ const TABS = ['events', 'locations'];
     templateUrl: './events-tabs.component.html',
     styleUrls: ['./events-tabs.component.css'],
     imports: [
-        CommonModule,
-        RouterModule,
-        MatTabsModule,
-        EventsTableComponent,
-        EventsMapComponent,
-        LocalizePipe
-    ]
+    RouterModule,
+    MatTabsModule,
+    EventsTableComponent,
+    EventsMapComponent,
+    LocalizePipe
+]
 })
 export class UpcomingTabsComponent extends EventsTabsComponent {
   constructor(

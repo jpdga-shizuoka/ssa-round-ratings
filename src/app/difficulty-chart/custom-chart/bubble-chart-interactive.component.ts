@@ -9,7 +9,7 @@ import {
   ContentChild,
   TemplateRef
 } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { trigger, style, animate, transition } from '@angular/animations';
 import { scaleLinear, ScaleLinear } from 'd3-scale';
 import {
@@ -42,76 +42,80 @@ import { BubbleSeriesInteractiveComponent } from './bubble-series-interactive.co
       (legendLabelClick)="onClickLabel($event)"
       (legendLabelActivate)="onActivate($event)"
       (legendLabelDeactivate)="onDeactivate($event)"
-    >
+      >
       <svg:defs>
         <svg:clipPath [attr.id]="clipPathId">
           <svg:rect
             [attr.width]="dims.width + 10"
             [attr.height]="dims.height + 10"
             [attr.transform]="'translate(-5, -5)'"
-          />
-        </svg:clipPath>
-      </svg:defs>
-      <svg:g [attr.transform]="transform" class="bubble-chart chart">
-        <svg:g
-          ngx-charts-x-axis
-          *ngIf="xAxis"
-          [showGridLines]="showGridLines"
-          [dims]="dims"
-          [xScale]="xScale"
-          [showLabel]="showXAxisLabel"
-          [labelText]="xAxisLabel"
-          [tickFormatting]="xAxisTickFormatting"
-          [ticks]="xAxisTicks"
-          (dimensionsChanged)="updateXAxisHeight($event)"
-        />
-        <svg:g
-          ngx-charts-y-axis
-          *ngIf="yAxis"
-          [showGridLines]="showGridLines"
-          [yScale]="yScale"
-          [dims]="dims"
-          [showLabel]="showYAxisLabel"
-          [labelText]="yAxisLabel"
-          [tickFormatting]="yAxisTickFormatting"
-          [ticks]="yAxisTicks"
-          (dimensionsChanged)="updateYAxisWidth($event)"
-        />
-        <svg:rect
-          class="bubble-chart-area"
-          x="0"
-          y="0"
-          [attr.width]="dims.width"
-          [attr.height]="dims.height"
-          style="fill: rgb(255, 0, 0); opacity: 0; cursor: 'auto';"
-          (mouseenter)="deactivateAll()"
-        />
-        <svg:g [attr.clip-path]="clipPath">
-          <svg:g *ngFor="let series of data; trackBy: trackBy" [@animationState]="'active'">
-            <svg:g
-              ngx-charts-bubble-series-interactive
-              [xScale]="xScale"
-              [yScale]="yScale"
-              [rScale]="rScale"
-              [xScaleType]="xScaleType"
-              [yScaleType]="yScaleType"
-              [xAxisLabel]="xAxisLabel"
-              [yAxisLabel]="yAxisLabel"
-              [colors]="colors"
-              [data]="series"
-              [activeEntries]="activeEntries"
-              [eventId]="eventId"
-              [tooltipDisabled]="tooltipDisabled"
-              [tooltipTemplate]="tooltipTemplate"
-              (select)="onClickSeries($event, series)"
-              (activate)="onActivate($event)"
-              (deactivate)="onDeactivate($event)"
             />
-          </svg:g>
-        </svg:g>
-      </svg:g>
-    </ngx-charts-chart>
-  `,
+          </svg:clipPath>
+          </svg:defs>
+          <svg:g [attr.transform]="transform" class="bubble-chart chart">
+            @if (xAxis) {
+              <svg:g
+                ngx-charts-x-axis
+                [showGridLines]="showGridLines"
+                [dims]="dims"
+                [xScale]="xScale"
+                [showLabel]="showXAxisLabel"
+                [labelText]="xAxisLabel"
+                [tickFormatting]="xAxisTickFormatting"
+                [ticks]="xAxisTicks"
+                (dimensionsChanged)="updateXAxisHeight($event)"
+                />
+            }
+            @if (yAxis) {
+              <svg:g
+                ngx-charts-y-axis
+                [showGridLines]="showGridLines"
+                [yScale]="yScale"
+                [dims]="dims"
+                [showLabel]="showYAxisLabel"
+                [labelText]="yAxisLabel"
+                [tickFormatting]="yAxisTickFormatting"
+                [ticks]="yAxisTicks"
+                (dimensionsChanged)="updateYAxisWidth($event)"
+                />
+            }
+            <svg:rect
+              class="bubble-chart-area"
+              x="0"
+              y="0"
+              [attr.width]="dims.width"
+              [attr.height]="dims.height"
+              style="fill: rgb(255, 0, 0); opacity: 0; cursor: 'auto';"
+              (mouseenter)="deactivateAll()"
+              />
+            <svg:g [attr.clip-path]="clipPath">
+              @for (series of data; track trackBy($index, series)) {
+                <svg:g [@animationState]="'active'">
+                  <svg:g
+                    ngx-charts-bubble-series-interactive
+                    [xScale]="xScale"
+                    [yScale]="yScale"
+                    [rScale]="rScale"
+                    [xScaleType]="xScaleType"
+                    [yScaleType]="yScaleType"
+                    [xAxisLabel]="xAxisLabel"
+                    [yAxisLabel]="yAxisLabel"
+                    [colors]="colors"
+                    [data]="series"
+                    [activeEntries]="activeEntries"
+                    [eventId]="eventId"
+                    [tooltipDisabled]="tooltipDisabled"
+                    [tooltipTemplate]="tooltipTemplate"
+                    (select)="onClickSeries($event, series)"
+                    (activate)="onActivate($event)"
+                    (deactivate)="onDeactivate($event)"
+                    />
+                  </svg:g>
+                }
+                </svg:g>
+                </svg:g>
+              </ngx-charts-chart>
+    `,
     styleUrls: ['./base-chart.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
     encapsulation: ViewEncapsulation.None,
@@ -128,10 +132,9 @@ import { BubbleSeriesInteractiveComponent } from './bubble-series-interactive.co
         ])
     ],
     imports: [
-        CommonModule,
-        ChartCommonModule,
-        BubbleSeriesInteractiveComponent
-    ]
+    ChartCommonModule,
+    BubbleSeriesInteractiveComponent
+]
 })
 export class BubbleChartInteractiveComponent extends BaseChartComponent {
   @Input() showGridLines: boolean = true;

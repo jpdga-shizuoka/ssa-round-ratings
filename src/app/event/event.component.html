@@ -1,154 +1,182 @@
 <div class="app-container">
-  <div *ngIf="event$ | async as event">
-    <h1>{{event.title | localize}}</h1>
-    <table class="mat-elevation-z1">
-      <tbody>
-        <tr class="element-row">
-          <td>{{'Date' | localize}}</td>
-          <td>
-            <div *ngIf="showCalendar(event); else noCalendar">
-              <div *ngIf="location$ | async as location">
-                <div *ngIf="location.weather; else noWeather">
-                  {{event.period | period}}
-                  <a href="{{location.weather}}" target="_blank" rel="noopener">
-                    {{"Weather" | localize}}&#9728;
+  @if (event$ | async; as event) {
+    <div>
+      <h1>{{event.title | localize}}</h1>
+      <table class="mat-elevation-z1">
+        <tbody>
+          <tr class="element-row">
+            <td>{{'Date' | localize}}</td>
+            <td>
+              @if (showCalendar(event)) {
+                <div>
+                  @if (location$ | async; as location) {
+                    <div>
+                      @if (location.weather) {
+                        <div>
+                          {{event.period | period}}
+                          <a href="{{location.weather}}" target="_blank" rel="noopener">
+                            {{"Weather" | localize}}&#9728;
+                          </a>
+                        </div>
+                      } @else {
+                        {{event.period | period}}
+                      }
+                    </div>
+                  }
+                </div>
+              } @else {
+                @if (location$ | async; as location) {
+                  <div>
+                    {{event.period | period}}
+                  </div>
+                }
+              }
+              @if (canceled) {
+                <span class="canceled">CANCELED</span>
+              }
+            </td>
+          </tr>
+          @if (showCalendar(event)) {
+            <tr class="element-row">
+              <td>iCalendar</td>
+              <td>
+                <app-icalendar [event]="event"></app-icalendar>
+              </td>
+            </tr>
+          }
+          <tr class="element-row">
+            <td>{{'Course' | localize}}</td>
+            <td>
+              @if (location$ | async; as location) {
+                <div>
+                  <a href="{{location | geolink}}" target="_blank" rel="noopener">
+                    {{location.title | localize}}, {{location.prefecture | localize}}
                   </a>
                 </div>
-                <ng-template #noWeather>
-                  {{event.period | period}}
-                </ng-template>
-              </div>
-            </div>
-            <ng-template #noCalendar>
-              <div *ngIf="location$ | async as location">
-                {{event.period | period}}
-              </div>
-            </ng-template>
-            <span *ngIf="canceled" class="canceled">CANCELED</span>
-          </td>
-        </tr>
+              }
+            </td>
+          </tr>
+          @if (layouts.length) {
+            <tr class="element-row">
+              <td>{{'Layouts' | localize}}</td>
+              <td>
+                @for (info of layouts; track info) {
+                  <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
+                    {{info.title | localize}}
+                  </a>
+                }
+              </td>
+            </tr>
+          }
+          @if (totalPlayers && !canceled) {
+            <tr class="element-row">
+              <td>{{'Participant' | localize}}</td>
+              <td>{{totalPlayers}}</td>
+            </tr>
+          }
+          @if (pdgaInfo.length && !canceled) {
+            <tr class="element-row">
+              <td>PDGA</td>
+              <td class="info-container">
+                @for (info of pdgaInfo; track info) {
+                  <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
+                    {{info.title | localize}}
+                  </a>
+                }
+              </td>
+            </tr>
+          }
+          @if (pdga2nd.length && !canceled) {
+            <tr class="element-row">
+              <td>PDGA#2</td>
+              <td class="info-container">
+                @for (info of pdga2nd; track info) {
+                  <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
+                    {{info.title | localize}}
+                  </a>
+                }
+              </td>
+            </tr>
+          }
+          @if (jpdgaInfo.length && !canceled) {
+            <tr class="element-row">
+              <td>JPDGA</td>
+              <td class="info-container">
+                @for (info of jpdgaInfo; track info) {
+                  <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
+                    {{info.title | localize}}
+                  </a>
+                }
+              </td>
+            </tr>
+          }
+          @if (event.budget) {
+            <tr class="element-row">
+              <td>
+                <a routerLink="/about">
+                  {{'Pro Purse' | localize}}
+                </a>
+              </td>
+              <td>
+                {{'Pro purse' | localize}}: {{roundUnderThousand(event.budget.totalprize) | currency:'JPY':'symbol':'1.0-0'}}<br>
+                {{'Paid out % of Fee' | localize}}: {{(event.budget.prizeratio ?? 0) * 100 | number:'1.0-0'}}%,
+                {{'Paid out % of Players' | localize}}: {{(event.budget.paidratio ?? 0) * 100 | number:'1.0-0'}}%
+              </td>
+            </tr>
+          }
+          @if (miscInfo.length) {
+            <tr class="element-row">
+              <td>{{'Info' | localize}}</td>
+              <td class="info-container">
+                @for (info of miscInfo; track info) {
+                  <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
+                    {{info.title | localize}}
+                  </a>
+                }
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
 
-        <tr class="element-row" *ngIf="showCalendar(event)">
-          <td>iCalendar</td>
-          <td>
-            <app-icalendar [event]="event"></app-icalendar>
-          </td>
-        </tr>
-        
-        <tr class="element-row">
-          <td>{{'Course' | localize}}</td>
-          <td>
-            <div *ngIf="location$ | async as location">
-              <a href="{{location | geolink}}" target="_blank" rel="noopener">
-                {{location.title | localize}}, {{location.prefecture | localize}}
-              </a>
-            </div>
-          </td>
-        </tr>
+  @if (roundList$ | async; as list) {
+    <div>
+      <h2>{{'Stats' | localize}}</h2>
+      <app-round-list [list]="list">
+      </app-round-list>
+    </div>
+  }
 
-        <tr class="element-row" *ngIf="layouts.length">
-          <td>{{'Layouts' | localize}}</td>
-          <td>
-            <ng-template ngFor let-info [ngForOf]="layouts">
-              <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
-                {{info.title | localize}}
-              </a>
-            </ng-template>
-          </td>
-        </tr>
-        
-        <tr class="element-row" *ngIf="totalPlayers && !canceled">
-          <td>{{'Participant' | localize}}</td>
-          <td>{{totalPlayers}}</td>
-        </tr>
-    
-        <tr class="element-row" *ngIf="pdgaInfo.length && !canceled">
-          <td>PDGA</td>
-          <td class="info-container">
-            <ng-template ngFor let-info [ngForOf]="pdgaInfo">
-              <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
-                {{info.title | localize}}
-              </a>
-            </ng-template>
-          </td>
-        </tr>
+  @if (videoInfo.length) {
+    <div>
+      <h2>{{'Videos' | localize}}</h2>
+      <app-video-list [list]="videoInfo">
+      </app-video-list>
+    </div>
+  }
 
-        <tr class="element-row" *ngIf="pdga2nd.length && !canceled">
-          <td>PDGA#2</td>
-          <td class="info-container">
-            <ng-template ngFor let-info [ngForOf]="pdga2nd">
-              <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
-                {{info.title | localize}}
-              </a>
-            </ng-template>
-          </td>
-        </tr>
-        
-        <tr class="element-row" *ngIf="jpdgaInfo.length && !canceled">
-          <td>JPDGA</td>
-          <td class="info-container">
-            <ng-template ngFor let-info [ngForOf]="jpdgaInfo">
-              <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
-                {{info.title | localize}}
-              </a>
-            </ng-template>
-          </td>
-        </tr>
+  @if (photoInfo.length) {
+    <div>
+      <h2>{{'Photos' | localize}}</h2>
+      <app-photo-list [list]="photoInfo">
+      </app-photo-list>
+    </div>
+  }
 
-        <tr class="element-row" *ngIf="event.budget">
-          <td>
-            <a routerLink="/about">
-              {{'Pro Purse' | localize}}
-            </a>
-          </td>
-          <td>
-            {{'Pro purse' | localize}}: {{roundUnderThousand(event.budget.totalprize) | currency:'JPY':'symbol':'1.0-0'}}<br>
-              {{'Paid out % of Fee' | localize}}: {{(event.budget.prizeratio ?? 0) * 100 | number:'1.0-0'}}%,
-              {{'Paid out % of Players' | localize}}: {{(event.budget.paidratio ?? 0) * 100 | number:'1.0-0'}}%
-          </td>
-        </tr>
-    
-        <tr class="element-row" *ngIf="miscInfo.length">
-          <td>{{'Info' | localize}}</td>
-          <td class="info-container">
-            <ng-template ngFor let-info [ngForOf]="miscInfo">
-              <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
-                {{info.title | localize}}
-              </a>
-            </ng-template>
-          </td>
-        </tr>
-      </tbody>
-  </table>
+  @if (event$ | async; as event) {
+    <div>
+      <h2>{{'History' | localize}}</h2>
+      <app-event-list [event]="event"></app-event-list>
+    </div>
+  }
 
-  </div>
-
-  <div *ngIf="roundList$ | async as list">
-    <h2>{{'Stats' | localize}}</h2>
-    <app-round-list [list]="list">
-    </app-round-list>
-  </div>
-
-  <div *ngIf="videoInfo.length">
-    <h2>{{'Videos' | localize}}</h2>
-    <app-video-list [list]="videoInfo">
-    </app-video-list>
-  </div>
-
-  <div *ngIf="photoInfo.length">
-    <h2>{{'Photos' | localize}}</h2>
-    <app-photo-list [list]="photoInfo">
-    </app-photo-list>
-  </div>
-
-  <div *ngIf="event$ | async as event">
-    <h2>{{'History' | localize}}</h2>
-    <app-event-list [event]="event"></app-event-list>
-  </div>
-
-  <div *ngIf="roundList$ | async">
-    <h2>{{'Difficulty' | localize}}</h2>
-    <app-difficulty-chart [eventId]="eventId">
-    </app-difficulty-chart>
-  </div>
+  @if (roundList$ | async) {
+    <div>
+      <h2>{{'Difficulty' | localize}}</h2>
+      <app-difficulty-chart [eventId]="eventId">
+      </app-difficulty-chart>
+    </div>
+  }
 </div>

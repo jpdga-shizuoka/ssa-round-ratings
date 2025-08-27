@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { forkJoin } from 'rxjs';
 import { LegendPosition, NgxChartsModule } from '@swimlane/ngx-charts';
 
@@ -37,9 +37,8 @@ function calcScaleMax(orgs: Orgs): number {
     templateUrl: './members-chart.component.html',
     styleUrls: ['./members-chart.component.css'],
     imports: [
-        CommonModule,
-        NgxChartsModule
-    ]
+    NgxChartsModule
+]
 })
 export class MembersChartComponent implements OnInit {
   chartSource?: CData[];

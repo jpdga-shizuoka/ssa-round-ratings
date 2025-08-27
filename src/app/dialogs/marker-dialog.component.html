@@ -1,20 +1,28 @@
 <h1 mat-dialog-title>
   {{(location$ | async)?.title | localize}}, {{(location$ | async)?.prefecture | localize}}
 </h1>
-<div mat-dialog-content *ngIf="showList">
-  <mat-nav-list>
-    <mat-list-item *ngFor="let event of events">
-      <span>{{event.title | localize | titlecase}}</span>
-      <span class="spacer"></span>
-      <button mat-stroked-button [mat-dialog-close]="event" *ngIf="showEventBotton">
-        {{'Detail' | localize}}
-      </button>
-    </mat-list-item>
-  </mat-nav-list>
-</div>
-<div mat-dialog-actions *ngIf="showDialogBotton">
-  <span class="spacer"></span>
-  <button mat-button [mat-dialog-close]="data">
-    {{'Search' | localize}}
-  </button>
-</div>
+@if (showList) {
+  <div mat-dialog-content>
+    <mat-nav-list>
+      @for (event of events; track event) {
+        <mat-list-item>
+          <span>{{event.title | localize | titlecase}}</span>
+          <span class="spacer"></span>
+          @if (showEventBotton) {
+            <button mat-stroked-button [mat-dialog-close]="event">
+              {{'Detail' | localize}}
+            </button>
+          }
+        </mat-list-item>
+      }
+    </mat-nav-list>
+  </div>
+}
+@if (showDialogBotton) {
+  <div mat-dialog-actions>
+    <span class="spacer"></span>
+    <button mat-button [mat-dialog-close]="data">
+      {{'Search' | localize}}
+    </button>
+  </div>
+}

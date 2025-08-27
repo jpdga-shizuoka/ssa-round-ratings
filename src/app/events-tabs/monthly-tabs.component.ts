@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule, Location } from '@angular/common';
+import { Location } from '@angular/common';
 import { Router, ActivatedRoute, RouterModule } from '@angular/router';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { MatBottomSheet, MatBottomSheetModule } from '@angular/material/bottom-sheet';
@@ -21,14 +21,13 @@ const TABS = ['events', 'locations'];
     templateUrl: './monthly-tabs.component.html',
     styleUrls: ['./events-tabs.component.css'],
     imports: [
-        CommonModule,
-        RouterModule,
-        MatBottomSheetModule,
-        MatTabsModule,
-        MonthlyTableComponent,
-        EventsMapComponent,
-        LocalizePipe
-    ]
+    RouterModule,
+    MatBottomSheetModule,
+    MatTabsModule,
+    MonthlyTableComponent,
+    EventsMapComponent,
+    LocalizePipe
+]
 })
 export class MonthlyTabsComponent extends EventsTabsComponent {
   private ss?: Subscription;

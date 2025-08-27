@@ -1,5 +1,5 @@
 import { Component, HostListener, Inject, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { MatBottomSheetRef, MAT_BOTTOM_SHEET_DATA } from '@angular/material/bottom-sheet';
 import { MatIconModule } from '@angular/material/icon';
 import {YouTubePlayer, YOUTUBE_PLAYER_CONFIG} from '@angular/youtube-player';
@@ -22,11 +22,10 @@ const VIDEO_PADINGS = 16 * 2;
     templateUrl: './video-bottomsheet.component.html',
     styleUrls: ['./video-bottomsheet.component.css'],
     imports: [
-        CommonModule,
-        YouTubePlayer,
-        MatIconModule,
-        LocalizePipe
-    ],
+    YouTubePlayer,
+    MatIconModule,
+    LocalizePipe
+],
     providers: [{
             provide: YOUTUBE_PLAYER_CONFIG,
             useValue: {

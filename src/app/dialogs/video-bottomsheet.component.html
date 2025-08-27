@@ -1,14 +1,15 @@
 <div class="video-view">
-  <div *ngIf="isYoutubeVideo; else facebookVideo">
-    <div class="yt-view">
-      <youtube-player
-        [videoId]="videoId"
-        [width]="videoWidth"
-        [height]="videoHeight"
-        (stateChange)="onStateChange($event)"/>
+  @if (isYoutubeVideo) {
+    <div>
+      <div class="yt-view">
+        <youtube-player
+          [videoId]="videoId"
+          [width]="videoWidth"
+          [height]="videoHeight"
+          (stateChange)="onStateChange($event)"/>
+      </div>
     </div>
-  </div>
-  <ng-template #facebookVideo>
+  } @else {
     <div class="fb-view">
       <h1>
         <a href="{{video.url}}" target="_blank" rel="noopener">
@@ -19,12 +20,12 @@
         </a>
       </h1>
     </div>
-  </ng-template>
+  }
   <div>
     <p>{{title}}</p>
     <h3>
       {{event | localize}}
     </h3>
     <p>{{year}}</p>
-  <div>
-</div>
+    <div>
+    </div>

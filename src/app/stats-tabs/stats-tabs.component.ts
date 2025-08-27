@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule, Location } from '@angular/common';
+import { Location } from '@angular/common';
 import { Router, ActivatedRoute, RouterModule } from '@angular/router';
 import { MatTabsModule } from '@angular/material/tabs';
 
@@ -18,16 +18,15 @@ const TABS = ['difficulty', 'players', 'memberships', 'reports'];
     templateUrl: './stats-tabs.component.html',
     styleUrls: ['./stats-tabs.component.css'],
     imports: [
-        CommonModule,
-        RouterModule,
-        MatTabsModule,
-        LocalizePipe,
-        DifficultyChartComponent,
-        TermsComponent,
-        TotalPlayersComponent,
-        MembersChartComponent,
-        AnnualReportsComponent
-    ]
+    RouterModule,
+    MatTabsModule,
+    LocalizePipe,
+    DifficultyChartComponent,
+    TermsComponent,
+    TotalPlayersComponent,
+    MembersChartComponent,
+    AnnualReportsComponent
+]
 })
 export class StatsTabsComponent extends RoutingTabsComponent {
   constructor(

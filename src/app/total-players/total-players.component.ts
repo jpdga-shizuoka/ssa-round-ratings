@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { LegendPosition, Color, NgxChartsModule } from '@swimlane/ngx-charts';
 import { RemoteService } from '../remote.service';
 import { TotalYearPlayers } from '../models';
@@ -19,9 +19,8 @@ interface ChartData {
     templateUrl: './total-players.component.html',
     styleUrls: ['./total-players.component.css'],
     imports: [
-        CommonModule,
-        NgxChartsModule
-    ]
+    NgxChartsModule
+]
 })
 export class TotalPlayersComponent implements OnInit {
   chartSource?: ChartData[];

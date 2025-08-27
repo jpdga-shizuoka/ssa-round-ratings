@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { MatBottomSheetRef, MAT_BOTTOM_SHEET_DATA } from '@angular/material/bottom-sheet';
 import { MatListModule } from '@angular/material/list';
 
@@ -24,9 +24,8 @@ const MONTHLY_DIALOG_CONTENT = [
     templateUrl: './notice-bottomsheet.component.html',
     styleUrls: ['./notice-bottomsheet.component.css'],
     imports: [
-        CommonModule,
-        MatListModule
-    ]
+    MatListModule
+]
 })
 export class NoticeBottomsheetComponent {
   constructor(

@@ -17,58 +17,70 @@
     </tr>
     <tr class="element-row mat-row">
       <td>SSA</td>
-      <td *ngIf="primaryLanguage">
-        Your PDGA Player Rating (PR) is a number that shows how close your
-        average round scores are compared to the course rating,
-        called the <span>SSA (Scratch Scoring Averages</span>,
-        of the courses you’ve played in competition.
-        Players who average the SSA on courses played will have a rating of
-        1000 and are considered “scratch players”.
-        A player who averages scores lower than <span>SSA</span>s on course they’ve
-        played will have a rating over 1000.
-        <a href="https://www.pdga.com/tags/ssa">Excerpt from the PDGA</a>
-      </td>
-      <td *ngIf="!primaryLanguage">
-        1000点のプレーヤー•レーティングを持つスクラッチ•プレーヤーが,
-        当該コースをラウンドした際に期待されるラウンド•スコアを,
-        <span>SSA (Scratch Scoring Averages)</span> と呼ぶ.
-        よって<span>SSA</span>を下回るスコアでラウンドしたプレーヤーのラウンド•レーティングは,
-        1000点を超える.
-        大会コースにはコース•ディレクターが設定する合計パーがあるが,
-        <span>SSA</span>は,
-        その試合に参加するプレーヤー全員のラウンド•レーティングから,
-        統計的に求めた合計パーと言え,
-        一般的に両者の数値は異なる.
-        参加選手のプレーヤー•レーティングが物差しに使われるため,
-        大会を横並びに比較する際に便利である.
-        なお1ラウンド=18ホールでないコースでは,
-        比較のため18ホール相当に正規化した.
-        <a href="https://www.pdga.com/tags/ssa">PDGAの説明参照</a>
-      </td>
+      @if (primaryLanguage) {
+        <td>
+          Your PDGA Player Rating (PR) is a number that shows how close your
+          average round scores are compared to the course rating,
+          called the <span>SSA (Scratch Scoring Averages</span>,
+          of the courses you’ve played in competition.
+          Players who average the SSA on courses played will have a rating of
+          1000 and are considered “scratch players”.
+          A player who averages scores lower than <span>SSA</span>s on course they’ve
+          played will have a rating over 1000.
+          <a href="https://www.pdga.com/tags/ssa">Excerpt from the PDGA</a>
+        </td>
+      }
+      @if (!primaryLanguage) {
+        <td>
+          1000点のプレーヤー•レーティングを持つスクラッチ•プレーヤーが,
+          当該コースをラウンドした際に期待されるラウンド•スコアを,
+          <span>SSA (Scratch Scoring Averages)</span> と呼ぶ.
+          よって<span>SSA</span>を下回るスコアでラウンドしたプレーヤーのラウンド•レーティングは,
+          1000点を超える.
+          大会コースにはコース•ディレクターが設定する合計パーがあるが,
+          <span>SSA</span>は,
+          その試合に参加するプレーヤー全員のラウンド•レーティングから,
+          統計的に求めた合計パーと言え,
+          一般的に両者の数値は異なる.
+          参加選手のプレーヤー•レーティングが物差しに使われるため,
+          大会を横並びに比較する際に便利である.
+          なお1ラウンド=18ホールでないコースでは,
+          比較のため18ホール相当に正規化した.
+          <a href="https://www.pdga.com/tags/ssa">PDGAの説明参照</a>
+        </td>
+      }
     </tr>
     <tr class="element-row mat-row">
       <td>HLA</td>
-      <td *ngIf="primaryLanguage">
-        Average Length (meter) of Holes of a course
-      </td>
-      <td *ngIf="!primaryLanguage">
-        当該コースの平均ホール長(メートル)
-      </td>
+      @if (primaryLanguage) {
+        <td>
+          Average Length (meter) of Holes of a course
+        </td>
+      }
+      @if (!primaryLanguage) {
+        <td>
+          当該コースの平均ホール長(メートル)
+        </td>
+      }
     </tr>
     <tr class="element-row mat-row">
       <td>TD</td>
-      <td *ngIf="primaryLanguage">
-        The difficulty of the course increases simply by increasing the distance.
-        <span>TD (Technical Difficulty)</span> is one of difficulties excluding the difficulty due to the distance,
-        which is calculated according to the following equation;
-        <span>TD = SSA / HLA * 10;</span>
-      </td>
-      <td *ngIf="!primaryLanguage">
-        コースの難度は単純に距離を伸ばせば上がるが,
-        その距離による難度を排した技術的な難度を表す指標として,
-        以下の方程式に従い算出した実験的な数値;<br/>
-        <span>TD = SSA / HLA * 10;</span>
-      </td>
+      @if (primaryLanguage) {
+        <td>
+          The difficulty of the course increases simply by increasing the distance.
+          <span>TD (Technical Difficulty)</span> is one of difficulties excluding the difficulty due to the distance,
+          which is calculated according to the following equation;
+          <span>TD = SSA / HLA * 10;</span>
+        </td>
+      }
+      @if (!primaryLanguage) {
+        <td>
+          コースの難度は単純に距離を伸ばせば上がるが,
+          その距離による難度を排した技術的な難度を表す指標として,
+          以下の方程式に従い算出した実験的な数値;<br/>
+          <span>TD = SSA / HLA * 10;</span>
+        </td>
+      }
     </tr>
   </tbody>
 </table>

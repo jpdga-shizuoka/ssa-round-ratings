@@ -1,46 +1,55 @@
 <table class='event-detailfull-width-table'>
   <tbody>
-    <tr class="element-row" *ngIf="showMonthly$ | async">
-      <td>{{'Month' | localize}}</td>
-      <td>{{event.schedule | schedule:'month'}}</td>
-    </tr>
+    @if (showMonthly$ | async) {
+      <tr class="element-row">
+        <td>{{'Month' | localize}}</td>
+        <td>{{event.schedule | schedule:'month'}}</td>
+      </tr>
+    }
     <tr class="element-row">
       <td>{{'Course' | localize}}</td>
       <td class="info-container">
-        <div *ngIf="location$ | async as location">
-          <div *ngIf="location.weather; else noWeather">
-            <a href="{{location?.geolocation | geolink}}" target="_blank" rel="noopener">
-              {{location.title | localize}}, {{location.prefecture | localize}}
-            </a>
-            <a href="{{location.weather}}" target="_blank" rel="noopener">
-              {{"Weather" | localize}}&#9728;
-            </a>
+        @if (location$ | async; as location) {
+          <div>
+            @if (location.weather) {
+              <div>
+                <a href="{{location?.geolocation | geolink}}" target="_blank" rel="noopener">
+                  {{location.title | localize}}, {{location.prefecture | localize}}
+                </a>
+                <a href="{{location.weather}}" target="_blank" rel="noopener">
+                  {{"Weather" | localize}}&#9728;
+                </a>
+              </div>
+            } @else {
+              <a href="{{location?.geolocation | geolink}}" target="_blank" rel="noopener">
+                {{location.title | localize}}, {{location.prefecture | localize}}
+              </a>
+            }
           </div>
-          <ng-template #noWeather>
-            <a href="{{location?.geolocation | geolink}}" target="_blank" rel="noopener">
-              {{location.title | localize}}, {{location.prefecture | localize}}
-            </a>
-          </ng-template>
-        </div>
+        }
       </td>
     </tr>
-    <tr class="element-row" *ngIf="miscInfo.length">
-      <td>{{'Info' | localize}}</td>
-      <td>
-        <div class="info-container">
-          <ng-template ngFor let-info [ngForOf]="miscInfo">
-            <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
-              {{info.title | localize}}
-            </a>
-          </ng-template>
-        </div>
-      </td>
-    </tr>
-    <tr class="element-row" *ngIf="!isMonthly">
-      <td>iCalendar</td>
-      <td>
-        <app-icalendar [event]="event"></app-icalendar>
-      </td>
-    </tr>
+    @if (miscInfo.length) {
+      <tr class="element-row">
+        <td>{{'Info' | localize}}</td>
+        <td>
+          <div class="info-container">
+            @for (info of miscInfo; track info) {
+              <a href="{{info.url}}" class="detail-link" target="_blank" rel="noopener">
+                {{info.title | localize}}
+              </a>
+            }
+          </div>
+        </td>
+      </tr>
+    }
+    @if (!isMonthly) {
+      <tr class="element-row">
+        <td>iCalendar</td>
+        <td>
+          <app-icalendar [event]="event"></app-icalendar>
+        </td>
+      </tr>
+    }
   </tbody>
 </table>

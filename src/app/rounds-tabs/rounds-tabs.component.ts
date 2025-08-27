@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule, Location } from '@angular/common';
+import { Location } from '@angular/common';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Router, ActivatedRoute, RouterModule } from '@angular/router';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -23,15 +23,14 @@ const TABS = ['events', 'rounds', 'videos', 'locations'];
     templateUrl: './rounds-tabs.component.html',
     styleUrls: ['./rounds-tabs.component.css'],
     imports: [
-        CommonModule,
-        RouterModule,
-        MatTabsModule,
-        EventsTableComponent,
-        RoundsTableComponent,
-        VideosTableComponent,
-        EventsMapComponent,
-        LocalizePipe
-    ]
+    RouterModule,
+    MatTabsModule,
+    EventsTableComponent,
+    RoundsTableComponent,
+    VideosTableComponent,
+    EventsMapComponent,
+    LocalizePipe
+]
 })
 export class RoundsTabsComponent extends RoutingTabsComponent {
   isHandset$: Observable<boolean>;

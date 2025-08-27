@@ -1,13 +1,17 @@
 <div class="app-rounds-table">
-  <div class="search" *ngIf="!isMinimum">
-    <mat-form-field class="search-box">
-      <input matInput #filter [(ngModel)]="search" (keyup)="applyFilter(filter.value)" placeholder="Search...">
-      <button mat-button *ngIf="search" matSuffix mat-icon-button aria-label="Clear" (click)="applyFilter('')">
-        <mat-icon>close</mat-icon>
-      </button>
-    </mat-form-field>
-    <div class='search-spacer'></div>
-  </div>
+  @if (!isMinimum) {
+    <div class="search">
+      <mat-form-field class="search-box">
+        <input matInput #filter [(ngModel)]="search" (keyup)="applyFilter(filter.value)" placeholder="Search...">
+        @if (search) {
+          <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="applyFilter('')">
+            <mat-icon>close</mat-icon>
+          </button>
+        }
+      </mat-form-field>
+      <div class='search-spacer'></div>
+    </div>
+  }
 
   <table mat-table matSort class="full-width-table"
     [dataSource]="dataSource" multiTemplateDataRows>
@@ -31,8 +35,8 @@
 
     <ng-container matColumnDef="hla">
       <th mat-header-cell *matHeaderCellDef mat-sort-header
-          matTooltip="Hole Length Average"
-          matTooltipPosition="above">
+        matTooltip="Hole Length Average"
+        matTooltipPosition="above">
         HLA
       </th>
       <td mat-cell *matCellDef="let row">{{getLength(row)}}</td>
@@ -40,8 +44,8 @@
 
     <ng-container matColumnDef="ssa">
       <th mat-header-cell *matHeaderCellDef mat-sort-header
-          matTooltip="Scratch Scoring Average"
-          matTooltipPosition="above">
+        matTooltip="Scratch Scoring Average"
+        matTooltipPosition="above">
         SSA
       </th>
       <td mat-cell *matCellDef="let row">{{row.ssa | number:'1.1-1'}}</td>
@@ -49,8 +53,8 @@
 
     <ng-container matColumnDef="td">
       <th mat-header-cell *matHeaderCellDef mat-sort-header
-          matTooltip="Technical Difficulty"
-          matTooltipPosition="above">
+        matTooltip="Technical Difficulty"
+        matTooltipPosition="above">
         TD
       </th>
       <td mat-cell *matCellDef="let row">{{row.difficulty | number:'1.1-1'}}</td>
@@ -66,17 +70,21 @@
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns$ | async"></tr>
     <tr mat-row *matRowDef="let element; columns: displayedColumns$ | async;"
-        class="round-element-row"
-        (click)="onRawClicked(element)">
+      class="round-element-row"
+      (click)="onRawClicked(element)">
     </tr>
-    <div *ngIf="showMore">
-      <tr mat-footer-row *matFooterRowDef="['seemore']">
-    </div>
-  </table>
+    @if (showMore) {
+      <div>
+        <tr mat-footer-row *matFooterRowDef="['seemore']">
+        </div>
+      }
+    </table>
 
-  <mat-paginator #paginator *ngIf="!isMinimum"
-      [length]="dataSource.data.length"
-      [pageSize]="pageSizeOptions[0]"
-      [pageSizeOptions]="pageSizeOptions">
-  </mat-paginator>
-</div>
+    @if (!isMinimum) {
+      <mat-paginator #paginator
+        [length]="dataSource.data.length"
+        [pageSize]="pageSizeOptions[0]"
+        [pageSizeOptions]="pageSizeOptions">
+      </mat-paginator>
+    }
+  </div>

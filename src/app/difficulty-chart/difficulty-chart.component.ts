@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { Router } from '@angular/router';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { map } from 'rxjs/operators';
@@ -16,10 +16,9 @@ import { BubbleChartInteractiveComponent } from './custom-chart/bubble-chart-int
     templateUrl: './difficulty-chart.component.html',
     styleUrls: ['./difficulty-chart.component.css'],
     imports: [
-        CommonModule,
-        NgxChartsModule,
-        BubbleChartInteractiveComponent
-    ]
+    NgxChartsModule,
+    BubbleChartInteractiveComponent
+]
 })
 export class DifficultyChartComponent implements OnInit {
   @Input() eventId?: EventId;
