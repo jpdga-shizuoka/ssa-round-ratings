@@ -59,3 +59,11 @@
 .menu-header-low {
   height: 56px;
 }
+.tool-button .mat-icon {
+  color: white !important;
+  background-color: transparent !important;
+}
+.tool-button {
+  background-color: transparent !important;
+  border: none;
+}
