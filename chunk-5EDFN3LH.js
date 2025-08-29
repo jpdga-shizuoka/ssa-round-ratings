@@ -1,0 +1,1 @@
+import{c as i,d as a,f as e,g as t,h as d}from"./chunk-DUKSTT3K.js";var p=i("detailExpand",[t("collapsed",e({height:"0px",minHeight:"0"})),t("expanded",e({height:"*"})),d("expanded <=> collapsed",a("225ms cubic-bezier(0.4, 0.0, 0.2, 1)"))]);export{p as a};
