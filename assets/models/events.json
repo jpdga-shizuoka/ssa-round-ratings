@@ -1,5 +1,229 @@
 [
   {
+    "id": "the3rdjandluxcup",
+    "title": "The 3rd Jandlux Cup",
+    "location": "michinokupark",
+    "period": {
+      "from": "2025-12-13",
+      "to": "2025-12-14"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
+    },
+    "jpdga": {
+      "eventId": "750"
+    }
+  },
+  {
+    "id": "the39thkyushuopen",
+    "title": "The 39th Kyushu Open",
+    "location": "uminonakamichiseasidepark",
+    "period": {
+      "from": "2025-11-29",
+      "to": "2025-12-30"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
+    },
+    "jpdga": {
+      "tier": "ABT-A ",
+      "eventId": "749"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://www.jpdgafukuoka.com/"
+      },
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/discgolfkyushuopen/"
+      }
+    ]
+  },
+  {
+    "id": "the4thjapanseriesdiscgolfchampionships",
+    "title": "The 4th Japan Series Disc Golf Championships",
+    "location": "kiyoharakohgyodanchi",
+    "period": {
+      "from": "2025-11-22",
+      "to": "2025-11-24"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "93358",
+      "eventId": "93358"
+    },
+    "jpdga": {
+      "tier": "NT",
+      "eventId": "748"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/kiyohara.green"
+      }
+    ]
+  },
+  {
+    "id": "the37thshowakinenparkopen",
+    "title": "The 37th Showa Kinen Park Open",
+    "location": "showakinenpark",
+    "period": {
+      "from": "2025-11-01",
+      "to": "2025-11-03"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
+    },
+    "jpdga": {
+      "tier": "LT",
+      "eventId": "747"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://jpdgatokyooffice.wixsite.com/website"
+      },
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/jpdgatokyo"
+      }
+    ]
+  },
+  {
+    "id": "the4thmaikoclassic",
+    "title": "The 4th Maiko Classic",
+    "location": "maikodiscgolfpark",
+    "period": {
+      "from": "2025-10-25",
+      "to": "2025-10-26"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "93358",
+      "eventId": "93358"
+    },
+    "jpdga": {
+      "tier": "NT",
+      "eventId": "748"
+    }
+  },
+  {
+    "id": "the37thjapannationalchampionship",
+    "title": "The 37th Japan National Championships",
+    "location": "minamisomahoseridingpark",
+    "period": {
+      "from": "2025-10-11",
+      "to": "2025-10-13"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "94274",
+      "eventId": "94274"
+    },
+    "jpdga": {
+      "tier": "NT",
+      "eventId": "745"
+    }
+  },
+  {
+    "id": "the28thkansaiopen",
+    "title": "The 28th Kansai Open",
+    "location": "fuminnomorihiyoshi",
+    "period": {
+      "from": "2025-09-27",
+      "to": "2025-09-28"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "94669",
+      "eventId": "94669"
+    },
+    "jpdga": {
+      "tier": "ABT-B",
+      "eventId": "743"
+    }
+  },
+  {
+    "id": "the25thtohokuopen",
+    "title": "The 25th Tohoku Open",
+    "location": "mizubayashisportpark",
+    "period": {
+      "from": "2025-09-14",
+      "to": "2025-09-15"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "95830",
+      "eventId": "95830"
+    },
+    "jpdga": {
+      "tier": "ABT-B",
+      "eventId": "755"
+    }
+  },
+  {
+    "id": "the29thkantoopenama",
+    "title": "The 29th Kanto Open (Ama)",
+    "location": "shiromigaokasportspark",
+    "period": {
+      "from": "2025-04-05",
+      "to": "2025-04-06"
+    },
+    "layout": {
+      "official": "https://membership.jpdga.jp/event/2025/721_map.jpg"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 65,
+      "misc": 3
+    },
+    "pdga": {
+      "scoreId": "89556",
+      "eventId": "89556"
+    },
+    "jpdga": {
+      "tier":"ABT-A",
+      "eventId": "721"
+    }
+  },
+  {
     "id": "the20thmastersnationalchampionship",
     "title": "The 20th Masters National Championships",
     "location": "hitachiseasidepark",
