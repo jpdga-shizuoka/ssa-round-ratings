@@ -77,6 +77,31 @@
     ]
   },
   {
+    "id": "aichidiscgolftournament",
+    "title": "The Aichi Disc Golf Tournament",
+    "location": "shiminshikinomori",
+    "period": {
+      "from": "2025-11-02",
+      "to": "2025-11-02"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
+    },
+    "jpdga": {
+      "tier": "LT",
+      "eventId": "754"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://recreation.or.jp/activities/event/"
+      }
+    ]
+  },
+  {
     "id": "the37thshowakinenparkopen",
     "title": "The 37th Showa Kinen Park Open",
     "location": "showakinenpark",
