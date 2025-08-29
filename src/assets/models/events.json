@@ -1,5 +1,52 @@
 [
   {
+    "id": "the3rdjandluxcup",
+    "title": "The 3rd Jandlux Cup",
+    "location": "michinokupark",
+    "period": {
+      "from": "2025-12-13",
+      "to": "2025-12-14"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
+    },
+    "jpdga": {
+      "eventId": "750"
+    }
+  },
+  {
+    "id": "the39thkyushuopen",
+    "title": "The 39th Kyushu Open",
+    "location": "uminonakamichiseasidepark",
+    "period": {
+      "from": "2025-11-29",
+      "to": "2025-12-30"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
+    },
+    "jpdga": {
+      "tier": "ABT-A ",
+      "eventId": "749"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://www.jpdgafukuoka.com/"
+      },
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/discgolfkyushuopen/"
+      }
+    ]
+  },
+  {
     "id": "the4thjapanseriesdiscgolfchampionships",
     "title": "The 4th Japan Series Disc Golf Championships",
     "location": "kiyoharakohgyodanchi",
@@ -26,6 +73,36 @@
         "type": "website",
         "title": "Facebook",
         "url": "https://www.facebook.com/kiyohara.green"
+      }
+    ]
+  },
+  {
+    "id": "the37thshowakinenparkopen",
+    "title": "The 37th Showa Kinen Park Open",
+    "location": "showakinenpark",
+    "period": {
+      "from": "2025-11-01",
+      "to": "2025-11-03"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
+    },
+    "jpdga": {
+      "tier": "LT",
+      "eventId": "747"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://jpdgatokyooffice.wixsite.com/website"
+      },
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/jpdgatokyo"
       }
     ]
   },
