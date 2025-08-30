@@ -691,6 +691,11 @@
     "layout": {
       "official": "https://membership.jpdga.jp/event/2025/719_map.pdf"
     },
+    "players": {
+      "pro": 33,
+      "ama": 25,
+      "misc": 1
+    },
     "pdga": {
       "tier": "B",
       "scoreId": "88891",
