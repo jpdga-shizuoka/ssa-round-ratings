@@ -224,6 +224,365 @@
     }
   },
   {
+    "id": "the2ndfukuokauminakaopen",
+    "title": "The 2nd Uminaka Classic",
+    "location": "uminonakamichiseasidepark",
+    "period": {
+      "from": "2025-08-16",
+      "to": "2025-08-17"
+    },
+    "layout": {
+      "official": "http://www.jpdgafukuoka.com/blog/wp/wp-content/uploads/2025/08/2UC2025map0803.jpg"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 46,
+      "misc": 0
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "94893",
+      "eventId": "94893"
+    },
+    "jpdga": {
+      "tier": "ABT-B",
+      "eventId": "741"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://www.jpdgafukuoka.com/"
+      },
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/discgolfkyushuopen/"
+      }
+    ]
+  },
+  {
+    "id": "the20thmichinokuopen",
+    "title": "The 20th Michinoku Open",
+    "location": "kitakamisportpark",
+    "period": {
+      "from": "2025-08-09",
+      "to": "2025-08-11"
+    },
+    "players": {
+      "pro": 42,
+      "ama": 29,
+      "misc": 0
+    },
+    "layout": {
+      "official": "https://jpdgaiwate.sakura.ne.jp/main/wp-content/uploads/2025/08/2025-MAP-Ver3.pdf"
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "94277",
+      "eventId": "94277"
+    },
+    "jpdga": {
+      "tier": "ABT-A",
+      "eventId": "740"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "http://jpdgaiwate.com"
+      }
+    ]
+  },
+  {
+    "id": "the29thkantoopen",
+    "title": "The 29th Kanto Open",
+    "location": "shiromigaokasportspark",
+    "period": {
+      "from": "2025-07-12",
+      "to": "2025-07-13"
+    },
+    "layout": {
+      "official": "https://membership.jpdga.jp/event/2025/736_map.pdf"
+    },
+    "players": {
+      "pro": 70,
+      "ama": 0,
+      "misc": 0
+    },
+    "pdga": {
+      "scoreId": "93357",
+      "eventId": "93357"
+    },
+    "jpdga": {
+      "tier": "ABT-A",
+      "eventId": "736"
+    }
+  },
+  {
+    "id": "the27thnipponopen",
+    "title": "The 27th Nippon Open",
+    "location": "kibougaokaculturalparkwest",
+    "period": {
+      "from": "2025-07-05",
+      "to": "2025-07-06"
+    },
+    "layout": {
+      "official": "https://membership.jpdga.jp/event/2025/735_map.pdf"
+    },
+    "players": {
+      "pro": 33,
+      "ama": 23,
+      "misc": 0
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "92377",
+      "eventId": "92377"
+    },
+    "jpdga": {
+      "tier": "NT",
+      "eventId": "735"
+    }
+  },
+  {
+    "id": "the14thhokkaidoopen",
+    "title": "The 14th Hokkaido Open",
+    "location": "hunkawanpanolamapark",
+    "period": {
+      "from": "2025-06-28",
+      "to": "2025-06-29"
+    },
+    "players": {
+      "pro": 28,
+      "ama": 19,
+      "misc": 0
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "93189",
+      "eventId": "93189"
+    },
+    "jpdga": {
+      "tier": "ABT-A",
+      "eventId": "733"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://www.facebook.com/hokkaidoopen.discgolf"
+      }
+    ]
+  },
+  {
+    "id": "the2025nationaldoubleschampionship",
+    "title": "The 2025 National Doubles Championships",
+    "location": "hikaritokazenookapark",
+    "period": {
+      "from": "2025-06-14",
+      "to": "2025-06-15"
+    },
+    "layout": {
+      "official": "http://www.jpdga.jp/data/event/2024/667_map.pdf"
+    },
+    "pdga": {
+      "scoreId": "92375",
+      "eventId": "92375"
+    },
+    "pdga2nd": {
+      "scoreId": "92376",
+      "eventId": "92376"
+    },
+    "jpdga": {
+      "tier": "ABT-A",
+      "eventId": "731"
+    },
+    "players": {
+      "pro": 52,
+      "ama": 62 ,
+      "misc": 0
+    }
+  },
+  {
+    "id": "the2ndminamataopen",
+    "title": "The 2nd Minamata Open",
+    "location": "ecoparkminamata",
+    "period": {
+      "from": "2025-06-07",
+      "to": "2025-06-08"
+    },
+    "layout": {
+      "official": "https://discgolf.jp/event/minamata/2025_map.pdf"
+    },
+    "players": {
+      "pro": 35,
+      "ama": 32,
+      "misc": 0
+    },
+    "jpdga": {
+      "tier": "LT",
+      "eventId": "730"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://discgolf.jp/event/minamata/"
+      }
+    ]
+  },
+  {
+    "id": "the3rddmichinokuqueenscup",
+    "title": "The 3rd Michinoku Queen's Cup",
+    "location": "kitakamisportpark",
+    "period": {
+      "from": "2025-05-31",
+      "to": "2025-06-01"
+    },
+    "layout": {
+      "official": "https://membership.jpdga.jp/event/2025/727_map.pdf"
+    },
+    "players": {
+      "pro": 30,
+      "ama": 9,
+      "misc": 10
+    },
+    "jpdga": {
+      "tier": "LT",
+      "eventId": "727"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "http://jpdgaiwate.com"
+      }
+    ]
+  },
+  {
+    "id": "the9thfukuiopen",
+    "title": "The 9th Fukui Open",
+    "location": "seasidenaturepark",
+    "period": {
+      "from": "2025-05-24",
+      "to": "2025-05-25"
+    },
+    "layout": {
+      "official": "http://www.sukima-labo.com/dg291/2024fukuiopen/2024fukuiop-course.pdf"
+    },
+    "players": {
+      "pro": 32,
+      "ama": 20,
+      "misc": 1
+    },
+    "pdga": {
+      "eventId": "91149",
+      "scoreId": "91149"
+    },
+    "jpdga": {
+      "tier": "ABT-A",
+      "eventId": "728"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "http://www.sukima-labo.com/dg291/"
+      }
+    ]
+  },
+  {
+    "id": "the20thkiyosatonomoriopen",
+    "title": "The 120th Kiyosato-no-mori Open",
+    "location": "kiyosatonomori",
+    "period": {
+      "from": "2025-05-10",
+      "to": "2025-05-11"
+    },
+    "layout": {
+      "official": "https://discgolf-navi.com/wp-content/uploads/2025/05/清里の森コースマップ_compressed2.pdf"
+    },
+    "players": {
+      "pro": 43,
+      "ama": 36,
+      "misc": 3
+    },
+    "pdga": {
+      "scoreId": "90992",
+      "eventId": "90992"
+    },
+    "jpdga": {
+      "tier": "ABT-B",
+      "eventId": "726"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://discgolf-navi.com/tournament/nt-abt-lt/kiyosato-open/"
+      }
+    ]
+  },
+  {
+    "id": "the32ndtokyoopen",
+    "title": "The 32nd Tokyo Open",
+    "location": "tatsuminomoriseasidepark",
+    "period": {
+      "from": "2025-04-19",
+      "to": "2025-04-20"
+    },
+    "layout": {
+      "official": "https://discgolf-navi.com/wp-content/uploads/2025/04/coursemap2025_tokyoopen0416-1.pdf"
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "90538",
+      "eventId": "90538"
+    },
+    "jpdga": {
+      "tier": "ABT-B",
+      "eventId": "723"
+    },
+    "players": {
+      "pro": 40,
+      "ama": 38,
+      "misc": 2
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://discgolf-navi.com/tournament/nt-abt-lt/tokyo-open/"
+      }
+    ]
+  },
+  {
+    "id": "the22ndsagaopen",
+    "title": "The 22nd Saga Yoshinogari Open",
+    "location": "yoshinogarihistoricalpark",
+    "period": {
+      "from": "2025-04-12",
+      "to": "2025-04-13"
+    },
+    "layout": {
+      "official": "https://membership.jpdga.jp/event/2025/722_map.pdf"
+    },
+    "players": {
+      "pro": 34,
+      "ama": 37,
+      "misc": 0
+    },
+    "pdga": {
+      "eventId": "89761",
+      "scoreId": "89761"
+    },
+    "jpdga": {
+      "tier": "ABT-B",
+      "eventId": "722"
+    }
+  },
+  {
     "id": "the29thkantoopenama",
     "title": "The 29th Kanto Open (Ama)",
     "location": "shiromigaokasportspark",
@@ -331,6 +690,11 @@
     },
     "layout": {
       "official": "https://membership.jpdga.jp/event/2025/719_map.pdf"
+    },
+    "players": {
+      "pro": 33,
+      "ama": 25,
+      "misc": 1
     },
     "pdga": {
       "tier": "B",
