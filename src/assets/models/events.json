@@ -420,6 +420,11 @@
       "ama": 32,
       "misc": 0
     },
+    "pdga": {
+      "tier": "C",
+      "eventId": "90302",
+      "scoreId": "90302"
+    },
     "jpdga": {
       "tier": "LT",
       "eventId": "730"
