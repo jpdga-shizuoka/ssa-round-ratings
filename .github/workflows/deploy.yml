@@ -23,14 +23,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Copy environment.prod.ts to environment.ts
-        run: cp src/environments/environment.prod.ts src/environments/environment.ts
-
       - name: Replace Google Maps API Key
         env:
           GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
         run: |
-          sed -i "s/apikey: 'xxxx'/apikey: '${GOOGLE_MAPS_API_KEY}'/" src/environments/environment.ts
+          sed -i "s/apikey: 'xxxx'/apikey: '${GOOGLE_MAPS_API_KEY}'/" src/environments/environment.prod.ts
 
       - name: Grant execute permission to deploy script
         run: chmod +x ./deploy
