@@ -286,6 +286,12 @@
       "tier": "ABT-A",
       "eventId": "740"
     },
+    "budget": {
+      "entreefee": 10000,
+      "purse": 1232,
+      "paidout": 15,
+      "rate": 148.5
+    },    
     "urls": [
       {
         "type": "website",
@@ -317,6 +323,12 @@
     "jpdga": {
       "tier": "ABT-A",
       "eventId": "736"
+    },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 1018,
+      "paidout": 16,
+      "rate": 148
     }
   },
   {
@@ -343,6 +355,12 @@
     "jpdga": {
       "tier": "NT",
       "eventId": "735"
+    },
+    "budget": {
+      "entreefee": 15000,
+      "purse": 1672,
+      "paidout": 10,
+      "rate": 143.8
     }
   },
   {
@@ -366,6 +384,12 @@
     "jpdga": {
       "tier": "ABT-A",
       "eventId": "733"
+    },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 761,
+      "paidout": 11,
+      "rate": 147.1
     },
     "urls": [
       {
@@ -402,6 +426,12 @@
       "pro": 52,
       "ama": 62 ,
       "misc": 0
+    },
+    "budget": {
+      "entreefee": 8500,
+      "purse": 1678,
+      "paidout": 18,
+      "rate": 147.6
     }
   },
   {
@@ -489,6 +519,12 @@
       "tier": "ABT-A",
       "eventId": "728"
     },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 941,
+      "paidout": 14,
+      "rate": 144
+    },
     "urls": [
       {
         "type": "website",
@@ -520,6 +556,12 @@
     "jpdga": {
       "tier": "ABT-B",
       "eventId": "726"
+    },
+    "budget": {
+      "entreefee": 10000,
+      "purse": 1394,
+      "paidout": 13,
+      "rate": 146
     },
     "urls": [
       {
@@ -554,6 +596,12 @@
       "ama": 38,
       "misc": 2
     },
+    "budget": {
+      "entreefee": 10000,
+      "purse": 1804,
+      "paidout": 14,
+      "rate": 142.3
+    },
     "urls": [
       {
         "type": "website",
@@ -585,6 +633,12 @@
     "jpdga": {
       "tier": "ABT-B",
       "eventId": "722"
+    },
+        "budget": {
+      "entreefee": 7000,
+      "purse": 420,
+      "paidout": 8,
+      "rate": 143
     }
   },
   {
@@ -636,6 +690,12 @@
     "jpdga": {
       "tier": "ABT-B",
       "eventId": "718"
+    },
+    "budget": {
+      "entreefee": 10000,
+      "purse": 1447,
+      "paidout": 12,
+      "rate": 148.6
     },
     "urls": [
       {
@@ -710,6 +770,12 @@
       "tier": "ABT-B",
       "eventId": "719"
     },
+    "budget": {
+      "entreefee": 11000,
+      "purse": 780,
+      "paidout": 10,
+      "rate": 144
+    },
     "urls": [
       {
         "type": "website",
@@ -742,6 +808,12 @@
     "jpdga": {
       "tier":"ABT-A",
       "eventId": "717"
+    },
+    "budget": {
+      "entreefee": 8000,
+      "purse": 1023,
+      "paidout": 13,
+      "rate": 149.3
     },
     "urls": [
       {
