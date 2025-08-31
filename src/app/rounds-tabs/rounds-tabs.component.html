@@ -11,6 +11,12 @@
     </div>
   </mat-tab>
 
+  <mat-tab label="{{'Cash' | localize}}">
+    <div>
+      <app-cash-table></app-cash-table>
+    </div>
+  </mat-tab>
+
   <mat-tab label="{{'Stats' | localize}}">
     <div>
       <app-rounds-table [displayedColumns$]="roundsColumns$">
