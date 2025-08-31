@@ -16,7 +16,7 @@ import { EventsMapComponent } from '../events-map/events-map.component';
 import { LocalizePipe } from '../localize.pipe';
 
 const EVENT_COLUMNS = [['date', 'title'], ['date', 'title', 'location']];
-const ROUND_COLUMNS = [['event', 'hla', 'ssa', 'td'], ['year', 'event', 'round', 'hla', 'ssa', 'td']];
+const ROUND_COLUMNS = [['event', 'hla', 'ssa'], ['year', 'event', 'round', 'hla', 'ssa']];
 const TABS = ['events', 'rounds', 'videos', 'locations'];
 
 @Component({
