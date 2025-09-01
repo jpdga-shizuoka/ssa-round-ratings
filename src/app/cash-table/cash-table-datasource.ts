@@ -1,6 +1,5 @@
-import { inject } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, map } from 'rxjs';
 
 import { RemoteService } from '../remote.service';
 import { LocalizeService } from '../localize.service';
@@ -12,11 +11,13 @@ import { EventInfo } from '../models';
  * (including sorting, pagination, and filtering).
  */
 export class CashTableDataSource extends MatTableDataSource<EventInfo> {
-  private remote = inject(RemoteService);
-  private localize = inject(LocalizeService);
   loading = true;
 
-  constructor() {
+  constructor(
+    private remote: RemoteService,
+    private localize: LocalizeService,
+    private limit?: number,
+  ) {
     super();
     this.setupFilter();
   }
@@ -29,6 +30,9 @@ export class CashTableDataSource extends MatTableDataSource<EventInfo> {
   override connect(): BehaviorSubject<EventInfo[]> {
     this.loading = true;
     this.remote.getCashOfEvents()
+    .pipe(
+      map(events => this.limit ? events.slice(0, this.limit) : events),      
+    )
       .subscribe({
         next: events => {
           this.data = events;
