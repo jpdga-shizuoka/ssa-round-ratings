@@ -47,8 +47,13 @@ tr.round-expanded-row {
 .rssa-margin {
   margin: 0 10px;
 }
-.more {
-  text-align: right;
+.more-button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.more-button {
+  padding: 8px;
+  margin: 8px;
 }
 @media (max-width: 414px) {
   .full-width-table td {
