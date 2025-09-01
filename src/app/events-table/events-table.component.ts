@@ -47,7 +47,6 @@ import { SchedulePipe } from '../schedule.pipe';
 export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() displayedColumns$!: Observable<string[]>;
   @Input() category!: EventCategory;
-  @Input() showMore = false;
   @Input() limit?: number;
   @ViewChild(MatTable) table!: MatTable<EventInfo>;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -109,7 +108,7 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
   get loading(): boolean { return this.dataSource?.loading ?? true; }
 
   get isMinimum(): boolean {
-    return this.showMore && !!this.limit && this.limit <= this.pageSizeOptions[0];
+    return !!this.limit && this.limit <= this.pageSizeOptions[0];
   }
 
   get link(): string {

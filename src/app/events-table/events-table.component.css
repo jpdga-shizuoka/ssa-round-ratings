@@ -28,9 +28,6 @@ tr.event-expanded-row {
   margin: 0;
   padding: 0 8px;
 }
-.more {
-  text-align: right;
-}
 .search {
   display: flex;
 }
@@ -39,6 +36,14 @@ tr.event-expanded-row {
 }
 .search-spacer {
   flex: 1 1 auto;
+}
+.more-button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.more-button {
+  padding: 8px;
+  margin: 8px;
 }
 @media (max-width: 414px) {
   .full-width-table td {

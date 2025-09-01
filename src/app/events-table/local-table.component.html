@@ -19,14 +19,6 @@
     </td>
   </ng-container>
 
-  <ng-container matColumnDef="seemore">
-    <td mat-footer-cell *matFooterCellDef colspan="3">
-      <p class="more">
-        <a mat-list-item routerLink="/local/events">{{'More' | localize}}...</a>
-      </p>
-    </td>
-  </ng-container>
-
   <ng-container matColumnDef="expandedDetail">
     <td mat-cell class="expanded-cell"
       *matCellDef="let element" [attr.colspan]="(displayedColumns$ | async)?.length">
@@ -48,17 +40,19 @@
     (click)="onRawClicked(element)">
   </tr>
   <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="event-detail-row"></tr>
-  @if (showMore) {
-    <div>
-      <tr mat-footer-row *matFooterRowDef="['seemore']">
-      </div>
-    }
-  </table>
+</table>
 
-  @if (!isMinimum) {
-    <mat-paginator #paginator
-      [length]="dataSource.data.length"
-      [pageSize]="pageSizeOptions[0]"
-      [pageSizeOptions]="pageSizeOptions">
-    </mat-paginator>
-  }
+@if (isMinimum) {
+  <div class="more-button-container">
+    <button mat-button color="primary" routerLink="/local/events" aria-label="More events" class="more-button">
+      {{ 'More' | localize }}...
+    </button>
+  </div>
+}
+@else {
+  <mat-paginator #paginator
+    [length]="dataSource.data.length"
+    [pageSize]="pageSizeOptions[0]"
+    [pageSizeOptions]="pageSizeOptions">
+  </mat-paginator>
+}
