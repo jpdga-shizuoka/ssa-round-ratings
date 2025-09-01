@@ -13,6 +13,7 @@ import { EventsTableComponent } from '../events-table/events-table.component';
 import { LocalTableComponent } from '../events-table/local-table.component';
 import { RoundsTableComponent } from '../rounds-table/rounds-table.component';
 import { VideosTableComponent } from '../videos-table/videos-table.component';
+import { CashTableComponent } from '../cash-table/cash-table.component';
 
 const DISPLAYED_COLUMNS_UPCOMING = [['date', 'title'], ['date', 'title', 'location']];
 const EVENT_COLUMNS = [['date', 'title'], ['date', 'title', 'location']];
@@ -31,7 +32,8 @@ const ROUND_COLUMNS_PAST = [['event', 'hla', 'ssa', 'td'], ['year', 'event', 'ro
     EventsTableComponent,
     LocalTableComponent,
     RoundsTableComponent,
-    VideosTableComponent
+    VideosTableComponent,
+    CashTableComponent,
 ]
 })
 export class DashBoardComponent {
@@ -56,6 +58,12 @@ export class DashBoardComponent {
   get roundsColumnsPast$(): Observable<string[]> {
     return this.isHandset$.pipe(
       map(hs => ROUND_COLUMNS_PAST[hs ? 0 : 1])
+    );
+  }
+
+  get cashColumnsPast$(): Observable<string[]> {
+    return this.isHandset$.pipe(
+      map(hs => ['title', 'purse', 'payout', 'cashing'])
     );
   }
 }

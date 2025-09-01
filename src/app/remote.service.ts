@@ -28,6 +28,19 @@ export class RemoteService {
     private readonly http: HttpClient    
   ) { }
 
+  getCashOfEvents(): Observable<EventInfo[]> {
+    const category = 'past' as EventCategory;
+    return this.http
+      .get<EventInfo[]>(category2url(category), { responseType: 'json' })
+      .pipe(
+        map(events => upcomingFilter(events, category)),
+        map(events => events.filter(event => event.budget !== undefined)),
+        map(events => sortEvents(events, category)),
+        map(events => calcProPurse(events)),
+        catchError(this.handleError<EventInfo[]>('getCashOfEvents', []))
+      );
+  }
+
   getEvents(category: EventCategory, filter?: UserFilter): Observable<EventInfo[]> {
     if (!category) {
       throw new TypeError('getEvents: no category specified');

@@ -6,6 +6,7 @@ import { Title, Meta } from '@angular/platform-browser';
 import { SwUpdate, VersionReadyEvent } from '@angular/service-worker';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
+import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
@@ -36,6 +37,7 @@ import {
         MatIconModule,
         MatDividerModule,
         MatSnackBarModule,
+        MatButtonModule,
     ]
 })
 export class AppComponent implements OnInit, OnDestroy, MetaDescription {

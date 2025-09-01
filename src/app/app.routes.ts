@@ -1,29 +1,6 @@
 import { Routes } from '@angular/router';
 import { ReloadComponent } from './app-reload';
 import { DashBoardComponent } from './dash-board/dash-board.component';
-import { RoundsTabsComponent } from './rounds-tabs/rounds-tabs.component';
-import { LocalTabsComponent } from './events-tabs/local-tabs.component';
-import { MonthlyTabsComponent } from './events-tabs/monthly-tabs.component';
-import { UpcomingTabsComponent } from './events-tabs/upcoming-tabs.component';
-import { StatsTabsComponent } from './stats-tabs/stats-tabs.component';
-import { IndexComponent } from './libraries/index.component';
-import { AboutThisSiteComponent } from './about-this-site/about-this-site.component';
-import { EventComponent } from './event/event.component';
-import { ClassificationsComponent } from './libraries/classifications.component';
-import { DivisionsComponent } from './libraries/divisions.component';
-import { FaqRatingsComponent } from './libraries/faq-ratings.component';
-import { NonStandardRulesComponent } from './libraries/non-standard-rules.component';
-import { PlayerpackComponent } from './libraries/playerpack.component';
-import { PointsComponent } from './libraries/points.component';
-import { ReclassificationComponent } from './libraries/reclassification.component';
-import { OrdgCm23Component } from './libraries/ordgcm23.component';
-import { OrdgCm24Component } from './libraries/ordgcm24.component';
-import { Ts2023Component } from './libraries/ts2023.component';
-import { Ts2024Component } from './libraries/ts2024.component';
-import { TrueAmateurComponent } from './libraries/true-amateur.component';
-import { TourStandardsComponent } from './libraries/tour-standards.component';
-import { RatingsComponent } from './libraries/ratings.component';
-import { ProgramguidComponent } from './libraries/programguid.component';
 
 export const routes: Routes = [
   {
@@ -40,7 +17,7 @@ export const routes: Routes = [
 
   {
     path: 'event/:eventId',
-    component: EventComponent,
+    loadComponent: () => import('./event/event.component').then(m => m.EventComponent),
     data: {
       metaDescription: {
         title: 'DG Japan - Disc Golf Event',
@@ -56,7 +33,7 @@ export const routes: Routes = [
   },
   {
     path: 'schedule/:tabname',
-    component: UpcomingTabsComponent,
+    loadComponent: () => import('./events-tabs/upcoming-tabs.component').then(m => m.UpcomingTabsComponent),
     data: {
       metaDescription: {
         title: 'DG Japan - Disc Golf Events',
@@ -72,7 +49,7 @@ export const routes: Routes = [
   },
   {
     path: 'local/:tagname',
-    component: LocalTabsComponent,
+    loadComponent: () => import('./events-tabs/local-tabs.component').then(m => m.LocalTabsComponent),
     data: {
       metaDescription: {
         title: 'DG Japan - Local Events',
@@ -88,7 +65,7 @@ export const routes: Routes = [
   },
   {
     path: 'monthly/:tagname',
-    component: MonthlyTabsComponent,
+    loadComponent: () => import('./events-tabs/monthly-tabs.component').then(m => m.MonthlyTabsComponent),
     data: {
       metaDescription: {
         title: 'DG Japan - Monthly Events',
@@ -104,7 +81,7 @@ export const routes: Routes = [
   },
   {
     path: 'past/:tagname',
-    component: RoundsTabsComponent,
+    loadComponent: () => import('./rounds-tabs/rounds-tabs.component').then(m => m.RoundsTabsComponent),
     data: {
       metaDescription: {
         title: 'DG Japan - Event Results',
@@ -120,7 +97,7 @@ export const routes: Routes = [
   },
   {
     path: 'stats/:tagname',
-    component: StatsTabsComponent,
+    loadComponent: () => import('./stats-tabs/stats-tabs.component').then(m => m.StatsTabsComponent),
     data: {
       metaDescription: {
         title: 'DG Japan - Stats',
@@ -136,7 +113,7 @@ export const routes: Routes = [
   },
   {
     path: 'libraries/index',
-    component: IndexComponent,
+    loadComponent: () => import('./libraries/index.component').then(m => m.IndexComponent),
     data: { metaDescription: {
       title: 'DG Japan - 資料室',
       subtitle: '資料室'
@@ -144,7 +121,7 @@ export const routes: Routes = [
   },
   {
     path: 'libraries/classifications',
-    component: ClassificationsComponent,
+    loadComponent: () => import('./libraries/classifications.component').then(m => m.ClassificationsComponent),
     data: { metaDescription: {
       title: 'DG Japan - 選手の分類と部門',
       subtitle: '選手の分類と部門'
@@ -152,7 +129,7 @@ export const routes: Routes = [
   },
   {
     path: 'libraries/divisions',
-    component: DivisionsComponent,
+    loadComponent: () => import('./libraries/divisions.component').then(m => m.DivisionsComponent),
     data: { metaDescription: {
       title: 'DG Japan - 部門、レーティング、ポイント',
       subtitle: '部門、レーティング、ポイント'
@@ -160,7 +137,7 @@ export const routes: Routes = [
   },
   {
     path: 'libraries/faqratings',
-    component: FaqRatingsComponent,
+    loadComponent: () => import('./libraries/faq-ratings.component').then(m => m.FaqRatingsComponent),
     data: { metaDescription: {
       title: 'DG Japan - FAQ:レーティング編',
       subtitle: 'FAQ:レーティング編'
@@ -168,7 +145,7 @@ export const routes: Routes = [
   },
   {
     path: 'libraries/nonstandards',
-    component: NonStandardRulesComponent,
+    loadComponent: () => import('./libraries/non-standard-rules.component').then(m => m.NonStandardRulesComponent),
     data: { metaDescription: {
       title: 'DG Japan - 非標準規則の採用に関して',
       subtitle: '非標準規則の採用に関して'
@@ -176,7 +153,7 @@ export const routes: Routes = [
   },
   {
     path: 'libraries/playerpack',
-    component: PlayerpackComponent,
+    loadComponent: () => import('./libraries/playerpack.component').then(m => m.PlayerpackComponent),
     data: { metaDescription: {
       title: 'DG Japan - 賞品の価値に見合う品目',
       subtitle: '賞品の価値に見合う品目'
@@ -184,7 +161,7 @@ export const routes: Routes = [
   },
   {
     path: 'libraries/points',
-    component: PointsComponent,
+    loadComponent: () => import('./libraries/points.component').then(m => m.PointsComponent),
     data: { metaDescription: {
       title: 'DG Japan - ポイントの仕組み',
       subtitle: 'ポイントの仕組み'
@@ -192,7 +169,7 @@ export const routes: Routes = [
   },
   {
     path: 'libraries/ratings',
-    component: RatingsComponent,
+    loadComponent: () => import('./libraries/ratings.component').then(m => m.RatingsComponent),
     data: { metaDescription: {
       title: 'DG Japan - レーティングの仕組み',
       subtitle: 'レーティングの仕組み'
@@ -200,7 +177,7 @@ export const routes: Routes = [
   },
   {
     path: 'libraries/reclassification',
-    component: ReclassificationComponent,
+    loadComponent: () => import('./libraries/reclassification.component').then(m => m.ReclassificationComponent),
     data: { metaDescription: {
       title: 'DG Japan - プロからアマへの再登録',
       subtitle: 'プロからアマへの再登録'
@@ -211,7 +188,7 @@ export const routes: Routes = [
   },
   {
     path: 'libraries/ordgcm24',
-    component: OrdgCm24Component,
+    loadComponent: () => import('./libraries/ordgcm24.component').then(m => m.OrdgCm24Component),
     data: { metaDescription: {
       title: 'DG Japan - 公式規則と競技マニュアル(2024)',
       subtitle: '公式規則と競技マニュアル(2024)'
@@ -219,7 +196,7 @@ export const routes: Routes = [
   },
   {
     path: 'libraries/ordgcm23',
-    component: OrdgCm23Component,
+    loadComponent: () => import('./libraries/ordgcm23.component').then(m => m.OrdgCm23Component),
     data: { metaDescription: {
       title: 'DG Japan - 公式規則と競技マニュアル(2023)',
       subtitle: '公式規則と競技マニュアル(2023)'
@@ -230,7 +207,7 @@ export const routes: Routes = [
   },
   {
     path: 'libraries/ts2024',
-    component: Ts2024Component,
+    loadComponent: () => import('./libraries/ts2024.component').then(m => m.Ts2024Component),
     data: { metaDescription: {
       title: 'DG Japan - 国際大会の基準(2024)',
       subtitle: '国際大会の基準(2024)'
@@ -238,7 +215,7 @@ export const routes: Routes = [
   },
   {
     path: 'libraries/ts2023',
-    component: Ts2023Component,
+    loadComponent: () => import('./libraries/ts2023.component').then(m => m.Ts2023Component),
     data: { metaDescription: {
       title: 'DG Japan - 国際大会の基準(2023)',
       subtitle: '国際大会の基準(2023)'
@@ -246,7 +223,7 @@ export const routes: Routes = [
   },
   {
     path: 'libraries/trueamateur',
-    component: TrueAmateurComponent,
+    loadComponent: () => import('./libraries/true-amateur.component').then(m => m.TrueAmateurComponent),
     data: { metaDescription: {
       title: 'DG Japan - 真のアマチュア大会',
       subtitle: '真のアマチュア大会'
@@ -254,7 +231,7 @@ export const routes: Routes = [
   },
   {
     path: 'libraries/tourstandards',
-    component: TourStandardsComponent,
+    loadComponent: () => import('./libraries/tour-standards.component').then(m => m.TourStandardsComponent),
     data: { metaDescription: {
       title: 'DG Japan - ツアー基準',
       subtitle: 'ツアー基準'
@@ -262,7 +239,7 @@ export const routes: Routes = [
   },
   {
     path: 'libraries/programguid',
-    component: ProgramguidComponent,
+    loadComponent: () => import('./libraries/programguid.component').then(m => m.ProgramguidComponent),
     data: { metaDescription: {
       title: 'DG Japan - 国際プログラムガイド',
       subtitle: '国際プログラムガイド'
@@ -271,7 +248,7 @@ export const routes: Routes = [
 
   {
     path: 'about',
-    component: AboutThisSiteComponent,
+    loadComponent: () => import('./about-this-site/about-this-site.component').then(m => m.AboutThisSiteComponent),
     data: {
       metaDescription: {
         title: 'DG Japan - About Us',

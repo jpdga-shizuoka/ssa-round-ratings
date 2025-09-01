@@ -11,12 +11,14 @@ import { RoutingTabsComponent } from '../routing-tabs/routing-tabs.component';
 import { EventsTableComponent } from '../events-table/events-table.component';
 import { RoundsTableComponent } from '../rounds-table/rounds-table.component';
 import { VideosTableComponent } from '../videos-table/videos-table.component';
+import { CashTableComponent } from '../cash-table/cash-table.component';
 import { EventsMapComponent } from '../events-map/events-map.component';
 import { LocalizePipe } from '../localize.pipe';
 
 const EVENT_COLUMNS = [['date', 'title'], ['date', 'title', 'location']];
-const ROUND_COLUMNS = [['event', 'hla', 'ssa', 'td'], ['year', 'event', 'round', 'hla', 'ssa', 'td']];
-const TABS = ['events', 'rounds', 'videos', 'locations'];
+const ROUND_COLUMNS = [['event', 'hla', 'ssa'], ['year', 'event', 'round', 'hla', 'ssa']];
+const CASH_COLUMNS = [['title', 'purse', 'payout', 'cashing'], ['title', 'purse', 'payout', 'cashing']];
+const TABS = ['events', 'cash', 'rounds', 'videos', 'locations'];
 
 @Component({
     selector: 'app-rounds-tabs',
@@ -28,6 +30,7 @@ const TABS = ['events', 'rounds', 'videos', 'locations'];
     EventsTableComponent,
     RoundsTableComponent,
     VideosTableComponent,
+    CashTableComponent,
     EventsMapComponent,
     LocalizePipe
 ]
@@ -55,6 +58,12 @@ export class RoundsTabsComponent extends RoutingTabsComponent {
   get roundsColumns$(): Observable<string[]> {
     return this.isHandset$.pipe(
       map(hs => ROUND_COLUMNS[hs ? 0 : 1])
+    );
+  }
+
+  get cashColumns$(): Observable<string[]> {
+    return this.isHandset$.pipe(
+      map(hs => CASH_COLUMNS[hs ? 0 : 1])
     );
   }
 }
