@@ -1,3 +1,16 @@
+  @if (!isMinimum) {
+    <div class="search">
+      <mat-form-field class="search-box">
+        <input matInput #filter [(ngModel)]="search" (keyup)="applyFilter(filter.value)" placeholder="Search...">
+        @if (search) {
+        <button mat-icon-button matSuffix aria-label="Clear" (click)="applyFilter('')">
+            <mat-icon>close</mat-icon>
+          </button>
+        }
+      </mat-form-field>
+      <div class='search-spacer'></div>
+    </div>
+  }
 <div class="mat-elevation-z2">
   <table mat-table class="full-width-table" matSort aria-label="Elements">
     <ng-container matColumnDef="title">
@@ -31,8 +44,8 @@
   <mat-paginator #paginator
       [length]="dataSource.data.length"
       [pageIndex]="0"
-      [pageSize]="30"
-      [pageSizeOptions]="[30, 60, 120]"
+      [pageSize]="pageSizeOptions[0]"
+      [pageSizeOptions]="pageSizeOptions"
       aria-label="Select page">
   </mat-paginator>
 </div>
