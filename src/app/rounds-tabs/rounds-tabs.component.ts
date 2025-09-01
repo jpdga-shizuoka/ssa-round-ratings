@@ -17,7 +17,8 @@ import { LocalizePipe } from '../localize.pipe';
 
 const EVENT_COLUMNS = [['date', 'title'], ['date', 'title', 'location']];
 const ROUND_COLUMNS = [['event', 'hla', 'ssa'], ['year', 'event', 'round', 'hla', 'ssa']];
-const TABS = ['events', 'rounds', 'videos', 'locations'];
+const CASH_COLUMNS = [['title', 'purse', 'payout', 'cashing'], ['title', 'purse', 'payout', 'cashing']];
+const TABS = ['events', 'cash', 'rounds', 'videos', 'locations'];
 
 @Component({
     selector: 'app-rounds-tabs',
@@ -57,6 +58,12 @@ export class RoundsTabsComponent extends RoutingTabsComponent {
   get roundsColumns$(): Observable<string[]> {
     return this.isHandset$.pipe(
       map(hs => ROUND_COLUMNS[hs ? 0 : 1])
+    );
+  }
+
+  get cashColumns$(): Observable<string[]> {
+    return this.isHandset$.pipe(
+      map(hs => CASH_COLUMNS[hs ? 0 : 1])
     );
   }
 }

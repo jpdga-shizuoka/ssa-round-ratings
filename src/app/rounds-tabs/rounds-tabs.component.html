@@ -13,7 +13,8 @@
 
   <mat-tab label="{{'Cash' | localize}}">
     <div>
-      <app-cash-table></app-cash-table>
+      <app-cash-table [displayedColumns$]="cashColumns$">        
+      </app-cash-table>
     </div>
   </mat-tab>
 
