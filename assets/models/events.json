@@ -227,6 +227,30 @@
     }
   },
   {
+    "id": "the50thalljapanoverallflyingdiscchampionships",
+    "title": "The 50th All Japan Overall Flying Disc Championships",
+    "location": "ecoparkminamata",
+    "period": {
+      "from": "2025-09-13",
+      "to": "2025-09-13"
+    },
+    "layout": {
+      "official": "https://www.jfda.or.jp/web/wp/wp-content/uploads/2025/07/2025AJOAC_DiscGolf_CourseMap_0716.pdf"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 66
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://www.jfda.or.jp/2025/06/06/2025flyingdiscoverall-main/"
+      }
+    ]
+  },
+  {
     "id": "the2ndfukuokauminakaopen",
     "title": "The 2nd Uminaka Classic",
     "location": "uminonakamichiseasidepark",
