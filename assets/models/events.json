@@ -162,6 +162,9 @@
       "from": "2025-10-11",
       "to": "2025-10-13"
     },
+    "layout": {
+      "official": "/assets/layouts/2025/the37thjapannationalchampionship.png"
+    },
     "players": {
       "pro": 0,
       "ama": 0,
