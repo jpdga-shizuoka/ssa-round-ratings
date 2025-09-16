@@ -40,6 +40,8 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/ssa-round-ratings/",
+              "deployUrl": "/ssa-round-ratings/",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -126,7 +128,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "https://jpdga-shizuoka.github.io/ssa-round-ratings/"
+            "baseHref": "/ssa-round-ratings/"
           }
         }
       }
