@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1758061553508,
+  "timestamp": 1758294366474,
   "index": "/ssa-round-ratings/index.html",
   "assetGroups": [
     {
@@ -143,7 +143,7 @@
     "/ssa-round-ratings/assets/local/menu-aliase-dictionary.json": "91ae937de746f17874295a4b1922121f65fa54c8",
     "/ssa-round-ratings/assets/local/prefecture-aliase-dictionary.json": "2bd4f1c0c58db226811f46ec7004a685dea09ddf",
     "/ssa-round-ratings/assets/models/annual-reports.json": "d1308d6c593e60c2329d72f6188367d9c2b169ec",
-    "/ssa-round-ratings/assets/models/events.json": "6cee65db2dbb13a480ba6c77c0fa4286ddefc361",
+    "/ssa-round-ratings/assets/models/events.json": "40fb060f66ba0b8bf93388384ea8973cecd0bfb3",
     "/ssa-round-ratings/assets/models/local-events.json": "bf70b0b90f927a32ac1f3ff574f0cd76c2fa5fc4",
     "/ssa-round-ratings/assets/models/locations.json": "855ec2963701e7131d982b9e09e47aa3c6b16a0f",
     "/ssa-round-ratings/assets/models/members.JPDGA.json": "240fba5ad7d4e345168526bba3eb1133c5b5d5d1",
@@ -199,7 +199,7 @@
     "/ssa-round-ratings/chunk-Z7PONTZA.js": "721da8343d6552722c112c734d541870a823a844",
     "/ssa-round-ratings/chunk-ZVXJXEXF.js": "ee21bf682bb2507f5eb31fd6daed495542e5a3f4",
     "/ssa-round-ratings/favicon.ico": "7108cd1825222d5bd76e0c68b178d0bf608dc5da",
-    "/ssa-round-ratings/index.html": "64e2b18fcf4d1d3adccdce83e91d13ab8380970c",
+    "/ssa-round-ratings/index.html": "83b1d633d6cea5bc1276974884e152fda8a7fade",
     "/ssa-round-ratings/main-JZQPOJFI.js": "4fcd27e9fcec7830ca634dd29962461b31f27adc",
     "/ssa-round-ratings/manifest.webmanifest": "5c93407b4b1506533f8ce52362745167a7625ed9",
     "/ssa-round-ratings/polyfills-5FDKUQTZ.js": "aae1dda5ce0dc87ff4ccd4a96bfca1ae11e45f67",
