@@ -178,7 +178,14 @@
     "jpdga": {
       "tier": "NT",
       "eventId": "745"
-    }
+    },
+    "urls": [
+      {
+        "type": "pdf",
+        "title": "Press Release",
+        "url": "https://membership.jpdga.jp/announcements/20250926.pdf"
+      }
+    ]
   },
   {
     "id": "the28thkansaiopen",
