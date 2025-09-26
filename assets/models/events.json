@@ -163,7 +163,9 @@
       "to": "2025-10-13"
     },
     "layout": {
-      "official": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2025/the37thjapannationalchampionship.png"
+      "back": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2025/the37thjapannationalchampionship/backteelayout.jpeg",
+      "regular": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2025/the37thjapannationalchampionship/regularteelayout.jpeg",
+      "front": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2025/the37thjapannationalchampionship/frontteelayout.jpeg"
     },
     "players": {
       "pro": 0,
@@ -178,7 +180,44 @@
     "jpdga": {
       "tier": "NT",
       "eventId": "745"
-    }
+    },
+    "urls": [
+      {
+        "type": "pdf",
+        "title": "Press Release",
+        "url": "https://membership.jpdga.jp/announcements/20250926.pdf"
+      },
+      {
+        "type": "picture",
+        "title": "Back tee #3-10",
+        "url": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2025/the37thjapannationalchampionship/backtee-3-10.jpeg"
+      },
+      {
+        "type": "picture",
+        "title": "Back tee #11-18",
+        "url": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2025/the37thjapannationalchampionship/backtee-11-18.jpeg"
+      },
+      {
+        "type": "picture",
+        "title": "Regular tee #3-10",
+        "url": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2025/the37thjapannationalchampionship/regulartee-3-10.jpeg"
+      },
+      {
+        "type": "picture",
+        "title": "Regular tee #11-18",
+        "url": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2025/the37thjapannationalchampionship/regulartee-11-18.jpeg"
+      },
+      {
+        "type": "picture",
+        "title": "Front tee #3-10",
+        "url": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2025/the37thjapannationalchampionship/fronttee-3-10.jpeg"
+      },
+      {
+        "type": "picture",
+        "title": "Front tee #11-18",
+        "url": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2025/the37thjapannationalchampionship/fronttee-11-18.jpeg"
+      }
+    ]
   },
   {
     "id": "the28thkansaiopen",
