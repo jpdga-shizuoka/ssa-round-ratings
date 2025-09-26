@@ -163,9 +163,9 @@
       "to": "2025-10-13"
     },
     "layout": {
-      "back": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2025/the37thjapannationalchampionship/backteelayout.jpeg",
-      "regular": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2025/the37thjapannationalchampionship/regularteelayout.jpeg",
-      "front": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2025/the37thjapannationalchampionship/frontteelayout.jpeg"
+      "back": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2025/the37thjapannationalchampionship/backtee-layout.jpeg",
+      "regular": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2025/the37thjapannationalchampionship/regulartee-layout.jpeg",
+      "front": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2025/the37thjapannationalchampionship/fronttee-layout.jpeg"
     },
     "players": {
       "pro": 0,
