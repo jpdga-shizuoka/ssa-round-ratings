@@ -46,6 +46,12 @@ function layout2layouts(layout?: Layouts) {
       url: layout.back
     });
   }
+  if (layout?.regular) {
+    urls.push({
+      title: 'Regular tee',
+      url: layout.regular
+    });
+  }
   if (layout?.front) {
     urls.push({
       title: 'Front tee',
