@@ -168,9 +168,9 @@
       "front": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2025/the37thjapannationalchampionship/fronttee-layout.jpeg"
     },
     "players": {
-      "pro": 0,
-      "ama": 0,
-      "misc": 0
+      "pro": 51,
+      "ama": 32,
+      "misc": 3
     },
     "pdga": {
       "tier": "B",
@@ -231,7 +231,7 @@
       "official": "https://membership.jpdga.jp/event/2025/743_map.pdf"
     },
     "players": {
-      "pro": 28,
+      "pro": 27,
       "ama": 20,
       "misc": 1
     },
