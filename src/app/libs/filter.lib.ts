@@ -36,15 +36,12 @@ export function compareTime(t1: Date, category: EventCategory) {
   const t2 = new Date();
   switch (category) {
     case 'past': {
-      t2.setDate(t2.getDate() + 1);
       return t1.getTime() < t2.getTime();
     }
     case 'upcoming': {
-      t2.setDate(t2.getDate() - 1);
       return t1.getTime() > t2.getTime();
     }
     case 'local': {
-      t2.setDate(t2.getDate() - 1);
       return t1.getTime() > t2.getTime();
     }
     case 'monthly': {
