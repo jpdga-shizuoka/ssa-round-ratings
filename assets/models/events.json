@@ -152,7 +152,14 @@
     "jpdga": {
       "tier": "NT",
       "eventId": "748"
-    }
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://www.facebook.com/maiko.discgolfclassic/"
+      }
+    ]
   },
   {
     "id": "the37thjapannationalchampionship",
