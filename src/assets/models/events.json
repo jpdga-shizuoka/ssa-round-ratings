@@ -102,6 +102,24 @@
     ]
   },
   {
+    "id": "the1sttanbaopen",
+    "title": "The 1st Tanba Open",
+    "location": "kyototanbapark",
+    "period": {
+      "from": "2025-11-15",
+      "to": "2025-11-16"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
+    },
+    "jpdga": {
+      "tier": "LT",
+      "eventId": "759"
+    }
+  },
+  {
     "id": "the37thshowakinenparkopen",
     "title": "The 37th Showa Kinen Park Open",
     "location": "showakinenpark",
