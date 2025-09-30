@@ -76,7 +76,7 @@ export class VideosTableComponent implements OnInit, AfterViewInit {
 
   get loading(): boolean { return this.dataSource?.loading ?? true; }
   get isMinimum(): boolean {
-    return this.limit <= this.pageSizeOptions[0];
+    return !!this.limit && this.limit <= this.pageSizeOptions[0];
   }
 
   ngOnInit(): void {
