@@ -740,6 +740,31 @@
     }
   },
   {
+    "id": "the4thyokotadiscgolfopen",
+    "title": "The 4th Yokota Disc Golf Open",
+    "location": "yokotaairbase",
+    "period": {
+      "from": "2025-04-05",
+      "to": "2024-04-05"
+    },
+    "players": {
+      "pro": 13,
+      "ama": 4,
+      "misc": 0
+    },
+    "pdga": {
+      "tier": "C",
+      "eventId": "90537"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://www.facebook.com/groups/742598833882723"
+      }
+    ]
+  },
+  {
     "id": "the20thmastersnationalchampionship",
     "title": "The 20th Masters National Championships",
     "location": "hitachiseasidepark",
