@@ -106,6 +106,15 @@
   {
     "prefecture": "Kyoto",
     "geolocation": [
+      35.16579274866751, 135.41661015355973
+    ],
+    "id": "kyototanbapark",
+    "title": "Kyoto Tanba Park",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/26/6110/26407.html"
+  },
+  {
+    "prefecture": "Kyoto",
+    "geolocation": [
       35.137323,
       135.530041
     ],
