@@ -20,6 +20,15 @@
     "weather": "https://weather.yahoo.co.jp/weather/jp/13/4410/13108.html"
   },
   {
+    "prefecture": "Tokyo",
+    "geolocation": [
+      35.74237724460397, 139.33816903288957
+    ],
+    "id": "yokotaairbase",
+    "title": "Yokota Air Base",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/13/4410/13218.html"
+  },
+  {
     "prefecture": "Fukushima",
     "geolocation": [
       37.593227,
