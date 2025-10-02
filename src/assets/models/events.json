@@ -1,5 +1,23 @@
 [
   {
+    "id": "the28thnipponopen",
+    "title": "The 28th Nippon Open",
+    "location": "tbd",
+    "period": {
+      "from": "2026-07-04",
+      "to": "2026-07-05"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
+    },
+    "jpdga": {
+      "tier": "NT",
+      "eventId": "767"
+    }
+  },
+  {
     "id": "the33rdtokyoopenama",
     "title": "The 33rd Tokyo Open (Ama)",
     "location": "tatsuminomoriseasidepark",
