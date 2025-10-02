@@ -30,6 +30,31 @@
     ]
   },
   {
+    "id": "the21stmastersnationalchampionship",
+    "title": "The 21st Masters National Championships",
+    "location": "tbd",
+    "period": {
+      "from": "2026-02-28",
+      "to": "2026-03-01"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
+    },
+    "jpdga": {
+      "tier": "ABT-B",
+      "eventId": "764"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://discgolf-navi.com/tournament/nt-abt-lt/masters-miho/"
+      }
+    ]
+  },
+  {
     "id": "the7thkagoshimaopen",
     "title": "The 7th Kagoshima Open",
     "location": "tbd",
