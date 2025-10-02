@@ -55,7 +55,7 @@
       "to": "2025-11-24"
     },
     "layout": {
-      "official": "/assets/layouts/2025/the4thjapanseriesdiscgolfchampionships.jpg"
+      "official": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2025/the4thjapanseriesdiscgolfchampionships.jpg"
     },
     "players": {
       "pro": 0,
@@ -210,6 +210,11 @@
       "eventId": "745"
     },
     "urls": [
+      {
+        "type": "pdf",
+        "title": "Tee Time",
+        "url": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2025/the37thjapannationalchampionship/teetime.pdf"
+      },
       {
         "type": "pdf",
         "title": "Press Release",
