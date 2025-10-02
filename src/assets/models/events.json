@@ -1,5 +1,23 @@
 [
   {
+    "id": "the29thkansaiopen",
+    "title": "The 29th Kansai Open",
+    "location": "fuminnomorihiyoshi",
+    "period": {
+      "from": "2026-09-26",
+      "to": "2026-09-27"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
+    },
+    "jpdga": {
+      "tier": "ABT-B",
+      "eventId": "768"
+    }
+  },
+  {
     "id": "the28thnipponopen",
     "title": "The 28th Nippon Open",
     "location": "tbd",
