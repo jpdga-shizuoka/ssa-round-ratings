@@ -1,5 +1,23 @@
 [
   {
+    "id": "the2026nationalteamchampionship",
+    "title": "The 2026 National Team Championships",
+    "location": "oyamaomoinomoripark",
+    "period": {
+      "from": "2026-01-11",
+      "to": "2026-01-12"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
+    },
+    "jpdga": {
+      "tier": "LT",
+      "eventId": "762"
+    }
+  },
+  {
     "id": "the3rdjandluxcup",
     "title": "The 3rd Jandlux Cup",
     "location": "michinokupark",
