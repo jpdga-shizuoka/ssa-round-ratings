@@ -1,5 +1,30 @@
 [
   {
+    "id": "the33rdtokyoopenama",
+    "title": "The 33rd Tokyo Open (Ama)",
+    "location": "tatsuminomoriseasidepark",
+    "period": {
+      "from": "2026-03-14",
+      "to": "2026-03-15"
+    },
+    "jpdga": {
+      "tier": "ABT-B",
+      "eventId": "766"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://discgolf-navi.com/tournament/nt-abt-lt/tokyo-open/"
+      }
+    ]
+  },
+  {
     "id": "the14thokinawaopen",
     "title": "The 14th Okinawa Open",
     "location": "nakijinsonsportpark",
