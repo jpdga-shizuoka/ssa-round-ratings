@@ -1,5 +1,35 @@
 [
   {
+    "id": "the14thokinawaopen",
+    "title": "The 14th Okinawa Open",
+    "location": "nakijinsonsportpark",
+    "period": {
+      "from": "2026-03-06",
+      "to": "2026-03-08"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
+    },
+    "jpdga": {
+      "tier":"ABT-A",
+      "eventId": "765"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://sites.google.com/view/opdga/"
+      },
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/groups/2366167146940075"
+      }
+    ]
+  },
+  {
     "id": "the7thkagoshimaopen",
     "title": "The 7th Kagoshima Open",
     "location": "tbd",
