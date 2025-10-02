@@ -1,5 +1,17 @@
 [
   {
+    "id": "the7thkagoshimaopen",
+    "title": "The 7th Kagoshima Open",
+    "location": "tbd",
+    "period": {
+      "from": "2026-01-24",
+      "to": "2026-01-25"
+    },
+    "jpdga": {
+      "eventId": "763"
+    }
+  },
+  {
     "id": "the2026nationalteamchampionship",
     "title": "The 2026 National Team Championships",
     "location": "oyamaomoinomoripark",
@@ -5546,7 +5558,7 @@
     "jpdga": {
       "eventId": "553"
     },
-    "id": "the7thkagoshimaopen"
+    "id": "the7thkagoshimaopen-canceled"
   },
   {
     "title": "The 2021 National Team Championships",
