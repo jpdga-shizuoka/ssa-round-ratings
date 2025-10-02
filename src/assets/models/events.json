@@ -212,6 +212,11 @@
     "urls": [
       {
         "type": "pdf",
+        "title": "Tee Time",
+        "url": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2025/the37thjapannationalchampionship/teetime.pdf"
+      },
+      {
+        "type": "pdf",
         "title": "Press Release",
         "url": "https://membership.jpdga.jp/announcements/20250926.pdf"
       },
