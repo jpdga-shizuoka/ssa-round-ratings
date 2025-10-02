@@ -54,6 +54,9 @@
       "from": "2025-11-22",
       "to": "2025-11-24"
     },
+    "layout": {
+      "official": "/assets/layouts/2025/the4thjapanseriesdiscgolfchampionships.jpg"
+    },
     "players": {
       "pro": 0,
       "ama": 0,
