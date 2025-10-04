@@ -2,7 +2,7 @@ import { Observable } from 'rxjs';
 import { ICONS, MiscInfo } from './app-common';
 export { ICONS, MiscInfo };
 
-export type EventCategory = 'alltime' | 'upcoming' | 'past' | 'local' | 'monthly' | 'video';
+export type EventCategory = 'alltime' | 'upcoming' | 'past' | 'local' | 'monthly' | 'video' | 'properse';
 export type EventId = string;
 export type RoundId = string;
 export type LocationId = string;
