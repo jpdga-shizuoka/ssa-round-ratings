@@ -52,6 +52,7 @@ export interface Players {
   pro: number;
   ama: number;
   misc: number;
+  total?: number;
 }
 
 export interface Layouts {
