@@ -114,7 +114,6 @@ export class BubbleSeriesInteractiveComponent implements OnChanges {
       <span class="tooltip-label">
         <label>${this.xAxisLabel}:</label> ${circle.x}<br />
         <label>${this.yAxisLabel}:</label> ${circle.y.toFixed(1)}<br />
-        <label>TD:</label> ${circle.r.toFixed(2)}
       </span>
     `;
   }
