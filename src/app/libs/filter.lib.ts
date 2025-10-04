@@ -8,7 +8,8 @@ const CATEGORY2FILE = {
   past: 'events',
   video: 'events',
   local: 'local-events',
-  monthly: 'monthly-events'
+  monthly: 'monthly-events',
+  properse: 'events',
 };
 
 export function organization2url(organization: Organization) {
@@ -46,6 +47,9 @@ export function compareTime(t1: Date, category: EventCategory) {
     }
     case 'monthly': {
       return t1.getTime() > t2.getTime();
+    }
+    case 'properse': {
+      return t1.getTime() < t2.getTime();
     }
     default:
       return true;
