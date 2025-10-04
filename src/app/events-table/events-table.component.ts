@@ -88,6 +88,8 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
           return title2name(item.title);
         case 'date':
           return item.period?.from ?? '';
+        case 'players':
+          return item.players?.total ?? 0;
         default: {
           const t = item as unknown as { [property: string]: string | number };
           return t[property];
