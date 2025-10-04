@@ -63,24 +63,5 @@
         </td>
       }
     </tr>
-    <tr class="element-row mat-row">
-      <td>TD</td>
-      @if (primaryLanguage) {
-        <td>
-          The difficulty of the course increases simply by increasing the distance.
-          <span>TD (Technical Difficulty)</span> is one of difficulties excluding the difficulty due to the distance,
-          which is calculated according to the following equation;
-          <span>TD = SSA / HLA * 10;</span>
-        </td>
-      }
-      @if (!primaryLanguage) {
-        <td>
-          コースの難度は単純に距離を伸ばせば上がるが,
-          その距離による難度を排した技術的な難度を表す指標として,
-          以下の方程式に従い算出した実験的な数値;<br/>
-          <span>TD = SSA / HLA * 10;</span>
-        </td>
-      }
-    </tr>
   </tbody>
 </table>
