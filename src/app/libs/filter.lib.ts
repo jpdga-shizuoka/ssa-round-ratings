@@ -155,6 +155,15 @@ export function calcProPurse(events: EventInfo[]): EventInfo[] {
   return events;
 }
 
+export function calcPlayersTotal(events: EventInfo[]): EventInfo[] {
+  events.forEach(event => {
+    if (event.players) {
+      event.players.total = event.players.pro + event.players.ama + event.players.misc;
+    }
+  });
+  return events;
+}
+
 export function getStarsOfPurse(budget: ProBudget): number {
   let stars = 0;
   if (budget && budget.prizeratio && budget.paidratio) {
