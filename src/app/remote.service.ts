@@ -50,6 +50,7 @@ export class RemoteService {
       .pipe(
         map(events => upcomingFilter(events, category)),
         map(events => filter ? filter(events, category) : events),
+        map(events => category === 'properse' ? events.filter(event => event.budget !== undefined) : events),
         map(events => calcProPurse(events)),
         map(events => calcPlayersTotal(events)),
         map(events => sortEvents(events, category)),
