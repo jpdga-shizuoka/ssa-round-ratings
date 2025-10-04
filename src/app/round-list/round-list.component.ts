@@ -15,7 +15,7 @@ export class RoundListComponent implements OnInit, AfterViewInit {
   @Input() list!: RoundId[];
   @ViewChild(MatTable) table!: MatTable<RoundInfo>;
   dataSource!: RoundListDataSource;
-  displayedColumns = ['title', 'holes', 'hla', 'ssa', 'td'];
+  displayedColumns = ['title', 'holes', 'hla', 'ssa'];
 
   constructor(private remote: RemoteService) {}
 
