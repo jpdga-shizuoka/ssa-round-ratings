@@ -1080,6 +1080,7 @@
       "paidout": 13,
       "rate": 149.3
     },
+    "rounds": ["the13thokinawaopen.rd1rd2rd3"],
     "urls": [
       {
         "type": "video",
@@ -1106,6 +1107,9 @@
       "from": "2025-02-01",
       "to": "2025-02-02"
     },
+    "layout": {
+      "official": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2025/the3rdmusashikyuryoshinrinparkcup.jpg"
+    },
     "players": {
       "pro": 12,
       "ama": 52,
@@ -1126,6 +1130,7 @@
       "tier": "LT",
       "eventId": "751"
     },
+    "rounds": ["the3rdmusashikyuryoshinrinparkcup.r1rd2rd3rd4"],
     "urls": [
       {
         "type": "video",
