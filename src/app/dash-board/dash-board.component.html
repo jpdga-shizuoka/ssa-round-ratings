@@ -46,10 +46,11 @@
 
       <mat-tab label="{{'Cash' | localize}}">
         <div>
-          <app-cash-table
+          <app-events-table
+            [category]="'properse'"
             [limit]="5"
             [displayedColumns$]="cashColumnsPast$">
-          </app-cash-table>
+          </app-events-table>
         </div>
       </mat-tab>
 
