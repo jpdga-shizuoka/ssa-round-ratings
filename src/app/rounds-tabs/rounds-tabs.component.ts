@@ -15,7 +15,7 @@ import { CashTableComponent } from '../cash-table/cash-table.component';
 import { EventsMapComponent } from '../events-map/events-map.component';
 import { LocalizePipe } from '../localize.pipe';
 
-const EVENT_COLUMNS = [['date', 'title'], ['date', 'title', 'location']];
+const EVENT_COLUMNS = [['title', 'players'], ['title', 'players']];
 const ROUND_COLUMNS = [['event', 'hla', 'ssa'], ['year', 'event', 'round', 'hla', 'ssa']];
 const CASH_COLUMNS = [['title', 'purse', 'payout', 'cashing'], ['title', 'purse', 'payout', 'cashing']];
 const TABS = ['events', 'cash', 'rounds', 'videos', 'locations'];
