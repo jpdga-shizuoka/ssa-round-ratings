@@ -1080,6 +1080,7 @@
       "paidout": 13,
       "rate": 149.3
     },
+    "rounds": ["the13thokinawaopen.rd1rd2rd3"],
     "urls": [
       {
         "type": "video",
@@ -1129,6 +1130,7 @@
       "tier": "LT",
       "eventId": "751"
     },
+    "rounds": ["the3rdmusashikyuryoshinrinparkcup.r1rd2rd3rd4"],
     "urls": [
       {
         "type": "video",
