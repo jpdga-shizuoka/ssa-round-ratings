@@ -22,6 +22,7 @@ import { PeriodPipe } from '../period.pipe';
 import { LocalizePipe } from '../localize.pipe';
 import { LocationPipe } from '../location.pipe';
 import { SchedulePipe } from '../schedule.pipe';
+import { RoundThousandsPipe } from '../round-thousands.pipe';
 
 @Component({
     selector: 'app-events-table',
@@ -42,6 +43,7 @@ import { SchedulePipe } from '../schedule.pipe';
         LocalizePipe,
         LocationPipe,
         SchedulePipe,
+        RoundThousandsPipe,
     ]
 })
 export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
@@ -90,6 +92,12 @@ export class EventsTableComponent implements OnInit, AfterViewInit, OnDestroy {
           return item.period?.from ?? '';
         case 'players':
           return item.players?.total ?? 0;
+        case 'purse':
+          return item.budget?.totalprize ?? 0;
+        case 'payout':
+          return item.budget?.prizeratio ?? 0;
+        case 'cashing':
+          return item.budget?.paidratio ?? 0;
         default: {
           const t = item as unknown as { [property: string]: string | number };
           return t[property];
