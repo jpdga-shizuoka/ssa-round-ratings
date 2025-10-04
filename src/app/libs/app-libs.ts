@@ -66,10 +66,11 @@ export function calcRoundStat(rounds: RoundInfo[]): RoundInfo[] {
 }
 
 export function calcDifficulty(round: RoundInfo): number | undefined {
-  if (!round.hla || !round.ssa) {
-    return undefined;
-  }
-  return Math.round(round.ssa / round.hla * 100) / 10;
+  // if (!round.hla || !round.ssa) {
+  //   return undefined;
+  // }
+  // return Math.round(round.ssa / round.hla * 100) / 10;
+  return 1;
 }
 
 export function calcWeight(player1: { score: number, rating: number }, player2: { score: number, rating: number }) {
