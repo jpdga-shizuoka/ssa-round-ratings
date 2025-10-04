@@ -11,11 +11,10 @@ import { RoutingTabsComponent } from '../routing-tabs/routing-tabs.component';
 import { EventsTableComponent } from '../events-table/events-table.component';
 import { RoundsTableComponent } from '../rounds-table/rounds-table.component';
 import { VideosTableComponent } from '../videos-table/videos-table.component';
-import { CashTableComponent } from '../cash-table/cash-table.component';
 import { EventsMapComponent } from '../events-map/events-map.component';
 import { LocalizePipe } from '../localize.pipe';
 
-const EVENT_COLUMNS = [['title', 'players'], ['title', 'players']];
+const EVENT_COLUMNS = [['title', 'location', 'players'], ['date', 'title', 'location', 'players']];
 const ROUND_COLUMNS = [['event', 'hla', 'ssa'], ['year', 'event', 'round', 'hla', 'ssa']];
 const CASH_COLUMNS = [['title', 'purse', 'payout', 'cashing'], ['title', 'purse', 'payout', 'cashing']];
 const TABS = ['events', 'cash', 'rounds', 'videos', 'locations'];
@@ -30,7 +29,6 @@ const TABS = ['events', 'cash', 'rounds', 'videos', 'locations'];
     EventsTableComponent,
     RoundsTableComponent,
     VideosTableComponent,
-    CashTableComponent,
     EventsMapComponent,
     LocalizePipe
 ]
