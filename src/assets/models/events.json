@@ -267,7 +267,14 @@
     "jpdga": {
       "tier": "LT",
       "eventId": "759"
-    }
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Register",
+        "url": "https://www.discgolfscene.com/tournament/Tanba_Open_2025"
+      }
+    ]
   },
   {
     "id": "the37thshowakinenparkopen",
