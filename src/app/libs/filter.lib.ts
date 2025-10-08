@@ -82,7 +82,7 @@ export function sortEvents(events: EventInfo[], category: EventCategory): EventI
     }
     const t1 = new Date(a.period.from);
     const t2 = new Date(b.period.from);
-    if (category === 'past') {
+    if (category === 'past' || category === 'properse' || category === 'video') {
       return t2.getTime() - t1.getTime();
     } else {
       return t1.getTime() - t2.getTime();
