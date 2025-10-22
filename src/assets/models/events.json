@@ -259,6 +259,9 @@
       "from": "2025-11-15",
       "to": "2025-11-16"
     },
+    "layout": {
+      "official": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2025/the1sttanbaopen.pdf"
+    },
     "players": {
       "pro": 0,
       "ama": 0,
