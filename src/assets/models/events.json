@@ -314,9 +314,12 @@
       "from": "2025-10-25",
       "to": "2025-10-26"
     },
+    "layout": {
+      "official": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2025/the4thmaikoclassic.jpg"
+    },
     "players": {
-      "pro": 0,
-      "ama": 0,
+      "pro": 32,
+      "ama": 10,
       "misc": 0
     },
     "pdga": {
