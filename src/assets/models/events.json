@@ -235,9 +235,9 @@
       "to": "2025-11-02"
     },
     "players": {
-      "pro": 0,
-      "ama": 0,
-      "misc": 0
+      "pro": 22,
+      "ama": 8,
+      "misc": 4
     },
     "jpdga": {
       "tier": "LT",
