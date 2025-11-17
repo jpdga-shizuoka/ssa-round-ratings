@@ -172,9 +172,14 @@
       "to": "2025-12-30"
     },
     "players": {
-      "pro": 0,
+      "pro": 91,
       "ama": 0,
       "misc": 0
+    },
+    "pdga": {
+      "eventId": "96928",
+      "scoreId": "96928",
+      "tier": "B"
     },
     "jpdga": {
       "tier": "ABT-A ",
