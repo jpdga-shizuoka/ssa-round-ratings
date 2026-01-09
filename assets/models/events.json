@@ -129,6 +129,39 @@
     }
   },
   {
+    "id": "the2026hamanomiyanewyeardiscgolftournament",
+    "title": "The 2026 Hamanomiya New Year Disc Golf Tournament",
+    "location": "hamanomiyapark",
+    "period": {
+      "from": "2026-01-11",
+      "to": "2026-01-11"
+    },
+    "layout": {
+      "official": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2026/the2026hamanomiyanewyeardiscgolftournament.pdf"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 42
+    },
+    "jpdga": {
+      "tier":"LT",
+      "eventId": "774"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://hyfda.jpn.org"
+      },
+      {
+        "type": "website",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/HYFDA2003"
+      }
+    ]
+  },
+  {
     "id": "the2026nationalteamchampionship",
     "title": "The 2026 National Team Championships",
     "location": "oyamaomoinomoripark",
@@ -140,6 +173,10 @@
       "pro": 0,
       "ama": 0,
       "misc": 0
+    },
+    "pdga": {
+      "tier": "XC",
+      "eventId": "97441"
     },
     "jpdga": {
       "tier": "LT",
