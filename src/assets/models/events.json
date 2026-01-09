@@ -73,6 +73,10 @@
       "ama": 0,
       "misc": 0
     },
+    "pdga": {
+      "eventId": "97704",
+      "scoreId": "97704"
+    },
     "jpdga": {
       "tier":"ABT-A",
       "eventId": "765"
@@ -82,11 +86,6 @@
         "type": "website",
         "title": "Official Site",
         "url": "https://sites.google.com/view/opdga/"
-      },
-      {
-        "type": "website",
-        "title": "Facebook",
-        "url": "https://www.facebook.com/groups/2366167146940075"
       }
     ]
   },
