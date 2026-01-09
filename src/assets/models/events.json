@@ -103,17 +103,12 @@
       "ama": 0,
       "misc": 0
     },
-    "jpdga": {
-      "tier": "ABT-B",
-      "eventId": "764"
+    "pdga": {
+      "eventId": "99361"
     },
-    "urls": [
-      {
-        "type": "website",
-        "title": "Official Site",
-        "url": "https://discgolf-navi.com/tournament/nt-abt-lt/masters-miho/"
-      }
-    ]
+    "jpdga": {
+      "eventId": "764"
+    }
   },
   {
     "id": "the4thmusashikyuryoshinrinparkcup",
