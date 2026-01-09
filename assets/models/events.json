@@ -155,8 +155,8 @@
       "to": "2025-12-14"
     },
     "players": {
-      "pro": 0,
-      "ama": 0,
+      "pro": 19,
+      "ama": 8,
       "misc": 0
     },
     "jpdga": {
@@ -172,7 +172,7 @@
       "to": "2025-12-30"
     },
     "players": {
-      "pro": 91,
+      "pro": 88,
       "ama": 0,
       "misc": 0
     },
@@ -210,7 +210,7 @@
       "official": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2025/the4thjapanseriesdiscgolfchampionships.jpg"
     },
     "players": {
-      "pro": 0,
+      "pro": 47,
       "ama": 0,
       "misc": 0
     },
