@@ -141,6 +141,10 @@
       "ama": 0,
       "misc": 0
     },
+    "pdga": {
+      "tier": "XC",
+      "eventId": "97441"
+    },
     "jpdga": {
       "tier": "LT",
       "eventId": "762"
