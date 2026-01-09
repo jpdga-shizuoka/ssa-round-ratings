@@ -118,10 +118,14 @@
   {
     "id": "the7thkagoshimaopen",
     "title": "The 7th Kagoshima Open",
-    "location": "tbd",
+    "location": "yoshinopark",
     "period": {
       "from": "2026-01-24",
       "to": "2026-01-25"
+    },
+    "pdga": {
+      "tier": "B",
+      "eventId": "98312"
     },
     "jpdga": {
       "tier":"ABT-B",
