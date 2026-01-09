@@ -110,6 +110,30 @@
     }
   },
   {
+    "id": "the10thkinkiopen",
+    "title": "The 10th kinki Open",
+    "location": "hokuseichuopark",
+    "period": {
+      "from": "2026-02-21",
+      "to": "2026-02-22"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
+    },
+    "jpdga": {
+      "eventId": "775"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://jpdgamie.org"
+      }
+    ]
+  },
+  {
     "id": "the4thmusashikyuryoshinrinparkcup",
     "title": "The 4th Musashi-Kyuryo Shinrin Park Cup",
     "location": "musashikyuryoshinrinpark",
