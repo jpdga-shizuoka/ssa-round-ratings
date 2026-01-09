@@ -130,7 +130,14 @@
     "jpdga": {
       "tier":"ABT-B",
       "eventId": "763"
-    }
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://note.com/kagoshimadiscg"
+      }
+    ]
   },
   {
     "id": "the8thhitachseasideparkopen",
