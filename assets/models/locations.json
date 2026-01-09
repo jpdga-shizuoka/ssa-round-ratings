@@ -410,13 +410,14 @@
     "weather": "https://weather.yahoo.co.jp/weather/jp/47/9110/47325.html"
   },
   {
+    "id": "yoshinopark",
+    "title": "Yoshino Park",
     "prefecture": "Kagoshima",
     "geolocation": [
       31.633516,
       130.594111
     ],
-    "id": "yoshinopark",
-    "title": "Yoshino Park"
+    "weather": "https://weather.yahoo.co.jp/weather/jp/46/8810/46201.html"
   },
   {
     "prefecture": "Aichi",
@@ -455,6 +456,15 @@
     ],
     "id": "suzukaseishonennomori",
     "title": "Suzuka Seishonen-no-mori"
+  },
+  {
+    "id": "hokuseichuopark",
+    "title": "Hokusei Chuo Park",
+    "prefecture": "Mie",
+    "geolocation": [
+      35.070074464588274, 136.54594680747022
+    ],
+    "weather": "https://weather.yahoo.co.jp/weather/jp/24/5310/24202.html"
   },
   {
     "prefecture": "Kyoto",

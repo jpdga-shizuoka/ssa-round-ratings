@@ -73,6 +73,10 @@
       "ama": 0,
       "misc": 0
     },
+    "pdga": {
+      "eventId": "97704",
+      "scoreId": "97704"
+    },
     "jpdga": {
       "tier":"ABT-A",
       "eventId": "765"
@@ -82,11 +86,6 @@
         "type": "website",
         "title": "Official Site",
         "url": "https://sites.google.com/view/opdga/"
-      },
-      {
-        "type": "website",
-        "title": "Facebook",
-        "url": "https://www.facebook.com/groups/2366167146940075"
       }
     ]
   },
@@ -103,29 +102,107 @@
       "ama": 0,
       "misc": 0
     },
+    "pdga": {
+      "eventId": "99361"
+    },
     "jpdga": {
-      "tier": "ABT-B",
       "eventId": "764"
+    }
+  },
+  {
+    "id": "the10thkinkiopen",
+    "title": "The 10th kinki Open",
+    "location": "hokuseichuopark",
+    "period": {
+      "from": "2026-02-21",
+      "to": "2026-02-22"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
+    },
+    "jpdga": {
+      "eventId": "775"
     },
     "urls": [
       {
         "type": "website",
         "title": "Official Site",
-        "url": "https://discgolf-navi.com/tournament/nt-abt-lt/masters-miho/"
+        "url": "https://jpdgamie.org"
+      }
+    ]
+  },
+  {
+    "id": "the4thmusashikyuryoshinrinparkcup",
+    "title": "The 4th Musashi-Kyuryo Shinrin Park Cup",
+    "location": "musashikyuryoshinrinpark",
+    "period": {
+      "from": "2026-01-31",
+      "to": "2026-02-01"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
+    },
+    "pdga": {
+      "tier": "B",
+      "scoreId": "99226",
+      "eventId": "99226"
+    },
+    "jpdga": {
+      "tier": "LT",
+      "eventId": "786"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://www.facebook.com/spdgainfo"
       }
     ]
   },
   {
     "id": "the7thkagoshimaopen",
     "title": "The 7th Kagoshima Open",
-    "location": "tbd",
+    "location": "yoshinopark",
     "period": {
       "from": "2026-01-24",
       "to": "2026-01-25"
     },
+    "pdga": {
+      "tier": "B",
+      "eventId": "98312"
+    },
     "jpdga": {
       "tier":"ABT-B",
       "eventId": "763"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://note.com/kagoshimadiscg"
+      }
+    ]
+  },
+  {
+    "id": "the8thhitachseasideparkopen",
+    "title": "The 8th Hitachi Seaside Park Open",
+    "location": "hitachiseasidepark",
+    "period": {
+      "from": "2026-01-17",
+      "to": "2026-01-18"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
+    },
+    "jpdga": {
+      "tier": "LT",
+      "eventId": "770"
     }
   },
   {
