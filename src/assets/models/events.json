@@ -1100,7 +1100,8 @@
         "title": "Official Site",
         "url": "https://discgolf-navi.com/tournament/nt-abt-lt/masters-miho/"
       }
-    ]
+    ],
+    "rounds": ["the20thmastersnationalchampionship.rd1rd2rd3"]
   },
   {
     "id": "the1stjapandiscgolfmatchplaychampionships",

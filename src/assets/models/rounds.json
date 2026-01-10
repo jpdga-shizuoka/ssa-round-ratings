@@ -1,5 +1,22 @@
 [
   {
+    "id": "the20thmastersnationalchampionship.rd1rd2rd3",
+    "event": "the20thmastersnationalchampionship",
+    "round": "Rd1,2,3",
+    "hla": 93.5,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 46,
+        "rating": 1048
+      },
+      "player2": {
+        "score": 67,
+        "rating": 841
+      }
+    }
+  },
+  {
     "id": "the13thokinawaopen.rd1rd2rd3",
     "event": "the13thokinawaopen",
     "round": "Rd1,2,3",
