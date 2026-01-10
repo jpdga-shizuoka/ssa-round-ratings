@@ -1180,7 +1180,8 @@
         "title": "Official Site",
         "url": "https://aifda.or.jp/event"
       }
-    ]
+    ],
+    "rounds": ["the24thchubuopen.rd1rd2rd3"]
   },
   {
     "id": "the13thokinawaopen",

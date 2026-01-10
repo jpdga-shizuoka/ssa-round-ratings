@@ -1,5 +1,25 @@
 [
   {
+    "id": "the24thchubuopen.rd1rd2rd3",
+    "event": "the24thchubuopen",
+    "round": "Rd1,2,3",
+    "hla": 128,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 52,
+        "rating": 1049
+      },
+      "player2": {
+        "score": 74,
+        "rating": 866
+      }
+    },
+    "eventTitle": "The 24th Chubu Open",
+    "locationTitle": "Ena-Kyo Park Country Club",
+    "date": "2025-03-15"
+  },
+  {
     "id": "the20thmastersnationalchampionship.rd1rd2rd3",
     "event": "the20thmastersnationalchampionship",
     "round": "Rd1,2,3",
