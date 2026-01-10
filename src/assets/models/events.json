@@ -981,7 +981,8 @@
         "title": "Official Site",
         "url": "https://discgolf-navi.com/tournament/nt-abt-lt/tokyo-open/"
       }
-    ]
+    ],
+    "rounds": ["the32ndtokyoopen.rd1rd2rd3"]
   },
   {
     "id": "the22ndsagaopen",

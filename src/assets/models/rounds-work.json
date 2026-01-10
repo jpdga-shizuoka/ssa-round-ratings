@@ -1,5 +1,25 @@
 [
   {
+    "id": "the32ndtokyoopen.rd1rd2rd3",
+    "event": "the32ndtokyoopen",
+    "round": "Rd1,2,3",
+    "holes": 18,
+    "hla": 93,
+    "ratings": {
+      "player1": {
+        "score": 52,
+        "rating": 1031
+      },
+      "player2": {
+        "score": 78,
+        "rating": 800
+      }
+    },
+    "eventTitle": "The 32nd Tokyo Open",
+    "locationTitle": "Tatsumi-no-Mori Seaside Park",
+    "date": "2025-04-19"
+  },
+  {
     "id": "the22ndsagaopen.rd3",
     "event": "the22ndsagaopen",
     "round": "Rd3",
