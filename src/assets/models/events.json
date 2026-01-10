@@ -941,7 +941,8 @@
         "title": "Official Site",
         "url": "https://discgolf-navi.com/tournament/nt-abt-lt/kiyosato-open/"
       }
-    ]
+    ],
+    "rounds": ["the20thkiyosatonomoriopen.rd1rd2rd3"]
   },
   {
     "id": "the32ndtokyoopen",

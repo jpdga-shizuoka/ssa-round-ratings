@@ -1,5 +1,22 @@
 [
   {
+    "id": "the20thkiyosatonomoriopen.rd1rd2rd3",
+    "event": "the20thkiyosatonomoriopen",
+    "round": "Rd1,2,3",
+    "hla": 86,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 48,
+        "rating": 1038
+      },
+      "player2": {
+        "score": 64,
+        "rating": 883
+      }
+    }
+  },
+  {
     "id": "the29thkantoopenama.rd1rd2rd3",
     "event": "the29thkantoopenama",
     "round": "Rd1,2,3",
