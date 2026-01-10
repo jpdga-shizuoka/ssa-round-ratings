@@ -1,5 +1,25 @@
 [
   {
+    "id": "the29thkantoopenama.rd1rd2rd3",
+    "event": "the29thkantoopenama",
+    "round": "Rd1,2,3",
+    "hla": 97,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 49,
+        "rating": 1023
+      },
+      "player2": {
+        "score": 77,
+        "rating": 748
+      }
+    },
+    "eventTitle": "The 29th Kanto Open (Ama)",
+    "locationTitle": "Shiromigaoka Sports Park",
+    "date": "2025-04-05"
+  },
+  {
     "id": "the24thchubuopen.rd1rd2rd3",
     "event": "the24thchubuopen",
     "round": "Rd1,2,3",

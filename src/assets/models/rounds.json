@@ -1,5 +1,22 @@
 [
   {
+    "id": "the29thkantoopenama.rd1rd2rd3",
+    "event": "the29thkantoopenama",
+    "round": "Rd1,2,3",
+    "hla": 97,
+    "holes": 18,
+    "ratings": {
+      "player1": {
+        "score": 49,
+        "rating": 1023
+      },
+      "player2": {
+        "score": 77,
+        "rating": 748
+      }
+    }
+  },
+  {
     "id": "the24thchubuopen.rd1rd2rd3",
     "event": "the24thchubuopen",
     "round": "Rd1,2,3",

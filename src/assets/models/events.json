@@ -1036,7 +1036,8 @@
     "jpdga": {
       "tier":"ABT-A",
       "eventId": "721"
-    }
+    },
+    "rounds": ["the29thkantoopenama.rd1rd2rd3"]
   },
   {
     "id": "the4thyokotadiscgolfopen",
