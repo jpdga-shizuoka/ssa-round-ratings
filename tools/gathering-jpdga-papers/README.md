@@ -13,12 +13,30 @@
 1. DL用URLは、大会が開催された年月(`EventInfo.period`)によって生成方法が異なる
     - 2018年3月以前
         - この大会は、収集対象から除外する
+            ```
+            http://www.jpdga.jp/data/event/2011/11okinawaop.doc
+            http://www.jpdga.jp/data/event/2015/15kansaiop.doc
+            http://www.jpdga.jp/data/event/2016/16team.pdf
+            http://www.jpdga.jp/data/event/2017/17doubles.doc
+            ```
     - 2018年4月から2024年12月まで
         - `http://www.jpdga.jp/data/event/<年度>/` + `<eventId>.pdf`
+            ```
+            http://www.jpdga.jp/data/event/2018/464.pdf
+            http://www.jpdga.jp/data/event/2019/505.pdf
+            http://www.jpdga.jp/data/event/2020/549.pdf
+            http://www.jpdga.jp/data/event/2022/584.pdf
+            http://www.jpdga.jp/data/event/2023/629.pdf
+            http://www.jpdga.jp/data/event/2024/705.pdf
+            ```
     - 2025年1月以降
         - `https://membership.jpdga.jp/event/<年>/` + `<eventId>.pdf`
+            ```
+            https://membership.jpdga.jp/event/2025/715.pdf
+            https://membership.jpdga.jp/event/2026/762.pdf
+            ```
 1. <年>は文字通り大会が開催された西暦とする
-1. <年度>とは4月から翌年3月までを1年とする
+1. <年度>とは4月から翌年3月までを1年とする会計年度
 
 ## 収集手順
 
