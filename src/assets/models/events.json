@@ -1012,7 +1012,11 @@
       "purse": 420,
       "paidout": 8,
       "rate": 143
-    }
+    },
+    "rounds": [
+      "the22ndsagaopen.rd1rd2",
+      "the22ndsagaopen.rd3"
+    ]
   },
   {
     "id": "the29thkantoopenama",
