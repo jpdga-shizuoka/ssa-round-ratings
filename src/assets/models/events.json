@@ -122,6 +122,11 @@
       "ama": 0,
       "misc": 0
     },
+    "pdga": {
+      "tier": "B",
+      "eventId": "99660",
+      "scoreId": "99660"
+    },
     "jpdga": {
       "eventId": "775"
     },
@@ -130,6 +135,11 @@
         "type": "website",
         "title": "Official Site",
         "url": "https://jpdgamie.org"
+      },
+      {
+        "type": "website",
+        "title": "DISC GOLF SCENE",
+        "url": "https://www.discgolfscene.com/tournament/25_The25th_Chubu_Open_2026"
       }
     ]
   },
