@@ -92,7 +92,7 @@
   {
     "id": "the21stmastersnationalchampionship",
     "title": "The 21st Masters National Championships",
-    "location": "tbd",
+    "location": "hitachiseasidepark",
     "period": {
       "from": "2026-02-28",
       "to": "2026-03-01"
@@ -106,6 +106,7 @@
       "eventId": "99361"
     },
     "jpdga": {
+      "tier": "NT",
       "eventId": "764"
     }
   },
@@ -122,6 +123,11 @@
       "ama": 0,
       "misc": 0
     },
+    "pdga": {
+      "tier": "B",
+      "eventId": "99660",
+      "scoreId": "99660"
+    },
     "jpdga": {
       "eventId": "775"
     },
@@ -130,6 +136,11 @@
         "type": "website",
         "title": "Official Site",
         "url": "https://jpdgamie.org"
+      },
+      {
+        "type": "website",
+        "title": "DISC GOLF SCENE",
+        "url": "https://www.discgolfscene.com/tournament/25_The25th_Chubu_Open_2026"
       }
     ]
   },
@@ -941,7 +952,8 @@
         "title": "Official Site",
         "url": "https://discgolf-navi.com/tournament/nt-abt-lt/kiyosato-open/"
       }
-    ]
+    ],
+    "rounds": ["the20thkiyosatonomoriopen.rd1rd2rd3"]
   },
   {
     "id": "the32ndtokyoopen",
@@ -980,7 +992,8 @@
         "title": "Official Site",
         "url": "https://discgolf-navi.com/tournament/nt-abt-lt/tokyo-open/"
       }
-    ]
+    ],
+    "rounds": ["the32ndtokyoopen.rd1rd2rd3"]
   },
   {
     "id": "the22ndsagaopen",
@@ -1011,7 +1024,11 @@
       "purse": 420,
       "paidout": 8,
       "rate": 143
-    }
+    },
+    "rounds": [
+      "the22ndsagaopen.rd1rd2",
+      "the22ndsagaopen.rd3"
+    ]
   },
   {
     "id": "the29thkantoopenama",
@@ -1036,7 +1053,8 @@
     "jpdga": {
       "tier":"ABT-A",
       "eventId": "721"
-    }
+    },
+    "rounds": ["the29thkantoopenama.rd1rd2rd3"]
   },
   {
     "id": "the4thyokotadiscgolfopen",
@@ -1100,7 +1118,8 @@
         "title": "Official Site",
         "url": "https://discgolf-navi.com/tournament/nt-abt-lt/masters-miho/"
       }
-    ]
+    ],
+    "rounds": ["the20thmastersnationalchampionship.rd1rd2rd3"]
   },
   {
     "id": "the1stjapandiscgolfmatchplaychampionships",
@@ -1179,7 +1198,8 @@
         "title": "Official Site",
         "url": "https://aifda.or.jp/event"
       }
-    ]
+    ],
+    "rounds": ["the24thchubuopen.rd1rd2rd3"]
   },
   {
     "id": "the13thokinawaopen",
