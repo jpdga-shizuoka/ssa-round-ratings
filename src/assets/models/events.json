@@ -92,7 +92,7 @@
   {
     "id": "the21stmastersnationalchampionship",
     "title": "The 21st Masters National Championships",
-    "location": "tbd",
+    "location": "hitachiseasidepark",
     "period": {
       "from": "2026-02-28",
       "to": "2026-03-01"
@@ -106,6 +106,7 @@
       "eventId": "99361"
     },
     "jpdga": {
+      "tier": "NT",
       "eventId": "764"
     }
   },
