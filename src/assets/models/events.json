@@ -152,10 +152,13 @@
       "from": "2026-01-31",
       "to": "2026-02-01"
     },
+    "layout": {
+      "official": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2026/the4thmusashikyuryoshinrinparkcup.pdf"
+    },
     "players": {
-      "pro": 0,
-      "ama": 0,
-      "misc": 0
+      "pro": 17,
+      "ama": 40,
+      "misc": 3
     },
     "pdga": {
       "tier": "B",
