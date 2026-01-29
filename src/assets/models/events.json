@@ -182,9 +182,18 @@
       "from": "2026-01-24",
       "to": "2026-01-25"
     },
+    "layout": {
+      "official": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2026/the7thkagoshimaopen.webp"
+    },
+    "players": {
+      "pro": 46,
+      "ama": 24,
+      "misc": 1
+    },
     "pdga": {
       "tier": "B",
-      "eventId": "98312"
+      "eventId": "98312",
+      "scoreId": "98312"
     },
     "jpdga": {
       "tier":"ABT-B",
