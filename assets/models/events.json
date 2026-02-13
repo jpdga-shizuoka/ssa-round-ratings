@@ -119,9 +119,12 @@
       "to": "2026-02-22"
     },
     "players": {
-      "pro": 0,
-      "ama": 0,
+      "pro": 25,
+      "ama": 15,
       "misc": 0
+    },
+    "layout": {
+      "official": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2026/the10thkinkiopen.pdf"
     },
     "pdga": {
       "tier": "B",
