@@ -97,13 +97,17 @@
       "from": "2026-02-28",
       "to": "2026-03-01"
     },
+    "layout": {
+      "official": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2026/the21stmastersnationalchampionship.pdf"
+    },
     "players": {
-      "pro": 0,
-      "ama": 0,
+      "pro": 41,
+      "ama": 36,
       "misc": 0
     },
     "pdga": {
-      "eventId": "99361"
+      "eventId": "99361",
+      "scoreId": "99361"
     },
     "jpdga": {
       "tier": "NT",
