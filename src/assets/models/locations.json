@@ -512,5 +512,14 @@
     "geolocation": [
       36.08488358897518, 139.37159498850386
     ]
+  },
+  {
+    "id": "nakamuragreenpark",
+    "title": "Nakamura Green Park",
+    "prefecture": "Gunma",
+    "weather": "https://weather.yahoo.co.jp/weather/jp/10/4210/10208.html",
+    "geolocation": [
+      36.48490932646106, 139.0187009523343
+    ]
   }
 ]
