@@ -36,6 +36,28 @@
     }
   },
   {
+    "id": "the30thkantoopenama",
+    "title": "The 30th Kanto Open (Ama)",
+    "location": "shiromigaokasportspark",
+    "period": {
+      "from": "2026-04-04",
+      "to": "2026-04-05"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 66,
+      "misc": 4
+    },
+    "pdga": {
+      "scoreId": "100641",
+      "eventId": "100641"
+    },
+    "jpdga": {
+      "tier": "ABT-A",
+      "eventId": "783"
+    }
+  },
+  {
     "id": "the33rdtokyoopenama",
     "title": "The 33rd Tokyo Open (Ama)",
     "location": "tatsuminomoriseasidepark",
