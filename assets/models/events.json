@@ -36,6 +36,42 @@
     }
   },
   {
+    "id": "the1stshibukawaopen",
+    "title": "The 1st Shibukawa Open",
+    "location": "nakamuragreenpark",
+    "period": {
+      "from": "2026-05-03",
+      "to": "2026-05-04"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
+    },
+    "jpdga": {
+      "tier": "LT",
+      "eventId": "790"
+    }
+  },
+  {
+    "id": "the1stjuniornationalchampionships",
+    "title": "The 1st Junior National Championships",
+    "location": "nakamuragreenpark",
+    "period": {
+      "from": "2026-05-03",
+      "to": "2026-05-04"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
+    },
+    "jpdga": {
+      "tier": "ABT-A",
+      "eventId": "772"
+    }
+  },
+  {
     "id": "the30thkantoopenama",
     "title": "The 30th Kanto Open (Ama)",
     "location": "shiromigaokasportspark",
