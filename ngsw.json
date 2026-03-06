@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1772776248198,
+  "timestamp": 1772811765835,
   "index": "/ssa-round-ratings/index.html",
   "assetGroups": [
     {
@@ -113,6 +113,7 @@
         "/ssa-round-ratings/assets/paypers/2026/the14thokinawaopen.pdf",
         "/ssa-round-ratings/assets/paypers/2026/the2026hamanomiyanewyeardiscgolftournament.pdf",
         "/ssa-round-ratings/assets/paypers/2026/the21stmastersnationalchampionship.pdf",
+        "/ssa-round-ratings/assets/paypers/2026/the23rdsagayoshinogariopen.pdf",
         "/ssa-round-ratings/assets/paypers/2026/the33rdtokyoopenama.pdf",
         "/ssa-round-ratings/assets/paypers/2026/the4thmusashikyuryoshinrinparkcup.pdf",
         "/ssa-round-ratings/assets/paypers/2026/the7thkagoshimaopen.pdf",
@@ -150,7 +151,7 @@
     "/ssa-round-ratings/assets/local/menu-aliase-dictionary.json": "da70b9316974e2c5ef9c2b3f49626bdb46356ea6",
     "/ssa-round-ratings/assets/local/prefecture-aliase-dictionary.json": "012cd399c7f7574d150287746c0eced82a4c818f",
     "/ssa-round-ratings/assets/models/annual-reports.json": "d1308d6c593e60c2329d72f6188367d9c2b169ec",
-    "/ssa-round-ratings/assets/models/events.json": "02ffb7c4e8054a855346b8680b86f2686196f664",
+    "/ssa-round-ratings/assets/models/events.json": "379e2fa6e372e96c722290a90d44eca5f72770bc",
     "/ssa-round-ratings/assets/models/local-events.json": "bf70b0b90f927a32ac1f3ff574f0cd76c2fa5fc4",
     "/ssa-round-ratings/assets/models/locations.json": "75c5ca226a708e3f6e6a9414632c27c993109b62",
     "/ssa-round-ratings/assets/models/members.JPDGA.json": "240fba5ad7d4e345168526bba3eb1133c5b5d5d1",
@@ -161,6 +162,7 @@
     "/ssa-round-ratings/assets/paypers/2026/the14thokinawaopen.pdf": "9c8dec3ac746270d31cce3d96905faa84672203b",
     "/ssa-round-ratings/assets/paypers/2026/the2026hamanomiyanewyeardiscgolftournament.pdf": "dc7012bad2e70dc498677c5571cbe6b5921204f5",
     "/ssa-round-ratings/assets/paypers/2026/the21stmastersnationalchampionship.pdf": "37c9b9ac8c4ce1430fafc3d62c1f863f0225be9c",
+    "/ssa-round-ratings/assets/paypers/2026/the23rdsagayoshinogariopen.pdf": "04cfb5fddc6d1077cf919abd8651bd499c013fa6",
     "/ssa-round-ratings/assets/paypers/2026/the33rdtokyoopenama.pdf": "03f3344b9e1de6a65d485659fb938041f58a580d",
     "/ssa-round-ratings/assets/paypers/2026/the4thmusashikyuryoshinrinparkcup.pdf": "94db377c41fa3bb5f70883f01bc7ade34b896999",
     "/ssa-round-ratings/assets/paypers/2026/the7thkagoshimaopen.pdf": "b59faf39551b53b954ca0ef40fc1e93418d496b8",
