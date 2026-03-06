@@ -43,14 +43,19 @@
       "from": "2026-03-14",
       "to": "2026-03-15"
     },
+    "pdga": {
+      "tier": "B",
+      "eventId": "99882",
+      "scoreId": "99882"
+    },
     "jpdga": {
       "tier": "ABT-B",
       "eventId": "766"
     },
     "players": {
       "pro": 0,
-      "ama": 0,
-      "misc": 0
+      "ama": 67,
+      "misc": 5
     },
     "urls": [
       {
