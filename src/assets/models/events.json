@@ -36,6 +36,31 @@
     }
   },
   {
+    "id": "the21stkiyosatonomoriopen",
+    "title": "The 21st Kiyosato-no-mori Open",
+    "location": "kiyosatonomori",
+    "period": {
+      "from": "2026-05-9",
+      "to": "2026-05-10"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
+    },
+    "jpdga": {
+      "tier": "ABT-B",
+      "eventId": "773"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://discgolf-navi.com/tournament/nt-abt-lt/kiyosato-open/"
+      }
+    ]
+  },
+  {
     "id": "the1stshibukawaopen",
     "title": "The 1st Shibukawa Open",
     "location": "nakamuragreenpark",
