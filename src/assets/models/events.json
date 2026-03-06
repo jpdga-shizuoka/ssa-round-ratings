@@ -72,6 +72,24 @@
     }
   },
   {
+    "id": "the23rdsagayoshinogariopen",
+    "title": "The 23rd Saga Yoshinogari Open",
+    "location": "yoshinogarihistoricalpark",
+    "period": {
+      "from": "2026-04-11",
+      "to": "2026-04-12"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
+    },
+    "jpdga": {
+      "tier": "ABT-B",
+      "eventId": "771"
+    }
+  },
+  {
     "id": "the30thkantoopenama",
     "title": "The 30th Kanto Open (Ama)",
     "location": "shiromigaokasportspark",
