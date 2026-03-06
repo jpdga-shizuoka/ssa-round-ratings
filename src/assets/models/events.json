@@ -72,6 +72,24 @@
     }
   },
   {
+    "id": "the1sthiyoshichallenge",
+    "title": "The 1st Hiyoshi Challenge",
+    "location": "fuminnomorihiyoshi",
+    "period": {
+      "from": "2026-04-12",
+      "to": "2026-04-12"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
+    },
+    "jpdga": {
+      "tier": "LT",
+      "eventId": "778"
+    }
+  },
+  {
     "id": "the23rdsagayoshinogariopen",
     "title": "The 23rd Saga Yoshinogari Open",
     "location": "yoshinogarihistoricalpark",
