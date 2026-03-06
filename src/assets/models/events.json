@@ -36,6 +36,31 @@
     }
   },
   {
+    "id": "the3rdminamataopen",
+    "title": "The 3rd Minamata Open",
+    "location": "ecoparkminamata",
+    "period": {
+      "from": "2026-06-06",
+      "to": "2026-06-07"
+    },
+    "players": {
+      "pro": 0,
+      "ama": 0,
+      "misc": 0
+    },
+    "jpdga": {
+      "tier": "LT",
+      "eventId": "788"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://discgolf.jp/event/minamata/"
+      }
+    ]
+  },
+  {
     "id": "the21stkiyosatonomoriopen",
     "title": "The 21st Kiyosato-no-mori Open",
     "location": "kiyosatonomori",
