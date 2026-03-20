@@ -64,12 +64,6 @@ function layout2layouts(layout?: Layouts) {
       url: layout.ama
     });
   }
-  if (layout?.cbj) {
-    urls.push({
-      title: 'Caddie Book Japan',
-      url: getCbjUrl(layout.cbj)
-    });
-  }
   return urls;
 }
 

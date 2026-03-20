@@ -61,7 +61,6 @@ export interface Layouts {
   regular?: string;
   front?: string;
   ama?: string;
-  cbj?: string;
 }
 
 export interface ProBudget {
