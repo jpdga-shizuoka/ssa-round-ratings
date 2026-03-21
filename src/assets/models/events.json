@@ -1,5 +1,27 @@
 [
   {
+    "id": "the2027japanopen",
+    "title": "The 2027 Japan Open",
+    "location": "fukuicountryclub",
+    "period": {
+      "from": "2027-05-19",
+      "to": "2027-05-21"
+    },
+    "pdga": {
+      "tire": "B"
+    },
+    "jpdga": {
+      "tier": "ABT-B"
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "Official Site",
+        "url": "https://jpdga.jp/official-tournament/japanopen2027/"
+      }
+    ]
+  },
+  {
     "id": "the29thkansaiopen",
     "title": "The 29th Kansai Open",
     "location": "fuminnomorihiyoshi",
