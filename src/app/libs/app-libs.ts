@@ -13,8 +13,9 @@ function getLabelForResult(event: EventInfo): string {
   return isFutureEvent(event.period.from) ? 'Current Registration' : 'Results';
 }
 
-export function getJpdgaInfo(eventId?: string): string {
-  return `http://www.jpdga.jp/event.php?tno=${eventId ?? ''}`;
+export function getJpdgaInfo(event: EventInfo): string {
+  const year = event.period?.from ? new Date(event.period.from).getFullYear() : '';
+  return `https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/papers/${year}/${event.id}.pdf`;
 }
 
 export function getJpdgaResult(eventId?: string): string {
@@ -220,11 +221,11 @@ export function makeJpdgaInfo(event: EventInfo): MiscInfo[] {
       });
     }
   }
-  if (event.jpdga?.eventId) {
+  if (event.id) {
     info.push({
       icon: 'public',
       title: 'Paper',
-      url: getJpdgaInfo(event.jpdga.eventId)
+      url: getJpdgaInfo(event)
     });
   }
   return info;
