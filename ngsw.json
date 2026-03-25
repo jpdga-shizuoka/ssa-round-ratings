@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1774434441865,
+  "timestamp": 1774441796079,
   "index": "/ssa-round-ratings/index.html",
   "assetGroups": [
     {
@@ -247,6 +247,7 @@
         "/ssa-round-ratings/assets/papers/2026/the21stkiyosatonomoriopen.pdf",
         "/ssa-round-ratings/assets/papers/2026/the21stmastersnationalchampionship.pdf",
         "/ssa-round-ratings/assets/papers/2026/the23rdsagayoshinogariopen.pdf",
+        "/ssa-round-ratings/assets/papers/2026/the2ndjapandiscgolfmatchplaychampionships.pdf",
         "/ssa-round-ratings/assets/papers/2026/the30thkantoopenama.pdf",
         "/ssa-round-ratings/assets/papers/2026/the33rdtokyoopenama.pdf",
         "/ssa-round-ratings/assets/papers/2026/the4thmusashikyuryoshinrinparkcup.pdf",
@@ -430,6 +431,7 @@
     "/ssa-round-ratings/assets/papers/2026/the21stkiyosatonomoriopen.pdf": "d17538cc40e87febe801ece8989f7272fc090e60",
     "/ssa-round-ratings/assets/papers/2026/the21stmastersnationalchampionship.pdf": "37c9b9ac8c4ce1430fafc3d62c1f863f0225be9c",
     "/ssa-round-ratings/assets/papers/2026/the23rdsagayoshinogariopen.pdf": "04cfb5fddc6d1077cf919abd8651bd499c013fa6",
+    "/ssa-round-ratings/assets/papers/2026/the2ndjapandiscgolfmatchplaychampionships.pdf": "6a1402933e3691394184dddeb25d8ccc64a9dd0c",
     "/ssa-round-ratings/assets/papers/2026/the30thkantoopenama.pdf": "d2e7ab0b316f12e059bf4420cead518f2a4a5703",
     "/ssa-round-ratings/assets/papers/2026/the33rdtokyoopenama.pdf": "03f3344b9e1de6a65d485659fb938041f58a580d",
     "/ssa-round-ratings/assets/papers/2026/the4thmusashikyuryoshinrinparkcup.pdf": "94db377c41fa3bb5f70883f01bc7ade34b896999",
