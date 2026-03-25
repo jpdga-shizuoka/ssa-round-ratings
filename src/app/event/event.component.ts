@@ -5,7 +5,7 @@ import { Observable, Subject, Subscription } from 'rxjs';
 import { first, tap } from 'rxjs/operators';
 
 import { RemoteService, EventId, EventInfo, LocationInfo } from '../remote.service';
-import { getCbjUrl, makePdgaInfo, makePdga2nd, makeJpdgaInfo, makeMiscInfo, makeVideoInfo, makePhotoInfo, getStarsOfPurse } from '../libs';
+import { makePdgaInfo, makePdga2nd, makeJpdgaInfo, makeMiscInfo, makeVideoInfo, makePhotoInfo, getStarsOfPurse } from '../libs';
 import { MiscInfo } from '../app-common';
 import { RoundId, Layouts } from '../models';
 import { LocalizePipe } from '../localize.pipe';
