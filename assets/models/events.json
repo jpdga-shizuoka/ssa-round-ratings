@@ -239,8 +239,11 @@
       "from": "2026-03-28",
       "to": "2026-03-29"
     },
+    "layout": {
+      "official": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2026/the2ndjapandiscgolfmatchplaychampionships.pdf"
+    },
     "players": {
-      "pro": 36,
+      "pro": 35,
       "ama": 0,
       "misc": 0
     },
@@ -249,6 +252,16 @@
         "type": "website",
         "title": "Official Site",
         "url": "https://www.jfda.or.jp/2025/12/18/2025alljapan-discgolf-matchplay-main/"
+      },
+      {
+        "type": "pdf",
+        "title": "最終案内",
+        "url": "https://www.jfda.or.jp/web/wp/wp-content/uploads/2026/03/09978a4a437be8e81548656cdfc88155.pdf"
+      },
+      {
+        "type": "pdf",
+        "title": "試合形式",
+        "url": "https://www.jfda.or.jp/web/wp/wp-content/uploads/2026/03/85d71842585d9a15a52685ba362f1be3.pdf"
       }
     ]
   },
