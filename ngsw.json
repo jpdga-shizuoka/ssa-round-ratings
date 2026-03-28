@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1774598434814,
+  "timestamp": 1774727142606,
   "index": "/ssa-round-ratings/index.html",
   "assetGroups": [
     {
@@ -286,7 +286,7 @@
     "/ssa-round-ratings/assets/local/menu-aliase-dictionary.json": "da70b9316974e2c5ef9c2b3f49626bdb46356ea6",
     "/ssa-round-ratings/assets/local/prefecture-aliase-dictionary.json": "012cd399c7f7574d150287746c0eced82a4c818f",
     "/ssa-round-ratings/assets/models/annual-reports.json": "d1308d6c593e60c2329d72f6188367d9c2b169ec",
-    "/ssa-round-ratings/assets/models/events.json": "b0ad298290e1b3e261dd80841737e1870cc04811",
+    "/ssa-round-ratings/assets/models/events.json": "1687f6475706b08c8fbcac36427f5d851681603b",
     "/ssa-round-ratings/assets/models/local-events.json": "bf70b0b90f927a32ac1f3ff574f0cd76c2fa5fc4",
     "/ssa-round-ratings/assets/models/locations.json": "75c5ca226a708e3f6e6a9414632c27c993109b62",
     "/ssa-round-ratings/assets/models/members.JPDGA.json": "20f3f6c1c6a2884f1c12041b72b60b6ca74a109a",

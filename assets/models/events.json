@@ -115,6 +115,11 @@
       "from": "2026-05-03",
       "to": "2026-05-04"
     },
+    "pdga": {
+      "tier": "C",
+      "eventId": "102712",
+      "scoreId": "102712"
+    },
     "players": {
       "pro": 0,
       "ama": 0,
@@ -123,7 +128,14 @@
     "jpdga": {
       "tier": "LT",
       "eventId": "shibukawaopen2026"
-    }
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "コースレイアウト(暫定)",
+        "url": "https://earth.google.com/web/data=MicKJQojCiExX2ZsOVB5VEE3OV9fdTdjU1JXWVJLMmFrR2FseDdjYVE"
+      }
+    ]
   },
   {
     "id": "the1stjuniornationalchampionships",
@@ -138,10 +150,22 @@
       "ama": 0,
       "misc": 0
     },
+    "pdga": {
+      "tier": "B",
+      "eventId": "102711",
+      "scoreId": "102711"
+    },
     "jpdga": {
       "tier": "ABT-A",
       "eventId": "japan-junior-disc-golf-championships2026"
-    }
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "コースレイアウト(暫定)",
+        "url": "https://earth.google.com/web/data=MicKJQojCiExX2ZsOVB5VEE3OV9fdTdjU1JXWVJLMmFrR2FseDdjYVE"
+      }
+    ]
   },
   {
     "id": "the1sthiyoshichallenge",
