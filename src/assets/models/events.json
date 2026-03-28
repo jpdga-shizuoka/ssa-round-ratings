@@ -115,6 +115,11 @@
       "from": "2026-05-03",
       "to": "2026-05-04"
     },
+    "pdga": {
+      "tier": "C",
+      "eventId": "102712",
+      "scoreId": "102712"
+    },
     "players": {
       "pro": 0,
       "ama": 0,
@@ -144,6 +149,11 @@
       "pro": 0,
       "ama": 0,
       "misc": 0
+    },
+    "pdga": {
+      "tier": "B",
+      "eventId": "102711",
+      "scoreId": "102711"
     },
     "jpdga": {
       "tier": "ABT-A",
