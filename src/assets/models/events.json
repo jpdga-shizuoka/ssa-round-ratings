@@ -141,7 +141,14 @@
     "jpdga": {
       "tier": "ABT-A",
       "eventId": "japan-junior-disc-golf-championships2026"
-    }
+    },
+    "urls": [
+      {
+        "type": "website",
+        "title": "コースレイアウト(暫定)",
+        "url": "https://earth.google.com/web/data=MicKJQojCiExX2ZsOVB5VEE3OV9fdTdjU1JXWVJLMmFrR2FseDdjYVE"
+      }
+    ]
   },
   {
     "id": "the1sthiyoshichallenge",
