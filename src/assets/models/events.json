@@ -100,6 +100,11 @@
       "ama": 0,
       "misc": 0
     },
+    "pdga": {
+      "tier": "B",
+      "eventId": "102933",
+      "scoreId": "102933"
+    },
     "jpdga": {
       "tier": "ABT-B",
       "eventId": "773"
