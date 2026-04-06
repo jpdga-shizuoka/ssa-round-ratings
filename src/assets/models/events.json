@@ -198,10 +198,18 @@
       "from": "2026-04-11",
       "to": "2026-04-12"
     },
+    "layout": {
+      "official": "https://jpdga-shizuoka.github.io/ssa-round-ratings/assets/layouts/2026/the23rdsagayoshinogariopen.pdf"
+    },
     "players": {
       "pro": 0,
       "ama": 0,
       "misc": 0
+    },
+    "pdga": {
+      "tier": "B",
+      "eventId": "102983",
+      "scoreId": "102983"
     },
     "jpdga": {
       "tier": "ABT-B",
