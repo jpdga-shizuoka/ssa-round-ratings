@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1775489513358,
+  "timestamp": 1775519907803,
   "index": "/ssa-round-ratings/index.html",
   "assetGroups": [
     {
@@ -110,7 +110,6 @@
         "/ssa-round-ratings/assets/models/monthly-events.json",
         "/ssa-round-ratings/assets/models/rounds-work.json",
         "/ssa-round-ratings/assets/models/rounds.json",
-        "/ssa-round-ratings/assets/models/the23rdsagayoshinogariopen.pdf",
         "/ssa-round-ratings/assets/papers/2018/the14thkyotoclassic.pdf",
         "/ssa-round-ratings/assets/papers/2018/the1stgifuhiruganoopen.pdf",
         "/ssa-round-ratings/assets/papers/2018/the1stpicaactivitycup.pdf",
@@ -295,7 +294,6 @@
     "/ssa-round-ratings/assets/models/monthly-events.json": "d7576ac7df73a8d8f9e320f681f7f4793d80a037",
     "/ssa-round-ratings/assets/models/rounds-work.json": "2596f1c3c12eab61eb596f4126c58a7fe98a70d1",
     "/ssa-round-ratings/assets/models/rounds.json": "ea60c291dbf5d83d44888bf80bc1fc244a191200",
-    "/ssa-round-ratings/assets/models/the23rdsagayoshinogariopen.pdf": "b935f26cf318e0556bbee44487f610f471d552b1",
     "/ssa-round-ratings/assets/papers/2018/the14thkyotoclassic.pdf": "55bc60ba80e1c1904a81708ea25167a6c201288b",
     "/ssa-round-ratings/assets/papers/2018/the1stgifuhiruganoopen.pdf": "b6004745965a6ac3090b3885ab285584d75214b2",
     "/ssa-round-ratings/assets/papers/2018/the1stpicaactivitycup.pdf": "1c735d17773db85de0125dd38d1c8aa811eb920f",
